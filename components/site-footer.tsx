@@ -34,6 +34,9 @@ export function SiteFooter() {
               <Link href="/tentang" className="text-muted-foreground transition-colors hover:text-foreground">
                 Tentang
               </Link>
+              <Link href="/donasi" className="text-muted-foreground transition-colors hover:text-foreground">
+                Donasi
+              </Link>
               <Link href="/newsletter" className="text-muted-foreground transition-colors hover:text-foreground">
                 Newsletter
               </Link>

@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Kategori', href: '/kategori' },
   { name: 'Seri', href: '/seri' },
   { name: 'Tentang', href: '/tentang' },
+  { name: 'Donasi', href: '/donasi' },
 ];
 
 export function SiteHeader() {

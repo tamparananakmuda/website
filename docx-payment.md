@@ -2,20 +2,6 @@ Integrasi API
 Base URL
 https://api.louvin.dev
 
-Endpoint
-POST /create-transaction
-
-Slug
-tamparananakmuda
-
-Webhook URL
-Belum diatur
-
-API Key
-lv_8974054a92964eaf9d4535d9f776a807
-
-
-
 
 Louvin API Documentation
 Louvin API memungkinkan Anda menerima pembayaran digital (QRIS, GoPay, ShopeePay, Virtual Account) tanpa memerlukan identitas bisnis. Semua request menggunakan JSON melalui HTTPS.
