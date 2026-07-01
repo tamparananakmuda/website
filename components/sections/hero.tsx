@@ -22,10 +22,10 @@ export function Hero({ className }: HeroProps) {
 
   return (
     <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-0 md:p-6', className)}>
-      <div className="relative w-full max-w-[1600px] min-h-screen md:min-h-[920px] md:rounded-[48px] overflow-hidden shadow-2xl flex flex-col border border-border">
+      <div className="relative w-full max-w-[1600px] min-h-screen md:min-h-[920px] md:rounded-[48px] shadow-2xl flex flex-col border border-border">
 
         {/* Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden md:rounded-[48px]">
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
           <div
             className="absolute inset-0 opacity-[0.15]"
