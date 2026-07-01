@@ -38,8 +38,8 @@ export function Hero({ className }: HeroProps) {
         </div>
 
         {/* Floating Nav */}
-        <header className="sticky top-0 z-20 w-full px-4 pt-4 md:px-12 md:pt-8">
-          <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-3 pl-5 pr-3 shadow-lg md:py-[14px] md:pl-[30px] md:pr-[14px]">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-12 md:pt-8 pointer-events-none">
+          <div className="pointer-events-auto mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-3 pl-5 pr-3 shadow-lg md:py-[14px] md:pl-[30px] md:pr-[14px]">
             <Link href="/" className="font-display text-sm font-bold tracking-tight text-foreground md:text-base">
               TAMPARAN ANAK MUDA
             </Link>
@@ -81,7 +81,7 @@ export function Hero({ className }: HeroProps) {
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute left-4 right-4 top-[72px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden"
+              className="pointer-events-auto absolute left-4 right-4 top-[72px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden"
             >
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
