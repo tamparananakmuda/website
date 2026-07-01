@@ -1,10 +1,12 @@
 import { createClient } from '@/lib/supabase/server';
 import { ArticleCard } from '@/components/article-card';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const revalidate = 60;
 
 export const metadata = {
   title: 'Semua Artikel',
+  description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
 };
 
 export default async function ArticlesPage() {
@@ -17,9 +19,10 @@ export default async function ArticlesPage() {
     .order('published_at', { ascending: false });
 
   return (
-    <main className="container mx-auto px-4 py-16">
+    <main className="container mx-auto px-4 py-20 md:py-32">
+      <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }]} />
       <header className="mb-12 max-w-2xl">
-        <h1 className="mb-4 font-serif text-3xl font-bold md:text-4xl">
+        <h1 className="mb-4 text-3xl font-bold md:text-4xl">
           Semua Artikel
         </h1>
         <p className="text-lg text-muted-foreground">

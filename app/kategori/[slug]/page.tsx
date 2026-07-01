@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { ArticleCard } from '@/components/article-card';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 interface CategoryPageProps {
   params: { slug: string };
@@ -50,10 +51,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     .order('published_at', { ascending: false });
 
   return (
-    <main className="container mx-auto px-4 py-16">
+    <main className="container mx-auto px-4 py-20 md:py-32">
+      <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Kategori', href: '/kategori' }, { name: category.title, href: `/kategori/${category.slug}` }]} />
       <header className="mb-12 max-w-2xl">
         <h1
-          className="mb-4 font-serif text-3xl font-bold md:text-4xl"
+          className="mb-4 text-3xl font-bold md:text-4xl"
           style={{ color: category.color }}
         >
           {category.title}

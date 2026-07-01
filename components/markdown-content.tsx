@@ -9,7 +9,7 @@ export function MarkdownContent({ body }: MarkdownContentProps) {
 
   return (
     <div
-      className="prose prose-stone max-w-none dark:prose-invert prose-headings:font-serif prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary"
+      className="prose prose-stone max-w-none dark:prose-invert prose-headings:font-display prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

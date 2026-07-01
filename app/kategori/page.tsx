@@ -16,9 +16,9 @@ export default async function CategoriesPage() {
     .order('title', { ascending: true });
 
   return (
-    <main className="container mx-auto px-4 py-16">
+    <main className="container mx-auto px-4 py-20 md:py-32">
       <header className="mb-12 max-w-2xl">
-        <h1 className="mb-4 font-serif text-3xl font-bold md:text-4xl">
+        <h1 className="mb-4 text-3xl font-bold md:text-4xl">
           Kategori
         </h1>
         <p className="text-lg text-muted-foreground">
@@ -35,7 +35,7 @@ export default async function CategoriesPage() {
               className="group rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent"
             >
               <h2
-                className="mb-2 font-serif text-xl font-bold transition-colors group-hover:text-primary"
+                className="mb-2 text-xl font-bold transition-colors group-hover:text-primary"
                 style={{ color: category.color }}
               >
                 {category.title}

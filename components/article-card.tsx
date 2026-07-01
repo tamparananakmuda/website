@@ -21,7 +21,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
           <span className="text-muted-foreground">•</span>
           <span className="text-muted-foreground">{post.reading_time} menit baca</span>
         </div>
-        <h2 className="mb-2 font-serif text-2xl font-bold leading-tight transition-colors group-hover:text-primary">
+        <h2 className="mb-2 text-2xl font-bold leading-tight transition-colors group-hover:text-primary">
           {post.title}
         </h2>
         {post.excerpt && (

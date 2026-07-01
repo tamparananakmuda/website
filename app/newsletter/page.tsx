@@ -37,14 +37,28 @@ export default function NewsletterPage() {
   }
 
   return (
-    <main className="container mx-auto px-4 py-16">
+    <main className="container mx-auto px-4 py-20 md:py-32">
       <div className="mx-auto max-w-2xl">
-        <h1 className="mb-4 font-serif text-3xl font-bold md:text-4xl">
-          Jangan Ketinggalan
+        <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
+          Satu Email.
+          <br />
+          Satu Sudut Pandang Baru.
         </h1>
-        <p className="mb-8 text-lg text-muted-foreground">
-          Satu email per minggu. Tidak ada spam. Hanya tamparan yang kamu butuhkan untuk tetap jujur sama diri sendiri.
+        <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+          Surat mingguan untuk anak muda yang ingin bertumbuh. Tidak ada spam. Hanya perspektif yang kamu butuhkan.
         </p>
+
+        <ul className="mb-8 space-y-3">
+          <li className="flex items-center gap-3 text-muted-foreground">
+            <span className="text-primary">&#10003;</span> Satu perspektif baru setiap minggu
+          </li>
+          <li className="flex items-center gap-3 text-muted-foreground">
+            <span className="text-primary">&#10003;</span> Tidak ada spam atau clickbait
+          </li>
+          <li className="flex items-center gap-3 text-muted-foreground">
+            <span className="text-primary">&#10003;</span> Berhenti kapan saja
+          </li>
+        </ul>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -65,14 +79,17 @@ export default function NewsletterPage() {
             disabled={status === 'loading'}
             size="lg"
           >
-            {status === 'loading' ? 'Mendaftar...' : 'Langganan Newsletter'}
+            {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
           </Button>
+          <p className="text-sm text-muted-foreground">
+            Gratis. Satu email per minggu.
+          </p>
         </form>
 
         {message && (
           <p
             className={`mt-4 text-sm ${
-              status === 'success' ? 'text-green-600' : 'text-red-600'
+              status === 'success' ? 'text-primary' : 'text-destructive'
             }`}
           >
             {message}
