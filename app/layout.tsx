@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Syne } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
-import { SiteHeader } from '@/components/site-header';
+import { ConditionalHeader } from '@/components/conditional-header';
 import { SiteFooter } from '@/components/site-footer';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -72,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`scroll-smooth ${jakarta.variable} ${syne.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
-        <SiteHeader />
+        <ConditionalHeader />
         <div className="flex-1">{children}</div>
         <SiteFooter />
         {umamiUrl && umamiWebsiteId && (
@@ -82,6 +84,8 @@ export default function RootLayout({
             strategy="lazyOnload"
           />
         )}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
