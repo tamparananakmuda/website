@@ -6,7 +6,7 @@ export function FeaturedQuote() {
           <p className="text-3xl font-bold leading-snug tracking-tight md:text-5xl md:leading-tight">
             &ldquo;Kamu bisa menonton ribuan video motivasi.
             <br />
-            <span className="text-primary">Tapi tidak ada yang berubah sampai kamu membaca sesuatu yang membuatmu tidak nyaman.</span>&rdquo;
+            <span className="text-primary">Tapi memahami kenyataan memberi peluang lebih besar daripada mengabaikannya.</span>&rdquo;
           </p>
         </blockquote>
       </div>

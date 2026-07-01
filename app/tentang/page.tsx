@@ -95,7 +95,7 @@ export default function AboutPage() {
                 Kami melihat gap yang nyata: tidak ada media tertulis Indonesia yang khusus untuk anak muda, dengan depth editorial dan tone yang jujur. Ada banyak video, banyak podcast, banyak carousel — tapi tidak ada tempat untuk membaca analisis mendalam tentang uang, karier, bisnis, teknologi, dan kehidupan.
               </p>
               <p>
-                Kenapa &ldquo;tamparan&rdquo; bukan &ldquo;pelukan&rdquo;? Karena terkadang yang kamu butuhkan bukan seseorang yang mengatakan &ldquo;kamu pasti bisa&rdquo;, tapi seseorang yang mengatakan &ldquo;hei, kamu bohong pada dirimu sendiri&rdquo;. Tamparan tidak menyenangkan. Tapi tamparan membangunkan.
+                Kenapa &ldquo;tamparan&rdquo; bukan &ldquo;pelukan&rdquo;? Karena terkadang yang kamu butuhkan bukan seseorang yang mengatakan &ldquo;kamu pasti bisa&rdquo;, tapi seseorang yang mengatakan hal yang perlu didengar, bukan yang ingin didengar. Tamparan tidak menyenangkan. Tapi tamparan membangunkan.
               </p>
               <p>
                 Kami bukan media berita. Kami adalah editorial media. Kami tidak bertanya &ldquo;apa yang terjadi hari ini?&rdquo; tapi &ldquo;apa yang harus dipahami dari apa yang terjadi?&rdquo;
@@ -148,7 +148,7 @@ export default function AboutPage() {
               Prinsip Editorial
             </p>
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              &ldquo;Tamparan&rdquo; bukan cuma tone. Ini bukti.
+              &ldquo;Kami tidak menulis untuk membuatmu merasa nyaman. Kami menulis agar kamu melihat kenyataan lebih jelas.&rdquo;
             </h2>
             <p className="mb-12 text-lg text-muted-foreground">
               Bukan klaim kejujuran, tapi komitmen yang bisa dipegang. Kalau kami melanggar, kamu berhak menegur.

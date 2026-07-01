@@ -45,7 +45,7 @@ export default function NewsletterPage() {
           Tapi Sudut Pandang.
         </h1>
         <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-          Surat mingguan untuk anak muda yang sudah lelah scroll tanpa akhir. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
+          Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
         </p>
 
         <ul className="mb-8 space-y-3">

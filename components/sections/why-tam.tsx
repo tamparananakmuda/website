@@ -5,7 +5,7 @@ const differentiators = [
   },
   {
     negative: 'Bukan motivasi yang terlalu manis',
-    positive: 'Kenyataan yang mungkin tidak nyaman didengar.',
+    positive: 'Sudut pandang yang mungkin berbeda dari yang biasa kamu dengar.',
   },
   {
     negative: 'Bukan konten untuk algoritma',
@@ -58,7 +58,7 @@ export function WhyTam() {
             Komitmen Editorial
           </p>
           <p className="mb-12 max-w-2xl text-2xl font-bold leading-snug tracking-tight md:text-3xl md:leading-tight">
-            &ldquo;Tamparan&rdquo; bukan cuma tone. Ini bukti.
+            &ldquo;Kami tidak menulis untuk membuatmu merasa nyaman. Kami menulis agar kamu melihat kenyataan lebih jelas.&rdquo;
           </p>
           <div className="grid gap-8 md:grid-cols-3">
             {commitments.map((item, index) => (

@@ -7,7 +7,7 @@ const faqItems = [
   {
     question: 'Kenapa baca kalau bisa nonton?',
     answer:
-      'Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari — kamu menonton, lalu lupa. Membaca memaksa kamu berhenti, memproses, dan membentuk opini sendiri. Kami percaya pemahaman sejati datang dari kata-kata yang ditulis dengan sungguh-sungguh, bukan konten yang dibuat untuk retensi 3 detik.',
+      'Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari — kamu menonton, lalu lupa. Membaca memaksa kamu berhenti, memproses, dan membentuk opini sendiri. Pemahaman datang dari kata-kata yang ditulis dengan sungguh-sungguh, bukan konten yang dibuat untuk retensi 3 detik.',
   },
   {
     question: 'Topik apa yang dibahas TAM?',

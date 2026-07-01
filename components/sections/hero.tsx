@@ -126,7 +126,7 @@ export function Hero({ className }: HeroProps) {
             </h1>
 
             <p className="mb-12 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan — bukan untuk dikonsumsi lalu dilupakan, tapi untuk dipahami dan dijalankan.
+              Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan — bukan untuk membuatmu merasa nyaman, tapi agar kamu melihat kenyataan lebih jelas.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">

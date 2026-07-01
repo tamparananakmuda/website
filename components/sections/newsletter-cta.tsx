@@ -47,7 +47,7 @@ export function NewsletterCta() {
             Bukan Konten. Tapi Sudut Pandang.
           </h2>
           <p className="mb-8 text-lg leading-relaxed text-primary-foreground/80">
-            Surat mingguan untuk anak muda yang sudah lelah scroll tanpa akhir. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
+            Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
           </p>
           <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
             <Input
