@@ -21,8 +21,8 @@ export function Hero({ className }: HeroProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-4 md:p-10', className)}>
-      <div className="relative w-full max-w-[1410px] min-h-[600px] md:min-h-[920px] rounded-[36px] md:rounded-[48px] overflow-hidden shadow-2xl flex flex-col border border-border">
+    <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-2 md:p-6', className)}>
+      <div className="relative w-full max-w-[1600px] min-h-[600px] md:min-h-[920px] rounded-[36px] md:rounded-[48px] overflow-hidden shadow-2xl flex flex-col border border-border">
 
         {/* Background */}
         <div className="absolute inset-0 z-0">
@@ -126,7 +126,7 @@ export function Hero({ className }: HeroProps) {
             </h1>
 
             <p className="mb-12 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Media digital tentang mindset, bisnis, keuangan, teknologi, dan kehidupan untuk generasi muda Indonesia yang ingin berpikir lebih kritis dan bertindak lebih berani.
+              Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan — bukan untuk dikonsumsi lalu dilupakan, tapi untuk dipahami dan dijalankan.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">

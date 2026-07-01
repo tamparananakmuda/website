@@ -16,7 +16,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
               Artikel Terbaru
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Artikel pertama sedang dalam perjalanan. Sementara itu, kenalan dulu dengan kami.
+              Tulisan pertama sedang dimuat. Bukan konten cepat — kami butuh waktu untuk menulis sesuatu yang layak kamu baca.
             </p>
             <Link
               href="/tentang"

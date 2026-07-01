@@ -1,15 +1,15 @@
 const differentiators = [
   {
-    negative: 'Kami tidak mengejar viral',
-    positive: 'Kami mengejar nilai.',
+    negative: 'Bukan ringkasan 60 detik',
+    positive: 'Tulisan yang membuat kamu berhenti dan berpikir.',
   },
   {
-    negative: 'Kami tidak menjual motivasi kosong',
-    positive: 'Kami membahas kenyataan.',
+    negative: 'Bukan motivasi yang terlalu manis',
+    positive: 'Kenyataan yang mungkin tidak nyaman didengar.',
   },
   {
-    negative: 'Kami tidak menulis untuk algoritma',
-    positive: 'Kami menulis untuk manusia.',
+    negative: 'Bukan konten untuk algoritma',
+    positive: 'Tulisan untuk manusia yang ingin tumbuh.',
   },
 ];
 

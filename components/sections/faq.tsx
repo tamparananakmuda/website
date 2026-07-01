@@ -2,27 +2,27 @@ const faqItems = [
   {
     question: 'Apa itu TAMPARAN ANAK MUDA?',
     answer:
-      'TAMPARAN ANAK MUDA adalah media digital Indonesia yang membahas mindset, bisnis, keuangan, teknologi, dan pengembangan diri untuk generasi muda. Kami bukan media berita — kami adalah editorial media yang bertanya "apa yang harus dipahami dari apa yang terjadi?" bukan sekadar "apa yang terjadi hari ini?"',
+      'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset — bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat kamu berpikir. Kami bukan media berita dan bukan content creator. Kami adalah media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"',
+  },
+  {
+    question: 'Kenapa baca kalau bisa nonton?',
+    answer:
+      'Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari — kamu menonton, lalu lupa. Membaca memaksa kamu berhenti, memproses, dan membentuk opini sendiri. Kami percaya pemahaman sejati datang dari kata-kata yang ditulis dengan sungguh-sungguh, bukan konten yang dibuat untuk retensi 3 detik.',
   },
   {
     question: 'Topik apa yang dibahas TAM?',
     answer:
-      'Kami membahas enam topik utama: Uang, Karier, Bisnis, Teknologi, Kehidupan, dan Mindset. Setiap topik dibahas dengan pendekatan editorial, bukan sekadar berita.',
+      'Enam topik: Uang, Karier, Bisnis, Teknologi, Kehidupan, dan Mindset. Kami fokus pada topik yang relevan untuk anak muda Indonesia yang ingin bertumbuh — bukan membahas segala hal, tapi mendalam pada apa yang kami pilih.',
   },
   {
     question: 'Apakah konten TAM gratis?',
     answer:
-      'Ya, semua artikel di TAMPARAN ANAK MUDA gratis untuk dibaca. Tidak ada paywall. Kami percaya pengetahuan harus dapat diakses semua orang.',
+      'Ya, semua artikel gratis dibaca. Tidak ada paywall. Kami percaya pengetahuan yang layak harus dapat diakses semua orang.',
   },
   {
     question: 'Bagaimana cara berlangganan newsletter?',
     answer:
-      'Kamu bisa berlangganan newsletter mingguan kami dengan mendaftarkan email di halaman newsletter. Satu email per minggu, tidak ada spam, dan bisa berhenti kapan saja.',
-  },
-  {
-    question: 'Apakah TAM menerima kontribusi artikel?',
-    answer:
-      'Kami terbuka untuk diskusi mengenai kontribusi konten. Hubungi kami melalui Instagram @tamparananakmuda.id untuk informasi lebih lanjut.',
+      'Daftarkan email kamu di halaman newsletter. Satu email per minggu, tidak ada spam, bisa berhenti kapan saja. Isinya bukan link-link acak — tapi perspektif yang kami pilih untuk membantumu melihat sesuatu dari sudut yang berbeda.',
   },
 ];
 

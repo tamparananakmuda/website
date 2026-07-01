@@ -23,11 +23,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.co
 
 export const metadata: Metadata = {
   title: {
-    default: 'TAMPARAN ANAK MUDA | Media Mindset, Bisnis, Keuangan & Teknologi',
+    default: 'TAMPARAN ANAK MUDA | Editorial Media untuk Anak Muda Indonesia',
     template: '%s | TAMPARAN ANAK MUDA',
   },
   description:
-    'TAMPARAN ANAK MUDA adalah media digital Indonesia yang membahas mindset, bisnis, keuangan, teknologi, dan pengembangan diri untuk membantu generasi muda berpikir lebih kritis dan bertindak lebih berani.',
+    'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset — bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat anak muda berpikir lebih kritis dan bertindak lebih berani.',
   keywords: [
     'media anak muda indonesia',
     'pengembangan diri',
@@ -44,15 +44,15 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: siteUrl,
     siteName: 'TAMPARAN ANAK MUDA',
-    title: 'TAMPARAN ANAK MUDA | Media Mindset, Bisnis, Keuangan & Teknologi',
+    title: 'TAMPARAN ANAK MUDA | Editorial Media untuk Anak Muda Indonesia',
     description:
-      'Media digital Indonesia yang membahas mindset, bisnis, keuangan, teknologi, dan pengembangan diri untuk generasi muda.',
+      'Editorial media Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset untuk anak muda.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'TAMPARAN ANAK MUDA',
     description:
-      'Media digital Indonesia untuk generasi muda yang ingin berpikir lebih kritis dan bertindak lebih berani.',
+      'Editorial media untuk anak muda Indonesia. Bukan konten yang viral — tulisan yang bertahan.',
   },
   robots: {
     index: true,

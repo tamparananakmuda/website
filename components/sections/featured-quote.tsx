@@ -4,9 +4,9 @@ export function FeaturedQuote() {
       <div className="container mx-auto px-4">
         <blockquote className="mx-auto max-w-3xl text-center">
           <p className="text-3xl font-bold leading-snug tracking-tight md:text-5xl md:leading-tight">
-            &ldquo;Perubahan tidak dimulai ketika hidupmu mudah.
+            &ldquo;Kamu bisa menonton ribuan video motivasi.
             <br />
-            <span className="text-primary">Perubahan dimulai ketika kamu berhenti berbohong pada dirimu sendiri.</span>&rdquo;
+            <span className="text-primary">Tapi tidak ada yang berubah sampai kamu membaca sesuatu yang membuatmu tidak nyaman.</span>&rdquo;
           </p>
         </blockquote>
       </div>

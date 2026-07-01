@@ -12,7 +12,7 @@ export function Topics({ categories }: TopicsProps) {
     <section className="bg-card py-20 md:py-32">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-3xl font-bold tracking-tight md:text-4xl">
-          Topik yang kami bahas
+          Enam topik. Satu pendekatan: jujur dan tajam.
         </h2>
         <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (

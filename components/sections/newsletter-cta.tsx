@@ -44,10 +44,10 @@ export function NewsletterCta() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             Satu Email.
             <br />
-            Satu Sudut Pandang Baru.
+            Bukan Konten. Tapi Sudut Pandang.
           </h2>
           <p className="mb-8 text-lg leading-relaxed text-primary-foreground/80">
-            Surat mingguan untuk anak muda yang ingin bertumbuh. Tidak ada spam. Hanya perspektif yang kamu butuhkan.
+            Surat mingguan untuk anak muda yang sudah lelah scroll tanpa akhir. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
           </p>
           <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
             <Input

@@ -7,12 +7,12 @@ export function Philosophy() {
             Filsafat Kami
           </p>
           <p className="mb-6 text-3xl font-bold leading-snug md:text-4xl md:leading-tight">
-            Kami tidak mengejar viral.
+            Konten 60 detik dilupakan.
             <br />
-            <span className="text-primary">Kami mengejar perubahan.</span>
+            <span className="text-primary">Tulisan 10 menit mengubah cara berpikir.</span>
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Kami percaya satu artikel yang mengubah hidup seseorang jauh lebih berharga daripada sejuta klik tanpa makna.
+            Di era scroll tanpa henti, kami memilih menulis panjang. Karena pemahaman tidak datang dari ringkasan 30 detik — ia datang dari membaca sesuatu sampai selesai dan merasakannya mengganggu cara kamu melihat dunia.
           </p>
         </div>
       </div>
