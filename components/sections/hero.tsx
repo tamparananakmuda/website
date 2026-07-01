@@ -55,7 +55,7 @@ export function Hero({ className }: HeroProps) {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             animate={{
-              maxWidth: isCompact ? 480 : 1280,
+              maxWidth: isCompact ? 640 : 1280,
               paddingTop: isCompact ? 8 : 14,
               paddingBottom: isCompact ? 8 : 14,
             }}
@@ -64,12 +64,9 @@ export function Hero({ className }: HeroProps) {
           >
             <Link
               href="/"
-              className={cn(
-                'font-display font-bold tracking-tight text-foreground transition-all duration-300',
-                isCompact ? 'text-xs' : 'text-sm md:text-base'
-              )}
+              className="font-display text-sm font-bold tracking-tight text-foreground md:text-base"
             >
-              {isCompact ? 'TAM' : 'TAMPARAN ANAK MUDA'}
+              TAMPARAN ANAK MUDA
             </Link>
 
             <motion.nav
@@ -91,22 +88,18 @@ export function Hero({ className }: HeroProps) {
               ))}
             </motion.nav>
 
-            <motion.div
-              animate={{
-                opacity: isCompact ? 0 : 1,
-                width: isCompact ? 0 : 'auto',
-              }}
-              transition={{ duration: 0.3 }}
-              className="hidden items-center gap-2 overflow-hidden whitespace-nowrap md:flex"
-            >
+            <div className="hidden items-center gap-2 md:flex">
               <Link
                 href="/newsletter"
-                className="group flex items-center justify-center gap-1 rounded-full bg-primary px-[26px] py-[14px] font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95"
+                className={cn(
+                  'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95',
+                  isCompact ? 'px-5 py-2 text-sm' : 'px-[26px] py-[14px]'
+                )}
               >
                 Newsletter
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-            </motion.div>
+            </div>
 
             <button
               className="p-2 text-foreground md:hidden"
