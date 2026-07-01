@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TAMPARAN ANAK MUDA',
     description:
-      'Editorial media untuk anak muda Indonesia. Bukan konten yang viral — tulisan yang bertahan.',
+      'Menyadarkan generasi muda akan kenyataan. Editorial media untuk anak muda Indonesia.',
   },
   robots: {
     index: true,
