@@ -38,7 +38,7 @@ export function Hero({ className }: HeroProps) {
         </div>
 
         {/* Floating Nav */}
-        <header className="relative z-20 w-full px-4 pt-4 md:px-12 md:pt-8">
+        <header className="sticky top-0 z-20 w-full px-4 pt-4 md:px-12 md:pt-8">
           <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-3 pl-5 pr-3 shadow-lg md:py-[14px] md:pl-[30px] md:pr-[14px]">
             <Link href="/" className="font-display text-sm font-bold tracking-tight text-foreground md:text-base">
               TAMPARAN ANAK MUDA
