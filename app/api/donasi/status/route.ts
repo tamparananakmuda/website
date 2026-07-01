@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
     }
 
     const louvinRes = await fetch(
-      `https://api.louvin.dev/check-status/${transactionId}`,
+      `https://api.louvin.dev/check-status?id=${transactionId}`,
       {
         headers: { 'x-api-key': apiKey },
       }

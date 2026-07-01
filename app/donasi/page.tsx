@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Copy, Check, Loader2, AlertCircle, QrCode, Building2 } from 'lucide-react';
+import { Heart, Copy, Check, Loader2, AlertCircle, Building2 } from 'lucide-react';
+import QRCode from 'qrcode';
 
 const presetAmounts = [
   { value: 25000, label: 'Rp 25K' },
@@ -49,12 +50,14 @@ export default function DonasiPage() {
   const [transaction, setTransaction] = useState<TransactionData | null>(null);
   const [paymentStatus, setPaymentStatus] = useState<string>('pending');
   const [copied, setCopied] = useState(false);
+  const [qrDataUrl, setQrDataUrl] = useState<string>('');
 
   const finalAmount = customAmount ? parseInt(customAmount, 10) : amount;
 
   const handleSubmit = async () => {
-    if (finalAmount < 1000) {
-      setError('Nominal donasi minimal Rp 1.000');
+    const minAmount = paymentType === 'qris' ? 1500 : 1000;
+    if (finalAmount < minAmount) {
+      setError(`Nominal donasi minimal Rp ${minAmount.toLocaleString('id-ID')}`);
       return;
     }
 
@@ -83,6 +86,14 @@ export default function DonasiPage() {
       }
 
       setTransaction(data);
+      if (data.payment.qr_string) {
+        const url = await QRCode.toDataURL(data.payment.qr_string, {
+          width: 200,
+          margin: 1,
+          color: { dark: '#000000', light: '#ffffff' },
+        });
+        setQrDataUrl(url);
+      }
     } catch {
       setError('Terjadi kesalahan. Coba lagi nanti.');
     } finally {
@@ -166,7 +177,7 @@ export default function DonasiPage() {
               onClick={() => {
                 setTransaction(null);
                 setPaymentStatus('pending');
-                setCustomAmount('');
+                setQrDataUrl('');
               }}
               className="mt-8 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
             >
@@ -189,7 +200,9 @@ export default function DonasiPage() {
             {transaction.payment.qr_string ? (
               <div className="flex flex-col items-center">
                 <div className="mb-6 rounded-2xl border border-border bg-white p-6">
-                  <QrCode size={200} className="text-black" />
+                  {qrDataUrl && (
+                    <img src={qrDataUrl} alt="QRIS Code" width={200} height={200} />
+                  )}
                 </div>
                 <p className="mb-2 text-sm text-muted-foreground">Scan QRIS dengan e-wallet apa saja</p>
                 <p className="mb-6 font-display text-2xl font-bold">
@@ -245,6 +258,7 @@ export default function DonasiPage() {
               onClick={() => {
                 setTransaction(null);
                 setPaymentStatus('pending');
+                setQrDataUrl('');
               }}
               className="mt-6 w-full rounded-full border border-border py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
@@ -317,7 +331,17 @@ export default function DonasiPage() {
                     <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
                       paymentType === method.id ? 'bg-primary/10 text-primary' : 'bg-secondary text-muted-foreground'
                     }`}>
-                      {method.icon === 'qr' ? <QrCode size={20} /> : <Building2 size={20} />}
+                      {method.icon === 'qr' ? (
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="7" height="7" rx="1" />
+                          <rect x="14" y="3" width="7" height="7" rx="1" />
+                          <rect x="3" y="14" width="7" height="7" rx="1" />
+                          <path d="M14 14h3v3h-3z" />
+                          <path d="M20 14v3" />
+                          <path d="M14 20h3" />
+                          <path d="M20 20v.01" />
+                        </svg>
+                      ) : <Building2 size={20} />}
                     </div>
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-foreground">{method.label}</p>
@@ -375,7 +399,7 @@ export default function DonasiPage() {
             {/* Submit */}
             <button
               onClick={handleSubmit}
-              disabled={loading || finalAmount < 1000}
+              disabled={loading || finalAmount < (paymentType === 'qris' ? 1500 : 1000)}
               className="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.98] disabled:opacity-50"
             >
               {loading ? (

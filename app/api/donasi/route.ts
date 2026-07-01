@@ -7,9 +7,10 @@ export async function POST(request: NextRequest) {
   try {
     const { amount, payment_type, customer_name, customer_email } = await request.json();
 
-    if (!amount || amount < 1000) {
+    const minAmount = payment_type === 'qris' ? 1500 : 1000;
+    if (!amount || amount < minAmount) {
       return NextResponse.json(
-        { error: 'Nominal donasi minimal Rp 1.000' },
+        { error: `Nominal donasi minimal Rp ${minAmount.toLocaleString('id-ID')}` },
         { status: 400 }
       );
     }
