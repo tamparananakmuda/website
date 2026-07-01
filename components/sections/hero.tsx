@@ -116,7 +116,7 @@ export function Hero({ className }: HeroProps) {
             className="flex flex-col items-center"
           >
             <p className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-primary">
-              Awakening the youth to reality
+              Bukan konten yang viral. Tulisan yang bertahan.
             </p>
 
             <h1 className="mb-8 max-w-[1100px] font-display text-[42px] font-bold leading-[1.05] tracking-tight text-foreground md:text-[4.5rem]">

@@ -11,9 +11,12 @@ export function Topics({ categories }: TopicsProps) {
   return (
     <section className="bg-card py-20 md:py-32">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-3xl font-bold tracking-tight md:text-4xl">
-          Enam topik. Satu pendekatan: jujur dan tajam.
+        <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+          Enam topik. Satu sudut pandang: kenapa, bukan cuma apa.
         </h2>
+        <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
+          Kami tidak menulis &ldquo;5 cara hemat&rdquo;. Kami menulis kenapa sistemnya bikin kamu susah hemat — dan apa yang bisa kamu lakukan setelah memahaminya.
+        </p>
         <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <Link

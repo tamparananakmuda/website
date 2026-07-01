@@ -13,6 +13,21 @@ const differentiators = [
   },
 ];
 
+const commitments = [
+  {
+    title: 'Setiap klaim ada sumbernya',
+    desc: 'Angka, data, dan kutipan selalu dicantumkan dengan sumber. Tidak ada statistik tanpa origin.',
+  },
+  {
+    title: 'Koreksi publik jika salah',
+    desc: 'Kalau kami keliru, kami perbaiki terbuka. Setiap artikel punya tanggal update dan catatan revisi.',
+  },
+  {
+    title: 'Angle kritik sosial, bukan tips generik',
+    desc: 'Kami tidak menulis "5 cara sukses". Kami menulis kenapa sistemnya begini — dan apa yang bisa kamu lakukan.',
+  },
+];
+
 export function WhyTam() {
   return (
     <section className="bg-card py-20 md:py-32">
@@ -36,6 +51,23 @@ export function WhyTam() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-20 border-t border-border pt-12">
+          <p className="mb-8 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            Komitmen Editorial
+          </p>
+          <p className="mb-12 max-w-2xl text-2xl font-bold leading-snug tracking-tight md:text-3xl md:leading-tight">
+            &ldquo;Tamparan&rdquo; bukan cuma tone. Ini bukti.
+          </p>
+          <div className="grid gap-8 md:grid-cols-3">
+            {commitments.map((item, index) => (
+              <div key={index}>
+                <h3 className="mb-2 text-lg font-bold">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
