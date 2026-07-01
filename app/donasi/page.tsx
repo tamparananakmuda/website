@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Copy, Check, Loader2, AlertCircle, Building2 } from 'lucide-react';
 import QRCode from 'qrcode';
 
@@ -116,14 +116,23 @@ export default function DonasiPage() {
 
   useEffect(() => {
     if (!transaction) return;
+    if (paymentStatus !== 'pending') return;
 
-    const interval = setInterval(() => {
-      if (paymentStatus === 'pending') {
-        checkStatus(transaction.transaction_id);
-      }
-    }, 5000);
+    let active = true;
 
-    return () => clearInterval(interval);
+    const poll = async () => {
+      if (!active) return;
+      await checkStatus(transaction.transaction_id);
+    };
+
+    poll();
+
+    const interval = setInterval(poll, 3000);
+
+    return () => {
+      active = false;
+      clearInterval(interval);
+    };
   }, [transaction, paymentStatus, checkStatus]);
 
   const copyToClipboard = (text: string) => {
@@ -157,10 +166,14 @@ export default function DonasiPage() {
           </p>
         </div>
 
+        <AnimatePresence mode="wait">
         {paymentStatus === 'settled' ? (
           <motion.div
+            key="success"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="rounded-2xl border border-border bg-card p-8 text-center md:p-12"
           >
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
@@ -186,8 +199,11 @@ export default function DonasiPage() {
           </motion.div>
         ) : transaction ? (
           <motion.div
+            key="payment"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="rounded-2xl border border-border bg-card p-6 md:p-8"
           >
             <div className="mb-6 flex items-center justify-between">
@@ -267,8 +283,11 @@ export default function DonasiPage() {
           </motion.div>
         ) : (
           <motion.div
+            key="form"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="space-y-8"
           >
             {/* Amount Selection */}
@@ -420,6 +439,7 @@ export default function DonasiPage() {
             </p>
           </motion.div>
         )}
+        </AnimatePresence>
       </div>
     </main>
   );
