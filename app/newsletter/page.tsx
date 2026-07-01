@@ -40,23 +40,26 @@ export default function NewsletterPage() {
     <main className="container mx-auto px-4 py-20 md:py-32">
       <div className="mx-auto max-w-2xl">
         <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-          Satu Email.
+          Bukan Konten.
           <br />
-          Satu Sudut Pandang Baru.
+          Tapi Sudut Pandang.
         </h1>
         <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-          Surat mingguan untuk anak muda yang ingin bertumbuh. Tidak ada spam. Hanya perspektif yang kamu butuhkan.
+          Surat mingguan untuk anak muda yang sudah lelah scroll tanpa akhir. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
         </p>
 
         <ul className="mb-8 space-y-3">
           <li className="flex items-center gap-3 text-muted-foreground">
-            <span className="text-primary">&#10003;</span> Satu perspektif baru setiap minggu
+            <span className="text-primary">&#10003;</span> Satu sudut pandang baru setiap minggu — bukan link-link acak
           </li>
           <li className="flex items-center gap-3 text-muted-foreground">
-            <span className="text-primary">&#10003;</span> Tidak ada spam atau clickbait
+            <span className="text-primary">&#10003;</span> Tidak ada spam, tidak ada clickbait, tidak ada fluff
           </li>
           <li className="flex items-center gap-3 text-muted-foreground">
-            <span className="text-primary">&#10003;</span> Berhenti kapan saja
+            <span className="text-primary">&#10003;</span> Dibaca dalam 5 menit, dipikirkan selama seminggu
+          </li>
+          <li className="flex items-center gap-3 text-muted-foreground">
+            <span className="text-primary">&#10003;</span> Gratis. Berhenti kapan saja.
           </li>
         </ul>
 
@@ -79,10 +82,10 @@ export default function NewsletterPage() {
             disabled={status === 'loading'}
             size="lg"
           >
-            {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
+            {status === 'loading' ? 'Mendaftar...' : 'Daftar Sekarang — Gratis'}
           </Button>
           <p className="text-sm text-muted-foreground">
-            Gratis. Satu email per minggu.
+            Satu email per minggu. Tidak lebih. Berhenti kapan saja.
           </p>
         </form>
 
