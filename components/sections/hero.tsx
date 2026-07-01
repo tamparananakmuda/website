@@ -19,6 +19,18 @@ const navLinks = [
 
 export function Hero({ className }: HeroProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isCompact = isScrolled && !isHovered;
 
   return (
     <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-0 md:p-6', className)}>
@@ -37,14 +49,37 @@ export function Hero({ className }: HeroProps) {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
         </div>
 
-        {/* Floating Nav */}
+        {/* Floating Nav - Dynamic Island */}
         <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-12 md:pt-8 pointer-events-none">
-          <div className="pointer-events-auto mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-3 pl-5 pr-3 shadow-lg md:py-[14px] md:pl-[30px] md:pr-[14px]">
-            <Link href="/" className="font-display text-sm font-bold tracking-tight text-foreground md:text-base">
-              TAMPARAN ANAK MUDA
+          <motion.div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            animate={{
+              maxWidth: isCompact ? 480 : 1280,
+              paddingTop: isCompact ? 8 : 14,
+              paddingBottom: isCompact ? 8 : 14,
+            }}
+            transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+            className="pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md"
+          >
+            <Link
+              href="/"
+              className={cn(
+                'font-display font-bold tracking-tight text-foreground transition-all duration-300',
+                isCompact ? 'text-xs' : 'text-sm md:text-base'
+              )}
+            >
+              {isCompact ? 'TAM' : 'TAMPARAN ANAK MUDA'}
             </Link>
 
-            <nav className="hidden items-center gap-10 md:flex">
+            <motion.nav
+              animate={{
+                opacity: isCompact ? 0 : 1,
+                width: isCompact ? 0 : 'auto',
+              }}
+              transition={{ duration: 0.3 }}
+              className="hidden items-center gap-10 overflow-hidden whitespace-nowrap md:flex"
+            >
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -54,9 +89,16 @@ export function Hero({ className }: HeroProps) {
                   {link.name}
                 </Link>
               ))}
-            </nav>
+            </motion.nav>
 
-            <div className="hidden items-center gap-2 md:flex">
+            <motion.div
+              animate={{
+                opacity: isCompact ? 0 : 1,
+                width: isCompact ? 0 : 'auto',
+              }}
+              transition={{ duration: 0.3 }}
+              className="hidden items-center gap-2 overflow-hidden whitespace-nowrap md:flex"
+            >
               <Link
                 href="/newsletter"
                 className="group flex items-center justify-center gap-1 rounded-full bg-primary px-[26px] py-[14px] font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95"
@@ -64,7 +106,7 @@ export function Hero({ className }: HeroProps) {
                 Newsletter
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-            </div>
+            </motion.div>
 
             <button
               className="p-2 text-foreground md:hidden"
@@ -74,7 +116,7 @@ export function Hero({ className }: HeroProps) {
             >
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
-          </div>
+          </motion.div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
