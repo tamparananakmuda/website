@@ -15,7 +15,7 @@ export function Topics({ categories }: TopicsProps) {
           Enam topik. Satu sudut pandang: kenapa, bukan cuma apa.
         </h2>
         <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
-          Kami tidak menulis &ldquo;5 cara hemat&rdquo;. Kami menulis kenapa sistemnya bikin kamu susah hemat — dan apa yang bisa kamu lakukan setelah memahaminya.
+          Kami tidak menulis &ldquo;5 cara hemat&rdquo;. Kami menulis kenapa sistemnya bikin kamu susah hemat, dan apa yang bisa kamu lakukan setelah memahaminya.
         </p>
         <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (

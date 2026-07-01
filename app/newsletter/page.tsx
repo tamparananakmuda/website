@@ -50,7 +50,7 @@ export default function NewsletterPage() {
 
         <ul className="mb-8 space-y-3">
           <li className="flex items-center gap-3 text-muted-foreground">
-            <span className="text-primary">&#10003;</span> Satu sudut pandang baru setiap minggu — bukan link-link acak
+            <span className="text-primary">&#10003;</span> Satu sudut pandang baru setiap minggu, bukan link-link acak
           </li>
           <li className="flex items-center gap-3 text-muted-foreground">
             <span className="text-primary">&#10003;</span> Tidak ada spam, tidak ada clickbait, tidak ada fluff
@@ -82,7 +82,7 @@ export default function NewsletterPage() {
             disabled={status === 'loading'}
             size="lg"
           >
-            {status === 'loading' ? 'Mendaftar...' : 'Daftar Sekarang — Gratis'}
+            {status === 'loading' ? 'Mendaftar...' : 'Daftar Sekarang, Gratis'}
           </Button>
           <p className="text-sm text-muted-foreground">
             Satu email per minggu. Tidak lebih. Berhenti kapan saja.

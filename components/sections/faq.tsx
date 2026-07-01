@@ -2,17 +2,17 @@ const faqItems = [
   {
     question: 'Apa itu TAMPARAN ANAK MUDA?',
     answer:
-      'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset — bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat kamu berpikir. Kami bukan media berita dan bukan content creator. Kami adalah media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"',
+      'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset, bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat kamu berpikir. Kami bukan media berita dan bukan content creator. Kami adalah media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"',
   },
   {
     question: 'Kenapa baca kalau bisa nonton?',
     answer:
-      'Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari — kamu menonton, lalu lupa. Membaca memaksa kamu berhenti, memproses, dan membentuk opini sendiri. Pemahaman datang dari kata-kata yang ditulis dengan sungguh-sungguh, bukan konten yang dibuat untuk retensi 3 detik.',
+      'Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari, kamu menonton, lalu lupa. Membaca memaksa kamu berhenti, memproses, dan membentuk opini sendiri. Pemahaman datang dari kata-kata yang ditulis dengan sungguh-sungguh, bukan konten yang dibuat untuk retensi 3 detik.',
   },
   {
     question: 'Topik apa yang dibahas TAM?',
     answer:
-      'Enam topik: Uang, Karier, Bisnis, Teknologi, Kehidupan, dan Mindset. Kami fokus pada topik yang relevan untuk anak muda Indonesia yang ingin bertumbuh — bukan membahas segala hal, tapi mendalam pada apa yang kami pilih.',
+      'Enam topik: Uang, Karier, Bisnis, Teknologi, Kehidupan, dan Mindset. Kami fokus pada topik yang relevan untuk anak muda Indonesia yang ingin bertumbuh, bukan membahas segala hal, tapi mendalam pada apa yang kami pilih.',
   },
   {
     question: 'Apakah konten TAM gratis?',
@@ -22,7 +22,7 @@ const faqItems = [
   {
     question: 'Bagaimana cara berlangganan newsletter?',
     answer:
-      'Daftarkan email kamu di halaman newsletter. Satu email per minggu, tidak ada spam, bisa berhenti kapan saja. Isinya bukan link-link acak — tapi perspektif yang kami pilih untuk membantumu melihat sesuatu dari sudut yang berbeda.',
+      'Daftarkan email kamu di halaman newsletter. Satu email per minggu, tidak ada spam, bisa berhenti kapan saja. Isinya bukan link-link acak, tapi perspektif yang kami pilih untuk membantumu melihat sesuatu dari sudut yang berbeda.',
   },
 ];
 

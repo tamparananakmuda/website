@@ -24,7 +24,7 @@ const commitments = [
   },
   {
     title: 'Angle kritik sosial, bukan tips generik',
-    desc: 'Kami tidak menulis "5 cara sukses". Kami menulis kenapa sistemnya begini — dan apa yang bisa kamu lakukan.',
+    desc: 'Kami tidak menulis "5 cara sukses". Kami menulis kenapa sistemnya begini, dan apa yang bisa kamu lakukan.',
   },
 ];
 

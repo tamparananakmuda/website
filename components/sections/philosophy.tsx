@@ -12,7 +12,7 @@ export function Philosophy() {
             <span className="text-primary">Tulisan 10 menit mengubah cara berpikir.</span>
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Di era scroll tanpa henti, kami memilih menulis panjang. Karena pemahaman tidak datang dari ringkasan 30 detik — ia datang dari membaca sesuatu sampai selesai dan melihat sesuatu dari sudut yang sebelumnya tidak terpikir.
+            Di era scroll tanpa henti, kami memilih menulis panjang. Karena pemahaman tidak datang dari ringkasan 30 detik. Ia datang dari membaca sesuatu sampai selesai dan melihat sesuatu dari sudut yang sebelumnya tidak terpikir.
           </p>
         </div>
       </div>

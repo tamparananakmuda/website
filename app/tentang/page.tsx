@@ -5,7 +5,7 @@ import { OrganizationSchema } from '@/components/schema/organization-schema';
 export const metadata = {
   title: 'Tentang Kami',
   description:
-    'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami — bukan sekadar konten, tapi komitmen tertulis.',
+    'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami, bukan sekadar konten, tapi komitmen tertulis.',
 };
 
 const prinsipEditorial = [
@@ -23,7 +23,7 @@ const prinsipEditorial = [
   },
   {
     title: 'Angle kritik sosial, bukan tips generik',
-    desc: 'Kami tidak menulis "5 cara sukses". Kami menulis kenapa sistemnya begini — dan apa yang bisa kamu lakukan setelah memahaminya.',
+    desc: 'Kami tidak menulis "5 cara sukses". Kami menulis kenapa sistemnya begini, dan apa yang bisa kamu lakukan setelah memahaminya.',
   },
 ];
 
@@ -31,7 +31,7 @@ const roadmap = [
   {
     phase: 'Sekarang',
     items: [
-      'Editorial media tertulis — artikel mendalam di 6 topik',
+      'Editorial media tertulis: artikel mendalam di 6 topik',
       'Newsletter mingguan gratis',
       'Konten Instagram/TikTok sebagai distribution channel',
     ],
@@ -89,10 +89,10 @@ export default function AboutPage() {
             </h1>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                TAMPARAN ANAK MUDA lahir dari keresahan: setiap hari anak muda Indonesia dibombardir konten yang terlihat inspiratif tapi sebenarnya tidak mengubah apa-apa. Video 60 detik, carousel motivasi, thread Twitter — semuanya dikonsumsi cepat, lalu dilupakan lebih cepat.
+                TAMPARAN ANAK MUDA lahir dari keresahan: setiap hari anak muda Indonesia dibombardir konten yang terlihat inspiratif tapi sebenarnya tidak mengubah apa-apa. Video 60 detik, carousel motivasi, thread Twitter, semuanya dikonsumsi cepat, lalu dilupakan lebih cepat.
               </p>
               <p>
-                Kami melihat gap yang nyata: tidak ada media tertulis Indonesia yang khusus untuk anak muda, dengan depth editorial dan tone yang jujur. Ada banyak video, banyak podcast, banyak carousel — tapi tidak ada tempat untuk membaca analisis mendalam tentang uang, karier, bisnis, teknologi, dan kehidupan.
+                Kami melihat gap yang nyata: tidak ada media tertulis Indonesia yang khusus untuk anak muda, dengan depth editorial dan tone yang jujur. Ada banyak video, banyak podcast, banyak carousel, tapi tidak ada tempat untuk membaca analisis mendalam tentang uang, karier, bisnis, teknologi, dan kehidupan.
               </p>
               <p>
                 Kenapa &ldquo;tamparan&rdquo; bukan &ldquo;pelukan&rdquo;? Karena terkadang yang kamu butuhkan bukan seseorang yang mengatakan &ldquo;kamu pasti bisa&rdquo;, tapi seseorang yang mengatakan hal yang perlu didengar, bukan yang ingin didengar. Tamparan tidak menyenangkan. Tapi tamparan membangunkan.
@@ -112,7 +112,7 @@ export default function AboutPage() {
               Visi
             </p>
             <p className="text-3xl font-bold leading-snug tracking-tight md:text-4xl md:leading-tight">
-              Menjadi editorial media tertulis terdepan untuk anak muda Indonesia — tempat membaca analisis yang jujur, tajam, dan bertahan.
+              Menjadi editorial media tertulis terdepan untuk anak muda Indonesia: tempat membaca analisis yang jujur, tajam, dan bertahan.
             </p>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function AboutPage() {
                 Setiap artikel ditulis dengan nama penulis dan bio. Tidak ada ghost writer tanpa atribusi. Kalau kami kutip orang lain, kami tulis siapa. Kalau opini kami sendiri, kami tulis jelas.
               </p>
               <p>
-                Di fase awal, kamu akan melihat suara yang konsisten di setiap tulisan — editor TAM. Seiring waktu, lebih banyak penulis akan bergabung, masing-masing dengan suara dan keahlian sendiri.
+                Di fase awal, kamu akan melihat suara yang konsisten di setiap tulisan: editor TAM. Seiring waktu, lebih banyak penulis akan bergabung, masing-masing dengan suara dan keahlian sendiri.
               </p>
             </div>
           </div>

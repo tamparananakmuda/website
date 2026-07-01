@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | TAMPARAN ANAK MUDA',
   },
   description:
-    'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset — bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat anak muda berpikir lebih kritis dan bertindak lebih berani.',
+    'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset, bukan ringkasan 60 detik, tapi tulisan mendalam yang membuat anak muda berpikir lebih kritis dan bertindak lebih berani.',
   keywords: [
     'media anak muda indonesia',
     'pengembangan diri',
