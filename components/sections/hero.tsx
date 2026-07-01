@@ -59,7 +59,7 @@ export function Hero({ className }: HeroProps) {
               paddingTop: isCompact ? 8 : 14,
               paddingBottom: isCompact ? 8 : 14,
             }}
-            transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.8 }}
             className="pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md"
           >
             <Link
@@ -74,7 +74,7 @@ export function Hero({ className }: HeroProps) {
                 opacity: isCompact ? 0 : 1,
                 width: isCompact ? 0 : 'auto',
               }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
               className="hidden items-center gap-10 overflow-hidden whitespace-nowrap md:flex"
             >
               {navLinks.map((link) => (
