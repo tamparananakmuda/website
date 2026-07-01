@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { Analytics } from '@vercel/analytics/next';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -82,6 +83,7 @@ export default function RootLayout({
             strategy="lazyOnload"
           />
         )}
+        <Analytics />
       </body>
     </html>
   );
