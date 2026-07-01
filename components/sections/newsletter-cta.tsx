@@ -38,43 +38,53 @@ export function NewsletterCta() {
   }
 
   return (
-    <section className="bg-primary py-20 md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            Satu Email.
-            <br />
-            Bukan Konten. Tapi Sudut Pandang.
-          </h2>
-          <p className="mb-8 text-lg leading-relaxed text-primary-foreground/80">
-            Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
-          </p>
-          <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-            <Input
-              type="email"
-              placeholder="kamu@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="bg-primary-foreground text-background"
-            />
-            <Button
-              type="submit"
-              disabled={status === 'loading'}
-              variant="secondary"
-              size="lg"
-            >
-              {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
-            </Button>
-          </form>
-          <p className="mt-4 text-sm text-primary-foreground/60">
-            Gratis. Berhenti kapan saja.
-          </p>
-          {message && (
-            <p className={`mt-4 text-sm ${status === 'success' ? 'text-primary-foreground' : 'text-primary-foreground/90'}`}>
-              {message}
+    <section className="py-24 md:py-40">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-border bg-card">
+          <div className="px-6 py-16 text-center md:px-12 md:py-24">
+            <div className="mb-8 flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-primary" />
+              <span className="text-xs font-medium uppercase tracking-[0.25em] text-primary">
+                Newsletter
+              </span>
+              <div className="h-px w-12 bg-primary" />
+            </div>
+            <h2 className="mb-4 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+              Satu Email.
+              <span className="block text-muted-foreground">
+                Bukan Konten. Tapi Sudut Pandang.
+              </span>
+            </h2>
+            <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
             </p>
-          )}
+            <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
+              <Input
+                type="email"
+                placeholder="kamu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-background"
+              />
+              <Button
+                type="submit"
+                disabled={status === 'loading'}
+                size="lg"
+                className="shrink-0"
+              >
+                {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
+              </Button>
+            </form>
+            <p className="mt-4 text-xs text-muted-foreground">
+              Gratis. Berhenti kapan saja.
+            </p>
+            {message && (
+              <p className={`mt-4 text-sm ${status === 'success' ? 'text-primary' : 'text-destructive'}`}>
+                {message}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </section>

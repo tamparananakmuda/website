@@ -28,19 +28,31 @@ const faqItems = [
 
 export function Faq() {
   return (
-    <section className="py-20 md:py-32">
-      <div className="container mx-auto px-4">
+    <section className="py-24 md:py-40">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto max-w-3xl">
-          <h2 className="mb-12 text-3xl font-bold tracking-tight md:text-4xl">
+          <div className="mb-12 flex items-center gap-4">
+            <span className="font-display text-sm font-bold text-primary">05</span>
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
+              FAQ
+            </span>
+          </div>
+          <h2 className="mb-12 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
             Pertanyaan yang sering muncul
           </h2>
-          <div className="space-y-8">
+          <div className="divide-y divide-border">
             {faqItems.map((item, index) => (
-              <div key={index} className="border-b border-border pb-6">
-                <h3 className="mb-3 text-lg font-bold md:text-xl">
-                  {item.question}
-                </h3>
-                <p className="leading-relaxed text-muted-foreground">
+              <div key={index} className="py-6 md:py-8">
+                <div className="mb-3 flex items-start gap-4">
+                  <span className="mt-1 shrink-0 font-display text-xs font-bold text-primary">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="font-display text-base font-bold leading-snug md:text-lg">
+                    {item.question}
+                  </h3>
+                </div>
+                <p className="pl-8 text-sm leading-relaxed text-muted-foreground md:pl-10 md:text-base">
                   {item.answer}
                 </p>
               </div>

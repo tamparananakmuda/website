@@ -2,23 +2,26 @@ import Link from 'next/link';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid gap-12 md:grid-cols-3">
-          <div>
-            <p className="mb-4 text-lg font-bold tracking-tight">
+    <footer className="border-t border-border bg-background">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
+          <div className="md:col-span-5">
+            <p className="mb-3 font-display text-lg font-bold tracking-tight">
               TAMPARAN ANAK MUDA
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="mb-6 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Awakening the youth to reality.
+            </p>
+            <p className="text-sm italic text-muted-foreground/60">
+              Built for thinkers, not scrollers.
             </p>
           </div>
 
-          <div>
-            <p className="mb-4 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+          <div className="md:col-span-3 md:col-start-7">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
               Navigasi
             </p>
-            <nav className="flex flex-col gap-2 text-sm">
+            <nav className="flex flex-col gap-3 text-sm">
               <Link href="/artikel" className="text-muted-foreground transition-colors hover:text-foreground">
                 Artikel
               </Link>
@@ -37,11 +40,11 @@ export function SiteFooter() {
             </nav>
           </div>
 
-          <div>
-            <p className="mb-4 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+          <div className="md:col-span-3">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
               Sosial
             </p>
-            <div className="flex flex-col gap-2 text-sm">
+            <div className="flex flex-col gap-3 text-sm">
               <a
                 href="https://instagram.com/tamparananakmuda.id"
                 target="_blank"
@@ -70,12 +73,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border py-6">
+          <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} TAMPARAN ANAK MUDA
-          </p>
-          <p className="text-sm italic text-muted-foreground">
-            Built for thinkers, not scrollers.
           </p>
         </div>
       </div>
