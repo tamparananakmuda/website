@@ -8,3 +8,15 @@ build/
 .vscode/
 .idea/
 *.log
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Supabase
+supabase/.branches
+supabase/.temp
