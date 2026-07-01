@@ -21,8 +21,8 @@ export function Hero({ className }: HeroProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-2 md:p-6', className)}>
-      <div className="relative w-full max-w-[1600px] min-h-[600px] md:min-h-[920px] rounded-[36px] md:rounded-[48px] overflow-hidden shadow-2xl flex flex-col border border-border">
+    <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-0 md:p-6', className)}>
+      <div className="relative w-full max-w-[1600px] min-h-screen md:min-h-[920px] md:rounded-[48px] overflow-hidden shadow-2xl flex flex-col border border-border">
 
         {/* Background */}
         <div className="absolute inset-0 z-0">
@@ -38,13 +38,13 @@ export function Hero({ className }: HeroProps) {
         </div>
 
         {/* Floating Nav */}
-        <header className="relative z-20 w-full px-6 md:px-12 pt-8">
-          <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-[14px] pl-[30px] pr-[14px] shadow-lg">
-            <Link href="/" className="font-display text-base font-bold tracking-tight text-foreground">
+        <header className="relative z-20 w-full px-4 pt-4 md:px-12 md:pt-8">
+          <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between rounded-full border border-border bg-card py-3 pl-5 pr-3 shadow-lg md:py-[14px] md:pl-[30px] md:pr-[14px]">
+            <Link href="/" className="font-display text-sm font-bold tracking-tight text-foreground md:text-base">
               TAMPARAN ANAK MUDA
             </Link>
 
-            <nav className="hidden items-center gap-10 lg:flex">
+            <nav className="hidden items-center gap-10 md:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -67,40 +67,40 @@ export function Hero({ className }: HeroProps) {
             </div>
 
             <button
-              className="p-2 text-foreground lg:hidden"
+              className="p-2 text-foreground md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute left-6 right-6 top-[88px] z-30 rounded-[32px] border border-border bg-card p-8 shadow-2xl lg:hidden"
+              className="absolute left-4 right-4 top-[72px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden"
             >
-              <nav className="flex flex-col gap-5">
+              <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-lg font-medium text-foreground hover:text-primary"
+                    className="rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
                   </Link>
                 ))}
-                <hr className="my-2 border-border" />
                 <Link
                   href="/newsletter"
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 font-bold text-primary-foreground"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3 font-bold text-primary-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Newsletter
-                  <ArrowRight size={20} />
+                  <ArrowRight size={18} />
                 </Link>
               </nav>
             </motion.div>
@@ -108,42 +108,42 @@ export function Hero({ className }: HeroProps) {
         </header>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-6 pb-[80px] text-center md:pb-[110px]">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-4 pb-16 text-center md:px-6 md:pb-[110px]">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const }}
             className="flex flex-col items-center"
           >
-            <p className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-primary">
+            <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-primary md:mb-8 md:text-sm md:tracking-[0.3em]">
               Awakening the youth to reality
             </p>
 
-            <h1 className="mb-8 max-w-[1100px] font-display text-[42px] font-bold leading-[1.05] tracking-tight text-foreground md:text-[4.5rem]">
+            <h1 className="mb-6 max-w-[1100px] font-display text-[34px] font-bold leading-[1.08] tracking-tight text-foreground md:mb-8 md:text-[4.5rem] md:leading-[1.05]">
               Melawan Ilusi.
               <br className="hidden md:block" />
               Membangun Realita.
             </h1>
 
-            <p className="mb-12 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+            <p className="mb-8 max-w-3xl text-base leading-relaxed text-muted-foreground md:mb-12 md:text-xl">
               Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan, bukan untuk membuatmu merasa nyaman, tapi agar kamu melihat kenyataan lebih jelas.
             </p>
 
-            <div className="flex flex-col items-center justify-center gap-5 sm:flex-row">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:w-auto sm:gap-5">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/artikel"
-                  className="group flex w-full items-center justify-center gap-1 rounded-full bg-primary px-[26px] py-[14px] font-semibold text-primary-foreground shadow-xl transition-colors hover:bg-primary/90 sm:w-auto"
+                  className="group flex w-full items-center justify-center gap-1 rounded-full bg-primary px-6 py-3.5 font-semibold text-primary-foreground shadow-xl transition-colors hover:bg-primary/90 sm:px-[26px] sm:py-[14px]"
                 >
                   Mulai Membaca
-                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1 md:size-5" />
                 </Link>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/tentang"
-                  className="flex w-full items-center justify-center gap-1 rounded-full border border-border bg-card px-[26px] py-[14px] font-semibold text-foreground shadow-xl transition-colors hover:bg-secondary sm:w-auto"
+                  className="flex w-full items-center justify-center gap-1 rounded-full border border-border bg-card px-6 py-3.5 font-semibold text-foreground shadow-xl transition-colors hover:bg-secondary sm:px-[26px] sm:py-[14px]"
                 >
                   Tentang Kami
                 </Link>
