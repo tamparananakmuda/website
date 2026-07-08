@@ -1,24 +1,38 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { donasiSchema, getMinAmount } from '@/lib/validations/donasi';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 const LOUVIN_API_URL = 'https://api.louvin.dev/create-transaction';
 
 export async function POST(request: NextRequest) {
   try {
-    const { amount, payment_type, customer_name, customer_email } = await request.json();
+    const limit = await rateLimit(request, {
+      limit: 5,
+      window: 60,
+      identifier: 'donasi',
+    });
+    if (!limit.success) {
+      return rateLimitResponse(limit);
+    }
 
-    const minAmount = payment_type === 'qris' ? 1500 : 1000;
-    if (!amount || amount < minAmount) {
+    const body = await request.json();
+
+    const parsed = donasiSchema.safeParse(body);
+    if (!parsed.success) {
+      const firstError = parsed.error.issues[0];
       return NextResponse.json(
-        { error: `Nominal donasi minimal Rp ${minAmount.toLocaleString('id-ID')}` },
+        { error: firstError?.message || 'Input tidak valid' },
         { status: 400 }
       );
     }
 
-    const validPaymentTypes = ['qris', 'bni_va', 'bri_va', 'permata_va', 'cimb_niaga_va'];
-    if (!payment_type || !validPaymentTypes.includes(payment_type)) {
+    const { amount, payment_type, customer_name, customer_email, is_anonymous, message, is_recurring } = parsed.data;
+
+    const minAmount = getMinAmount(payment_type);
+    if (amount < minAmount) {
       return NextResponse.json(
-        { error: 'Metode pembayaran tidak valid' },
+        { error: `Nominal donasi minimal Rp ${minAmount.toLocaleString('id-ID')}` },
         { status: 400 }
       );
     }
@@ -40,8 +54,8 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         amount,
         payment_type,
-        customer_name: customer_name || 'Donatur TAM',
-        customer_email: customer_email || '',
+        customer_name,
+        customer_email,
         description: 'Donasi TAMPARAN ANAK MUDA',
       }),
     });
@@ -70,8 +84,8 @@ export async function POST(request: NextRequest) {
       net_amount: data.transaction.net_amount,
       payment_type,
       status: 'pending',
-      customer_name: customer_name || 'Donatur TAM',
-      customer_email: customer_email || '',
+      customer_name,
+      customer_email,
       description: 'Donasi TAMPARAN ANAK MUDA',
       reference: data.transaction.reference,
       qr_string: data.payment.qr_string || null,
@@ -79,6 +93,9 @@ export async function POST(request: NextRequest) {
       bank: data.payment.bank || null,
       payment_number: data.payment.payment_number || null,
       expired_at: data.payment.expired_at || null,
+      is_anonymous,
+      message: message || null,
+      is_recurring,
     });
 
     return NextResponse.json({

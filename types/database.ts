@@ -63,6 +63,12 @@ export type Post = {
   seo_meta_title: string | null;
   seo_meta_description: string | null;
   seo_og_image_url: string | null;
+  is_sponsored: boolean;
+  sponsor_name: string | null;
+  sponsor_url: string | null;
+  sponsor_disclosure: string | null;
+  is_premium: boolean;
+  premium_excerpt: string | null;
   created_at: string;
   updated_at: string;
   // Joined fields

@@ -1,0 +1,86 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const postId = searchParams.get('post_id');
+
+    if (!postId) {
+      return NextResponse.json(
+        { error: 'Post ID wajib diisi' },
+        { status: 400 }
+      );
+    }
+
+    const supabase = createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json({ unlocked: false });
+    }
+
+    const { data } = await supabase
+      .from('premium_unlocks')
+      .select('id')
+      .eq('reader_id', user.id)
+      .eq('post_id', postId)
+      .single();
+
+    return NextResponse.json({ unlocked: !!data });
+  } catch {
+    return NextResponse.json({ unlocked: false });
+  }
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const limit = await rateLimit(request, {
+      limit: 10,
+      window: 60,
+      identifier: 'premium-unlock',
+    });
+    if (!limit.success) {
+      return rateLimitResponse(limit);
+    }
+
+    const supabase = createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json(
+        { error: 'Login dulu untuk membuka artikel premium' },
+        { status: 401 }
+      );
+    }
+
+    const { post_id } = await request.json();
+
+    if (!post_id) {
+      return NextResponse.json(
+        { error: 'Post ID wajib diisi' },
+        { status: 400 }
+      );
+    }
+
+    const { error } = await supabase
+      .from('premium_unlocks')
+      .upsert({
+        reader_id: user.id,
+        post_id,
+      }, {
+        onConflict: 'reader_id,post_id',
+      });
+
+    if (error) throw error;
+
+    return NextResponse.json({ success: true, unlocked: true });
+  } catch (error) {
+    console.error('Premium unlock error:', error);
+    return NextResponse.json(
+      { error: 'Gagal membuka artikel' },
+      { status: 500 }
+    );
+  }
+}

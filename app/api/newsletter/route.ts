@@ -1,25 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { newsletterSchema } from '@/lib/validations/newsletter';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json();
+    const limit = await rateLimit(request, {
+      limit: 3,
+      window: 60,
+      identifier: 'newsletter',
+    });
+    if (!limit.success) {
+      return rateLimitResponse(limit);
+    }
 
-    if (!email || typeof email !== 'string') {
+    const body = await request.json();
+
+    const parsed = newsletterSchema.safeParse(body);
+    if (!parsed.success) {
+      const firstError = parsed.error.issues[0];
       return NextResponse.json(
-        { error: 'Email wajib diisi' },
+        { error: firstError?.message || 'Input tidak valid' },
         { status: 400 }
       );
     }
 
-    const normalizedEmail = email.trim().toLowerCase();
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
-      return NextResponse.json(
-        { error: 'Format email tidak valid' },
-        { status: 400 }
-      );
-    }
+    const normalizedEmail = parsed.data.email;
+    const topics = parsed.data.topics;
 
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -35,6 +42,7 @@ export async function POST(request: NextRequest) {
           email: normalizedEmail,
           status: 'active',
           source: 'website',
+          topics: topics.length > 0 ? topics : null,
           updated_at: new Date().toISOString(),
         },
         { onConflict: 'email' }
@@ -56,6 +64,9 @@ export async function POST(request: NextRequest) {
           email: normalizedEmail,
           listIds: [parseInt(process.env.BREVO_LIST_ID, 10)],
           updateEnabled: true,
+          attributes: {
+            TOPICS: topics.join(','),
+          },
         }),
       });
 

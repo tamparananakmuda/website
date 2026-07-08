@@ -1,6 +1,6 @@
 # TAMPARAN ANAK MUDA
 
-> Awakening the youth to reality.
+> Menyadarkan generasi muda akan kenyataan
 
 TAMPARAN ANAK MUDA adalah editorial media digital Indonesia yang menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset untuk generasi muda. Kami bukan media berita dan bukan content creator. Kami adalah media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"
 
@@ -23,12 +23,22 @@ Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari, kamu me
 
 ## Halaman penting
 
-- [Homepage](https://tamparananakmuda.com/)
+- [Beranda](https://tamparananakmuda.com/)
 - [Semua Artikel](https://tamparananakmuda.com/artikel)
+- [Konten Sosial](https://tamparananakmuda.com/sosial)
 - [Topik/Kategori](https://tamparananakmuda.com/kategori)
 - [Seri Konten](https://tamparananakmuda.com/seri)
 - [Tentang Kami](https://tamparananakmuda.com/tentang)
 - [Newsletter](https://tamparananakmuda.com/newsletter)
+- [Donasi](https://tamparananakmuda.com/donasi)
+
+## Newsletter
+
+Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Satu sudut pandang baru setiap minggu, bukan link-link acak. Gratis, berhenti kapan saja.
+
+## Dukung Kami
+
+TAM gratis untuk semua. Donasi membantu kami tetap independen dan terus menulis tanpa kompromi. Pembayaran via QRIS dan Virtual Account.
 
 ## Kontak
 

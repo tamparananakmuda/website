@@ -42,6 +42,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: `${siteUrl}/newsletter-arsip`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.4,
+    },
+    {
+      url: `${siteUrl}/sosial`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${siteUrl}/donasi`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${siteUrl}/cari`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ];
 
   const [{ data: posts }, { data: categories }] = await Promise.all([

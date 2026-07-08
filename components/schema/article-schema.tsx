@@ -6,6 +6,7 @@ interface ArticleSchemaProps {
   modifiedAt?: string;
   authorName?: string;
   categoryTitle?: string;
+  imageUrl?: string;
 }
 
 export function ArticleSchema({
@@ -16,6 +17,7 @@ export function ArticleSchema({
   modifiedAt,
   authorName = 'TAMPARAN ANAK MUDA',
   categoryTitle,
+  imageUrl,
 }: ArticleSchemaProps) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
@@ -35,6 +37,10 @@ export function ArticleSchema({
       '@type': 'Organization',
       name: 'TAMPARAN ANAK MUDA',
       url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`,
+      },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -42,6 +48,14 @@ export function ArticleSchema({
     },
     ...(categoryTitle && {
       articleSection: categoryTitle,
+    }),
+    ...(imageUrl && {
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+      },
     }),
   };
 

@@ -1,9 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { createHmac } from 'crypto';
+
+function verifySignature(rawBody: string, signature: string | null): boolean {
+  const secret = process.env.LOUVIN_WEBHOOK_SECRET;
+  if (!secret) {
+    console.error('LOUVIN_WEBHOOK_SECRET not configured');
+    return false;
+  }
+  if (!signature) return false;
+
+  const expected = createHmac('sha256', secret)
+    .update(rawBody)
+    .digest('hex');
+
+  return signature === expected;
+}
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const rawBody = await request.text();
+    const signature = request.headers.get('x-louvin-signature');
+
+    if (!verifySignature(rawBody, signature)) {
+      return NextResponse.json(
+        { error: 'Invalid signature' },
+        { status: 401 }
+      );
+    }
+
+    const body = JSON.parse(rawBody);
     const { event, data } = body;
 
     if (!event || !data) {

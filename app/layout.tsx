@@ -4,6 +4,8 @@ import Script from 'next/script';
 import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
 import { SiteFooter } from '@/components/site-footer';
+import { SearchSchema } from '@/components/schema/search-schema';
+import { ThemeProvider } from '@/components/theme-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -60,6 +62,15 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+    types: {
+      'application/rss+xml': `${siteUrl}/rss.xml`,
+    },
+  },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    title: 'TAMPARAN ANAK MUDA',
+    statusBarStyle: 'black-translucent',
   },
 };
 
@@ -72,11 +83,20 @@ export default function RootLayout({
   const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
 
   return (
-    <html lang="id" className={`scroll-smooth ${jakarta.variable} ${syne.variable}`}>
+    <html lang="id" className={`scroll-smooth dark ${jakarta.variable} ${syne.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('tam-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='light'||(!t&&!d)){document.documentElement.classList.remove('dark')}}catch(e){}})()` }} />
+      </head>
       <body className="flex min-h-screen flex-col font-sans">
-        <ConditionalHeader />
-        <div className="flex-1">{children}</div>
-        <SiteFooter />
+        <a href="#main-content" className="skip-to-content">
+          Lewati ke konten utama
+        </a>
+        <SearchSchema siteUrl={siteUrl} />
+        <ThemeProvider>
+          <ConditionalHeader />
+          <div className="flex-1" id="main-content">{children}</div>
+          <SiteFooter />
+        </ThemeProvider>
         {umamiUrl && umamiWebsiteId && (
           <Script
             src={`${umamiUrl}/tam.js`}

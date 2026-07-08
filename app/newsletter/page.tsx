@@ -4,10 +4,26 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
+const TOPICS = [
+  { id: 'uang', label: 'Uang' },
+  { id: 'karier', label: 'Karier' },
+  { id: 'bisnis', label: 'Bisnis' },
+  { id: 'teknologi', label: 'Teknologi' },
+  { id: 'kehidupan', label: 'Kehidupan' },
+  { id: 'mindset', label: 'Mindset' },
+];
+
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
+  const [topics, setTopics] = useState<string[]>([]);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+
+  function toggleTopic(id: string) {
+    setTopics((prev) =>
+      prev.includes(id) ? prev.filter((t) => t !== id) : [...prev, id]
+    );
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -18,7 +34,7 @@ export default function NewsletterPage() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, topics }),
       });
 
       const data = await res.json();
@@ -30,6 +46,7 @@ export default function NewsletterPage() {
       setStatus('success');
       setMessage('Kamu sudah terdaftar. Cek inbox untuk konfirmasi.');
       setEmail('');
+      setTopics([]);
     } catch (error) {
       setStatus('error');
       setMessage(error instanceof Error ? error.message : 'Terjadi kesalahan');
@@ -77,6 +94,32 @@ export default function NewsletterPage() {
               required
             />
           </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-medium">
+              Topik yang kamu minati (opsional)
+            </label>
+            <div className="flex flex-wrap gap-2">
+              {TOPICS.map((topic) => (
+                <button
+                  key={topic.id}
+                  type="button"
+                  onClick={() => toggleTopic(topic.id)}
+                  className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
+                    topics.includes(topic.id)
+                      ? 'border-primary bg-primary text-primary-foreground'
+                      : 'border-border text-muted-foreground hover:border-foreground'
+                  }`}
+                >
+                  {topic.label}
+                </button>
+              ))}
+            </div>
+            <p className="mt-1.5 text-xs text-muted-foreground">
+              Pilih topik untuk dapat konten yang lebih relevan. Kamu bisa ubah kapan saja.
+            </p>
+          </div>
+
           <Button
             type="submit"
             disabled={status === 'loading'}
@@ -98,6 +141,15 @@ export default function NewsletterPage() {
             {message}
           </p>
         )}
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            Sudah pernah berlangganan?{' '}
+            <a href="/newsletter-arsip" className="text-primary font-medium hover:underline">
+              Baca arsip edisi sebelumnya
+            </a>
+          </p>
+        </div>
       </div>
     </main>
   );

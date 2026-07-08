@@ -1,14 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { donasiStatusSchema } from '@/lib/validations/donasi';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 export async function GET(request: NextRequest) {
   try {
+    const limit = await rateLimit(request, {
+      limit: 10,
+      window: 60,
+      identifier: 'donasi-status',
+    });
+    if (!limit.success) {
+      return rateLimitResponse(limit);
+    }
+
     const { searchParams } = new URL(request.url);
     const transactionId = searchParams.get('transaction_id');
 
-    if (!transactionId) {
+    const parsed = donasiStatusSchema.safeParse({
+      transaction_id: transactionId,
+    });
+    if (!parsed.success) {
+      const firstError = parsed.error.issues[0];
       return NextResponse.json(
-        { error: 'Transaction ID wajib diisi' },
+        { error: firstError?.message || 'Input tidak valid' },
         { status: 400 }
       );
     }
@@ -22,7 +37,7 @@ export async function GET(request: NextRequest) {
     }
 
     const louvinRes = await fetch(
-      `https://api.louvin.dev/check-status?id=${transactionId}`,
+      `https://api.louvin.dev/check-status?id=${parsed.data.transaction_id}`,
       {
         headers: { 'x-api-key': apiKey },
       }
@@ -51,7 +66,7 @@ export async function GET(request: NextRequest) {
           status: data.transaction.status,
           updated_at: new Date().toISOString(),
         })
-        .eq('transaction_id', transactionId);
+        .eq('transaction_id', parsed.data.transaction_id);
     }
 
     return NextResponse.json({

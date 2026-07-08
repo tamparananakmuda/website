@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Copy, Check, Loader2, AlertCircle, Building2 } from 'lucide-react';
 import QRCode from 'qrcode';
+import { DonationGoalBar } from '@/components/donation-goal-bar';
+import { DonorWall } from '@/components/donor-wall';
 
 const presetAmounts = [
   { value: 25000, label: 'Rp 25K' },
@@ -44,6 +46,9 @@ export default function DonasiPage() {
   const [paymentType, setPaymentType] = useState<string>('qris');
   const [customerName, setCustomerName] = useState<string>('');
   const [customerEmail, setCustomerEmail] = useState<string>('');
+  const [isAnonymous, setIsAnonymous] = useState(false);
+  const [message, setMessage] = useState('');
+  const [isRecurring, setIsRecurring] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -75,6 +80,9 @@ export default function DonasiPage() {
           payment_type: paymentType,
           customer_name: customerName || undefined,
           customer_email: customerEmail || undefined,
+          is_anonymous: isAnonymous,
+          message: message || undefined,
+          is_recurring: isRecurring,
         }),
       });
 
@@ -165,6 +173,8 @@ export default function DonasiPage() {
             Donasi kamu membantu kami tetap independen dan terus menulis tanpa kompromi.
           </p>
         </div>
+
+        <DonationGoalBar />
 
         <AnimatePresence mode="wait">
         {paymentStatus === 'settled' ? (
@@ -406,6 +416,54 @@ export default function DonasiPage() {
                   className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                 />
               </div>
+              <div>
+                <label className="mb-2 block text-sm font-medium text-muted-foreground">
+                  Pesan untuk TAM (opsional)
+                </label>
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Kata-kata dukungan, saran, atau apa saja"
+                  maxLength={280}
+                  rows={2}
+                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm outline-none transition-colors focus:border-primary resize-none"
+                />
+                <p className="mt-1 text-xs text-muted-foreground">{message.length}/280 karakter</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsAnonymous(!isAnonymous)}
+                  className={`flex h-5 w-9 items-center rounded-full transition-colors ${
+                    isAnonymous ? 'bg-primary' : 'bg-secondary'
+                  }`}
+                  aria-label="Toggle anonymous"
+                >
+                  <span className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                    isAnonymous ? 'translate-x-4' : 'translate-x-0.5'
+                  }`} />
+                </button>
+                <span className="text-sm text-muted-foreground">
+                  Sembunyikan nama saya di dinding donatur
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsRecurring(!isRecurring)}
+                  className={`flex h-5 w-9 items-center rounded-full transition-colors ${
+                    isRecurring ? 'bg-primary' : 'bg-secondary'
+                  }`}
+                  aria-label="Toggle recurring"
+                >
+                  <span className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                    isRecurring ? 'translate-x-4' : 'translate-x-0.5'
+                  }`} />
+                </button>
+                <span className="text-sm text-muted-foreground">
+                  Jadikan dukungan tetap (bulanan)
+                </span>
+              </div>
             </div>
 
             {error && (
@@ -440,6 +498,8 @@ export default function DonasiPage() {
           </motion.div>
         )}
         </AnimatePresence>
+
+        <DonorWall />
       </div>
     </main>
   );

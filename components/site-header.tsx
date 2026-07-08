@@ -1,10 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { createClient } from '@/lib/supabase/client';
+import { User, Search } from 'lucide-react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { name: 'Artikel', href: '/artikel' },
+  { name: 'Sosial', href: '/sosial' },
   { name: 'Kategori', href: '/kategori' },
   { name: 'Seri', href: '/seri' },
   { name: 'Tentang', href: '/tentang' },
@@ -13,6 +17,14 @@ const navLinks = [
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setLoggedIn(!!user);
+    });
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -26,7 +38,7 @@ export function SiteHeader() {
             TAMPARAN ANAK MUDA
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-8 md:flex" aria-label="Navigasi utama">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -38,7 +50,22 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
+            <Link
+              href="/cari"
+              className="flex items-center justify-center w-9 h-9 rounded-full text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+              aria-label="Cari artikel"
+            >
+              <Search className="w-4 h-4" />
+            </Link>
+            <ThemeToggle />
+            <Link
+              href={loggedIn ? '/akun' : '/masuk'}
+              className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <User className="w-4 h-4" />
+              {loggedIn ? 'Akun' : 'Masuk'}
+            </Link>
             <Link
               href="/newsletter"
               className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
@@ -71,7 +98,7 @@ export function SiteHeader() {
 
       {isOpen && (
         <div className="border-t border-border bg-background md:hidden">
-          <nav className="container mx-auto flex flex-col gap-1 px-4 py-4">
+          <nav className="container mx-auto flex flex-col gap-1 px-4 py-4" aria-label="Navigasi mobile">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -82,6 +109,22 @@ export function SiteHeader() {
                 {link.name}
               </Link>
             ))}
+            <Link
+              href="/cari"
+              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
+              onClick={() => setIsOpen(false)}
+            >
+              <Search className="w-4 h-4" />
+              Cari
+            </Link>
+            <Link
+              href={loggedIn ? '/akun' : '/masuk'}
+              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
+              onClick={() => setIsOpen(false)}
+            >
+              <User className="w-4 h-4" />
+              {loggedIn ? 'Akun Saya' : 'Masuk'}
+            </Link>
             <Link
               href="/newsletter"
               className="mt-2 flex items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"

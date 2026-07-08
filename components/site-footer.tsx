@@ -21,9 +21,12 @@ export function SiteFooter() {
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
               Navigasi
             </p>
-            <nav className="flex flex-col gap-3 text-sm">
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi footer">
               <Link href="/artikel" className="text-muted-foreground transition-colors hover:text-foreground">
                 Artikel
+              </Link>
+              <Link href="/sosial" className="text-muted-foreground transition-colors hover:text-foreground">
+                Konten Sosial
               </Link>
               <Link href="/kategori" className="text-muted-foreground transition-colors hover:text-foreground">
                 Kategori
@@ -40,6 +43,15 @@ export function SiteFooter() {
               <Link href="/newsletter" className="text-muted-foreground transition-colors hover:text-foreground">
                 Newsletter
               </Link>
+              <Link href="/newsletter-arsip" className="text-muted-foreground transition-colors hover:text-foreground">
+                Arsip Newsletter
+              </Link>
+              <Link href="/masuk" className="text-muted-foreground transition-colors hover:text-foreground">
+                Akun
+              </Link>
+              <a href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
+                RSS Feed
+              </a>
             </nav>
           </div>
 
@@ -47,7 +59,7 @@ export function SiteFooter() {
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
               Sosial
             </p>
-            <div className="flex flex-col gap-3 text-sm">
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Media sosial">
               <a
                 href="https://instagram.com/tamparananakmuda.id"
                 target="_blank"
@@ -72,7 +84,7 @@ export function SiteFooter() {
               >
                 X (Twitter)
               </a>
-            </div>
+            </nav>
           </div>
         </div>
 

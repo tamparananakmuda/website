@@ -4,6 +4,31 @@
 
 @layer base {
   :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 63% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 63% 52%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 63% 52%;
+    --radius: 0.25rem;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Syne', 'Georgia', serif;
+  }
+
+  .dark {
     --background: 0 0% 4%;
     --foreground: 0 0% 90%;
     --card: 0 0% 8%;
@@ -23,9 +48,6 @@
     --border: 0 0% 16%;
     --input: 0 0% 16%;
     --ring: 0 63% 52%;
-    --radius: 0.25rem;
-    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-    --font-display: 'Syne', 'Georgia', serif;
   }
 }
 
@@ -40,5 +62,32 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
     letter-spacing: -0.02em;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  .skip-to-content {
+    @apply sr-only;
+  }
+  .skip-to-content:focus {
+    @apply not-sr-only fixed top-4 left-4 z-[100] rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
