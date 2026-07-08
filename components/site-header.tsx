@@ -8,6 +8,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { name: 'Artikel', href: '/artikel' },
+  { name: 'Whitepaper', href: '/whitepaper' },
   { name: 'Sosial', href: '/sosial' },
   { name: 'Kategori', href: '/kategori' },
   { name: 'Seri', href: '/seri' },

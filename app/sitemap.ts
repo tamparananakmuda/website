@@ -66,9 +66,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.3,
     },
+    {
+      url: `${siteUrl}/whitepaper`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 
-  const [{ data: posts }, { data: categories }] = await Promise.all([
+  const [{ data: posts }, { data: categories }, { data: whitepapers }] = await Promise.all([
     supabase
       .from('posts')
       .select('slug, updated_at')
@@ -77,6 +83,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     supabase
       .from('categories')
       .select('slug, updated_at'),
+    supabase
+      .from('whitepapers')
+      .select('slug, updated_at')
+      .eq('status', 'published')
+      .order('published_at', { ascending: false }),
   ]);
 
   const postPages: MetadataRoute.Sitemap = (posts || []).map((post) => ({
@@ -93,5 +104,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages];
+  const whitepaperPages: MetadataRoute.Sitemap = (whitepapers || []).map((wp) => ({
+    url: `${siteUrl}/whitepaper/${wp.slug}`,
+    lastModified: wp.updated_at ? new Date(wp.updated_at) : new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...postPages, ...categoryPages, ...whitepaperPages];
 }

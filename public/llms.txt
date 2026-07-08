@@ -25,6 +25,7 @@ Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari, kamu me
 
 - [Beranda](https://tamparananakmuda.com/)
 - [Semua Artikel](https://tamparananakmuda.com/artikel)
+- [Whitepaper](https://tamparananakmuda.com/whitepaper)
 - [Konten Sosial](https://tamparananakmuda.com/sosial)
 - [Topik/Kategori](https://tamparananakmuda.com/kategori)
 - [Seri Konten](https://tamparananakmuda.com/seri)
@@ -39,6 +40,10 @@ Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Satu su
 ## Dukung Kami
 
 TAM gratis untuk semua. Donasi membantu kami tetap independen dan terus menulis tanpa kompromi. Pembayaran via QRIS dan Virtual Account.
+
+## Whitepaper
+
+Riset mendalam dan analisis data tentang generasi muda Indonesia. Whitepaper TAM ditulis berbasis data dan riset, dengan sumber yang bisa diverifikasi. Bukan opini, bukan clickbait.
 
 ## Kontak
 
