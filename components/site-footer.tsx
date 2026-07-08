@@ -4,8 +4,8 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
-          <div className="md:col-span-5">
+        <div className="grid gap-8 py-16 md:grid-cols-12 md:gap-6 md:py-20">
+          <div className="md:col-span-3">
             <p className="mb-3 font-display text-lg font-bold tracking-tight">
               TAMPARAN ANAK MUDA
             </p>
@@ -17,11 +17,11 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="md:col-span-3 md:col-start-7">
+          <div className="md:col-span-3">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
-              Navigasi
+              Konten
             </p>
-            <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi footer">
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi konten">
               <Link href="/artikel" className="text-muted-foreground transition-colors hover:text-foreground">
                 Artikel
               </Link>
@@ -37,6 +37,14 @@ export function SiteFooter() {
               <Link href="/seri" className="text-muted-foreground transition-colors hover:text-foreground">
                 Seri
               </Link>
+            </nav>
+          </div>
+
+          <div className="md:col-span-3">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
+              Informasi
+            </p>
+            <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi informasi">
               <Link href="/tentang" className="text-muted-foreground transition-colors hover:text-foreground">
                 Tentang
               </Link>
