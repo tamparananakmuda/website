@@ -400,7 +400,6 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     display: 'flex',
     position: 'relative',
     overflow: 'hidden',
-    border: `1px solid ${COLORS.border}`,
     boxSizing: 'border-box',
   };
 
