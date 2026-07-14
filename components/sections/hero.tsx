@@ -3,36 +3,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface HeroProps {
   className?: string;
 }
 
-const navLinks = [
-  { name: 'Artikel', href: '/artikel' },
-  { name: 'Kategori', href: '/kategori' },
-  { name: 'Seri', href: '/seri' },
-  { name: 'Tentang', href: '/tentang' },
-  { name: 'Donasi', href: '/donasi' },
-];
-
 export function Hero({ className }: HeroProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
-  const [isHovered, setIsHovered] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const isCompact = isScrolled && !isHovered;
-
   return (
     <section className={cn('w-full min-h-screen bg-background flex items-center justify-center p-0 md:p-6', className)}>
       <div className="relative w-full max-w-[1600px] min-h-screen md:min-h-[920px] md:rounded-[48px] shadow-2xl flex flex-col border border-border">
@@ -49,99 +27,6 @@ export function Hero({ className }: HeroProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
         </div>
-
-        {/* Floating Nav - Dynamic Island */}
-        <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-12 md:pt-8 pointer-events-none">
-          <motion.div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            animate={{
-              maxWidth: isCompact ? 640 : 1280,
-              paddingTop: isCompact ? 8 : 14,
-              paddingBottom: isCompact ? 8 : 14,
-            }}
-            transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.8 }}
-            className="pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md"
-          >
-            <Link
-              href="/"
-              className="font-display text-sm font-bold tracking-tight text-foreground md:text-base"
-            >
-              TAMPARAN ANAK MUDA
-            </Link>
-
-            <motion.nav
-              animate={{
-                opacity: isCompact ? 0 : 1,
-                width: isCompact ? 0 : 'auto',
-              }}
-              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-              className="hidden items-center gap-10 overflow-hidden whitespace-nowrap md:flex"
-            >
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </motion.nav>
-
-            <div className="hidden items-center gap-2 md:flex">
-              <Link
-                href="/newsletter"
-                className={cn(
-                  'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95',
-                  isCompact ? 'px-5 py-2 text-sm' : 'px-[26px] py-[14px]'
-                )}
-              >
-                Newsletter
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <button
-              className="p-2 text-foreground md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </motion.div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="pointer-events-auto absolute left-4 right-4 top-[72px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden"
-            >
-              <nav className="flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-                <Link
-                  href="/newsletter"
-                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3 font-bold text-primary-foreground"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Newsletter
-                  <ArrowRight size={18} />
-                </Link>
-              </nav>
-            </motion.div>
-          )}
-        </header>
 
         {/* Hero Content */}
         <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-4 pb-16 text-center md:px-6 md:pb-[110px]">
