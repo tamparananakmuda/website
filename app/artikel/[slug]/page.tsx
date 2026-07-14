@@ -120,7 +120,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       )}
       <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }, { name: post.title, href: `/artikel/${post.slug}` }]} />
 
-      {/* Feature image with transition gradient */}
+      {/* Feature image */}
       <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
         <div className="relative aspect-[16/9] w-full">
           <Image
@@ -133,10 +133,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             sizes="(max-width: 1200px) 100vw, 1024px"
           />
         </div>
-        <div
-          className="absolute bottom-0 left-0 right-0 h-[30%] pointer-events-none"
-          style={{ background: 'linear-gradient(to bottom, transparent, #FAF9F6)' }}
-        />
       </div>
 
       <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>
