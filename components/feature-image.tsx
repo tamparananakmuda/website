@@ -13,14 +13,9 @@ export function FeatureImage({ src, alt }: FeatureImageProps) {
 
   return (
     <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
-      <div className="relative aspect-[16/9] w-full bg-muted/30 animate-pulse">
+      <div className="relative aspect-[16/9] w-full bg-muted/20">
         {!loaded && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-3">
-              <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/20 border-t-primary" />
-              <span className="text-xs text-muted-foreground/60">Memuat gambar...</span>
-            </div>
-          </div>
+          <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 via-muted/20 to-muted/40" />
         )}
         <Image
           src={src}
@@ -30,8 +25,8 @@ export function FeatureImage({ src, alt }: FeatureImageProps) {
           priority
           loading="eager"
           className={`
-            object-cover transition-opacity duration-500
-            ${loaded ? 'opacity-100' : 'opacity-0'}
+            object-cover transition-all duration-700
+            ${loaded ? 'opacity-100 blur-0 scale-100' : 'opacity-0 blur-sm scale-105'}
           `}
           sizes="(max-width: 1200px) 100vw, 1024px"
           onLoad={() => setLoaded(true)}

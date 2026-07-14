@@ -7,15 +7,34 @@ import { ArticleSchema } from '@/components/schema/article-schema';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { AuthorSchema } from '@/components/schema/author-schema';
 import { FAQSchema } from '@/components/schema/faq-schema';
-import { BookmarkButton } from '@/components/bookmark-button';
-import { ReadingTracker } from '@/components/reading-tracker';
-import { ShareButtons } from '@/components/share-buttons';
 import { SponsoredBadge } from '@/components/sponsored-badge';
 import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
 import { RelatedArticles } from '@/components/related-articles';
-import { CommentsSection } from '@/components/comments-section';
-import { PremiumGate } from '@/components/premium-gate';
+import nextDynamic from 'next/dynamic';
+
+const CommentsSection = nextDynamic(() => import('@/components/comments-section').then(m => m.CommentsSection), {
+  loading: () => <div className="mx-auto max-w-3xl mt-8 h-48 animate-pulse rounded-xl bg-muted/20" />,
+  ssr: false,
+});
+
+const ReadingTracker = nextDynamic(() => import('@/components/reading-tracker').then(m => m.ReadingTracker), {
+  ssr: false,
+});
+
+const PremiumGate = nextDynamic(() => import('@/components/premium-gate').then(m => m.PremiumGate), {
+  loading: () => <div className="mx-auto max-w-3xl mt-8 h-32 animate-pulse rounded-xl bg-muted/20" />,
+  ssr: false,
+});
+
+const BookmarkButton = nextDynamic(() => import('@/components/bookmark-button').then(m => m.BookmarkButton), {
+  ssr: false,
+});
+
+const ShareButtons = nextDynamic(() => import('@/components/share-buttons').then(m => m.ShareButtons), {
+  loading: () => <div className="mx-auto max-w-3xl mt-8 h-10 animate-pulse rounded-lg bg-muted/20" />,
+  ssr: false,
+});
 
 interface ArticlePageProps {
   params: { slug: string };
