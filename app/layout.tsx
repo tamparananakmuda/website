@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans, Syne } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
@@ -69,15 +69,18 @@ export const metadata: Metadata = {
     },
   },
   manifest: '/manifest.json',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAF9F6' },
-    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
-  ],
   appleWebApp: {
     capable: true,
     title: 'TAMPARAN ANAK MUDA',
     statusBarStyle: 'black-translucent',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FAF9F6' },
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+  ],
 };
 
 export default function RootLayout({
