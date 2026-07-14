@@ -14,12 +14,14 @@ export async function GET(request: NextRequest) {
     }
 
     const { searchParams } = new URL(request.url);
-    const q = searchParams.get('q')?.trim();
+    const rawQ = searchParams.get('q')?.trim();
     const category = searchParams.get('category');
 
-    if (!q || q.length < 2) {
+    if (!rawQ || rawQ.length < 2) {
       return NextResponse.json({ results: [], total: 0 });
     }
+
+    const q = rawQ.slice(0, 100).replace(/%/g, '\\%').replace(/_/g, '\\_');
 
     const supabase = createClient();
 

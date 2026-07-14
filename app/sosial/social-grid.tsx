@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Play, ExternalLink } from 'lucide-react';
 
@@ -92,11 +93,14 @@ export default function SocialGrid({ posts }: { posts: SocialPost[] }) {
             <Link href={`/sosial/${post.id}`}>
               {post.thumbnail_url ? (
                 <div className="relative aspect-video overflow-hidden bg-secondary">
-                  <img
+                  <Image
                     src={post.thumbnail_url}
                     alt={post.title || ''}
+                    width={400}
+                    height={225}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    unoptimized
                   />
                   {post.video_url && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">

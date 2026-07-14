@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { createHmac } from 'crypto';
+import { createHmac, timingSafeEqual } from 'crypto';
 
 function verifySignature(rawBody: string, signature: string | null): boolean {
   const secret = process.env.LOUVIN_WEBHOOK_SECRET;
@@ -14,7 +14,14 @@ function verifySignature(rawBody: string, signature: string | null): boolean {
     .update(rawBody)
     .digest('hex');
 
-  return signature === expected;
+  const sigBuffer = Buffer.from(signature);
+  const expectedBuffer = Buffer.from(expected);
+
+  if (sigBuffer.length !== expectedBuffer.length) {
+    return false;
+  }
+
+  return timingSafeEqual(sigBuffer, expectedBuffer);
 }
 
 export async function POST(request: NextRequest) {

@@ -17,17 +17,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { data: post } = await supabase
     .from('social_posts')
-    .select('title, excerpt, platform, thumbnail_url')
+    .select('title, excerpt, platform')
     .eq('id', parseInt(params.id, 10))
     .eq('status', 'published')
     .single();
 
   if (!post) return { title: 'Konten tidak ditemukan' };
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+  const url = `${siteUrl}/sosial/${params.id}`;
+  const title = post.title || `Konten ${post.platform.toUpperCase()} - TAM`;
+
   return {
-    title: post.title || `Konten ${post.platform.toUpperCase()} - TAM`,
+    title,
     description: post.excerpt || undefined,
-    openGraph: post.thumbnail_url ? { images: [post.thumbnail_url] } : undefined,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      locale: 'id_ID',
+      url,
+      title,
+      description: post.excerpt || undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: post.excerpt || undefined,
+    },
   };
 }
 

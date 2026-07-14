@@ -7,6 +7,21 @@ export const revalidate = 60;
 export const metadata = {
   title: 'Semua Artikel',
   description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel`,
+    title: 'Semua Artikel - Tamparan Anak Muda',
+    description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Semua Artikel - Tamparan Anak Muda',
+    description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
+  },
 };
 
 export default async function ArticlesPage() {
@@ -16,7 +31,8 @@ export default async function ArticlesPage() {
     .from('posts')
     .select('*, category:categories(*)')
     .eq('status', 'published')
-    .order('published_at', { ascending: false });
+    .order('published_at', { ascending: false, nullsFirst: false })
+    .limit(12);
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">

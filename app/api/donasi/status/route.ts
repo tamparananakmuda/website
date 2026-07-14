@@ -60,13 +60,20 @@ export async function GET(request: NextRequest) {
     );
 
     if (data.transaction && data.transaction.status) {
-      await supabase
-        .from('donations')
-        .update({
-          status: data.transaction.status,
-          updated_at: new Date().toISOString(),
-        })
-        .eq('transaction_id', parsed.data.transaction_id);
+      const validStatuses = ['pending', 'settled', 'failed'];
+      const status = data.transaction.status;
+
+      if (validStatuses.includes(status)) {
+        await supabase
+          .from('donations')
+          .update({
+            status,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('transaction_id', parsed.data.transaction_id);
+      } else {
+        console.warn('Unknown donation status from Louvin:', status);
+      }
     }
 
     return NextResponse.json({

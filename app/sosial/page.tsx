@@ -5,6 +5,21 @@ import SocialGrid from './social-grid';
 export const metadata: Metadata = {
   title: 'Konten Sosial',
   description: 'Konten pilihan TAM dari X, Instagram, TikTok, dan YouTube dalam satu tempat.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/sosial`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/sosial`,
+    title: 'Konten Sosial - Tamparan Anak Muda',
+    description: 'Konten pilihan TAM dari X, Instagram, TikTok, dan YouTube dalam satu tempat.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Konten Sosial - Tamparan Anak Muda',
+    description: 'Konten pilihan TAM dari X, Instagram, TikTok, dan YouTube dalam satu tempat.',
+  },
 };
 
 export const revalidate = 300;

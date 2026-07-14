@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Category, Post } from '@/types/database';
 
 interface ArticleCardProps {
@@ -7,8 +8,19 @@ interface ArticleCardProps {
 
 export function ArticleCard({ post }: ArticleCardProps) {
   return (
-    <article className="group rounded-xl p-4 transition-all duration-200 hover:bg-secondary/50">
+    <article className="group overflow-hidden rounded-xl transition-all duration-200 hover:bg-secondary/50">
       <Link href={`/artikel/${post.slug}`} className="block">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src={`/api/og/card?slug=${post.slug}`}
+            alt={post.title}
+            fill
+            unoptimized
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div className="p-4">
         <div className="mb-3 flex items-center gap-2 text-sm">
           {post.category && (
             <span
@@ -40,6 +52,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
         <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-transform group-hover:translate-x-1">
           Baca selengkapnya
         </span>
+        </div>
       </Link>
     </article>
   );

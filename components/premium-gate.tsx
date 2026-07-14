@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/client';
 import { Lock, Loader2, CheckCircle2 } from 'lucide-react';
 
 interface PremiumGateProps {
-  postId: string;
+  postId: number;
   excerpt?: string;
 }
 

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { MarkdownContent } from '@/components/markdown-content';
 import { TableOfContents } from '@/components/table-of-contents';
@@ -19,7 +20,7 @@ export async function generateMetadata({
   const supabase = createClient();
   const { data: wp } = await supabase
     .from('whitepapers')
-    .select('title, subtitle, summary, slug, cover_image_url')
+    .select('title, subtitle, summary, slug')
     .eq('slug', params.slug)
     .eq('status', 'published')
     .single();
@@ -41,13 +42,11 @@ export async function generateMetadata({
       url,
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
-      ...(wp.cover_image_url && { images: [{ url: wp.cover_image_url, width: 1200, height: 630, alt: wp.title }] }),
     },
     twitter: {
       card: 'summary_large_image',
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
-      ...(wp.cover_image_url && { images: [wp.cover_image_url] }),
     },
   };
 }
@@ -163,7 +162,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {related.map((r) => (
-              <a
+              <Link
                 key={r.slug}
                 href={`/whitepaper/${r.slug}`}
                 className="group rounded-lg border border-border bg-card p-4 hover:border-primary/50 transition-colors"
@@ -174,7 +173,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
                 <p className="text-xs text-muted-foreground line-clamp-2">
                   {r.summary || r.subtitle}
                 </p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

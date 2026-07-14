@@ -1,10 +1,27 @@
 import { Redis } from '@upstash/redis';
 import { NextRequest, NextResponse } from 'next/server';
 
-const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-});
+let redis: Redis | null = null;
+let redisWarned = false;
+
+function getRedis(): Redis | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  if (!url || !token) {
+    if (!redisWarned) {
+      console.warn('Upstash Redis not configured. Rate limiting is disabled (fail-open).');
+      redisWarned = true;
+    }
+    return null;
+  }
+
+  if (!redis) {
+    redis = new Redis({ url, token });
+  }
+
+  return redis;
+}
 
 interface RateLimitOptions {
   /** Maximum number of requests allowed in the window */
@@ -25,12 +42,17 @@ export async function rateLimit(
   request: NextRequest,
   options: RateLimitOptions
 ): Promise<RateLimitResult> {
+  const r = getRedis();
+  if (!r) {
+    return { success: true, remaining: 0, reset: 0 };
+  }
+
   const ip = getClientIP(request);
   const key = `ratelimit:${options.identifier}:${ip}`;
   const now = Date.now();
   const windowStart = now - options.window * 1000;
 
-  const pipeline = redis.pipeline();
+  const pipeline = r.pipeline();
   pipeline.zremrangebyscore(key, 0, windowStart);
   pipeline.zadd(key, { score: now, member: now.toString() });
   pipeline.zcard(key);

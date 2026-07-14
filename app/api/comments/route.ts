@@ -30,6 +30,7 @@ export async function GET(request: NextRequest) {
         id,
         post_id,
         parent_id,
+        reader_id,
         author_name,
         body,
         likes_count,

@@ -5,6 +5,22 @@ export const revalidate = 60;
 
 export const metadata = {
   title: 'Seri Konten',
+  description: 'Seri artikel mendalam TAMPARAN ANAK MUDA. Topik yang dibahas tuntas dalam beberapa bagian.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/seri`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/seri`,
+    title: 'Seri Konten - Tamparan Anak Muda',
+    description: 'Seri artikel mendalam TAMPARAN ANAK MUDA. Topik yang dibahas tuntas dalam beberapa bagian.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Seri Konten - Tamparan Anak Muda',
+    description: 'Seri artikel mendalam TAMPARAN ANAK MUDA. Topik yang dibahas tuntas dalam beberapa bagian.',
+  },
 };
 
 export default async function SeriesPage() {

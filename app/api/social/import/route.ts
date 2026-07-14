@@ -3,9 +3,13 @@ import { createClient } from '@supabase/supabase-js';
 import { socialImportSchema } from '@/lib/validations/social';
 import { previewSocialContent } from '@/lib/social-preview';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { checkAdminAuth } from '@/lib/auth/admin-check';
 
 export async function POST(request: NextRequest) {
   try {
+    const auth = await checkAdminAuth();
+    if (!auth.isAdmin) return auth.response;
+
     const limit = await rateLimit(request, {
       limit: 10,
       window: 60,

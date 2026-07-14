@@ -6,6 +6,21 @@ import { Mail, Calendar } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Arsip Newsletter',
   description: 'Kumpulan edisi newsletter TAMPARAN ANAK MUDA yang sudah pernah dikirim.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/newsletter-arsip`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/newsletter-arsip`,
+    title: 'Arsip Newsletter - Tamparan Anak Muda',
+    description: 'Kumpulan edisi newsletter TAMPARAN ANAK MUDA yang sudah pernah dikirim.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arsip Newsletter - Tamparan Anak Muda',
+    description: 'Kumpulan edisi newsletter TAMPARAN ANAK MUDA yang sudah pernah dikirim.',
+  },
 };
 
 export const revalidate = 60;

@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Trash2, Eye, EyeOff, ExternalLink, Loader2 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface SocialPost {
   id: number;
@@ -29,17 +31,17 @@ export default function AdminPostsPage() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
 
-  useEffect(() => {
-    fetchPosts();
-  }, [filter]);
-
-  async function fetchPosts() {
+  const fetchPosts = useCallback(async () => {
     setLoading(true);
     const res = await fetch(`/api/social/posts?status=${filter}&limit=50`);
     const data = await res.json();
     setPosts(data.posts || []);
     setLoading(false);
-  }
+  }, [filter]);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
 
   async function updateStatus(id: number, status: string) {
     await fetch('/api/social/posts', {
@@ -60,12 +62,12 @@ export default function AdminPostsPage() {
     <div className="max-w-5xl mx-auto">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-foreground">Kelola Konten Sosial</h1>
-        <a
+        <Link
           href="/admin/import"
           className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
         >
           Import Baru
-        </a>
+        </Link>
       </div>
 
       <div className="flex gap-2 mb-6">
@@ -99,10 +101,13 @@ export default function AdminPostsPage() {
               className="flex items-center gap-4 rounded-lg border border-border bg-card p-4"
             >
               {post.thumbnail_url ? (
-                <img
+                <Image
                   src={post.thumbnail_url}
                   alt=""
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                  unoptimized
                 />
               ) : (
                 <div className="w-16 h-16 rounded-lg bg-secondary flex items-center justify-center text-xs font-bold text-muted-foreground flex-shrink-0">

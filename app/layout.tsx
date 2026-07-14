@@ -52,6 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@tamparananakmuda',
+    creator: '@tamparananakmuda',
     title: 'Menyadarkan generasi muda akan kenyataan - Tamparan Anak Muda',
     description:
       'Editorial media digital untuk anak muda Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset.',
@@ -67,6 +69,10 @@ export const metadata: Metadata = {
     },
   },
   manifest: '/manifest.json',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FAF9F6' },
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+  ],
   appleWebApp: {
     capable: true,
     title: 'TAMPARAN ANAK MUDA',

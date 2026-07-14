@@ -2,9 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { socialPostUpdateSchema } from '@/lib/validations/social';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { checkAdminAuth } from '@/lib/auth/admin-check';
 
 export async function GET(request: NextRequest) {
   try {
+    const auth = await checkAdminAuth();
+    if (!auth.isAdmin) return auth.response;
+
     const { searchParams } = new URL(request.url);
     const status = searchParams.get('status') || 'published';
     const platform = searchParams.get('platform');
@@ -45,6 +49,9 @@ export async function GET(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   try {
+    const auth = await checkAdminAuth();
+    if (!auth.isAdmin) return auth.response;
+
     const limit = await rateLimit(request, {
       limit: 20,
       window: 60,
@@ -90,6 +97,9 @@ export async function PATCH(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
+    const auth = await checkAdminAuth();
+    if (!auth.isAdmin) return auth.response;
+
     const limit = await rateLimit(request, {
       limit: 10,
       window: 60,

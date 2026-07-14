@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { createClient } from '@/lib/supabase/server';
 import { MarkdownContent } from '@/components/markdown-content';
 import { ArticleSchema } from '@/components/schema/article-schema';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import { AuthorSchema } from '@/components/schema/author-schema';
+import { FAQSchema } from '@/components/schema/faq-schema';
 import { BookmarkButton } from '@/components/bookmark-button';
 import { ReadingTracker } from '@/components/reading-tracker';
 import { ShareButtons } from '@/components/share-buttons';
@@ -26,7 +29,7 @@ export async function generateMetadata({
   const supabase = createClient();
   const { data: post } = await supabase
     .from('posts')
-    .select('title, excerpt, seo_meta_title, seo_meta_description, seo_og_image_url, cover_image_url, published_at, updated_at, slug')
+    .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug')
     .eq('slug', params.slug)
     .eq('status', 'published')
     .single();
@@ -37,7 +40,6 @@ export async function generateMetadata({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
   const url = `${siteUrl}/artikel/${post.slug}`;
-  const ogImage = post.seo_og_image_url || post.cover_image_url || undefined;
 
   return {
     title: post.seo_meta_title || post.title,
@@ -53,13 +55,11 @@ export async function generateMetadata({
       description: post.seo_meta_description || post.excerpt || undefined,
       publishedTime: post.published_at || undefined,
       modifiedTime: post.updated_at || undefined,
-      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }] }),
     },
     twitter: {
       card: 'summary_large_image',
       title: post.seo_meta_title || post.title,
       description: post.seo_meta_description || post.excerpt || undefined,
-      ...(ogImage && { images: [ogImage] }),
     },
   };
 }
@@ -68,7 +68,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const supabase = createClient();
   const { data: post } = await supabase
     .from('posts')
-    .select('*, category:categories(*), author:authors(*)')
+    .select('*, category:categories(*), author:authors(*), series:series(*)')
     .eq('slug', params.slug)
     .eq('status', 'published')
     .single();
@@ -95,32 +95,75 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         publishedAt={post.published_at || post.created_at}
         modifiedAt={post.updated_at}
         authorName={post.author?.name}
+        authorBio={post.author?.bio || undefined}
+        authorSlug={post.author?.slug || undefined}
         categoryTitle={post.category?.title}
-        imageUrl={post.cover_image_url || post.seo_og_image_url || undefined}
+        categorySlug={post.category?.slug}
+        readingTime={post.reading_time}
+        isPremium={post.is_premium}
+        isSponsored={post.is_sponsored}
+        sponsorName={post.sponsor_name || undefined}
+        citations={post.source_references as { title?: string; url?: string }[] | undefined}
+        keywords={post.tags as string[] | undefined}
+        wordCount={post.body?.split(/\s+/).length}
+        humanReviewed={post.human_signature || false}
       />
+      {post.author && post.author.name && post.author.name !== 'TAMPARAN ANAK MUDA' && (
+        <AuthorSchema
+          name={post.author.name}
+          bio={post.author.bio || undefined}
+          slug={post.author.slug || undefined}
+        />
+      )}
+      {post.excerpt && (
+        <FAQSchema items={[{ question: `Apa inti dari ${post.title}?`, answer: post.excerpt }]} />
+      )}
       <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }, { name: post.title, href: `/artikel/${post.slug}` }]} />
-      <header className="mx-auto max-w-3xl">
+
+      {/* Feature image with transition gradient */}
+      <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
+        <div className="relative aspect-[16/9] w-full">
+          <Image
+            src={`/api/og/feature?slug=${post.slug}`}
+            alt={post.title}
+            fill
+            unoptimized
+            priority
+            className="object-cover"
+            sizes="(max-width: 1200px) 100vw, 1024px"
+          />
+        </div>
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[30%] pointer-events-none"
+          style={{ background: 'linear-gradient(to bottom, transparent, #FAF9F6)' }}
+        />
+      </div>
+
+      <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>
         <div className="mb-4 flex items-center gap-2 text-sm">
           {post.category && (
             <span style={{ color: post.category.color }}>
               {post.category.title}
             </span>
           )}
-          <span className="text-muted-foreground">•</span>
+          <span className="text-muted-foreground">&bull;</span>
           <span className="text-muted-foreground">{post.reading_time} menit baca</span>
         </div>
         <h1 className="mb-6 text-3xl font-bold leading-tight md:text-5xl">
           {post.title}
         </h1>
         {post.excerpt && (
-          <p className="mb-6 text-lg text-muted-foreground">{post.excerpt}</p>
+          <p className="mb-6 text-lg text-muted-foreground" data-testid="article-excerpt">{post.excerpt}</p>
         )}
         {post.author && (
           <div className="mb-8 flex items-center justify-between text-sm text-muted-foreground">
             <div>
               Ditulis oleh {post.author.name}
-              {post.updated_at && (
-                <span className="ml-2">&middot; Terakhir diperbarui: {new Date(post.updated_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+              {post.published_at && (
+                <time dateTime={post.published_at} className="ml-2">&middot; {new Date(post.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+              )}
+              {post.updated_at && post.updated_at !== post.published_at && (
+                <time dateTime={post.updated_at} className="ml-2">&middot; Diperbarui: {new Date(post.updated_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
               )}
             </div>
             <BookmarkButton postId={post.id} />
@@ -138,7 +181,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         </div>
       )}
 
-      <div className="mx-auto max-w-3xl">
+      <section className="mx-auto max-w-3xl" aria-label="Konten artikel">
         <TableOfContents body={post.body} />
         {post.is_premium ? (
           <>
@@ -148,7 +191,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         ) : (
           <MarkdownContent body={post.body} />
         )}
-      </div>
+      </section>
 
       <div className="mx-auto max-w-3xl mt-8 pt-6 border-t border-border">
         <ShareButtons title={post.title} slug={post.slug} />

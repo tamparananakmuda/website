@@ -135,7 +135,7 @@ export default function DonasiPage() {
 
     poll();
 
-    const interval = setInterval(poll, 3000);
+    const interval = setInterval(poll, 5000);
 
     return () => {
       active = false;
@@ -227,6 +227,7 @@ export default function DonasiPage() {
               <div className="flex flex-col items-center">
                 <div className="mb-6 rounded-2xl border border-border bg-white p-6">
                   {qrDataUrl && (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img src={qrDataUrl} alt="QRIS Code" width={200} height={200} />
                   )}
                 </div>

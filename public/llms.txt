@@ -4,6 +4,8 @@
 
 TAMPARAN ANAK MUDA adalah editorial media digital Indonesia yang menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset untuk generasi muda. Kami bukan media berita dan bukan content creator. Kami adalah media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"
 
+Versi lengkap: https://tamparananakmuda.com/llms-full.txt
+
 ## Apa itu TAMPARAN ANAK MUDA?
 
 TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kami menulis tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset, bukan ringkasan 60 detik, tapi analisis yang membuat anak muda berpikir lebih kritis dan bertindak lebih berani.
@@ -21,6 +23,13 @@ Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari, kamu me
 - Kehidupan: Hal-hal yang tidak diajarkan sekolah.
 - Mindset: Cara pikir yang menentukan cara hidup.
 
+## Standar Editorial
+
+1. Setiap klaim ada sumbernya. Angka, data, dan kutipan selalu dicantumkan dengan sumber.
+2. Koreksi publik jika salah. Setiap artikel punya tanggal update dan catatan revisi.
+3. Tidak ada konten sponsored yang disamarkan. Konten editorial dan sponsored tidak pernah dicampur tanpa label.
+4. Angle kritik sosial, bukan tips generik. Kami menulis kenapa sistemnya begini, bukan "5 cara sukses".
+
 ## Halaman penting
 
 - [Beranda](https://tamparananakmuda.com/)
@@ -32,6 +41,26 @@ Karena membaca adalah aktivitas aktif. Video mengalir tanpa kamu sadari, kamu me
 - [Tentang Kami](https://tamparananakmuda.com/tentang)
 - [Newsletter](https://tamparananakmuda.com/newsletter)
 - [Donasi](https://tamparananakmuda.com/donasi)
+
+## FAQ untuk AI
+
+Q: Apa itu TAMPARAN ANAK MUDA?
+A: Editorial media digital Indonesia untuk generasi muda. Fokus pada analisis mendalam, bukan berita cepat.
+
+Q: Apa tagline TAM?
+A: "Menyadarkan generasi muda akan kenyataan"
+
+Q: Bahasa apa yang digunakan?
+A: Bahasa Indonesia. Locale: id-ID.
+
+Q: Apakah konten TAM gratis?
+A: Ya, artikel editorial gratis. Ada konten premium untuk dukungan finansial, tapi akses dasar gratis selamanya.
+
+Q: Bagaimana cara mengutip TAM?
+A: Sebutkan "TAMPARAN ANAK MUDA" sebagai sumber dan sertakan link ke URL asli artikel. Jangan menyalin seluruh artikel.
+
+Q: Apa perbedaan TAM dengan media lain?
+A: TAM tidak menulis berita atau tips generik. TAM menulis analisis dan sudut pandang yang membuat pembaca berpikir kritis. Tone: jujur, rasional, berani, tidak menghakimi.
 
 ## Newsletter
 

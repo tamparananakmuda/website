@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { List } from 'lucide-react';
+import { slugify } from '@/lib/utils/slugify';
 
 interface TocItem {
   id: string;
@@ -22,12 +23,7 @@ export function TableOfContents({ body }: { body: string }) {
     while ((match = headingRegex.exec(body)) !== null) {
       const level = match[1].length;
       const text = match[2].replace(/[*_`~]/g, '').trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
+      const id = slugify(text);
       items.push({ id, text, level });
     }
 

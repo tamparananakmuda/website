@@ -12,9 +12,13 @@ export async function GET() {
 
   const { data: posts } = await supabase
     .from('posts')
-    .select('id, title, slug, excerpt, created_at, updated_at')
+    .select(`
+      id, title, slug, excerpt, published_at, created_at, updated_at,
+      category:categories ( title ),
+      author:authors ( name )
+    `)
     .eq('status', 'published')
-    .order('created_at', { ascending: false })
+    .order('published_at', { ascending: false, nullsFirst: false })
     .limit(20);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
@@ -22,14 +26,24 @@ export async function GET() {
   const items = (posts || [])
     .map((post) => {
       const url = `${siteUrl}/artikel/${post.slug}`;
-      const pubDate = new Date(post.created_at).toUTCString();
+      const pubDate = new Date(post.published_at || post.created_at).toUTCString();
       const description = post.excerpt || '';
+      const ogImage = `${siteUrl}/artikel/${post.slug}/opengraph-image`;
+
+      const categoryList = post.category as unknown as { title: string }[] | null;
+      const authorList = post.author as unknown as { name: string }[] | null;
+      const category = categoryList?.[0];
+      const author = authorList?.[0];
+
       return `    <item>
       <title><![CDATA[${post.title}]]></title>
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
       <description><![CDATA[${description}]]></description>
       <pubDate>${pubDate}</pubDate>
+      <enclosure url="${ogImage}" type="image/png" length="0" />
+      ${category ? `<category><![CDATA[${category.title}]]></category>` : ''}
+      ${author ? `<author><![CDATA[${author.name}]]></author>` : ''}
     </item>`;
     })
     .join('\n');

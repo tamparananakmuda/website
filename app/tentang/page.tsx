@@ -1,11 +1,29 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { OrganizationSchema } from '@/components/schema/organization-schema';
+import { AboutPageSchema } from '@/components/schema/about-page-schema';
 
 export const metadata = {
   title: 'Tentang Kami',
   description:
     'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami, bukan sekadar konten, tapi komitmen tertulis.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/tentang`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/tentang`,
+    title: 'Tentang Kami - Tamparan Anak Muda',
+    description:
+      'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami, bukan sekadar konten, tapi komitmen tertulis.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tentang Kami - Tamparan Anak Muda',
+    description:
+      'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami, bukan sekadar konten, tapi komitmen tertulis.',
+  },
 };
 
 const prinsipEditorial = [
@@ -37,7 +55,7 @@ const roadmap = [
     ],
   },
   {
-    phase: '6–12 bulan',
+    phase: '6 sampai 12 bulan',
     items: [
       'Digital products: template keuangan, career guide, worksheet',
       'Sponsored content dari brand yang align dengan values kami',
@@ -77,6 +95,7 @@ export default function AboutPage() {
   return (
     <main>
       <OrganizationSchema />
+      <AboutPageSchema />
 
       <section className="py-20 md:py-32">
         <div className="container mx-auto px-4">

@@ -7,7 +7,21 @@ export const metadata: Metadata = {
   description:
     'Riset mendalam dan analisis data tentang generasi muda Indonesia. Whitepaper TAMPARAN ANAK MUDA: berbasis data, bukan opini.',
   alternates: {
-    canonical: '/whitepaper',
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/whitepaper`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/whitepaper`,
+    title: 'Whitepaper - Tamparan Anak Muda',
+    description:
+      'Riset mendalam dan analisis data tentang generasi muda Indonesia. Whitepaper TAMPARAN ANAK MUDA: berbasis data, bukan opini.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Whitepaper - Tamparan Anak Muda',
+    description:
+      'Riset mendalam dan analisis data tentang generasi muda Indonesia. Whitepaper TAMPARAN ANAK MUDA: berbasis data, bukan opini.',
   },
 };
 

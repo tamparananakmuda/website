@@ -60,9 +60,9 @@ export function SiteFooter() {
               <Link href="/masuk" className="text-muted-foreground transition-colors hover:text-foreground">
                 Akun
               </Link>
-              <a href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
                 RSS Feed
-              </a>
+              </Link>
             </nav>
           </div>
 

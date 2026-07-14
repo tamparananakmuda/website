@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link2, Loader2, CheckCircle2, AlertCircle, Trash2, Edit3, Eye } from 'lucide-react';
+import Image from 'next/image';
 
 interface Preview {
   platform: string;
@@ -175,10 +176,13 @@ export default function ImportPage() {
             {/* Preview content */}
             <div className="space-y-4">
               {result.preview.thumbnail_url && (
-                <img
+                <Image
                   src={result.preview.thumbnail_url}
                   alt={result.preview.title || 'Preview'}
+                  width={800}
+                  height={320}
                   className="w-full max-h-80 object-cover rounded-lg"
+                  unoptimized
                 />
               )}
 
@@ -230,7 +234,7 @@ export default function ImportPage() {
               {result.preview.media_urls.length > 0 && (
                 <div className="grid grid-cols-2 gap-2">
                   {result.preview.media_urls.slice(0, 4).map((img, i) => (
-                    <img key={i} src={img} alt="" className="rounded-lg w-full h-40 object-cover" />
+                    <Image key={i} src={img} alt="" width={400} height={160} className="rounded-lg w-full h-40 object-cover" unoptimized />
                   ))}
                 </div>
               )}

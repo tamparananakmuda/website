@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { Bookmark, BookmarkCheck } from 'lucide-react';
-import { createClient } from '@/lib/supabase/client';
 
 export function BookmarkButton({ postId }: { postId: number }) {
   const [bookmarked, setBookmarked] = useState(false);
@@ -10,20 +9,19 @@ export function BookmarkButton({ postId }: { postId: number }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      if (!user) return;
-      setLoggedIn(true);
-      supabase
-        .from('bookmarks')
-        .select('post_id')
-        .eq('reader_id', user.id)
-        .eq('post_id', postId)
-        .single()
-        .then(({ data }) => {
-          setBookmarked(!!data);
-        });
-    });
+    async function checkAuth() {
+      try {
+        const res = await fetch('/api/bookmarks');
+        if (res.ok) {
+          const data = await res.json();
+          setLoggedIn(true);
+          setBookmarked(data.bookmarks?.includes(postId) ?? false);
+        }
+      } catch {
+        // not logged in
+      }
+    }
+    checkAuth();
   }, [postId]);
 
   async function toggleBookmark() {
@@ -33,23 +31,24 @@ export function BookmarkButton({ postId }: { postId: number }) {
     }
 
     setLoading(true);
-    const supabase = createClient();
 
-    if (bookmarked) {
-      await supabase
-        .from('bookmarks')
-        .delete()
-        .eq('reader_id', (await supabase.auth.getUser()).data.user?.id)
-        .eq('post_id', postId);
-      setBookmarked(false);
-    } else {
-      const { data: { user } } = await supabase.auth.getUser();
-      await supabase
-        .from('bookmarks')
-        .insert({ reader_id: user!.id, post_id: postId });
-      setBookmarked(true);
+    try {
+      if (bookmarked) {
+        await fetch(`/api/bookmarks?post_id=${postId}`, { method: 'DELETE' });
+        setBookmarked(false);
+      } else {
+        await fetch('/api/bookmarks', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ post_id: postId }),
+        });
+        setBookmarked(true);
+      }
+    } catch {
+      // silent fail
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   return (

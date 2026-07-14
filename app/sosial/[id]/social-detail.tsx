@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { SocialNewsletterCTA } from '@/components/social/social-newsletter-cta';
@@ -122,11 +123,14 @@ export default function SocialDetail({
 
       {/* Thumbnail for non-video platforms */}
       {!post.video_url && post.thumbnail_url && (
-        <img
+        <Image
           src={post.thumbnail_url}
           alt={post.title || ''}
+          width={800}
+          height={450}
           loading="lazy"
           className="w-full rounded-lg mb-6"
+          unoptimized
         />
       )}
 
@@ -134,7 +138,7 @@ export default function SocialDetail({
       {post.media_urls.length > 0 && !post.video_url && (
         <div className="grid grid-cols-2 gap-3 mb-6">
           {post.media_urls.map((url, i) => (
-            <img key={i} src={url} alt={`Media ${i + 1}`} loading="lazy" className="rounded-lg w-full" />
+            <Image key={i} src={url} alt={`Media ${i + 1}`} width={400} height={300} loading="lazy" className="rounded-lg w-full" unoptimized />
           ))}
         </div>
       )}
@@ -198,7 +202,7 @@ export default function SocialDetail({
                 className="group rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-colors"
               >
                 {r.thumbnail_url ? (
-                  <img src={r.thumbnail_url} alt={r.title || 'Thumbnail'} loading="lazy" className="w-full aspect-video object-cover" />
+                  <Image src={r.thumbnail_url} alt={r.title || 'Thumbnail'} width={200} height={113} loading="lazy" className="w-full aspect-video object-cover" unoptimized />
                 ) : (
                   <div className="w-full aspect-video bg-secondary" />
                 )}

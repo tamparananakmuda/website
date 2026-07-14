@@ -5,6 +5,22 @@ export const revalidate = 60;
 
 export const metadata = {
   title: 'Kategori',
+  description: 'Jelajahi semua topik TAMPARAN ANAK MUDA: mindset, karier, keuangan, teknologi, kehidupan, dan bisnis.',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/kategori`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/kategori`,
+    title: 'Kategori - Tamparan Anak Muda',
+    description: 'Jelajahi semua topik TAMPARAN ANAK MUDA: mindset, karier, keuangan, teknologi, kehidupan, dan bisnis.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kategori - Tamparan Anak Muda',
+    description: 'Jelajahi semua topik TAMPARAN ANAK MUDA: mindset, karier, keuangan, teknologi, kehidupan, dan bisnis.',
+  },
 };
 
 export default async function CategoriesPage() {

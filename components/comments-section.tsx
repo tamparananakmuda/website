@@ -8,6 +8,7 @@ interface Comment {
   id: string;
   post_id: number;
   parent_id: string | null;
+  reader_id: string | null;
   author_name: string;
   body: string;
   likes_count: number;
@@ -44,7 +45,7 @@ function CommentItem({
   onLike: (commentId: string) => void;
   onDelete: (commentId: string) => void;
 }) {
-  const isOwner = currentUserId && comment.author_name === currentUserId;
+  const isOwner = currentUserId && comment.reader_id === currentUserId;
 
   return (
     <div className="py-4">
@@ -118,14 +119,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
     supabase.auth.getUser().then(({ data: { user } }) => {
       setLoggedIn(!!user);
       if (user) {
-        supabase
-          .from('reader_profiles')
-          .select('name')
-          .eq('user_id', user.id)
-          .single()
-          .then(({ data }) => {
-            setCurrentUserId(data?.name || null);
-          });
+        setCurrentUserId(user.id);
       }
     });
   }, [fetchComments]);

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface RelatedArticle {
   id: string;
@@ -33,6 +34,16 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
           return (
             <article key={article.id} className="group">
               <Link href={`/artikel/${article.slug}`} className="block">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-4">
+                  <Image
+                    src={`/api/og/card?slug=${article.slug}`}
+                    alt={article.title}
+                    fill
+                    unoptimized
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
                 <div className="mb-3 flex items-center gap-2 text-sm">
                   {cat && (
                     <span style={{ color: cat.color }}>

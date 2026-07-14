@@ -6,7 +6,8 @@ import { Share2, Link2, Check } from 'lucide-react';
 export function ShareButtons({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false);
 
-  const url = typeof window !== 'undefined' ? `${window.location.origin}/artikel/${slug}` : '';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+  const url = `${siteUrl}/artikel/${slug}`;
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
 

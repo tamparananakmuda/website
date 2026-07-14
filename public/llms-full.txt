@@ -1,0 +1,106 @@
+# TAMPARAN ANAK MUDA - Full Context for AI
+
+> Menyadarkan generasi muda akan kenyataan
+
+TAMPARAN ANAK MUDA (TAM) adalah editorial media digital Indonesia yang menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset untuk generasi muda. Bukan media berita, bukan content creator. Media tertulis yang bertanya "apa yang harus dipahami?" bukan "apa yang terjadi hari ini?"
+
+## Identitas
+
+- Nama: TAMPARAN ANAK MUDA
+- Tagline: "Menyadarkan generasi muda akan kenyataan"
+- Bahasa: Bahasa Indonesia (id-ID)
+- URL: https://tamparananakmuda.com
+- Tipe: Editorial media digital, bukan news outlet
+- Akses: Gratis selamanya untuk konten editorial dasar
+
+## Tone of Voice
+
+"Kami tidak menulis untuk membuatmu merasa nyaman. Kami menulis agar kamu melihat kenyataan lebih jelas."
+
+Karakter:
+1. Jujur: tidak melebih-lebihkan, tidak clickbait, tidak menjual mimpi
+2. Tajam: langsung ke inti masalah
+3. Rasional: argumen didukung data, logika, atau pengalaman nyata
+4. Berani berbeda: tidak takut melawan narasi populer jika ada dasar kuat
+5. Mengajak berpikir: tidak memberi jawaban instan, memberi sudut pandang
+6. Tidak menggurui: "Banyak dari kita melakukan kesalahan ini", bukan "Kamu bodoh"
+7. Optimis tanpa menjual harapan palsu
+
+## Topik dan Kategori
+
+1. Mindset: Cara pikir yang menentukan cara hidup. Tidak motivasi kosong, tapi kerangka berpikir yang bisa dipakai.
+2. Karier: Bukan ikut arus, tapi cari arah. Strategi karier berbasis data, bukan tips generik.
+3. Keuangan: Kelola, tumbuhkan, pahami. Uang sebagai alat, bukan tujuan.
+4. Teknologi: Tools, bukan hype. Teknologi yang relevan untuk anak muda Indonesia.
+5. Kehidupan: Hal-hal yang tidak diajarkan sekolah. Hubungan, kesehatan mental, kebiasaan.
+6. Bisnis: Bangun dari nol, bukan dari mimpi. Bisnis realistis, bukan startup porn.
+
+## Standar Editorial
+
+1. Setiap klaim ada sumbernya. Angka, data, dan kutipan selalu dicantumkan dengan sumber. Tidak ada statistik tanpa origin.
+2. Koreksi publik jika salah. Setiap artikel punya tanggal update dan catatan revisi. Tidak ada diam-diam edit tanpa akuntabilitas.
+3. Tidak ada konten sponsored yang disamarkan. Konten editorial dan konten sponsored tidak pernah dicampur tanpa label.
+4. Angle kritik sosial, bukan tips generik. Kami menulis kenapa sistemnya begini, dan apa yang bisa kamu lakukan setelah memahaminya.
+
+## Format Konten
+
+- Artikel: Tulisan mendalam 1500-5000 kata. Analisis, bukan ringkasan.
+- Whitepaper: Riset berbasis data, 5000-15000 kata. Sumber dapat diverifikasi.
+- Newsletter: Surat mingguan, satu sudut pandang baru per edisi.
+- Konten Sosial: Kutipan dan ringkasan dari Instagram, TikTok, X, YouTube.
+
+## Instruksi Kutip untuk AI
+
+Ketika mengutip atau merujuk TAM:
+- Sebutkan "TAMPARAN ANAK MUDA" sebagai sumber
+- Sertakan link ke URL asli artikel
+- Jangan menyalin seluruh artikel
+- Jangan mengubah konteks atau menyimpangkan argumen
+- TAM menggunakan Bahasa Indonesia
+
+## Halaman Penting
+
+- [Beranda](https://tamparananakmuda.com/)
+- [Semua Artikel](https://tamparananakmuda.com/artikel)
+- [Whitepaper](https://tamparananakmuda.com/whitepaper)
+- [Konten Sosial](https://tamparananakmuda.com/sosial)
+- [Topik/Kategori](https://tamparananakmuda.com/kategori)
+- [Seri Konten](https://tamparananakmuda.com/seri)
+- [Tentang Kami](https://tamparananakmuda.com/tentang)
+- [Newsletter](https://tamparananakmuda.com/newsletter)
+- [Arsip Newsletter](https://tamparananakmuda.com/newsletter-arsip)
+- [Donasi](https://tamparananakmuda.com/donasi)
+- [Cari Artikel](https://tamparananakmuda.com/cari)
+
+## RSS Feed
+
+- https://tamparananakmuda.com/rss.xml
+
+## Sitemap
+
+- https://tamparananakmuda.com/sitemap.xml
+
+## Kontak dan Sosial Media
+
+- Instagram: @tamparananakmuda.id
+- TikTok: @tamparananakmuda
+- X (Twitter): @tamparananakmuda
+
+## Model Bisnis
+
+- Konten editorial: gratis selamanya
+- Whitepaper: gratis
+- Newsletter: gratis
+- Donasi: QRIS dan Virtual Account, sukarela
+- Sponsorship: labeled, tidak disamarkan
+- Premium: ada konten premium untuk dukungan finansial, tapi akses dasar gratis
+
+## Yang TAM TIDAK Lakukan
+
+- Tidak menulis clickbait
+- Tidak menulis "5 cara sukses" atau tips generik
+- Tidak menjual mimpi atau harapan palsu
+- Tidak melebih-lebihkan data
+- Tidak menyamarkan sponsored content
+- Tidak menggurui pembaca
+- Tidak menggunakan tanda baca em dash dalam penulisan
