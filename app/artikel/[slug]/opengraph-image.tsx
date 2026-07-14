@@ -22,7 +22,7 @@ export default async function Image({ params }: Props) {
   const { data: post } = await supabase
     .from('posts')
     .select(`
-      title, excerpt, cover_image_url, published_at, reading_time,
+      title, excerpt, og_headline, cover_image_url, published_at, reading_time,
       is_premium, is_sponsored, series_order,
       category:categories ( title, slug, color ),
       series:series ( id, title ),
@@ -91,6 +91,7 @@ export default async function Image({ params }: Props) {
         seriesCurrent={seriesCurrent}
         seriesTotal={seriesTotal}
         coverImageUrl={post.cover_image_url}
+        ogHeadline={post.og_headline || undefined}
         size="og"
       />
     ),

@@ -3,6 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import { donasiStatusSchema } from '@/lib/validations/donasi';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const limit = await rateLimit(request, {

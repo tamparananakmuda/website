@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@supabase/supabase-js';
+import { createPublicClient } from '@/lib/supabase/public';
 import SocialDetail from './social-detail';
 import Link from 'next/link';
 
@@ -9,11 +9,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
+  const supabase = createPublicClient();
 
   const { data: post } = await supabase
     .from('social_posts')
@@ -50,11 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export const revalidate = 300;
 
 export default async function SocialPostPage({ params }: Props) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
+  const supabase = createPublicClient();
 
   const { data: post } = await supabase
     .from('social_posts')

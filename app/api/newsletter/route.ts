@@ -3,6 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import { newsletterSchema } from '@/lib/validations/newsletter';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const limit = await rateLimit(request, {

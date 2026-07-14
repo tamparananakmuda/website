@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createHmac, timingSafeEqual } from 'crypto';
 
+export const dynamic = 'force-dynamic';
+
 function verifySignature(rawBody: string, signature: string | null): boolean {
   const secret = process.env.LOUVIN_WEBHOOK_SECRET;
   if (!secret) {

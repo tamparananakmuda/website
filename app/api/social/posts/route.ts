@@ -4,6 +4,8 @@ import { socialPostUpdateSchema } from '@/lib/validations/social';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const auth = await checkAdminAuth();

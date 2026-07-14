@@ -138,12 +138,15 @@ export function ArticleSchema({
     schema.credentialStatus = 'verified';
   }
 
-  if (citations && citations.length > 0) {
-    schema.citation = citations.map((c) => ({
-      '@type': 'CreativeWork',
-      ...(c.title && { name: c.title }),
-      ...(c.url && { url: c.url }),
-    }));
+  if (citations) {
+    const parsedCitations = typeof citations === 'string' ? JSON.parse(citations) : citations;
+    if (Array.isArray(parsedCitations) && parsedCitations.length > 0) {
+      schema.citation = parsedCitations.map((c) => ({
+        '@type': 'CreativeWork',
+        ...((c.title || c.label) && { name: c.title || c.label }),
+        ...(c.url && { url: c.url }),
+      }));
+    }
   }
 
   if (isSponsored && sponsorName) {

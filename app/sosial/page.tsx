@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { createClient } from '@supabase/supabase-js';
+import { createPublicClient } from '@/lib/supabase/public';
 import SocialGrid from './social-grid';
 
 export const metadata: Metadata = {
@@ -25,11 +25,7 @@ export const metadata: Metadata = {
 export const revalidate = 300;
 
 export default async function SosialPage() {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
+  const supabase = createPublicClient();
 
   const { data: posts } = await supabase
     .from('social_posts')

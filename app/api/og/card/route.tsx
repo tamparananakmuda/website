@@ -23,7 +23,7 @@ export async function GET(request: Request) {
   const { data: post } = await supabase
     .from('posts')
     .select(`
-      title, cover_image_url, published_at,
+      title, og_headline, cover_image_url, published_at,
       is_premium, is_sponsored,
       category:categories ( title, slug, color )
     `)
@@ -51,6 +51,7 @@ export async function GET(request: Request) {
         isPremium={post.is_premium}
         isSponsored={post.is_sponsored}
         coverImageUrl={post.cover_image_url}
+        ogHeadline={post.og_headline || undefined}
         size="card"
       />
     ),

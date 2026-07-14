@@ -21,6 +21,7 @@ export interface TemplateProps {
   platform?: string;
   handle?: string;
   editionNumber?: number;
+  ogHeadline?: string;
 }
 
 type SizeConfig = {
@@ -60,68 +61,87 @@ type SizeConfig = {
   gapAfterDivider2: number;
   gapAfterExcerpt: number;
   headerHeight: number;
+  panelPaddingX: number;
+  panelPaddingY: number;
+  panelRadius: number;
+  titleMaxWidth: number;
+  excerptMaxWidth: number;
+  accentLineWidth: number;
+  accentLineGap: number;
 };
 
 const CONFIGS: Record<ImageSize, SizeConfig> = {
   og: {
-    width: 1200, height: 630, paddingX: 80, paddingY: 80,
-    titleFont: 48, titleLineHeight: 1.1, titleMaxChars: 120,
-    excerptFont: 18, metadataFont: 14, categoryFont: 18,
-    issueFont: 14, brandFont: 18, taglineFont: 13, badgeFont: 11,
+    width: 1200, height: 630, paddingX: 100, paddingY: 80,
+    titleFont: 72, titleLineHeight: 1.05, titleMaxChars: 80,
+    excerptFont: 22, metadataFont: 14, categoryFont: 12,
+    issueFont: 12, brandFont: 18, taglineFont: 13, badgeFont: 11,
     badgePaddingX: 10, badgePaddingY: 4,
-    divider1Width: 60, divider2Width: 120,
+    divider1Width: 0, divider2Width: 0,
     barWidth: 0, barPosition: 'right',
-    signatureSize: 200, signaturePosition: 'bottom-left',
+    signatureSize: 240, signaturePosition: 'bottom-right',
     showExcerpt: true, showMetadata: true, showAuthor: false, showTagline: true,
-    showDivider2: true, showCategorySignature: true,
+    showDivider2: false, showCategorySignature: true,
     brandMarkHeight: 24, footerMarkHeight: 16,
-    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 20,
+    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 24,
     gapAfterDivider2: 12, gapAfterExcerpt: 16, headerHeight: 24,
+    panelPaddingX: 48, panelPaddingY: 48, panelRadius: 16,
+    titleMaxWidth: 940, excerptMaxWidth: 880,
+    accentLineWidth: 20, accentLineGap: 40,
   },
   feature: {
-    width: 1600, height: 900, paddingX: 100, paddingY: 100,
-    titleFont: 60, titleLineHeight: 1.08, titleMaxChars: 160,
-    excerptFont: 22, metadataFont: 16, categoryFont: 20,
-    issueFont: 16, brandFont: 22, taglineFont: 15, badgeFont: 13,
+    width: 1600, height: 900, paddingX: 140, paddingY: 100,
+    titleFont: 88, titleLineHeight: 1.05, titleMaxChars: 100,
+    excerptFont: 28, metadataFont: 18, categoryFont: 14,
+    issueFont: 14, brandFont: 22, taglineFont: 15, badgeFont: 13,
     badgePaddingX: 14, badgePaddingY: 6,
-    divider1Width: 80, divider2Width: 160,
+    divider1Width: 0, divider2Width: 0,
     barWidth: 0, barPosition: 'right',
-    signatureSize: 280, signaturePosition: 'bottom-left',
+    signatureSize: 320, signaturePosition: 'bottom-right',
     showExcerpt: true, showMetadata: true, showAuthor: true, showTagline: true,
-    showDivider2: true, showCategorySignature: true,
+    showDivider2: false, showCategorySignature: true,
     brandMarkHeight: 28, footerMarkHeight: 20,
-    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 24,
+    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 28,
     gapAfterDivider2: 16, gapAfterExcerpt: 20, headerHeight: 28,
+    panelPaddingX: 60, panelPaddingY: 60, panelRadius: 20,
+    titleMaxWidth: 1200, excerptMaxWidth: 1100,
+    accentLineWidth: 24, accentLineGap: 48,
   },
   card: {
-    width: 800, height: 450, paddingX: 48, paddingY: 40,
-    titleFont: 32, titleLineHeight: 1.1, titleMaxChars: 60,
-    excerptFont: 0, metadataFont: 0, categoryFont: 16,
-    issueFont: 12, brandFont: 14, taglineFont: 0, badgeFont: 10,
+    width: 800, height: 450, paddingX: 64, paddingY: 40,
+    titleFont: 44, titleLineHeight: 1.1, titleMaxChars: 50,
+    excerptFont: 0, metadataFont: 0, categoryFont: 10,
+    issueFont: 10, brandFont: 14, taglineFont: 0, badgeFont: 10,
     badgePaddingX: 8, badgePaddingY: 4,
-    divider1Width: 40, divider2Width: 0,
+    divider1Width: 0, divider2Width: 0,
     barWidth: 0, barPosition: 'top',
-    signatureSize: 120, signaturePosition: 'bottom-right',
+    signatureSize: 160, signaturePosition: 'bottom-right',
     showExcerpt: false, showMetadata: false, showAuthor: false, showTagline: false,
     showDivider2: false, showCategorySignature: true,
     brandMarkHeight: 20, footerMarkHeight: 14,
     gapAfterHeader: 6, gapAfterDivider1: 10, gapAfterTitle: 0,
     gapAfterDivider2: 0, gapAfterExcerpt: 0, headerHeight: 20,
+    panelPaddingX: 32, panelPaddingY: 32, panelRadius: 12,
+    titleMaxWidth: 640, excerptMaxWidth: 0,
+    accentLineWidth: 12, accentLineGap: 24,
   },
   sosial: {
-    width: 1200, height: 630, paddingX: 80, paddingY: 80,
-    titleFont: 36, titleLineHeight: 1.15, titleMaxChars: 140,
-    excerptFont: 18, metadataFont: 14, categoryFont: 18,
-    issueFont: 14, brandFont: 18, taglineFont: 13, badgeFont: 11,
+    width: 1200, height: 630, paddingX: 100, paddingY: 80,
+    titleFont: 60, titleLineHeight: 1.05, titleMaxChars: 100,
+    excerptFont: 20, metadataFont: 14, categoryFont: 12,
+    issueFont: 12, brandFont: 18, taglineFont: 13, badgeFont: 11,
     badgePaddingX: 10, badgePaddingY: 4,
-    divider1Width: 60, divider2Width: 120,
+    divider1Width: 0, divider2Width: 0,
     barWidth: 0, barPosition: 'right',
-    signatureSize: 200, signaturePosition: 'bottom-left',
+    signatureSize: 240, signaturePosition: 'bottom-right',
     showExcerpt: false, showMetadata: false, showAuthor: false, showTagline: true,
     showDivider2: false, showCategorySignature: false,
     brandMarkHeight: 24, footerMarkHeight: 16,
-    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 20,
+    gapAfterHeader: 8, gapAfterDivider1: 12, gapAfterTitle: 28,
     gapAfterDivider2: 12, gapAfterExcerpt: 16, headerHeight: 24,
+    panelPaddingX: 48, panelPaddingY: 48, panelRadius: 16,
+    titleMaxWidth: 900, excerptMaxWidth: 0,
+    accentLineWidth: 20, accentLineGap: 40,
   },
   newsletter: {
     width: 1200, height: 300, paddingX: 80, paddingY: 60,
@@ -137,6 +157,9 @@ const CONFIGS: Record<ImageSize, SizeConfig> = {
     brandMarkHeight: 28, footerMarkHeight: 0,
     gapAfterHeader: 12, gapAfterDivider1: 0, gapAfterTitle: 0,
     gapAfterDivider2: 0, gapAfterExcerpt: 0, headerHeight: 32,
+    panelPaddingX: 0, panelPaddingY: 0, panelRadius: 0,
+    titleMaxWidth: 0, excerptMaxWidth: 0,
+    accentLineWidth: 0, accentLineGap: 0,
   },
 };
 
@@ -396,7 +419,11 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     width: `${cfg.width}px`,
     height: `${cfg.height}px`,
     backgroundColor: COLORS.bg,
-    backgroundImage: `linear-gradient(135deg, ${COLORS.bg} 0%, ${COLORS.bgElevated} 100%)`,
+    backgroundImage: `
+      radial-gradient(circle at 10% 20%, ${categoryColor}24 0%, transparent 60%),
+      radial-gradient(circle at 90% 80%, ${categoryColor}0d 0%, transparent 50%),
+      linear-gradient(135deg, #070707 0%, #0d0d0d 100%)
+    `,
     display: 'flex',
     position: 'relative',
     overflow: 'hidden',
@@ -480,7 +507,6 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     lineHeight: cfg.titleLineHeight,
     display: 'flex',
     flexDirection: 'column',
-    flexShrink: 0,
   };
 
   const excerptStyle: CSSProperties = {
@@ -491,7 +517,6 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     lineHeight: 1.5,
     display: 'flex',
     flexDirection: 'column',
-    flexShrink: 0,
   };
 
   const metadataStyle: CSSProperties = {
@@ -606,6 +631,29 @@ export function OgTemplate(props: TemplateProps): ReactElement {
         : null
   ) : null;
 
+  const hookHeadline = props.ogHeadline || displayTitle;
+  const panelBg = hasCover ? 'rgba(10,10,10,0.5)' : 'rgba(255,255,255,0.015)';
+
+  const panelStyle: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingLeft: `${cfg.panelPaddingX}px`,
+    paddingRight: `${cfg.panelPaddingX}px`,
+    paddingTop: `${cfg.panelPaddingY}px`,
+    paddingBottom: `${cfg.panelPaddingY}px`,
+    border: `1px solid rgba(255,255,255,0.08)`,
+    borderRadius: `${cfg.panelRadius}px`,
+    backgroundColor: panelBg,
+    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.12)',
+    flex: 1,
+  };
+
+  const contentWithAccentStyle: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'row',
+    flex: 1,
+  };
+
   return (
     <div style={rootStyle}>
       {hasCover && (
@@ -666,14 +714,10 @@ export function OgTemplate(props: TemplateProps): ReactElement {
         </>
       )}
 
-      {!hasCover && <div style={dotPattern} />}
-
-      {cfg.barWidth > 0 && <div style={categoryBarStyle} />}
-
       {cfg.showCategorySignature && !hasCover && getCategorySignature(
         props.categorySlug,
         categoryColor,
-        { size: cfg.signatureSize, opacity: 0.05 }
+        { size: cfg.signatureSize, opacity: 0.10 }
       )}
 
       <div style={contentStyle}>
@@ -681,10 +725,13 @@ export function OgTemplate(props: TemplateProps): ReactElement {
         <div style={headerRowStyle}>
           <div style={headerLeftStyle}>
             <BrandMark height={cfg.brandMarkHeight} />
-            <span style={categoryTextStyle}>
-              {isSosial ? 'SOSIAL' : (props.category || 'ARTIKEL').toUpperCase()}
+            <span style={{
+              ...footerBrandStyle,
+              fontSize: `${cfg.brandFont}px`,
+              letterSpacing: '0.05em',
+            }}>
+              TAMPARAN ANAK MUDA
             </span>
-            {isSosial && getPlatformIcon(props.platform, cfg.headerHeight)}
           </div>
           <div style={headerRightStyle}>
             {issueMark && <span style={issueMarkStyle}>{issueMark}</span>}
@@ -697,100 +744,121 @@ export function OgTemplate(props: TemplateProps): ReactElement {
           </div>
         </div>
 
-        {/* Gap after header */}
-        <div style={{ height: `${cfg.gapAfterHeader}px`, flexShrink: 0 }} />
+        {/* Spacious margin gap after header */}
+        <div style={{ height: '32px', flexShrink: 0 }} />
 
-        {/* Divider 1 */}
-        <Divider width={cfg.divider1Width} />
+        {/* Content area with panel */}
+        <div style={{
+          ...panelStyle,
+          position: 'relative',
+          paddingLeft: `${cfg.panelPaddingX + cfg.accentLineWidth + 24}px`, // Add space for the inset bar
+          overflow: 'hidden',
+        }}>
+          {/* Inset Accent Column - Positioned absolutely to avoid collision with text flow */}
+          <div style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: `${cfg.accentLineWidth}px`,
+            backgroundColor: categoryColor,
+          }} />
 
-        {/* Gap after divider 1 */}
-        <div style={{ height: `${cfg.gapAfterDivider1}px`, flexShrink: 0 }} />
-
-        {/* Title */}
-        {isSosial && props.handle ? (
-          <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
-            <span style={{
-              fontFamily: FONT_DISPLAY,
-              fontSize: '24px',
-              fontWeight: 700,
-              color: COLORS.textPrimary,
-              marginBottom: '12px',
-            }}>
-              {props.handle}
-            </span>
-            <span style={titleStyle}>{displayTitle}</span>
-          </div>
-        ) : (
-          <span style={titleStyle}>{displayTitle}</span>
-        )}
-
-        {/* Gap after title */}
-        {cfg.gapAfterTitle > 0 && <div style={{ height: `${cfg.gapAfterTitle}px`, flexShrink: 0 }} />}
-
-        {/* Divider 2 */}
-        {cfg.showDivider2 && <Divider width={cfg.divider2Width} />}
-
-        {/* Gap after divider 2 */}
-        {cfg.showDivider2 && cfg.gapAfterDivider2 > 0 && (
-          <div style={{ height: `${cfg.gapAfterDivider2}px`, flexShrink: 0 }} />
-        )}
-
-        {/* Excerpt */}
-        {cfg.showExcerpt && props.excerpt && (
-          <span style={excerptStyle}>
-            {truncateTitle(props.excerpt, 180)}
+          {/* Category eyebrow */}
+          <span style={{
+            fontFamily: FONT_DISPLAY,
+            fontSize: `${cfg.categoryFont}px`,
+            fontWeight: 700,
+            color: categoryColor,
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            marginBottom: '16px',
+            display: 'flex',
+          }}>
+            {(props.category || 'ARTIKEL')}
           </span>
-        )}
 
-        {/* Gap after excerpt */}
-        {cfg.showExcerpt && cfg.gapAfterExcerpt > 0 && (
-          <div style={{ height: `${cfg.gapAfterExcerpt}px`, flexShrink: 0 }} />
-        )}
-
-        {/* Metadata row */}
-        {cfg.showMetadata && (
-          <div style={metadataStyle}>
-            {cfg.showAuthor && props.authorName && (
+          {/* Hook headline wrapper to ensure clean separation from excerpt */}
+          <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
+            {isSosial && props.handle ? (
               <>
-                <Avatar name={props.authorName} size={36} />
-                <span style={metadataTextStyle}>{props.authorName}</span>
-                <span style={metadataTextStyle}>&bull;</span>
+                <span style={{
+                  fontFamily: FONT_DISPLAY,
+                  fontSize: '24px',
+                  fontWeight: 700,
+                  color: COLORS.textPrimary,
+                  marginBottom: '12px',
+                }}>
+                  {props.handle}
+                </span>
+                <span style={{ ...titleStyle, maxWidth: `${cfg.titleMaxWidth}px`, textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>{hookHeadline}</span>
               </>
-            )}
-            {props.readingTime !== undefined && (
-              <>
-                <span style={metadataTextStyle}>{props.readingTime} menit baca</span>
-                {longDate && <span style={metadataTextStyle}>&bull;</span>}
-              </>
-            )}
-            {longDate && <span style={metadataTextStyle}>{longDate}</span>}
-            {props.seriesCurrent !== undefined && props.seriesTotal !== undefined && (
-              <>
-                {(props.readingTime !== undefined || props.authorName) && <span style={metadataTextStyle}>&bull;</span>}
-                <SeriesProgress current={props.seriesCurrent} total={props.seriesTotal} fontSize={12} />
-              </>
+            ) : (
+              <span style={{ ...titleStyle, maxWidth: `${cfg.titleMaxWidth}px`, textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>{hookHeadline}</span>
             )}
           </div>
-        )}
 
-        {/* Spacer */}
-        <div style={{ flex: 1 }} />
-
-        {/* Divider 3 (full width) */}
-        <Divider width={cfg.width - cfg.paddingX * 2 - (cfg.barPosition === 'right' ? cfg.barWidth : 0)} />
-
-        {/* Footer */}
-        <div style={{ height: '12px', flexShrink: 0 }} />
-        <div style={footerStyle}>
-          <div style={footerRowStyle}>
-            <BrandMark height={cfg.footerMarkHeight} />
-            <span style={footerBrandStyle}>TAMPARAN ANAK MUDA</span>
-          </div>
-          {cfg.showTagline && (
-            <span style={footerTaglineStyle}>
-              Menyadarkan generasi muda akan kenyataan
+          {/* Excerpt with dedicated top margin for clean spacing */}
+          {cfg.showExcerpt && props.excerpt && (
+            <span style={{
+              ...excerptStyle,
+              marginTop: '32px',
+              maxWidth: `${cfg.excerptMaxWidth}px`,
+              display: 'flex',
+            }}>
+              {truncateTitle(props.excerpt, 150)}
             </span>
           )}
+
+          {/* Spacer within panel */}
+          <div style={{ flex: 1 }} />
+
+          {/* Metadata (Author, reading time, date) */}
+          {cfg.showMetadata && (
+            <div style={{ ...metadataStyle, display: 'flex' }}>
+              {cfg.showAuthor && props.authorName && (
+                <>
+                  <span style={{ ...metadataTextStyle, textTransform: 'uppercase' }}>{props.authorName}</span>
+                  <span style={metadataTextStyle}>•</span>
+                </>
+              )}
+              {props.readingTime !== undefined && (
+                <>
+                  <span style={metadataTextStyle}>{props.readingTime} MENIT BACA</span>
+                  {longDate && <span style={metadataTextStyle}>•</span>}
+                </>
+              )}
+              {longDate && <span style={{ ...metadataTextStyle, textTransform: 'uppercase' }}>{longDate}</span>}
+              {props.seriesCurrent !== undefined && props.seriesTotal !== undefined && (
+                <>
+                  {(props.readingTime !== undefined || props.authorName) && <span style={metadataTextStyle}>•</span>}
+                  <SeriesProgress current={props.seriesCurrent} total={props.seriesTotal} fontSize={12} />
+                </>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Spacious gap before footer */}
+        <div style={{ height: '32px', flexShrink: 0 }} />
+
+        {/* Footer */}
+        <div style={footerStyle}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span style={{
+              ...footerBrandStyle,
+              fontSize: '14px',
+              color: COLORS.textSecondary,
+              letterSpacing: '0.05em',
+            }}>
+              TAMPARANANAKMUDA.COM
+            </span>
+            {cfg.showTagline && (
+              <span style={footerTaglineStyle}>
+                Menyadarkan generasi muda akan kenyataan
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>

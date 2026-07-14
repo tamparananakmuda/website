@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { WhitepaperCard } from '@/components/whitepaper-card';
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function WhitepaperIndexPage() {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: whitepapers } = await supabase
     .from('whitepapers')

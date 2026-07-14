@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
@@ -25,7 +25,7 @@ export const metadata = {
 };
 
 export default async function ArticlesPage() {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: posts } = await supabase
     .from('posts')

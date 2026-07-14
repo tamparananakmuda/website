@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { CollectionPageSchema } from '@/components/schema/collection-page-schema';
@@ -14,7 +14,7 @@ export const revalidate = 60;
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
-  const supabase = createClient();
+  const supabase = createPublicClient();
   const { data: category } = await supabase
     .from('categories')
     .select('title, description, slug')
@@ -48,7 +48,7 @@ export async function generateMetadata({
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: category } = await supabase
     .from('categories')

@@ -3,6 +3,8 @@ import { createClient } from '@/lib/supabase/server';
 import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 const bookmarkSchema = z.object({
   post_id: z.number().int().positive(),
 });
@@ -19,7 +21,8 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json(
@@ -73,7 +76,8 @@ export async function DELETE(request: NextRequest) {
     }
 
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json(
@@ -113,7 +117,8 @@ export async function DELETE(request: NextRequest) {
 export async function GET() {
   try {
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json({ bookmarks: [] });

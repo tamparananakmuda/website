@@ -3,6 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import { donasiSchema, getMinAmount } from '@/lib/validations/donasi';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 const LOUVIN_API_URL = 'https://api.louvin.dev/create-transaction';
 
 export async function POST(request: NextRequest) {

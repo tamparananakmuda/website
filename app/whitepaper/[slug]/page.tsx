@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { MarkdownContent } from '@/components/markdown-content';
 import { TableOfContents } from '@/components/table-of-contents';
 import { ShareButtons } from '@/components/share-buttons';
@@ -17,7 +17,7 @@ export const revalidate = 60;
 export async function generateMetadata({
   params,
 }: WhitepaperPageProps): Promise<Metadata> {
-  const supabase = createClient();
+  const supabase = createPublicClient();
   const { data: wp } = await supabase
     .from('whitepapers')
     .select('title, subtitle, summary, slug')
@@ -52,7 +52,7 @@ export async function generateMetadata({
 }
 
 export default async function WhitepaperDetailPage({ params }: WhitepaperPageProps) {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: wp } = await supabase
     .from('whitepapers')

@@ -5,6 +5,8 @@ import { previewSocialContent } from '@/lib/social-preview';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const auth = await checkAdminAuth();

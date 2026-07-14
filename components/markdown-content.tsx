@@ -1,5 +1,4 @@
 import { marked } from 'marked';
-import DOMPurify from 'isomorphic-dompurify';
 import { slugify } from '@/lib/utils/slugify';
 
 interface MarkdownContentProps {
@@ -17,19 +16,19 @@ renderer.heading = function ({ text, depth }) {
 
 marked.use({ renderer });
 
+function sanitizeHtml(html: string): string {
+  return html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
+    .replace(/on\w+="[^"]*"/gi, '')
+    .replace(/on\w+='[^']*'/gi, '')
+    .replace(/javascript:/gi, '');
+}
+
 export function MarkdownContent({ body }: MarkdownContentProps) {
   const rawHtml = marked.parse(body, { async: false }) as string;
-  const cleanHtml = DOMPurify.sanitize(rawHtml, {
-    ALLOWED_TAGS: [
-      'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-      'p', 'br', 'hr', 'strong', 'em', 'del', 'mark',
-      'a', 'ul', 'ol', 'li',
-      'blockquote', 'code', 'pre',
-      'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td',
-      'div', 'span',
-    ],
-    ALLOWED_ATTR: ['href', 'title', 'src', 'alt', 'id', 'class', 'target', 'rel'],
-  });
+  const cleanHtml = sanitizeHtml(rawHtml);
 
   return (
     <div

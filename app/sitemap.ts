@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const staticPages: MetadataRoute.Sitemap = [
     {

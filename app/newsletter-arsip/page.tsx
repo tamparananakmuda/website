@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { Mail, Calendar } from 'lucide-react';
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function NewsletterArchivePage() {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: issues } = await supabase
     .from('newsletter_issues')

@@ -3,6 +3,8 @@ import { createClient } from '@/lib/supabase/server';
 import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 const historySchema = z.object({
   post_id: z.number().int().positive(),
   progress: z.number().int().min(0).max(100).optional().default(0),
@@ -20,7 +22,8 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json(

@@ -4,6 +4,8 @@ import { createClient as createServiceClient } from '@supabase/supabase-js';
 import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
+export const dynamic = 'force-dynamic';
+
 const commentSchema = z.object({
   post_id: z.number().int().positive(),
   body: z.string().trim().min(1, 'Komentar tidak boleh kosong').max(2000, 'Komentar maksimal 2000 karakter'),
@@ -65,7 +67,8 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json(
@@ -132,7 +135,8 @@ export async function DELETE(request: NextRequest) {
     }
 
     const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
+    const user = session?.user;
 
     if (!user) {
       return NextResponse.json(

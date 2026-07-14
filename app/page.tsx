@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import { Hero } from '@/components/sections/hero';
 import { FeaturedQuote } from '@/components/sections/featured-quote';
 import { Philosophy } from '@/components/sections/philosophy';
@@ -14,7 +14,7 @@ import { FAQSchema } from '@/components/schema/faq-schema';
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const [{ data: categories }, { data: recentPosts }] = await Promise.all([
     supabase

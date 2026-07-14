@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createPublicClient } from '@/lib/supabase/public';
 import Link from 'next/link';
 
 export const revalidate = 60;
@@ -24,7 +24,7 @@ export const metadata = {
 };
 
 export default async function SeriesPage() {
-  const supabase = createClient();
+  const supabase = createPublicClient();
 
   const { data: series } = await supabase
     .from('series')
