@@ -51,7 +51,7 @@ export function SiteHeader() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
-            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md transition-all duration-300',
+            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out',
             isCompact ? 'max-w-2xl py-2' : 'max-w-7xl py-3.5'
           )}
         >
@@ -65,8 +65,8 @@ export function SiteHeader() {
 
           <nav
             className={cn(
-              'hidden items-center gap-8 overflow-hidden whitespace-nowrap transition-all duration-400 md:flex',
-              isCompact ? 'opacity-0 w-0' : 'opacity-100 w-auto'
+              'hidden items-center gap-8 overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out md:flex',
+              isCompact ? 'opacity-0 max-w-0' : 'opacity-100 max-w-[600px]'
             )}
             aria-label="Navigasi utama"
           >
@@ -100,7 +100,7 @@ export function SiteHeader() {
             <Link
               href="/newsletter"
               className={cn(
-                'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95',
+                'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all duration-300 ease-in-out hover:bg-primary/90 active:scale-95',
                 isCompact ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'
               )}
             >
