@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import { createPublicClient } from '@/lib/supabase/public';
 import { MarkdownContent } from '@/components/markdown-content';
+import { FeatureImage } from '@/components/feature-image';
 import { ArticleSchema } from '@/components/schema/article-schema';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { AuthorSchema } from '@/components/schema/author-schema';
@@ -103,6 +103,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
     return (
       <article className="container mx-auto px-4 py-12">
+        <link rel="preload" as="image" href={`/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
         <ArticleSchema
           title={post.title}
           description={post.excerpt || ''}
@@ -135,19 +136,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }, { name: post.title, href: `/artikel/${post.slug}` }]} />
 
         {/* Feature image */}
-        <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
-          <div className="relative aspect-[16/9] w-full">
-            <Image
-              src={`/api/og/feature?slug=${post.slug}`}
-              alt={post.title}
-              fill
-              unoptimized
-              priority
-              className="object-cover"
-              sizes="(max-width: 1200px) 100vw, 1024px"
-            />
-          </div>
-        </div>
+        <FeatureImage
+          src={`/api/og/feature?slug=${post.slug}`}
+          alt={post.title}
+        />
 
         <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>
           <div className="mb-4 flex items-center gap-2 text-sm">

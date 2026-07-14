@@ -4,7 +4,7 @@ import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
 export const runtime = 'nodejs';
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

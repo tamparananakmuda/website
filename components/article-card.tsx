@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Category, Post } from '@/types/database';
 
 interface ArticleCardProps {
@@ -7,17 +10,28 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ post }: ArticleCardProps) {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
     <article className="group overflow-hidden rounded-xl transition-all duration-200 hover:bg-secondary/50">
       <Link href={`/artikel/${post.slug}`} className="block">
-        <div className="relative aspect-[16/9] w-full overflow-hidden">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/30">
+          {!imgLoaded && (
+            <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 to-muted/10" />
+          )}
           <Image
             src={`/api/og/card?slug=${post.slug}`}
             alt={post.title}
             fill
             unoptimized
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+            className={`
+              object-cover transition-all duration-500
+              ${imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
+              group-hover:scale-105
+            `}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onLoad={() => setImgLoaded(true)}
           />
         </div>
         <div className="p-4">
