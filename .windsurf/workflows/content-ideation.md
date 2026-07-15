@@ -10,13 +10,15 @@ Workflow untuk menemukan ide artikel TAM di berbagai kategori. Kombinasi trend-b
 
 | Kategori DB | Pillar Utama | % Target | Tone |
 |---|---|---|---|
-| Mindset | Mindset & Realita (20%), Psikologi (5%), Tamparan, Filosofi Hidup | 25-30% | Serius, reflektif, provokatif |
-| Karir & Tujuan | Karier & Dunia Kerja (15%), Produktivitas (10%), Pendidikan, Komunikasi | 25-30% | Praktis, to-the-point, sarkas |
-| Relasi | Hubungan Sosial, Komunikasi | 10-15% | Empatik, objektif |
-| Keuangan | Uang (15%) | 15% | Rasional, data-driven, anti-judi |
-| Bisnis | Bisnis (15%), Skill Masa Depan (5%) | 15-20% | Praktis, no-nonsense, anti-hype |
-| Teknologi | Teknologi & AI (10%), Analisis Fenomena (5%) | 10-15% | Objektif, praktis, anti-fanboy |
-| Identitas | Lifestyle, Sejarah Orang Sukses, Ulasan Buku | 5-10% | Reflektif, personal |
+| `mindset` | Mindset & Realita (20%), Psikologi (5%), Tamparan, Filosofi Hidup | 25-30% | Serius, reflektif, provokatif |
+| `karir-tujuan` | Karier & Dunia Kerja (15%), Produktivitas (10%), Pendidikan, Komunikasi, Bisnis (15%), Skill Masa Depan (5%), Teknologi & AI (10%), Analisis Fenomena (5%) | 45-55% | Praktis, to-the-point, sarkas |
+| `relasi` | Hubungan Sosial, Komunikasi | 10-15% | Empatik, objektif |
+| `keuangan` | Uang (15%) | 15% | Rasional, data-driven, anti-judi |
+| `identitas` | Lifestyle, Sejarah Orang Sukses, Ulasan Buku | 5-10% | Reflektif, personal |
+
+## Frequency
+
+Jalankan workflow ini **mingguan** (setiap Senin) untuk maintain content pipeline 2-4 minggu ke depan.
 
 ## Step 1: Trend Scan
 
@@ -60,11 +62,21 @@ Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
 4. TikTok = sinyal apa yang sudah mainstream (late to trend = skip)
 ```
 
+### 1e. Google Keyword Research
+```
+1. Buka https://ads.google.com/keywordsplanner (atau Ubersuggest free tier)
+2. Masukkan seed keyword dari trend scan
+3. Filter: Indonesia, Bahasa Indonesia
+4. Catat: search volume (low/med/high), keyword difficulty, related keywords
+5. Prioritas: long-tail (3-5 kata) dengan volume medium + difficulty low
+```
+
 ### Output Step 1
 Daftar raw ideas per kategori:
 ```
-[Kategori] | [Topik] | [Platform source] | [Volume/signal strength] | [Angle yang dibuat] | [Angle yang MISSING]
+[Kategori] | [Topik] | [Platform source] | [Volume/signal strength] | [Angle yang dibuat] | [Angle yang MISSING] | [Keyword + search volume]
 ```
+Simpan output ke `files/ideation-backlog.md` untuk tracking.
 
 ## Step 2: Gap Analysis
 
@@ -119,7 +131,7 @@ Setiap idea yang lolos Step 2 harus lulus angle test.
 
 ### 3b. POV Selection (wajib pilih salah satu)
 - `kontra-narasi` — melawan narasi populer dengan dasar kuat
-- `refleksi` — pengalaran/observasi personal yang spesifik
+- `refleksi` — pengalaman/observasi personal yang spesifik
 - `data` — data + interpretasi yang tidak obvious
 - `framework` — kerangka berpikir original
 
@@ -188,9 +200,14 @@ Rules:
 | LinkedIn | Professional | 1-2 weeks | Karir, bisnis, keuangan |
 | Medium ID | Competitor | Ongoing | Gap analysis |
 
+## Handoff ke Post-Article Execution
+
+Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflow `/post-article-execution` mulai dari Step 0.5 (Draft Writing Guidelines).
+
 ## Checklist Final
 
 - [ ] Trend scan completed (min 5 ideas per kategori target)
+- [ ] Keyword research done (search volume + difficulty checked)
 - [ ] Gap analysis done (TAM existing + 3 competitor checked)
 - [ ] Angle test passed (2 pertanyaan + POV selected)
 - [ ] TAM voice check passed
@@ -198,3 +215,5 @@ Rules:
 - [ ] Calendar mapped sesuai alokasi pillar
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
 - [ ] Min 1 insight unik yang tidak ada di 3 artikel pertama Google
+- [ ] Output disimpan ke `files/ideation-backlog.md`
+- [ ] Ide prioritas di-handoff ke `/post-article-execution`

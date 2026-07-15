@@ -16,6 +16,11 @@ Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert database, de
 | `NEXT_PUBLIC_SITE_URL` | URL production | Public |
 | `BREVO_API_KEY` | Newsletter | Server only |
 | `BREVO_LIST_ID` | Subscriber list | Server only |
+| `R2_ACCESS_KEY_ID` | Cloudflare R2 S3 access key | Server only |
+| `R2_SECRET_ACCESS_KEY` | Cloudflare R2 S3 secret | Server only |
+| `R2_ENDPOINT` | R2 S3 endpoint URL | Server only |
+| `R2_BUCKET_NAME` | R2 bucket name (`cdn-tam`) | Server only |
+| `CDN_BASE_URL` | CDN domain (`https://cdn.tamparananakmuda.com`) | Public |
 
 ```bash
 export SUPA_URL="$NEXT_PUBLIC_SUPABASE_URL"
@@ -26,6 +31,10 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 ## Step -1: Topic Research & Angle Test
 
 Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan angle TAM unik.
+
+**Untuk ide yang sudah melalui workflow `/content-ideation`**, langsung lanjut ke Step 0 dengan ide yang sudah terpilih.
+
+**Untuk ide ad-hoc (tidak dari ideation workflow):** lakukan angle test di bawah ini.
 
 **Angle Test (2 pertanyaan wajib):**
 1. "Apakah ada media lain yang akan menulis ini dengan cara yang sama?" Jika ya, rewrite angle.
@@ -103,8 +112,8 @@ else console.error('Author not found');
 - `id`, `title`, `slug`, `excerpt`, `body`, `category_id`, `author_id`, `status`
 - `pov_tag`, `human_signature`, `fact_check_status`, `review_status`
 - `source_references` (JSONB array, BUKAN string)
-- `seo_meta_title`, `seo_meta_description`, `seo_og_image_url`, `reading_time`
-- `og_headline`, `cover_image_url`, `cover_image_alt`, `is_premium`, `is_sponsored`
+- `seo_meta_title`, `seo_meta_description`, `reading_time`
+- `og_headline`, `og_card_url`, `og_feature_url`, `og_image_url`, `cover_image_url`, `cover_image_alt`, `is_premium`, `is_sponsored`
 - `sponsor_name`, `sponsor_url`, `sponsor_disclosure`, `premium_excerpt`
 - `series_id`, `series_order`, `published_at`, `created_at`, `updated_at`, `featured`
 
@@ -661,11 +670,19 @@ else console.log('Deleted:', d.length, 'rows');
 "
 ```
 
-**Clear OG image cache (Vercel):**
+**Delete OG images dari R2:**
 ```bash
-# Vercel automatically caches OG images. Deletion + re-deploy clears cache.
-# If article was deployed, push a new commit to trigger re-deploy:
-git commit --allow-empty -m "chore: clear OG cache" && git push origin main
+# OG images sekarang disimpan di R2, bukan Vercel cache
+# Hapus card + feature WebP untuk slug tersebut
+curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-card.webp"
+curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-feature.webp"
+
+# Atau jalankan via script (otomatis hapus semua varian OG untuk slug):
+npx tsx -e "
+require('fs').readFileSync('.env.local','utf8').split('\n').forEach(l => { const i=l.indexOf('='); if(i>0) process.env[l.substring(0,i).trim()] = l.substring(i+1).trim(); });
+const { deleteOldOGImages } = require('./lib/cdn/r2');
+deleteOldOGImages('SLUG').then(() => console.log('OG images deleted from R2'));
+"
 ```
 
 **Note:** Setelah rollback, slug bisa dipakai ulang karena row sudah dihapus.
