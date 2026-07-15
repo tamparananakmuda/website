@@ -1,4 +1,4 @@
-import { ReactElement, CSSProperties } from 'react';
+import React, { ReactElement, CSSProperties } from 'react';
 import { getCategorySignature } from './category-signatures';
 
 export type ImageSize = 'og' | 'feature' | 'card' | 'sosial' | 'newsletter';
