@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
-import { generateAndUploadOGImage } from '@/lib/cdn/generate';
+import { generateAndUploadOGImages } from '@/lib/cdn/generate';
 import { deleteOldOGImages } from '@/lib/cdn/r2';
 
 export const runtime = 'nodejs';
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 
     await deleteOldOGImages(slug);
 
-    const ogUrl = await generateAndUploadOGImage(slug, {
+    const urls = await generateAndUploadOGImages(slug, {
       title: post.title,
       category: category?.title,
       categoryColor: category?.color,
@@ -87,13 +87,13 @@ export async function POST(request: NextRequest) {
     await serviceSupabase
       .from('posts')
       .update({
-        og_image_url: ogUrl,
-        og_card_url: ogUrl,
-        og_feature_url: ogUrl,
+        og_card_url: urls.card,
+        og_feature_url: urls.feature,
+        og_image_url: urls.feature,
       })
       .eq('slug', slug);
 
-    return NextResponse.json({ success: true, url: ogUrl });
+    return NextResponse.json({ success: true, urls });
   } catch (error) {
     console.error('OG generate error:', error);
     return NextResponse.json(

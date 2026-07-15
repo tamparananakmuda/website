@@ -50,7 +50,7 @@ export async function generateMetadata({
     const supabase = createPublicClient();
     const { data: post } = await supabase
       .from('posts')
-      .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug, og_image_url')
+      .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug, og_image_url, og_feature_url')
       .eq('slug', params.slug)
       .eq('status', 'published')
       .single();
@@ -124,7 +124,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
     return (
       <article className="container mx-auto px-4 py-12">
-        <link rel="preload" as="image" href={post.og_image_url || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
+        <link rel="preload" as="image" href={post.og_feature_url || post.og_image_url || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
         <ArticleSchema
           title={post.title}
           description={post.excerpt || ''}
@@ -159,7 +159,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {/* Feature image */}
         <FeatureImage
-          src={post.og_image_url || `/api/og/feature?slug=${post.slug}`}
+          src={post.og_feature_url || post.og_image_url || `/api/og/feature?slug=${post.slug}`}
           alt={post.title}
         />
 

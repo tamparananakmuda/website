@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { createClient } from '@supabase/supabase-js';
-import { generateAndUploadOGImage } from '../lib/cdn/generate';
+import { generateAndUploadOGImages } from '../lib/cdn/generate';
 import { deleteOldOGImages } from '../lib/cdn/r2';
 
 // Load .env.local manually
@@ -77,7 +77,7 @@ async function main() {
     try {
       process.stdout.write(`Generating for "${post.slug}"... `);
       await deleteOldOGImages(post.slug);
-      const ogUrl = await generateAndUploadOGImage(post.slug, {
+      const urls = await generateAndUploadOGImages(post.slug, {
         title: post.title,
         category: category?.title,
         categoryColor: category?.color,
@@ -97,9 +97,9 @@ async function main() {
       await serviceSupabase
         .from('posts')
         .update({
-          og_image_url: ogUrl,
-          og_card_url: ogUrl,
-          og_feature_url: ogUrl,
+          og_card_url: urls.card,
+          og_feature_url: urls.feature,
+          og_image_url: urls.feature,
         })
         .eq('slug', post.slug);
 
