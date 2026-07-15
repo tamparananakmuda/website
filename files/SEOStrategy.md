@@ -124,7 +124,7 @@ Atau tanpa brand jika judul sudah panjang:
 [1-2 kalimat yang menjelaskan angle TAM, bukan rangkuman generic]
 ```
 
-### OG Title (max 60 karakter)
+### OG Title (max 50 karakter)
 ```
 [Judul Artikel]
 ```

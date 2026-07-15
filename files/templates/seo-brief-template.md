@@ -80,7 +80,7 @@ Pengalaman/observasi personal yang akan dimasukkan:
 - [ ] Ikuti formula Tamparan-Penjelasan-Solusi
 - [ ] Minimal 1 paragraf personal experience/observasi
 - [ ] Setiap klaim faktual punya sumber
-- [ ] No em-dash, no AI pattern writing
+- [ ] No em-dash, no AI pattern writing (lengkap: lihat `files/HumanizerRules.md`)
 - [ ] 1.000-2.500 kata
 - [ ] Minimal 2 internal links ke artikel TAM lain
 - [ ] SEO title max 70 karakter

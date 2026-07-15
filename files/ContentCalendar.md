@@ -8,15 +8,34 @@ Framework jadwal publikasi dan standard operating procedure tim editorial TAMPAR
 
 **Target: 3-4 artikel per minggu (12-16 per bulan)**
 
-| Hari | Aktivitas | Platform |
-|---|---|---|
-| Senin | Publikasi artikel pillar utama | Web |
-| Selasa | Distribusi carousel dari artikel Senin | Instagram |
-| Rabu | Publikasi artikel pillar rotasi | Web |
-| Kamis | Distribusi video script dari artikel | TikTok/Reels |
-| Jumat | Kirim newsletter mingguan | Email (Brevo) |
-| Sabtu | Publikasi artikel POV tag `tamparan` | Web |
-| Minggu | Planning konten minggu depan | Internal |
+### Jam Publish Optimal (WIB)
+
+Berdasarkan riset data: Sprout Social (2B+ engagements), Neil Patel (158K blog posts), We Are Social Indonesia, Buffer (4.8M LinkedIn posts), dan Vedit.co.id (Indonesia 2026).
+
+| Slot | Jam WIB | Alasan | Cocok untuk |
+|---|---|---|---|
+| **Pagi** | 07:30 | Audiens cek HP sebelum kerja/kuliah. Konten muncul saat feed masih sepi, dapat engagement awal | Artikel pillar utama (Senin, Rabu) |
+| **Siang** | 12:15 | Jam istirahat makan siang. Lonjakan aktivitas tertinggi di Indonesia (DailySocial) | Artikel data/panduan (Rabu) |
+| **Sore** | 17:00 | Audiens selesai kerja, mulai santai. Engagement tinggi untuk konten reflektif | Artikel POV refleksi/tamparan (Sabtu) |
+| **Malam** | 19:30 | Puncak retensi pengguna Indonesia. Cocok untuk konten panjang yang butuh fokus | Artikel evergreen mendalam |
+
+**Aturan:**
+- Hari terbaik: **Selasa, Rabu, Kamis** (Sprout Social, Neil Patel)
+- Hari terburuk: **Sabtu** (engagement 35% lebih rendah, kecuali malam 20:00-22:00)
+- Jangan publish 2 artikel di jam yang sama. Spacing minimal 4 jam
+- Publish 10 menit sebelum golden hour untuk dapat momentum algoritma
+
+### Jadwal Mingguan
+
+| Hari | Aktivitas | Jam WIB | Platform |
+|---|---|---|---|
+| Senin | Publikasi artikel pillar utama | 07:30 | Web |
+| Selasa | Distribusi carousel dari artikel Senin | 12:15 | Instagram |
+| Rabu | Publikasi artikel pillar rotasi | 12:15 | Web |
+| Kamis | Distribusi video script dari artikel | 19:30 | TikTok/Reels |
+| Jumat | Kirim newsletter mingguan | 08:00 | Email (Brevo) |
+| Sabtu | Publikasi artikel POV tag `tamparan` | 17:00 | Web |
+| Minggu | Planning konten minggu depan | - | Internal |
 
 ## 2. Distribusi Pillar Per Bulan
 
@@ -76,7 +95,7 @@ Framework jadwal publikasi dan standard operating procedure tim editorial TAMPAR
 2. Pastikan human signature (pengalaman/observasi personal) ada
 3. Setiap klaim faktual punya sumber
 4. Target: 1.000-2.500 kata
-5. No em-dash, no AI pattern
+5. No em-dash, no AI pattern (lengkap: lihat `files/HumanizerRules.md`)
 
 ### Stage 4: Review (`review`)
 

@@ -352,7 +352,7 @@ Headline TAM harus provokatif tapi jujur. Kalau headline menjanjikan sesuatu yan
 
 ### Technical Rules
 - Max 70 karakter untuk SEO title tag
-- Max 60 karakter untuk OG title (social share)
+- Max 50 karakter untuk OG title (social share, card template titleMaxChars=50)
 - H1 di halaman artikel boleh lebih panjang dari title tag
 - Gunakan angka spesifik, bukan "beberapa" atau "banyak"
 - Hindari kata: "ampuh", "terbukti", "rahasia", "ultimate", "wajib"

@@ -33,7 +33,7 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 
 Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan angle TAM unik.
 
-**Untuk ide yang sudah melalui workflow `/content-ideation`**, langsung lanjut ke Step 0 dengan ide yang sudah terpilih.
+**Untuk ide yang sudah melalui workflow `/content-ideation`** (file: `.windsurf/workflows/content-ideation.md`), langsung lanjut ke Step 0 dengan ide yang sudah terpilih.
 
 **Untuk ide ad-hoc (tidak dari ideation workflow):** lakukan angle test di bawah ini.
 
@@ -46,6 +46,11 @@ Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan 
 - `refleksi` - pengalaman/observasi personal yang spesifik
 - `data` - data + interpretasi yang tidak obvious
 - `framework` - kerangka berpikir original
+- `tamparan` - statement tajam yang membongkar ilusi langsung
+- `riset` - temuan riset/studi sebagai angle utama
+- `opini` - sudut pandang yang berani dan spesifik
+- `panduan` - guide praktis berbasis pengalaman nyata
+- `inspirasi` - cerita inspiratif tanpa menjual harapan palsu
 
 **Category Reference:**
 | Slug | Title | Color |
@@ -110,7 +115,7 @@ else console.error('Author not found');
 ```
 
 **Kolom ADA di `posts` (verified dari schema + migrations):**
-- `id`, `title`, `slug`, `excerpt`, `body`, `category_id`, `author_id`, `status`
+- `id`, `title`, `slug`, `excerpt`, `body`, `category_id`, `subcategory_id`, `author_id`, `status`
 - `pov_tag`, `human_signature`, `fact_check_status`, `review_status`
 - `source_references` (JSONB array, BUKAN string)
 - `seo_meta_title`, `seo_meta_description`, `seo_keywords` (text[]), `reading_time`
@@ -119,6 +124,37 @@ else console.error('Author not found');
 - `series_id`, `series_order`, `published_at`, `created_at`, `updated_at`, `featured`
 
 **Kolom TIDAK ADA:** `tags`
+
+**Subcategory (Pillar) Reference:**
+17 pillars di DB (tabel `subcategories`). Query by category_id untuk pilih pillar yang relevan:
+```bash
+curl -s "$SUPA_URL/rest/v1/subcategories?category_id=eq.CATEGORY_UUID&select=id,title,slug&order=sort_order.asc" \
+  -H "apikey: $SUPA_KEY" -H "Authorization: Bearer $SUPA_KEY" | node -e "
+const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+d.forEach(s => console.log(s.slug + ' | ' + s.title + ' | ' + s.id));
+"
+```
+
+Daftar lengkap 17 pillars:
+| Slug | Title |
+|------|-------|
+| `mindset-realita` | Mindset & Realita |
+| `karier-dunia-kerja` | Karier & Dunia Kerja |
+| `keuangan-uang` | Keuangan & Uang |
+| `bisnis` | Bisnis |
+| `teknologi-ai` | Teknologi & AI |
+| `hubungan-sosial` | Hubungan Sosial |
+| `produktivitas` | Produktivitas |
+| `psikologi` | Psikologi |
+| `analisis-fenomena` | Analisis Fenomena |
+| `lifestyle` | Lifestyle |
+| `skill-masa-depan` | Skill Masa Depan |
+| `sejarah-orang-sukses` | Sejarah Orang Sukses |
+| `komunikasi` | Komunikasi |
+| `filosofi-hidup` | Filosofi Hidup |
+| `tamparan` | Tamparan |
+| `ulasan-buku` | Ulasan Buku |
+| `pendidikan` | Pendidikan |
 
 **CRITICAL rules:**
 - `source_references`: HARUS JSON array, bukan string. Format: `[{"type":"link","url":"...","label":"..."}]`
@@ -130,6 +166,12 @@ else console.error('Author not found');
 ## Step 0.5: Draft Writing Guidelines
 
 Aturan formatting markdown body artikel sebelum masuk ke QC.
+
+**Word Count (STANDAR TAM):**
+- Target: 1.000-2.500 kata (5-12 menit baca)
+- Referensi: `files/templates/article-template.md`, `files/ContentStrategy.md`, `files/ContentCalendar.md`
+- Artikel di bawah 1.000 kata = perlu expand depth (data tambahan, contoh kasus, elaborasi argumentasi)
+- Artikel di atas 2.500 kata = perlu trim atau pecah jadi multi-part series
 
 **Heading Structure (CRITICAL untuk Table of Contents):**
 - Gunakan `##` (h2) untuk section utama, `###` (h3) untuk sub-section
@@ -161,7 +203,7 @@ d.forEach(p => console.log(p.title + ' -> /artikel/' + p.slug));
 
 **OG Headline (CRITICAL):**
 - `og_headline` HARUS berbeda dari `title`. Jangan copy-paste title ke og_headline
-- `og_headline` harus lebih pendek, punchy, dan conversational (max 60 karakter)
+- `og_headline` harus lebih pendek, punchy, dan conversational (max 50 karakter, sesuai card template `titleMaxChars=50`)
 - Fungsi: hook untuk OG image yang membuat orang klik saat share di social media
 - Format: kalimat langsung, bukan judul formal. Contoh:
   - title: "Perbandingan Diri di Era Media Sosial: Kenapa Kamu Merasa Tidak Cukup"
@@ -188,7 +230,10 @@ console.log('internal links:', il, il < 2 ? 'WARNING: butuh min 2' : 'OK');
 const og = a.og_headline || '';
 console.log('og_headline:', og ? og : 'MISSING');
 console.log('og_headline == title?', og === a.title ? 'WARNING: harus berbeda!' : 'OK');
-console.log('og_headline length:', og.length, og.length > 60 ? 'WARNING: max 60' : 'OK');
+console.log('og_headline length:', og.length, og.length > 50 ? 'WARNING: max 50' : 'OK');
+// Cek word count
+const wc = b.split(/\s+/).length;
+console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 2500 ? 'WARNING: max 2.500' : 'OK');
 "
 ```
 
@@ -196,95 +241,133 @@ console.log('og_headline length:', og.length, og.length > 60 ? 'WARNING: max 60'
 
 Validasi semua data dan klaim dalam artikel sebelum masuk ke database.
 
-**Checklist:**
+**Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori + audit script).
+
+**Checklist Faktual:**
 - [ ] Setiap angka punya sumber yang bisa ditrace (URL aktif)
-- [ ] Tidak ada em dash (—) atau en dash (–) di body, title, excerpt, meta
-- [ ] Tidak ada AI vocabulary: crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, testament, foster, garner, intricate, landscape, additionally, enduring, enhance, highlight, interplay
-- [ ] Tidak ada rule-of-three abuse (3 item list beruntun lebih dari 2x per artikel)
-- [ ] Tidak ada promotional language ("game-changing", "revolutionary", "boasts", "stunning", "breathtaking", "nestled", "renowned")
-- [ ] Tidak ada vague attribution ("studies show..." tanpa sumber spesifik)
-- [ ] Tidak ada copula avoidance ("serves as", "stands as", "represents a" untuk pengganti "is/are")
-- [ ] Tidak ada staccato drama (3+ kalimat pendek beruntun untuk manufactured drama)
-- [ ] Tidak ada significance inflation ("marking a pivotal moment", "setting the stage", "indelible mark", "deeply rooted")
-- [ ] Tidak ada -ing superficial analysis ("highlighting...", "underscoring...", "emphasizing...", "reflecting...", "symbolizing...")
-- [ ] Tidak ada signposting ("let's dive in", "here's what you need to know", "let's break this down")
-- [ ] Tidak ada filler phrases ("in order to", "due to the fact that", "at this point in time", "it is important to note")
-- [ ] Tidak ada generic positive conclusions ("the future looks bright", "exciting times lie ahead")
-- [ ] Tidak ada fragmented headers (heading diikuti 1 kalimat yang hanya restates heading)
-- [ ] Tidak ada authority tropes ("the real question is", "at its core", "what really matters", "fundamentally")
-- [ ] Tidak ada negative parallelisms ("not only...but also", "it's not just...it's")
-- [ ] Tidak ada aphorism formulas ("X is the Y of Z", "X becomes a trap")
-- [ ] Tidak ada conversational rhetorical openers ("Honestly?", "Look,", "Here's the thing")
-- [ ] Tidak ada hyphenated word pair overuse di predicate position ("the report is high-quality" -> "the report is high quality")
-- [ ] Tidak ada boldface overuse (bold hanya untuk emphasis kunci, bukan untuk istilah umum)
-- [ ] Tidak ada title case di headings (gunakan sentence case: "Strategic negotiations" bukan "Strategic Negotiations")
-- [ ] Tidak ada curly quotes ("...") -> gunakan straight quotes ("...")
-- [ ] Tone check: jujur, rasional, berani, tidak menggurui
-- [ ] POV tag dipilih: kontra-narasi / refleksi / data / framework
-- [ ] Human signature: minimal 1 paragraf dari pengalaman/observasi/opini spesifik
+- [ ] POV tag dipilih: kontra-narasi / refleksi / data / framework / tamparan / riset / opini / panduan / inspirasi
 - [ ] Heading structure: h2/h3 only, minimal 3 h2, tidak ada h1
 - [ ] Internal linking: minimal 2 link ke artikel TAM lain
 - [ ] Tidak ada raw HTML script/iframe/style di body
-- [ ] OG headline berbeda dari title, max 60 karakter, conversational
-- [ ] Sentence length variety: campuran kalimat pendek dan panjang, tidak semua sama panjang
+- [ ] OG headline berbeda dari title, max 50 karakter, conversational
+- [ ] Word count: 1.000-2.500 kata (di bawah 1.000 = expand, di atas 2.500 = trim)
+
+**Checklist Humanizer (detail di `files/HumanizerRules.md`):**
+- [ ] Punctuation: no em dash (—), no en dash (–), no curly quotes, max 1 exclamation, sentence case headings
+- [ ] AI vocabulary EN: no crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, dll (lihat HumanizerRules.md section 2)
+- [ ] AI vocabulary ID: no signifikan, krusial, esensial, vital, mendalam, memperhatikan, pada dasarnya, dll (lihat HumanizerRules.md section 3)
+- [ ] Structural: no staccato drama, no rule-of-three abuse (>2x), no fragmented headers, no negative parallelisms (>1x), no aphorism formulas
+- [ ] Promotional: no game-changing, revolutionary, groundbreaking, seamless, empower, transform, unlock, dll
+- [ ] Vague attribution: "studi menunjukkan" wajib sebut nama studi + tahun + link
+- [ ] Copula avoidance: no "serves as", "stands as", "represents a" -> gunakan "adalah" atau kalimat aktif
+- [ ] Signposting: no "let's dive in", "marilah kita bahas", "berikut hal yang perlu kamu tahu"
+- [ ] Filler: no "in order to", "due to the fact", "perlu diketahui bahwa"
+- [ ] Generic conclusions: no "masa depan cerah", "exciting times", "peluang tak terbatas"
+- [ ] Authority tropes: no "the real question is", "pada hakikatnya", "inti permasalahannya"
+- [ ] Conversational openers: no "Honestly?", "Jujur saja,", "Begini"
+- [ ] Hyphenated pairs: maks 2x per artikel
+- [ ] Boldface: hanya untuk key terms/angka penting, bukan istilah umum
+- [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik, gunakan "kita"/"kamu" (bukan "Anda")
+- [ ] Tone check: jujur, rasional, berani, tidak menggurui
 - [ ] Ada opinions/reactions, bukan hanya neutral reporting
 - [ ] Ada acknowledgment of uncertainty atau mixed feelings jika relevan
+- [ ] Sentence length variety: campuran kalimat pendek dan panjang
 
 **Command:**
 ```bash
-# Cek em dash dan en dash
-grep -c '—' "$ARTICLE_JSON" || echo "0 em dashes"
-grep -c '–' "$ARTICLE_JSON" || echo "0 en dashes"
-
-# Cek AI vocabulary (expanded)
-python3 -c "
-import json
-d = json.load(open('$ARTICLE_JSON'))
-ai_words = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','serves as','stands as','represents a','boasts','stunning','breathtaking','nestled','renowned','marking a pivotal','setting the stage','indelible mark','deeply rooted','let.s dive','here.s what you need','in order to','due to the fact','at this point in time','it is important to note','the future looks bright','exciting times','the real question is','at its core','what really matters','fundamentally']
-found = [w for w in ai_words if w in d['body'].lower()]
-print(f'AI vocabulary found: {found if found else \"None\"}')
-"
-
-# Cek heading + internal links
+# Cek heading + internal links + word count
 node -e "
 const fs = require('fs');
 const a = JSON.parse(fs.readFileSync('$ARTICLE_JSON', 'utf8'));
 const b = a.body;
 const h1 = (b.match(/^# /gm) || []).length;
 const h2 = (b.match(/^## /gm) || []).length;
+const h3 = (b.match(/^### /gm) || []).length;
 const il = (b.match(/\]\(\/artikel\//g) || []).length;
+const words = b.split(/\s+/).filter(w => w.length > 0).length;
 console.log('h1:', h1, h1 > 0 ? 'WARNING' : 'OK');
 console.log('h2:', h2, h2 < 3 ? 'WARNING: need 3+' : 'OK');
+console.log('h3:', h3);
 console.log('internal links:', il, il < 2 ? 'WARNING: need 2+' : 'OK');
+console.log('word count:', words, words < 1000 ? 'WARNING: need 1000+' : words > 2500 ? 'WARNING: trim to 2500' : 'OK');
 "
 
-# Cek humanizer patterns (staccato drama, rule of three, fragmented headers, curly quotes)
+# Cek humanizer patterns (full audit dari HumanizerRules.md)
 python3 -c "
-import json, re
+import json, re, sys
 d = json.load(open('$ARTICLE_JSON'))
-body = d['body']
+body = d.get('body', '')
+title = d.get('title', '')
+excerpt = d.get('excerpt', '')
+full = body + ' ' + title + ' ' + excerpt
+issues = []
 
-# Staccato drama: 3+ consecutive short sentences (<=6 words)
+# 1. Em/en dash
+if '\u2014' in full or '\u2013' in full:
+    issues.append('Em/en dash found')
+
+# 2. AI vocab EN
+ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash']
+found_en = [w for w in ai_en if w in body.lower()]
+if found_en: issues.append('AI vocab EN: ' + ', '.join(found_en))
+
+# 3. AI vocab ID
+ai_id = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri']
+found_id = [w for w in ai_id if w in body.lower()]
+if found_id: issues.append('AI vocab ID: ' + ', '.join(found_id))
+
+# 4. Staccato drama
 sentences = re.split(r'[.!?]\s+', body)
-current_run = 0
-max_run = 0
+current_run = max_run = 0
 for s in sentences:
-    if len(s.split()) <= 6:
-        current_run += 1
-        max_run = max(max_run, current_run)
-    else:
-        current_run = 0
-print(f'Staccato drama (max consecutive short): {max_run}', 'ISSUE' if max_run >= 3 else 'OK')
+    if len(s.split()) <= 6: current_run += 1; max_run = max(max_run, current_run)
+    else: current_run = 0
+if max_run >= 3: issues.append('Staccato drama (max run: %d)' % max_run)
 
-# Rule of three
-triples = re.findall(r'(\w+, \w+, and \w+)', body)
-print(f'Rule of three: {len(triples)}', 'ISSUE' if len(triples) > 2 else 'OK')
+# 5. Rule of three
+triples = re.findall(r'(\w+,\s+\w+,\s+(?:dan|and)\s+\w+)', body)
+if len(triples) > 2: issues.append('Rule of three: %d' % len(triples))
 
-# Curly quotes
-curly = body.count('\u201c') + body.count('\u201d')
-print(f'Curly quotes: {curly}', 'ISSUE' if curly > 0 else 'OK')
+# 6. Negative parallelisms
+neg = re.findall(r'(tidak hanya.*tapi juga|bukan hanya.*melainkan|not only.*but also|it.s not just.*it.s)', body, re.I)
+if neg: issues.append('Negative parallelisms: %d' % len(neg))
 
-# Fragmented headers
+# 7. Curly quotes
+if '\u201c' in body or '\u201d' in body:
+    issues.append('Curly quotes')
+
+# 8. -ing superficial
+ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
+if len(ing) > 2: issues.append('-ing superficial: %d' % len(ing))
+
+# 9. Promotional
+promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket']
+found_promo = [w for w in promo if w in body.lower()]
+if found_promo: issues.append('Promotional: ' + ', '.join(found_promo))
+
+# 10. Signposting
+signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar']
+found_signs = [w for w in signs if re.search(w, body, re.I)]
+if found_signs: issues.append('Signposting')
+
+# 11. Filler
+fillers = ['in order to','due to the fact','at this point in time','it is important to note','perlu diketahui bahwa']
+found_fillers = [w for w in fillers if w in body.lower()]
+if found_fillers: issues.append('Filler: ' + ', '.join(found_fillers))
+
+# 12. Generic conclusions
+generic = ['the future looks bright','exciting times','masa depan yang cerah','awal dari sesuatu yang besar','peluang tak terbatas']
+found_generic = [w for w in generic if w in body.lower()]
+if found_generic: issues.append('Generic conclusion: ' + ', '.join(found_generic))
+
+# 13. Exclamation marks
+if body.count('!') > 1: issues.append('Exclamation marks: %d' % body.count('!'))
+
+# 14. Human signature check
+personal = len(re.findall(r'\bkita\b|\bkamu\b|\bsaya\b', body, re.I))
+if personal < 3: issues.append('Human signature weak (kita/kamu/saya: %d)' % personal)
+
+# 15. Fragmented headers
 lines = body.split('\n')
 for i, line in enumerate(lines):
     if line.startswith('## ') and i+1 < len(lines):
@@ -293,33 +376,14 @@ for i, line in enumerate(lines):
         if next_line and len(next_line) < 50:
             words_overlap = set(heading_text.split()) & set(next_line.lower().split())
             if len(words_overlap) >= 2:
-                print(f'Fragmented header: \"{line.strip()}\" -> \"{next_line}\"')
+                issues.append('Fragmented header: \"%s\"' % line.strip())
 
-# Negative parallelisms
-neg = re.findall(r'(not only.*but also|it.s not just.*it.s|not merely.*but)', body, re.I)
-print(f'Negative parallelisms: {len(neg)}', 'ISSUE' if neg else 'OK')
-
-# Aphorism formulas
-aph = re.findall(r'(\w+ is the \w+ of \w+|\w+ becomes a trap)', body, re.I)
-print(f'Aphorism formulas: {len(aph)}', 'ISSUE' if aph else 'OK')
-
-# -ing superficial analysis
-ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
-print(f'-ing superficial: {len(ing)}', 'ISSUE' if len(ing) > 2 else 'OK')
-
-print()
-print('=== HUMANIZER SUMMARY ===')
-issues = []
-if max_run >= 3: issues.append('Staccato drama')
-if len(triples) > 2: issues.append('Rule of three overuse')
-if curly > 0: issues.append('Curly quotes')
-if neg: issues.append('Negative parallelisms')
-if aph: issues.append('Aphorism formulas')
-if len(ing) > 2: issues.append('-ing superficial analysis')
+print('=== HUMANIZER AUDIT ===')
 if issues:
-    print('ISSUES TO FIX:', ', '.join(issues))
+    for i in issues: print('  FAIL:', i)
+    print('\nTOTAL ISSUES:', len(issues))
 else:
-    print('CLEAN: No humanizer issues detected.')
+    print('  CLEAN: No issues detected.')
 "
 ```
 
@@ -353,6 +417,33 @@ Klasifikasi semua sumber ke dalam tier reliability.
 - Artikel sekunder yang tidak menambah data unik
 
 **Output:** Update `source_references` di JSON dengan hanya sumber yang lulus verifikasi.
+
+**Command cek HTTP status semua source references:**
+```bash
+node -e "
+const fs = require('fs');
+const a = JSON.parse(fs.readFileSync('$ARTICLE_JSON', 'utf8'));
+const refs = a.source_references || [];
+(async () => {
+  for (const ref of refs) {
+    try {
+      const res = await fetch(ref.url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(10000) });
+      const status = res.status;
+      const tag = status >= 200 && status < 400 ? 'OK' : 'DEAD';
+      console.log(tag + ' [' + status + '] ' + ref.url);
+    } catch (e) {
+      // HEAD might not be supported, try GET
+      try {
+        const res = await fetch(ref.url, { redirect: 'follow', signal: AbortSignal.timeout(10000) });
+        const tag = res.status >= 200 && res.status < 400 ? 'OK' : 'DEAD';
+        console.log(tag + ' [' + res.status + '] ' + ref.url);
+      } catch (e2) {
+        console.log('DEAD [ERR] ' + ref.url + ' (' + e2.message + ')');
+      }
+    }
+  }
+})();
+"
 
 ## Step 3: SEO Metadata Finalization
 
@@ -414,7 +505,7 @@ Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan s
 - [ ] `seo_meta_description`: **MAX 160 karakter** (DB constraint), mengandung keyword
 - [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, **unique**
 - [ ] `excerpt`: **MAX 160 karakter** (DB constraint)
-- [ ] `og_headline`: max 60 karakter untuk OG image (fallback ke title)
+- [ ] `og_headline`: max 50 karakter untuk OG image (fallback ke title)
 - [ ] h2 mengandung secondary keyword
 - [ ] Internal linking: minimal 2 link, anchor text bervariasi
 - [ ] Image alt text: deskriptif + keyword when natural
@@ -466,6 +557,7 @@ Insert artikel ke Supabase database. Gunakan **service role key** (bukan anon ke
   "excerpt": "Excerpt max 160 karakter",
   "body": "## Heading 1\n\nKonten...\n\n## Heading 2\n\nKonten...\n\n### Sub-heading\n\nKonten...",
   "category_id": "UUID dari Step 0",
+  "subcategory_id": "UUID pillar dari Step 0 (opsional, null jika tidak relevan)",
   "author_id": "UUID dari Step 0",
   "status": "published",
   "seo_keywords": ["keyword 1", "keyword 2", "keyword 3"],
@@ -479,7 +571,7 @@ Insert artikel ke Supabase database. Gunakan **service role key** (bukan anon ke
   "featured": true,
   "seo_meta_title": "SEO Title max 70",
   "seo_meta_description": "SEO desc max 160",
-  "og_headline": "OG headline max 60",
+  "og_headline": "OG headline max 50",
   "published_at": "2026-01-01T00:00:00.000Z"
 }
 ```
@@ -515,6 +607,7 @@ const payload = {
   excerpt: article.excerpt,
   body: article.body,
   category_id: article.category_id,
+  subcategory_id: article.subcategory_id || null,
   author_id: article.author_id,
   status: article.status === 'scheduled' ? 'scheduled' : 'published',
   seo_keywords: article.seo_keywords || null,
@@ -816,6 +909,22 @@ Pecah artikel jadi format distribusi multi-platform.
 - Hook line wajib di 3 detik pertama
 - CTA: "Baca full artikel di bio"
 
+### 7e. X/Twitter Thread (3-5 tweets)
+- Tweet 1: Hook (1 kalimat tajam + angka/data yang mengejutkan)
+- Tweet 2-3: Key insight (1 insight per tweet, max 280 chars, pakai thread numbering)
+- Tweet 4: Quote atau data yang striking dari artikel
+- Tweet 5: CTA ke full article (`tamparananakmuda.com/artikel/SLUG`)
+- Tone: langsung, no fluff, pakai bahasa Indonesia
+- Posting: manual via X app atau scheduler (Buffer/Hootsuite)
+
+### 7f. LinkedIn Post (200-400 words)
+- Hook line: 1 kalimat yang relevan untuk professional audience (karir, bisnis, keuangan)
+- Body: 1 insight utama dengan sudut pandang professional (bukan copy artikel)
+- Format: short paragraphs, no bullet spam, conversational tone
+- CTA: "Baca analisis lengkapnya di sini: tamparananakmuda.com/artikel/SLUG"
+- Hashtags: 3-5 relevant hashtags (contoh: #GenZ #Karir #Mindset #Indonesia)
+- Posting: manual via LinkedIn atau scheduler
+
 ## Step 8: Distribution Schedule
 
 Jadwalkan distribusi sesuai content calendar.
@@ -823,14 +932,16 @@ Jadwalkan distribusi sesuai content calendar.
 **Timeline:**
 ```
 Hari 1 (Senin): Publish artikel di website
-Hari 2 (Selasa): Post IG Carousel + Stories
-Hari 3 (Rabu): Kirim newsletter
+Hari 2 (Selasa): Post IG Carousel + Stories + X/Twitter thread
+Hari 3 (Rabu): Kirim newsletter + LinkedIn post
 Hari 4 (Kamis): TikTok/Reels video (jika Phase 2 aktif)
 Hari 7 (Senin): Review analytics awal
 ```
 
 **Tools:**
 - IG posting: Manual atau Meta Business Suite
+- X/Twitter: Manual via X app atau Buffer/Hootsuite
+- LinkedIn: Manual via LinkedIn atau scheduler
 - Newsletter: Brevo dashboard
 - TikTok: Manual upload (jika Phase 2)
 
@@ -924,10 +1035,13 @@ Bug yang pernah terjadi dan cara mencegah:
 | Scheduled article muncul sebelum waktunya | Frontend query tidak filter `published_at <= now()` | Semua frontend query sudah pakai `.lte('published_at', new Date().toISOString())` |
 | Scheduled article tidak auto-publish | `CRON_SECRET` belum set di Vercel | Set `CRON_SECRET` di Vercel dashboard, verifikasi cron config di `vercel.json` |
 | SEO keywords tidak tersimpan | `seo_keywords` column belum ada di DB | Run migration: `ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_keywords text[] DEFAULT null;` |
-| Artikel terdeteksi AI-generated | Staccato drama, AI vocabulary, copula avoidance, significance inflation | Step 1: jalankan humanizer audit script, fix semua ISSUE sebelum insert |
+| Artikel terdeteksi AI-generated | AI vocabulary (EN+ID), staccato drama, copula avoidance, significance inflation, signposting, filler, promotional language | Step 1: jalankan humanizer audit script (15 kategori di `files/HumanizerRules.md`), fix semua FAIL sebelum insert |
+| AI vocab Indonesia (signifikan, krusial, mendalam) | Kata-kata formal yang sering dihasilkan AI bahasa Indonesia | Step 1: audit script cek AI vocab ID, ganti dengan kata natural |
 | Curly quotes di body | Editor/CMS auto-convert straight quotes | Step 1: cek curly quotes, replace dengan straight quotes |
 | Fragmented headers (heading + 1 kalimat restates) | AI pattern: heading diikuti kalimat yang hanya mengulang heading | Step 1: hapus kalimat restates, langsung masuk konten |
 | Rule of three overuse | AI pattern: memaksakan 3 item beruntun | Step 1: max 2x per artikel, pecah jadi 2 item atau kalimat terpisah |
 | Negative parallelisms ("not only...but also") | AI pattern: konstruksi "tidak hanya...tapi juga" berlebihan | Step 1: rewrite jadi kalimat langsung tanpa parallel construction |
 | Aphorism formulas ("X is the Y of Z") | AI pattern: kalimat terdengar profound tapi tidak presisi | Step 1: ganti dengan klaim konkret tanpa formula |
-| OG headline sama dengan title | Copy-paste title ke og_headline, OG image tidak optimal untuk social CTR | Step 0.5: og_headline HARUS berbeda, lebih pendek, punchy, conversational (max 60 chars) |
+| Vague attribution ("studi menunjukkan") | AI pattern: klaim tanpa sumber spesifik | Step 1: wajib sebut nama studi + tahun + link |
+| Generic conclusions ("masa depan cerah") | AI pattern: penutup generic dan tidak spesifik | Step 1: ganti dengan perspektif spesifik TAM |
+| OG headline sama dengan title | Copy-paste title ke og_headline, OG image tidak optimal untuk social CTR | Step 0.5: og_headline HARUS berbeda, lebih pendek, punchy, conversational (max 50 chars) |

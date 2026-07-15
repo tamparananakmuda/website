@@ -87,7 +87,7 @@ Tutup dengan kalimat yang bertahan. Bukan rangkuman. Tapi perspektif yang membua
 - [ ] Human signature: Minimal 1 paragraf dari pengalaman/observasi/opini spesifik penulis
 - [ ] Sumber: Setiap klaim faktual punya sumber (link, footnote, inline reference)
 - [ ] No em-dash: Tidak ada tanda " — " di seluruh artikel
-- [ ] No AI pattern: Tidak ada pola tulisan AI (inflated symbolism, promotional language, vague attribution)
+- [ ] No AI pattern: Lihat `files/HumanizerRules.md` untuk 15 kategori lengkap. Key items: no AI vocab (EN+ID), no staccato drama, no rule-of-three abuse, no promotional language, no vague attribution, no signposting, no filler, no generic conclusions, no authority tropes, no negative parallelisms, no curly quotes, no title case headings
 - [ ] Headline: Max 70 karakter untuk SEO title, deliver what you promise
 - [ ] Excerpt: Max 160 karakter, menarik tapi tidak clickbait
 - [ ] Internal links: Minimal 2 link ke artikel TAM lain

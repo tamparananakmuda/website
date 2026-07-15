@@ -85,6 +85,7 @@ Unsubscribe: [link]
 - Max 600 kata. Newsletter bukan artikel. Pembaca baca di HP, di sela-sela waktu.
 - Satu email = satu insight + satu rekomendasi + satu pertanyaan. Tidak lebih.
 - Tidak ada em-dash. Gunakan koma atau titik.
+- Tidak ada AI pattern (lengkap: lihat `files/HumanizerRules.md`)
 - Tagline resmi di footer: "Menyadarkan generasi muda akan kenyataan"
 
 ## Checklist
