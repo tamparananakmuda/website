@@ -183,16 +183,35 @@ Validasi semua data dan klaim dalam artikel sebelum masuk ke database.
 **Checklist:**
 - [ ] Setiap angka punya sumber yang bisa ditrace (URL aktif)
 - [ ] Tidak ada em dash (—) atau en dash (–) di body, title, excerpt, meta
-- [ ] Tidak ada AI vocabulary: crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, testament, foster, garner, intricate, landscape
+- [ ] Tidak ada AI vocabulary: crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, testament, foster, garner, intricate, landscape, additionally, enduring, enhance, highlight, interplay
 - [ ] Tidak ada rule-of-three abuse (3 item list beruntun lebih dari 2x per artikel)
-- [ ] Tidak ada promotional language ("game-changing", "revolutionary", dll)
+- [ ] Tidak ada promotional language ("game-changing", "revolutionary", "boasts", "stunning", "breathtaking", "nestled", "renowned")
 - [ ] Tidak ada vague attribution ("studies show..." tanpa sumber spesifik)
+- [ ] Tidak ada copula avoidance ("serves as", "stands as", "represents a" untuk pengganti "is/are")
+- [ ] Tidak ada staccato drama (3+ kalimat pendek beruntun untuk manufactured drama)
+- [ ] Tidak ada significance inflation ("marking a pivotal moment", "setting the stage", "indelible mark", "deeply rooted")
+- [ ] Tidak ada -ing superficial analysis ("highlighting...", "underscoring...", "emphasizing...", "reflecting...", "symbolizing...")
+- [ ] Tidak ada signposting ("let's dive in", "here's what you need to know", "let's break this down")
+- [ ] Tidak ada filler phrases ("in order to", "due to the fact that", "at this point in time", "it is important to note")
+- [ ] Tidak ada generic positive conclusions ("the future looks bright", "exciting times lie ahead")
+- [ ] Tidak ada fragmented headers (heading diikuti 1 kalimat yang hanya restates heading)
+- [ ] Tidak ada authority tropes ("the real question is", "at its core", "what really matters", "fundamentally")
+- [ ] Tidak ada negative parallelisms ("not only...but also", "it's not just...it's")
+- [ ] Tidak ada aphorism formulas ("X is the Y of Z", "X becomes a trap")
+- [ ] Tidak ada conversational rhetorical openers ("Honestly?", "Look,", "Here's the thing")
+- [ ] Tidak ada hyphenated word pair overuse di predicate position ("the report is high-quality" -> "the report is high quality")
+- [ ] Tidak ada boldface overuse (bold hanya untuk emphasis kunci, bukan untuk istilah umum)
+- [ ] Tidak ada title case di headings (gunakan sentence case: "Strategic negotiations" bukan "Strategic Negotiations")
+- [ ] Tidak ada curly quotes ("...") -> gunakan straight quotes ("...")
 - [ ] Tone check: jujur, rasional, berani, tidak menggurui
 - [ ] POV tag dipilih: kontra-narasi / refleksi / data / framework
 - [ ] Human signature: minimal 1 paragraf dari pengalaman/observasi/opini spesifik
 - [ ] Heading structure: h2/h3 only, minimal 3 h2, tidak ada h1
 - [ ] Internal linking: minimal 2 link ke artikel TAM lain
 - [ ] Tidak ada raw HTML script/iframe/style di body
+- [ ] Sentence length variety: campuran kalimat pendek dan panjang, tidak semua sama panjang
+- [ ] Ada opinions/reactions, bukan hanya neutral reporting
+- [ ] Ada acknowledgment of uncertainty atau mixed feelings jika relevan
 
 **Command:**
 ```bash
@@ -200,11 +219,11 @@ Validasi semua data dan klaim dalam artikel sebelum masuk ke database.
 grep -c '—' "$ARTICLE_JSON" || echo "0 em dashes"
 grep -c '–' "$ARTICLE_JSON" || echo "0 en dashes"
 
-# Cek AI vocabulary
+# Cek AI vocabulary (expanded)
 python3 -c "
 import json
 d = json.load(open('$ARTICLE_JSON'))
-ai_words = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape']
+ai_words = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','serves as','stands as','represents a','boasts','stunning','breathtaking','nestled','renowned','marking a pivotal','setting the stage','indelible mark','deeply rooted','let.s dive','here.s what you need','in order to','due to the fact','at this point in time','it is important to note','the future looks bright','exciting times','the real question is','at its core','what really matters','fundamentally']
 found = [w for w in ai_words if w in d['body'].lower()]
 print(f'AI vocabulary found: {found if found else \"None\"}')
 "
@@ -220,6 +239,70 @@ const il = (b.match(/\]\(\/artikel\//g) || []).length;
 console.log('h1:', h1, h1 > 0 ? 'WARNING' : 'OK');
 console.log('h2:', h2, h2 < 3 ? 'WARNING: need 3+' : 'OK');
 console.log('internal links:', il, il < 2 ? 'WARNING: need 2+' : 'OK');
+"
+
+# Cek humanizer patterns (staccato drama, rule of three, fragmented headers, curly quotes)
+python3 -c "
+import json, re
+d = json.load(open('$ARTICLE_JSON'))
+body = d['body']
+
+# Staccato drama: 3+ consecutive short sentences (<=6 words)
+sentences = re.split(r'[.!?]\s+', body)
+current_run = 0
+max_run = 0
+for s in sentences:
+    if len(s.split()) <= 6:
+        current_run += 1
+        max_run = max(max_run, current_run)
+    else:
+        current_run = 0
+print(f'Staccato drama (max consecutive short): {max_run}', 'ISSUE' if max_run >= 3 else 'OK')
+
+# Rule of three
+triples = re.findall(r'(\w+, \w+, and \w+)', body)
+print(f'Rule of three: {len(triples)}', 'ISSUE' if len(triples) > 2 else 'OK')
+
+# Curly quotes
+curly = body.count('\u201c') + body.count('\u201d')
+print(f'Curly quotes: {curly}', 'ISSUE' if curly > 0 else 'OK')
+
+# Fragmented headers
+lines = body.split('\n')
+for i, line in enumerate(lines):
+    if line.startswith('## ') and i+1 < len(lines):
+        next_line = lines[i+1].strip() if lines[i+1].strip() else (lines[i+2].strip() if i+2 < len(lines) else '')
+        heading_text = line.replace('## ','').lower()
+        if next_line and len(next_line) < 50:
+            words_overlap = set(heading_text.split()) & set(next_line.lower().split())
+            if len(words_overlap) >= 2:
+                print(f'Fragmented header: \"{line.strip()}\" -> \"{next_line}\"')
+
+# Negative parallelisms
+neg = re.findall(r'(not only.*but also|it.s not just.*it.s|not merely.*but)', body, re.I)
+print(f'Negative parallelisms: {len(neg)}', 'ISSUE' if neg else 'OK')
+
+# Aphorism formulas
+aph = re.findall(r'(\w+ is the \w+ of \w+|\w+ becomes a trap)', body, re.I)
+print(f'Aphorism formulas: {len(aph)}', 'ISSUE' if aph else 'OK')
+
+# -ing superficial analysis
+ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
+print(f'-ing superficial: {len(ing)}', 'ISSUE' if len(ing) > 2 else 'OK')
+
+print()
+print('=== HUMANIZER SUMMARY ===')
+issues = []
+if max_run >= 3: issues.append('Staccato drama')
+if len(triples) > 2: issues.append('Rule of three overuse')
+if curly > 0: issues.append('Curly quotes')
+if neg: issues.append('Negative parallelisms')
+if aph: issues.append('Aphorism formulas')
+if len(ing) > 2: issues.append('-ing superficial analysis')
+if issues:
+    print('ISSUES TO FIX:', ', '.join(issues))
+else:
+    print('CLEAN: No humanizer issues detected.')
 "
 ```
 
@@ -824,3 +907,9 @@ Bug yang pernah terjadi dan cara mencegah:
 | Scheduled article muncul sebelum waktunya | Frontend query tidak filter `published_at <= now()` | Semua frontend query sudah pakai `.lte('published_at', new Date().toISOString())` |
 | Scheduled article tidak auto-publish | `CRON_SECRET` belum set di Vercel | Set `CRON_SECRET` di Vercel dashboard, verifikasi cron config di `vercel.json` |
 | SEO keywords tidak tersimpan | `seo_keywords` column belum ada di DB | Run migration: `ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_keywords text[] DEFAULT null;` |
+| Artikel terdeteksi AI-generated | Staccato drama, AI vocabulary, copula avoidance, significance inflation | Step 1: jalankan humanizer audit script, fix semua ISSUE sebelum insert |
+| Curly quotes di body | Editor/CMS auto-convert straight quotes | Step 1: cek curly quotes, replace dengan straight quotes |
+| Fragmented headers (heading + 1 kalimat restates) | AI pattern: heading diikuti kalimat yang hanya mengulang heading | Step 1: hapus kalimat restates, langsung masuk konten |
+| Rule of three overuse | AI pattern: memaksakan 3 item beruntun | Step 1: max 2x per artikel, pecah jadi 2 item atau kalimat terpisah |
+| Negative parallelisms ("not only...but also") | AI pattern: konstruksi "tidak hanya...tapi juga" berlebihan | Step 1: rewrite jadi kalimat langsung tanpa parallel construction |
+| Aphorism formulas ("X is the Y of Z") | AI pattern: kalimat terdengar profound tapi tidak presisi | Step 1: ganti dengan klaim konkret tanpa formula |
