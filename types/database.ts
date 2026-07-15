@@ -5,7 +5,9 @@ export type SourceReference = {
 };
 
 export type PostStatus = 'draft' | 'review' | 'fact-check' | 'published';
-export type PovTag = 'kontra-narasi' | 'refleksi' | 'data' | 'framework';
+export type PovTag = 'kontra-narasi' | 'refleksi' | 'data' | 'framework' | 'tamparan' | 'riset' | 'opini' | 'panduan' | 'inspirasi';
+export type ContentQueueStatus = 'idea' | 'research' | 'draft' | 'review' | 'revision' | 'fact-check' | 'scheduled' | 'published';
+export type SearchIntent = 'informational' | 'comparison' | 'transactional';
 export type FactCheckStatus = 'pending' | 'verified' | 'flagged';
 export type ReviewStatus = 'draft' | 'review' | 'fact-check' | 'publish';
 
@@ -16,6 +18,21 @@ export type Category = {
   description: string | null;
   color: string;
   created_at: string;
+  updated_at?: string;
+  // Joined fields
+  subcategories?: Subcategory[];
+};
+
+export type Subcategory = {
+  id: string;
+  category_id: string;
+  title: string;
+  slug: string;
+  description: string | null;
+  sort_order: number;
+  created_at: string;
+  // Joined fields
+  category?: Category;
 };
 
 export type Series = {
@@ -48,6 +65,7 @@ export type Post = {
   cover_image_url: string | null;
   cover_image_alt: string | null;
   category_id: string | null;
+  subcategory_id: string | null;
   series_id: string | null;
   series_order: number | null;
   author_id: string | null;
@@ -64,6 +82,9 @@ export type Post = {
   seo_meta_description: string | null;
   seo_og_image_url: string | null;
   og_headline: string | null;
+  og_card_url: string | null;
+  og_feature_url: string | null;
+  og_image_url: string | null;
   is_sponsored: boolean;
   sponsor_name: string | null;
   sponsor_url: string | null;
@@ -74,8 +95,10 @@ export type Post = {
   updated_at: string;
   // Joined fields
   category?: Category;
+  subcategory?: Subcategory;
   series?: Series;
   author?: Author;
+  tags?: Tag[];
 };
 
 export type SiteSettings = {
@@ -97,4 +120,33 @@ export type NewsletterSubscriber = {
   source: string;
   created_at: string;
   updated_at: string;
+};
+
+export type Tag = {
+  id: string;
+  name: string;
+  slug: string;
+  created_at: string;
+};
+
+export type ContentQueue = {
+  id: string;
+  title: string;
+  slug: string | null;
+  pillar_id: string | null;
+  pov_tag: PovTag | null;
+  target_keyword: string | null;
+  search_intent: SearchIntent | null;
+  status: ContentQueueStatus;
+  assigned_writer: string | null;
+  assigned_editor: string | null;
+  due_date: string | null;
+  publish_date: string | null;
+  cta: string | null;
+  target_platforms: string[];
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+  // Joined fields
+  pillar?: Subcategory;
 };

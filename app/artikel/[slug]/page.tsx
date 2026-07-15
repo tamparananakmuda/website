@@ -50,7 +50,7 @@ export async function generateMetadata({
     const supabase = createPublicClient();
     const { data: post } = await supabase
       .from('posts')
-      .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug')
+      .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug, og_image_url')
       .eq('slug', params.slug)
       .eq('status', 'published')
       .single();
@@ -76,11 +76,13 @@ export async function generateMetadata({
         description: post.seo_meta_description || post.excerpt || undefined,
         publishedTime: post.published_at || undefined,
         modifiedTime: post.updated_at || undefined,
+        images: post.og_image_url ? [{ url: post.og_image_url, width: 1200, height: 630 }] : undefined,
       },
       twitter: {
         card: 'summary_large_image',
         title: post.seo_meta_title || post.title,
         description: post.seo_meta_description || post.excerpt || undefined,
+        images: post.og_image_url ? [post.og_image_url] : undefined,
       },
     };
   } catch (err) {
@@ -122,7 +124,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
     return (
       <article className="container mx-auto px-4 py-12">
-        <link rel="preload" as="image" href={`/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
+        <link rel="preload" as="image" href={post.og_feature_url || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
         <ArticleSchema
           title={post.title}
           description={post.excerpt || ''}
@@ -135,6 +137,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           categoryTitle={post.category?.title}
           categorySlug={post.category?.slug}
           readingTime={post.reading_time}
+          imageUrl={post.og_image_url || undefined}
           isPremium={post.is_premium}
           isSponsored={post.is_sponsored}
           sponsorName={post.sponsor_name || undefined}
@@ -156,7 +159,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {/* Feature image */}
         <FeatureImage
-          src={`/api/og/feature?slug=${post.slug}`}
+          src={post.og_feature_url || `/api/og/feature?slug=${post.slug}`}
           alt={post.title}
         />
 

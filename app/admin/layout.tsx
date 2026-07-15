@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
+import { AdminNav } from '@/components/admin-nav';
 
 export const metadata: Metadata = {
-  title: 'Admin - Import Konten Sosial',
-  description: 'Import konten sosial media ke TAM',
+  title: 'Admin - TAMPARAN ANAK MUDA',
+  description: 'Dashboard admin TAM',
 };
 
 export default async function AdminLayout({
@@ -43,10 +44,7 @@ export default async function AdminLayout({
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="font-display font-bold text-foreground">TAM Admin</span>
-            <nav className="flex gap-4 text-sm">
-              <Link href="/admin/import" className="text-primary font-medium">Import Sosial</Link>
-              <Link href="/admin/posts" className="text-muted-foreground hover:text-foreground">Kelola Posts</Link>
-            </nav>
+            <AdminNav />
           </div>
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">Lihat Situs</Link>
         </div>

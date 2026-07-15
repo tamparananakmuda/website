@@ -20,7 +20,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
             <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 to-muted/10" />
           )}
           <Image
-            src={`/api/og/card?slug=${post.slug}`}
+            src={post.og_card_url || `/api/og/card?slug=${post.slug}`}
             alt={post.title}
             fill
             unoptimized

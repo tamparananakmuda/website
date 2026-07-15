@@ -28,7 +28,7 @@ export default async function CategoriesPage() {
 
   const { data: categories } = await supabase
     .from('categories')
-    .select('*')
+    .select('*, subcategories(*)')
     .order('title', { ascending: true });
 
   return (
@@ -45,21 +45,37 @@ export default async function CategoriesPage() {
       {categories && categories.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
-            <Link
+            <div
               key={category.id}
-              href={`/kategori/${category.slug}`}
               className="group rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent"
             >
-              <h2
-                className="mb-2 text-xl font-bold transition-colors group-hover:text-primary"
-                style={{ color: category.color }}
-              >
-                {category.title}
-              </h2>
+              <Link href={`/kategori/${category.slug}`}>
+                <h2
+                  className="mb-2 text-xl font-bold transition-colors group-hover:text-primary"
+                  style={{ color: category.color }}
+                >
+                  {category.title}
+                </h2>
+              </Link>
               {category.description && (
-                <p className="text-sm text-muted-foreground">{category.description}</p>
+                <p className="mb-4 text-sm text-muted-foreground">{category.description}</p>
               )}
-            </Link>
+              {category.subcategories && category.subcategories.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {category.subcategories
+                    .sort((a: { sort_order: number }, b: { sort_order: number }) => a.sort_order - b.sort_order)
+                    .map((sub: { id: string; slug: string; title: string }) => (
+                      <Link
+                        key={sub.id}
+                        href={`/kategori/${category.slug}?pillar=${sub.slug}`}
+                        className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                      >
+                        {sub.title}
+                      </Link>
+                    ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       ) : (

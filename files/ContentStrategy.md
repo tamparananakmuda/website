@@ -1,8 +1,8 @@
 # ContentStrategy.md - Strategi Konten
 # TAMPARAN ANAK MUDA Website
 
-**Versi:** 1.3  
-**Status:** Draft - comprehensive content strategy + anti-generic + AI policy + editorial workflow alignment + content quality score
+**Versi:** 2.0  
+**Status:** Updated - 17 content pillars, expanded POV tags, Tamparan-Penjelasan-Solusi formula, content operating system alignment
 
 ---
 
@@ -16,32 +16,110 @@ Bukan untuk menghibur. Bukan untuk viral semata. Tapi untuk **menampar** - membu
 
 ## 2. Content Pillars
 
-TAM beroperasi di 5 pilar utama:
+TAM beroperasi di 17 content pillars, dikelompokkan dalam 6 kategori utama.
 
-### Pilar 1: MINDSET
-Cara pikir yang salah dipercaya, dan cara pikir alternatif yang lebih kuat.
-- Contoh: "Kenapa Kerja Keras Saja Tidak Cukup"
-- Contoh: "Produktivitas Bukan Soal Waktu, Tapi Soal Energi"
+### Alokasi Konten
 
-### Pilar 2: KARIR & TUJUAN
-Navigasi dunia kerja dan pencarian makna di usia muda.
-- Contoh: "Cara Memilih Karir Saat Semua Pilihan Terasa Salah"
-- Contoh: "Gap Year: Tanda Gagal atau Investasi?"
+**Pillar dengan persentase tetap (9 pillar):**
 
-### Pilar 3: RELASI
-Hubungan dengan orang lain, dengan diri sendiri, dengan komunitas.
-- Contoh: "Kenapa Teman Sebaya Bisa Jadi Racun Terbesar"
-- Contoh: "Cara Bicara Jujur Tanpa Merusak Hubungan"
+| Pillar | Kategori | % | Contoh Judul |
+|---|---|---|---|
+| Mindset & Realita | Mindset | 20% | "Kenapa Orang Pintar Sering Kalah Sama Orang yang Konsisten" |
+| Bisnis | Bisnis | 15% | "Kenapa 90% Bisnis Gagal (Dan Bukan Karena Bodoh)" |
+| Karier & Dunia Kerja | Karier | 15% | "Cara Meminta Kenaikan Gaji Tanpa Merasa Canggung" |
+| Uang | Uang | 15% | "Pinjaman Online: Pertolongan atau Jebakan?" |
+| Teknologi & AI | Teknologi | 10% | "AI Menggantikan Pekerjaan, Tapi Bukan Seperti yang Kamu Kira" |
+| Produktivitas | Karier | 10% | "Deep Work: Cara Fokus di Era Distraksi" |
+| Psikologi | Mindset | 5% | "Overthinking Bukan Penyakit, Tapi Kebiasaan" |
+| Skill Masa Depan | Bisnis | 5% | "Prompt Engineering: Skill yang Belum Ada di Kurikulum" |
+| Analisis Fenomena | Teknologi | 5% | "Kenapa Gen Z Sulit Membeli Rumah" |
 
-### Pilar 4: UANG & KEPUTUSAN
-Financial literacy yang realistis untuk anak muda Indonesia.
-- Contoh: "Gaji Pertama: Jangan Lakukan 5 Hal Ini"
-- Contoh: "Investasi vs Nabung: Mana yang Harus Duluan?"
+**Pillar as-needed tanpa target tetap (8 pillar):**
 
-### Pilar 5: IDENTITAS
-Siapa kamu, kenapa kamu seperti ini, dan kamu mau jadi siapa.
-- Contoh: "Generasi Z dan Krisis Identitas yang Tidak Pernah Diakui"
-- Contoh: "Impostor Syndrome: Normal atau Tanda Bahaya?"
+| Pillar | Kategori | Contoh Judul |
+|---|---|---|
+| Pendidikan | Karier | "Kuliah vs Tidak Kuliah: Yang Tidak Diajarkan Sekolah" |
+| Komunikasi | Karier | "Cara Presentasi Tanpa Bikin Orang Ngantuk" |
+| Hubungan Sosial | Kehidupan | "Memilih Teman di Usia 20-an Itu Beda dari SMP" |
+| Lifestyle | Kehidupan | "Digital Detox: 7 Hari Tanpa Scroll" |
+| Sejarah Orang Sukses | Kehidupan | "Pelajaran dari Bob Sadino yang Tidak Ada di Buku Bisnis" |
+| Ulasan Buku | Kehidupan | "Atomic Habits: Yang Sebenarnya Bekerja vs Yang Hype" |
+| Filosofi Hidup | Mindset | "Stoicism untuk Anak Muda: Bukan Tentang Nyerah" |
+| Tamparan | Mindset | "Berhenti Menyalahkan Orang Tuamu" |
+
+### Detail Per Pillar
+
+#### Mindset & Realita (20%)
+Identitas utama TAM. Cara pikir yang menentukan cara hidup.
+- Topik: self improvement yang sebenarnya, efek lingkungan, bahaya people pleaser, disiplin vs passion, cara berpikir orang sukses
+- Tone: serius, reflektif, sedikit provokatif
+
+#### Bisnis (15%)
+Bukan motivasi bisnis. Tetapi realita bisnis.
+- Topik: kenapa bisnis gagal, cara dapat pelanggan pertama, menentukan harga, UMKM, marketing, sales, negosiasi, leadership
+- Tone: praktis, no-nonsense, anti-hype
+
+#### Karier & Dunia Kerja (15%)
+Panduan dunia kerja yang tidak diajarkan sekolah.
+- Topik: kerja pertama, hard skill vs soft skill, kenaikan gaji, kesalahan fresh graduate, CV, LinkedIn, personal branding, remote working, freelance
+- Tone: praktis, to-the-point, sedikit sarkas
+
+#### Uang (15%)
+Kelola, tumbuhkan, pahami. Gabungan keuangan personal + cara menghasilkan uang.
+- Topik: budgeting, nabung vs investasi, dana darurat, kartu kredit, pinjaman online, hutang, cashflow, penghasilan aktif vs pasif, freelance, affiliate, digital product, SaaS
+- Tone: rasional, data-driven, anti-judi
+
+#### Teknologi & AI (10%)
+Tools, bukan hype.
+- Topik: AI, ChatGPT, website, coding, no-code, cyber security, blockchain, crypto, startup, SaaS, gadget
+- Tone: objektif, praktis, anti-fanboy
+
+#### Produktivitas (10%)
+Cara fokus dan kelola waktu yang benar-benar bekerja.
+- Topik: time management, deep work, cara fokus, menghilangkan distraksi, kebiasaan buruk, rutinitas pagi, atomic habits, Notion, calendar, goal setting
+- Tone: praktis, eksperimental, bukan teoretis
+
+#### Psikologi (5%)
+Bukan kesehatan mental klinis. Psikologi kehidupan sehari-hari.
+- Topik: overthinking, impostor syndrome, fear of failure, confidence, toxic relationship, manipulasi, cara mengatakan tidak, cara mengambil keputusan
+- Tone: empatik tapi objektif, bukan terapis
+
+#### Skill Masa Depan (5%)
+Skill yang akan relevan 5-10 tahun ke depan.
+- Topik: AI, prompt engineering, data analysis, digital marketing, copywriting, sales, video editing, automation
+- Tone: praktis, actionable, bukan teori
+
+#### Analisis Fenomena (5%)
+Membongkar tren dan fenomena sosial dengan lensa tajam.
+- Topik: Gen Z beli rumah, AI dan dunia kerja, flexing, quiet quitting, hustle culture, doom scrolling, creator economy
+- Tone: analitis, data-driven, kontra-narasi
+
+#### Pendidikan (as-needed)
+- Topik: kuliah vs tidak kuliah, jurusan, skill masa depan, belajar mandiri, belajar AI, belajar coding, sertifikasi
+
+#### Komunikasi (as-needed)
+- Topik: public speaking, storytelling, negosiasi, small talk, cara presentasi, bahasa tubuh
+
+#### Hubungan Sosial (as-needed)
+- Topik: memilih teman, networking, lingkungan, membangun relasi, mencari mentor
+
+#### Lifestyle (as-needed)
+- Topik: minimalisme, digital detox, morning routine, membaca buku, traveling produktif
+
+#### Sejarah Orang Sukses (as-needed)
+Bukan sekadar biografi. Tetapi pelajaran.
+- Topik: Steve Jobs, Warren Buffett, Jensen Huang, Elon Musk, Soichiro Honda, Bob Sadino, Nadiem Makarim
+
+#### Ulasan Buku (as-needed)
+- Topik: Atomic Habits, Deep Work, Psychology of Money, The Almanack of Naval Ravikant, Zero to One
+
+#### Filosofi Hidup (as-needed)
+- Topik: stoicism, ikigai, essentialism, minimalism, delayed gratification
+
+#### Tamparan (as-needed)
+Ciri khas media. Artikel dengan tone tamparan khas TAM.
+- Contoh: "Berhenti Menyalahkan Orang Tuamu", "Dunia Tidak Berutang Kesempatan Kepadamu", "Kamu Bukan Korban", "Passion Tidak Membayar Tagihan", "Disiplin Mengalahkan Motivasi"
+- Bisa dipakai di topik apapun, asalkan tone-nya tepat
 
 ---
 
@@ -111,11 +189,26 @@ Setiap artikel TAM harus punya salah satu dari POV berikut:
 | POV | Contoh Angle |
 |---|---|
 | **Kontra-narasi** | "Semua bilang gap year bagus. Ini kenapa saya ragu." |
-| **Refleksi personal** | "Saya habis kerja 2 tahun di startup. Ini yang saya pelajari." |
-| **Data + interpretasi** | "70% fresh graduate Indonesia bingung karir. Tapi bukan karena mereka tidak siap." |
-| **Framework original** | "Ini 3 pertanyaan yang lebih baik dari 'apa passion kamu?'" |
+| **Refleksi** | "Saya habis kerja 2 tahun di startup. Ini yang saya pelajari." |
+| **Data** | "70% fresh graduate Indonesia bingung karir. Tapi bukan karena mereka tidak siap." |
+| **Framework** | "Ini 3 pertanyaan yang lebih baik dari 'apa passion kamu?'" |
+| **Tamparan** | "Berhenti Menyalahkan Orang Tuamu" |
+| **Riset** | "Saya survei 100 freelancer Indonesia. Ini yang saya temukan." |
+| **Opini** | "Menurut saya, hustle culture lebih berbahaya dari sekadar kerja keras." |
+| **Panduan** | "Cara mengatur gaji pertama kamu, langkah demi langkah." |
+| **Inspirasi** | "Dia gagal 3 kali. Sekarang bisnisnya omzet 10 miliar." |
 
 Jika artikel tidak masuk salah satu POV di atas, revisi konsep sebelum drafting.
+
+### Formula Tamparan-Penjelasan-Solusi
+
+Setiap artikel TAM wajib punya 3 elemen ini:
+
+1. **Tamparan**: Membongkar ilusi dan alasan yang sering dipakai anak muda. Bagian yang membuat pembaca tidak nyaman tapi tidak bisa berhenti baca.
+2. **Penjelasan**: Mengapa realita itu terjadi, didukung logika, data, atau contoh nyata. Bukan opini kosong, tapi argumen yang bisa diverifikasi.
+3. **Solusi**: Langkah konkret yang bisa langsung dipraktikkan. Bukan "semangat ya" atau "tetap berjuang", tapi action item yang spesifik.
+
+Kalau salah satu elemen hilang, artikel belum siap publish.
 
 ---
 
@@ -147,18 +240,29 @@ Fokus pada beberapa topik spesifik dan jadilah sumber terlengkap, bukan menyebar
 
 ### Mingguan
 ```
-Senin    : Publikasi artikel baru
-Selasa   : Distribusi ke IG (repost / carousel adaptasi)
-Rabu     : Kirim newsletter ke subscriber
-Jumat    : Planning konten minggu depan
+Senin    : Publikasi artikel baru (pillar utama)
+Selasa   : Distribusi ke IG (carousel adaptasi)
+Rabu     : Publikasi artikel kedua (rotasi pillar)
+Kamis    : Distribusi ke TikTok/Reels (script dari artikel)
+Jumat    : Kirim newsletter ke subscriber
+Sabtu    : 1x artikel dengan POV tag `tamparan`
+Minggu   : Planning konten minggu depan
 ```
 
-### Bulanan
+### Distribusi Pillar Per Minggu (target 3-4 artikel/minggu)
+| Hari | Pillar | Frekuensi |
+|---|---|---|---|
+| Senin | Mindset / Bisnis / Karier / Uang | Rotasi (1x per minggu) |
+| Rabu | Teknologi / Produktivitas / Psikologi / Skill / Fenomena | Rotasi (1x per minggu) |
+| Sabtu | Tamparan (POV tag) | 1x per minggu |
+| As-needed | Pendidikan, Komunikasi, Hubungan Sosial, Lifestyle, Sejarah, Ulasan Buku, Filosofi | Sesuai kesempatan |
+
+### Bulanan (12-16 artikel)
 ```
-Minggu 1 : Artikel Pilar 1 atau 2
-Minggu 2 : Newsletter + distribusi
-Minggu 3 : Artikel Pilar 3 atau 4
-Minggu 4 : Artikel Pilar 5 + review bulan ini
+Minggu 1 : Mindset (1x) + Bisnis (1x) + Tamparan (1x)
+Minggu 2 : Karier (1x) + Teknologi/Produktivitas (1x) + Tamparan (1x)
+Minggu 3 : Uang (1x) + Psikologi/Skill/Fenomena (1x) + Tamparan (1x)
+Minggu 4 : As-needed pillar (1x) + Newsletter recap + Review bulan ini
 ```
 
 ### Quarterly
@@ -166,6 +270,7 @@ Minggu 4 : Artikel Pilar 5 + review bulan ini
 - Update atau refresh artikel lama yang masih relevan
 - Launch 1 seri konten baru
 - Evaluasi content calendar kuartal berikutnya
+- Cek POV tag distribution: pastikan sebaran sehat antar 9 POV types
 
 ---
 
@@ -173,17 +278,24 @@ Minggu 4 : Artikel Pilar 5 + review bulan ini
 
 ### Stages
 ```
-IDEA -> ANGLE TEST -> OUTLINE -> DRAFT -> REVIEW -> FACT-CHECK -> PUBLISH -> DISTRIBUTE
+IDEA -> ANGLE TEST -> OUTLINE -> DRAFT -> REVIEW -> REVISION -> FACT-CHECK -> SCHEDULED -> PUBLISHED -> DISTRIBUTE
 ```
 
-**Alignment dengan admin panel review pipeline (lihat `Features.md` F21, `Architecture.md` Section 4):**
-- `DRAFT` = status `draft` di database
-- `REVIEW` = status `review` di database (editor review)
-- `FACT-CHECK` = status `fact-check` di database (fact-checker review)
-- `PUBLISH` = status `published` di database
-- Angle test modal muncul saat transisi `draft` -> `review`
-- Human signature checkbox wajib diceklis saat transisi `fact-check` -> `publish`
+**Status di database (content_queue table):**
+- `idea` = ide masuk backlog
+- `research` = sedang riset keyword dan angle
+- `draft` = sedang ditulis
+- `review` = editor review
+- `revision` = revisi dari editor feedback
+- `fact-check` = fact-checker review
+- `scheduled` = dijadwalkan publish
+- `published` = sudah live
+
+**Alignment dengan admin panel review pipeline:**
 - POV tag wajib dipilih sebelum bisa masuk `review`
+- Angle test modal muncul saat transisi `idea` -> `research`
+- Human signature checkbox wajib diceklis saat transisi `fact-check` -> `scheduled`
+- Formula checklist (Tamparan-Penjelasan-Solusi) wajib diceklis sebelum `scheduled`
 
 ### Tools
 - **Idea management:** Notion (backlog ide)
@@ -325,7 +437,7 @@ Detail lengkap metrics, funnel, dan tracking events ada di `Analytics.md`. Tabel
 
 | Metric | Target | Frekuensi Review |
 |---|---|---|
-| Artikel dipublikasi | 2/bulan | Bulanan |
+| Artikel dipublikasi | 12-16/bulan | Bulanan |
 | Avg. time on page | > 3 menit | Bulanan |
 | Newsletter open rate | > 35% | Per edisi |
 | Newsletter click rate | > 5% | Per edisi |
@@ -335,7 +447,7 @@ Detail lengkap metrics, funnel, dan tracking events ada di `Analytics.md`. Tabel
 | Series completion rate | Lihat `Analytics.md` Section 4 | Kuartalan |
 | Angle test pass rate | > 80% lolos pada percobaan pertama | Bulanan |
 | Fact-check status distribution | < 10% artikel `flagged` | Bulanan |
-| POV tag distribution | Sebaran sehat antar 4 POV types | Kuartalan |
+| POV tag distribution | Sebaran sehat antar 9 POV types | Kuartalan |
 | Human signature compliance | 100% artikel published punya human signature | Bulanan |
 
 ### Content Quality Score
@@ -379,6 +491,6 @@ Dokumen ini adalah source of truth untuk content strategy. Dokumen lain yang mer
 | Versi | Tanggal | Perubahan |
 |---|---|---|
 | 1.0 | Jun 2026 | Draft awal. |
-| 1.3 | Jul 2026 | Aligned pipeline terminology with F21 review pipeline, added content quality score definition, added editorial workflow metrics, added cross-document alignment section, cross-referenced F20 TikTok pipeline. |
+| 2.0 | Jul 2026 | Expanded to 17 content pillars with 6 categories. Added Tamparan-Penjelasan-Solusi formula. Expanded POV tags from 4 to 9 (added tamparan, riset, opini, panduan, inspirasi). Updated content calendar to 3-4 articles/week. Added pillar-level detail and tone guidelines. Aligned with content operating system plan. |
 | 1.2 | Jul 2026 | Added content differentiation, angle test, POV framework, headline guidelines, AI usage policy, editorial standards, donation conversion content, TikTok strategy, content atomization. Applied anti-slop and human copywriting principles. |
 | 1.1 | Jul 2026 | Metrics section now references `Analytics.md` for detailed tracking. |

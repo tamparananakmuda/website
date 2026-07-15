@@ -23,7 +23,7 @@ export default async function Image({ params }: Props) {
     .from('posts')
     .select(`
       title, excerpt, og_headline, cover_image_url, published_at, reading_time,
-      is_premium, is_sponsored, series_order,
+      is_premium, is_sponsored, series_order, og_image_url,
       category:categories ( title, slug, color ),
       series:series ( id, title ),
       author:authors ( name )
@@ -31,6 +31,17 @@ export default async function Image({ params }: Props) {
     .eq('slug', params.slug)
     .eq('status', 'published')
     .single();
+
+  if (post?.og_image_url) {
+    const res = await fetch(post.og_image_url);
+    const buffer = await res.arrayBuffer();
+    return new Response(buffer, {
+      headers: {
+        'Content-Type': 'image/png',
+        'Cache-Control': 'public, max-age=3600, immutable',
+      },
+    });
+  }
 
   if (!post) {
     const fonts = await getFonts();

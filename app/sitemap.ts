@@ -74,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const [{ data: posts }, { data: categories }, { data: whitepapers }, { data: socialPosts }] = await Promise.all([
+  const [{ data: posts }, { data: categories }, { data: whitepapers }, { data: socialPosts }, { data: subcategories }] = await Promise.all([
     supabase
       .from('posts')
       .select('slug, updated_at')
@@ -93,6 +93,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .select('id, updated_at')
       .eq('status', 'published')
       .order('created_at', { ascending: false }),
+    supabase
+      .from('subcategories')
+      .select('slug, category_id, categories(slug)'),
   ]);
 
   const postPages: MetadataRoute.Sitemap = (posts || []).map((post) => ({
@@ -109,6 +112,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const subcategoryPages: MetadataRoute.Sitemap = (subcategories || []).map((sub) => {
+    const catSlug = (sub as unknown as { categories?: { slug: string }[] })?.categories?.[0]?.slug;
+    if (!catSlug) return null;
+    return {
+      url: `${siteUrl}/kategori/${catSlug}?pillar=${sub.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    };
+  }).filter(Boolean) as MetadataRoute.Sitemap;
+
   const whitepaperPages: MetadataRoute.Sitemap = (whitepapers || []).map((wp) => ({
     url: `${siteUrl}/whitepaper/${wp.slug}`,
     lastModified: wp.updated_at ? new Date(wp.updated_at) : new Date(),
@@ -123,5 +137,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages, ...whitepaperPages, ...socialPages];
+  return [...staticPages, ...postPages, ...categoryPages, ...subcategoryPages, ...whitepaperPages, ...socialPages];
 }

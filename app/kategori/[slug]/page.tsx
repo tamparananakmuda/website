@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { createPublicClient } from '@/lib/supabase/public';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
@@ -52,7 +53,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   const { data: category } = await supabase
     .from('categories')
-    .select('*')
+    .select('*, subcategories(*)')
     .eq('slug', params.slug)
     .single();
 
@@ -60,9 +61,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
+  const sortedSubs = (category.subcategories || []).sort(
+    (a: { sort_order: number }, b: { sort_order: number }) => a.sort_order - b.sort_order
+  );
+
   const { data: posts } = await supabase
     .from('posts')
-    .select('*, category:categories(*)')
+    .select('*, category:categories(*), subcategory:subcategories(*)')
     .eq('status', 'published')
     .eq('category_id', category.id)
     .order('published_at', { ascending: false, nullsFirst: false })
@@ -88,6 +93,21 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <p className="text-lg text-muted-foreground">{category.description}</p>
         )}
       </header>
+
+      {sortedSubs.length > 0 && (
+        <div className="mb-8 flex flex-wrap gap-2">
+          <span className="text-sm font-medium text-muted-foreground">Pillar:</span>
+          {sortedSubs.map((sub: { id: string; slug: string; title: string }) => (
+            <Link
+              key={sub.id}
+              href={`/kategori/${category.slug}?pillar=${sub.slug}`}
+              className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {sub.title}
+            </Link>
+          ))}
+        </div>
+      )}
 
       {posts && posts.length > 0 ? (
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
