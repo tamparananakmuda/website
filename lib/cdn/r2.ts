@@ -1,8 +1,6 @@
 import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client-s3';
 
-export type OGImageType = 'card' | 'feature' | 'og';
-
-const bucketName = process.env.R2_BUCKET_NAME || 'tam-cdn';
+const bucketName = process.env.R2_BUCKET_NAME || 'cdn-tam';
 const cdnBaseUrl = process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com';
 
 function getS3Client(): S3Client {
@@ -16,38 +14,34 @@ function getS3Client(): S3Client {
   });
 }
 
-function getObjectKey(slug: string, type: OGImageType): string {
-  return `og/${slug}-${type}.png`;
+function getObjectKey(slug: string): string {
+  return `og/${slug}.webp`;
 }
 
-export function getCDNUrl(slug: string, type: OGImageType): string {
-  return `${cdnBaseUrl}/${getObjectKey(slug, type)}`;
+export function getCDNUrl(slug: string): string {
+  return `${cdnBaseUrl}/${getObjectKey(slug)}`;
 }
 
-export async function uploadOGImage(
-  slug: string,
-  type: OGImageType,
-  buffer: Buffer
-): Promise<string> {
+export async function uploadOGImage(slug: string, buffer: Buffer): Promise<string> {
   const client = getS3Client();
-  const key = getObjectKey(slug, type);
+  const key = getObjectKey(slug);
 
   await client.send(
     new PutObjectCommand({
       Bucket: bucketName,
       Key: key,
       Body: buffer,
-      ContentType: 'image/png',
+      ContentType: 'image/webp',
       CacheControl: 'public, max-age=31536000, immutable',
     })
   );
 
-  return getCDNUrl(slug, type);
+  return getCDNUrl(slug);
 }
 
-export async function deleteOGImage(slug: string, type: OGImageType): Promise<void> {
+export async function deleteOGImage(slug: string): Promise<void> {
   const client = getS3Client();
-  const key = getObjectKey(slug, type);
+  const key = getObjectKey(slug);
 
   await client.send(
     new DeleteObjectCommand({
@@ -57,10 +51,18 @@ export async function deleteOGImage(slug: string, type: OGImageType): Promise<vo
   );
 }
 
-export async function deleteAllOGImages(slug: string): Promise<void> {
-  await Promise.all([
-    deleteOGImage(slug, 'card'),
-    deleteOGImage(slug, 'feature'),
-    deleteOGImage(slug, 'og'),
-  ]);
+export async function deleteOldOGImages(slug: string): Promise<void> {
+  const client = getS3Client();
+  const oldKeys = [
+    `og/${slug}-card.png`,
+    `og/${slug}-feature.png`,
+    `og/${slug}-og.png`,
+    `og/${slug}.webp`,
+  ];
+
+  await Promise.all(
+    oldKeys.map(key =>
+      client.send(new DeleteObjectCommand({ Bucket: bucketName, Key: key }))
+    )
+  );
 }
