@@ -309,8 +309,8 @@ Insert artikel ke Supabase database. Gunakan **service role key** (bukan anon ke
 ```
 
 **Optional fields (tambah hanya jika perlu):**
-- `cover_image_url`, `cover_image_alt`: null (OG image auto-generate)
-- `seo_og_image_url`: null (auto-generate dari `/api/og/feature?slug=...`)
+- `cover_image_url`, `cover_image_alt`: null (OG image auto-generate via R2)
+- `og_card_url`, `og_feature_url`, `og_image_url`: null (auto-populated by OG generate step)
 - `is_premium`, `premium_excerpt`: false, null
 - `is_sponsored`, `sponsor_name`, `sponsor_url`, `sponsor_disclosure`: false, null
 - `series_id`, `series_order`: null (untuk multi-part articles)
@@ -442,27 +442,50 @@ if (issues.length > 0) {
 - [ ] `excerpt` length <= 160
 - [ ] `reading_time` terisi (auto-calculated by trigger)
 
-## Step 5: OG Image Generation
+## Step 5: OG Image Generation (WebP via R2 CDN)
 
-Pastikan OG image ter-generate untuk artikel baru.
+Setelah artikel di-insert, generate OG images ke R2 CDN. Sistem menghasilkan **2 WebP images per post**:
+- **Card** (800x450) → `og/{slug}-card.webp` → untuk thumbnail article list
+- **Feature** (1600x900) → `og/{slug}-feature.webp` → untuk header artikel + social meta tags
 
-**Local check:**
+**Generate via API (admin auth required):**
 ```bash
-curl -s -o /dev/null -w "feature: %{http_code}\n" "http://localhost:3000/api/og/feature?slug=SLUG"
-curl -s -o /dev/null -w "card: %{http_code}\n" "http://localhost:3000/api/og/card?slug=SLUG"
+curl -s -X POST "https://tamparananakmuda.com/api/og/generate" \
+  -H "Content-Type: application/json" \
+  -H "Cookie: <admin-session-cookie>" \
+  -d '{"slug":"SLUG"}'
 ```
 
-**Production check (setelah deploy):**
+**Atau via batch script (local, semua post):**
 ```bash
-curl -s -o /dev/null -w "prod feature: %{http_code}\n" "https://tamparananakmuda.com/api/og/feature?slug=SLUG"
-curl -s -o /dev/null -w "prod card: %{http_code}\n" "https://tamparananakmuda.com/api/og/card?slug=SLUG"
+npx tsx scripts/generate-all-og.ts
+```
+
+**Verify di R2 CDN:**
+```bash
+curl -s -o /dev/null -w "card: %{http_code} (%{size_download} bytes)\n" "https://cdn.tamparananakmuda.com/og/SLUG-card.webp"
+curl -s -o /dev/null -w "feature: %{http_code} (%{size_download} bytes)\n" "https://cdn.tamparananakmuda.com/og/SLUG-feature.webp"
+```
+
+**Verify DB updated:**
+```bash
+curl -s "$SUPA_URL/rest/v1/posts?slug=eq.SLUG&select=og_card_url,og_feature_url,og_image_url" \
+  -H "apikey: $SUPA_KEY" -H "Authorization: Bearer $SUPA_KEY" | node -e "
+const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+const p=d[0];
+console.log('card:', p.og_card_url);
+console.log('feature:', p.og_feature_url);
+console.log('og:', p.og_image_url);
+"
 ```
 
 **Checklist:**
-- [ ] Local: feature 1600x900 HTTP 200
-- [ ] Local: card 800x450 HTTP 200
-- [ ] Production: feature HTTP 200
-- [ ] Production: card HTTP 200
+- [ ] API/batch script sukses generate (no errors)
+- [ ] `og/{slug}-card.webp` HTTP 200 di CDN
+- [ ] `og/{slug}-feature.webp` HTTP 200 di CDN
+- [ ] DB: `og_card_url` = `https://cdn.tamparananakmuda.com/og/{slug}-card.webp`
+- [ ] DB: `og_feature_url` = `https://cdn.tamparananakmuda.com/og/{slug}-feature.webp`
+- [ ] DB: `og_image_url` = sama dengan `og_feature_url` (untuk social meta)
 - [ ] Category color ter-aplikasi di accent pillar
 - [ ] Headline tidak terpotong
 - [ ] Brand mark (TAMPARAN ANAK MUDA) terlihat
