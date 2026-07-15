@@ -4,7 +4,7 @@ export type SourceReference = {
   label: string;
 };
 
-export type PostStatus = 'draft' | 'review' | 'fact-check' | 'published';
+export type PostStatus = 'draft' | 'review' | 'fact-check' | 'scheduled' | 'published';
 export type PovTag = 'kontra-narasi' | 'refleksi' | 'data' | 'framework' | 'tamparan' | 'riset' | 'opini' | 'panduan' | 'inspirasi';
 export type ContentQueueStatus = 'idea' | 'research' | 'draft' | 'review' | 'revision' | 'fact-check' | 'scheduled' | 'published';
 export type SearchIntent = 'informational' | 'comparison' | 'transactional';
@@ -80,7 +80,7 @@ export type Post = {
   featured: boolean;
   seo_meta_title: string | null;
   seo_meta_description: string | null;
-  seo_og_image_url: string | null;
+  seo_keywords: string[] | null;
   og_headline: string | null;
   og_card_url: string | null;
   og_feature_url: string | null;

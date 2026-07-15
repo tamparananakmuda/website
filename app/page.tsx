@@ -25,6 +25,7 @@ export default async function HomePage() {
       .from('posts')
       .select('*, category:categories(*)')
       .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
       .order('published_at', { ascending: false })
       .limit(3),
   ]);

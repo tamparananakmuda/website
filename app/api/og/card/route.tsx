@@ -29,6 +29,7 @@ export async function GET(request: Request) {
     `)
     .eq('slug', slug)
     .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
     .single();
 
   if (!post) {

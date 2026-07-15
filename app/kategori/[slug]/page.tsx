@@ -69,6 +69,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     .from('posts')
     .select('*, category:categories(*), subcategory:subcategories(*)')
     .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
     .eq('category_id', category.id)
     .order('published_at', { ascending: false, nullsFirst: false })
     .limit(12);

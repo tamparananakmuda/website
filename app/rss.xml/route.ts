@@ -13,11 +13,12 @@ export async function GET() {
   const { data: posts } = await supabase
     .from('posts')
     .select(`
-      id, title, slug, excerpt, published_at, created_at, updated_at,
+      id, title, slug, excerpt, published_at, created_at, updated_at, og_image_url, og_feature_url,
       category:categories ( title ),
       author:authors ( name )
     `)
     .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
     .order('published_at', { ascending: false, nullsFirst: false })
     .limit(20);
 
@@ -28,7 +29,7 @@ export async function GET() {
       const url = `${siteUrl}/artikel/${post.slug}`;
       const pubDate = new Date(post.published_at || post.created_at).toUTCString();
       const description = post.excerpt || '';
-      const ogImage = `${siteUrl}/artikel/${post.slug}/opengraph-image`;
+      const ogImage = post.og_feature_url || post.og_image_url || `${siteUrl}/artikel/${post.slug}/opengraph-image`;
 
       const categoryList = post.category as unknown as { title: string }[] | null;
       const authorList = post.author as unknown as { name: string }[] | null;
@@ -41,7 +42,7 @@ export async function GET() {
       <guid isPermaLink="true">${url}</guid>
       <description><![CDATA[${description}]]></description>
       <pubDate>${pubDate}</pubDate>
-      <enclosure url="${ogImage}" type="image/png" length="0" />
+      <enclosure url="${ogImage}" type="image/webp" length="0" />
       ${category ? `<category><![CDATA[${category.title}]]></category>` : ''}
       ${author ? `<author><![CDATA[${author.name}]]></author>` : ''}
     </item>`;

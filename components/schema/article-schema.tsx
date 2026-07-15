@@ -105,9 +105,10 @@ export function ArticleSchema({
     image: {
       '@type': 'ImageObject',
       url: imageUrl || ogImageUrl,
-      width: 1200,
-      height: 630,
+      width: 1600,
+      height: 900,
     },
+    inLanguage: 'id-ID',
     isAccessibleForFree: !isPremium,
     publishingPrinciples: `${siteUrl}/tentang#prinsip-editorial`,
   };

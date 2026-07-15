@@ -50,9 +50,10 @@ export async function generateMetadata({
     const supabase = createPublicClient();
     const { data: post } = await supabase
       .from('posts')
-      .select('title, excerpt, seo_meta_title, seo_meta_description, published_at, updated_at, slug, og_image_url, og_feature_url')
+      .select('title, excerpt, seo_meta_title, seo_meta_description, seo_keywords, published_at, updated_at, slug, og_image_url, og_feature_url')
       .eq('slug', params.slug)
       .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
       .single();
 
     if (!post) {
@@ -65,6 +66,8 @@ export async function generateMetadata({
     return {
       title: post.seo_meta_title || post.title,
       description: post.seo_meta_description || post.excerpt || undefined,
+      keywords: post.seo_keywords || undefined,
+      robots: { index: true, follow: true },
       alternates: {
         canonical: url,
       },
@@ -76,7 +79,7 @@ export async function generateMetadata({
         description: post.seo_meta_description || post.excerpt || undefined,
         publishedTime: post.published_at || undefined,
         modifiedTime: post.updated_at || undefined,
-        images: post.og_image_url ? [{ url: post.og_image_url, width: 1200, height: 630 }] : undefined,
+        images: post.og_image_url ? [{ url: post.og_image_url, width: 1600, height: 900 }] : undefined,
       },
       twitter: {
         card: 'summary_large_image',
@@ -99,6 +102,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       .select('*, category:categories(*), author:authors(*), series:series(*)')
       .eq('slug', params.slug)
       .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
       .single();
 
     if (postError) {
@@ -113,6 +117,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       .from('posts')
       .select('id, title, slug, excerpt, cover_image_url, reading_time, category:categories(*)')
       .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
       .neq('id', post.id)
       .eq('category_id', post.category_id)
       .order('published_at', { ascending: false })
@@ -138,6 +143,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           categorySlug={post.category?.slug}
           readingTime={post.reading_time}
           imageUrl={post.og_image_url || undefined}
+          keywords={post.seo_keywords || undefined}
           isPremium={post.is_premium}
           isSponsored={post.is_sponsored}
           sponsorName={post.sponsor_name || undefined}

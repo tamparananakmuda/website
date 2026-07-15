@@ -144,8 +144,10 @@ Setiap idea yang lolos Step 2 harus lulus angle test.
 ### Output Step 3
 Validated ideas siap draft:
 ```
-[Kategori] | [Topik] | [POV] | [Angle 1-liner] | [Working title] | [Keyword target]
+[Kategori] | [Topik] | [POV] | [Angle 1-liner] | [Working title] | [seo_keywords: keyword1, keyword2, keyword3]
 ```
+
+**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` saat insert via `/post-article-execution` Step 4.
 
 ## Step 4: Prioritisasi
 
@@ -155,11 +157,18 @@ Urutkan validated ideas berdasarkan:
 |---|---|---|
 | Trend signal strength | 30% | _ |
 | Gap opportunity | 25% | _ |
-| SEO potential (search volume) | 20% | _ |
+| SEO potential (search volume + difficulty) | 20% | _ |
 | TAM uniqueness (angle test) | 15% | _ |
 | Evergreen vs newsjacking | 10% | _ |
 
 **Formula:** `(Trend × 0.3) + (Gap × 0.25) + (SEO × 0.2) + (Uniqueness × 0.15) + (Evergreen × 0.1)`
+
+**SEO Potential Scoring (1-5):**
+- 5: Volume tinggi + difficulty rendah + SERP gap (top 3 Google tidak ada artikel quality)
+- 4: Volume tinggi + difficulty sedang, atau volume sedang + difficulty rendah
+- 3: Volume sedang + difficulty sedang
+- 2: Volume rendah atau difficulty tinggi
+- 1: Tidak ada search volume atau difficulty sangat tinggi
 
 **Threshold:** Hanya ide dengan skor ≥ 3.5 yang masuk content calendar.
 
@@ -208,12 +217,15 @@ Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflo
 
 - [ ] Trend scan completed (min 5 ideas per kategori target)
 - [ ] Keyword research done (search volume + difficulty checked)
+- [ ] `seo_keywords` array ditentukan (3-8 long-tail, Bahasa Indonesia)
+- [ ] SEO potential score dihitung (volume + difficulty + SERP gap)
 - [ ] Gap analysis done (TAM existing + 3 competitor checked)
 - [ ] Angle test passed (2 pertanyaan + POV selected)
 - [ ] TAM voice check passed
 - [ ] Prioritisasi skor ≥ 3.5
 - [ ] Calendar mapped sesuai alokasi pillar
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
+- [ ] `seo_keywords` array siap untuk pass ke `posts.seo_keywords` di Step 4 execution
 - [ ] Min 1 insight unik yang tidak ada di 3 artikel pertama Google
 - [ ] Output disimpan ke `files/ideation-backlog.md`
 - [ ] Ide prioritas di-handoff ke `/post-article-execution`

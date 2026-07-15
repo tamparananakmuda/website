@@ -31,6 +31,7 @@ export async function GET(request: NextRequest) {
       .from('posts')
       .select('id, title, slug, excerpt, cover_image_url, reading_time, published_at, category:categories(title, slug, color)')
       .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
       .or(`title.ilike.%${q}%,excerpt.ilike.%${q}%,body.ilike.%${q}%`)
       .order('published_at', { ascending: false })
       .limit(10);

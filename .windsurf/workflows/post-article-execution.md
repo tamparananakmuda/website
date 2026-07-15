@@ -21,6 +21,7 @@ Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert database, de
 | `R2_ENDPOINT` | R2 S3 endpoint URL | Server only |
 | `R2_BUCKET_NAME` | R2 bucket name (`cdn-tam`) | Server only |
 | `CDN_BASE_URL` | CDN domain (`https://cdn.tamparananakmuda.com`) | Public |
+| `CRON_SECRET` | Auth secret untuk cron API auto-publish | Server only |
 
 ```bash
 export SUPA_URL="$NEXT_PUBLIC_SUPABASE_URL"
@@ -112,7 +113,7 @@ else console.error('Author not found');
 - `id`, `title`, `slug`, `excerpt`, `body`, `category_id`, `author_id`, `status`
 - `pov_tag`, `human_signature`, `fact_check_status`, `review_status`
 - `source_references` (JSONB array, BUKAN string)
-- `seo_meta_title`, `seo_meta_description`, `reading_time`
+- `seo_meta_title`, `seo_meta_description`, `seo_keywords` (text[]), `reading_time`
 - `og_headline`, `og_card_url`, `og_feature_url`, `og_image_url`, `cover_image_url`, `cover_image_alt`, `is_premium`, `is_sponsored`
 - `sponsor_name`, `sponsor_url`, `sponsor_disclosure`, `premium_excerpt`
 - `series_id`, `series_order`, `published_at`, `created_at`, `updated_at`, `featured`
@@ -124,7 +125,7 @@ else console.error('Author not found');
 - `excerpt`: MAX 160 karakter (DB constraint `char_length <= 160`)
 - `seo_meta_description`: MAX 160 karakter (DB constraint)
 - `reading_time`: Auto-calculated by DB trigger, tidak perlu manual insert
-- `published_at`: WAJIB set ke `new Date().toISOString()`. Jika null, artikel tidak muncul di top homepage (sort by `published_at DESC`)
+- `published_at`: WAJIB set ke `new Date().toISOString()`. Jika null, artikel tidak muncul di top homepage (sort by `published_at DESC`). Jika `status='scheduled'`, set `published_at` ke waktu publish di masa depan. Cron job akan auto-publish saat `published_at <= now()`.
 
 ## Step 0.5: Draft Writing Guidelines
 
@@ -257,15 +258,80 @@ Klasifikasi semua sumber ke dalam tier reliability.
 
 Pastikan semua metadata SEO optimal sebelum insert ke database.
 
+### 3a. Keyword Research
+
+Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan search volume tinggi + competition rendah.
+
+**Tools:**
+- Google Keyword Planner (gratis, butuh Google Ads account)
+- Ubersuggest (free tier 3x/hari)
+- Google autocomplete (ketik keyword utama, liati saran)
+- Related searches di Google SERP
+
+**Simpan ke `seo_keywords` field:** array string, contoh: `["hustle culture gen z", "dampak hustle culture", "burnout gen z indonesia"]`
+
+### 3b. Meta Title & Description
+
+**Meta Title Formula:** `[Keyword Utama] + [Hook] | TAM` (max 70 karakter)
+- Contoh: `Hustle Culture Bikin Gen Z Berhenti Berlari | TAM`
+- Keyword utama di awal untuk SEO weight
+
+**Meta Description Formula:** `[Konteks Keyword] + [Value Proposition] + [CTA]` (max 160 karakter, DB constraint)
+- Contoh: `Hustle culture menjual mimpi sukses tanpa henti. Tapi data menunjukkan gen Z sudah berhenti berlari. Baca analisis lengkapnya di sini.`
+- Mengandung keyword utama secara natural
+- Jangan copy paste excerpt
+
+### 3c. Slug Optimization
+
+- Kebab-case: `hustle-culture-gen-z-berhenti-berlari`
+- Keyword utama di awal slug
+- Max 60 karakter
+- Unique (cek di Step 0)
+
+### 3d. Heading SEO
+
+- h2 mengandung secondary keyword (variasi dari keyword utama)
+- h3 untuk long-tail keyword variations
+- Jangan repeat keyword utama berlebihan (keyword stuffing)
+- Natural reading flow > keyword density
+
+### 3e. Image Alt Text
+
+- Deskriptif + keyword when natural: `Infografik hustle culture dan dampaknya ke gen z Indonesia`
+- Jangan keyword stuffing di alt text
+- Setiap gambar wajib punya alt text
+
+### 3f. Internal Linking
+
+- Minimal 2 link ke artikel TAM lain di body
+- Anchor text bervariasi (jangan selalu "baca juga" atau judul persis)
+- Link dari konteks yang relevan, bukan di akhir artikel saja
+- Cek artikel relevan via command di Step 0.5
+
 **Checklist:**
-- [ ] `seo_meta_title`: max 70 karakter, mengandung keyword utama
-- [ ] `seo_meta_description`: **MAX 160 karakter** (DB constraint)
-- [ ] `slug`: kebab-case, mengandung keyword, max 60 karakter, **unique** (cek di Step 0)
+- [ ] `seo_keywords`: 3-8 keyword long-tail, Bahasa Indonesia
+- [ ] `seo_meta_title`: max 70 karakter, keyword utama di awal, ada `| TAM`
+- [ ] `seo_meta_description`: **MAX 160 karakter** (DB constraint), mengandung keyword
+- [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, **unique**
 - [ ] `excerpt`: **MAX 160 karakter** (DB constraint)
 - [ ] `og_headline`: max 60 karakter untuk OG image (fallback ke title)
-- [ ] Internal linking: identifikasi minimal 2 artikel TAM lain untuk di-link di body
+- [ ] h2 mengandung secondary keyword
+- [ ] Internal linking: minimal 2 link, anchor text bervariasi
+- [ ] Image alt text: deskriptif + keyword when natural
 - [ ] `category_id`: sudah di-query dari Step 0
 - [ ] `author_id`: sudah di-query dari Step 0 (default: Yovie Setiawan)
+
+### 3g. SEO Scoring Rubric (0-100, target > 80)
+
+| Komponen | Max | Kriteria |
+|----------|-----|----------|
+| Keyword research | 20 | 5-8 keyword long-tail (20), 3-4 keyword (15), <3 (5) |
+| Meta title | 15 | Keyword di awal + hook + max 70 (15), keyword ada tapi tidak di awal (10), >70 chars (0) |
+| Meta description | 15 | Keyword + value prop + CTA + max 160 (15), ada keyword (10), >160 (0) |
+| Heading SEO | 15 | h2 ada secondary keyword (15), h2 ada tapi no keyword (10), no h2 (0) |
+| Internal linking | 15 | 3+ link bervariasi (15), 2 link (10), <2 (0) |
+| Slug | 10 | Kebab-case + keyword di awal + max 60 (10), ada keyword (7), >60 (0) |
+| Alt text | 10 | Semua gambar punya alt + keyword natural (10), ada alt (5), ada gambar tanpa alt (0) |
 
 **Command:**
 ```bash
@@ -302,6 +368,7 @@ Insert artikel ke Supabase database. Gunakan **service role key** (bukan anon ke
   "category_id": "UUID dari Step 0",
   "author_id": "UUID dari Step 0",
   "status": "published",
+  "seo_keywords": ["keyword 1", "keyword 2", "keyword 3"],
   "pov_tag": "data",
   "human_signature": true,
   "fact_check_status": "verified",
@@ -324,6 +391,12 @@ Insert artikel ke Supabase database. Gunakan **service role key** (bukan anon ke
 - `is_sponsored`, `sponsor_name`, `sponsor_url`, `sponsor_disclosure`: false, null
 - `series_id`, `series_order`: null (untuk multi-part articles)
 
+**Scheduling (opsional):**
+- Untuk publish langsung: `"status": "published"`, `"published_at": "2026-01-01T00:00:00.000Z"` (now atau past)
+- Untuk schedule: `"status": "scheduled"`, `"published_at": "2026-01-15T08:00:00.000Z"` (future date)
+- Cron job berjalan tiap jam (:00), auto-publish artikel dengan `status='scheduled'` dan `published_at <= now()`
+- Max delay: 60 menit dari waktu scheduled
+
 **Catatan:**
 - `reading_time`: Tidak perlu insert. DB trigger auto-calculate dari body
 - `published_at`: WAJIB set. Jika null, artikel tidak muncul di top homepage
@@ -343,7 +416,8 @@ const payload = {
   body: article.body,
   category_id: article.category_id,
   author_id: article.author_id,
-  status: 'published',
+  status: article.status === 'scheduled' ? 'scheduled' : 'published',
+  seo_keywords: article.seo_keywords || null,
   pov_tag: article.pov_tag || 'data',
   human_signature: article.human_signature !== false,
   fact_check_status: 'verified',
@@ -451,6 +525,46 @@ if (issues.length > 0) {
 - [ ] `excerpt` length <= 160
 - [ ] `reading_time` terisi (auto-calculated by trigger)
 
+## Step 4.6: Scheduling Verification
+
+Jika artikel di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
+
+**Cek status & published_at:**
+```bash
+curl -s "$SUPA_URL/rest/v1/posts?slug=eq.SLUG&select=status,published_at" \
+  -H "apikey: $SUPA_KEY" -H "Authorization: Bearer $SUPA_KEY" | node -e "
+const d = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+const p = d[0];
+if (!p) { console.error('NOT FOUND'); process.exit(1); }
+console.log('status:', p.status);
+console.log('published_at:', p.published_at);
+if (p.status === 'scheduled') {
+  const now = new Date();
+  const pubDate = new Date(p.published_at);
+  if (pubDate <= now) {
+    console.error('WARNING: published_at is in the past but status is scheduled! Cron should have published this.');
+  } else {
+    const hoursUntil = Math.ceil((pubDate - now) / 3600000);
+    console.log('Will auto-publish in ~' + hoursUntil + ' hours (cron runs at :00)');
+  }
+} else if (p.status === 'published') {
+  console.log('Already published');
+}
+"
+```
+
+**Checklist (if scheduled):**
+- [ ] `status` = `scheduled` di DB
+- [ ] `published_at` di masa depan
+- [ ] `CRON_SECRET` env var set di Vercel dashboard
+- [ ] `vercel.json` cron config deployed
+- [ ] Frontend tidak menampilkan artikel (safety filter `published_at <= now()` aktif)
+
+**Checklist (if published directly):**
+- [ ] `status` = `published` di DB
+- [ ] `published_at` di now atau past
+- [ ] Artikel muncul di homepage/article list
+
 ## Step 5: OG Image Generation (WebP via R2 CDN)
 
 Setelah artikel di-insert, generate OG images ke R2 CDN. Sistem menghasilkan **2 WebP images per post**:
@@ -538,6 +652,8 @@ curl -s "https://tamparananakmuda.com/rss.xml" | grep "SLUG" && echo "RSS OK" ||
 - [ ] Jika 500: cek Vercel serverless issues di bawah
 
 **Note: `llms.txt` dan `llms-full.txt` tidak perlu update per artikel.** Hanya update jika ada perubahan struktur (kategori baru, halaman baru).
+
+**Scheduling note:** Jika artikel di-insert sebagai `status='scheduled'`, tidak perlu code deploy. Cron job akan auto-publish saat `published_at <= now()`. Tapi OG images tetap perlu di-generate (Step 5) sebelum atau setelah cron publish.
 
 **Known Vercel serverless issues:**
 - `isomorphic-dompurify` crash di Vercel (jsdom dependency). Sudah diganti regex sanitizer di `components/markdown-content.tsx`. Jangan import library ini lagi.
@@ -705,3 +821,6 @@ Bug yang pernah terjadi dan cara mencegah:
 | TOC kosong di artikel | Heading pakai h1 atau tidak ada h2 | Step 0.5: h2/h3 only, min 3 h2 |
 | Internal link kurang dari 2 | Tidak ada validasi internal linking | Step 0.5: cek min 2 link ke `/artikel/` |
 | Slug duplikat, insert fail | Tidak cek slug uniqueness sebelum insert | Step 0: cek slug uniqueness |
+| Scheduled article muncul sebelum waktunya | Frontend query tidak filter `published_at <= now()` | Semua frontend query sudah pakai `.lte('published_at', new Date().toISOString())` |
+| Scheduled article tidak auto-publish | `CRON_SECRET` belum set di Vercel | Set `CRON_SECRET` di Vercel dashboard, verifikasi cron config di `vercel.json` |
+| SEO keywords tidak tersimpan | `seo_keywords` column belum ada di DB | Run migration: `ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_keywords text[] DEFAULT null;` |

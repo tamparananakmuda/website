@@ -31,6 +31,7 @@ export async function GET(request: Request) {
     `)
     .eq('slug', slug)
     .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
     .single();
 
   if (!post) {
@@ -53,7 +54,8 @@ export async function GET(request: Request) {
       .from('posts')
       .select('id', { count: 'exact', head: true })
       .eq('series_id', series.id)
-      .eq('status', 'published');
+      .eq('status', 'published')
+      .lte('published_at', new Date().toISOString());
     seriesCurrent = post.series_order;
     seriesTotal = count || undefined;
   }

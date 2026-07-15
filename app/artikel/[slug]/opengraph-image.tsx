@@ -30,6 +30,7 @@ export default async function Image({ params }: Props) {
     `)
     .eq('slug', params.slug)
     .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
     .single();
 
   if (post?.og_image_url) {
