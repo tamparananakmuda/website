@@ -159,6 +159,17 @@ d.forEach(p => console.log(p.title + ' -> /artikel/' + p.slug));
 - Maks 1 exclamation mark per artikel
 - Tidak pakai ellipsis (...) sebagai desain
 
+**OG Headline (CRITICAL):**
+- `og_headline` HARUS berbeda dari `title`. Jangan copy-paste title ke og_headline
+- `og_headline` harus lebih pendek, punchy, dan conversational (max 60 karakter)
+- Fungsi: hook untuk OG image yang membuat orang klik saat share di social media
+- Format: kalimat langsung, bukan judul formal. Contoh:
+  - title: "Perbandingan Diri di Era Media Sosial: Kenapa Kamu Merasa Tidak Cukup"
+  - og_headline: "Scroll media sosial bikin kamu merasa gagal?"
+  - title: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
+  - og_headline: "Kerja keras tidak menjamin kamu aman dari PHK"
+- Jika `og_headline` null, OG image akan fallback ke `title` (tidak ideal untuk social click-through)
+
 **Command cek heading + internal links:**
 ```bash
 node -e "
@@ -173,6 +184,11 @@ console.log('h2:', h2, h2 < 3 ? 'WARNING: butuh min 3' : 'OK');
 console.log('h3:', h3);
 const il = (b.match(/\]\(\/artikel\//g) || []).length;
 console.log('internal links:', il, il < 2 ? 'WARNING: butuh min 2' : 'OK');
+// Cek og_headline vs title
+const og = a.og_headline || '';
+console.log('og_headline:', og ? og : 'MISSING');
+console.log('og_headline == title?', og === a.title ? 'WARNING: harus berbeda!' : 'OK');
+console.log('og_headline length:', og.length, og.length > 60 ? 'WARNING: max 60' : 'OK');
 "
 ```
 
@@ -209,6 +225,7 @@ Validasi semua data dan klaim dalam artikel sebelum masuk ke database.
 - [ ] Heading structure: h2/h3 only, minimal 3 h2, tidak ada h1
 - [ ] Internal linking: minimal 2 link ke artikel TAM lain
 - [ ] Tidak ada raw HTML script/iframe/style di body
+- [ ] OG headline berbeda dari title, max 60 karakter, conversational
 - [ ] Sentence length variety: campuran kalimat pendek dan panjang, tidak semua sama panjang
 - [ ] Ada opinions/reactions, bukan hanya neutral reporting
 - [ ] Ada acknowledgment of uncertainty atau mixed feelings jika relevan
@@ -913,3 +930,4 @@ Bug yang pernah terjadi dan cara mencegah:
 | Rule of three overuse | AI pattern: memaksakan 3 item beruntun | Step 1: max 2x per artikel, pecah jadi 2 item atau kalimat terpisah |
 | Negative parallelisms ("not only...but also") | AI pattern: konstruksi "tidak hanya...tapi juga" berlebihan | Step 1: rewrite jadi kalimat langsung tanpa parallel construction |
 | Aphorism formulas ("X is the Y of Z") | AI pattern: kalimat terdengar profound tapi tidak presisi | Step 1: ganti dengan klaim konkret tanpa formula |
+| OG headline sama dengan title | Copy-paste title ke og_headline, OG image tidak optimal untuk social CTR | Step 0.5: og_headline HARUS berbeda, lebih pendek, punchy, conversational (max 60 chars) |
