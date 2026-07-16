@@ -16,6 +16,7 @@ export async function createComment(data: {
   authorEmail: string;
   body: string;
   readerId?: string | null;
+  status?: string;
 }): Promise<Comment> {
   const result = await db.insert(comments).values({
     postId: data.postId,
@@ -24,6 +25,7 @@ export async function createComment(data: {
     authorEmail: data.authorEmail,
     body: data.body,
     readerId: data.readerId ?? null,
+    status: data.status ?? 'pending',
   }).returning();
   return result[0];
 }
@@ -31,6 +33,11 @@ export async function createComment(data: {
 export async function getCommentById(id: string): Promise<Comment | undefined> {
   const result = await db.select().from(comments).where(eq(comments.id, id)).limit(1);
   return result[0];
+}
+
+export async function deleteComment(id: string, readerId: string): Promise<void> {
+  await db.delete(comments)
+    .where(and(eq(comments.id, id), eq(comments.readerId, readerId)));
 }
 
 export async function updateCommentStatus(id: string, status: string): Promise<void> {

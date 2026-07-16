@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { getDonationByLouvinIdAndEmail } from '@/lib/db/queries/donations';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { donasiReceiptSchema } from '@/lib/validations/donasi-extra';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -22,20 +22,9 @@ export async function POST(request: NextRequest) {
 
     const { transaction_id, email } = parsed.data;
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
+    const donation = await getDonationByLouvinIdAndEmail(transaction_id, email);
 
-    const { data: donation, error } = await supabase
-      .from('donations')
-      .select('transaction_id, amount, fee, net_amount, payment_type, status, customer_name, created_at')
-      .eq('transaction_id', transaction_id)
-      .eq('customer_email', email)
-      .single();
-
-    if (error || !donation) {
+    if (!donation) {
       return NextResponse.json(
         { error: 'Transaksi tidak ditemukan' },
         { status: 404 }
@@ -63,14 +52,14 @@ export async function POST(request: NextRequest) {
     const emailHtml = `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <h2 style="color: #e11d48;">Terima kasih atas dukunganmu</h2>
-        <p>Halo ${donation.customer_name},</p>
+        <p>Halo ${donation.customerName},</p>
         <p>Donasi kamu telah diterima. Berikut rincian transaksinya:</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">ID Transaksi</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-family: monospace;">${donation.transaction_id}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">ID Transaksi</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-family: monospace;">${donation.louvinTransactionId}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Nominal</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formatRupiah(donation.amount)}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Fee</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formatRupiah(donation.fee)}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Net diterima</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">${formatRupiah(donation.net_amount)}</td></tr>
-          <tr><td style="padding: 8px; color: #666;">Tanggal</td><td style="padding: 8px;">${new Date(donation.created_at).toLocaleString('id-ID')}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Net diterima</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">${formatRupiah(donation.netAmount)}</td></tr>
+          <tr><td style="padding: 8px; color: #666;">Tanggal</td><td style="padding: 8px;">${new Date(donation.createdAt || new Date()).toLocaleString('id-ID')}</td></tr>
         </table>
         <p>Setiap rupiah membantu TAM tetap independen dan terus menulis tanpa kompromi.</p>
         <p style="color: #999; font-size: 12px; margin-top: 30px;">TAMPARAN ANAK MUDA<br>Menyadarkan generasi muda akan kenyataan</p>

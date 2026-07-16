@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { db } from '@/lib/db';
+import { posts } from '@/lib/db/schema';
+import { eq, lte, inArray, and } from 'drizzle-orm';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -12,34 +14,21 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { persistSession: false } }
-  );
-
   try {
     const now = new Date().toISOString();
 
-    const { data: scheduled, error: fetchError } = await supabase
-      .from('posts')
-      .select('id, slug, title')
-      .eq('status', 'scheduled')
-      .lte('published_at', now);
+    const scheduled = await db.select({ id: posts.id, slug: posts.slug, title: posts.title })
+      .from(posts)
+      .where(and(eq(posts.status, 'scheduled'), lte(posts.publishedAt, now)));
 
-    if (fetchError) throw fetchError;
-
-    if (!scheduled || scheduled.length === 0) {
+    if (scheduled.length === 0) {
       return NextResponse.json({ published: 0, slugs: [] });
     }
 
     const ids = scheduled.map((p) => p.id);
-    const { error: updateError } = await supabase
-      .from('posts')
-      .update({ status: 'published' })
-      .in('id', ids);
-
-    if (updateError) throw updateError;
+    await db.update(posts)
+      .set({ status: 'published', updatedAt: now })
+      .where(inArray(posts.id, ids));
 
     const slugs = scheduled.map((p) => p.slug);
     console.log(`[cron] Published ${scheduled.length} scheduled articles:`, slugs);

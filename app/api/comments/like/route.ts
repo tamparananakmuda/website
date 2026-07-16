@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+import { toggleCommentLike, getCommentById } from '@/lib/db/queries/comments';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { commentLikeSchema } from '@/lib/validations/comment';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -34,30 +35,16 @@ export async function POST(request: NextRequest) {
     const { comment_id, action } = parsed.data;
 
     if (action === 'like') {
-      const { error } = await supabase
-        .from('comment_likes')
-        .insert({ comment_id, reader_id: user.id });
-
-      if (error && error.code !== '23505') throw error;
+      await toggleCommentLike(comment_id, user.id);
     } else if (action === 'unlike') {
-      const { error } = await supabase
-        .from('comment_likes')
-        .delete()
-        .eq('comment_id', comment_id)
-        .eq('reader_id', user.id);
-
-      if (error) throw error;
+      await toggleCommentLike(comment_id, user.id);
     }
 
-    const { data: comment } = await supabase
-      .from('comments')
-      .select('likes_count')
-      .eq('id', comment_id)
-      .single();
+    const comment = await getCommentById(comment_id);
 
     return NextResponse.json({
       success: true,
-      likes_count: comment?.likes_count || 0,
+      likes_count: comment?.likesCount || 0,
     });
   } catch (error) {
     console.error('Comment like error:', error);

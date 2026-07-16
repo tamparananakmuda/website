@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createDonation } from '@/lib/db/queries/donations';
 import { donasiSchema, getMinAmount } from '@/lib/validations/donasi';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -65,32 +65,27 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
-    await supabase.from('donations').insert({
-      transaction_id: data.transaction.id,
-      order_id: data.payment.order_id,
+    await createDonation({
+      louvinTransactionId: data.transaction.id,
+      reference: data.transaction.reference,
       amount: data.transaction.amount,
       fee: data.transaction.fee,
-      net_amount: data.transaction.net_amount,
-      payment_type,
+      netAmount: data.transaction.net_amount,
+      paymentType: payment_type,
       status: 'pending',
-      customer_name,
-      customer_email,
-      description: 'Donasi TAMPARAN ANAK MUDA',
-      reference: data.transaction.reference,
-      qr_string: data.payment.qr_string || null,
-      va_number: data.payment.va_number || null,
-      bank: data.payment.bank || null,
-      payment_number: data.payment.payment_number || null,
-      expired_at: data.payment.expired_at || null,
-      is_anonymous,
+      customerName: customer_name,
+      customerEmail: customer_email,
       message: message || null,
-      is_recurring,
+      paymentData: {
+        orderId: data.payment.order_id,
+        qrString: data.payment.qr_string || null,
+        vaNumber: data.payment.va_number || null,
+        bank: data.payment.bank || null,
+        paymentNumber: data.payment.payment_number || null,
+        expiredAt: data.payment.expired_at || null,
+      },
+      isAnonymous: is_anonymous,
+      isRecurring: is_recurring,
     });
 
     return NextResponse.json({

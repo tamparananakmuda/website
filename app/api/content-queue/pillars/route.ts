@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { getPillars } from '@/lib/db/queries/content-queue';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,20 +9,7 @@ export async function GET() {
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const supabase = createClient();
-    const { data, error } = await supabase
-      .from('subcategories')
-      .select('id, title, slug, categories(title)')
-      .order('sort_order', { ascending: true });
-
-    if (error) throw error;
-
-    const pillars = (data || []).map((s) => ({
-      id: s.id,
-      title: s.title,
-      slug: s.slug,
-      category_title: (s as unknown as { categories?: { title: string }[] })?.categories?.[0]?.title,
-    }));
+    const pillars = await getPillars();
 
     return NextResponse.json({ pillars });
   } catch (error) {

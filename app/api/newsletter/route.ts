@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { upsertNewsletterSubscriber } from '@/lib/db/queries/newsletter';
 import { newsletterSchema } from '@/lib/validations/newsletter';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -23,29 +23,7 @@ export async function POST(request: NextRequest) {
     const normalizedEmail = parsed.data.email;
     const topics = parsed.data.topics;
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
-    // Store subscriber locally
-    const { error: dbError } = await supabase
-      .from('newsletter_subscribers')
-      .upsert(
-        {
-          email: normalizedEmail,
-          status: 'active',
-          source: 'website',
-          topics: topics.length > 0 ? topics : null,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: 'email' }
-      );
-
-    if (dbError) {
-      throw new Error(dbError.message);
-    }
+    await upsertNewsletterSubscriber(normalizedEmail);
 
     // Sync to Brevo if API key exists
     if (process.env.BREVO_API_KEY && process.env.BREVO_LIST_ID) {

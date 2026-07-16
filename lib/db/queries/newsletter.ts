@@ -12,6 +12,27 @@ export async function subscribeNewsletter(email: string, source = 'website'): Pr
   return result[0];
 }
 
+export async function upsertNewsletterSubscriber(email: string): Promise<void> {
+  const existing = await db.select().from(newsletterSubscribers)
+    .where(eq(newsletterSubscribers.email, email))
+    .limit(1);
+
+  if (existing[0]) {
+    await db.update(newsletterSubscribers)
+      .set({
+        status: 'active',
+        updatedAt: new Date().toISOString(),
+      })
+      .where(eq(newsletterSubscribers.email, email));
+  } else {
+    await db.insert(newsletterSubscribers).values({
+      email,
+      status: 'active',
+      source: 'website',
+    });
+  }
+}
+
 export async function unsubscribeNewsletter(email: string): Promise<void> {
   await db.update(newsletterSubscribers)
     .set({ status: 'unsubscribed', updatedAt: new Date().toISOString() })

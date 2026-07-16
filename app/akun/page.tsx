@@ -1,5 +1,8 @@
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
+import { getReaderProfile, getReadingHistory } from '@/lib/db/queries/reader';
+import { getBookmarksByUser } from '@/lib/db/queries/bookmarks';
+import { getDonationsByEmail } from '@/lib/db/queries/donations';
 import ReaderDashboard from './reader-dashboard';
 
 export const metadata = {
@@ -15,45 +18,14 @@ export default async function AkunPage() {
     redirect('/masuk?next=/akun');
   }
 
-  const { data: profile } = await supabase
-    .from('reader_profiles')
-    .select('*')
-    .eq('user_id', user.id)
-    .single();
-
-  const { data: bookmarks } = await supabase
-    .from('bookmarks')
-    .select(`
-      post_id,
-      created_at,
-      posts(id, title, slug, excerpt, category_id, categories(name, slug))
-    `)
-    .eq('reader_id', user.id)
-    .order('created_at', { ascending: false })
-    .limit(10);
-
-  const { data: history } = await supabase
-    .from('reading_history')
-    .select(`
-      post_id,
-      read_at,
-      progress,
-      posts(id, title, slug, excerpt, category_id, categories(name, slug))
-    `)
-    .eq('reader_id', user.id)
-    .order('read_at', { ascending: false })
-    .limit(10);
-
-  const { data: donations } = await supabase
-    .from('donations')
-    .select('transaction_id, amount, status, payment_type, created_at')
-    .eq('customer_email', user.email || '')
-    .order('created_at', { ascending: false })
-    .limit(5);
+  const profile = await getReaderProfile(user.id);
+  const bookmarks = await getBookmarksByUser(user.id, 10);
+  const history = await getReadingHistory(user.id, 10);
+  const donations = await getDonationsByEmail(user.email || '', 5);
 
   return (
     <ReaderDashboard
-      profile={profile}
+      profile={profile ?? null}
       bookmarks={bookmarks || []}
       history={history || []}
       donations={donations || []}

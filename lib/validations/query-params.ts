@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const commentsQuerySchema = z.object({
-  post_id: z.coerce.number().int().positive().optional(),
+  post_id: z.string().uuid().optional(),
   id: z.string().uuid().optional(),
 });
 
@@ -31,7 +31,7 @@ export const socialPostsQuerySchema = z.object({
 export type SocialPostsQuery = z.infer<typeof socialPostsQuerySchema>;
 
 export const bookmarksQuerySchema = z.object({
-  post_id: z.coerce.number().int().positive().optional(),
+  post_id: z.string().uuid().optional(),
 });
 
 export type BookmarksQuery = z.infer<typeof bookmarksQuerySchema>;

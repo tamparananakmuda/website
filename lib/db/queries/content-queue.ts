@@ -1,6 +1,6 @@
 import { db } from '@/lib/db';
 import { contentQueue, subcategories } from '@/lib/db/schema';
-import { eq, desc, asc } from 'drizzle-orm';
+import { eq, desc, asc, and } from 'drizzle-orm';
 import type { ContentQueue, ContentQueueWithPillar } from '@/lib/db/schema';
 
 export async function getContentQueue(): Promise<ContentQueue[]> {
@@ -9,6 +9,22 @@ export async function getContentQueue(): Promise<ContentQueue[]> {
 
 export async function getContentQueueWithPillars(): Promise<ContentQueueWithPillar[]> {
   const result = await db.query.contentQueue.findMany({
+    with: { pillar: true },
+    orderBy: desc(contentQueue.createdAt),
+  });
+  return result as ContentQueueWithPillar[];
+}
+
+export async function getContentQueueFiltered(filters: { status?: string; pillarId?: string }): Promise<ContentQueueWithPillar[]> {
+  const conditions = [];
+  if (filters.status && filters.status !== 'all') {
+    conditions.push(eq(contentQueue.status, filters.status));
+  }
+  if (filters.pillarId && filters.pillarId !== 'all') {
+    conditions.push(eq(contentQueue.pillarId, filters.pillarId));
+  }
+  const result = await db.query.contentQueue.findMany({
+    where: conditions.length > 0 ? and(...conditions) : undefined,
     with: { pillar: true },
     orderBy: desc(contentQueue.createdAt),
   });

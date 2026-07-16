@@ -1,6 +1,6 @@
 import { db } from '@/lib/db';
-import { posts, categories } from '@/lib/db/schema';
-import { eq, desc, asc, and, ilike, or, lte, ne } from 'drizzle-orm';
+import { posts, categories, contentQueue, subcategories } from '@/lib/db/schema';
+import { eq, desc, asc, and, ilike, or, lte, ne, sql } from 'drizzle-orm';
 import type { Post, PostWithRelations, Tag } from '@/lib/db/schema';
 
 function mapToPostWithRelations(p: Record<string, unknown> & { postTags?: { tag: Tag }[] }): PostWithRelations {
@@ -228,4 +228,54 @@ export async function countPublishedPostsInSeries(seriesId: string): Promise<num
   const result = await db.select({ id: posts.id }).from(posts)
     .where(and(eq(posts.seriesId, seriesId), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())));
   return result.length;
+}
+
+export async function getAnalyticsOverview() {
+  const [
+    totalResult,
+    publishedResult,
+    draftResult,
+    postsByCategoryResult,
+    postsByPovTagResult,
+    postsByMonthResult,
+    pipelineStatsResult,
+    topPostsResult,
+    pillarStatsResult,
+  ] = await Promise.all([
+    db.select({ count: sql<number>`count(*)::int` }).from(posts),
+    db.select({ count: sql<number>`count(*)::int` }).from(posts).where(eq(posts.status, 'published')),
+    db.select({ count: sql<number>`count(*)::int` }).from(posts).where(eq(posts.status, 'draft')),
+    db.select({ categoryId: posts.categoryId, title: categories.title, color: categories.color })
+      .from(posts)
+      .leftJoin(categories, eq(posts.categoryId, categories.id))
+      .where(eq(posts.status, 'published')),
+    db.select({ povTag: posts.povTag }).from(posts)
+      .where(and(eq(posts.status, 'published'), sql`${posts.povTag} IS NOT NULL`)),
+    db.select({ publishedAt: posts.publishedAt }).from(posts)
+      .where(and(eq(posts.status, 'published'), sql`${posts.publishedAt} IS NOT NULL`))
+      .orderBy(desc(posts.publishedAt))
+      .limit(100),
+    db.select({ status: contentQueue.status }).from(contentQueue),
+    db.select({ id: posts.id, title: posts.title, slug: posts.slug, publishedAt: posts.publishedAt })
+      .from(posts)
+      .where(eq(posts.status, 'published'))
+      .orderBy(desc(posts.publishedAt))
+      .limit(10),
+    db.select({ subcategoryId: posts.subcategoryId, title: subcategories.title })
+      .from(posts)
+      .leftJoin(subcategories, eq(posts.subcategoryId, subcategories.id))
+      .where(and(eq(posts.status, 'published'), sql`${posts.subcategoryId} IS NOT NULL`)),
+  ]);
+
+  return {
+    totalResult,
+    publishedResult,
+    draftResult,
+    postsByCategoryResult,
+    postsByPovTagResult,
+    postsByMonthResult,
+    pipelineStatsResult,
+    topPostsResult,
+    pillarStatsResult,
+  };
 }

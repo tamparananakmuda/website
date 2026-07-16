@@ -31,3 +31,9 @@ export async function isBookmarked(userId: string, postId: string): Promise<bool
     .limit(1);
   return !!result[0];
 }
+
+export async function getBookmarkPostIdsByUser(userId: string): Promise<string[]> {
+  const result = await db.select({ postId: bookmarks.postId }).from(bookmarks)
+    .where(eq(bookmarks.userId, userId));
+  return result.map((b) => b.postId);
+}

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { updateDonationStatusByLouvinId } from '@/lib/db/queries/donations';
 import { createHmac, timingSafeEqual } from 'crypto';
 
 export const dynamic = 'force-dynamic';
@@ -48,20 +48,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
     if (event === 'payment.settled' || event === 'payment.failed') {
-      await supabase
-        .from('donations')
-        .update({
-          status: data.status,
-          updated_at: new Date().toISOString(),
-        })
-        .eq('transaction_id', data.transaction_id);
+      await updateDonationStatusByLouvinId(data.transaction_id, data.status);
     }
 
     return NextResponse.json({ received: true });

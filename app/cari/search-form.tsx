@@ -31,18 +31,12 @@ export function SearchForm() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    if (supabaseUrl && anonKey) {
-      fetch(`${supabaseUrl}/rest/v1/categories?select=id,title,slug,color&order=title.asc`, {
-        headers: { apikey: anonKey, Authorization: `Bearer ${anonKey}` },
+    fetch('/api/categories')
+      .then((r) => r.json())
+      .then((data) => {
+        if (Array.isArray(data)) setCategories(data);
       })
-        .then((r) => r.json())
-        .then((data) => {
-          if (Array.isArray(data)) setCategories(data);
-        })
-        .catch(() => {});
-    }
+      .catch(() => {});
   }, []);
 
   const performSearch = useCallback(async (q: string, category: string) => {

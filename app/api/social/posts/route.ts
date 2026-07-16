@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { getAdminSocialPosts, updateSocialPost, deleteSocialPost } from '@/lib/db/queries/social-posts';
 import { socialPostUpdateSchema } from '@/lib/validations/social';
 import { socialPostsQuerySchema } from '@/lib/validations/query-params';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
@@ -18,30 +18,9 @@ export async function GET(request: NextRequest) {
 
     const { status, platform, limit } = query.data;
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
+    const posts = await getAdminSocialPosts({ status, platform, limit });
 
-    let supaQuery = supabase
-      .from('social_posts')
-      .select('*')
-      .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(limit);
-
-    if (status && status !== 'all') {
-      supaQuery = supaQuery.eq('status', status);
-    }
-    if (platform && ['x', 'instagram', 'tiktok', 'youtube'].includes(platform)) {
-      supaQuery = supaQuery.eq('platform', platform);
-    }
-
-    const { data, error } = await supaQuery;
-
-    if (error) throw error;
-
-    return NextResponse.json({ posts: data || [] });
+    return NextResponse.json({ posts });
   } catch (error) {
     console.error('Social posts list error:', error);
     return NextResponse.json(
@@ -68,19 +47,17 @@ export async function PATCH(request: NextRequest) {
     const parsed = await parseRequestBody(request, socialPostUpdateSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
     const { id, ...updates } = parsed.data;
-    const { error } = await supabase
-      .from('social_posts')
-      .update({ ...updates, updated_at: new Date().toISOString() })
-      .eq('id', id);
 
-    if (error) throw error;
+    const updateData: Record<string, unknown> = {};
+    if (updates.title !== undefined) updateData.title = updates.title;
+    if (updates.excerpt !== undefined) updateData.excerpt = updates.excerpt;
+    if (updates.content_text !== undefined) updateData.contentText = updates.content_text;
+    if (updates.transcript !== undefined) updateData.transcript = updates.transcript;
+    if (updates.tags !== undefined) updateData.tags = updates.tags;
+    if (updates.status !== undefined) updateData.status = updates.status;
+
+    await updateSocialPost(String(id), updateData);
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -116,18 +93,7 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
-    const { error } = await supabase
-      .from('social_posts')
-      .delete()
-      .eq('id', query.data.id);
-
-    if (error) throw error;
+    await deleteSocialPost(BigInt(query.data.id));
 
     return NextResponse.json({ success: true });
   } catch (error) {

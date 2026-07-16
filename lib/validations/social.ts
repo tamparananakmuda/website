@@ -20,7 +20,7 @@ export const socialImportSchema = z.object({
 export type SocialImportInput = z.infer<typeof socialImportSchema>;
 
 export const socialPostUpdateSchema = z.object({
-  id: z.number().int().positive(),
+  id: z.coerce.number().int().positive(),
   title: z.string().trim().max(200).optional(),
   excerpt: z.string().trim().max(500).optional(),
   content_text: z.string().trim().max(5000).optional(),

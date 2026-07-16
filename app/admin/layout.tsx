@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
+import { isReaderAdmin } from '@/lib/db/queries/reader';
 import { AdminNav } from '@/components/admin-nav';
 
 export const metadata: Metadata = {
@@ -27,13 +28,9 @@ export default async function AdminLayout({
   const isAdminByEmail = adminEmails.length > 0 && adminEmails.includes(user.email ?? '');
 
   if (!isAdminByEmail) {
-    const { data: profile } = await supabase
-      .from('reader_profiles')
-      .select('is_admin')
-      .eq('user_id', user.id)
-      .single();
+    const isAdmin = await isReaderAdmin(user.id);
 
-    if (!profile?.is_admin) {
+    if (!isAdmin) {
       redirect('/');
     }
   }

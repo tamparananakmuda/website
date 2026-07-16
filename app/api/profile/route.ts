@@ -1,18 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
-import { upsertReadingHistory } from '@/lib/db/queries/reader';
+import { updateReaderProfile } from '@/lib/db/queries/reader';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
-import { historySchema } from '@/lib/validations/reading-history';
 import { parseRequestBody } from '@/lib/validations/helpers';
+import { z } from 'zod';
 
 export const dynamic = 'force-dynamic';
 
-export async function POST(request: NextRequest) {
+const profileUpdateSchema = z.object({
+  name: z.string().trim().max(100).optional(),
+});
+
+export async function PATCH(request: NextRequest) {
   try {
     const limit = await rateLimit(request, {
-      limit: 30,
+      limit: 10,
       window: 60,
-      identifier: 'reading-history',
+      identifier: 'profile-update',
     });
     if (!limit.success) {
       return rateLimitResponse(limit);
@@ -24,21 +28,28 @@ export async function POST(request: NextRequest) {
 
     if (!user) {
       return NextResponse.json(
-        { error: 'Masuk untuk menyimpan riwayat baca' },
+        { error: 'Tidak terautentikasi' },
         { status: 401 }
       );
     }
 
-    const parsed = await parseRequestBody(request, historySchema);
+    const parsed = await parseRequestBody(request, profileUpdateSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    await upsertReadingHistory(user.id, parsed.data.post_id, parsed.data.progress);
+    const updateData: Record<string, unknown> = {};
+    if (parsed.data.name !== undefined) updateData.name = parsed.data.name;
+
+    if (Object.keys(updateData).length === 0) {
+      return NextResponse.json({ success: true });
+    }
+
+    await updateReaderProfile(user.id, updateData);
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Reading history error:', error);
+    console.error('Profile update error:', error);
     return NextResponse.json(
-      { error: 'Terjadi kesalahan' },
+      { error: 'Gagal update profil' },
       { status: 500 }
     );
   }

@@ -7,48 +7,38 @@ import { Bookmark, Clock, Heart, LogOut, User } from 'lucide-react';
 import { PushNotificationToggle } from '@/components/push-toggle';
 
 interface PostData {
-  id: number;
+  id: string;
   title: string;
   slug: string;
   excerpt: string | null;
-  categories: { name: string; slug: string }[] | { name: string; slug: string } | null;
+  category?: { title: string; slug: string } | null;
 }
 
 interface BookmarkItem {
-  post_id: number;
-  created_at: string;
-  posts: PostData | PostData[] | null;
+  postId: string;
+  createdAt: string | null;
+  post?: PostData;
 }
 
 interface HistoryItem {
-  post_id: number;
-  read_at: string;
-  progress: number;
-  posts: PostData | PostData[] | null;
-}
-
-function getPost(posts: PostData | PostData[] | null): PostData | null {
-  if (!posts) return null;
-  return Array.isArray(posts) ? posts[0] || null : posts;
-}
-
-function getCategoryName(post: PostData | null): string {
-  if (!post?.categories) return '';
-  return Array.isArray(post.categories) ? post.categories[0]?.name || '' : post.categories.name;
+  postId: string;
+  readAt: string | null;
+  progress: number | null;
+  post?: PostData;
 }
 
 interface DonationItem {
-  transaction_id: string;
+  louvinTransactionId: string;
   amount: number;
   status: string;
-  payment_type: string;
-  created_at: string;
+  paymentType: string;
+  createdAt: string | null;
 }
 
 interface Profile {
   id: string;
   name: string | null;
-  preferred_topics: string[];
+  preferredTopics: string[] | null;
 }
 
 export default function ReaderDashboard({
@@ -70,14 +60,16 @@ export default function ReaderDashboard({
 
   async function handleSaveName() {
     setSaving(true);
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
 
-    await supabase
-      .from('reader_profiles')
-      .update({ name, updated_at: new Date().toISOString() })
-      .eq('user_id', user.id);
+    try {
+      await fetch('/api/profile', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name }),
+      });
+    } catch {
+      // silently fail
+    }
 
     setSaving(false);
     setSaved(true);
@@ -149,11 +141,11 @@ export default function ReaderDashboard({
           ) : (
             <div className="space-y-3">
               {bookmarks.map((bm) => {
-                const post = getPost(bm.posts);
+                const post = bm.post;
                 if (!post) return null;
                 return (
                 <Link
-                  key={bm.post_id}
+                  key={bm.postId}
                   href={`/artikel/${post.slug}`}
                   className="block group"
                 >
@@ -161,7 +153,7 @@ export default function ReaderDashboard({
                     {post.title}
                   </p>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    {getCategoryName(post)} - Disimpan {new Date(bm.created_at).toLocaleDateString('id-ID')}
+                    {post.category?.title || ''} - Disimpan {bm.createdAt ? new Date(bm.createdAt).toLocaleDateString('id-ID') : ''}
                   </p>
                 </Link>
                 );
@@ -184,11 +176,11 @@ export default function ReaderDashboard({
           ) : (
             <div className="space-y-3">
               {history.map((h) => {
-                const post = getPost(h.posts);
+                const post = h.post;
                 if (!post) return null;
                 return (
                 <Link
-                  key={h.post_id}
+                  key={h.postId}
                   href={`/artikel/${post.slug}`}
                   className="block group"
                 >
@@ -197,15 +189,15 @@ export default function ReaderDashboard({
                   </p>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="text-xs text-muted-foreground">
-                      {getCategoryName(post)}
+                      {post.category?.title || ''}
                     </span>
-                    {h.progress > 0 && h.progress < 100 && (
+                    {h.progress && h.progress > 0 && h.progress < 100 && (
                       <span className="text-xs text-primary">
                         Lanjut baca ({h.progress}%)
                       </span>
                     )}
                     <span className="text-xs text-muted-foreground">
-                      - {new Date(h.read_at).toLocaleDateString('id-ID')}
+                      - {h.readAt ? new Date(h.readAt).toLocaleDateString('id-ID') : ''}
                     </span>
                   </div>
                 </Link>
@@ -232,13 +224,13 @@ export default function ReaderDashboard({
           ) : (
             <div className="space-y-3">
               {donations.map((d) => (
-                <div key={d.transaction_id} className="flex items-center justify-between">
+                <div key={d.louvinTransactionId} className="flex items-center justify-between">
                   <div>
                     <p className="font-medium text-foreground">
                       Rp {d.amount.toLocaleString('id-ID')}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      {d.payment_type} - {new Date(d.created_at).toLocaleDateString('id-ID')}
+                      {d.paymentType} - {d.createdAt ? new Date(d.createdAt).toLocaleDateString('id-ID') : ''}
                     </p>
                   </div>
                   <span className={`text-xs px-2 py-1 rounded-full ${

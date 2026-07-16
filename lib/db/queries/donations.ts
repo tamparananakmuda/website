@@ -15,6 +15,13 @@ export async function getDonationByReference(reference: string): Promise<Donatio
   return result[0];
 }
 
+export async function getDonationByLouvinIdAndEmail(louvinTransactionId: string, email: string): Promise<Donation | undefined> {
+  const result = await db.select().from(donations)
+    .where(and(eq(donations.louvinTransactionId, louvinTransactionId), eq(donations.customerEmail, email)))
+    .limit(1);
+  return result[0];
+}
+
 export async function createDonation(data: typeof donations.$inferInsert): Promise<Donation> {
   const result = await db.insert(donations).values(data).returning();
   return result[0];
@@ -26,9 +33,22 @@ export async function updateDonationStatus(reference: string, status: string, ex
     .where(eq(donations.reference, reference));
 }
 
+export async function updateDonationStatusByLouvinId(louvinTransactionId: string, status: string): Promise<void> {
+  await db.update(donations)
+    .set({ status, updatedAt: new Date().toISOString() })
+    .where(eq(donations.louvinTransactionId, louvinTransactionId));
+}
+
 export async function getActiveDonationGoal(): Promise<DonationGoal | undefined> {
   const result = await db.select().from(donationGoals)
     .where(eq(donationGoals.isActive, true))
+    .limit(1);
+  return result[0];
+}
+
+export async function getActiveDonationGoalByPeriod(month: number, year: number): Promise<DonationGoal | undefined> {
+  const result = await db.select().from(donationGoals)
+    .where(and(eq(donationGoals.isActive, true), eq(donationGoals.periodMonth, month), eq(donationGoals.periodYear, year)))
     .limit(1);
   return result[0];
 }
@@ -37,5 +57,12 @@ export async function getDonors(limit = 20): Promise<Donation[]> {
   return db.select().from(donations)
     .where(eq(donations.status, 'settled'))
     .orderBy(desc(donations.createdAt))
+    .limit(limit);
+}
+
+export async function getPublicDonors(limit = 20): Promise<Donation[]> {
+  return db.select().from(donations)
+    .where(and(eq(donations.status, 'settled'), eq(donations.isAnonymous, false)))
+    .orderBy(desc(donations.updatedAt))
     .limit(limit);
 }

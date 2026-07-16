@@ -54,3 +54,28 @@ export async function getRelatedSocialPosts(platform: string, excludeId: bigint,
     .limit(limit + 1)
     .then((rows) => rows.filter((r) => r.id !== excludeId).slice(0, limit));
 }
+
+export async function getAdminSocialPosts(filters: { status?: string; platform?: string; limit?: number }): Promise<SocialPost[]> {
+  const conditions = [];
+  if (filters.status && filters.status !== 'all') {
+    conditions.push(eq(socialPosts.status, filters.status));
+  }
+  if (filters.platform && ['x', 'instagram', 'tiktok', 'youtube'].includes(filters.platform)) {
+    conditions.push(eq(socialPosts.platform, filters.platform));
+  }
+  return db.select().from(socialPosts)
+    .where(conditions.length > 0 ? and(...conditions) : undefined)
+    .orderBy(desc(socialPosts.publishedAt))
+    .limit(filters.limit ?? 20);
+}
+
+export async function deleteSocialPost(id: bigint): Promise<void> {
+  await db.delete(socialPosts).where(eq(socialPosts.id, id));
+}
+
+export async function getSocialPostBySourceUrl(sourceUrl: string): Promise<SocialPost | undefined> {
+  const result = await db.select().from(socialPosts)
+    .where(eq(socialPosts.sourceUrl, sourceUrl))
+    .limit(1);
+  return result[0];
+}

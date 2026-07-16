@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+import { isPremiumUnlocked, unlockPremium } from '@/lib/db/queries/premium';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { premiumUnlockSchema } from '@/lib/validations/premium';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -26,14 +27,9 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ unlocked: false });
     }
 
-    const { data } = await supabase
-      .from('premium_unlocks')
-      .select('id')
-      .eq('reader_id', user.id)
-      .eq('post_id', postId)
-      .single();
+    const unlocked = await isPremiumUnlocked(user.id, postId);
 
-    return NextResponse.json({ unlocked: !!data });
+    return NextResponse.json({ unlocked });
   } catch {
     return NextResponse.json({ unlocked: false });
   }
@@ -66,16 +62,7 @@ export async function POST(request: NextRequest) {
 
     const { post_id } = parsed.data;
 
-    const { error } = await supabase
-      .from('premium_unlocks')
-      .upsert({
-        reader_id: user.id,
-        post_id,
-      }, {
-        onConflict: 'reader_id,post_id',
-      });
-
-    if (error) throw error;
+    await unlockPremium(user.id, post_id);
 
     return NextResponse.json({ success: true, unlocked: true });
   } catch (error) {

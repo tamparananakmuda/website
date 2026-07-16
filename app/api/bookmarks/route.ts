@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+import { createBookmark, deleteBookmark, getBookmarkPostIdsByUser } from '@/lib/db/queries/bookmarks';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { bookmarkSchema } from '@/lib/validations/bookmark';
 import { bookmarksQuerySchema } from '@/lib/validations/query-params';
@@ -32,12 +33,9 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, bookmarkSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    const { error } = await supabase
-      .from('bookmarks')
-      .insert({
-        reader_id: user.id,
-        post_id: parsed.data.post_id,
-      });
+    const { error } = await createBookmark(user.id, parsed.data.post_id)
+      .then(() => ({ error: null }))
+      .catch((e: { code?: string }) => ({ error: e }));
 
     if (error) {
       if (error.code === '23505') {
@@ -88,13 +86,7 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const { error } = await supabase
-      .from('bookmarks')
-      .delete()
-      .eq('reader_id', user.id)
-      .eq('post_id', query.data.post_id);
-
-    if (error) throw error;
+    await deleteBookmark(user.id, query.data.post_id);
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -116,15 +108,10 @@ export async function GET() {
       return NextResponse.json({ bookmarks: [] });
     }
 
-    const { data, error } = await supabase
-      .from('bookmarks')
-      .select('post_id')
-      .eq('reader_id', user.id);
-
-    if (error) throw error;
+    const bookmarkIds = await getBookmarkPostIdsByUser(user.id);
 
     return NextResponse.json({
-      bookmarks: data?.map((b) => b.post_id) || [],
+      bookmarks: bookmarkIds,
     });
   } catch (error) {
     console.error('Bookmark list error:', error);

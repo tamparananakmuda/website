@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { updateContentQueueItem, deleteContentQueueItem } from '@/lib/db/queries/content-queue';
 import { contentQueueUpdateSchema } from '@/lib/validations/content-queue';
 import { parseRequestBody } from '@/lib/validations/helpers';
 
@@ -14,36 +14,39 @@ export async function PATCH(
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const supabase = createClient();
     const parsed = await parseRequestBody(request, contentQueueUpdateSchema);
     if (!parsed.success) return parsed.errorResponse;
 
     const body = parsed.data;
 
     const updateFields: Record<string, unknown> = {};
-    const allowedFields = [
-      'title', 'pillar_id', 'pov_tag', 'target_keyword',
-      'search_intent', 'status', 'assigned_to',
-      'due_date', 'publish_date', 'cta', 'target_platforms', 'notes',
-      'fact_check_status', 'review_status', 'scheduled_date',
-    ];
+    const fieldMap: Record<string, string> = {
+      title: 'title',
+      pillar_id: 'pillarId',
+      pov_tag: 'povTag',
+      target_keyword: 'targetKeyword',
+      search_intent: 'searchIntent',
+      status: 'status',
+      assigned_to: 'assignedTo',
+      due_date: 'dueDate',
+      publish_date: 'publishDate',
+      cta: 'cta',
+      target_platforms: 'targetPlatforms',
+      notes: 'notes',
+      fact_check_status: 'factCheckStatus',
+      review_status: 'reviewStatus',
+      scheduled_date: 'scheduledDate',
+    };
 
-    for (const field of allowedFields) {
-      if (body[field as keyof typeof body] !== undefined) {
-        updateFields[field] = body[field as keyof typeof body];
+    for (const [snakeKey, camelKey] of Object.entries(fieldMap)) {
+      if (body[snakeKey as keyof typeof body] !== undefined) {
+        updateFields[camelKey] = body[snakeKey as keyof typeof body];
       }
     }
 
-    const { data, error } = await supabase
-      .from('content_queue')
-      .update(updateFields)
-      .eq('id', params.id)
-      .select('*, pillar:subcategories(*)')
-      .single();
+    await updateContentQueueItem(params.id, updateFields);
 
-    if (error) throw error;
-
-    return NextResponse.json({ item: data });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Content queue update error:', error);
     return NextResponse.json(
@@ -61,13 +64,7 @@ export async function DELETE(
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const supabase = createClient();
-    const { error } = await supabase
-      .from('content_queue')
-      .delete()
-      .eq('id', params.id);
-
-    if (error) throw error;
+    await deleteContentQueueItem(params.id);
 
     return NextResponse.json({ success: true });
   } catch (error) {

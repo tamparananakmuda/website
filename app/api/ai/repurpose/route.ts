@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { getPostById } from '@/lib/db/queries/posts';
 import { callAI, TAM_SYSTEM_PROMPT, aiErrorResponse } from '@/lib/ai/helper';
 import { aiRepurposeSchema } from '@/lib/validations/ai';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -17,12 +17,7 @@ export async function POST(request: NextRequest) {
 
     const { post_id, platforms } = parsed.data;
 
-    const supabase = createClient();
-    const { data: post } = await supabase
-      .from('posts')
-      .select('title, excerpt, body, slug')
-      .eq('id', post_id)
-      .single();
+    const post = await getPostById(post_id);
 
     if (!post) {
       return NextResponse.json({ error: 'Artikel tidak ditemukan' }, { status: 404 });

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { updateDonationStatusByLouvinId } from '@/lib/db/queries/donations';
 import { donasiStatusQuerySchema } from '@/lib/validations/query-params';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseQueryParams } from '@/lib/validations/helpers';
@@ -47,24 +47,12 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false } }
-    );
-
     if (data.transaction && data.transaction.status) {
       const validStatuses = ['pending', 'settled', 'failed'];
       const status = data.transaction.status;
 
       if (validStatuses.includes(status)) {
-        await supabase
-          .from('donations')
-          .update({
-            status,
-            updated_at: new Date().toISOString(),
-          })
-          .eq('transaction_id', transactionId);
+        await updateDonationStatusByLouvinId(transactionId, status);
       } else {
         console.warn('Unknown donation status from Louvin:', status);
       }

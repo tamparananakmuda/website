@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+import { getPushSubscription, createPushSubscription, updatePushSubscription, deletePushSubscription } from '@/lib/db/queries/push';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { pushSubscribeSchema } from '@/lib/validations/push';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -40,17 +41,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { error } = await supabase
-      .from('push_subscriptions')
-      .upsert({
-        user_id: user.id,
-        subscription: subscription,
-        updated_at: new Date().toISOString(),
-      }, {
-        onConflict: 'user_id',
-      });
-
-    if (error) throw error;
+    const existing = await getPushSubscription(user.id);
+    if (existing) {
+      await updatePushSubscription(user.id, subscription);
+    } else {
+      await createPushSubscription(user.id, subscription);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -75,12 +71,7 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const { error } = await supabase
-      .from('push_subscriptions')
-      .delete()
-      .eq('user_id', user.id);
-
-    if (error) throw error;
+    await deletePushSubscription(user.id);
 
     return NextResponse.json({ success: true });
   } catch (error) {
