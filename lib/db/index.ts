@@ -10,9 +10,11 @@ if (!connectionString) {
   throw new Error('POSTGRES_URL or DATABASE_URL environment variable is required for Drizzle');
 }
 
+type DbInstance = ReturnType<typeof drizzle<typeof schema>>;
+
 const globalForDb = globalThis as unknown as {
   __postgresClient?: ReturnType<typeof postgres>;
-  __drizzleDb?: ReturnType<typeof drizzle>;
+  __drizzleDb?: DbInstance;
 };
 
 const client =
@@ -26,8 +28,9 @@ if (process.env.NODE_ENV !== 'production') {
   globalForDb.__postgresClient = client;
 }
 
-export const db =
-  globalForDb.__drizzleDb ?? drizzle(client, { schema });
+const dbInstance: DbInstance = drizzle(client, { schema });
+
+export const db = globalForDb.__drizzleDb ?? dbInstance;
 
 if (process.env.NODE_ENV !== 'production') {
   globalForDb.__drizzleDb = db;
