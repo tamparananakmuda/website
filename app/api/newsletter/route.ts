@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { newsletterSchema } from '@/lib/validations/newsletter';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,16 +17,8 @@ export async function POST(request: NextRequest) {
       return rateLimitResponse(limit);
     }
 
-    const body = await request.json();
-
-    const parsed = newsletterSchema.safeParse(body);
-    if (!parsed.success) {
-      const firstError = parsed.error.issues[0];
-      return NextResponse.json(
-        { error: firstError?.message || 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, newsletterSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const normalizedEmail = parsed.data.email;
     const topics = parsed.data.topics;

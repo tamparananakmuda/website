@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { donasiStatusSchema } from '@/lib/validations/donasi';
+import { donasiStatusQuerySchema } from '@/lib/validations/query-params';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { parseQueryParams } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,19 +17,10 @@ export async function GET(request: NextRequest) {
       return rateLimitResponse(limit);
     }
 
-    const { searchParams } = new URL(request.url);
-    const transactionId = searchParams.get('transaction_id');
+    const query = parseQueryParams(request, donasiStatusQuerySchema);
+    if (!query.success) return query.errorResponse;
 
-    const parsed = donasiStatusSchema.safeParse({
-      transaction_id: transactionId,
-    });
-    if (!parsed.success) {
-      const firstError = parsed.error.issues[0];
-      return NextResponse.json(
-        { error: firstError?.message || 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const transactionId = query.data.transaction_id;
 
     const apiKey = process.env.LOUVIN_API_KEY;
     if (!apiKey) {
@@ -39,7 +31,7 @@ export async function GET(request: NextRequest) {
     }
 
     const louvinRes = await fetch(
-      `https://api.louvin.dev/check-status?id=${parsed.data.transaction_id}`,
+      `https://api.louvin.dev/check-status?id=${transactionId}`,
       {
         headers: { 'x-api-key': apiKey },
       }
@@ -72,7 +64,7 @@ export async function GET(request: NextRequest) {
             status,
             updated_at: new Date().toISOString(),
           })
-          .eq('transaction_id', parsed.data.transaction_id);
+          .eq('transaction_id', transactionId);
       } else {
         console.warn('Unknown donation status from Louvin:', status);
       }

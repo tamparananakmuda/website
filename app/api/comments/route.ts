@@ -1,23 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createClient as createServiceClient } from '@supabase/supabase-js';
-import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { commentSchema } from '@/lib/validations/comment';
+import { commentsQuerySchema } from '@/lib/validations/query-params';
+import { parseQueryParams, parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
-const commentSchema = z.object({
-  post_id: z.number().int().positive(),
-  body: z.string().trim().min(1, 'Komentar tidak boleh kosong').max(2000, 'Komentar maksimal 2000 karakter'),
-  parent_id: z.string().uuid().optional(),
-});
-
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const postId = searchParams.get('post_id');
+    const query = parseQueryParams(request, commentsQuerySchema);
+    if (!query.success) return query.errorResponse;
 
-    if (!postId) {
+    if (!query.data.post_id) {
       return NextResponse.json(
         { error: 'Post ID wajib diisi' },
         { status: 400 }
@@ -39,7 +35,7 @@ export async function GET(request: NextRequest) {
         created_at,
         updated_at
       `)
-      .eq('post_id', parseInt(postId, 10))
+      .eq('post_id', query.data.post_id)
       .eq('status', 'approved')
       .order('created_at', { ascending: true });
 
@@ -77,15 +73,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const parsed = commentSchema.safeParse(body);
-    if (!parsed.success) {
-      const firstError = parsed.error.issues[0];
-      return NextResponse.json(
-        { error: firstError?.message || 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, commentSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const { data: profile } = await supabase
       .from('reader_profiles')
@@ -124,15 +113,17 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const commentId = searchParams.get('id');
+    const query = parseQueryParams(request, commentsQuerySchema);
+    if (!query.success) return query.errorResponse;
 
-    if (!commentId) {
+    if (!query.data.id) {
       return NextResponse.json(
         { error: 'ID komentar wajib diisi' },
         { status: 400 }
       );
     }
+
+    const commentId = query.data.id;
 
     const supabase = createClient();
     const { data: { session } } = await supabase.auth.getSession();

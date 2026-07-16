@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { contentQueueUpdateSchema } from '@/lib/validations/content-queue';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,18 +15,22 @@ export async function PATCH(
 
   try {
     const supabase = createClient();
-    const body = await request.json();
+    const parsed = await parseRequestBody(request, contentQueueUpdateSchema);
+    if (!parsed.success) return parsed.errorResponse;
+
+    const body = parsed.data;
 
     const updateFields: Record<string, unknown> = {};
     const allowedFields = [
-      'title', 'slug', 'pillar_id', 'pov_tag', 'target_keyword',
-      'search_intent', 'status', 'assigned_writer', 'assigned_editor',
+      'title', 'pillar_id', 'pov_tag', 'target_keyword',
+      'search_intent', 'status', 'assigned_to',
       'due_date', 'publish_date', 'cta', 'target_platforms', 'notes',
+      'fact_check_status', 'review_status', 'scheduled_date',
     ];
 
     for (const field of allowedFields) {
-      if (body[field] !== undefined) {
-        updateFields[field] = body[field];
+      if (body[field as keyof typeof body] !== undefined) {
+        updateFields[field] = body[field as keyof typeof body];
       }
     }
 

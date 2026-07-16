@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { contentQueueCreateSchema } from '@/lib/validations/content-queue';
+import { contentQueueQuerySchema } from '@/lib/validations/query-params';
+import { parseRequestBody, parseQueryParams } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,23 +13,22 @@ export async function GET(request: NextRequest) {
 
   try {
     const supabase = createClient();
-    const { searchParams } = new URL(request.url);
-    const status = searchParams.get('status');
-    const pillar = searchParams.get('pillar');
+    const query = parseQueryParams(request, contentQueueQuerySchema);
+    if (!query.success) return query.errorResponse;
 
-    let query = supabase
+    let supaQuery = supabase
       .from('content_queue')
       .select('*, pillar:subcategories(*)')
       .order('created_at', { ascending: false });
 
-    if (status && status !== 'all') {
-      query = query.eq('status', status);
+    if (query.data.status && query.data.status !== 'all') {
+      supaQuery = supaQuery.eq('status', query.data.status);
     }
-    if (pillar && pillar !== 'all') {
-      query = query.eq('pillar_id', pillar);
+    if (query.data.pillar && query.data.pillar !== 'all') {
+      supaQuery = supaQuery.eq('pillar_id', query.data.pillar);
     }
 
-    const { data, error } = await query;
+    const { data, error } = await supaQuery;
 
     if (error) throw error;
 
@@ -46,7 +48,10 @@ export async function POST(request: NextRequest) {
 
   try {
     const supabase = createClient();
-    const body = await request.json();
+    const parsed = await parseRequestBody(request, contentQueueCreateSchema);
+    if (!parsed.success) return parsed.errorResponse;
+
+    const body = parsed.data;
 
     const { data, error } = await supabase
       .from('content_queue')

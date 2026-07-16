@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { pushSubscribeSchema } from '@/lib/validations/push';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,9 +28,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { subscription } = await request.json();
+    const parsed = await parseRequestBody(request, pushSubscribeSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
-    if (!subscription || !subscription.endpoint) {
+    const { subscription } = parsed.data;
+
+    if (!subscription || !(subscription as { endpoint?: string }).endpoint) {
       return NextResponse.json(
         { error: 'Subscription tidak valid' },
         { status: 400 }

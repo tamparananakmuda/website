@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { premiumUnlockSchema } from '@/lib/validations/premium';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -59,14 +61,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { post_id } = await request.json();
+    const parsed = await parseRequestBody(request, premiumUnlockSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
-    if (!post_id) {
-      return NextResponse.json(
-        { error: 'Post ID wajib diisi' },
-        { status: 400 }
-      );
-    }
+    const { post_id } = parsed.data;
 
     const { error } = await supabase
       .from('premium_unlocks')

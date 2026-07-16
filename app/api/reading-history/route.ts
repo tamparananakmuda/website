@@ -1,14 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
-import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { historySchema } from '@/lib/validations/reading-history';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
-
-const historySchema = z.object({
-  post_id: z.number().int().positive(),
-  progress: z.number().int().min(0).max(100).optional().default(0),
-});
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,14 +28,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const parsed = historySchema.safeParse(body);
-    if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, historySchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const { error } = await supabase
       .from('reading_history')

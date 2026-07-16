@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 import { callAI, TAM_SYSTEM_PROMPT, aiErrorResponse } from '@/lib/ai/helper';
+import { aiOutlineSchema } from '@/lib/validations/ai';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,7 +11,10 @@ export async function POST(request: NextRequest) {
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const { title, pillar, pov_tag, target_keyword } = await request.json();
+    const parsed = await parseRequestBody(request, aiOutlineSchema);
+    if (!parsed.success) return parsed.errorResponse;
+
+    const { title, pillar, pov_tag, target_keyword } = parsed.data;
 
     const userPrompt = `Buat outline artikel TAM berdasarkan info berikut:
 

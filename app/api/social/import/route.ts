@@ -4,6 +4,7 @@ import { socialImportSchema } from '@/lib/validations/social';
 import { previewSocialContent } from '@/lib/social-preview';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,15 +22,8 @@ export async function POST(request: NextRequest) {
       return rateLimitResponse(limit);
     }
 
-    const body = await request.json();
-    const parsed = socialImportSchema.safeParse(body);
-    if (!parsed.success) {
-      const firstError = parsed.error.issues[0];
-      return NextResponse.json(
-        { error: firstError?.message || 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, socialImportSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const preview = await previewSocialContent(parsed.data.url);
 

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 import { callAI, TAM_SYSTEM_PROMPT, aiErrorResponse } from '@/lib/ai/helper';
+import { aiIdeasSchema } from '@/lib/validations/ai';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,7 +11,10 @@ export async function POST(request: NextRequest) {
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const { pillar, keyword, pov_tag, count } = await request.json();
+    const parsed = await parseRequestBody(request, aiIdeasSchema);
+    if (!parsed.success) return parsed.errorResponse;
+
+    const { pillar, keyword, pov_tag, count } = parsed.data;
 
     const userPrompt = `Buat ${count || 5} ide artikel untuk TAM.
 

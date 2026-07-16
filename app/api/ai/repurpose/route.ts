@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 import { callAI, TAM_SYSTEM_PROMPT, aiErrorResponse } from '@/lib/ai/helper';
+import { aiRepurposeSchema } from '@/lib/validations/ai';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,7 +12,10 @@ export async function POST(request: NextRequest) {
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const { post_id, platforms } = await request.json();
+    const parsed = await parseRequestBody(request, aiRepurposeSchema);
+    if (!parsed.success) return parsed.errorResponse;
+
+    const { post_id, platforms } = parsed.data;
 
     const supabase = createClient();
     const { data: post } = await supabase

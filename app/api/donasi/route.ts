@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { donasiSchema, getMinAmount } from '@/lib/validations/donasi';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,16 +19,8 @@ export async function POST(request: NextRequest) {
       return rateLimitResponse(limit);
     }
 
-    const body = await request.json();
-
-    const parsed = donasiSchema.safeParse(body);
-    if (!parsed.success) {
-      const firstError = parsed.error.issues[0];
-      return NextResponse.json(
-        { error: firstError?.message || 'Input tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, donasiSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const { amount, payment_type, customer_name, customer_email, is_anonymous, message, is_recurring } = parsed.data;
 

@@ -3,6 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
 import { generateAndUploadOGImages } from '@/lib/cdn/generate';
 import { deleteOldOGImages } from '@/lib/cdn/r2';
+import { ogGenerateSchema } from '@/lib/validations/og';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,11 +14,10 @@ export async function POST(request: NextRequest) {
   if (!auth.isAdmin) return auth.response;
 
   try {
-    const { slug } = await request.json();
+    const parsed = await parseRequestBody(request, ogGenerateSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
-    if (!slug) {
-      return NextResponse.json({ error: 'Slug wajib diisi' }, { status: 400 });
-    }
+    const { slug } = parsed.data;
 
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,

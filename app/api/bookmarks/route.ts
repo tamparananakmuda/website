@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
-import { z } from 'zod';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { bookmarkSchema } from '@/lib/validations/bookmark';
+import { bookmarksQuerySchema } from '@/lib/validations/query-params';
+import { parseRequestBody, parseQueryParams } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
-
-const bookmarkSchema = z.object({
-  post_id: z.number().int().positive(),
-});
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,14 +29,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const parsed = bookmarkSchema.safeParse(body);
-    if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Post ID tidak valid' },
-        { status: 400 }
-      );
-    }
+    const parsed = await parseRequestBody(request, bookmarkSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
     const { error } = await supabase
       .from('bookmarks')
@@ -86,10 +78,10 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const { searchParams } = new URL(request.url);
-    const postId = searchParams.get('post_id');
+    const query = parseQueryParams(request, bookmarksQuerySchema);
+    if (!query.success) return query.errorResponse;
 
-    if (!postId) {
+    if (!query.data.post_id) {
       return NextResponse.json(
         { error: 'Post ID wajib diisi' },
         { status: 400 }
@@ -100,7 +92,7 @@ export async function DELETE(request: NextRequest) {
       .from('bookmarks')
       .delete()
       .eq('reader_id', user.id)
-      .eq('post_id', parseInt(postId, 10));
+      .eq('post_id', query.data.post_id);
 
     if (error) throw error;
 

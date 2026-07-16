@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { donasiReceiptSchema } from '@/lib/validations/donasi-extra';
+import { parseRequestBody } from '@/lib/validations/helpers';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,14 +17,10 @@ export async function POST(request: NextRequest) {
       return rateLimitResponse(limit);
     }
 
-    const { transaction_id, email } = await request.json();
+    const parsed = await parseRequestBody(request, donasiReceiptSchema);
+    if (!parsed.success) return parsed.errorResponse;
 
-    if (!transaction_id || !email) {
-      return NextResponse.json(
-        { error: 'Transaction ID dan email wajib diisi' },
-        { status: 400 }
-      );
-    }
+    const { transaction_id, email } = parsed.data;
 
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
