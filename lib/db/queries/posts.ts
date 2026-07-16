@@ -34,6 +34,21 @@ export async function getPublishedPostsWithRelations(limit = 10): Promise<PostWi
   return result.map(mapToPostWithRelations);
 }
 
+export async function getAllPublishedPostsWithRelations(): Promise<PostWithRelations[]> {
+  const result = await db.query.posts.findMany({
+    where: and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())),
+    orderBy: desc(posts.publishedAt),
+    with: {
+      category: true,
+      subcategory: true,
+      series: true,
+      author: true,
+      postTags: { with: { tag: true } },
+    },
+  });
+  return result.map(mapToPostWithRelations);
+}
+
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   const result = await db.select().from(posts).where(eq(posts.slug, slug)).limit(1);
   return result[0];
