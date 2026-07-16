@@ -9,10 +9,10 @@ interface SearchResult {
   title: string;
   slug: string;
   excerpt: string | null;
-  cover_image_url: string | null;
-  reading_time: number;
-  published_at: string | null;
-  category: { title: string; slug: string; color: string } | null;
+  coverImageUrl: string | null;
+  readingTime: number | null;
+  publishedAt: string | null;
+  category: { title: string; slug: string; color: string | null } | null;
 }
 
 interface Category {
@@ -148,12 +148,12 @@ export function SearchForm() {
             >
               <div className="mb-2 flex items-center gap-2 text-sm">
                 {result.category && (
-                  <span style={{ color: result.category.color }}>
+                  <span style={{ color: result.category.color ?? undefined }}>
                     {result.category.title}
                   </span>
                 )}
                 <span className="text-muted-foreground">&middot;</span>
-                <span className="text-muted-foreground">{result.reading_time} menit baca</span>
+                <span className="text-muted-foreground">{result.readingTime} menit baca</span>
               </div>
               <h2 className="mb-1 font-semibold text-foreground group-hover:text-primary transition-colors">
                 {result.title}

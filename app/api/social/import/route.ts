@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({
         success: true,
         preview,
-        existing_id: existing.id,
+        existing_id: String(existing.id),
         existing_status: existing.status,
         message: 'Konten ini sudah pernah diimport',
       });
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       preview,
-      id: post.id,
+      id: String(post.id),
     });
   } catch (error) {
     console.error('Social import error:', error);

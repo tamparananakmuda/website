@@ -7,16 +7,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface SocialPost {
-  id: number;
+  id: string;
   platform: string;
-  source_url: string;
-  author_name: string | null;
+  sourceUrl: string;
+  authorName: string | null;
   title: string | null;
   excerpt: string | null;
-  thumbnail_url: string | null;
+  thumbnailUrl: string | null;
   status: string;
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 const platformLabels: Record<string, string> = {
@@ -43,7 +43,7 @@ export default function AdminPostsPage() {
     fetchPosts();
   }, [fetchPosts]);
 
-  async function updateStatus(id: number, status: string) {
+  async function updateStatus(id: string, status: string) {
     await fetch('/api/social/posts', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -52,7 +52,7 @@ export default function AdminPostsPage() {
     fetchPosts();
   }
 
-  async function deletePost(id: number) {
+  async function deletePost(id: string) {
     if (!confirm('Hapus konten ini?')) return;
     await fetch(`/api/social/posts?id=${id}`, { method: 'DELETE' });
     fetchPosts();
@@ -100,9 +100,9 @@ export default function AdminPostsPage() {
               layout
               className="flex items-center gap-4 rounded-lg border border-border bg-card p-4"
             >
-              {post.thumbnail_url ? (
+              {post.thumbnailUrl ? (
                 <Image
-                  src={post.thumbnail_url}
+                  src={post.thumbnailUrl}
                   alt=""
                   width={64}
                   height={64}
@@ -134,7 +134,7 @@ export default function AdminPostsPage() {
                   {post.title || post.excerpt || 'Tanpa judul'}
                 </p>
                 <p className="text-xs text-muted-foreground truncate">
-                  {post.author_name || 'Unknown'} - {new Date(post.created_at).toLocaleDateString('id-ID')}
+                  {post.authorName || 'Unknown'} - {new Date(post.createdAt).toLocaleDateString('id-ID')}
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ export default function AdminPostsPage() {
                   </button>
                 )}
                 <a
-                  href={post.source_url}
+                  href={post.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-md hover:bg-secondary text-muted-foreground"

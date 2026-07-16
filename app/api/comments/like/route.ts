@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      likes_count: comment?.likesCount || 0,
+      likesCount: comment?.likesCount || 0,
     });
   } catch (error) {
     console.error('Comment like error:', error);

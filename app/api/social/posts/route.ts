@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
 
     const posts = await getAdminSocialPosts({ status, platform, limit });
 
-    return NextResponse.json({ posts });
+    return NextResponse.json({ posts: posts.map((p) => ({ ...p, id: String(p.id) })) });
   } catch (error) {
     console.error('Social posts list error:', error);
     return NextResponse.json(

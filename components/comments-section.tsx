@@ -6,14 +6,14 @@ import { MessageSquare, Heart, Trash2, Loader2, Send, CornerDownRight } from 'lu
 
 interface Comment {
   id: string;
-  post_id: number;
-  parent_id: string | null;
-  reader_id: string | null;
-  author_name: string;
+  postId: string;
+  parentId: string | null;
+  readerId: string | null;
+  authorName: string;
   body: string;
-  likes_count: number;
-  created_at: string;
-  updated_at: string;
+  likesCount: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
 interface CommentsSectionProps {
@@ -45,18 +45,18 @@ function CommentItem({
   onLike: (commentId: string) => void;
   onDelete: (commentId: string) => void;
 }) {
-  const isOwner = currentUserId && comment.reader_id === currentUserId;
+  const isOwner = currentUserId && comment.readerId === currentUserId;
 
   return (
     <div className="py-4">
       <div className="flex items-start gap-3">
         <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary flex-shrink-0">
-          {comment.author_name[0]?.toUpperCase() || 'A'}
+          {comment.authorName[0]?.toUpperCase() || 'A'}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-sm font-medium text-foreground">{comment.author_name}</span>
-            <span className="text-xs text-muted-foreground">{timeAgo(comment.created_at)}</span>
+            <span className="text-sm font-medium text-foreground">{comment.authorName}</span>
+            <span className="text-xs text-muted-foreground">{timeAgo(comment.createdAt)}</span>
           </div>
           <p className="text-sm text-foreground whitespace-pre-wrap leading-relaxed">{comment.body}</p>
           <div className="flex items-center gap-4 mt-2">
@@ -65,7 +65,7 @@ function CommentItem({
               className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
             >
               <Heart className="w-3.5 h-3.5" />
-              {comment.likes_count > 0 && <span>{comment.likes_count}</span>}
+              {comment.likesCount > 0 && <span>{comment.likesCount}</span>}
             </button>
             <button
               onClick={() => onReply(comment.id)}
@@ -172,7 +172,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
         const data = await res.json();
         setComments((prev) =>
           prev.map((c) =>
-            c.id === commentId ? { ...c, likes_count: data.likes_count } : c
+            c.id === commentId ? { ...c, likesCount: data.likesCount } : c
           )
         );
       }
@@ -192,8 +192,8 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
     }
   }
 
-  const topLevelComments = comments.filter((c) => !c.parent_id);
-  const getReplies = (parentId: string) => comments.filter((c) => c.parent_id === parentId);
+  const topLevelComments = comments.filter((c) => !c.parentId);
+  const getReplies = (parentId: string) => comments.filter((c) => c.parentId === parentId);
 
   return (
     <section className="mx-auto max-w-3xl mt-12 pt-8 border-t border-border">

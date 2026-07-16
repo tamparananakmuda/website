@@ -11,7 +11,7 @@ interface AnalyticsData {
   byMonth: { month: string; count: number }[];
   byPillar: { title: string; count: number }[];
   pipeline: { status: string; count: number }[];
-  topPosts: { id: string; title: string; slug: string; published_at: string | null }[];
+  topPosts: { id: string; title: string; slug: string; publishedAt: string | null }[];
 }
 
 const monthLabels: Record<string, string> = {
@@ -231,9 +231,9 @@ export default function AnalyticsDashboard() {
               >
                 <span className="text-xs text-muted-foreground w-6">{i + 1}.</span>
                 <span className="flex-1 truncate font-medium">{post.title}</span>
-                {post.published_at && (
+                {post.publishedAt && (
                   <span className="text-xs text-muted-foreground">
-                    {new Date(post.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    {new Date(post.publishedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                   </span>
                 )}
               </Link>

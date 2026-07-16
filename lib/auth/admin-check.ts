@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
+import { isReaderAdmin } from '@/lib/db/queries/reader';
 import { NextResponse } from 'next/server';
 
 type AdminAuthSuccess = { isAdmin: true; response: null };
@@ -28,13 +29,9 @@ export async function checkAdminAuth(): Promise<AdminAuthResult> {
     return { isAdmin: true, response: null };
   }
 
-  const { data: profile } = await supabase
-    .from('reader_profiles')
-    .select('is_admin')
-    .eq('user_id', user.id)
-    .single();
+  const isAdmin = await isReaderAdmin(user.id);
 
-  if (profile?.is_admin) {
+  if (isAdmin) {
     return { isAdmin: true, response: null };
   }
 
