@@ -1,0 +1,30 @@
+name: Publish Scheduled Articles
+
+on:
+  schedule:
+    # Every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Trigger publish-scheduled endpoint
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 \
+            --retry 2 \
+            --retry-delay 5 \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "https://tamparananakmuda.com/api/cron/publish-scheduled")
+
+          echo "HTTP status: $response"
+
+          if [ "$response" = "200" ]; then
+            echo "Cron triggered successfully"
+          else
+            echo "Cron failed with status $response"
+            exit 1
+          fi
