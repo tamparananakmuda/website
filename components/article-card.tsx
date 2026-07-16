@@ -3,10 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Category, Post } from '@/types/database';
+import type { Category, PostWithRelations } from '@/lib/db/schema';
 
 interface ArticleCardProps {
-  post: Post & { category?: Category };
+  post: PostWithRelations;
 }
 
 export function ArticleCard({ post }: ArticleCardProps) {
@@ -20,7 +20,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
             <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 to-muted/10" />
           )}
           <Image
-            src={post.og_card_url || post.og_image_url || `/api/og/card?slug=${post.slug}`}
+            src={post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`}
             alt={post.title}
             fill
             unoptimized
@@ -44,18 +44,18 @@ export function ArticleCard({ post }: ArticleCardProps) {
               {post.category.title}
             </span>
           )}
-          {post.is_sponsored && (
+          {post.isSponsored && (
             <span className="rounded-full bg-yellow-500/10 px-2 py-0.5 text-xs font-semibold text-yellow-600">
               Sponsored
             </span>
           )}
-          {post.is_premium && (
+          {post.isPremium && (
             <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
               Premium
             </span>
           )}
           <span className="text-muted-foreground">&middot;</span>
-          <span className="text-muted-foreground">{post.reading_time} menit baca</span>
+          <span className="text-muted-foreground">{post.readingTime} menit baca</span>
         </div>
         <h2 className="mb-2 text-2xl font-bold leading-tight transition-colors group-hover:text-primary">
           {post.title}

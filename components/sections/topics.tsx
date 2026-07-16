@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Category } from '@/types/database';
+import type { Category } from '@/lib/db/schema';
 
 interface TopicsProps {
   categories: Category[];

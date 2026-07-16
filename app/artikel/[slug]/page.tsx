@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedPostWithRelationsBySlug, getRelatedPosts } from '@/lib/db/queries/posts';
 import { MarkdownContent } from '@/components/markdown-content';
 import { FeatureImage } from '@/components/feature-image';
 import { ArticleSchema } from '@/components/schema/article-schema';
@@ -47,14 +47,7 @@ export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
   try {
-    const supabase = createPublicClient();
-    const { data: post } = await supabase
-      .from('posts')
-      .select('title, excerpt, seo_meta_title, seo_meta_description, seo_keywords, published_at, updated_at, slug, og_image_url, og_feature_url')
-      .eq('slug', params.slug)
-      .eq('status', 'published')
-      .lte('published_at', new Date().toISOString())
-      .single();
+    const post = await getPublishedPostWithRelationsBySlug(params.slug);
 
     if (!post) {
       return { title: 'Artikel Tidak Ditemukan' };
@@ -64,9 +57,9 @@ export async function generateMetadata({
     const url = `${siteUrl}/artikel/${post.slug}`;
 
     return {
-      title: post.seo_meta_title || post.title,
-      description: post.seo_meta_description || post.excerpt || undefined,
-      keywords: post.seo_keywords || undefined,
+      title: post.seoMetaTitle || post.title,
+      description: post.seoMetaDescription || post.excerpt || undefined,
+      keywords: post.seoKeywords || undefined,
       robots: { index: true, follow: true },
       alternates: {
         canonical: url,
@@ -75,17 +68,17 @@ export async function generateMetadata({
         type: 'article',
         locale: 'id_ID',
         url,
-        title: post.seo_meta_title || post.title,
-        description: post.seo_meta_description || post.excerpt || undefined,
-        publishedTime: post.published_at || undefined,
-        modifiedTime: post.updated_at || undefined,
-        images: post.og_image_url ? [{ url: post.og_image_url, width: 1600, height: 900 }] : undefined,
+        title: post.seoMetaTitle || post.title,
+        description: post.seoMetaDescription || post.excerpt || undefined,
+        publishedTime: post.publishedAt || undefined,
+        modifiedTime: post.updatedAt || undefined,
+        images: post.ogImageUrl ? [{ url: post.ogImageUrl, width: 1600, height: 900 }] : undefined,
       },
       twitter: {
         card: 'summary_large_image',
-        title: post.seo_meta_title || post.title,
-        description: post.seo_meta_description || post.excerpt || undefined,
-        images: post.og_image_url ? [post.og_image_url] : undefined,
+        title: post.seoMetaTitle || post.title,
+        description: post.seoMetaDescription || post.excerpt || undefined,
+        images: post.ogImageUrl ? [post.ogImageUrl] : undefined,
       },
     };
   } catch (err) {
@@ -96,60 +89,37 @@ export async function generateMetadata({
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   try {
-    const supabase = createPublicClient();
-    const { data: post, error: postError } = await supabase
-      .from('posts')
-      .select('*, category:categories(*), author:authors(*), series:series(*)')
-      .eq('slug', params.slug)
-      .eq('status', 'published')
-      .lte('published_at', new Date().toISOString())
-      .single();
-
-    if (postError) {
-      console.error('Article fetch error:', postError);
-    }
+    const post = await getPublishedPostWithRelationsBySlug(params.slug);
 
     if (!post) {
       notFound();
     }
 
-    const { data: related, error: relatedError } = await supabase
-      .from('posts')
-      .select('id, title, slug, excerpt, cover_image_url, reading_time, category:categories(*)')
-      .eq('status', 'published')
-      .lte('published_at', new Date().toISOString())
-      .neq('id', post.id)
-      .eq('category_id', post.category_id)
-      .order('published_at', { ascending: false })
-      .limit(3);
-
-    if (relatedError) {
-      console.error('Related fetch error:', relatedError);
-    }
+    const related = await getRelatedPosts(post.categoryId!, post.id, 3);
 
     return (
       <article className="container mx-auto px-4 py-12">
-        <link rel="preload" as="image" href={post.og_feature_url || post.og_image_url || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
+        <link rel="preload" as="image" href={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
         <ArticleSchema
           title={post.title}
           description={post.excerpt || ''}
           slug={post.slug}
-          publishedAt={post.published_at || post.created_at}
-          modifiedAt={post.updated_at}
+          publishedAt={post.publishedAt || post.createdAt || ''}
+          modifiedAt={post.updatedAt || undefined}
           authorName={post.author?.name}
           authorBio={post.author?.bio || undefined}
           authorSlug={post.author?.slug || undefined}
           categoryTitle={post.category?.title}
           categorySlug={post.category?.slug}
-          readingTime={post.reading_time}
-          imageUrl={post.og_image_url || undefined}
-          keywords={post.seo_keywords || undefined}
-          isPremium={post.is_premium}
-          isSponsored={post.is_sponsored}
-          sponsorName={post.sponsor_name || undefined}
-          citations={post.source_references as { title?: string; url?: string }[] | undefined}
+          readingTime={post.readingTime || undefined}
+          imageUrl={post.ogImageUrl || undefined}
+          keywords={post.seoKeywords || undefined}
+          isPremium={post.isPremium || undefined}
+          isSponsored={post.isSponsored || undefined}
+          sponsorName={post.sponsorName || undefined}
+          citations={post.sourceReferences as { title?: string; url?: string }[] | undefined}
           wordCount={post.body?.split(/\s+/).length}
-          humanReviewed={post.human_signature || false}
+          humanReviewed={post.humanSignature || false}
         />
         {post.author && post.author.name && post.author.name !== 'TAMPARAN ANAK MUDA' && (
           <AuthorSchema
@@ -165,7 +135,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {/* Feature image */}
         <FeatureImage
-          src={post.og_feature_url || post.og_image_url || `/api/og/feature?slug=${post.slug}`}
+          src={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`}
           alt={post.title}
         />
 
@@ -177,7 +147,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </span>
             )}
             <span className="text-muted-foreground">&bull;</span>
-            <span className="text-muted-foreground">{post.reading_time} menit baca</span>
+            <span className="text-muted-foreground">{post.readingTime ?? 1} menit baca</span>
           </div>
           <h1 className="mb-6 text-3xl font-bold leading-tight md:text-5xl">
             {post.title}
@@ -189,11 +159,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div className="mb-8 flex items-center justify-between text-sm text-muted-foreground">
               <div>
                 Ditulis oleh {post.author.name}
-                {post.published_at && (
-                  <time dateTime={post.published_at} className="ml-2">&middot; {new Date(post.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                {post.publishedAt && (
+                  <time dateTime={post.publishedAt} className="ml-2">&middot; {new Date(post.publishedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
                 )}
-                {post.updated_at && post.updated_at !== post.published_at && (
-                  <time dateTime={post.updated_at} className="ml-2">&middot; Diperbarui: {new Date(post.updated_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                {post.updatedAt && post.updatedAt !== post.publishedAt && (
+                  <time dateTime={post.updatedAt} className="ml-2">&middot; Diperbarui: {new Date(post.updatedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
                 )}
               </div>
               <BookmarkButton postId={post.id} />
@@ -201,22 +171,22 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
         </header>
 
-        {post.is_sponsored && post.sponsor_name && (
+        {post.isSponsored && post.sponsorName && (
           <div className="mx-auto max-w-3xl mb-6">
             <SponsoredBadge
-              sponsorName={post.sponsor_name}
-              sponsorUrl={post.sponsor_url}
-              disclosure={post.sponsor_disclosure}
+              sponsorName={post.sponsorName}
+              sponsorUrl={post.sponsorUrl || undefined}
+              disclosure={post.sponsorDisclosure || undefined}
             />
           </div>
         )}
 
         <section className="mx-auto max-w-3xl" aria-label="Konten artikel">
           <TableOfContents body={post.body} />
-          {post.is_premium ? (
+          {post.isPremium ? (
             <>
-              <MarkdownContent body={post.premium_excerpt || post.excerpt || ''} />
-              <PremiumGate postId={post.id} excerpt={post.premium_excerpt || post.excerpt} />
+              <MarkdownContent body={post.premiumExcerpt || post.excerpt || ''} />
+              <PremiumGate postId={post.id} excerpt={post.premiumExcerpt || post.excerpt || ''} />
             </>
           ) : (
             <MarkdownContent body={post.body} />
@@ -227,10 +197,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <ShareButtons title={post.title} slug={post.slug} />
         </div>
 
-        {!post.is_sponsored && <DonationCTA />}
+        {!post.isSponsored && <DonationCTA />}
 
         {related && related.length > 0 && (
-          <RelatedArticles articles={related} />
+          <RelatedArticles articles={related.map((r) => ({
+            id: r.id,
+            title: r.title,
+            slug: r.slug,
+            excerpt: r.excerpt,
+            coverImageUrl: r.coverImageUrl,
+            readingTime: r.readingTime ?? 1,
+            category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
+          }))} />
         )}
 
         <CommentsSection postId={post.id} />

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Bookmark, BookmarkCheck } from 'lucide-react';
 
-export function BookmarkButton({ postId }: { postId: number }) {
+export function BookmarkButton({ postId }: { postId: string }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);

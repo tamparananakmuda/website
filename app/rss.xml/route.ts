@@ -1,40 +1,22 @@
-import { createClient } from '@supabase/supabase-js';
+import { getPublishedPostsWithRelations } from '@/lib/db/queries/posts';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600;
 
 export async function GET() {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
-
-  const { data: posts } = await supabase
-    .from('posts')
-    .select(`
-      id, title, slug, excerpt, published_at, created_at, updated_at, og_image_url, og_feature_url,
-      category:categories ( title ),
-      author:authors ( name )
-    `)
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .limit(20);
+  const posts = await getPublishedPostsWithRelations(20);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
   const items = (posts || [])
     .map((post) => {
       const url = `${siteUrl}/artikel/${post.slug}`;
-      const pubDate = new Date(post.published_at || post.created_at).toUTCString();
+      const pubDate = new Date(post.publishedAt || post.createdAt || new Date()).toUTCString();
       const description = post.excerpt || '';
-      const ogImage = post.og_feature_url || post.og_image_url || `${siteUrl}/artikel/${post.slug}/opengraph-image`;
+      const ogImage = post.ogFeatureUrl || post.ogImageUrl || `${siteUrl}/artikel/${post.slug}/opengraph-image`;
 
-      const categoryList = post.category as unknown as { title: string }[] | null;
-      const authorList = post.author as unknown as { name: string }[] | null;
-      const category = categoryList?.[0];
-      const author = authorList?.[0];
+      const category = post.category;
+      const author = post.author;
 
       return `    <item>
       <title><![CDATA[${post.title}]]></title>

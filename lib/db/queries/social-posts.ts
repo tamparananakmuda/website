@@ -30,3 +30,27 @@ export async function createSocialPost(data: typeof socialPosts.$inferInsert): P
 export async function updateSocialPost(id: string, data: Partial<typeof socialPosts.$inferInsert>): Promise<void> {
   await db.update(socialPosts).set({ ...data, updatedAt: new Date().toISOString() }).where(eq(socialPosts.id, BigInt(id)));
 }
+
+export async function getPublishedSocialPostsForSitemap(): Promise<{ id: bigint; updatedAt: string | null }[]> {
+  return db.select({ id: socialPosts.id, updatedAt: socialPosts.updatedAt }).from(socialPosts)
+    .where(eq(socialPosts.status, 'published'))
+    .orderBy(desc(socialPosts.createdAt));
+}
+
+export async function getPublishedSocialPostById(id: string): Promise<SocialPost | undefined> {
+  const result = await db.select().from(socialPosts)
+    .where(and(eq(socialPosts.id, BigInt(id)), eq(socialPosts.status, 'published')))
+    .limit(1);
+  return result[0];
+}
+
+export async function getRelatedSocialPosts(platform: string, excludeId: bigint, limit = 4): Promise<SocialPost[]> {
+  return db.select().from(socialPosts)
+    .where(and(
+      eq(socialPosts.status, 'published'),
+      eq(socialPosts.platform, platform),
+    ))
+    .orderBy(desc(socialPosts.publishedAt))
+    .limit(limit + 1)
+    .then((rows) => rows.filter((r) => r.id !== excludeId).slice(0, limit));
+}

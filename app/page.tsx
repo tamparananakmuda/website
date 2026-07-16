@@ -1,4 +1,5 @@
-import { createPublicClient } from '@/lib/supabase/public';
+import { getAllCategories } from '@/lib/db/queries/categories';
+import { getPublishedPostsWithRelations } from '@/lib/db/queries/posts';
 import { Hero } from '@/components/sections/hero';
 import { FeaturedQuote } from '@/components/sections/featured-quote';
 import { Philosophy } from '@/components/sections/philosophy';
@@ -14,20 +15,9 @@ import { FAQSchema } from '@/components/schema/faq-schema';
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const supabase = createPublicClient();
-
-  const [{ data: categories }, { data: recentPosts }] = await Promise.all([
-    supabase
-      .from('categories')
-      .select('*')
-      .order('title', { ascending: true }),
-    supabase
-      .from('posts')
-      .select('*, category:categories(*)')
-      .eq('status', 'published')
-      .lte('published_at', new Date().toISOString())
-      .order('published_at', { ascending: false })
-      .limit(3),
+  const [categories, recentPosts] = await Promise.all([
+    getAllCategories(),
+    getPublishedPostsWithRelations(3),
   ]);
 
   return (

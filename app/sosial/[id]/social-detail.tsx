@@ -6,28 +6,13 @@ import { ExternalLink, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { SocialNewsletterCTA } from '@/components/social/social-newsletter-cta';
 
-interface SocialPost {
-  id: number;
-  platform: string;
-  source_url: string;
-  author_name: string | null;
-  author_handle: string | null;
-  title: string | null;
-  excerpt: string | null;
-  content_text: string | null;
-  thumbnail_url: string | null;
-  video_url: string | null;
-  media_urls: string[];
-  transcript: string | null;
-  tags: string[];
-  published_at: string | null;
-}
+import type { SocialPost } from '@/lib/db/schema';
 
 interface RelatedPost {
-  id: number;
+  id: bigint;
   platform: string;
   title: string | null;
-  thumbnail_url: string | null;
+  thumbnailUrl: string | null;
 }
 
 const platformLabels: Record<string, string> = {
@@ -70,9 +55,9 @@ export default function SocialDetail({
           <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium">
             {platformLabels[post.platform] || post.platform}
           </span>
-          {post.published_at && (
+          {post.publishedAt && (
             <span className="text-xs text-muted-foreground">
-              {new Date(post.published_at).toLocaleDateString('id-ID', {
+              {new Date(post.publishedAt).toLocaleDateString('id-ID', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',
@@ -95,25 +80,25 @@ export default function SocialDetail({
       )}
 
       {/* Author */}
-      {post.author_name && (
+      {post.authorName && (
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold">
-            {post.author_name[0]?.toUpperCase()}
+            {post.authorName[0]?.toUpperCase()}
           </div>
           <div>
-            <p className="font-medium text-foreground">{post.author_name}</p>
-            {post.author_handle && (
-              <p className="text-xs text-muted-foreground">@{post.author_handle}</p>
+            <p className="font-medium text-foreground">{post.authorName}</p>
+            {post.authorHandle && (
+              <p className="text-xs text-muted-foreground">@{post.authorHandle}</p>
             )}
           </div>
         </div>
       )}
 
       {/* Video embed */}
-      {post.video_url && (post.platform === 'youtube' || post.platform === 'tiktok') && (
+      {post.videoUrl && (post.platform === 'youtube' || post.platform === 'tiktok') && (
         <div className="rounded-lg overflow-hidden bg-black aspect-video mb-6">
           <iframe
-            src={post.video_url}
+            src={post.videoUrl}
             className="w-full h-full"
             allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -122,9 +107,9 @@ export default function SocialDetail({
       )}
 
       {/* Thumbnail for non-video platforms */}
-      {!post.video_url && post.thumbnail_url && (
+      {!post.videoUrl && post.thumbnailUrl && (
         <Image
-          src={post.thumbnail_url}
+          src={post.thumbnailUrl}
           alt={post.title || ''}
           width={800}
           height={450}
@@ -135,23 +120,23 @@ export default function SocialDetail({
       )}
 
       {/* Media gallery */}
-      {post.media_urls.length > 0 && !post.video_url && (
+      {(post.mediaUrls?.length ?? 0) > 0 && !post.videoUrl && (
         <div className="grid grid-cols-2 gap-3 mb-6">
-          {post.media_urls.map((url, i) => (
+          {post.mediaUrls!.map((url, i) => (
             <Image key={i} src={url} alt={`Media ${i + 1}`} width={400} height={300} loading="lazy" className="rounded-lg w-full" unoptimized />
           ))}
         </div>
       )}
 
       {/* Content text */}
-      {post.content_text && (
+      {post.contentText && (
         <div className="prose prose-invert max-w-none mb-6">
-          <p className="text-foreground whitespace-pre-wrap leading-relaxed">{post.content_text}</p>
+          <p className="text-foreground whitespace-pre-wrap leading-relaxed">{post.contentText}</p>
         </div>
       )}
 
       {/* Excerpt fallback */}
-      {!post.content_text && post.excerpt && (
+      {!post.contentText && post.excerpt && (
         <p className="text-muted-foreground leading-relaxed mb-6">{post.excerpt}</p>
       )}
 
@@ -168,9 +153,9 @@ export default function SocialDetail({
       )}
 
       {/* Tags */}
-      {post.tags.length > 0 && (
+      {(post.tags?.length ?? 0) > 0 && (
         <div className="flex gap-2 flex-wrap mb-6">
-          {post.tags.map((tag) => (
+          {post.tags!.map((tag) => (
             <span key={tag} className="text-sm text-primary">#{tag}</span>
           ))}
         </div>
@@ -178,7 +163,7 @@ export default function SocialDetail({
 
       {/* Source link */}
       <a
-        href={post.source_url}
+        href={post.sourceUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline mb-8"
@@ -201,8 +186,8 @@ export default function SocialDetail({
                 href={`/sosial/${r.id}`}
                 className="group rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-colors"
               >
-                {r.thumbnail_url ? (
-                  <Image src={r.thumbnail_url} alt={r.title || 'Thumbnail'} width={200} height={113} loading="lazy" className="w-full aspect-video object-cover" unoptimized />
+                {r.thumbnailUrl ? (
+                  <Image src={r.thumbnailUrl} alt={r.title || 'Thumbnail'} width={200} height={113} loading="lazy" className="w-full aspect-video object-cover" unoptimized />
                 ) : (
                   <div className="w-full aspect-video bg-secondary" />
                 )}

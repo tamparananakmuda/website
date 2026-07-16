@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { createClient } from '@supabase/supabase-js';
+import { getPublishedSocialPostById } from '@/lib/db/queries/social-posts';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
@@ -13,18 +13,7 @@ interface Props {
 }
 
 export default async function Image({ params }: Props) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
-
-  const { data: post } = await supabase
-    .from('social_posts')
-    .select('title, excerpt, platform, thumbnail_url, published_at')
-    .eq('id', parseInt(params.id, 10))
-    .eq('status', 'published')
-    .single();
+  const post = await getPublishedSocialPostById(params.id);
 
   const fonts = await getFonts();
 
@@ -53,10 +42,10 @@ export default async function Image({ params }: Props) {
   return new ImageResponse(
     (
       <OgTemplate
-        title={post.title}
+        title={post.title || 'Konten TAM'}
         category="SOSIAL"
         platform={post.platform}
-        publishedAt={post.published_at}
+        publishedAt={post.publishedAt}
         size="sosial"
       />
     ),

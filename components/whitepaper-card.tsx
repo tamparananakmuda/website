@@ -6,9 +6,9 @@ interface WhitepaperCardProps {
   title: string;
   subtitle: string | null;
   summary: string | null;
-  reading_time: number;
-  tags: string[];
-  cover_image_url: string | null;
+  readingTime: number | null;
+  tags: string[] | null;
+  coverImageUrl: string | null;
 }
 
 export function WhitepaperCard({
@@ -16,9 +16,9 @@ export function WhitepaperCard({
   title,
   subtitle,
   summary,
-  reading_time,
+  readingTime,
   tags,
-  cover_image_url,
+  coverImageUrl,
 }: WhitepaperCardProps) {
   return (
     <Link
@@ -31,7 +31,7 @@ export function WhitepaperCard({
         <span>&middot;</span>
         <span className="flex items-center gap-1">
           <Clock className="w-3 h-3" />
-          {reading_time} menit baca
+          {readingTime} menit baca
         </span>
       </div>
 

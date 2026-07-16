@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { createClient } from '@supabase/supabase-js';
+import { getPublishedPostWithRelationsBySlug } from '@/lib/db/queries/posts';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
@@ -14,23 +14,7 @@ export async function GET(request: Request) {
     return new Response('Missing slug parameter', { status: 400 });
   }
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
-
-  const { data: post } = await supabase
-    .from('posts')
-    .select(`
-      title, og_headline, cover_image_url, published_at,
-      is_premium, is_sponsored,
-      category:categories ( title, slug, color )
-    `)
-    .eq('slug', slug)
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .single();
+  const post = await getPublishedPostWithRelationsBySlug(slug);
 
   if (!post) {
     return new Response('Article not found', { status: 404 });
@@ -38,8 +22,7 @@ export async function GET(request: Request) {
 
   const fonts = await getFonts();
 
-  const categoryList = post.category as unknown as { title: string; slug: string; color: string }[] | null;
-  const category = categoryList?.[0] ?? null;
+  const category = post.category ?? null;
 
   return new ImageResponse(
     (
@@ -48,11 +31,11 @@ export async function GET(request: Request) {
         category={category?.title}
         categoryColor={category?.color}
         categorySlug={category?.slug}
-        publishedAt={post.published_at}
-        isPremium={post.is_premium}
-        isSponsored={post.is_sponsored}
-        coverImageUrl={post.cover_image_url}
-        ogHeadline={post.og_headline || undefined}
+        publishedAt={post.publishedAt}
+        isPremium={post.isPremium || undefined}
+        isSponsored={post.isSponsored || undefined}
+        coverImageUrl={post.coverImageUrl}
+        ogHeadline={post.ogHeadline || undefined}
         size="card"
       />
     ),

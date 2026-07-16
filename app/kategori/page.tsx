@@ -1,4 +1,4 @@
-import { createPublicClient } from '@/lib/supabase/public';
+import { getCategoriesWithSubcategories } from '@/lib/db/queries/categories';
 import Link from 'next/link';
 
 export const revalidate = 60;
@@ -24,12 +24,7 @@ export const metadata = {
 };
 
 export default async function CategoriesPage() {
-  const supabase = createPublicClient();
-
-  const { data: categories } = await supabase
-    .from('categories')
-    .select('*, subcategories(*)')
-    .order('title', { ascending: true });
+  const categories = await getCategoriesWithSubcategories();
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">
@@ -63,8 +58,8 @@ export default async function CategoriesPage() {
               {category.subcategories && category.subcategories.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {category.subcategories
-                    .sort((a: { sort_order: number }, b: { sort_order: number }) => a.sort_order - b.sort_order)
-                    .map((sub: { id: string; slug: string; title: string }) => (
+                    .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+                    .map((sub) => (
                       <Link
                         key={sub.id}
                         href={`/kategori/${category.slug}?pillar=${sub.slug}`}

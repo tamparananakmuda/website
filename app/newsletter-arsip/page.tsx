@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedIssues } from '@/lib/db/queries/newsletter';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { Mail, Calendar } from 'lucide-react';
 
@@ -26,13 +26,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function NewsletterArchivePage() {
-  const supabase = createPublicClient();
-
-  const { data: issues } = await supabase
-    .from('newsletter_issues')
-    .select('id, issue_number, title, subject, excerpt, sent_at, created_at')
-    .eq('is_published', true)
-    .order('issue_number', { ascending: false });
+  const issues = await getPublishedIssues();
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">
@@ -64,12 +58,12 @@ export default async function NewsletterArchivePage() {
             >
               <div className="flex items-center gap-3 mb-2 text-sm text-muted-foreground">
                 <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
-                  Edisi #{issue.issue_number}
+                  Edisi #{issue.issueNumber}
                 </span>
-                {issue.sent_at && (
+                {issue.sentAt && (
                   <span className="flex items-center gap-1 text-xs">
                     <Calendar className="w-3 h-3" />
-                    {new Date(issue.sent_at).toLocaleDateString('id-ID', {
+                    {new Date(issue.sentAt).toLocaleDateString('id-ID', {
                       day: 'numeric',
                       month: 'long',
                       year: 'numeric',

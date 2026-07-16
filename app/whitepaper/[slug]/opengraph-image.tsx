@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { createClient } from '@supabase/supabase-js';
+import { getPublishedWhitepaperBySlug } from '@/lib/db/queries/whitepapers';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
@@ -13,18 +13,7 @@ interface Props {
 }
 
 export default async function Image({ params }: Props) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
-
-  const { data: wp } = await supabase
-    .from('whitepapers')
-    .select('title, summary, subtitle, cover_image_url, published_at')
-    .eq('slug', params.slug)
-    .eq('status', 'published')
-    .single();
+  const wp = await getPublishedWhitepaperBySlug(params.slug);
 
   const fonts = await getFonts();
 
@@ -56,8 +45,8 @@ export default async function Image({ params }: Props) {
         title={wp.title}
         category="WHITEPAPER"
         excerpt={wp.summary || wp.subtitle || undefined}
-        publishedAt={wp.published_at}
-        coverImageUrl={wp.cover_image_url}
+        publishedAt={wp.publishedAt}
+        coverImageUrl={wp.coverImageUrl}
         size="og"
       />
     ),

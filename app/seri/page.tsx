@@ -1,4 +1,4 @@
-import { createPublicClient } from '@/lib/supabase/public';
+import { getAllSeries } from '@/lib/db/queries/series';
 import Link from 'next/link';
 
 export const revalidate = 60;
@@ -24,12 +24,7 @@ export const metadata = {
 };
 
 export default async function SeriesPage() {
-  const supabase = createPublicClient();
-
-  const { data: series } = await supabase
-    .from('series')
-    .select('*')
-    .order('title', { ascending: true });
+  const series = await getAllSeries();
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">

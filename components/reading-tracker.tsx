@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export function ReadingTracker({ postId }: { postId: number }) {
+export function ReadingTracker({ postId }: { postId: string }) {
   const lastReported = useRef(0);
   const userId = useRef<string | null>(null);
 

@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { createClient } from '@supabase/supabase-js';
+import { getPublishedPostWithRelationsBySlug, countPublishedPostsInSeries } from '@/lib/db/queries/posts';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
@@ -14,25 +14,7 @@ export async function GET(request: Request) {
     return new Response('Missing slug parameter', { status: 400 });
   }
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } }
-  );
-
-  const { data: post } = await supabase
-    .from('posts')
-    .select(`
-      title, excerpt, og_headline, cover_image_url, published_at, reading_time,
-      is_premium, is_sponsored, series_order,
-      category:categories ( title, slug, color ),
-      series:series ( id, title ),
-      author:authors ( name )
-    `)
-    .eq('slug', slug)
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .single();
+  const post = await getPublishedPostWithRelationsBySlug(slug);
 
   if (!post) {
     return new Response('Article not found', { status: 404 });
@@ -40,24 +22,15 @@ export async function GET(request: Request) {
 
   const fonts = await getFonts();
 
-  const categoryList = post.category as unknown as { title: string; slug: string; color: string }[] | null;
-  const authorList = post.author as unknown as { name: string }[] | null;
-  const seriesList = post.series as unknown as { id: string; title: string }[] | null;
-  const category = categoryList?.[0] ?? null;
-  const author = authorList?.[0] ?? null;
-  const series = seriesList?.[0] ?? null;
+  const category = post.category ?? null;
+  const author = post.author ?? null;
+  const series = post.series ?? null;
 
   let seriesCurrent: number | undefined;
   let seriesTotal: number | undefined;
-  if (series && post.series_order) {
-    const { count } = await supabase
-      .from('posts')
-      .select('id', { count: 'exact', head: true })
-      .eq('series_id', series.id)
-      .eq('status', 'published')
-      .lte('published_at', new Date().toISOString());
-    seriesCurrent = post.series_order;
-    seriesTotal = count || undefined;
+  if (series && post.seriesOrder) {
+    seriesTotal = await countPublishedPostsInSeries(series.id);
+    seriesCurrent = post.seriesOrder ?? undefined;
   }
 
   return new ImageResponse(
@@ -68,15 +41,15 @@ export async function GET(request: Request) {
         categoryColor={category?.color}
         categorySlug={category?.slug}
         excerpt={post.excerpt || undefined}
-        readingTime={post.reading_time}
-        publishedAt={post.published_at}
+        readingTime={post.readingTime || undefined}
+        publishedAt={post.publishedAt}
         authorName={author?.name}
-        isPremium={post.is_premium}
-        isSponsored={post.is_sponsored}
+        isPremium={post.isPremium || undefined}
+        isSponsored={post.isSponsored || undefined}
         seriesCurrent={seriesCurrent}
         seriesTotal={seriesTotal}
-        coverImageUrl={post.cover_image_url}
-        ogHeadline={post.og_headline || undefined}
+        coverImageUrl={post.coverImageUrl}
+        ogHeadline={post.ogHeadline || undefined}
         size="feature"
       />
     ),

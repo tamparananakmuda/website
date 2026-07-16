@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedSocialPostById, getRelatedSocialPosts } from '@/lib/db/queries/social-posts';
 import SocialDetail from './social-detail';
 import Link from 'next/link';
 
@@ -9,14 +9,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const supabase = createPublicClient();
-
-  const { data: post } = await supabase
-    .from('social_posts')
-    .select('title, excerpt, platform')
-    .eq('id', parseInt(params.id, 10))
-    .eq('status', 'published')
-    .single();
+  const post = await getPublishedSocialPostById(params.id);
 
   if (!post) return { title: 'Konten tidak ditemukan' };
 
@@ -46,24 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export const revalidate = 300;
 
 export default async function SocialPostPage({ params }: Props) {
-  const supabase = createPublicClient();
-
-  const { data: post } = await supabase
-    .from('social_posts')
-    .select('*')
-    .eq('id', parseInt(params.id, 10))
-    .eq('status', 'published')
-    .single();
+  const post = await getPublishedSocialPostById(params.id);
 
   if (!post) notFound();
 
-  const { data: related } = await supabase
-    .from('social_posts')
-    .select('id, platform, title, thumbnail_url')
-    .eq('status', 'published')
-    .eq('platform', post.platform)
-    .neq('id', post.id)
-    .limit(4);
+  const related = await getRelatedSocialPosts(post.platform, post.id, 4);
 
   return (
     <main className="container mx-auto px-4 py-12">

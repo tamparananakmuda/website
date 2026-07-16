@@ -6,21 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Play, ExternalLink } from 'lucide-react';
 
-interface SocialPost {
-  id: number;
-  platform: string;
-  source_url: string;
-  author_name: string | null;
-  author_handle: string | null;
-  title: string | null;
-  excerpt: string | null;
-  content_text: string | null;
-  thumbnail_url: string | null;
-  video_url: string | null;
-  media_urls: string[];
-  tags: string[];
-  published_at: string | null;
-}
+import type { SocialPost } from '@/lib/db/schema';
 
 const platformLabels: Record<string, string> = {
   x: 'X',
@@ -91,10 +77,10 @@ export default function SocialGrid({ posts }: { posts: SocialPost[] }) {
             className="group rounded-lg border border-border bg-card overflow-hidden hover:border-primary/50 transition-colors"
           >
             <Link href={`/sosial/${post.id}`}>
-              {post.thumbnail_url ? (
+              {post.thumbnailUrl ? (
                 <div className="relative aspect-video overflow-hidden bg-secondary">
                   <Image
-                    src={post.thumbnail_url}
+                    src={post.thumbnailUrl}
                     alt={post.title || ''}
                     width={400}
                     height={225}
@@ -102,7 +88,7 @@ export default function SocialGrid({ posts }: { posts: SocialPost[] }) {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     unoptimized
                   />
-                  {post.video_url && (
+                  {post.videoUrl && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                       <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
                         <Play className="w-5 h-5 text-black fill-black ml-0.5" />
@@ -121,24 +107,24 @@ export default function SocialGrid({ posts }: { posts: SocialPost[] }) {
                   <span className={`text-xs rounded px-2 py-0.5 text-white ${platformColors[post.platform] || 'bg-gray-500'}`}>
                     {platformLabels[post.platform]}
                   </span>
-                  {post.author_name && (
-                    <span className="text-xs text-muted-foreground truncate">{post.author_name}</span>
+                  {post.authorName && (
+                    <span className="text-xs text-muted-foreground truncate">{post.authorName}</span>
                   )}
                 </div>
 
                 {post.title && (
                   <h3 className="font-medium text-foreground line-clamp-2 mb-1">{post.title}</h3>
                 )}
-                {!post.title && post.content_text && (
-                  <p className="text-sm text-foreground line-clamp-2 mb-1">{post.content_text}</p>
+                {!post.title && post.contentText && (
+                  <p className="text-sm text-foreground line-clamp-2 mb-1">{post.contentText}</p>
                 )}
                 {post.excerpt && !post.title && (
                   <p className="text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
                 )}
 
-                {post.tags.length > 0 && (
+                {(post.tags?.length ?? 0) > 0 && (
                   <div className="flex gap-1 mt-2 flex-wrap">
-                    {post.tags.slice(0, 3).map((tag) => (
+                    {post.tags!.slice(0, 3).map((tag) => (
                       <span key={tag} className="text-xs text-primary">#{tag}</span>
                     ))}
                   </div>

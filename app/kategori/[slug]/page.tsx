@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getCategoryWithSubcategoriesBySlug } from '@/lib/db/queries/categories';
+import { getPostsByCategorySlug } from '@/lib/db/queries/posts';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { CollectionPageSchema } from '@/components/schema/collection-page-schema';
@@ -15,12 +16,7 @@ export const revalidate = 60;
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
-  const supabase = createPublicClient();
-  const { data: category } = await supabase
-    .from('categories')
-    .select('title, description, slug')
-    .eq('slug', params.slug)
-    .single();
+  const category = await getCategoryWithSubcategoriesBySlug(params.slug);
 
   if (!category) {
     return { title: 'Kategori Tidak Ditemukan' };
@@ -49,30 +45,17 @@ export async function generateMetadata({
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const supabase = createPublicClient();
-
-  const { data: category } = await supabase
-    .from('categories')
-    .select('*, subcategories(*)')
-    .eq('slug', params.slug)
-    .single();
+  const category = await getCategoryWithSubcategoriesBySlug(params.slug);
 
   if (!category) {
     notFound();
   }
 
   const sortedSubs = (category.subcategories || []).sort(
-    (a: { sort_order: number }, b: { sort_order: number }) => a.sort_order - b.sort_order
+    (a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0)
   );
 
-  const { data: posts } = await supabase
-    .from('posts')
-    .select('*, category:categories(*), subcategory:subcategories(*)')
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .eq('category_id', category.id)
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .limit(12);
+  const posts = await getPostsByCategorySlug(category.slug, 12);
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">
@@ -81,7 +64,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         name={category.title}
         slug={category.slug}
         description={category.description || undefined}
-        items={(posts || []).map((p) => ({ title: p.title, slug: p.slug }))}
+        items={posts.map((p) => ({ title: p.title, slug: p.slug }))}
       />
       <header className="mb-12 max-w-2xl">
         <h1
@@ -98,7 +81,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       {sortedSubs.length > 0 && (
         <div className="mb-8 flex flex-wrap gap-2">
           <span className="text-sm font-medium text-muted-foreground">Pillar:</span>
-          {sortedSubs.map((sub: { id: string; slug: string; title: string }) => (
+          {sortedSubs.map((sub) => (
             <Link
               key={sub.id}
               href={`/kategori/${category.slug}?pillar=${sub.slug}`}

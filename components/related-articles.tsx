@@ -6,9 +6,9 @@ interface RelatedArticle {
   title: string;
   slug: string;
   excerpt: string | null;
-  cover_image_url: string | null;
-  reading_time: number;
-  category?: { title: string; slug: string; color: string } | { title: string; slug: string; color: string }[] | null;
+  coverImageUrl: string | null;
+  readingTime: number;
+  category?: { title: string; slug: string; color: string } | null;
 }
 
 interface RelatedArticlesProps {
@@ -17,7 +17,7 @@ interface RelatedArticlesProps {
 
 function getCategory(article: RelatedArticle): { title: string; slug: string; color: string } | null {
   if (!article.category) return null;
-  return Array.isArray(article.category) ? article.category[0] || null : article.category;
+  return article.category;
 }
 
 export function RelatedArticles({ articles }: RelatedArticlesProps) {
@@ -51,7 +51,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
                     </span>
                   )}
                   <span className="text-muted-foreground">•</span>
-                  <span className="text-muted-foreground">{article.reading_time} menit baca</span>
+                  <span className="text-muted-foreground">{article.readingTime} menit baca</span>
                 </div>
                 <h3 className="mb-2 text-xl font-bold leading-tight transition-colors group-hover:text-primary">
                   {article.title}

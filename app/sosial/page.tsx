@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedSocialPosts } from '@/lib/db/queries/social-posts';
+import type { SocialPost } from '@/lib/db/schema';
 import SocialGrid from './social-grid';
 
 export const metadata: Metadata = {
@@ -23,16 +24,15 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
 export default async function SosialPage() {
-  const supabase = createPublicClient();
-
-  const { data: posts } = await supabase
-    .from('social_posts')
-    .select('*')
-    .eq('status', 'published')
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .limit(24);
+  let posts: SocialPost[] = [];
+  try {
+    posts = await getPublishedSocialPosts(24);
+  } catch {
+    // social_posts table may not exist yet in the Drizzle-connected DB
+  }
 
   return (
     <main className="container mx-auto px-4 py-12">

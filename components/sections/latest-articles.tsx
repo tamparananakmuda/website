@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { ArticleCard } from '@/components/article-card';
-import { Post, Category } from '@/types/database';
+import type { PostWithRelations } from '@/lib/db/schema';
 
 interface LatestArticlesProps {
-  posts: (Post & { category?: Category })[];
+  posts: PostWithRelations[];
 }
 
 export function LatestArticles({ posts }: LatestArticlesProps) {

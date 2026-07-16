@@ -1,4 +1,4 @@
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedPostsWithRelations } from '@/lib/db/queries/posts';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
@@ -25,15 +25,7 @@ export const metadata = {
 };
 
 export default async function ArticlesPage() {
-  const supabase = createPublicClient();
-
-  const { data: posts } = await supabase
-    .from('posts')
-    .select('*, category:categories(*)')
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .limit(12);
+  const posts = await getPublishedPostsWithRelations(12);
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">

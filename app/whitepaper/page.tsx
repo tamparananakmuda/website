@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedWhitepapers } from '@/lib/db/queries/whitepapers';
 import { WhitepaperCard } from '@/components/whitepaper-card';
 
 export const metadata: Metadata = {
@@ -28,13 +28,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function WhitepaperIndexPage() {
-  const supabase = createPublicClient();
-
-  const { data: whitepapers } = await supabase
-    .from('whitepapers')
-    .select('slug, title, subtitle, summary, reading_time, tags, cover_image_url, published_at')
-    .eq('status', 'published')
-    .order('published_at', { ascending: false });
+  const whitepapers = await getPublishedWhitepapers();
 
   return (
     <main className="container mx-auto px-4 py-12 md:py-20">

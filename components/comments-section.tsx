@@ -17,7 +17,7 @@ interface Comment {
 }
 
 interface CommentsSectionProps {
-  postId: number;
+  postId: string;
 }
 
 function timeAgo(date: string): string {

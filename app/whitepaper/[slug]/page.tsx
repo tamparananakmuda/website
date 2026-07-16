@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { createPublicClient } from '@/lib/supabase/public';
+import { getPublishedWhitepaperBySlug, getRelatedWhitepapers } from '@/lib/db/queries/whitepapers';
 import { MarkdownContent } from '@/components/markdown-content';
 import { TableOfContents } from '@/components/table-of-contents';
 import { ShareButtons } from '@/components/share-buttons';
@@ -17,13 +17,7 @@ export const revalidate = 60;
 export async function generateMetadata({
   params,
 }: WhitepaperPageProps): Promise<Metadata> {
-  const supabase = createPublicClient();
-  const { data: wp } = await supabase
-    .from('whitepapers')
-    .select('title, subtitle, summary, slug')
-    .eq('slug', params.slug)
-    .eq('status', 'published')
-    .single();
+  const wp = await getPublishedWhitepaperBySlug(params.slug);
 
   if (!wp) {
     return { title: 'Whitepaper Tidak Ditemukan' };
@@ -52,26 +46,13 @@ export async function generateMetadata({
 }
 
 export default async function WhitepaperDetailPage({ params }: WhitepaperPageProps) {
-  const supabase = createPublicClient();
-
-  const { data: wp } = await supabase
-    .from('whitepapers')
-    .select('*')
-    .eq('slug', params.slug)
-    .eq('status', 'published')
-    .single();
+  const wp = await getPublishedWhitepaperBySlug(params.slug);
 
   if (!wp) {
     notFound();
   }
 
-  const { data: related } = await supabase
-    .from('whitepapers')
-    .select('slug, title, subtitle, summary, reading_time, tags, cover_image_url')
-    .eq('status', 'published')
-    .neq('id', wp.id)
-    .order('published_at', { ascending: false })
-    .limit(3);
+  const related = await getRelatedWhitepapers(wp.id, 3);
 
   return (
     <article className="container mx-auto px-4 py-12">
@@ -90,7 +71,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
           <span>&middot;</span>
           <span className="flex items-center gap-1">
             <Clock className="w-3 h-3" />
-            {wp.reading_time} menit baca
+            {wp.readingTime} menit baca
           </span>
         </div>
 
@@ -111,9 +92,9 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
         <div className="mb-8 flex items-center justify-between">
           <div className="text-sm text-muted-foreground">
             {wp.author}
-            {wp.published_at && (
+            {wp.publishedAt && (
               <span className="ml-2">
-                &middot; {new Date(wp.published_at).toLocaleDateString('id-ID', {
+                &middot; {new Date(wp.publishedAt).toLocaleDateString('id-ID', {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
@@ -121,9 +102,9 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
               </span>
             )}
           </div>
-          {wp.download_url && (
+          {wp.downloadUrl && (
             <a
-              href={wp.download_url}
+              href={wp.downloadUrl}
               className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               <Download className="w-4 h-4" />

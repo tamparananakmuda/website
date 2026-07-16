@@ -28,3 +28,19 @@ export async function getSubcategoriesByCategory(categoryId: string): Promise<Su
 export async function getAllSubcategories(): Promise<Subcategory[]> {
   return db.select().from(subcategories).orderBy(asc(subcategories.title));
 }
+
+export async function getCategoryWithSubcategoriesBySlug(slug: string): Promise<CategoryWithSubcategories | undefined> {
+  const result = await db.query.categories.findFirst({
+    where: eq(categories.slug, slug),
+    with: { subcategories: true },
+  });
+  return result as CategoryWithSubcategories | undefined;
+}
+
+export async function getCategoriesForSitemap(): Promise<{ slug: string; updatedAt: string | null }[]> {
+  return db.select({ slug: categories.slug, updatedAt: categories.updatedAt }).from(categories);
+}
+
+export async function getSubcategoriesForSitemap(): Promise<{ slug: string; categoryId: string }[]> {
+  return db.select({ slug: subcategories.slug, categoryId: subcategories.categoryId }).from(subcategories);
+}
