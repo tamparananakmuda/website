@@ -633,7 +633,7 @@ Karena Umami cookieless dan tidak track PII secara default:
 
 | Data | Retention | Tool |
 |---|---|---|
-| Umami analytics | 12 bulan (default) | Supabase PostgreSQL |
+| Umami analytics | 12 bulan (default) | PostgreSQL (Supabase host) |
 | Brevo contacts | Selama subscriber aktif | Brevo |
 | Search Console | 16 bulan | Google Search Console |
 | Sentry errors | 30 hari (free tier) | Sentry |

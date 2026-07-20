@@ -6,10 +6,10 @@
 
 ---
 
-## 1. Architecture Decision: Static Site + Supabase
+## 1. Architecture Decision: Next.js + PostgreSQL (Drizzle ORM) + Supabase Auth
 
 ### Keputusan
-**Next.js (App Router) + Supabase (PostgreSQL + Auth + Storage)**
+**Next.js (App Router) + PostgreSQL via Drizzle ORM + Supabase (Auth only) + Cloudflare R2 (OG images CDN)**
 
 ### Rationale
 
@@ -17,16 +17,17 @@
 |---|---|---|---|
 | **WordPress** | Familiar, plugin lengkap | Hosting cost, security burden, slow | ❌ |
 | **Next.js + Sanity** | Fast, SEO-friendly, DX bagus | Vendor lock-in, pricing model tidak predictable | ❌ |
-| **Next.js + Supabase** | Open-source, gratis generous, PostgreSQL native, Auth built-in, Storage built-in | Perlu setup sendiri | ✅ Recommended |
+| **Next.js + Supabase** | Open-source, gratis generous, PostgreSQL native, Auth built-in | Perlu setup sendiri | ✅ Recommended |
 | **Astro + MDX** | Ultra-fast, file-based | Kurang fleksibel untuk non-dev editor | ⚠️ Alternatif |
 | **Webflow** | Visual editor, cepat | Mahal, vendor lock-in | ❌ |
 
-**Alasan Next.js + Supabase:**
+**Alasan Next.js + PostgreSQL (Drizzle ORM):**
 - Vercel hosting gratis untuk hobby/small project
-- Supabase free tier: 500MB database, 1GB storage, 50k monthly active users auth, 2GB bandwidth
+- Supabase free tier: 500MB database, 50k monthly active users auth, 2GB bandwidth
 - PostgreSQL native - data kita milik sendiri, bisa migrate kapan saja
+- Drizzle ORM untuk type-safe database queries (migrated from Supabase REST API)
 - Supabase Auth built-in - siap untuk admin panel dan fitur user di Phase 2-3
-- Supabase Storage - upload gambar/cover image dengan CDN bawaan
+- Cloudflare R2 untuk OG images CDN (migrated from Supabase Storage)
 - Open-source, tidak ada vendor lock-in
 - SEO optimal dengan SSG/ISR
 - Yovie/tim BHUYA bisa extend sendiri
@@ -41,10 +42,10 @@ Layer             Technology              Alasan
 Frontend          Next.js 15 (App Router) SSG + ISR, SEO, React 19
 Styling           Tailwind CSS v4         Utility-first, konsisten
 UI Components     shadcn/ui + Radix       Accessible, customizable
-Database          Supabase (PostgreSQL)   Open-source, free tier, data milik sendiri
+Database          PostgreSQL (Drizzle ORM)  Open-source, type-safe, data milik sendiri
 Auth              Supabase Auth           Built-in, cookie-based, siap Phase 2+
-Storage           Supabase Storage        Upload gambar, CDN bawaan, 1GB free
-CMS               Supabase + Admin Panel  Custom admin route di Next.js
+Storage           Cloudflare R2 (cdn-tam)  OG images CDN, S3-compatible, no egress fee
+CMS               Drizzle ORM + Admin Panel Custom admin route di Next.js
 Email/Newsletter  Brevo (ex-Sendinblue)   Free tier 300 email/hari
 Payment Gateway   Louvin (louvin.dev)     QRIS, e-wallet, VA - no formal business docs
 Analytics         Umami (self-hosted)     Privacy-first, gratis
@@ -54,7 +55,8 @@ Uptime Monitoring Uptime Kuma (self-hosted) Downtime alert
 Hosting           Vercel                  Free tier, auto-deploy dari Git
 Domain            tamparananakmuda.com    Sudah dikonfigurasi
 Search            Algolia (free tier)     Search artikel - Phase 2
-OG Images         @vercel/og               Dynamic social preview
+OG Images         @vercel/og + sharp + R2  Dynamic social preview, WebP, 2 sizes
+Cron              GitHub Actions          Every 5 min, auto-publish + OG gen
 ```
 
 ---
@@ -86,18 +88,19 @@ OG Images         @vercel/og               Dynamic social preview
        │              │
        ▼              ▼
 ┌──────────┐   ┌──────────────┐   ┌──────────────────┐
-│ SUPABASE │   │    BREVO     │   │     UMAMI        │
-│ (DB+Auth │   │  (Email/     │   │  (Analytics)     │
-│ +Storage)│   │  Newsletter) │   │                  │
+│ POSTGRES │   │    BREVO     │   │     UMAMI        │
+│ (Drizzle │   │  (Email/     │   │  (Analytics)     │
+│  ORM)    │   │  Newsletter) │   │                  │
+│          │   │              │   │                  │
+│ SUPABASE │   │              │   │                  │
+│ (Auth)   │   │              │   │                  │
 └──────────┘   └──────────────┘   └──────────────────┘
-       │                                              │
-       ▼                                              ▼
+       │              │
+       ▼              ▼
 ┌──────────────┐   ┌──────────────────┐     ┌──────────────────┐
-│  UPSTASH     │   │     SENTRY       │     │     LOUVIN       │
-│  (Redis)     │   │  (Error/Perf)    │     │  (Payment GW)    │
-│  (P1: rate   │   │                  │     │  (Phase 2)     │
-│  limit, P2:  │   │                  │     │                  │
-│  cache)      │   │                  │     │                  │
+│ CLOUDFLARE   │   │     SENTRY       │     │     LOUVIN       │
+│ R2 (CDN)     │   │  (Error/Perf)    │     │  (Payment GW)    │
+│ (OG images)  │   │                  │     │  (Phase 2)       │
 └──────────────┘   └──────────────────┘     └──────────────────┘
 
 External Monitoring: Uptime Kuma (self-hosted) → pings tamparananakmuda.com
@@ -105,7 +108,7 @@ External Monitoring: Uptime Kuma (self-hosted) → pings tamparananakmuda.com
 
 ---
 
-## 4. Content Model (Supabase Tables)
+## 4. Content Model (Database Tables - Drizzle ORM Schema)
 
 ### Table: `categories` (Kategori)
 
@@ -120,13 +123,14 @@ create table categories (
   created_at timestamptz default now()
 );
 
--- Seed data kategori awal
+-- Seed data kategori awal (updated via migration 000003)
 insert into categories (title, slug, description, color) values
   ('Mindset', 'mindset', 'Cara pikir yang salah dipercaya, dan cara pikir alternatif yang lebih kuat.', '#D13A3A'),
-  ('Karir & Tujuan', 'karir-tujuan', 'Navigasi dunia kerja dan pencarian makna di usia muda.', '#4080D9'),
-  ('Relasi', 'relasi', 'Hubungan dengan orang lain, dengan diri sendiri, dengan komunitas.', '#40B880'),
-  ('Keuangan', 'keuangan', 'Financial literacy yang realistis untuk anak muda Indonesia.', '#D9A040'),
-  ('Identitas', 'identitas', 'Siapa kamu, kenapa kamu seperti ini, dan kamu mau jadi siapa.', '#A040D9');
+  ('Karier', 'karier', 'Navigasi dunia kerja dan pencarian makna di usia muda.', '#4080D9'),
+  ('Kehidupan', 'kehidupan', 'Hubungan dengan orang lain, dengan diri sendiri, dengan komunitas.', '#40B880'),
+  ('Uang', 'uang', 'Financial literacy yang realistis untuk anak muda Indonesia.', '#D9A040'),
+  ('Bisnis', 'bisnis', 'Siapa kamu, kenapa kamu seperti ini, dan kamu mau jadi siapa.', '#A040D9'),
+  ('Teknologi', 'teknologi', 'Tools, bukan hype. AI, coding, gadget, blockchain.', '#6040D9');
 ```
 
 ### Table: `series` (Seri Konten)
@@ -152,7 +156,7 @@ create table authors (
   name text not null,
   slug text unique not null,
   bio text,
-  avatar_url text,                       -- URL from Supabase Storage
+  avatar_url text,                       -- URL from Cloudflare R2 or external
   social_instagram text,
   social_twitter text,
   social_linkedin text,
@@ -177,7 +181,7 @@ create table posts (
   slug text unique not null,
   excerpt text check (char_length(excerpt) <= 160),
   body text not null,                    -- Markdown content
-  cover_image_url text,                  -- URL from Supabase Storage
+  cover_image_url text,                  -- URL from Cloudflare R2 or external
   cover_image_alt text,
   category_id uuid references categories(id) on delete set null,
   series_id uuid references series(id) on delete set null,
@@ -405,8 +409,10 @@ create trigger trg_settings_updated_at before update on site_settings
 
 ### RLS Policies (Row Level Security)
 
+**Note:** App code menggunakan Drizzle ORM (server-side only), sehingga RLS tidak relevan untuk app queries. RLS masih aktif sebagai defense-in-depth jika ada direct Supabase access.
+
 ```sql
--- Enable RLS
+-- Enable RLS (defense-in-depth, app code uses Drizzle ORM server-side)
 alter table posts enable row level security;
 alter table categories enable row level security;
 alter table authors enable row level security;
@@ -681,7 +687,10 @@ export type PostPublic = {
 | `/tentang` | SSG | Static | Tidak pernah berubah |
 | `/admin/*` | Dynamic (SSR) | - | Protected route, admin only |
 | `/api/subscribe` | Dynamic | - | Server action |
-| `/api/og` | Dynamic | - | Generate OG image on-demand |
+| `/api/og/generate` | Dynamic | - | Admin API: generate OG images to R2 CDN |
+| `/api/og/card` | Dynamic | - | Fallback: generate card OG on-demand |
+| `/api/og/feature` | Dynamic | - | Fallback: generate feature OG on-demand |
+| `/api/cron/publish-scheduled` | Dynamic | - | Cron: auto-publish + OG generate (GitHub Actions) |
 
 ---
 
@@ -747,9 +756,13 @@ tamparananakmuda.com/api/tiktok/scripts            ← List/manage video scripts
 - Pings homepage dan `/api/subscribe`
 - Alert via email/Telegram/Discord
 
-### Vercel OG
-- Dynamic OG image per artikel: judul + kategori + branding TAM
-- Generated di `/api/og?title=...`
+### Vercel OG + R2 CDN
+- Dynamic OG image per artikel: og_headline + kategori + branding TAM
+- Generated via `@vercel/og` (OgTemplate) + `sharp` (WebP quality 85)
+- 2 sizes: card (800x450) untuk ArticleCard, feature (1600x900) untuk article page + social meta
+- Upload ke R2 CDN: `og/{slug}-card.webp` dan `og/{slug}-feature.webp`
+- Auto-generate saat cron publish artikel, atau manual via admin API `/api/og/generate`
+- Template file: `lib/og/template.tsx`
 
 ### Louvin Payment Gateway (Phase 2)
 - Backend proxy: `/api/donation/create` dan `/api/donation/webhook`
@@ -778,13 +791,24 @@ tamparananakmuda.com/api/tiktok/scripts            ← List/manage video scripts
 ## 8. Environment Variables
 
 ```env
-# Supabase
+# Database (Drizzle ORM)
+POSTGRES_URL=                         # PostgreSQL connection string (pooling)
+POSTGRES_URL_NON_POOLING=             # PostgreSQL connection string (non-pooling, for migrations)
+
+# Supabase (auth only)
 NEXT_PUBLIC_SUPABASE_URL=           # Public URL (safe for client)
 NEXT_PUBLIC_SUPABASE_ANON_KEY=      # Public anon key (safe for client)
-SUPABASE_SERVICE_ROLE_KEY=            # Server-only, full admin access
+SUPABASE_SERVICE_ROLE_KEY=            # Server-only, untuk Supabase Auth admin only
 
-# Supabase Storage
-NEXT_PUBLIC_SUPABASE_STORAGE_URL=   # Public storage URL
+# Cloudflare R2 (OG images CDN)
+R2_ACCESS_KEY_ID=                     # Server-only
+R2_SECRET_ACCESS_KEY=                 # Server-only
+R2_ENDPOINT=                          # Server-only, R2 S3 endpoint
+R2_BUCKET_NAME=cdn-tam                 # Server-only, bucket name
+CDN_BASE_URL=https://cdn.tamparananakmuda.com  # Public CDN domain
+
+# Cron (GitHub Actions)
+CRON_SECRET=                          # Server-only, auth untuk publish-scheduled cron
 
 # Brevo
 BREVO_API_KEY=                        # Server-only
@@ -812,7 +836,7 @@ UPSTASH_REDIS_REST_URL=               # Server-only
 UPSTASH_REDIS_REST_TOKEN=             # Server-only
 ```
 
-**⚠️ KEAMANAN:** `SUPABASE_SERVICE_ROLE_KEY`, `BREVO_API_KEY`, `SENTRY_AUTH_TOKEN`, `LOUVIN_API_KEY`, dan `UPSTASH_REDIS_REST_TOKEN` TIDAK BOLEH di-prefix `NEXT_PUBLIC_` - hanya digunakan di server-side (API routes, Server Components).
+**⚠️ KEAMANAN:** `POSTGRES_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `R2_SECRET_ACCESS_KEY`, `BREVO_API_KEY`, `SENTRY_AUTH_TOKEN`, `LOUVIN_API_KEY`, `CRON_SECRET`, dan `UPSTASH_REDIS_REST_TOKEN` TIDAK BOLEH di-prefix `NEXT_PUBLIC_` - hanya digunakan di server-side (API routes, Server Components).
 
 ---
 
@@ -820,10 +844,11 @@ UPSTASH_REDIS_REST_TOKEN=             # Server-only
 
 ### Workflow
 
-1. **Local development:** edit schema di `supabase/migrations/*.sql`.
-2. **Test locally:** `supabase db start` → `supabase db reset`.
-3. **Deploy to staging:** `supabase db push --linked` (staging project).
-4. **Deploy to production:** `supabase db push --linked` (prod project) setelah staging OK.
+1. **Local development:** edit schema di `lib/db/schema.ts` (Drizzle ORM).
+2. **Generate migration:** `npx drizzle-kit generate`.
+3. **Push to DB:** `npx drizzle-kit push` atau jalankan migration SQL manual.
+4. **Test locally:** pastikan `.env.local` punya `POSTGRES_URL` dan `POSTGRES_URL_NON_POOLING`.
+5. **Deploy to production:** push ke GitHub, Vercel auto-deploy. Pastikan env vars `POSTGRES_URL` di-set di Vercel.
 
 ### Directory Structure
 
@@ -895,11 +920,13 @@ export const redis = new Redis({
 - Supabase Pro: point-in-time recovery (PITR) 7 hari.
 - Manual export: `supabase db dump` sebelum migration besar.
 
-### Storage (Supabase Storage)
+### Storage (Cloudflare R2)
 
-- Cover images dan assets di-storage di Supabase.
-- Pertimbangkan backup ke S3-compatible storage (Backblaze B2) untuk critical assets.
-- Local development: jangan hapus production bucket.
+- OG images di-storage di Cloudflare R2 bucket `cdn-tam`.
+- CDN domain: `https://cdn.tamparananakmuda.com`.
+- 2 sizes per artikel: card (800x450 WebP) + feature (1600x900 WebP).
+- Auto-generate saat artikel di-publish (cron job) atau manual via `scripts/generate-all-og.ts`.
+- No egress fee (R2 advantage vs S3).
 
 ### Umami Analytics
 
@@ -918,14 +945,15 @@ export const redis = new Redis({
 
 **Phase 1 (0-10k monthly visitors):**
 - Vercel free tier cukup
-- Supabase free tier cukup (500MB DB, 1GB storage, 50k auth MAU)
+- Supabase free tier cukup (500MB DB, 50k auth MAU)
+- Cloudflare R2 free tier cukup (10GB storage, no egress fee)
 - Brevo free tier cukup (300 email/hari, 9k/bulan)
 - Uptime Kuma self-hosted gratis
 - Sentry free tier cukup
 
 **Phase 2 (10k-50k monthly visitors):**
 - Kemungkinan perlu Vercel Pro (~$20/bulan)
-- Supabase Pro jika konten banyak ($25/bulan - 8GB DB, 100GB storage)
+- Supabase Pro jika konten banyak ($25/bulan - 8GB DB, 100GB storage, PITR)
 - Upstash Redis untuk cache dan rate limiting
 - Sentry paid tier jika error volume tinggi
 
@@ -961,9 +989,12 @@ Supabase (Markdown) → server.tsx (marked/rehype) → Sanitized HTML → React
 | Jun 2026 | Next.js 15 + Supabase | Open-source, gratis, SEO-friendly | Active |
 | Jul 2026 | ISR + SSG hybrid | Balance SEO dan update fleksibel | Active |
 | Jul 2026 | Self-hosted Umami + Sentry | Privacy-first error & analytics | Active |
-| Jul 2026 | RLS dengan role-based admin | Lebih aman dari sekadar authenticated | Active |
+| Jul 2026 | RLS dengan role-based admin | Lebih aman dari sekadar authenticated | Active (defense-in-depth) |
 | Jul 2026 | Editorial workflow columns di posts table | POV tag, human signature, fact-check, review pipeline, source references | Active |
 | Jul 2026 | TikTok pipeline tables | tiktok_scripts dan hook_lines untuk video script generation | Active |
+| Jul 2026 | Migrated DB from Supabase REST to Drizzle ORM | Type-safe queries, better DX, server-side only | Active |
+| Jul 2026 | Migrated OG images from Vercel OG on-demand to R2 CDN | Persistent WebP images, faster CDN, no egress fee | Active |
+| Jul 2026 | Migrated cron from Vercel Cron to GitHub Actions | Every 5 min (vs every hour), better reliability, retry logic | Active |
 
 ---
 
@@ -973,5 +1004,6 @@ Supabase (Markdown) → server.tsx (marked/rehype) → Sanitized HTML → React
 |---|---|---|
 | 1.0 | Jun 2026 | Draft awal. |
 | 1.3 | Jul 2026 | Editorial workflow columns in posts table, TikTok pipeline tables (tiktok_scripts, hook_lines), editorial/TikTok API routes, URL structure, LOUVIN_PROJECT_SLUG env var, Upstash phase fix, decision log entries. |
+| 1.4 | Jul 2026 | Migrated DB to Drizzle ORM, OG images to R2 CDN, cron to GitHub Actions. Updated env vars, tech stack, backup strategy, RLS context. |
 | 1.2 | Jul 2026 | Louvin payment gateway integration, `donations` table, API endpoints, env vars, URL structure. |
 | 1.1 | Jul 2026 | Next.js 15, authors/comments/bookmarks tables, role-based RLS, Sentry/Uptime Kuma, migrations, caching, backup, decision log. |

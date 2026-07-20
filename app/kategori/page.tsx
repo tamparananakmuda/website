@@ -1,11 +1,14 @@
 import { getCategoriesWithSubcategories } from '@/lib/db/queries/categories';
 import Link from 'next/link';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const revalidate = 60;
 
 export const metadata = {
   title: 'Kategori',
   description: 'Jelajahi semua topik TAMPARAN ANAK MUDA: mindset, karier, keuangan, teknologi, kehidupan, dan bisnis.',
+  keywords: ['kategori artikel', 'topik gen z', 'mindset', 'karier', 'keuangan', 'teknologi', 'kehidupan', 'bisnis', 'tamparan anak muda'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/kategori`,
   },
@@ -28,6 +31,7 @@ export default async function CategoriesPage() {
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">
+      <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Kategori', href: '/kategori' }]} />
       <header className="mb-12 max-w-2xl">
         <h1 className="mb-4 text-3xl font-bold md:text-4xl">
           Kategori

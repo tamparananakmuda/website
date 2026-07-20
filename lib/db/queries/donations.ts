@@ -22,6 +22,13 @@ export async function getDonationByLouvinIdAndEmail(louvinTransactionId: string,
   return result[0];
 }
 
+export async function getDonationByLouvinId(louvinTransactionId: string): Promise<Donation | undefined> {
+  const result = await db.select().from(donations)
+    .where(eq(donations.louvinTransactionId, louvinTransactionId))
+    .limit(1);
+  return result[0];
+}
+
 export async function createDonation(data: typeof donations.$inferInsert): Promise<Donation> {
   const result = await db.insert(donations).values(data).returning();
   return result[0];

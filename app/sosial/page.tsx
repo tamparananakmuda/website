@@ -2,10 +2,13 @@ import { Metadata } from 'next';
 import { getPublishedSocialPosts } from '@/lib/db/queries/social-posts';
 import type { SocialPost } from '@/lib/db/schema';
 import SocialGrid from './social-grid';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Konten Sosial',
   description: 'Konten pilihan TAM dari X, Instagram, TikTok, dan YouTube dalam satu tempat.',
+  keywords: ['konten sosial tamparan anak muda', 'sosial media gen z', 'tiktok gen z', 'instagram gen z', 'konten pilihan'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/sosial`,
   },
@@ -36,6 +39,10 @@ export default async function SosialPage() {
 
   return (
     <main className="container mx-auto px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Konten Sosial', href: '/sosial' },
+      ]} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2">Konten Sosial</h1>
         <p className="text-muted-foreground">

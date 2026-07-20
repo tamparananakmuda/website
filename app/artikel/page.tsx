@@ -7,6 +7,8 @@ export const revalidate = 60;
 export const metadata = {
   title: 'Semua Artikel',
   description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
+  keywords: ['artikel gen z', 'artikel anak muda', 'perspektif gen z', 'tamparan anak muda', 'mindset', 'karier', 'keuangan', 'teknologi', 'kehidupan', 'bisnis'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel`,
   },

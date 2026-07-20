@@ -6,6 +6,8 @@ import { Mail, Calendar } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Arsip Newsletter',
   description: 'Kumpulan edisi newsletter TAMPARAN ANAK MUDA yang sudah pernah dikirim.',
+  keywords: ['arsip newsletter', 'newsletter tamparan anak muda', 'edisi newsletter'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/newsletter-arsip`,
   },

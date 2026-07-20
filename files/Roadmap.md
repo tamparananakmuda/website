@@ -23,10 +23,10 @@
 
 ### Deliverables
 - [ ] Repo GitHub dibuat
-- [ ] Supabase project setup (tables + RLS policies + storage bucket)
+- [x] Supabase project setup (PostgreSQL + Auth) - migrated to Drizzle ORM + Cloudflare R2
 - [ ] Next.js boilerplate dengan Tailwind
 - [ ] Design system diimplementasi (warna, font, komponen dasar)
-- [ ] 10 artikel pertama didraft di Supabase
+- [ ] 10 artikel pertama didraft via admin panel
 - [ ] Domain dikonfigurasi ke Vercel
 - [ ] Brevo account + list setup
 - [ ] Umami analytics setup (lihat `Analytics.md`)

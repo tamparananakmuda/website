@@ -1,0 +1,31 @@
+name: Send Daily Digest Email
+
+on:
+  schedule:
+    # 8 PM WIB (13:00 UTC)
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger send-digest endpoint
+        run: |
+          response=$(curl -s -w "\n%{http_code}" \
+            --max-time 240 \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "https://tamparananakmuda.com/api/cron/send-digest")
+
+          HTTP_CODE=$(echo "$response" | tail -1)
+          BODY=$(echo "$response" | head -n -1)
+          echo "HTTP status: $HTTP_CODE"
+          echo "Response: $BODY"
+
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "Digest sent successfully"
+          else
+            echo "Digest failed with status $HTTP_CODE"
+            exit 1
+          fi

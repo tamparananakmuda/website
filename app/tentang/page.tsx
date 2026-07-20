@@ -7,6 +7,8 @@ export const metadata = {
   title: 'Tentang Kami',
   description:
     'TAMPARAN ANAK MUDA adalah editorial media digital Indonesia. Kenali prinsip editorial, visi, dan roadmap kami, bukan sekadar konten, tapi komitmen tertulis.',
+  keywords: ['tentang tamparan anak muda', 'media digital indonesia', 'editorial media', 'prinsip editorial', 'jurnalisme independen'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/tentang`,
   },

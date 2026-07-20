@@ -214,13 +214,16 @@ export const newsletterSubscribers = pgTable('newsletter_subscribers', {
   email: text().notNull(),
   status: text().default('active').notNull(),
   source: text().default('website').notNull(),
+  unsubscribeToken: text('unsubscribe_token'),
+  topics: text('topics').array().default([]),
   createdAt: timestamp('created_at', { withTimezone: true, mode: 'string' }).defaultNow(),
   updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'string' }).defaultNow(),
 }, (table) => [
   index('idx_newsletter_subscribers_email').using('btree', table.email),
   index('idx_newsletter_subscribers_status').using('btree', table.status),
   unique('newsletter_subscribers_email_key').on(table.email),
-  check('newsletter_subscribers_status_check', sql`status = ANY (ARRAY['active'::text, 'unsubscribed'::text])`),
+  unique('newsletter_subscribers_unsubscribe_token_key').on(table.unsubscribeToken),
+  check('newsletter_subscribers_status_check', sql`status = ANY (ARRAY['active'::text, 'unsubscribed'::text, 'pending'::text])`),
 ]);
 
 export const newsletterIssues = pgTable('newsletter_issues', {

@@ -2,10 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { getApprovedCommentsByPost, createComment, deleteComment } from '@/lib/db/queries/comments';
 import { getReaderProfile } from '@/lib/db/queries/reader';
+import { getPostById } from '@/lib/db/queries/posts';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { commentSchema } from '@/lib/validations/comment';
 import { commentsQuerySchema } from '@/lib/validations/query-params';
 import { parseQueryParams, parseRequestBody } from '@/lib/validations/helpers';
+import { verifyTurnstileToken } from '@/lib/turnstile';
+import { sendEmail } from '@/lib/email/client';
+import { renderCommentNotificationEmail } from '@/lib/email/templates/comment-notification';
 
 export const dynamic = 'force-dynamic';
 
@@ -58,6 +62,14 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, commentSchema);
     if (!parsed.success) return parsed.errorResponse;
 
+    const valid = await verifyTurnstileToken(parsed.data.turnstile_token, request);
+    if (!valid) {
+      return NextResponse.json(
+        { error: 'Verifikasi keamanan gagal. Coba lagi.' },
+        { status: 403 }
+      );
+    }
+
     const profile = await getReaderProfile(user.id);
 
     const authorName = profile?.name || user.email?.split('@')[0] || 'Anonim';
@@ -72,6 +84,27 @@ export async function POST(request: NextRequest) {
       body: parsed.data.body,
       status: 'approved',
     });
+
+    // Send notification email to admin
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@tamparananakmuda.com';
+    const post = await getPostById(parsed.data.post_id);
+    if (post) {
+      const { subject, html } = renderCommentNotificationEmail({
+        postTitle: post.title,
+        postSlug: post.slug,
+        authorName,
+        commentBody: parsed.data.body,
+      });
+      const result = await sendEmail({
+        to: adminEmail,
+        subject,
+        htmlContent: html,
+        tags: ['comment-notification'],
+      });
+      if (!result.success) {
+        console.error('[comments] Notification email failed:', result.error);
+      }
+    }
 
     return NextResponse.json({ success: true, comment });
   } catch (error) {

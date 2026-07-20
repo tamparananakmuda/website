@@ -136,7 +136,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         {/* Feature image */}
         <FeatureImage
           src={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`}
-          alt={post.title}
+          alt={post.coverImageAlt || post.title}
         />
 
         <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>

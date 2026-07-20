@@ -191,15 +191,15 @@ Jika TAM adalah manusia:
 ### Harus Ada Sebelum Launch
 - [ ] Logo/wordmark dalam format SVG + PNG (light & dark version)
 - [ ] Favicon (32x32, 180x180 untuk Apple)
-- [ ] OG image default (1200x630px) untuk homepage
-- [ ] OG image template untuk artikel (dynamic via Vercel OG)
+- [ ] OG image default untuk homepage
+- [ ] OG image template untuk artikel (card 800x450 + feature 1600x900 WebP, via @vercel/og + sharp, upload ke R2 CDN)
 - [ ] Newsletter header image
 - [ ] IG profile photo yang konsisten dengan brand website
 - [ ] Apple touch icon, Android icons, webmanifest
 
 ### Tools untuk Buat
 - Logo: Figma (atau minta tim kreatif BHUYA)
-- OG image template: dibuat via Vercel OG + code
+- OG image template: @vercel/og + sharp, upload ke Cloudflare R2 CDN
 - Newsletter header: Canva atau Figma
 - Favicon: Figma atau favicon generator
 

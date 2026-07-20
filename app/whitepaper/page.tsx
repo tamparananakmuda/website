@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getPublishedWhitepapers } from '@/lib/db/queries/whitepapers';
 import { WhitepaperCard } from '@/components/whitepaper-card';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Whitepaper',
@@ -32,6 +33,10 @@ export default async function WhitepaperIndexPage() {
 
   return (
     <main className="container mx-auto px-4 py-12 md:py-20">
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Whitepaper', href: '/whitepaper' },
+      ]} />
       <div className="mx-auto max-w-3xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
           Whitepaper

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Share2, Link2, Check } from 'lucide-react';
+import { trackEvent } from '@/lib/track';
 
 export function ShareButtons({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false);
@@ -38,6 +39,7 @@ export function ShareButtons({ title, slug }: { title: string; slug: string }) {
   async function copyLink() {
     await navigator.clipboard.writeText(url);
     setCopied(true);
+    trackEvent('share_clicked', { platform: 'copy_link', slug });
     setTimeout(() => setCopied(false), 2000);
   }
 
@@ -53,6 +55,7 @@ export function ShareButtons({ title, slug }: { title: string; slug: string }) {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent('share_clicked', { platform: link.label, slug })}
           className="flex items-center justify-center w-8 h-8 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
           aria-label={`Bagikan ke ${link.label}`}
         >

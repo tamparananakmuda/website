@@ -24,6 +24,7 @@ const syne = Syne({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Menyadarkan generasi muda akan kenyataan - Tamparan Anak Muda',
     template: '%s - Tamparan Anak Muda',
@@ -67,6 +68,10 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': `${siteUrl}/rss.xml`,
     },
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
   manifest: '/manifest.json',
   appleWebApp: {

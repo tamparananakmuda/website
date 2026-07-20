@@ -4,6 +4,8 @@ export const metadata: Metadata = {
   title: 'Newsletter',
   description:
     'Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Satu sudut pandang baru setiap minggu, bukan link-link acak. Gratis, berhenti kapan saja.',
+  keywords: ['newsletter gen z', 'newsletter mingguan', 'sudut pandang anak muda', 'tamparan anak muda newsletter'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/newsletter`,
   },

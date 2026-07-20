@@ -523,7 +523,7 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: '16px',
+    gap: '8px',
     flexShrink: 0,
   };
 
@@ -532,6 +532,22 @@ export function OgTemplate(props: TemplateProps): ReactElement {
     fontSize: `${cfg.metadataFont}px`,
     fontWeight: 400,
     color: COLORS.textSecondary,
+    display: 'flex',
+    alignItems: 'center',
+    lineHeight: 1,
+  };
+
+  const separatorStyle: CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '2px',
+    height: `${cfg.metadataFont * 1.2}px`,
+    backgroundColor: COLORS.textSecondary,
+    flexShrink: 0,
+    opacity: 0.5,
+    marginLeft: '8px',
+    marginRight: '4px',
   };
 
   const footerStyle: CSSProperties = {
@@ -613,7 +629,7 @@ export function OgTemplate(props: TemplateProps): ReactElement {
             )}
             {issueMark && (
               <>
-                <span style={{ ...metadataTextStyle, fontSize: `${cfg.issueFont}px` }}>&bull;</span>
+                <span style={{ ...metadataTextStyle, fontSize: `${cfg.issueFont}px` }}>|</span>
                 <span style={issueMarkStyle}>{issueMark}</span>
               </>
             )}
@@ -802,7 +818,8 @@ export function OgTemplate(props: TemplateProps): ReactElement {
           {cfg.showExcerpt && props.excerpt && (
             <span style={{
               ...excerptStyle,
-              marginTop: '32px',
+              marginTop: '40px',
+              marginBottom: '80px',
               maxWidth: `${cfg.excerptMaxWidth}px`,
               display: 'flex',
             }}>
@@ -815,23 +832,23 @@ export function OgTemplate(props: TemplateProps): ReactElement {
 
           {/* Metadata (Author, reading time, date) */}
           {cfg.showMetadata && (
-            <div style={{ ...metadataStyle, display: 'flex' }}>
+            <div style={{ ...metadataStyle, display: 'flex', marginTop: '24px', paddingBottom: '20px' }}>
               {cfg.showAuthor && props.authorName && (
                 <>
                   <span style={{ ...metadataTextStyle, textTransform: 'uppercase' }}>{props.authorName}</span>
-                  <span style={metadataTextStyle}>•</span>
+                  <div style={separatorStyle}>{' '}</div>
                 </>
               )}
               {props.readingTime !== undefined && (
                 <>
                   <span style={metadataTextStyle}>{props.readingTime} MENIT BACA</span>
-                  {longDate && <span style={metadataTextStyle}>•</span>}
+                  {longDate && <div style={separatorStyle}>{' '}</div>}
                 </>
               )}
               {longDate && <span style={{ ...metadataTextStyle, textTransform: 'uppercase' }}>{longDate}</span>}
               {props.seriesCurrent !== undefined && props.seriesTotal !== undefined && (
                 <>
-                  {(props.readingTime !== undefined || props.authorName) && <span style={metadataTextStyle}>•</span>}
+                  {(props.readingTime !== undefined || props.authorName) && <div style={separatorStyle}>{' '}</div>}
                   <SeriesProgress current={props.seriesCurrent} total={props.seriesTotal} fontSize={12} />
                 </>
               )}

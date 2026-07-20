@@ -12,6 +12,7 @@ export const newsletterSchema = z.object({
     .max(10, 'Maksimal 10 topik')
     .optional()
     .default([]),
+  turnstile_token: z.string().optional(),
 });
 
 export type NewsletterInput = z.infer<typeof newsletterSchema>;

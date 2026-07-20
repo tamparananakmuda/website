@@ -28,13 +28,16 @@ export async function generateMetadata({
   return {
     title: category.title,
     description: category.description || undefined,
+    keywords: [category.title, `artikel ${category.title.toLowerCase()}`, `${category.title.toLowerCase()} gen z`, 'tamparan anak muda'],
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       type: 'website',
       locale: 'id_ID',
       url,
       title: `${category.title} - Tamparan Anak Muda`,
       description: category.description || undefined,
+      siteName: 'TAMPARAN ANAK MUDA',
     },
     twitter: {
       card: 'summary_large_image',

@@ -4,6 +4,7 @@ export const commentSchema = z.object({
   post_id: z.string().uuid(),
   body: z.string().trim().min(1, 'Komentar tidak boleh kosong').max(2000, 'Komentar maksimal 2000 karakter'),
   parent_id: z.string().uuid().optional(),
+  turnstile_token: z.string().optional(),
 });
 
 export type CommentInput = z.infer<typeof commentSchema>;

@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Turnstile } from '@/components/turnstile';
 
 export function NewsletterCta() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -18,14 +20,14 @@ export function NewsletterCta() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, turnstile_token: turnstileToken || undefined }),
       });
 
       const data = await res.json();
 
       if (res.ok) {
         setStatus('success');
-        setMessage('Berhasil! Cek email kamu untuk konfirmasi.');
+        setMessage('Berhasil! Email welcome sudah dikirim ke inbox kamu.');
         setEmail('');
       } else {
         setStatus('error');
@@ -58,23 +60,26 @@ export function NewsletterCta() {
             <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
             </p>
-            <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-              <Input
-                type="email"
-                placeholder="kamu@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-background"
-              />
-              <Button
-                type="submit"
-                disabled={status === 'loading'}
-                size="lg"
-                className="shrink-0"
-              >
-                {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
-              </Button>
+            <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Input
+                  type="email"
+                  placeholder="kamu@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="bg-background"
+                />
+                <Button
+                  type="submit"
+                  disabled={status === 'loading' || !turnstileToken}
+                  size="lg"
+                  className="shrink-0"
+                >
+                  {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
+                </Button>
+              </div>
+              <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="flex justify-center" />
             </form>
             <p className="mt-4 text-xs text-muted-foreground">
               Gratis. Berhenti kapan saja.

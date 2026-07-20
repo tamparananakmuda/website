@@ -8,6 +8,7 @@ import { AdminNav } from '@/components/admin-nav';
 export const metadata: Metadata = {
   title: 'Admin - TAMPARAN ANAK MUDA',
   description: 'Dashboard admin TAM',
+  robots: { index: false, follow: false },
 };
 
 export default async function AdminLayout({

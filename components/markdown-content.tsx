@@ -9,7 +9,7 @@ const renderer = new marked.Renderer();
 renderer.heading = function ({ text, depth }) {
   const id = slugify(text);
   if (depth === 1) {
-    return `<h1>${text}</h1>`;
+    return '';
   }
   return `<h${depth} id="${id}">${text}</h${depth}>`;
 };

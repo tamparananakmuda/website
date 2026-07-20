@@ -1,11 +1,14 @@
 import { getAllSeries } from '@/lib/db/queries/series';
 import Link from 'next/link';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const revalidate = 60;
 
 export const metadata = {
   title: 'Seri Konten',
   description: 'Seri artikel mendalam TAMPARAN ANAK MUDA. Topik yang dibahas tuntas dalam beberapa bagian.',
+  keywords: ['seri artikel', 'konten mendalam', 'seri gen z', 'tamparan anak muda seri'],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/seri`,
   },
@@ -28,6 +31,10 @@ export default async function SeriesPage() {
 
   return (
     <main className="container mx-auto px-4 py-20 md:py-32">
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Seri', href: '/seri' },
+      ]} />
       <header className="mb-12 max-w-2xl">
         <h1 className="mb-4 text-3xl font-bold md:text-4xl">
           Seri Konten

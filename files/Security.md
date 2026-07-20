@@ -27,27 +27,36 @@ Untuk website content/blog seperti TAM, threat utama yang relevan:
 
 ### Rules
 - **Tidak ada secret di client-side code** - pernah, tidak, tidak pernah
-- Semua API calls ke Brevo, Supabase write - hanya dari server (API routes Next.js)
-- `SUPABASE_SERVICE_ROLE_KEY` HANYA di server, bukan client
+- Semua API calls ke Brevo, DB operations - hanya dari server (API routes Next.js)
+- `POSTGRES_URL` dan `R2_SECRET_ACCESS_KEY` HANYA di server, bukan client
+- `SUPABASE_SERVICE_ROLE_KEY` hanya untuk Supabase Auth admin operations, bukan untuk DB queries (DB pakai Drizzle ORM)
 - Env vars di Vercel environment, bukan di `.env` yang di-commit
 
 ### Env Var Classification
 
 ```
 # SERVER-ONLY (tidak boleh di prefix NEXT_PUBLIC_)
+POSTGRES_URL=                    # PostgreSQL connection string untuk Drizzle ORM
+POSTGRES_URL_NON_POOLING=        # Untuk Drizzle Kit migrations
 BREVO_API_KEY=
-SUPABASE_SERVICE_ROLE_KEY=       # Full admin access, JANGAN expose
+R2_ACCESS_KEY_ID=                # Cloudflare R2 S3 access key
+R2_SECRET_ACCESS_KEY=            # Cloudflare R2 S3 secret
+R2_ENDPOINT=                     # R2 S3 endpoint
+R2_BUCKET_NAME=cdn-tam            # R2 bucket name
+CRON_SECRET=                     # Auth untuk GitHub Actions cron
+SUPABASE_SERVICE_ROLE_KEY=       # Supabase Auth admin only (bukan untuk DB)
 LOUVIN_API_KEY=                  # Payment gateway key, JANGAN expose
 LOUVIN_WEBHOOK_SECRET=           # Optional: webhook signature verification
 LOUVIN_PROJECT_SLUG=             # Project slug di Louvin (server-only)
 
 # CLIENT-SAFE (boleh NEXT_PUBLIC_)
 NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=   # RLS-protected, safe for client
+NEXT_PUBLIC_SUPABASE_ANON_KEY=   # Auth only, safe for client
 NEXT_PUBLIC_UMAMI_URL=
 NEXT_PUBLIC_UMAMI_WEBSITE_ID=
 NEXT_PUBLIC_SENTRY_DSN=
 NEXT_PUBLIC_SITE_URL=
+CDN_BASE_URL=                    # CDN domain (public, https://cdn.tamparananakmuda.com)
 NEXT_PUBLIC_LOUVIN_ENABLED=      # Feature toggle untuk donation (boolean string)
 
 # SERVER-ONLY (opsional, untuk alerting/logging)
@@ -55,8 +64,8 @@ SENTRY_AUTH_TOKEN=               # Hanya saat build/upload source maps
 ```
 
 ### Supabase Keys
-- **Anon Key** (`NEXT_PUBLIC_SUPABASE_ANON_KEY`): boleh di client - semua akses dibatasi oleh RLS policies
-- **Service Role Key** (`SUPABASE_SERVICE_ROLE_KEY`): TIDAK BOLEH ke client - bypass RLS, full admin access
+- **Anon Key** (`NEXT_PUBLIC_SUPABASE_ANON_KEY`): boleh di client - hanya untuk auth session
+- **Service Role Key** (`SUPABASE_SERVICE_ROLE_KEY`): TIDAK BOLEH ke client - hanya untuk Supabase Auth admin operations. DB queries menggunakan Drizzle ORM (server-side, pakai `POSTGRES_URL`)
 
 ---
 
@@ -131,21 +140,28 @@ headers: [
 - Email: validasi regex + max length, tidak ada output ke DOM
 - Tidak ada field lain di Phase 1
 
-### Markdown Content (Supabase)
-- Markdown di-parse via `marked` + `rehype-sanitize` di server-side
+### Markdown Content
+- Markdown di-parse via `marked` + regex sanitizer di server-side (lihat `components/markdown-content.tsx`)
 - Tidak ada `dangerouslySetInnerHTML` dengan unsanitized content
-- Gunakan `DOMPurify` atau `rehype-sanitize` untuk strip dangerous HTML
-- Image src hanya dari `self` dan Supabase Storage URL (whitelist di CSP)
+- Tidak menggunakan `isomorphic-dompurify` (crash di Vercel, sudah diganti regex sanitizer)
+- Image src hanya dari `self` dan R2 CDN URL (whitelist di CSP)
 
 ---
 
-## 6. Supabase Security
+## 6. Database & Auth Security
+
+### Database (Drizzle ORM)
+- Semua DB operations menggunakan Drizzle ORM (server-side only, via `POSTGRES_URL`)
+- Tidak ada Supabase REST API calls di app code (sudah fully migrated)
+- Drizzle ORM queries hanya di Server Components dan API routes
+- Tidak ada DB query dari client-side
 
 ### Row Level Security (RLS)
+**Note:** App code menggunakan Drizzle ORM (server-side only), sehingga RLS tidak relevan untuk app queries. RLS masih aktif di database level sebagai defense-in-depth.
 - Semua tabel mengaktifkan RLS (`enable row level security`)
 - Public (anon): hanya bisa SELECT pada data `status = 'published'`
 - Admin (authenticated): full CRUD
-- `SUPABASE_SERVICE_ROLE_KEY` HANYA digunakan di server-side API routes
+- `SUPABASE_SERVICE_ROLE_KEY` hanya untuk Supabase Auth admin operations, bukan untuk DB queries
 - Jangan pernah call Supabase dengan service role dari client-side
 
 ### Supabase Auth - Admin Access
@@ -181,11 +197,12 @@ export async function middleware(request) {
 }
 ```
 
-### Storage Security
-- Supabase Storage bucket `images` dibuat dengan public read access
-- Upload hanya bisa dari admin (authenticated users) via server-side
-- File size limit: 5MB per gambar
-- Allowed types: `image/jpeg`, `image/png`, `image/webp`, `image/gif`
+### Storage Security (Cloudflare R2)
+- R2 bucket `cdn-tam` dibuat dengan public read access
+- Upload hanya bisa dari server-side (API routes, cron job, scripts)
+- R2 credentials (`R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`) server-only
+- CDN domain: `https://cdn.tamparananakmuda.com`
+- Allowed types: `image/webp` (OG images), `image/jpeg`, `image/png`, `image/gif`
 
 ### CORS Configuration
 - Di Supabase dashboard → Settings → API → CORS
@@ -225,8 +242,8 @@ npm outdated
 | Web Vitals metrics | web-vitals library | Performance monitoring | Umami / Sentry |
 | JS errors & performance | Sentry | Debugging & reliability | Sentry |
 | IP address (rate limit) | Server | Abuse prevention | Memory only, tidak persistent |
-| Artikel content | Admin panel | Website content | Supabase (PostgreSQL) |
-| Cover images | Admin panel upload | Website display | Supabase Storage |
+| Artikel content | Admin panel | Website content | PostgreSQL via Drizzle ORM |
+| OG images | Cron job / scripts | Website display + social | Cloudflare R2 (cdn-tam) |
 | Admin session | Supabase Auth | Admin access | Supabase Auth |
 
 **Analytics-specific notes:**
@@ -250,9 +267,9 @@ npm outdated
 
 Jika terjadi security incident:
 
-1. **Rotasi semua API keys** di Vercel environment vars dan Supabase dashboard
+1. **Rotasi semua API keys** di Vercel environment vars (POSTGRES_URL, R2 keys, CRON_SECRET, Brevo, dll)
 2. **Audit Brevo subscriber list** - cek apakah ada anomali
-3. **Check Supabase Auth logs** dan RLS policy audit
+3. **Check Supabase Auth logs** dan Drizzle ORM query patterns
 4. **Redeploy** setelah keys dirotasi
 5. **Notify** jika data user terdampak (sesuai UU PDP: max 14 hari)
 
@@ -289,7 +306,7 @@ Jika terjadi security incident:
 - Customer name/email opsional - jangan wajibkan.
 
 ### Admin Access
-- Donation records hanya readable oleh admin via RLS.
+- Donation records hanya readable oleh admin via server-side Drizzle ORM queries.
 - Jangan expose record donation ke public.
 
 ---
@@ -300,7 +317,8 @@ Jika terjadi security incident:
 - [ ] `.env.local` di `.gitignore`
 - [ ] Tidak ada `console.log` yang print secrets
 - [ ] Rate limiting pada `/api/subscribe` aktif
-- [ ] Supabase RLS policies aktif dan terverifikasi
+- [ ] Supabase RLS policies aktif sebagai defense-in-depth (app code pakai Drizzle ORM server-side)
+- [ ] `POSTGRES_URL` dan R2 credentials server-only dan tidak di-log
 - [ ] Supabase Auth admin hanya untuk email Yovie
 - [ ] CORS Supabase hanya whitelist domain yang benar
 - [ ] Security headers aktif (verifikasi via securityheaders.com)
@@ -318,25 +336,25 @@ Jika terjadi security incident:
 - [ ] Webhook idempotency diimplementasikan
 - [ ] Input validation amount & payment_type di create-transaction
 - [ ] Donation records tidak di-expose ke public
-- [ ] Editorial API routes hanya accessible oleh admin (RLS enforced)
+- [ ] Editorial API routes hanya accessible oleh admin (Supabase Auth + server-side Drizzle queries)
 - [ ] Source reference URL validation (no javascript:, data: protocols)
 - [ ] POV tag DB constraint active dan tested
 - [ ] Human signature enforcement tested (cannot publish without)
-- [ ] TikTok API routes hanya accessible oleh admin (RLS enforced)
+- [ ] TikTok API routes hanya accessible oleh admin (Supabase Auth + server-side Drizzle queries)
 - [ ] Script content sanitized before storage
 - [ ] Video URL validation (https only)
 - [ ] `LOUVIN_PROJECT_SLUG` server-only dan tidak di-log
 
 ### Editorial Workflow Security
-- Admin-only access untuk fact-check status update (`PUT /api/posts/[id]/fact-check`). RLS: hanya role admin.
-- Admin-only access untuk review pipeline status update (`PUT /api/posts/[id]/review-status`). RLS: hanya role admin.
+- Admin-only access untuk fact-check status update (`PUT /api/posts/[id]/fact-check`). Admin auth via Supabase Auth + server-side Drizzle query.
+- Admin-only access untuk review pipeline status update (`PUT /api/posts/[id]/review-status`). Admin auth via Supabase Auth + server-side Drizzle query.
 - Source reference URL validation: hanya URL valid (http/https), tidak boleh `javascript:`, `data:`, atau protocol lain.
 - POV tag integrity: hanya 4 nilai valid yang bisa di-set (`kontra-narasi`, `refleksi`, `data`, `framework`). DB constraint sudah ada.
 - Human signature tidak bisa di-bypass: publish button disabled jika `human_signature = false`.
 - Source references disimpan sebagai jsonb, validasi schema di API route sebelum insert.
 
 ### TikTok Pipeline Security
-- Admin-only access untuk script generation dan management. RLS: hanya role admin.
+- Admin-only access untuk script generation dan management. Admin auth via Supabase Auth + server-side Drizzle query.
 - Script content sanitization: hook line dan body di-sanitize sebelum disimpan (anti-XSS).
 - Video URL validation: hanya URL valid (https), tidak boleh `javascript:` atau `data:`.
 - Hook line library: admin-only CRUD, tidak ada public access.
@@ -350,5 +368,6 @@ Jika terjadi security incident:
 |---|---|---|
 | 1.0 | Jun 2026 | Draft awal. |
 | 1.2 | Jul 2026 | Added Louvin payment security: API key protection, webhook security, input validation, rate limiting, payment checklist. |
+| 1.4 | Jul 2026 | Updated for Drizzle ORM migration (DB security context), R2 storage security, removed DOMPurify ref, updated env vars. |
 | 1.3 | Jul 2026 | Added editorial workflow security (admin-only API access, source reference URL validation, POV tag integrity, human signature enforcement), TikTok pipeline security (admin-only access, content sanitization, video URL validation), LOUVIN_PROJECT_SLUG env var classification. |
 | 1.1 | Jul 2026 | Added Sentry, Umami, Uptime Kuma env vars and analytics data collection; analytics-specific security checklist. |

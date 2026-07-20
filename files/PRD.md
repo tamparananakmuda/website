@@ -187,7 +187,7 @@ Sebagai admin, saya ingin generate video script dari artikel yang sudah publish 
 
 ## 7. Constraints
 
-- **Budget:** Lean - prioritas tools gratis/murah (Vercel, Supabase free tier, Brevo free)
+- **Budget:** Lean - prioritas tools gratis/murah (Vercel, Supabase free tier, Brevo free, Cloudflare R2 free tier)
 - **Tim:** Yovie + tim BHUYA (5 orang), web dev bukan fokus utama
 - **Waktu:** Long-term planning, tidak ada deadline agresif
 - **Konten:** Konten awal dari konversi konten IG yang sudah ada + artikel baru
@@ -200,7 +200,7 @@ Sebagai admin, saya ingin generate video script dari artikel yang sudah publish 
 | Dependency | Source | Mitigation |
 |---|---|---|
 | Domain `tamparananakmuda.com` | Sudah dikonfigurasi | - |
-| Supabase project + database | Perlu setup | Gunakan Supabase CLI dan migrations |
+| Supabase project + database | Perlu setup | PostgreSQL (Supabase host) + Drizzle ORM untuk type-safe queries |
 | Vercel deployment | Perlu setup | Connect GitHub repo ke Vercel |
 | Brevo account + list | Perlu setup | Daftar Brevo free tier, setup double opt-in |
 | Umami instance | Perlu setup | Self-host di Vercel/Railway |

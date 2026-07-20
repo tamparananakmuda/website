@@ -181,6 +181,8 @@ RLS:
 ```sql
 alter table donations enable row level security;
 
+-- Note: App code menggunakan Drizzle ORM (server-side only), RLS sebagai defense-in-depth.
+
 -- Public: tidak bisa read/write langsung
 -- Admin: read-only untuk dashboard
 

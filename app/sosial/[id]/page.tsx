@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getPublishedSocialPostById, getRelatedSocialPosts } from '@/lib/db/queries/social-posts';
 import SocialDetail from './social-detail';
 import Link from 'next/link';
+import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 interface Props {
   params: { id: string };
@@ -47,6 +48,11 @@ export default async function SocialPostPage({ params }: Props) {
 
   return (
     <main className="container mx-auto px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Konten Sosial', href: '/sosial' },
+        { name: post.title || 'Konten', href: `/sosial/${params.id}` },
+      ]} />
       <div className="mb-4">
         <Link href="/sosial" className="text-sm text-muted-foreground hover:text-foreground">
           &larr; Semua konten sosial

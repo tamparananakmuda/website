@@ -2,9 +2,9 @@
 
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { createClient } from '@/lib/supabase/client';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, AlertCircle } from 'lucide-react';
+import { Turnstile } from '@/components/turnstile';
 
 function LoginForm() {
   const router = useRouter();
@@ -15,25 +15,30 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(errorParam === 'auth' ? 'Link gagal atau kadaluarsa. Coba lagi.' : null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-      },
-    });
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, turnstile_token: turnstileToken || undefined }),
+      });
 
-    if (error) {
-      setError(error.message);
-      setLoading(false);
-    } else {
-      setSent(true);
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || 'Gagal mengirim link masuk');
+      } else {
+        setSent(true);
+      }
+    } catch {
+      setError('Terjadi kesalahan. Coba lagi nanti.');
+    } finally {
       setLoading(false);
     }
   }
@@ -95,12 +100,14 @@ function LoginForm() {
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !turnstileToken}
               className="w-full flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50 transition-colors"
             >
               {loading ? 'Mengirim...' : 'Kirim Link Masuk'}
               {!loading && <ArrowRight className="w-4 h-4" />}
             </button>
+
+            <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="flex justify-center" />
 
             <p className="text-xs text-muted-foreground text-center pt-2">
               Dengan masuk, kamu setuju untuk menerima newsletter dan update dari TAM.

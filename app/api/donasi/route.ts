@@ -3,6 +3,7 @@ import { createDonation } from '@/lib/db/queries/donations';
 import { donasiSchema, getMinAmount } from '@/lib/validations/donasi';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseRequestBody } from '@/lib/validations/helpers';
+import { verifyTurnstileToken } from '@/lib/turnstile';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,6 +22,14 @@ export async function POST(request: NextRequest) {
 
     const parsed = await parseRequestBody(request, donasiSchema);
     if (!parsed.success) return parsed.errorResponse;
+
+    const valid = await verifyTurnstileToken(parsed.data.turnstile_token, request);
+    if (!valid) {
+      return NextResponse.json(
+        { error: 'Verifikasi keamanan gagal. Coba lagi.' },
+        { status: 403 }
+      );
+    }
 
     const { amount, payment_type, customer_name, customer_email, is_anonymous, message, is_recurring } = parsed.data;
 

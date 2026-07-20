@@ -56,13 +56,13 @@ P3 - Future (Phase 3+)
 - Artikel terkait (berdasarkan kategori yang sama, 2 artikel)
 - Progress bar baca (scroll indicator)
 - Inline newsletter CTA (muncul setelah 3 paragraf)
-- OG image dinamis per artikel
+- OG image dinamis per artikel (card 800x450 + feature 1600x900 WebP, via @vercel/og + sharp, upload ke R2 CDN)
 
 **Acceptance Criteria:**
 - [ ] Artikel tampil dengan tipografi yang readable (min 18px body, line-height 1.7)
 - [ ] Cover image dioptimasi (Next.js Image component)
 - [ ] Slug URL unik dan SEO-friendly
-- [ ] OG image ter-generate otomatis dari judul + kategori
+- [ ] OG image ter-generate otomatis dari og_headline + kategori (2 sizes: card + feature WebP, upload ke R2 CDN)
 - [ ] Artikel terkait tidak menampilkan artikel yang sedang dibaca
 - [ ] Editorial checklist sebelum publish (angle test, human signature, fact-check)
 - [ ] POV tag di artikel (kontra-narasi / refleksi / data / framework)
@@ -76,10 +76,11 @@ P3 - Future (Phase 3+)
 
 **Kategori awal TAM:**
 - Mindset
-- Karir & Tujuan
-- Relasi
-- Keuangan
-- Identitas
+- Karier
+- Kehidupan
+- Uang
+- Bisnis
+- Teknologi
 
 **Halaman:**
 - `/topik/[category]` - listing artikel per kategori
@@ -378,5 +379,6 @@ P3 - Future (Phase 3+)
 | 1.0 | Jun 2026 | Draft awal. |
 | 1.3 | Jul 2026 | Added editorial checklist in F02, content quality analytics events, F20 TikTok pipeline, F21 editorial workflow. |
 | 1.4 | Jul 2026 | Added acceptance criteria for F09-F14, F20 database/API specs, F21 API endpoint specs, clarified F20 analytics tracking via Umami. |
+| 1.5 | Jul 2026 | Updated category names (Karier, Kehidupan, Uang, Bisnis, Teknologi), OG image sizes (card + feature WebP via R2 CDN). |
 | 1.2 | Jul 2026 | Added F19 Donasi / Support TAM via Louvin payment gateway. |
 | 1.1 | Jul 2026 | Analytics F08 event names aligned with `Analytics.md`, added F13 Performance Monitoring, F14 Uptime Monitoring, komentar moved to P3. |

@@ -3,6 +3,8 @@ import { getDonationByLouvinIdAndEmail } from '@/lib/db/queries/donations';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { donasiReceiptSchema } from '@/lib/validations/donasi-extra';
 import { parseRequestBody } from '@/lib/validations/helpers';
+import { sendEmail } from '@/lib/email/client';
+import { renderDonationReceiptEmail } from '@/lib/email/templates/donation-receipt';
 
 export const dynamic = 'force-dynamic';
 
@@ -38,51 +40,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const brevoApiKey = process.env.BREVO_API_KEY;
-    if (!brevoApiKey) {
-      return NextResponse.json(
-        { error: 'Email service belum dikonfigurasi' },
-        { status: 500 }
-      );
-    }
-
-    const formatRupiah = (v: number) =>
-      new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(v);
-
-    const emailHtml = `
-      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h2 style="color: #e11d48;">Terima kasih atas dukunganmu</h2>
-        <p>Halo ${donation.customerName},</p>
-        <p>Donasi kamu telah diterima. Berikut rincian transaksinya:</p>
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">ID Transaksi</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-family: monospace;">${donation.louvinTransactionId}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Nominal</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formatRupiah(donation.amount)}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Fee</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formatRupiah(donation.fee)}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #eee; color: #666;">Net diterima</td><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">${formatRupiah(donation.netAmount)}</td></tr>
-          <tr><td style="padding: 8px; color: #666;">Tanggal</td><td style="padding: 8px;">${new Date(donation.createdAt || new Date()).toLocaleString('id-ID')}</td></tr>
-        </table>
-        <p>Setiap rupiah membantu TAM tetap independen dan terus menulis tanpa kompromi.</p>
-        <p style="color: #999; font-size: 12px; margin-top: 30px;">TAMPARAN ANAK MUDA<br>Menyadarkan generasi muda akan kenyataan</p>
-      </div>
-    `;
-
-    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'accept': 'application/json',
-        'content-type': 'application/json',
-        'api-key': brevoApiKey,
-      },
-      body: JSON.stringify({
-        sender: { name: 'TAMPARAN ANAK MUDA', email: 'noreply@tamparananakmuda.com' },
-        to: [{ email }],
-        subject: 'Terima kasih atas dukunganmu',
-        htmlContent: emailHtml,
-      }),
+    const { subject, html } = renderDonationReceiptEmail({
+      customerName: donation.customerName,
+      louvinTransactionId: donation.louvinTransactionId,
+      amount: donation.amount,
+      fee: donation.fee,
+      netAmount: donation.netAmount,
+      createdAt: donation.createdAt,
     });
 
-    if (!res.ok) {
-      console.error('Brevo receipt email error:', await res.text());
+    const result = await sendEmail({
+      to: email,
+      subject,
+      htmlContent: html,
+      tags: ['donation-receipt'],
+    });
+
+    if (!result.success) {
       return NextResponse.json(
         { error: 'Gagal mengirim email' },
         { status: 500 }

@@ -1,10 +1,7 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
-import { getAllPublishedPostsWithRelations, countPublishedPostsInSeries, updatePostOGUrls } from '../lib/db/queries/posts';
-import { generateAndUploadOGImages } from '../lib/cdn/generate';
-import { deleteOldOGImages } from '../lib/cdn/r2';
+const { readFileSync } = require('fs');
+const { join } = require('path');
 
-// Load .env.local manually
+// Load .env.local manually BEFORE requiring DB modules
 const envPath = join(process.cwd(), '.env.local');
 const envContent = readFileSync(envPath, 'utf8');
 envContent.split('\n').forEach((line) => {
@@ -18,6 +15,10 @@ envContent.split('\n').forEach((line) => {
     process.env[key] = value;
   }
 });
+
+const { getAllPublishedPostsWithRelations, countPublishedPostsInSeries, updatePostOGUrls } = require('../lib/db/queries/posts');
+const { generateAndUploadOGImages } = require('../lib/cdn/generate');
+const { deleteOldOGImages } = require('../lib/cdn/r2');
 
 async function main() {
   const allPosts = await getAllPublishedPostsWithRelations();

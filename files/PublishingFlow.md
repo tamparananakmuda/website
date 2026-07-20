@@ -31,13 +31,14 @@ TAM punya dua cara untuk publish artikel:
       │   [Database: status=scheduled, published_at    │
       │    di masa depan]                              │
       │           │                                    │
-      │           │  Cron job jalan tiap jam           │
-      │           │  (Vercel Cron)                     │
+      │           │  Cron job jalan every 5 min        │
+      │           │  (GitHub Actions)                  │
       │           ▼                                    │
       │   [/api/cron/publish-scheduled]                │
       │   - Query: status=scheduled                    │
       │     AND published_at <= now()                  │
       │   - Update: status -> "published"              │
+      │   - Auto-generate OG images (R2 CDN)           │
       │           │                                    │
       │           └────────────────────────────────────┘
       │
@@ -77,17 +78,18 @@ Artikel dengan konfigurasi di atas akan:
 
 ### Yang Melakukan Publishing (Auto)
 
-**Actor: Vercel Cron Job (`/api/cron/publish-scheduled`)**
+**Actor: GitHub Actions Cron Job (`/api/cron/publish-scheduled`)**
 
-Vercel menjalankan cron job setiap jam tepat (schedule: `0 * * * *`).
+GitHub Actions menjalankan cron job setiap 5 menit (schedule: `*/5 * * * *`).
 
 **Cron job melakukan:**
 1. Cek semua posts dengan `status = 'scheduled'` DAN `published_at <= now()`
 2. Update status semua posts yang match menjadi `'published'`
-3. Return jumlah artikel yang di-publish
+3. Auto-generate OG images (card + feature WebP) untuk setiap artikel yang di-publish, upload ke R2 CDN
+4. Return jumlah artikel yang di-publish
 
 **File:** `app/api/cron/publish-scheduled/route.ts`
-**Config:** `vercel.json` -> `"schedule": "0 * * * *"`
+**Config:** `.github/workflows/publish-scheduled.yml` -> `schedule: */5 * * * *`
 **Auth:** Header `Authorization: Bearer $CRON_SECRET` (env var `CRON_SECRET`)
 
 **Respon cron job:**
@@ -111,11 +113,10 @@ Admin bisa login ke dashboard dan manual publish artikel:
 
 ## Frontend Filtering (Kenapa Scheduled Tidak Muncul)
 
-Semua query frontend (homepage, artikel page, kategori, search, sitemap) memfilter dengan DUA kondisi:
+Semua query frontend (homepage, artikel page, kategori, search, sitemap) memfilter dengan DUA kondisi via Drizzle ORM:
 
 ```typescript
-.eq('status', 'published')
-.lte('published_at', new Date().toISOString())
+.where(and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
 ```
 
 Artinya:
@@ -166,19 +167,20 @@ draft ──> review ──> fact-check ──> published
 | Item | Value |
 |------|-------|
 | **Endpoint** | `/api/cron/publish-scheduled` |
-| **Schedule** | `0 * * * *` (setiap jam tepat) |
+| **Schedule** | `*/5 * * * *` (setiap 5 menit) |
 | **Method** | `GET` |
 | **Auth** | `Authorization: Bearer ${CRON_SECRET}` |
-| **Max duration** | 30 detik |
+| **Max duration** | 60 detik |
 | **File** | `app/api/cron/publish-scheduled/route.ts` |
 
 ### Cara Kerja
 
-1. Vercel hit endpoint setiap jam (00:00, 01:00, 02:00, dst.)
+1. GitHub Actions hit endpoint setiap 5 menit
 2. Endpoint cek auth header dengan `CRON_SECRET`
-3. Query Supabase: `SELECT * FROM posts WHERE status = 'scheduled' AND published_at <= now()`
+3. Query Drizzle ORM: `SELECT * FROM posts WHERE status = 'scheduled' AND published_at <= now()`
 4. Jika ada hasil, update semua: `SET status = 'published'`
-5. Return JSON dengan jumlah dan slug artikel yang di-publish
+5. Auto-generate OG images (card 800x450 + feature 1600x900 WebP) via @vercel/og + sharp, upload ke R2 CDN
+6. Return JSON dengan jumlah dan slug artikel yang di-publish
 
 ### Testing Cron Job Lokal
 
@@ -198,9 +200,14 @@ curl -H "Authorization: Bearer $CRON_SECRET" \
 
 | Env Var | Di mana | Fungsi |
 |---------|---------|--------|
-| `CRON_SECRET` | Vercel dashboard | Auth token untuk cron job |
-| `NEXT_PUBLIC_SUPABASE_URL` | Vercel + `.env.local` | URL Supabase project |
-| `SUPABASE_SERVICE_ROLE_KEY` | Vercel + `.env.local` | Bypass RLS untuk update status |
+| `CRON_SECRET` | Vercel dashboard + GitHub Secrets | Auth token untuk cron job |
+| `POSTGRES_URL` | Vercel + `.env.local` | PostgreSQL connection string untuk Drizzle ORM |
+| `NEXT_PUBLIC_SUPABASE_URL` | Vercel + `.env.local` | URL Supabase project (auth only) |
+| `R2_ACCESS_KEY_ID` | Vercel + `.env.local` | Cloudflare R2 S3 access key |
+| `R2_SECRET_ACCESS_KEY` | Vercel + `.env.local` | Cloudflare R2 S3 secret |
+| `R2_ENDPOINT` | Vercel + `.env.local` | R2 S3 endpoint URL |
+| `R2_BUCKET_NAME` | Vercel + `.env.local` | R2 bucket name (`cdn-tam`) |
+| `CDN_BASE_URL` | Vercel + `.env.local` | CDN domain (`https://cdn.tamparananakmuda.com`) |
 
 ---
 
@@ -231,8 +238,9 @@ curl -H "Authorization: Bearer $CRON_SECRET" \
 - [ ] `published_at` di-set ke waktu publish di masa depan (format ISO 8601, timezone UTC)
 - [ ] `status` = `"scheduled"`
 - [ ] Artikel TIDAK muncul di website sampai cron job publish
-- [ ] Cron job akan publish saat `published_at <= now()` (maksimal 1 jam setelah waktu yang di-set, karena cron jalan tiap jam)
-- [ ] Pastikan `CRON_SECRET` sudah di-set di Vercel dashboard
+- [ ] Cron job akan publish saat `published_at <= now()` (maksimal 5 menit setelah waktu yang di-set, karena cron jalan every 5 min)
+- [ ] Pastikan `CRON_SECRET` sudah di-set di Vercel dashboard DAN GitHub Secrets (nilai harus sama)
+- [ ] OG images akan auto-generate saat cron publish artikel (tidak perlu manual)
 
 ### Draft (simpan, belum publish)
 
@@ -254,16 +262,17 @@ curl -H "Authorization: Bearer $CRON_SECRET" \
 
 ### Artikel scheduled tidak auto-publish
 
-1. Cek `CRON_SECRET` sudah di-set di Vercel dashboard
-2. Cek `vercel.json` ada config cron
+1. Cek `CRON_SECRET` sudah di-set di Vercel dashboard DAN GitHub Secrets (nilai harus sama)
+2. Cek `.github/workflows/publish-scheduled.yml` ada dan ter-deploy
 3. Cek `published_at` sudah lewat dari waktu sekarang
-4. Cek Vercel deployment logs untuk error cron job
-5. Test manual: `curl -H "Authorization: Bearer $CRON_SECRET" https://tamparananakmuda.com/api/cron/publish-scheduled`
+4. Cek GitHub Actions logs untuk error cron job
+5. Cek Vercel function logs untuk error API route
+6. Test manual: `curl -H "Authorization: Bearer $CRON_SECRET" https://tamparananakmuda.com/api/cron/publish-scheduled`
 
 ### Artikel published tapi tidak muncul di website
 
 1. Cek `published_at` tidak null dan sudah lewat dari `now()`
-2. Cek frontend query pakai `.lte('published_at', new Date().toISOString())`
+2. Cek frontend query pakai Drizzle ORM filter `lte(posts.publishedAt, new Date().toISOString())`
 3. Cek `status` = `"published"` (bukan `"scheduled"`)
 
 ### Artikel muncul sebelum waktunya

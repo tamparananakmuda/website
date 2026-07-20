@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { updateDonationStatusByLouvinId } from '@/lib/db/queries/donations';
+import { updateDonationStatusByLouvinId, getDonationByLouvinId } from '@/lib/db/queries/donations';
 import { createHmac, timingSafeEqual } from 'crypto';
+import { sendEmail } from '@/lib/email/client';
+import { renderDonationReceiptEmail } from '@/lib/email/templates/donation-receipt';
 
 export const dynamic = 'force-dynamic';
 
@@ -50,6 +52,33 @@ export async function POST(request: NextRequest) {
 
     if (event === 'payment.settled' || event === 'payment.failed') {
       await updateDonationStatusByLouvinId(data.transaction_id, data.status);
+
+      // Auto-send receipt email when payment is settled
+      if (event === 'payment.settled') {
+        const donation = await getDonationByLouvinId(data.transaction_id);
+
+        if (donation?.customerEmail) {
+          const { subject, html } = renderDonationReceiptEmail({
+            customerName: donation.customerName,
+            louvinTransactionId: donation.louvinTransactionId,
+            amount: donation.amount,
+            fee: donation.fee,
+            netAmount: donation.netAmount,
+            createdAt: donation.createdAt,
+          });
+
+          const result = await sendEmail({
+            to: donation.customerEmail,
+            subject,
+            htmlContent: html,
+            tags: ['donation-receipt'],
+          });
+
+          if (!result.success) {
+            console.error('[webhook] Receipt email failed:', result.error);
+          }
+        }
+      }
     }
 
     return NextResponse.json({ received: true });

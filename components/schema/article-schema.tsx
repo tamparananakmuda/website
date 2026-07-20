@@ -29,6 +29,7 @@ interface ArticleSchemaProps {
   keywords?: string[];
   wordCount?: number;
   humanReviewed?: boolean;
+  urlPrefix?: string;
 }
 
 export function ArticleSchema({
@@ -52,10 +53,11 @@ export function ArticleSchema({
   keywords,
   wordCount,
   humanReviewed,
+  urlPrefix = 'artikel',
 }: ArticleSchemaProps) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
-  const articleUrl = `${siteUrl}/artikel/${slug}`;
-  const ogImageUrl = `${siteUrl}/artikel/${slug}/opengraph-image`;
+  const articleUrl = `${siteUrl}/${urlPrefix}/${slug}`;
+  const ogImageUrl = `${siteUrl}/${urlPrefix}/${slug}/opengraph-image`;
 
   const hasIndividualAuthor = authorName && authorName !== 'TAMPARAN ANAK MUDA';
 

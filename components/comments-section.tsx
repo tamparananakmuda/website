@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { MessageSquare, Heart, Trash2, Loader2, Send, CornerDownRight } from 'lucide-react';
+import { Turnstile } from '@/components/turnstile';
 
 interface Comment {
   id: string;
@@ -99,6 +100,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
   const [currentUserId, setCurrentUserId] = useState<string | null>(null);
   const [replyTo, setReplyTo] = useState<string | null>(null);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const fetchComments = useCallback(async () => {
     setLoading(true);
@@ -139,6 +141,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
           post_id: postId,
           body: body.trim(),
           parent_id: replyTo || undefined,
+          turnstile_token: turnstileToken || undefined,
         }),
       });
 
@@ -231,13 +234,14 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
             <p className="text-xs text-muted-foreground">{body.length}/2000</p>
             <button
               type="submit"
-              disabled={submitting || !body.trim()}
+              disabled={submitting || !body.trim() || !turnstileToken}
               className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
             >
               {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
               {submitting ? 'Mengirim...' : 'Kirim'}
             </button>
           </div>
+          <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="mt-2" />
         </form>
       ) : (
         <div className="mb-8 rounded-lg border border-border bg-card/50 p-4 text-center text-sm text-muted-foreground">

@@ -27,14 +27,15 @@ export function getCDNUrl(slug: string, type: OGImageType): string {
 export async function uploadOGImage(slug: string, type: OGImageType, buffer: Buffer): Promise<string> {
   const client = getS3Client();
   const key = getObjectKey(slug, type);
+  const contentType = 'image/webp';
 
   await client.send(
     new PutObjectCommand({
       Bucket: bucketName,
       Key: key,
       Body: buffer,
-      ContentType: 'image/webp',
-      CacheControl: 'public, max-age=31536000, immutable',
+      ContentType: contentType,
+      CacheControl: 'public, max-age=0, s-maxage=0',
     })
   );
 

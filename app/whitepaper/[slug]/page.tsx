@@ -6,6 +6,7 @@ import { MarkdownContent } from '@/components/markdown-content';
 import { TableOfContents } from '@/components/table-of-contents';
 import { ShareButtons } from '@/components/share-buttons';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import { ArticleSchema } from '@/components/schema/article-schema';
 import { FileText, Clock, Download } from 'lucide-react';
 
 interface WhitepaperPageProps {
@@ -62,6 +63,16 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
           { name: 'Whitepaper', href: '/whitepaper' },
           { name: wp.title, href: `/whitepaper/${wp.slug}` },
         ]}
+      />
+      <ArticleSchema
+        title={wp.title}
+        description={wp.summary || wp.subtitle || ''}
+        slug={wp.slug}
+        publishedAt={wp.publishedAt || new Date().toISOString()}
+        authorName={wp.author || undefined}
+        readingTime={wp.readingTime || undefined}
+        keywords={wp.tags || undefined}
+        urlPrefix="whitepaper"
       />
 
       <header className="mx-auto max-w-3xl">

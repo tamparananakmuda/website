@@ -3,6 +3,9 @@ import { upsertNewsletterSubscriber } from '@/lib/db/queries/newsletter';
 import { newsletterSchema } from '@/lib/validations/newsletter';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseRequestBody } from '@/lib/validations/helpers';
+import { verifyTurnstileToken } from '@/lib/turnstile';
+import { sendEmail } from '@/lib/email/client';
+import { renderWelcomeEmail } from '@/lib/email/templates/welcome';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,10 +23,18 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, newsletterSchema);
     if (!parsed.success) return parsed.errorResponse;
 
+    const valid = await verifyTurnstileToken(parsed.data.turnstile_token, request);
+    if (!valid) {
+      return NextResponse.json(
+        { error: 'Verifikasi keamanan gagal. Coba lagi.' },
+        { status: 403 }
+      );
+    }
+
     const normalizedEmail = parsed.data.email;
     const topics = parsed.data.topics;
 
-    await upsertNewsletterSubscriber(normalizedEmail);
+    const subscriber = await upsertNewsletterSubscriber(normalizedEmail, topics);
 
     // Sync to Brevo if API key exists
     if (process.env.BREVO_API_KEY && process.env.BREVO_LIST_ID) {
@@ -44,8 +55,25 @@ export async function POST(request: NextRequest) {
       });
 
       if (!res.ok && res.status !== 400) {
-        // 400 might mean duplicate contact, which is fine
         console.error('Brevo sync failed:', await res.text());
+      }
+    }
+
+    // Send welcome email if subscriber has unsubscribe token
+    if (subscriber.unsubscribeToken) {
+      const { subject, html } = renderWelcomeEmail({
+        email: normalizedEmail,
+        unsubscribeToken: subscriber.unsubscribeToken,
+        topics,
+      });
+      const result = await sendEmail({
+        to: normalizedEmail,
+        subject,
+        htmlContent: html,
+        tags: ['newsletter-welcome'],
+      });
+      if (!result.success) {
+        console.error('[newsletter] Welcome email failed:', result.error);
       }
     }
 

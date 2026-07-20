@@ -198,10 +198,17 @@ Setup di Vercel Dashboard → Project → Settings → Environment Variables:
 
 ```
 # Production + Staging
+POSTGRES_URL                         → postgresql://[connection-string]
+POSTGRES_URL_NON_POOLING             → postgresql://[connection-string-non-pooling]
 NEXT_PUBLIC_SUPABASE_URL              → [supabase-url]
 NEXT_PUBLIC_SUPABASE_ANON_KEY         → [anon-key]
-SUPABASE_SERVICE_ROLE_KEY             → [service-role-key]
-NEXT_PUBLIC_SUPABASE_STORAGE_URL      → [storage-url]
+SUPABASE_SERVICE_ROLE_KEY             → [service-role-key] (auth admin only)
+R2_ACCESS_KEY_ID                      → [r2-access-key]
+R2_SECRET_ACCESS_KEY                  → [r2-secret-key]
+R2_ENDPOINT                           → https://[account-id].r2.cloudflarestorage.com
+R2_BUCKET_NAME                        → cdn-tam
+CDN_BASE_URL                          → https://cdn.tamparananakmuda.com
+CRON_SECRET                           → [cron-secret]
 BREVO_API_KEY                         → [api-key]
 BREVO_LIST_ID                         → [list-id]
 NEXT_PUBLIC_UMAMI_WEBSITE_ID          → [website-id]
@@ -219,10 +226,17 @@ LOUVIN_PROJECT_SLUG                   → tamparananakmuda
 NEXT_PUBLIC_LOUVIN_ENABLED            → true / false
 
 # Development only (local .env.local)
+POSTGRES_URL                         → postgresql://[connection-string]
+POSTGRES_URL_NON_POOLING             → postgresql://[connection-string-non-pooling]
 NEXT_PUBLIC_SUPABASE_URL              → [supabase-url]
 NEXT_PUBLIC_SUPABASE_ANON_KEY         → [anon-key]
-SUPABASE_SERVICE_ROLE_KEY             → [service-role-key]
-NEXT_PUBLIC_SUPABASE_STORAGE_URL      → [storage-url]
+SUPABASE_SERVICE_ROLE_KEY             → [service-role-key] (auth admin only)
+R2_ACCESS_KEY_ID                      → [r2-access-key]
+R2_SECRET_ACCESS_KEY                  → [r2-secret-key]
+R2_ENDPOINT                           → https://[account-id].r2.cloudflarestorage.com
+R2_BUCKET_NAME                        → cdn-tam
+CDN_BASE_URL                          → https://cdn.tamparananakmuda.com
+CRON_SECRET                           → [cron-secret]
 BREVO_API_KEY                         → [api-key]
 BREVO_LIST_ID                         → [list-id]
 NEXT_PUBLIC_SITE_URL                  → http://localhost:3000
@@ -258,23 +272,24 @@ Plan: Free tier
 
 ### Database Migration
 ```bash
-# Setup Supabase CLI
-npm install -g supabase
+# Setup Drizzle ORM (migrations)
+# Pastikan POSTGRES_URL_NON_POOLING sudah di-set di .env.local
+npx drizzle-kit generate  # Generate migration dari lib/db/schema.ts
+npx drizzle-kit push      # Push schema ke database
 
-# Login & link project
-supabase login
-supabase link --project-ref ibjzssvimsmdxxekqshy
-
-# Run migration files
-supabase db push
+# Atau jalankan SQL migration manual:
+# psql $POSTGRES_URL_NON_POOLING -f supabase/migrations/000001_initial_schema.sql
+# psql $POSTGRES_URL_NON_POOLING -f supabase/migrations/000003_update_categories.sql
+# dst.
 ```
 
-### Storage Bucket Setup
+### Storage Bucket Setup (Cloudflare R2)
 ```bash
-# Create storage bucket for images
-# Via Supabase Dashboard → Storage → New Bucket
-# Bucket name: "images"
-# Public: true (untuk cover image dll)
+# Create R2 bucket via Cloudflare Dashboard → R2 → Create bucket
+# Bucket name: cdn-tam
+# Public read access: yes (untuk OG images CDN)
+# Set env vars: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ENDPOINT, R2_BUCKET_NAME
+# CDN domain: https://cdn.tamparananakmuda.com (map via Cloudflare DNS CNAME)
 ```
 
 ### Auth Setup
@@ -297,9 +312,11 @@ supabase db push
 ### Pre-Launch (Satu kali)
 - [ ] Domain `tamparananakmuda.com` dikonfigurasi ke Vercel
 - [ ] SSL aktif dan redirect HTTPS berfungsi
-- [ ] Semua env vars di-set di Vercel (Production)
-- [ ] Supabase database migration dijalankan (tables + RLS policies + triggers)
-- [ ] Supabase Storage bucket "images" dibuat
+- [ ] Semua env vars di-set di Vercel (Production), termasuk POSTGRES_URL, R2 vars, CRON_SECRET
+- [ ] Drizzle ORM migration dijalankan: `npx drizzle-kit push`
+- [ ] Cloudflare R2 bucket `cdn-tam` dibuat dengan public read access
+- [ ] `CRON_SECRET` di-set di Vercel dashboard DAN GitHub Secrets (nilai sama)
+- [ ] GitHub Actions workflow `.github/workflows/publish-scheduled.yml` ter-deploy
 - [ ] Supabase Auth admin user di-invite dengan role `admin`
 - [ ] Brevo list dan double opt-in aktif
 - [ ] Umami instance setup dan website ID dikonfigurasi
@@ -308,7 +325,7 @@ supabase db push
 - [ ] sitemap.xml accessible
 - [ ] robots.txt terkonfigurasi
 - [ ] Google Search Console: submit sitemap
-- [ ] OG image ter-generate untuk homepage
+- [ ] OG image ter-generate untuk homepage dan artikel published (via `scripts/generate-all-og.ts` atau cron job)
 - [ ] CSP headers terverifikasi tidak block resources (cek browser console)
 
 ### Pre-Launch Payment (Phase 2)
@@ -424,4 +441,5 @@ curl -sf "$URL/dukung" > /dev/null && echo "Donation page OK"
 | 1.0 | Jun 2026 | Draft awal. |
 | 1.2 | Jul 2026 | Louvin payment gateway env vars, webhook setup, payment pre-launch checklist, donation page smoke test. |
 | 1.3 | Jul 2026 | Added LOUVIN_PROJECT_SLUG env var, editorial workflow pre-launch checklist, TikTok pipeline pre-launch checklist. |
+| 1.4 | Jul 2026 | Updated env vars for Drizzle ORM + R2 + GitHub Actions cron. Replaced Supabase Storage with Cloudflare R2. Updated migration workflow. |
 | 1.1 | Jul 2026 | Uptime Kuma, Sentry Phase 1, CI/CD migration, staging setup, smoke test, security headers, env vars sync. |

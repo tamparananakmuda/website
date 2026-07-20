@@ -4,6 +4,7 @@ import { SearchForm } from './search-form';
 export const metadata: Metadata = {
   title: 'Cari Artikel',
   description: 'Cari artikel dan perspektif dari TAMPARAN ANAK MUDA.',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/cari`,
   },

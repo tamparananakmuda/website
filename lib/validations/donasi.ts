@@ -31,6 +31,7 @@ export const donasiSchema = z.object({
     .optional()
     .default(''),
   is_recurring: z.boolean().optional().default(false),
+  turnstile_token: z.string().optional(),
 });
 
 export type DonasiInput = z.infer<typeof donasiSchema>;

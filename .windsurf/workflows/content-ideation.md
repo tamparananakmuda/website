@@ -25,10 +25,10 @@ Jalankan workflow ini **mingguan** (setiap Senin) untuk maintain content pipelin
 
 Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
 
-### 1a. Google Trends
+### 1a. Google Trends & Web Search
 ```
 1. Buka https://trends.google.com/trends/explore?geo=ID
-2. Filter: Last 7 days → Indonesia
+2. Filter: Last 7 days, Indonesia
 3. Cari keyword terkait kategori target:
    - Mindset: "self improvement", "mental health", "motivasi", "mindset"
    - Karier: "kerja", "fresh graduate", "karir", "CV", "PHK", "burnout kerja"
@@ -37,6 +37,8 @@ Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
    - Teknologi: "AI", "ChatGPT", "crypto", "gadget", "coding", "no-code"
    - Kehidupan: "toxic relationship", "pertemanan", "loneliness", "digital detox", "quarter life crisis"
 4. Catat top 5 trending queries per kategori
+
+Untuk AI agent: gunakan `search_web` tool dengan query keyword + "Indonesia" untuk mendapatkan artikel terkait dan sinyal tren.
 ```
 
 ### 1b. Twitter/X Indonesia
@@ -44,15 +46,19 @@ Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
 1. Search query: "min_faves:100 lang:id" + keyword kategori
 2. Cari thread viral yang spawn diskusi
 3. Catat: topik, sentiment, angle yang dibahas, angle yang MISSING
-4. Perhatikan quote tweets — itu sinyal disagreement = potensi kontra-narasi
+4. Perhatikan quote tweets, itu sinyal disagreement = potensi kontra-narasi
+
+Untuk AI agent: gunakan `search_web` dengan query "site:x.com [keyword] Indonesia" untuk menemukan thread viral.
 ```
 
 ### 1c. Reddit (r/indonesia, r/IndoArtikel, r/financialindependence)
 ```
-1. Sort by: Hot → This Week
+1. Sort by: Hot, This Week
 2. Filter post yang dapat 100+ upvotes
 3. Catat: pain points, pertanyaan yang belum dijawab, debat yang berulang
 4. Reddit = sinyal awal tren sebelum mainstream
+
+Untuk AI agent: gunakan `search_web` dengan query "site:reddit.com/r/indonesia [keyword]" untuk menemukan diskusi relevant.
 ```
 
 ### 1d. TikTok Indonesia
@@ -61,6 +67,8 @@ Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
 2. Filter video dengan 100K+ views
 3. Catat: hook yang dipakai, komentar audience (pain points), angle creator
 4. TikTok = sinyal apa yang sudah mainstream (late to trend = skip)
+
+Untuk AI agent: gunakan `search_web` dengan query "TikTok [keyword] Indonesia viral" untuk menemukan tren yang sudah mainstream.
 ```
 
 ### 1e. Google Keyword Research
@@ -70,6 +78,8 @@ Scan platform untuk topik yang sedang ramai dibahas anak muda Indonesia.
 3. Filter: Indonesia, Bahasa Indonesia
 4. Catat: search volume (low/med/high), keyword difficulty, related keywords
 5. Prioritas: long-tail (3-5 kata) dengan volume medium + difficulty low
+
+Untuk AI agent: gunakan `search_web` dengan query "[keyword] Indonesia" dan analisis hasil pencarian untuk estimasi search volume dan competition.
 ```
 
 ### Output Step 1
@@ -108,13 +118,15 @@ Bandingkan raw ideas dengan artikel yang sudah ada di TAM dan competitor.
 
 ### 2a. Audit Artikel Existing TAM
 ```bash
-# Query semua artikel published
-curl -s "$SUPA_URL/rest/v1/posts?status=eq.published&select=slug,title,category:categories(slug,title)&order=published_at.desc" \
-  -H "apikey: $SUPA_KEY" -H "Authorization: Bearer $SUPA_KEY" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
-d.forEach(p => console.log(p.category?.slug, '|', p.slug, '|', p.title));
-"
+# Query semua artikel published via Drizzle ORM
+npx tsx -e "import { db } from './lib/db'; import { posts, categories } from './lib/db/schema'; import { eq } from 'drizzle-orm'; db.select({ slug: posts.slug, title: posts.title, catSlug: categories.slug }).from(posts).leftJoin(categories, eq(posts.categoryId, categories.id)).where(eq(posts.status, 'published')).then(rows => rows.forEach(p => console.log(p.catSlug + ' | ' + p.slug + ' | ' + p.title))).catch(console.error);"
 ```
+
+**Atau gunakan `search_web` tool:**
+```
+search_web dengan query: site:tamparananakmuda.com [keyword topik]
+```
+Gunakan ini untuk cek apakah TAM sudah punya artikel tentang topik tertentu tanpa perlu query DB.
 
 ### 2b. Competitor Scan
 ```
@@ -194,7 +206,7 @@ Validated ideas siap draft:
 [Kategori] | [Topik] | [POV] | [Angle 1-liner] | [Working title] | [seo_keywords: keyword1, keyword2, keyword3]
 ```
 
-**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` saat insert via `/post-article-execution` Step 4.
+**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` (Drizzle ORM: `seoKeywords: text('seo_keywords').array()`) saat insert via `/post-article-execution` Step 4.
 
 ## Step 4: Prioritisasi
 
@@ -248,10 +260,10 @@ Urutkan validated ideas berdasarkan:
 **SERP Gap Check (untuk SEO scoring):**
 Sebelum scoring SEO, cek top 3 Google results untuk keyword target:
 ```
-Gunakan search_web dengan query keyword target.
+Gunakan search_web tool dengan query keyword target.
 Catat: URL, angle artikel, kualitas konten (depth, data, originalitas).
 Jika top 3 tidak ada artikel quality (listicle tipis, no data, no original angle) = SERP gap = SEO skor +1.
-Format lengkap: lihat files/templates/seo-brief-template.md section "Kompetitor Analysis".
+Gunakan read_url_content untuk membaca artikel competitor dan analisis depth.
 ```
 
 **Tiebreaker Rule:**

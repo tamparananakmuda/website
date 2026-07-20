@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Bookmark, BookmarkCheck } from 'lucide-react';
+import { trackEvent } from '@/lib/track';
 
 export function BookmarkButton({ postId }: { postId: string }) {
   const [bookmarked, setBookmarked] = useState(false);
@@ -36,6 +37,7 @@ export function BookmarkButton({ postId }: { postId: string }) {
       if (bookmarked) {
         await fetch(`/api/bookmarks?post_id=${postId}`, { method: 'DELETE' });
         setBookmarked(false);
+        trackEvent('bookmark_removed', { post_id: postId });
       } else {
         await fetch('/api/bookmarks', {
           method: 'POST',
@@ -43,6 +45,7 @@ export function BookmarkButton({ postId }: { postId: string }) {
           body: JSON.stringify({ post_id: postId }),
         });
         setBookmarked(true);
+        trackEvent('bookmark_added', { post_id: postId });
       }
     } catch {
       // silent fail
