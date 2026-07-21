@@ -206,6 +206,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             slug: r.slug,
             excerpt: r.excerpt,
             coverImageUrl: r.coverImageUrl,
+            ogCardUrl: r.ogCardUrl,
             readingTime: r.readingTime ?? 1,
             category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
           }))} />

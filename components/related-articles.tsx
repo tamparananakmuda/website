@@ -7,6 +7,7 @@ interface RelatedArticle {
   slug: string;
   excerpt: string | null;
   coverImageUrl: string | null;
+  ogCardUrl: string | null;
   readingTime: number;
   category?: { title: string; slug: string; color: string } | null;
 }
@@ -36,7 +37,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
               <Link href={`/artikel/${article.slug}`} className="block">
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-4">
                   <Image
-                    src={`/api/og/card?slug=${article.slug}`}
+                    src={article.ogCardUrl || `/api/og/card?slug=${article.slug}`}
                     alt={article.title}
                     fill
                     unoptimized
