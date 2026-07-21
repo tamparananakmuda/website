@@ -2,7 +2,7 @@
 
 Format: 400-600 kata
 Frekuensi: 1x per minggu (Jumat)
-Platform: Email via Brevo
+Platform: Email via Resend
 
 ---
 

@@ -33,7 +33,7 @@ P3 - Future (Phase 3+)
 **Acceptance Criteria:**
 - [ ] Hero text tidak lebih dari 2 baris di desktop
 - [ ] Artikel featured ditentukan dari database (bisa di-pin via `featured` flag)
-- [ ] Newsletter form berfungsi dan terhubung ke Brevo
+- [ ] Newsletter form berfungsi dan terhubung ke Resend
 - [ ] Load time < 2 detik (LCP)
 - [ ] Fully responsive mobile/tablet/desktop
 
@@ -118,7 +118,7 @@ P3 - Future (Phase 3+)
 
 ### F05 - Newsletter Subscription `P0`
 
-**Deskripsi:** Form subscribe email, terintegrasi Brevo
+**Deskripsi:** Form subscribe email, terintegrasi Resend
 
 **Lokasi form:**
 - Homepage (dedicated block)
@@ -130,10 +130,9 @@ P3 - Future (Phase 3+)
 1. User isi email
 2. Validasi format email (client-side)
 3. POST ke `/api/subscribe`
-4. Server call ke Brevo API
-5. Brevo kirim email konfirmasi (double opt-in)
-6. User klik konfirmasi → masuk list
-7. Redirect ke `/newsletter` (thank you page)
+4. Server simpan ke database + kirim welcome email via Resend
+5. User langsung aktif sebagai subscriber
+6. Redirect ke `/newsletter` (thank you page)
 
 **Acceptance Criteria:**
 - [ ] Validasi email sebelum submit
@@ -141,8 +140,8 @@ P3 - Future (Phase 3+)
 - [ ] Success state dengan pesan konfirmasi
 - [ ] Error state dengan pesan yang actionable
 - [ ] Duplicate email tidak menyebabkan error yang confusing
-- [ ] API key Brevo tidak pernah exposed ke client
-- [ ] Double opt-in aktif
+- [ ] API key Resend tidak pernah exposed ke client
+- [ ] Welcome email terkirim otomatis
 
 ---
 
@@ -294,7 +293,7 @@ P3 - Future (Phase 3+)
 - Tabel `donations` untuk tracking transaksi
 - Support QRIS, GoPay, ShopeePay, BNI/BRI/Permata/CIMB VA
 - Halaman terima kasih `/dukung/terima-kasih`
-- Email terima kasih via Brevo (opsional)
+- Email terima kasih via Resend (opsional)
 
 **Acceptance Criteria:**
 - [ ] API key Louvin server-only, tidak terexposure di client

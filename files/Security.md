@@ -12,7 +12,7 @@ Untuk website content/blog seperti TAM, threat utama yang relevan:
 
 | Threat | Likelihood | Impact | Priority |
 |---|---|---|---|
-| API key exposed (Brevo, Supabase service role) | Medium | High | 🔴 Critical |
+| API key exposed (Resend, Supabase service role) | Medium | High | 🔴 Critical |
 | Spam/bot subscribe newsletter | High | Medium | 🟠 High |
 | XSS via user input / Markdown content | Low | High | 🟠 High |
 | CSRF pada form subscribe | Medium | Medium | 🟡 Medium |
@@ -27,7 +27,7 @@ Untuk website content/blog seperti TAM, threat utama yang relevan:
 
 ### Rules
 - **Tidak ada secret di client-side code** - pernah, tidak, tidak pernah
-- Semua API calls ke Brevo, DB operations - hanya dari server (API routes Next.js)
+- Semua API calls ke Resend, DB operations - hanya dari server (API routes Next.js)
 - `POSTGRES_URL` dan `R2_SECRET_ACCESS_KEY` HANYA di server, bukan client
 - `SUPABASE_SERVICE_ROLE_KEY` hanya untuk Supabase Auth admin operations, bukan untuk DB queries (DB pakai Drizzle ORM)
 - Env vars di Vercel environment, bukan di `.env` yang di-commit
@@ -38,7 +38,7 @@ Untuk website content/blog seperti TAM, threat utama yang relevan:
 # SERVER-ONLY (tidak boleh di prefix NEXT_PUBLIC_)
 POSTGRES_URL=                    # PostgreSQL connection string untuk Drizzle ORM
 POSTGRES_URL_NON_POOLING=        # Untuk Drizzle Kit migrations
-BREVO_API_KEY=
+RESEND_API_KEY=
 R2_ACCESS_KEY_ID=                # Cloudflare R2 S3 access key
 R2_SECRET_ACCESS_KEY=            # Cloudflare R2 S3 secret
 R2_ENDPOINT=                     # R2 S3 endpoint
@@ -85,11 +85,11 @@ if (email.length > 254) return 400  // RFC 5321 max
 // Max 3 requests per IP per 10 menit
 // Implementasi via Vercel Edge atau upstash/ratelimit
 
-// Layer 3: Server-side call ke Brevo
+// Layer 3: Server-side call ke Resend
 // API key hanya di server, tidak pernah ke client
 
-// Layer 4: Double opt-in (Brevo setting)
-// Validasi via email sebelum masuk list
+// Layer 4: Welcome email via Resend
+// Subscriber langsung aktif, welcome email dikirim otomatis
 ```
 
 ### Rate Limiting
@@ -116,7 +116,7 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   font-src 'self' fonts.gstatic.com;
   img-src 'self' data: blob: ${process.env.NEXT_PUBLIC_SUPABASE_URL} *.unsplash.com;
-  connect-src 'self' ${process.env.NEXT_PUBLIC_SUPABASE_URL} api.brevo.com *.umami.is;
+  connect-src 'self' ${process.env.NEXT_PUBLIC_SUPABASE_URL} api.resend.com *.umami.is;
   frame-ancestors 'none';
 `;
 ```
@@ -235,7 +235,7 @@ npm outdated
 ### Data yang Dikumpulkan
 | Data | Cara | Tujuan | Disimpan di |
 |---|---|---|---|
-| Email subscriber | Form subscribe | Newsletter | Brevo |
+| Email subscriber | Form subscribe | Newsletter | Database (Supabase) + Resend |
 | Pageview anonymized | Umami | Analytics | Umami (self-hosted) |
 | Custom events (click, scroll, share) | Umami | Content optimization | Umami (self-hosted) |
 | UTM parameters | URL query | Attribution | Umami (self-hosted) |
@@ -254,12 +254,12 @@ npm outdated
 ### Privacy Policy
 - Diperlukan sebelum launch: `/privasi` page
 - Minimal harus explain: apa yang dikumpulkan, untuk apa, bagaimana hapus data
-- Brevo adalah processor data - perlu disebutkan
+- Resend adalah processor data untuk transactional email - perlu disebutkan
 
 ### GDPR / UU PDP Indonesia
 - Karena target utama Indonesia: fokus ke UU PDP (Undang-Undang Perlindungan Data Pribadi)
 - Double opt-in untuk email = consent yang jelas
-- Sediakan cara untuk unsubscribe (built-in Brevo)
+- Sediakan cara untuk unsubscribe (link unsubscribe di setiap email)
 
 ---
 
@@ -267,8 +267,8 @@ npm outdated
 
 Jika terjadi security incident:
 
-1. **Rotasi semua API keys** di Vercel environment vars (POSTGRES_URL, R2 keys, CRON_SECRET, Brevo, dll)
-2. **Audit Brevo subscriber list** - cek apakah ada anomali
+1. **Rotasi semua API keys** di Vercel environment vars (POSTGRES_URL, R2 keys, CRON_SECRET, Resend, dll)
+2. **Audit subscriber list di database** - cek apakah ada anomali
 3. **Check Supabase Auth logs** dan Drizzle ORM query patterns
 4. **Redeploy** setelah keys dirotasi
 5. **Notify** jika data user terdampak (sesuai UU PDP: max 14 hari)
@@ -323,7 +323,7 @@ Jika terjadi security incident:
 - [ ] CORS Supabase hanya whitelist domain yang benar
 - [ ] Security headers aktif (verifikasi via securityheaders.com)
 - [ ] `npm audit` tidak ada high/critical vulnerability
-- [ ] Double opt-in Brevo aktif
+- [ ] Welcome email via Resend aktif
 - [ ] Privacy policy halaman ada
 - [ ] HTTPS enforced (Vercel default)
 - [ ] Analytics events tidak mengandung PII

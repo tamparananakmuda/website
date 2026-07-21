@@ -1,3 +1,12 @@
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export interface DigestArticle {
   title: string;
   slug: string;
@@ -28,21 +37,25 @@ export function renderDigestEmail(data: DigestEmailData): { subject: string; htm
     ? `Artikel baru hari ini: ${articles[0].title}`
     : `${count} artikel baru hari ini dari TAM`;
 
-  const preheader = articles.map(a => a.title).join(' | ').substring(0, 120);
+  const preheader = articles.map(a => escapeHtml(a.title)).join(' | ').substring(0, 120);
 
   const articleItems = articles.map((article) => {
     const postUrl = `${siteUrl}/artikel/${article.slug}`;
+    const safeTitle = escapeHtml(article.title);
+    const safeExcerpt = escapeHtml(article.excerpt);
+    const safeAuthor = article.authorName ? escapeHtml(article.authorName) : undefined;
+    const safeCat = article.categoryTitle ? escapeHtml(article.categoryTitle) : undefined;
     const meta: string[] = [];
-    if (article.authorName) meta.push(article.authorName);
+    if (safeAuthor) meta.push(safeAuthor);
     if (article.readingTime) meta.push(`${article.readingTime} menit baca`);
-    const metaStr = meta.length > 0 ? ` — ${meta.join(' • ')}` : '';
+    const metaStr = meta.length > 0 ? ` · ${meta.join(' • ')}` : '';
     const badge = article.isPremium ? ' [PREMIUM]' : article.isSponsored ? ' [SPONSORED]' : '';
-    const cat = article.categoryTitle ? `<span style="color:${article.categoryColor || '#e11d48'};font-weight:700;">${article.categoryTitle}</span> • ` : '';
+    const cat = safeCat ? `<span style="color:${article.categoryColor || '#e11d48'};font-weight:700;">${safeCat}</span> • ` : '';
 
     return `<p style="margin:0 0 4px 0;font-size:12px;color:#a1a1aa;">${cat}${badge}</p>
-<p style="margin:0 0 4px 0;"><a href="${postUrl}" style="font-size:18px;font-weight:700;color:#0a0a0a;text-decoration:none;">${article.title}</a></p>
+<p style="margin:0 0 4px 0;"><a href="${postUrl}" style="font-size:18px;font-weight:700;color:#0a0a0a;text-decoration:none;">${safeTitle}</a></p>
 <p style="margin:0 0 4px 0;font-size:13px;color:#a1a1aa;">${metaStr}</p>
-<p style="margin:0 0 16px 0;font-size:15px;color:#52525b;line-height:1.6;">${article.excerpt}</p>
+<p style="margin:0 0 16px 0;font-size:15px;color:#52525b;line-height:1.6;">${safeExcerpt}</p>
 <p style="margin:0 0 24px 0;"><a href="${postUrl}" style="color:#e11d48;font-size:14px;font-weight:700;text-decoration:none;">Baca artikel →</a></p>`;
   }).join('<hr style="border:none;border-top:1px solid #f4f4f5;margin:0 0 24px 0;">');
 
@@ -75,7 +88,7 @@ ${articleItems}
 Kamu menerima email ini karena berlangganan newsletter TAM.<br>
 <a href="${unsubscribeUrl}" style="color:#a1a1aa;text-decoration:underline;">Berhenti berlangganan</a> •
 <a href="${siteUrl}/privacy" style="color:#a1a1aa;text-decoration:underline;">Kebijakan privasi</a><br>
-© 2026 TAMPARAN ANAK MUDA — Menyadarkan generasi muda akan kenyataan
+© 2026 TAMPARAN ANAK MUDA. Menyadarkan generasi muda akan kenyataan.
 </p>
 
 </div>

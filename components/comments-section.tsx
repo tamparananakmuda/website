@@ -101,6 +101,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
   const [replyTo, setReplyTo] = useState<string | null>(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
 
   const fetchComments = useCallback(async () => {
     setLoading(true);
@@ -150,6 +151,8 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
 
       setBody('');
       setReplyTo(null);
+      setTurnstileToken(null);
+      setTurnstileKey((k) => k + 1);
       fetchComments();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Terjadi kesalahan');
@@ -241,7 +244,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
               {submitting ? 'Mengirim...' : 'Kirim'}
             </button>
           </div>
-          <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="mt-2" />
+          <Turnstile key={turnstileKey} onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="mt-2" />
         </form>
       ) : (
         <div className="mb-8 rounded-lg border border-border bg-card/50 p-4 text-center text-sm text-muted-foreground">

@@ -1,3 +1,12 @@
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export interface DonationReceiptEmailData {
   customerName: string | null;
   louvinTransactionId: string;
@@ -19,6 +28,8 @@ export function renderDonationReceiptEmail(data: DonationReceiptEmailData): { su
     hour: '2-digit',
     minute: '2-digit',
   });
+  const safeName = escapeHtml(data.customerName || 'Teman TAM');
+  const safeTxId = escapeHtml(data.louvinTransactionId);
 
   return {
     subject: 'Terima kasih atas dukunganmu',
@@ -31,7 +42,7 @@ export function renderDonationReceiptEmail(data: DonationReceiptEmailData): { su
         <h2 style="color: #1a1a1a; font-size: 24px; margin-bottom: 16px;">Terima kasih atas dukunganmu</h2>
 
         <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 16px;">
-          Halo ${data.customerName || 'Teman TAM'},
+          Halo ${safeName},
         </p>
 
         <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
@@ -41,7 +52,7 @@ export function renderDonationReceiptEmail(data: DonationReceiptEmailData): { su
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr>
             <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666; font-size: 14px;">ID Transaksi</td>
-            <td style="padding: 10px; border-bottom: 1px solid #eee; font-family: monospace; font-size: 13px; color: #333;">${data.louvinTransactionId}</td>
+            <td style="padding: 10px; border-bottom: 1px solid #eee; font-family: monospace; font-size: 13px; color: #333;">${safeTxId}</td>
           </tr>
           <tr>
             <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666; font-size: 14px;">Nominal</td>

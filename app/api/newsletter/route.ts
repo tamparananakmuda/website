@@ -36,29 +36,6 @@ export async function POST(request: NextRequest) {
 
     const subscriber = await upsertNewsletterSubscriber(normalizedEmail, topics);
 
-    // Sync to Brevo if API key exists
-    if (process.env.BREVO_API_KEY && process.env.BREVO_LIST_ID) {
-      const res = await fetch('https://api.brevo.com/v3/contacts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'api-key': process.env.BREVO_API_KEY,
-        },
-        body: JSON.stringify({
-          email: normalizedEmail,
-          listIds: [parseInt(process.env.BREVO_LIST_ID, 10)],
-          updateEnabled: true,
-          attributes: {
-            TOPICS: topics.join(','),
-          },
-        }),
-      });
-
-      if (!res.ok && res.status !== 400) {
-        console.error('Brevo sync failed:', await res.text());
-      }
-    }
-
     // Send welcome email if subscriber has unsubscribe token
     if (subscriber.unsubscribeToken) {
       const { subject, html } = renderWelcomeEmail({

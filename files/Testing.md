@@ -187,10 +187,10 @@ describe('NewsletterForm', () => {
 
 describe('POST /api/subscribe', () => {
   beforeEach(() => {
-    // Mock Brevo API
+    // Mock Resend API
     server.use(
-      http.post('https://api.brevo.com/v3/contacts', () => {
-        return HttpResponse.json({ id: 1 }, { status: 201 })
+      http.post('https://api.resend.com/emails', () => {
+        return HttpResponse.json({ id: 'msg_123' }, { status: 200 })
       })
     )
   })

@@ -59,6 +59,7 @@ export default function DonasiForm() {
   const [copied, setCopied] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
 
   const finalAmount = customAmount ? parseInt(customAmount, 10) : amount;
 
@@ -108,6 +109,8 @@ export default function DonasiForm() {
       }
     } catch {
       setError('Terjadi kesalahan. Coba lagi nanti.');
+      setTurnstileToken(null);
+      setTurnstileKey((k) => k + 1);
     } finally {
       setLoading(false);
     }
@@ -484,7 +487,7 @@ export default function DonasiForm() {
             )}
 
             {/* Turnstile */}
-            <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} />
+            <Turnstile key={turnstileKey} onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} />
 
             {/* Submit */}
             <button

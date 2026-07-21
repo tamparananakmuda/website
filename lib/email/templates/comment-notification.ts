@@ -1,3 +1,12 @@
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export interface CommentNotificationEmailData {
   postTitle: string;
   postSlug: string;
@@ -12,6 +21,9 @@ export function renderCommentNotificationEmail(data: CommentNotificationEmailDat
   const truncatedBody = data.commentBody.length > 300
     ? data.commentBody.substring(0, 300) + '...'
     : data.commentBody;
+  const safeAuthorName = escapeHtml(data.authorName);
+  const safePostTitle = escapeHtml(data.postTitle);
+  const safeBody = escapeHtml(truncatedBody);
 
   return {
     subject: `Komentar baru di: ${data.postTitle}`,
@@ -25,15 +37,15 @@ export function renderCommentNotificationEmail(data: CommentNotificationEmailDat
 
         <p style="color: #666; font-size: 14px; margin-bottom: 8px;">Artikel:</p>
         <p style="color: #1a1a1a; font-size: 16px; font-weight: 600; margin-bottom: 20px;">
-          <a href="${postUrl}" style="color: #1a1a1a; text-decoration: none;">${data.postTitle}</a>
+          <a href="${postUrl}" style="color: #1a1a1a; text-decoration: none;">${safePostTitle}</a>
         </p>
 
         <p style="color: #666; font-size: 14px; margin-bottom: 8px;">Dari:</p>
-        <p style="color: #333; font-size: 15px; font-weight: 600; margin-bottom: 20px;">${data.authorName}</p>
+        <p style="color: #333; font-size: 15px; font-weight: 600; margin-bottom: 20px;">${safeAuthorName}</p>
 
         <p style="color: #666; font-size: 14px; margin-bottom: 8px;">Komentar:</p>
         <div style="background: #f8f8f8; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
-          <p style="color: #333; font-size: 14px; line-height: 1.6; margin: 0;">${truncatedBody}</p>
+          <p style="color: #333; font-size: 14px; line-height: 1.6; margin: 0;">${safeBody}</p>
         </div>
 
         <p style="margin-bottom: 32px;">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 
 declare global {
   interface Window {
@@ -21,28 +21,35 @@ interface TurnstileProps {
 export function Turnstile({ onVerify, onExpire, className }: TurnstileProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
+  const onVerifyRef = useRef(onVerify);
+  const onExpireRef = useRef(onExpire);
 
-  const renderWidget = useCallback(() => {
-    if (!containerRef.current || !window.turnstile) return;
-    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-    if (!siteKey) return;
-
-    widgetIdRef.current = window.turnstile.render(containerRef.current, {
-      sitekey: siteKey,
-      theme: 'auto',
-      callback: onVerify,
-      'expired-callback': onExpire,
-    });
+  useEffect(() => {
+    onVerifyRef.current = onVerify;
+    onExpireRef.current = onExpire;
   }, [onVerify, onExpire]);
 
   useEffect(() => {
+    const renderWidget = () => {
+      if (!containerRef.current || !window.turnstile) return;
+      const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+      if (!siteKey) return;
+
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: siteKey,
+        theme: 'auto',
+        callback: (token: string) => onVerifyRef.current(token),
+        'expired-callback': () => onExpireRef.current?.(),
+      });
+    };
+
     if (window.turnstile) {
       renderWidget();
       return;
     }
 
     const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
     script.async = true;
     script.defer = true;
     script.onload = () => renderWidget();
@@ -53,7 +60,7 @@ export function Turnstile({ onVerify, onExpire, className }: TurnstileProps) {
         window.turnstile.remove(widgetIdRef.current);
       }
     };
-  }, [renderWidget]);
+  }, []);
 
   return <div ref={containerRef} className={className} />;
 }

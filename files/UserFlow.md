@@ -101,7 +101,7 @@
 [Isi email di form]
       │
       ▼
-[Submit → API call ke Brevo]
+[Submit → API simpan ke DB + kirim welcome email via Resend]
       │
       ├── Sukses                         → Event: newsletter_subscribed
       │
@@ -131,7 +131,7 @@ Setelah double opt-in:
    - CTA: "Baca artikel populer" atau "Follow IG"
    - Event: `newsletter_welcome_view`
 
-2. **Welcome Email (Brevo)**
+2. **Welcome Email (Resend)**
    - Subject: "Selamat datang. Ini yang bisa kamu expect."
    - Isi: tone TAM, link 3 artikel terbaik, link IG
    - Track: open rate, click rate
@@ -250,7 +250,7 @@ Setelah double opt-in:
       │
       ├── Settled                          → Event: donation_success
       │   ├── Update tabel donations
-      │   ├── Kirim email terima kasih (Brevo)
+      │   ├── Kirim email terima kasih (Resend)
       │   └── Redirect /dukung/terima-kasih
       │
       └── Failed                           → Event: donation_failed

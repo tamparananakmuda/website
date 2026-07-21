@@ -165,7 +165,7 @@ feature/* → PR → staging → PR → main
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-XSS-Protection", "value": "1; mode=block" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.umami.is; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob: *.supabase.co *.unsplash.com; connect-src 'self' *.supabase.co api.brevo.com *.umami.is; frame-ancestors 'none';" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.umami.is; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob: *.supabase.co *.unsplash.com; connect-src 'self' *.supabase.co api.resend.com *.umami.is; frame-ancestors 'none';" }
       ]
     },
     {
@@ -209,8 +209,7 @@ R2_ENDPOINT                           → https://[account-id].r2.cloudflarestor
 R2_BUCKET_NAME                        → cdn-tam
 CDN_BASE_URL                          → https://cdn.tamparananakmuda.com
 CRON_SECRET                           → [cron-secret]
-BREVO_API_KEY                         → [api-key]
-BREVO_LIST_ID                         → [list-id]
+RESEND_API_KEY                         → [api-key]
 NEXT_PUBLIC_UMAMI_WEBSITE_ID          → [website-id]
 NEXT_PUBLIC_UMAMI_URL                 → https://[umami-instance]/script.js
 NEXT_PUBLIC_SENTRY_DSN                → [sentry-dsn]
@@ -237,8 +236,7 @@ R2_ENDPOINT                           → https://[account-id].r2.cloudflarestor
 R2_BUCKET_NAME                        → cdn-tam
 CDN_BASE_URL                          → https://cdn.tamparananakmuda.com
 CRON_SECRET                           → [cron-secret]
-BREVO_API_KEY                         → [api-key]
-BREVO_LIST_ID                         → [list-id]
+RESEND_API_KEY                         → [api-key]
 NEXT_PUBLIC_SITE_URL                  → http://localhost:3000
 ```
 
@@ -318,7 +316,7 @@ npx drizzle-kit push      # Push schema ke database
 - [ ] `CRON_SECRET` di-set di Vercel dashboard DAN GitHub Secrets (nilai sama)
 - [ ] GitHub Actions workflow `.github/workflows/publish-scheduled.yml` ter-deploy
 - [ ] Supabase Auth admin user di-invite dengan role `admin`
-- [ ] Brevo list dan double opt-in aktif
+- [ ] Resend API key di-set dan welcome email aktif
 - [ ] Umami instance setup dan website ID dikonfigurasi
 - [ ] Sentry project setup dan DSN dikonfigurasi
 - [ ] Uptime Kuma monitor homepage, subscribe endpoint, dan Umami instance
