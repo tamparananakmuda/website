@@ -9,9 +9,17 @@ export async function verifyTurnstileToken(
 
   if (!token) return false;
 
+  const isDev = process.env.NODE_ENV === 'development';
+  const host = request?.headers.get('host') || '';
+  const isLocalhost = isDev || host.includes('localhost') || host.includes('127.0.0.1');
+
+  if (isLocalhost && token === 'XXXX.DUMMY.TOKEN.XXXX') {
+    return true;
+  }
+
   try {
     const body = new URLSearchParams();
-    body.append('secret', secret);
+    body.append('secret', isLocalhost ? '1x0000000000000000000000000000000AA' : secret);
     body.append('response', token);
 
     if (request) {
