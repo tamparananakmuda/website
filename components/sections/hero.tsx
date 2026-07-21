@@ -40,13 +40,13 @@ export function Hero({ className }: HeroProps) {
               Awakening the youth to reality
             </p>
 
-            <h1 className="mb-6 max-w-[1100px] font-display text-[34px] font-bold leading-[1.08] tracking-tight text-foreground md:mb-8 md:text-[4.5rem] md:leading-[1.05]">
+            <h1 className="mb-6 max-w-[1100px] font-display text-[34px] font-bold leading-[1.08] tracking-tight text-white md:mb-8 md:text-[4.5rem] md:leading-[1.05]">
               Melawan Ilusi.
               <br className="hidden md:block" />
               Membangun Realita.
             </h1>
 
-            <p className="mb-8 max-w-3xl text-base leading-relaxed text-muted-foreground md:mb-12 md:text-xl">
+            <p className="mb-8 max-w-3xl text-base leading-relaxed text-white/70 md:mb-12 md:text-xl">
               Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan, bukan untuk membuatmu merasa nyaman, tapi agar kamu melihat kenyataan lebih jelas.
             </p>
 
@@ -64,7 +64,7 @@ export function Hero({ className }: HeroProps) {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/tentang"
-                  className="flex w-full items-center justify-center gap-1 rounded-full border border-border bg-card px-6 py-3.5 font-semibold text-foreground shadow-xl transition-colors hover:bg-secondary sm:px-[26px] sm:py-[14px]"
+                  className="flex w-full items-center justify-center gap-1 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white shadow-xl backdrop-blur-sm transition-colors hover:bg-white/20 sm:px-[26px] sm:py-[14px]"
                 >
                   Tentang Kami
                 </Link>
