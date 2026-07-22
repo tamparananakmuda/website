@@ -10,7 +10,7 @@ export function AboutPageSchema() {
       '@type': 'Organization',
       name: 'TAMPARAN ANAK MUDA',
       url: siteUrl,
-      slogan: 'Menyadarkan generasi muda akan kenyataan',
+      slogan: 'Menyadarkan Generasi Muda akan Kenyataan',
       description:
         'Editorial media digital Indonesia yang menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset untuk generasi muda.',
       sameAs: [

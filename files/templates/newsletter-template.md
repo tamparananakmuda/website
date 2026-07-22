@@ -69,7 +69,7 @@ Ajak pembaca reply email. Engagement > broadcast.
 ```
 ---
 TAMPARAN ANAK MUDA
-Menyadarkan generasi muda akan kenyataan
+Menyadarkan Generasi Muda akan Kenyataan
 
 Baca artikel terbaru: [link]
 Dukung TAM: [link donasi]
@@ -86,7 +86,7 @@ Unsubscribe: [link]
 - Satu email = satu insight + satu rekomendasi + satu pertanyaan. Tidak lebih.
 - Tidak ada em-dash. Gunakan koma atau titik.
 - Tidak ada AI pattern (lengkap: lihat `files/HumanizerRules.md`)
-- Tagline resmi di footer: "Menyadarkan generasi muda akan kenyataan"
+- Tagline resmi di footer: "Menyadarkan Generasi Muda akan Kenyataan"
 
 ## Checklist
 

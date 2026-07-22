@@ -612,7 +612,7 @@ export function OgTemplate(props: TemplateProps): ReactElement {
             fontSize: `${cfg.taglineFont}px`,
             color: COLORS.textSecondary,
           }}>
-            Menyadarkan generasi muda akan kenyataan
+            Menyadarkan Generasi Muda akan Kenyataan
           </span>
           <div style={{ flex: 1 }} />
           <Divider width={cfg.divider1Width} />
@@ -872,7 +872,7 @@ export function OgTemplate(props: TemplateProps): ReactElement {
             </span>
             {cfg.showTagline && (
               <span style={footerTaglineStyle}>
-                Menyadarkan generasi muda akan kenyataan
+                Menyadarkan Generasi Muda akan Kenyataan
               </span>
             )}
           </div>

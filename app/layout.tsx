@@ -26,7 +26,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.co
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Menyadarkan generasi muda akan kenyataan - Tamparan Anak Muda',
+    default: 'Menyadarkan Generasi Muda akan Kenyataan - Tamparan Anak Muda',
     template: '%s - Tamparan Anak Muda',
   },
   description:
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: siteUrl,
     siteName: 'TAMPARAN ANAK MUDA',
-    title: 'Menyadarkan generasi muda akan kenyataan - Tamparan Anak Muda',
+    title: 'Menyadarkan Generasi Muda akan Kenyataan - Tamparan Anak Muda',
     description:
       'Editorial media digital untuk anak muda Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset.',
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@tamparananakmuda',
     creator: '@tamparananakmuda',
-    title: 'Menyadarkan generasi muda akan kenyataan - Tamparan Anak Muda',
+    title: 'Menyadarkan Generasi Muda akan Kenyataan - Tamparan Anak Muda',
     description:
       'Editorial media digital untuk anak muda Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset.',
   },

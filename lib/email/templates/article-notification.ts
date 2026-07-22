@@ -88,7 +88,7 @@ ${articleItems}
 Kamu menerima email ini karena berlangganan newsletter TAM.<br>
 <a href="${unsubscribeUrl}" style="color:#a1a1aa;text-decoration:underline;">Berhenti berlangganan</a> •
 <a href="${siteUrl}/privacy" style="color:#a1a1aa;text-decoration:underline;">Kebijakan privasi</a><br>
-© 2026 TAMPARAN ANAK MUDA. Menyadarkan generasi muda akan kenyataan.
+© 2026 TAMPARAN ANAK MUDA. Menyadarkan Generasi Muda akan Kenyataan.
 </p>
 
 </div>

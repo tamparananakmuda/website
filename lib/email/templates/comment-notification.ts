@@ -54,7 +54,7 @@ export function renderCommentNotificationEmail(data: CommentNotificationEmailDat
 
         <p style="color: #999; font-size: 12px; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
           TAMPARAN ANAK MUDA<br>
-          Menyadarkan generasi muda akan kenyataan<br>
+          Menyadarkan Generasi Muda akan Kenyataan<br>
           <a href="${siteUrl}" style="color: #999; text-decoration: none;">tamparananakmuda.com</a>
         </p>
       </div>
