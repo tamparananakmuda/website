@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, AlertCircle } from 'lucide-react';
 import { Turnstile } from '@/components/turnstile';
+import { createClient } from '@/lib/supabase/client';
 
 function LoginForm() {
   const router = useRouter();
@@ -23,7 +24,7 @@ function LoginForm() {
     setError(null);
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch('/api/auth/verify-turnstile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, turnstile_token: turnstileToken || undefined }),
@@ -32,7 +33,26 @@ function LoginForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || 'Gagal mengirim link masuk');
+        setError(data.error || 'Verifikasi gagal');
+        setLoading(false);
+        return;
+      }
+
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+      const supabase = createClient();
+      const { error: otpError } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: `${siteUrl}/auth/callback`,
+          shouldCreateUser: false,
+        },
+      });
+
+      if (otpError) {
+        const message = otpError.message.includes('not registered') || otpError.message.includes('no user')
+          ? 'Email belum terdaftar. Hubungi admin untuk mendaftar.'
+          : otpError.message;
+        setError(message);
       } else {
         setSent(true);
       }

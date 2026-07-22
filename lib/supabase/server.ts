@@ -20,12 +20,12 @@ export function createClient() {
           }[]
         ) {
           try {
-            cookiesToSet.forEach(({ name, value, options }) => {
-              cookieStore.set(name, value, options as Record<string, never>);
-              console.log('[supabase/server] Cookie set:', name);
-            });
-          } catch (err) {
-            console.error('[supabase/server] Failed to set cookies:', err);
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options as Record<string, never>)
+            );
+          } catch {
+            // The `setAll` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing sessions.
           }
         },
       },
