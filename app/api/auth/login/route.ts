@@ -50,11 +50,15 @@ export async function POST(request: NextRequest) {
       email,
       options: {
         emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/auth/callback`,
+        shouldCreateUser: false,
       },
     });
 
     if (error) {
-      return NextResponse.json({ error: error.message }, { status: 400 });
+      const message = error.message.includes('not registered') || error.message.includes('no user')
+        ? 'Email belum terdaftar. Hubungi admin untuk mendaftar.'
+        : error.message;
+      return NextResponse.json({ error: message }, { status: 400 });
     }
 
     return NextResponse.json({ success: true });
