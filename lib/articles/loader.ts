@@ -215,6 +215,10 @@ export const getAllArticles = unstable_cache(
   { revalidate: 60, tags: ['articles'] }
 );
 
+export function getAllArticlesUncached(): RawArticle[] {
+  return readAllFiles();
+}
+
 async function getPublishedArticles(): Promise<RawArticle[]> {
   const all = await getAllArticles();
   return all

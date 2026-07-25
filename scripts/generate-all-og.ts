@@ -16,51 +16,57 @@ envContent.split('\n').forEach((line) => {
   }
 });
 
-const { getAllPublishedPostsWithRelations, countPublishedPostsInSeries, updatePostOGUrls } = require('../lib/db/queries/posts');
+const { getAllArticlesUncached } = require('../lib/articles/loader');
+const { updatePostOGUrls } = require('../lib/db/queries/posts');
 const { generateAndUploadOGImages } = require('../lib/cdn/generate');
 const { deleteOldOGImages } = require('../lib/cdn/r2');
+const { getCategoryBySlug, getAuthorBySlug, getSeriesBySlug } = require('../content/config');
 
 async function main() {
-  const allPosts = await getAllPublishedPostsWithRelations();
+  const now = new Date().toISOString();
+  const allRaw = getAllArticlesUncached();
+  const published = allRaw
+    .filter((a) => a.status === 'published' && a.publishedAt <= now)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
-  console.log(`Found ${allPosts.length} published posts to generate OG images for\n`);
+  console.log(`Found ${published.length} published posts to generate OG images for\n`);
 
   let success = 0;
   let failed = 0;
 
-  for (const post of allPosts) {
-    const category = post.category ?? null;
-    const author = post.author ?? null;
-    const series = post.series ?? null;
+  for (const raw of published) {
+    const category = getCategoryBySlug(raw.categorySlug) ?? null;
+    const author = getAuthorBySlug(raw.authorSlug) ?? null;
+    const series = raw.seriesSlug ? getSeriesBySlug(raw.seriesSlug) : null;
 
     let seriesCurrent: number | undefined;
     let seriesTotal: number | undefined;
-    if (series && post.seriesOrder) {
-      seriesTotal = await countPublishedPostsInSeries(series.id);
-      seriesCurrent = post.seriesOrder;
+    if (series && raw.seriesOrder) {
+      seriesTotal = published.filter((a) => a.seriesSlug === raw.seriesSlug).length;
+      seriesCurrent = raw.seriesOrder;
     }
 
     try {
-      process.stdout.write(`Generating for "${post.slug}"... `);
-      await deleteOldOGImages(post.slug);
-      const urls = await generateAndUploadOGImages(post.slug, {
-        title: post.title,
+      process.stdout.write(`Generating for "${raw.slug}"... `);
+      await deleteOldOGImages(raw.slug);
+      const urls = await generateAndUploadOGImages(raw.slug, {
+        title: raw.title,
         category: category?.title,
         categoryColor: category?.color ?? undefined,
         categorySlug: category?.slug ?? undefined,
-        excerpt: post.excerpt || undefined,
-        readingTime: post.readingTime ?? undefined,
-        publishedAt: post.publishedAt ?? undefined,
+        excerpt: raw.excerpt || undefined,
+        readingTime: raw.readingTime ?? undefined,
+        publishedAt: raw.publishedAt ?? undefined,
         authorName: author?.name ?? undefined,
-        isPremium: post.isPremium ?? undefined,
-        isSponsored: post.isSponsored ?? undefined,
+        isPremium: raw.isPremium ?? undefined,
+        isSponsored: raw.isSponsored ?? undefined,
         seriesCurrent,
         seriesTotal,
-        coverImageUrl: post.coverImageUrl ?? undefined,
-        ogHeadline: post.ogHeadline || undefined,
+        coverImageUrl: raw.coverImageUrl ?? undefined,
+        ogHeadline: raw.ogHeadline || undefined,
       });
 
-      await updatePostOGUrls(post.id, {
+      await updatePostOGUrls(raw.slug, {
         ogCardUrl: urls.card,
         ogFeatureUrl: urls.feature,
         ogImageUrl: urls.feature,
