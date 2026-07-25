@@ -1,6 +1,7 @@
 import { ImageResponse } from '@vercel/og';
 import { getPublishedPostWithRelationsBySlug, countPublishedPostsInSeries } from '@/lib/db/queries/posts';
 import { OgTemplate } from '@/lib/og/template';
+import { SeriesOgTemplate } from '@/lib/og/series-template';
 import { getFonts } from '@/lib/og/fonts';
 
 export const runtime = 'nodejs';
@@ -32,8 +33,23 @@ export async function GET(request: Request) {
     seriesCurrent = post.seriesOrder ?? undefined;
   }
 
+  const useSeries = seriesCurrent !== undefined && seriesTotal !== undefined && !!series?.title;
+
   return new ImageResponse(
-    (
+    useSeries ? (
+      <SeriesOgTemplate
+        title={post.title}
+        seriesTitle={series!.title}
+        seriesCurrent={seriesCurrent!}
+        seriesTotal={seriesTotal!}
+        categoryColor={category?.color || '#737373'}
+        category={category?.title}
+        publishedAt={post.publishedAt}
+        coverImageUrl={post.coverImageUrl}
+        ogHeadline={post.ogHeadline || undefined}
+        size="card"
+      />
+    ) : (
       <OgTemplate
         title={post.title}
         category={category?.title}
@@ -42,9 +58,6 @@ export async function GET(request: Request) {
         publishedAt={post.publishedAt}
         isPremium={post.isPremium || undefined}
         isSponsored={post.isSponsored || undefined}
-        seriesCurrent={seriesCurrent}
-        seriesTotal={seriesTotal}
-        seriesTitle={series?.title}
         coverImageUrl={post.coverImageUrl}
         ogHeadline={post.ogHeadline || undefined}
         size="card"

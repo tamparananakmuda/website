@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageResponse } from '@vercel/og';
 import sharp from 'sharp';
 import { OgTemplate, TemplateProps } from '../og/template';
+import { SeriesOgTemplate, SeriesTemplateProps } from '../og/series-template';
 import { getFonts } from '../og/fonts';
 import { uploadOGImage, getCDNUrl, OGImageType } from './r2';
 
@@ -15,15 +16,38 @@ const SIZE_MAP: Record<OGImageType, { width: number; height: number; templateSiz
   feature: { width: 1600, height: 900, templateSize: 'feature' },
 };
 
+function isSeriesPost(props: Omit<TemplateProps, 'size'>): props is Omit<TemplateProps, 'size'> & { seriesCurrent: number; seriesTotal: number; seriesTitle: string } {
+  return props.seriesCurrent !== undefined && props.seriesTotal !== undefined && !!props.seriesTitle;
+}
+
 async function generateOGImageWebp(
   props: Omit<TemplateProps, 'size'>,
   type: OGImageType
 ): Promise<Buffer> {
   const fonts = await getFonts();
   const { width, height, templateSize } = SIZE_MAP[type];
+  const useSeries = isSeriesPost(props);
 
   const response = new ImageResponse(
-    <OgTemplate {...props} size={templateSize} />,
+    useSeries ? (
+      <SeriesOgTemplate
+        title={props.title}
+        seriesTitle={props.seriesTitle!}
+        seriesCurrent={props.seriesCurrent!}
+        seriesTotal={props.seriesTotal!}
+        categoryColor={props.categoryColor || '#737373'}
+        category={props.category}
+        excerpt={props.excerpt}
+        readingTime={props.readingTime}
+        publishedAt={props.publishedAt}
+        authorName={props.authorName}
+        ogHeadline={props.ogHeadline}
+        coverImageUrl={props.coverImageUrl}
+        size={templateSize}
+      />
+    ) : (
+      <OgTemplate {...props} size={templateSize} />
+    ),
     {
       width,
       height,
