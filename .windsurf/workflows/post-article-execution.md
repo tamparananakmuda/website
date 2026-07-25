@@ -1,14 +1,58 @@
 ---
-description: Workflow lengkap untuk eksekusi artikel TAM, dari riset topik sampai distribusi multi-platform
+description: Workflow lengkap untuk eksekusi konten TAM (artikel, seri, whitepaper), dari riset topik sampai distribusi multi-platform
 ---
 
-# Post-Article Execution Workflow
+# Post-Content Execution Workflow
 
-Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert file Markdown, deploy, distribusi, dan maintenance. Setiap step harus complete sebelum lanjut.
+Workflow ini mencakup seluruh pipeline untuk 3 tipe konten: **Artikel**, **Seri**, dan **Whitepaper**. Setiap step harus complete sebelum lanjut.
+
+## Step -2: Content Type Selection (WAJIB)
+
+Pilih tipe konten sebelum mulai. Setiap tipe punya perbedaan di penyimpanan, insert, dan distribusi.
+
+### Tipe A: Artikel (Standalone)
+- **Penyimpanan:** File Markdown di `content/articles/{slug}.md`
+- **URL:** `/artikel/{slug}`
+- **Word count:** 1.000-2.500 kata (5-12 menit baca)
+- **Frontmatter:** Standard (lihat Step 0), `series: null`, `seriesOrder: null`
+- **Insert:** Buat file `.md` di `content/articles/` (Step 4)
+- **OG Image:** Auto-generate via API atau cron
+- **Distribusi:** Full pipeline (Step 7-8)
+
+### Tipe B: Seri (Multi-Part)
+- **Penyimpanan:** File Markdown di `content/articles/{slug}.md` (sama dengan artikel)
+- **URL:** `/artikel/{slug}` (setiap part punya URL sendiri)
+- **Word count:** 1.000-2.500 kata per part
+- **Frontmatter:** Standard + `series` (slug seri) + `seriesOrder` (nomor part, mulai dari 1)
+- **Prasyarat:** Definisikan seri di `content/config.ts` (`series` array) sebelum insert
+- **Insert:** Buat file `.md` per part, semua di `content/articles/`
+- **Internal linking:** WAJIB link ke part sebelumnya dan sesudahnya dalam seri
+- **OG Image:** Auto-generate per part (sama dengan artikel)
+- **Distribusi:** Full pipeline + promo seri secara keseluruhan
+- **Naming convention slug:** `{series-slug}-part-{n}-{article-slug}` (contoh: `detoks-dopamin-part-1-kenapa-kamu-kecanduan`)
+
+### Tipe C: Whitepaper
+- **Penyimpanan:** PostgreSQL DB (Drizzle ORM, tabel `whitepapers`)
+- **URL:** `/whitepaper/{slug}`
+- **Word count:** 3.000-10.000 kata (15-60 menit baca)
+- **Fields:** `title`, `slug`, `subtitle`, `summary`, `body`, `coverImageUrl`, `author`, `downloadUrl`, `readingTime`, `tags`, `status`, `publishedAt`
+- **Insert:** DB insert via Drizzle ORM (bukan file Markdown)
+- **OG Image:** Generate manual (template berbeda dari artikel)
+- **Distribusi:** Full pipeline + PDF download link
+- **Tidak ada frontmatter** - langsung insert ke DB
+
+**Checklist pemilihan tipe:**
+- [ ] Tipe konten dipilih: A (Artikel) / B (Seri) / C (Whitepaper)
+- [ ] Untuk Seri: jumlah part ditentukan, outline per part dibuat
+- [ ] Untuk Whitepaper: pastikan ada `DATABASE_URL` di `.env.local`
+
+---
+
+**Setelah pemilihan tipe, ikuti step berikutnya. Catatan perbedaan tipe akan ditandai dengan [A], [B], atau [C] di setiap step.**
 
 ## Env Var Reference
 
-**Database (Drizzle ORM):** DB hanya dipakai untuk `post_metadata` (OG image URLs), bookmarks, comments, dan email subscribers. Artikel disimpan sebagai file Markdown di `content/articles/`.
+**Database (Drizzle ORM):** DB dipakai untuk `post_metadata` (OG image URLs), `whitepapers`, bookmarks, comments, dan email subscribers. Artikel dan Seri disimpan sebagai file Markdown di `content/articles/`.
 
 **Supabase (auth only):** Supabase hanya digunakan untuk auth/session (`@supabase/ssr`).
 
@@ -31,11 +75,17 @@ Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert file Markdow
 export ARTICLE_JSON="/tmp/tam-article.json"
 ```
 
-**CRITICAL:** Artikel disimpan sebagai file Markdown di `content/articles/`. DB hanya dipakai untuk `post_metadata` (OG URLs). Jangan pakai Supabase REST API.
+**CRITICAL:**
+- **[A] Artikel & [B] Seri:** Disimpan sebagai file Markdown di `content/articles/`. DB hanya dipakai untuk `post_metadata` (OG URLs).
+- **[C] Whitepaper:** Disimpan langsung di DB (tabel `whitepapers`). Tidak ada file Markdown.
+- Jangan pakai Supabase REST API untuk insert konten.
 
 ## Step -1: Topic Research & Angle Test
 
-Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan angle TAM unik.
+Sebelum drafting, validasi ide konten. Mencegah konten generik dan memastikan angle TAM unik.
+
+**[A] Artikel & [B] Seri:** Angle test wajib. Untuk Seri, setiap part harus punya angle sendiri yang berdiri sendiri tapi tetap terhubung ke tema seri.
+**[C] Whitepaper:** Angle test wajib. Fokus pada data + riset, bukan opini. Pastikan ada minimal 5 sumber primer.
 
 **Untuk ide yang sudah melalui workflow `/content-ideation`** (file: `.windsurf/workflows/content-ideation.md`), langsung lanjut ke Step 0 dengan ide yang sudah terpilih.
 
@@ -72,12 +122,17 @@ Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan 
 - [ ] Category dipilih
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
 - [ ] Minimal 1 insight unik yang tidak ada di 3 artikel pertama Google
+- [ ] **[B] Seri:** Tema seri didefinisikan, jumlah part ditentukan, outline per part dibuat
+- [ ] **[C] Whitepaper:** Minimal 5 sumber primer teridentifikasi, outline section dibuat
 
 ## Step 0: Pre-Flight File Check
 
-Verifikasi struktur data sesuai file-based system. Cek slug uniqueness, category, dan author dari config.
+Verifikasi struktur data sebelum insert.
 
-**Cek slug uniqueness + category + author (file-based):**
+**[A] Artikel & [B] Seri:** Cek slug uniqueness, category, dan author dari `content/config.ts`. File disimpan di `content/articles/`.
+**[C] Whitepaper:** Cek slug uniqueness di DB (tabel `whitepapers`). Tidak ada file frontmatter.
+
+**[A][B] Cek slug uniqueness + category + author (file-based):**
 ```bash
 npx tsx -e "
 const { existsSync } = require('fs');
@@ -102,10 +157,10 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 "
 ```
 
-**Frontmatter fields (file-based system):**
+**[A][B] Frontmatter fields (file-based system):**
 - `title`, `slug`, `excerpt`, `body` (below frontmatter), `publishedAt`, `status`
 - `category` (slug, bukan UUID), `subcategory` (slug atau null), `author` (slug, bukan UUID)
-- `series` (slug atau null), `seriesOrder` (number atau null)
+- `series` (slug atau null), `seriesOrder` (number atau null) — **[B] WAJIB diisi untuk Seri**
 - `povTag`, `tags` (array string), `ogHeadline`
 - `seoMetaTitle`, `seoMetaDescription`, `seoKeywords` (array string)
 - `sourceReferences` (array `{type, url, label}`)
@@ -113,6 +168,13 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 - `isSponsored`, `sponsorName`, `sponsorUrl`, `sponsorDisclosure`
 - `isPremium`, `premiumExcerpt`
 - `coverImageUrl`, `coverImageAlt` (null jika pakai OG image dynamic)
+
+**[C] Whitepaper DB fields (tabel `whitepapers`):**
+- `title`, `slug`, `subtitle`, `summary`, `body` (markdown string)
+- `coverImageUrl`, `author` (default: 'TAMPARAN ANAK MUDA'), `downloadUrl`
+- `readingTime` (integer, default 10), `tags` (text array)
+- `status` ('draft' atau 'published'), `publishedAt` (timestamp)
+- Tidak ada frontmatter, POV tag, atau SEO fields terpisah (SEO dari title + summary)
 
 **Subcategory (Pillar) Reference (dari `content/config.ts`):**
 | Slug | Title | Category |
@@ -136,21 +198,25 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 | `pendidikan` | Pendidikan | kehidupan |
 
 **CRITICAL rules:**
-- `sourceReferences`: HARUS array, bukan string. Format: `[{type: "link", url: "...", label: "..."}]`
-- `excerpt`: MAX 160 karakter
-- `seoMetaDescription`: MAX 160 karakter
-- `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
-- `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage. Jika `status='scheduled'`, set ke waktu publish di masa depan. Cron job akan auto-publish saat `publishedAt <= now()`.
+- **[A][B]** `sourceReferences`: HARUS array, bukan string. Format: `[{type: "link", url: "...", label: "..."}]`
+- **[A][B]** `excerpt`: MAX 160 karakter
+- **[A][B]** `seoMetaDescription`: MAX 160 karakter
+- **[A][B]** `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
+- **[A][B]** `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage. Jika `status='scheduled'`, set ke waktu publish di masa depan. Cron job akan auto-publish saat `publishedAt <= now()`.
+- **[C]** `publishedAt`: WAJIB set untuk whitepaper. `readingTime` di-set manual (default 10).
+- **[B]** `series` dan `seriesOrder` WAJIB diisi. `series` = slug seri dari `content/config.ts`, `seriesOrder` = nomor part (mulai dari 1).
 
 ## Step 0.5: Draft Writing Guidelines
 
-Aturan formatting markdown body artikel sebelum masuk ke QC.
+Aturan formatting markdown body konten sebelum masuk ke QC.
 
 **Word Count (STANDAR TAM):**
-- Target: 1.000-2.500 kata (5-12 menit baca)
+- **[A] Artikel:** 1.000-2.500 kata (5-12 menit baca)
+- **[B] Seri:** 1.000-2.500 kata per part (5-12 menit baca per part)
+- **[C] Whitepaper:** 3.000-10.000 kata (15-60 menit baca)
 - Referensi: `files/templates/article-template.md`, `files/ContentStrategy.md`, `files/ContentCalendar.md`, `files/Payment.md` (untuk CTA "Dukung TAM" di artikel)
-- Artikel di bawah 1.000 kata = perlu expand depth (data tambahan, contoh kasus, elaborasi argumentasi)
-- Artikel di atas 2.500 kata = perlu trim atau pecah jadi multi-part series
+- **[A][B]** Di bawah 1.000 kata = perlu expand depth. Di atas 2.500 kata = perlu trim atau pecah jadi multi-part series
+- **[C]** Di bawah 3.000 kata = terlalu tipis untuk whitepaper, pertimbangkan jadi artikel
 
 **Heading Structure (CRITICAL untuk Table of Contents):**
 - Gunakan `##` (h2) untuk section utama, `###` (h3) untuk sub-section
@@ -159,8 +225,10 @@ Aturan formatting markdown body artikel sebelum masuk ke QC.
 - Minimal 3 heading h2 untuk TOC berfungsi
 
 **Internal Linking (Wajib):**
-- Minimal 2 link ke artikel TAM lain di body
-- Format: `[judul](/artikel/slug-artikel)`
+- **[A]** Minimal 2 link ke artikel TAM lain di body
+- **[B]** Minimal 2 link ke artikel TAM lain + WAJIB link ke part sebelumnya/sesudahnya dalam seri
+- **[C]** Minimal 3 link ke artikel atau whitepaper TAM lain di body
+- Format: `[judul](/artikel/slug-artikel)` atau `[judul](/whitepaper/slug-whitepaper)`
 - Cek artikel relevan via `files/article-inventory.md` (baca file lokal, nggak perlu query DB atau search online)
 - Kalau artikel di kategori yang relevan belum ada, link ke category page: `/kategori/[kategori-slug]`
 
@@ -215,19 +283,24 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 
 Validasi semua data, klaim, pola AI, heading, dan metadata dalam satu command. Jalankan sampai CLEAN, fix semua FAIL, re-run.
 
+**[A] Artikel & [B] Seri:** Jalankan command audit di bawah. Untuk Seri, cek juga link ke part lain dalam seri.
+**[C] Whitepaper:** Jalankan command audit yang sama, tapi skip cek `og_headline`, `excerpt`, dan `seo_meta_*` (field ini tidak ada di whitepaper). Word count target: 3.000-10.000.
+
 **Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori).
 
 **Checklist (wajib semua sebelum lanjut Step 2):**
 - [ ] Setiap angka punya sumber yang bisa ditrace (URL aktif di sourceReferences)
-- [ ] Angka di artikel cocok dengan sumber (tidak dibulat-bulat)
+- [ ] Angka di konten cocok dengan sumber (tidak dibulat-bulat)
 - [ ] Tidak ada angka tanpa atribusi sumber di kalimat yang sama
 - [ ] Data tidak outdated (max 2 tahun untuk data ekonomi)
-- [ ] POV tag dipilih dan konsisten
+- [ ] **[A][B]** POV tag dipilih dan konsisten
 - [ ] Heading: h2/h3 only, minimal 3 h2, tidak ada h1
-- [ ] Internal linking: minimal 2 link ke artikel TAM lain
+- [ ] **[A]** Internal linking: minimal 2 link ke artikel TAM lain
+- [ ] **[B]** Internal linking: minimal 2 link + link ke part lain dalam seri
+- [ ] **[C]** Internal linking: minimal 3 link ke konten TAM lain
 - [ ] Tidak ada raw HTML script/iframe/style di body
-- [ ] OG headline berbeda dari title, max 50 karakter, conversational
-- [ ] Word count: 1.000-2.500 kata
+- [ ] **[A][B]** OG headline berbeda dari title, max 50 karakter, conversational
+- [ ] **[A][B]** Word count: 1.000-2.500 kata | **[C]** Word count: 3.000-10.000 kata
 - [ ] No em dash, no en dash, no curly quotes
 - [ ] No AI vocab EN/ID (lihat HumanizerRules.md)
 - [ ] No staccato drama, rule-of-three abuse (>2x), negative parallelisms
@@ -474,11 +547,14 @@ else console.log('\nCLEAN: SEO metadata OK.');
 | Slug | 10 | Kebab-case + keyword di awal + max 60 (10), ada keyword (7), >60 (0) |
 | Alt text | 10 | Semua gambar punya alt + keyword natural (10), ada alt (5), ada gambar tanpa alt (0) |
 
-## Step 4: File-Based Article Insert
+## Step 4: Content Insert
 
-Insert artikel sebagai file Markdown dengan YAML frontmatter di `content/articles/`. Tidak ada DB insert untuk artikel lagi — artikel disimpan sebagai file `.md` dan dibaca oleh `lib/articles/loader.ts`.
+**[A] Artikel & [B] Seri:** Insert sebagai file Markdown dengan YAML frontmatter di `content/articles/`. Tidak ada DB insert untuk artikel — disimpan sebagai file `.md` dan dibaca oleh `lib/articles/loader.ts`.
+**[C] Whitepaper:** Insert langsung ke DB via Drizzle ORM (tabel `whitepapers`). Lihat Step 4C di bawah.
 
-**Article JSON Template (simpan ke `$ARTICLE_JSON`):**
+### Step 4A/4B: File-Based Article/Seri Insert
+
+**[A] Article JSON Template (simpan ke `$ARTICLE_JSON`):**
 ```json
 {
   "title": "Judul Artikel",
@@ -503,6 +579,40 @@ Insert artikel sebagai file Markdown dengan YAML frontmatter di `content/article
   "series": null,
   "series_order": null
 }
+```
+
+**[B] Seri JSON Template (perbedaan dari Artikel):**
+```json
+{
+  "title": "Judul Part 1",
+  "slug": "series-slug-part-1-artikel-slug",
+  "excerpt": "Excerpt max 160 karakter",
+  "body": "## Heading 1\n\nKonten...\n\n## Heading 2\n\nKonten...",
+  "category": "kehidupan",
+  "subcategory": "mindset-realita",
+  "author": "yovie-setiawan",
+  "status": "published",
+  "seo_keywords": ["keyword 1", "keyword 2", "keyword 3"],
+  "pov_tag": "data",
+  "human_signature": true,
+  "source_references": [
+    {"type": "link", "url": "https://sumber.com", "label": "Nama Sumber"}
+  ],
+  "featured": false,
+  "seo_meta_title": "SEO Title max 70",
+  "seo_meta_description": "SEO desc max 160",
+  "og_headline": "OG headline max 50",
+  "published_at": "2026-01-01T00:00:00.000Z",
+  "series": "slug-seri-dari-config",
+  "series_order": 1
+}
+```
+
+**[B] Prasyarat Seri:** Sebelum insert part pertama, pastikan seri sudah didefinisikan di `content/config.ts`:
+```typescript
+export const series: SeriesConfig[] = [
+  { id: 'uuid-generated', title: 'Nama Seri', slug: 'slug-seri', description: 'Deskripsi seri' },
+];
 ```
 
 **Field mapping (JSON → frontmatter):**
@@ -645,12 +755,95 @@ console.log('status:', frontmatter.status);
 console.log('published_at:', frontmatter.publishedAt);
 console.log('source_references count:', frontmatter.sourceReferences.length);
 "
+```
 
-## Step 4.5: Post-Insert File Verification
+### Step 4C: Whitepaper DB Insert
 
-Verifikasi file Markdown yang dibuat sudah benar sebelum lanjut.
+**[C] Whitepaper JSON Template (simpan ke `$ARTICLE_JSON`):**
+```json
+{
+  "title": "Judul Whitepaper",
+  "slug": "slug-whitepaper-kebab-case",
+  "subtitle": "Subtitle whitepaper (opsional)",
+  "summary": "Summary untuk SEO dan card display (max 300 karakter)",
+  "body": "## Section 1\n\nKonten...\n\n## Section 2\n\nKonten...",
+  "author": "TAMPARAN ANAK MUDA",
+  "download_url": null,
+  "reading_time": 15,
+  "tags": ["riset", "gen z", "data"],
+  "status": "published",
+  "published_at": "2026-01-01T00:00:00.000Z"
+}
+```
 
-**Command (parse & verify frontmatter):**
+**[C] Insert command (DB via Drizzle ORM):**
+```bash
+npx tsx -e "
+const fs = require('fs');
+const path = require('path');
+
+// Load env
+const envPath = path.join(process.cwd(), '.env.local');
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
+    const t = line.trim();
+    if (!t || t.startsWith('#')) return;
+    const i = t.indexOf('=');
+    if (i === -1) return;
+    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
+  });
+}
+
+const { db } = require('./lib/db');
+const { whitepapers } = require('./lib/db/schema');
+
+const wp = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
+
+// VALIDASI
+if (!wp.slug || !wp.title || !wp.body) {
+  console.error('FATAL: slug, title, body are required'); process.exit(1);
+}
+if (!wp.published_at) {
+  console.error('FATAL: published_at is required'); process.exit(1);
+}
+
+db.insert(whitepapers).values({
+  slug: wp.slug,
+  title: wp.title,
+  subtitle: wp.subtitle || null,
+  summary: wp.summary || null,
+  body: wp.body,
+  coverImageUrl: wp.cover_image_url || null,
+  author: wp.author || 'TAMPARAN ANAK MUDA',
+  downloadUrl: wp.download_url || null,
+  readingTime: wp.reading_time || 10,
+  tags: wp.tags || [],
+  status: wp.status === 'scheduled' ? 'draft' : (wp.status || 'published'),
+  publishedAt: wp.published_at,
+}).then(() => {
+  console.log('Whitepaper inserted to DB:', wp.slug);
+  console.log('status:', wp.status || 'published');
+  console.log('published_at:', wp.published_at);
+  console.log('reading_time:', wp.reading_time || 10, 'min');
+}).catch(e => {
+  console.error('FATAL:', e.message);
+  process.exit(1);
+});
+"
+```
+
+**[C] Catatan Whitepaper:**
+- Tidak ada frontmatter, tidak ada file Markdown
+- Slug harus unique di tabel `whitepapers`
+- `status='draft'` untuk unpublished, `status='published'` untuk live
+- Tidak ada scheduled/cron untuk whitepaper — publish manual dengan ubah `status` di DB
+- OG image untuk whitepaper: generate manual (template berbeda dari artikel)
+
+## Step 4.5: Post-Insert Verification
+
+**[A][B]** Verifikasi file Markdown yang dibuat sudah benar. **[C]** Verifikasi whitepaper tersimpan di DB.
+
+**[A][B] Command (parse & verify frontmatter):**
 ```bash
 npx tsx -e "
 const { readFileSync } = require('fs');
@@ -688,7 +881,7 @@ if (issues.length > 0) {
 "
 ```
 
-**Checklist:**
+**[A][B] Checklist:**
 - [ ] File `content/articles/SLUG.md` exists
 - [ ] `slug` di frontmatter = slug yang diharapkan
 - [ ] `status` = `published` atau `scheduled`
@@ -698,8 +891,47 @@ if (issues.length > 0) {
 - [ ] `sourceReferences` isArray = `true`
 - [ ] `excerpt` length <= 160
 - [ ] Body content tidak kosong
+- [ ] **[B]** `series` = slug seri yang valid, `seriesOrder` = nomor part yang benar
 
-**Update article inventory (WAJIB):**
+**[C] Whitepaper verification command:**
+```bash
+npx tsx -e "
+const fs = require('fs');
+const path = require('path');
+const envPath = path.join(process.cwd(), '.env.local');
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
+    const t = line.trim();
+    if (!t || t.startsWith('#')) return;
+    const i = t.indexOf('=');
+    if (i === -1) return;
+    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
+  });
+}
+const { db } = require('./lib/db');
+const { whitepapers } = require('./lib/db/schema');
+const { eq } = require('drizzle-orm');
+db.select().from(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(r => {
+  const w = r[0];
+  if (!w) { console.error('FATAL: Whitepaper not found in DB'); process.exit(1); }
+  console.log('slug:', w.slug);
+  console.log('status:', w.status);
+  console.log('publishedAt:', w.publishedAt);
+  console.log('readingTime:', w.readingTime);
+  console.log('body length:', w.body.length, 'chars');
+  console.log('All checks passed.');
+}).catch(e => { console.error('FATAL:', e.message); process.exit(1); });
+"
+```
+
+**[C] Checklist:**
+- [ ] Whitepaper exists di DB dengan slug yang benar
+- [ ] `status` = `published` atau `draft`
+- [ ] `publishedAt` tidak null
+- [ ] `body` tidak kosong
+- [ ] `readingTime` > 0
+
+**Update article inventory (WAJIB untuk [A][B]):**
 Setelah verifikasi lolos, update `files/article-inventory.md` dengan baris baru:
 ```
 | [N] | [Title] | [slug] | [Kategori] | [Pillar] | [POV] | [YYYY-MM-DD] |
@@ -708,7 +940,9 @@ File ini dipakai workflow untuk internal linking di artikel selanjutnya, jadi ha
 
 ## Step 4.6: Scheduling Verification
 
-Jika artikel di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
+**[A][B] Only.** Whitepaper tidak punya scheduling (publish manual via DB status update).
+
+Jika artikel/seri di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
 
 **Cek status & publishedAt dari file frontmatter:**
 ```bash
@@ -797,14 +1031,16 @@ npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('pa
 
 ## Step 6: Production Deployment Check
 
-Setelah artikel live di local, deploy dan verifikasi production.
+Setelah konten live di local, deploy dan verifikasi production.
 
-**Deploy:**
+**[A][B] Deploy (file-based):**
 ```bash
-git add -A && git commit -m "feat: add new article SLUG" && git push origin main
+git add -A && git commit -m "feat: add new [article/seri] SLUG" && git push origin main
 ```
 
-**Tunggu Vercel auto-deploy, lalu verifikasi:**
+**[C] Whitepaper:** Tidak perlu deploy. Whitepaper di-insert ke DB, langsung live saat `status='published'`. Tidak ada file yang di-commit.
+
+**[A][B] Verifikasi production:**
 ```bash
 # HTTP status
 curl -s -o /dev/null -w "article: %{http_code}\n" "https://tamparananakmuda.com/artikel/SLUG"
@@ -820,6 +1056,15 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 
 # RSS feed includes new article
 curl -s "https://tamparananakmuda.com/rss.xml" | grep "SLUG" && echo "RSS OK" || echo "RSS MISSING"
+```
+
+**[C] Verifikasi production whitepaper:**
+```bash
+# HTTP status
+curl -s -o /dev/null -w "whitepaper: %{http_code}\n" "https://tamparananakmuda.com/whitepaper/SLUG"
+
+# Sitemap includes whitepaper
+curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitemap OK" || echo "Sitemap MISSING"
 ```
 
 **Checklist:**
@@ -866,22 +1111,28 @@ curl -s -o /dev/null -w "robots: %{http_code}\n" "https://tamparananakmuda.com/r
 
 ## Step 7: Content Atomization
 
-Pecah artikel jadi format distribusi multi-platform.
+Pecah konten jadi format distribusi multi-platform.
 
-### 7a. Instagram Carousel (5-8 slides)
+**[A] Artikel:** Pecah jadi carousel, newsletter, stories, thread, LinkedIn.
+**[B] Seri:** Pecah per part, tapi buat juga 1 carousel/konten promo seri secara keseluruhan.
+**[C] Whitepaper:** Pecah jadi carousel (lebih banyak slide, 8-12), newsletter (lebih panjang, 600-800 words), LinkedIn article (publish native), tidak ada TikTok (terlalu kompleks untuk whitepaper).
+
+### 7a. Instagram Carousel
+- **[A]** 5-8 slides | **[B]** 5-8 slides per part + 1 carousel seri overview (10-12 slides) | **[C]** 8-12 slides
 - Slide 1: Hook headline + visual (brand colors, Syne font)
 - Slide 2-6: Key data points (1 per slide, max 3 angka per slide)
 - Slide 7: Pertanyaan refleksi
-- Slide 8: CTA ke full article (`tamparananakmuda.com/artikel/SLUG`)
+- Slide 8: CTA ke full konten (`tamparananakmuda.com/artikel/SLUG` atau `/whitepaper/SLUG`)
 
 **Spec:** 1080x1080px, OLED black background, category color accent
 
-### 7b. Newsletter (400-600 words)
-- Subject line: 1 insight utama, bukan judul artikel
-- Opening: 1 paragraf hook (bukan copy artikel)
+### 7b. Newsletter
+- **[A]** 400-600 words | **[B]** 400-600 words per part | **[C]** 600-800 words
+- Subject line: 1 insight utama, bukan judul konten
+- Opening: 1 paragraf hook (bukan copy konten)
 - Body: 1 insight + 1 quote yang striking
 - Closing: 1 pertanyaan untuk subscriber
-- CTA: Link ke full article
+- CTA: Link ke full konten
 
 **Kirim via:** Brevo dashboard (manual, bukan automated API)
 
@@ -889,27 +1140,30 @@ Pecah artikel jadi format distribusi multi-platform.
 - Story 1: Polling question terkait topik
 - Story 2-3: Key takeaways dengan visual
 - Story 4: Q&A sticker
-- Story 5: Link sticker ke artikel
+- Story 5: Link sticker ke konten
 
 ### 7d. TikTok/Reels Script (Phase 2)
+- **[A][B] Only.** Whitepaper terlalu kompleks untuk short-form video.
 - Generate via `/api/tiktok/generate-script`
 - 30-60 detik, 1 insight per video
 - Hook line wajib di 3 detik pertama
 - CTA: "Baca full artikel di bio"
 
 ### 7e. X/Twitter Thread (3-5 tweets)
+- **[A]** 3-5 tweets | **[B]** 3-5 tweets per part | **[C]** 5-8 tweets (whitepaper lebih data-heavy)
 - Tweet 1: Hook (1 kalimat tajam + angka/data yang mengejutkan)
 - Tweet 2-3: Key insight (1 insight per tweet, max 280 chars, pakai thread numbering)
-- Tweet 4: Quote atau data yang striking dari artikel
-- Tweet 5: CTA ke full article (`tamparananakmuda.com/artikel/SLUG`)
+- Tweet 4: Quote atau data yang striking dari konten
+- Tweet 5: CTA ke full konten (`tamparananakmuda.com/artikel/SLUG` atau `/whitepaper/SLUG`)
 - Tone: langsung, no fluff, pakai bahasa Indonesia
 - Posting: manual via X app atau scheduler (Buffer/Hootsuite)
 
 ### 7f. LinkedIn Post (200-400 words)
+- **[A]** 200-400 words | **[B]** 200-400 words per part | **[C]** 400-600 words + publish sebagai LinkedIn Article
 - Hook line: 1 kalimat yang relevan untuk professional audience (karir, bisnis, keuangan)
-- Body: 1 insight utama dengan sudut pandang professional (bukan copy artikel)
+- Body: 1 insight utama dengan sudut pandang professional (bukan copy konten)
 - Format: short paragraphs, no bullet spam, conversational tone
-- CTA: "Baca analisis lengkapnya di sini: tamparananakmuda.com/artikel/SLUG"
+- CTA: "Baca analisis lengkapnya di sini: tamparananakmuda.com/artikel/SLUG" atau "/whitepaper/SLUG"
 - Hashtags: 3-5 relevant hashtags (contoh: #GenZ #Karir #Mindset #Indonesia)
 - Posting: manual via LinkedIn atau scheduler
 
