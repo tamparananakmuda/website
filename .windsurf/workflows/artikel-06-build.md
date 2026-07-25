@@ -21,7 +21,7 @@ Dari `/artikel-05-review`
 export ARTICLE_JSON="/tmp/tam-article.json"
 ```
 
-**CRITICAL:** Artikel disimpan sebagai file Markdown di `content/articles/`. DB hanya untuk `post_metadata` (OG URLs). Jangan pakai Supabase REST API.
+**CRITICAL:** Artikel disimpan sebagai file Markdown di `content/articles/KATEGORI/`. DB hanya untuk `post_metadata` (OG URLs). Jangan pakai Supabase REST API.
 
 ## Pre-Flight File Check
 
@@ -31,7 +31,7 @@ const { existsSync } = require('fs');
 const { join } = require('path');
 const { categories, authors, getCategoryBySlug, getAuthorBySlug } = require('./content/config');
 const slug = 'SLUG_ARTIKEL';
-const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
+const filePath = join(process.cwd(), 'content', 'articles', 'CATEGORY_SLUG', slug + '.md');
 console.log('SLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG AVAILABLE: ' + slug);
 const cat = getCategoryBySlug('CATEGORY_SLUG');
 console.log('Category valid:', cat ? cat.title : 'FATAL: CATEGORY NOT FOUND');
@@ -158,7 +158,7 @@ Update `files/article-inventory.md` dengan baris baru:
 
 - [ ] Slug uniqueness dicek
 - [ ] Category dan author valid
-- [ ] File `content/articles/SLUG.md` created
+- [ ] File `content/articles/KATEGORI/SLUG.md` created
 - [ ] Frontmatter lengkap dan valid
 - [ ] `sourceReferences` isArray = true
 - [ ] `excerpt` <= 160 chars

@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 const dir = '/tmp/tam-seri-drafts/';
-const articlesDir = join(process.cwd(), 'content', 'articles');
+const articlesDir = join(process.cwd(), 'content', 'seri', 'kesehatan-mental-era-digital');
 
 function toYaml(obj: any, indent = ''): string {
   let lines: string[] = [];

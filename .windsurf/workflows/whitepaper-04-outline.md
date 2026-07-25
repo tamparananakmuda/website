@@ -174,7 +174,7 @@ Whitepaper menggunakan Article schema (bukan BlogPosting). Pastikan:
 
 ```bash
 # Cek artikel existing di folder
-ls content/articles/ | grep -i "KEYWORD"
+find content/articles/ -name "*.md" | xargs grep -li "KEYWORD"
 
 # Cek whitepaper existing di DB
 npx tsx -e "

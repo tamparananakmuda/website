@@ -23,10 +23,10 @@ Dari `/seri-13-monitor`
 # Cek semua internal link di semua part seri
 for slug in SERIES-SLUG-PART-1 SERIES-SLUG-PART-2 SERIES-SLUG-PART-3; do
   echo "=== $slug ==="
-  grep -oP '\]\(/artikel/[^)]+\)' "content/articles/$slug.md" \
+  grep -oP '\]\(/artikel/[^)]+\)' "content/seri/SERIES-SLUG/$slug.md" \
     | while read link; do
       target=$(echo "$link" | grep -oP '/artikel/\K[^)]+')
-      if [ -f "content/articles/$target.md" ]; then
+      if [ -f "content/seri/SERIES-SLUG/$target.md" ] || [ -f "content/articles/*/$target.md" ]; then
         echo "OK: $target"
       else
         echo "BROKEN: $target"
@@ -35,7 +35,7 @@ for slug in SERIES-SLUG-PART-1 SERIES-SLUG-PART-2 SERIES-SLUG-PART-3; do
 done
 
 # Cek link dari artikel lain ke seri ini (reverse)
-grep -rl "SERIES-SLUG" content/articles/ --include="*.md" \
+grep -rl "SERIES-SLUG" content/ --include="*.md" \
   | while read f; do echo "Linked from: $(basename $f)"; done
 ```
 
@@ -50,7 +50,7 @@ grep -rl "SERIES-SLUG" content/articles/ --include="*.md" \
 
 ## Update Process Step-by-Step (per part)
 
-1. Edit file `content/articles/SLUG.md` (update data, tambah insight, fix link)
+1. Edit file `content/seri/SERIES-SLUG/SLUG.md` (update data, tambah insight, fix link)
 2. Update `sourceReferences` di frontmatter jika ada sumber baru
 3. Update `publishedAt` tetap tanggal asli (jangan reset)
 4. Jalankan ulang `/seri-08-qc` untuk verifikasi
@@ -90,7 +90,7 @@ grep -rl "SERIES-SLUG" content/articles/ --include="*.md" \
 ## Rollback (jika perlu hapus part)
 
 ```bash
-rm content/articles/SLUG.md
+rm content/seri/SERIES-SLUG/SLUG.md
 npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { postMetadata } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.delete(postMetadata).where(eq(postMetadata.slug, 'SLUG')).then(() => console.log('deleted: SLUG')).catch(console.error);"
 ```
 

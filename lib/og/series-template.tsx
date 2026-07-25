@@ -40,8 +40,8 @@ const SIZE_CONFIG = {
     paddingX: 52,
     paddingY: 40,
     rightPaddingX: 36,
-    headlineFont: 34,
-    excerptFont: 14,
+    headlineFont: 40,
+    excerptFont: 17,
     episodeNumFont: 72,
     episodeLabelFont: 11,
     seriesTitleFont: 13,
@@ -55,7 +55,7 @@ const SIZE_CONFIG = {
     ruleHeight: 1,
     glowOpacity: '06',
     gapBeforeHeadline: 16,
-    gapBeforeExcerpt: 18,
+    gapBeforeExcerpt: 30,
     gapBeforeRule: 24,
   },
   feature: {
@@ -65,8 +65,8 @@ const SIZE_CONFIG = {
     paddingX: 90,
     paddingY: 68,
     rightPaddingX: 60,
-    headlineFont: 62,
-    excerptFont: 24,
+    headlineFont: 72,
+    excerptFont: 28,
     episodeNumFont: 140,
     episodeLabelFont: 18,
     seriesTitleFont: 22,
@@ -80,7 +80,7 @@ const SIZE_CONFIG = {
     ruleHeight: 2,
     glowOpacity: '04',
     gapBeforeHeadline: 28,
-    gapBeforeExcerpt: 28,
+    gapBeforeExcerpt: 48,
     gapBeforeRule: 40,
   },
 };
@@ -166,47 +166,49 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           </span>
         </div>
 
-        {/* Gap */}
-        <div style={{ height: `${cfg.gapBeforeHeadline}px`, flexShrink: 0, display: 'flex' }} />
-
-        {/* Headline - left-aligned, massive, editorial */}
-        <span style={{
-          fontFamily: FONT_DISPLAY,
-          fontSize: `${cfg.headlineFont}px`,
-          fontWeight: 700,
-          color: COLORS.textPrimary,
-          letterSpacing: '-0.025em',
-          lineHeight: 1.08,
-          textAlign: 'left',
+        {/* Center block - vertically centered headline + excerpt */}
+        <div style={{
           display: 'flex',
-          maxWidth: `${cfg.leftWidth - cfg.paddingX * 2}px`,
-          flexShrink: 0,
+          flexDirection: 'column',
+          justifyContent: 'center',
+          flex: 1,
         }}>
-          {truncate(displayTitle, props.size === 'card' ? 48 : 80)}
-        </span>
+          {/* Headline - left-aligned, massive, editorial */}
+          <span style={{
+            fontFamily: FONT_DISPLAY,
+            fontSize: `${cfg.headlineFont}px`,
+            fontWeight: 700,
+            color: COLORS.textPrimary,
+            letterSpacing: '-0.025em',
+            lineHeight: 1.08,
+            textAlign: 'left',
+            display: 'flex',
+            maxWidth: `${cfg.leftWidth - cfg.paddingX * 2}px`,
+            flexShrink: 0,
+          }}>
+            {truncate(displayTitle, props.size === 'card' ? 48 : 80)}
+          </span>
 
-        {/* Excerpt - feature only */}
-        {props.size === 'feature' && props.excerpt && (
-          <>
-            <div style={{ height: `${cfg.gapBeforeExcerpt}px`, flexShrink: 0, display: 'flex' }} />
-            <span style={{
-              fontFamily: FONT_BODY,
-              fontSize: `${cfg.excerptFont}px`,
-              fontWeight: 400,
-              color: COLORS.textSecondary,
-              lineHeight: 1.5,
-              textAlign: 'left',
-              display: 'flex',
-              maxWidth: `${cfg.leftWidth - cfg.paddingX * 2.2}px`,
-              flexShrink: 0,
-            }}>
-              {truncate(props.excerpt, 120)}
-            </span>
-          </>
-        )}
-
-        {/* Spacer - pushes brand to bottom */}
-        <div style={{ flex: 1, display: 'flex' }} />
+          {/* Excerpt - feature only */}
+          {props.size === 'feature' && props.excerpt && (
+            <>
+              <div style={{ height: `${cfg.gapBeforeExcerpt}px`, flexShrink: 0, display: 'flex' }} />
+              <span style={{
+                fontFamily: FONT_BODY,
+                fontSize: `${cfg.excerptFont}px`,
+                fontWeight: 400,
+                color: COLORS.textSecondary,
+                lineHeight: 1.5,
+                textAlign: 'left',
+                display: 'flex',
+                maxWidth: `${cfg.leftWidth - cfg.paddingX * 2.2}px`,
+                flexShrink: 0,
+              }}>
+                {truncate(props.excerpt, 120)}
+              </span>
+            </>
+          )}
+        </div>
 
         {/* Bottom: thin rule + brand */}
         <div style={{

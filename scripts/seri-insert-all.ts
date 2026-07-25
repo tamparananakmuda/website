@@ -2,8 +2,9 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 
 const dir = '/tmp/tam-seri-drafts/';
-const articlesDir = join(process.cwd(), 'content', 'articles');
-mkdirSync(articlesDir, { recursive: true });
+const seriesSlug = 'kesehatan-mental-era-digital';
+const seriesDir = join(process.cwd(), 'content', 'seri', seriesSlug);
+mkdirSync(seriesDir, { recursive: true });
 
 function toYaml(obj: any, indent = ''): string {
   let lines: string[] = [];
@@ -115,7 +116,7 @@ for (let i = 1; i <= 12; i++) {
 
   const yaml = toYaml(frontmatter);
   const markdown = '---\n' + yaml + '\n---\n\n' + article.body + '\n';
-  const filePath = join(articlesDir, article.slug + '.md');
+  const filePath = join(seriesDir, article.slug + '.md');
 
   if (existsSync(filePath)) {
     console.error(`FATAL Part ${i}: file already exists: ${filePath}`);

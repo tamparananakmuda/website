@@ -21,10 +21,10 @@ Dari `/artikel-11-monitor`
 
 ```bash
 # Cek semua internal link di artikel
-grep -oP '\]\(/artikel/[^)]+\)' content/articles/SLUG.md \
+grep -oP '\]\(/artikel/[^)]+\)' content/articles/*/SLUG.md \
   | while read link; do
     slug=$(echo "$link" | grep -oP '/artikel/\K[^)]+')
-    if [ -f "content/articles/$slug.md" ]; then
+    if find content/ -name "$slug.md" -print -quit | grep -q .; then
       echo "OK: $slug"
     else
       echo "BROKEN: $slug"
@@ -47,7 +47,7 @@ grep -rl "/artikel/SLUG" content/articles/ --include="*.md" \
 
 ## Update Process Step-by-Step
 
-1. Edit file `content/articles/SLUG.md` (update data, tambah insight, fix link)
+1. Edit file `content/articles/KATEGORI/SLUG.md` (update data, tambah insight, fix link)
 2. Update `sourceReferences` di frontmatter jika ada sumber baru
 3. Update `publishedAt` tetap tanggal asli (jangan reset)
 4. Jalankan ulang `/artikel-07-qc` untuk verifikasi
@@ -81,7 +81,7 @@ grep -rl "/artikel/SLUG" content/articles/ --include="*.md" \
 ## Rollback (jika perlu hapus artikel)
 
 ```bash
-rm content/articles/SLUG.md
+rm content/articles/KATEGORI/SLUG.md
 npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { postMetadata } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.delete(postMetadata).where(eq(postMetadata.slug, 'SLUG')).then(() => console.log('post_metadata deleted: SLUG')).catch(console.error);"
 ```
 

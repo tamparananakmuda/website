@@ -21,7 +21,7 @@ Dari `/seri-06-review`
 export ARTICLE_JSON="/tmp/tam-article.json"
 ```
 
-**CRITICAL:** Seri disimpan sebagai file Markdown di `content/articles/`. DB hanya untuk `post_metadata`. Jangan pakai Supabase REST API.
+**CRITICAL:** Seri disimpan sebagai file Markdown di `content/seri/SERIES-SLUG/`. DB hanya untuk `post_metadata`. Jangan pakai Supabase REST API.
 
 ## Pre-Flight File Check
 
@@ -33,7 +33,7 @@ const { categories, authors, series, getCategoryBySlug, getAuthorBySlug } = requ
 console.log('=== SERIES ===');
 series.forEach(s => console.log(s.slug + ' | ' + s.title));
 const slug = 'SLUG_ARTIKEL';
-const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
+const filePath = join(process.cwd(), 'content', 'seri', 'SERIES-SLUG', slug + '.md');
 console.log('SLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG AVAILABLE: ' + slug);
 "
 ```
@@ -137,7 +137,7 @@ Update `files/article-inventory.md` per part.
 
 - [ ] Seri didefinisikan di `content/config.ts`
 - [ ] Slug uniqueness dicek per part
-- [ ] File `content/articles/SLUG.md` created per part
+- [ ] File `content/seri/SERIES-SLUG/SLUG.md` created per part
 - [ ] `series` dan `seriesOrder` valid di frontmatter
 - [ ] Article inventory updated per part
 

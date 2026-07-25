@@ -63,7 +63,7 @@ for slug in SERIES-SLUG-PART-1 SERIES-SLUG-PART-2 SERIES-SLUG-PART-3; do
   const fs = require('fs');
   const { join } = require('path');
   const matter = require('gray-matter');
-  const { data, content } = matter(fs.readFileSync(join(process.cwd(), 'content/articles/$slug.md'), 'utf8'));
+  const { data, content } = matter(fs.readFileSync(join(process.cwd(), 'content/seri/SERIES-SLUG/$slug.md'), 'utf8'));
   const issues = [];
   if (content.includes('\u2014') || content.includes('\u2013')) issues.push('Em/en dash');
   const aiId = ['signifikan','krusial','esensial','vital','mendalam','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','tidak dapat dipungkiri'];

@@ -19,7 +19,7 @@ const slugs = [
 
 let allPass = true;
 for (const slug of slugs) {
-  const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
+  const filePath = join(process.cwd(), 'content', 'seri', 'kesehatan-mental-era-digital', slug + '.md');
   const { data: f } = matter(readFileSync(filePath, 'utf-8'));
   const issues: string[] = [];
   if (!f.series) issues.push('series is null');

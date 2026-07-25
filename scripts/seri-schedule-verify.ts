@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-const articlesDir = join(process.cwd(), 'content', 'articles');
+const articlesDir = join(process.cwd(), 'content', 'seri', 'kesehatan-mental-era-digital');
 
 const slugs = [
   'kesehatan-mental-era-digital-part-1-tiktok-diagnosis',

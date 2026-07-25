@@ -18,6 +18,7 @@ const { posts, categories, subcategories, authors, series, postTags, tags } = re
 const { eq, asc } = require('drizzle-orm');
 
 const OUTPUT_DIR = join(process.cwd(), 'content', 'articles');
+const SERIES_DIR = join(process.cwd(), 'content', 'seri');
 
 function slugifyTag(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
@@ -106,7 +107,17 @@ async function migrate() {
 
     const fileContent = `---\n${yamlFrontmatter}\n---\n\n${post.body}\n`;
 
-    const filePath = join(OUTPUT_DIR, `${post.slug}.md`);
+    let targetDir;
+    if (sr?.slug) {
+      targetDir = join(SERIES_DIR, sr.slug);
+    } else {
+      targetDir = join(OUTPUT_DIR, cat?.slug || 'uncategorized');
+    }
+    if (!existsSync(targetDir)) {
+      mkdirSync(targetDir, { recursive: true });
+    }
+
+    const filePath = join(targetDir, `${post.slug}.md`);
     writeFileSync(filePath, fileContent, 'utf8');
     console.log(`Written: ${post.slug}.md`);
     count++;

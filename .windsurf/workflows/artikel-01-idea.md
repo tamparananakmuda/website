@@ -73,11 +73,11 @@ Cek artikel existing di kategori yang sama sebelum tentukan ide:
 
 ```bash
 # Cek artikel di kategori yang sama
-grep -rl "category:.*\"KATEGORI\"" content/articles/*.md 2>/dev/null \
+grep -rl "category:.*\"KATEGORI\"" content/articles/ --include="*.md" 2>/dev/null \
   | while read f; do echo "$(basename $f .md)"; done
 
 # Cek artikel dengan keyword serupa
-grep -rl "KEYWORD" content/articles/*.md 2>/dev/null \
+grep -rl "KEYWORD" content/articles/ --include="*.md" 2>/dev/null \
   | while read f; do echo "$(basename $f .md)"; done
 ```
 
