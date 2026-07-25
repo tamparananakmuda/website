@@ -248,17 +248,17 @@ const overusedHyph = Object.entries(hyphCounts).filter(([h, c]) => c > 2).map(([
 if (overusedHyph.length) issues.push('Hyphenated overuse: ' + overusedHyph.join(', '));
 
 // Undue emphasis on significance
-const sig = ['stands as','serves as','is a testament','is a reminder','setting the stage for','marking a','shaping the','represents a shift','key turning point','evolving landscape','focal point','indelible mark','deeply rooted','contributing to the'];
+const sig = ['stands as','serves as','is a testament','is a reminder','setting the stage for','marking a','shaping the','represents a shift','key turning point','evolving landscape','focal point','indelible mark','deeply rooted','contributing to the','menjadi bukti','menjadi pengingat','menjadi titik balik','menandai perubahan','mencerminkan tren','berkontribusi terhadap','membuka jalan bagi','berakar dalam','menjadi catatan sejarah'];
 const foundSig = sig.filter(w => body.toLowerCase().includes(w));
 if (foundSig.length) issues.push('Significance emphasis: ' + foundSig.join(', '));
 
 // Undue emphasis on notability
-const notab = ['independent coverage','media outlets','written by a leading expert','active social media presence'];
+const notab = ['independent coverage','media outlets','written by a leading expert','active social media presence','diliput media nasional','dikutip oleh berbagai media','ditulis oleh pakar terkemuka','kehadiran media sosial yang aktif','dikenal luas oleh masyarakat'];
 const foundNotab = notab.filter(w => body.toLowerCase().includes(w));
 if (foundNotab.length) issues.push('Notability emphasis: ' + foundNotab.join(', '));
 
 // Challenges and future prospects
-const challenges = ['despite its','faces several challenges','despite these challenges','challenges and legacy','future outlook'];
+const challenges = ['despite its','faces several challenges','despite these challenges','challenges and legacy','future outlook','menghadapi tantangan','di tengah tantangan','tantangan dan warisan','prospek masa depan','ke depannya diharapkan'];
 const foundCh = challenges.filter(w => body.toLowerCase().includes(w));
 if (foundCh.length) issues.push('Challenges section: ' + foundCh.join(', '));
 
@@ -275,30 +275,30 @@ const emojiRe = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F
 if (emojiRe.test(body)) issues.push('Emojis found');
 
 // Collaborative artifacts
-const collab = ['i hope this helps','of course!','certainly!','would you like','want me to','let me know','here is a'];
+const collab = ['i hope this helps','of course!','certainly!','would you like','want me to','let me know','here is a','semoga membantu','tentu saja!','jika berminat','jika ingin tahu','beri tahu saya','berikut adalah'];
 const foundCollab = collab.filter(w => body.toLowerCase().includes(w));
 if (foundCollab.length) issues.push('Collaborative artifacts: ' + foundCollab.join(', '));
 
 // Knowledge-cutoff disclaimers
-const cutoff = ['as of my last','up to my last training','while specific details are limited','while specific details are scarce','based on available information','not publicly available','maintains a low profile','keeps personal details private','it is believed that'];
+const cutoff = ['as of my last','up to my last training','while specific details are limited','while specific details are scarce','based on available information','not publicly available','maintains a low profile','keeps personal details private','it is believed that','berdasarkan informasi yang tersedia','tidak tersedia secara publik','menjaga profil rendah','detail pribadi dijaga privat','diduga bahwa','kemungkinan pernah'];
 const foundCutoff = cutoff.filter(w => body.toLowerCase().includes(w));
 if (foundCutoff.length) issues.push('Knowledge-cutoff: ' + foundCutoff.join(', '));
 
 // Sycophantic tone
-const sycoph = ['great question!','you\'re absolutely right!','that\'s an excellent point!','that\'s a great observation!'];
+const sycoph = ['great question!','you\'re absolutely right!','that\'s an excellent point!','that\'s a great observation!','pertanyaan yang bagus!','anda benar sekali!','poin yang sangat tepat!','pengamatan yang bagus!'];
 const foundSycoph = sycoph.filter(w => body.toLowerCase().includes(w));
 if (foundSycoph.length) issues.push('Sycophantic: ' + foundSycoph.join(', '));
 
 // Excessive hedging
-const hedging = (body.match(/\b(could potentially|possibly be argued|might have some|may potentially)\b/gi) || []);
+const hedging = (body.match(/\b(could potentially|possibly be argued|might have some|may potentially|mungkin bisa dibilang|kemungkinan akan|mungkin saja|bisa jadi)\b/gi) || []);
 if (hedging.length > 2) issues.push('Excessive hedging: ' + hedging.length);
 
 // Tailing negations
-const tailing = (body.match(/, no (\w+ing|\w+ed)\b/gi) || []);
+const tailing = (body.match(/, no (\w+ing|\w+ed)\b|, tanpa perlu (\w+)|, tanpa harus (\w+)/gi) || []);
 if (tailing.length) issues.push('Tailing negations: ' + tailing.length);
 
 // Diff-anchored writing
-const diffAnchored = ['was added to replace','was introduced to','this function was added','was changed from','was updated to'];
+const diffAnchored = ['was added to replace','was introduced to','this function was added','was changed from','was updated to','ditambahkan untuk mengganti','ditambahkan untuk','fungsi ini ditambahkan','diubah dari','diperbarui menjadi'];
 const foundDiff = diffAnchored.filter(w => body.toLowerCase().includes(w));
 if (foundDiff.length) issues.push('Diff-anchored: ' + foundDiff.join(', '));
 

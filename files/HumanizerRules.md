@@ -79,15 +79,21 @@ Bold hanya untuk: key terms pertama kali diperkenalkan, angka penting, atau 1-2 
 
 ## 16. Undue Emphasis on Significance/Legacy
 
-Dilarang: "stands/serves as", "is a testament/reminder", "vital/significant/crucial/pivotal/key role/moment", "underscores/highlights its importance", "reflects broader", "symbolizing its ongoing/enduring/lasting", "contributing to the", "setting the stage for", "marking/shaping the", "represents/marks a shift", "key turning point", "evolving landscape", "focal point", "indelible mark", "deeply rooted".
+Dilarang EN: "stands/serves as", "is a testament/reminder", "vital/significant/crucial/pivotal/key role/moment", "underscores/highlights its importance", "reflects broader", "symbolizing its ongoing/enduring/lasting", "contributing to the", "setting the stage for", "marking/shaping the", "represents/marks a shift", "key turning point", "evolving landscape", "focal point", "indelible mark", "deeply rooted".
+
+Dilarang ID: "menjadi bukti", "menjadi pengingat", "menjadi titik balik", "menandai perubahan", "mencerminkan tren yang lebih luas", "berkontribusi terhadap", "membuka jalan bagi", "menjadi sorotan", "berakar dalam", "menjadi catatan sejarah".
 
 ## 17. Undue Emphasis on Notability
 
-Dilarang: "independent coverage", "local/regional/national media outlets", "written by a leading expert", "active social media presence".
+Dilarang EN: "independent coverage", "local/regional/national media outlets", "written by a leading expert", "active social media presence".
+
+Dilarang ID: "diliput media nasional", "dikutip oleh berbagai media", "ditulis oleh pakar terkemuka", "kehadiran media sosial yang aktif", "dikenal luas oleh masyarakat".
 
 ## 18. Challenges and Future Prospects Sections
 
-Dilarang: "Despite its... faces several challenges", "Despite these challenges", "Challenges and Legacy", "Future Outlook".
+Dilarang EN: "Despite its... faces several challenges", "Despite these challenges", "Challenges and Legacy", "Future Outlook".
+
+Dilarang ID: "Meskipun demikian... menghadapi tantangan", "Di tengah tantangan tersebut", "Tantangan dan Warisan", "Prospek Masa Depan", "Ke depannya diharapkan".
 
 ## 19. Elegant Variation (Synonym Cycling)
 
@@ -99,7 +105,7 @@ Hindari "from X to Y" dimana X dan Y tidak berada di skala yang bermakna. Contoh
 
 ## 21. Passive Voice and Subjectless Fragments
 
-Tulis aktif. Hindari: "No configuration file needed", "The results are preserved automatically." Tulis: "You do not need a configuration file", "The system preserves the results automatically."
+Tulis aktif. Hindari EN: "No configuration file needed", "The results are preserved automatically." Hindari ID: "Tidak diperlukan konfigurasi", "Hasil akan tersimpan secara otomatis", "Dapat dilihat bahwa", "Terbukti bahwa". Tulis: "Kamu tidak perlu konfigurasi", "Sistem menyimpan hasilnya", "Terlihat dari data bahwa".
 
 ## 22. Inline-Header Vertical Lists
 
@@ -111,27 +117,33 @@ Dilarang emoji di headings atau bullet points. Contoh buruk: "🚀 **Launch Phas
 
 ## 24. Collaborative Communication Artifacts
 
-Dilarang: "I hope this helps", "Of course!", "Certainly!", "Would you like...", "Want me to...?", "let me know", "here is a...".
+Dilarang EN: "I hope this helps", "Of course!", "Certainly!", "Would you like...", "Want me to...?", "let me know", "here is a...".
+
+Dilarang ID: "semoga membantu", "tentu saja!", "jika berminat", "jika ingin tahu", "beri tahu saya", "berikut adalah".
 
 ## 25. Knowledge-Cutoff Disclaimers
 
-Dilarang: "as of [date]", "Up to my last training update", "While specific details are limited/scarce", "based on available information", "not publicly available", "maintains a low profile", "keeps personal details private", "likely [grew up/studied/began]", "it is believed that".
+Dilarang EN: "as of [date]", "Up to my last training update", "While specific details are limited/scarce", "based on available information", "not publicly available", "maintains a low profile", "keeps personal details private", "likely [grew up/studied/began]", "it is believed that".
+
+Dilarang ID: "berdasarkan informasi yang tersedia", "tidak tersedia secara publik", "menjaga profil rendah", "detail pribadi dijaga privat", "diduga bahwa", "diduga besar di", "kemungkinan pernah".
 
 ## 26. Sycophantic/Servile Tone
 
-Dilarang: "Great question!", "You're absolutely right!", "That's an excellent point!", "That's a great observation!"
+Dilarang EN: "Great question!", "You're absolutely right!", "That's an excellent point!", "That's a great observation!"
+
+Dilarang ID: "pertanyaan yang bagus!", "anda benar sekali!", "poin yang sangat tepat!", "pengamatan yang bagus!".
 
 ## 27. Excessive Hedging
 
-Hindari over-qualifying. Contoh buruk: "It could potentially possibly be argued that the policy might have some effect." Tulis: "The policy may affect outcomes."
+Hindari over-qualifying. Contoh buruk EN: "It could potentially possibly be argued that the policy might have some effect." Contoh buruk ID: "Mungkin bisa dibilang bahwa kebijakan ini kemungkinan akan berdampak." Tulis: "Kebijakan ini berdampak." atau "Kebijakan ini mungkin berdampak."
 
 ## 28. Tailing Negations
 
-Dilarang fragmen negasi yang dipotong di akhir kalimat. Contoh buruk: "The options come from the selected item, no guessing." Tulis: "The options come from the selected item without forcing the user to guess."
+Dilarang fragmen negasi yang dipotong di akhir kalimat. Contoh buruk EN: "The options come from the selected item, no guessing." Contoh buruk ID: "Opsinya dari item yang dipilih, tanpa perlu menebak." Tulis sebagai kalimat lengkap.
 
 ## 29. Diff-Anchored Writing
 
-Jangan tulis seolah sedang narrate perubahan. Contoh buruk: "This function was added to replace the previous approach." Tulis: "This function uses a hash map for O(1) lookups."
+Jangan tulis seolah sedang narrate perubahan. Contoh buruk EN: "This function was added to replace the previous approach." Contoh buruk ID: "Fungsi ini ditambahkan untuk mengganti cara sebelumnya." Tulis: "Fungsi ini pakai hash map untuk lookup O(1)."
 
 ## Audit Script
 
@@ -236,17 +248,17 @@ overused = [h for h, c in hyph_counts.items() if c > 2]
 if overused: issues.append('Hyphenated overuse: ' + ', '.join(overused))
 
 # 19. Undue emphasis on significance
-sig = ['stands as','serves as','is a testament','is a reminder','setting the stage for','marking a','shaping the','represents a shift','key turning point','evolving landscape','focal point','indelible mark','deeply rooted','contributing to the']
+sig = ['stands as','serves as','is a testament','is a reminder','setting the stage for','marking a','shaping the','represents a shift','key turning point','evolving landscape','focal point','indelible mark','deeply rooted','contributing to the','menjadi bukti','menjadi pengingat','menjadi titik balik','menandai perubahan','mencerminkan tren','berkontribusi terhadap','membuka jalan bagi','berakar dalam','menjadi catatan sejarah']
 found_sig = [w for w in sig if w in body.lower()]
 if found_sig: issues.append('Significance emphasis: ' + ', '.join(found_sig))
 
 # 20. Undue emphasis on notability
-notab = ['independent coverage','media outlets','written by a leading expert','active social media presence']
+notab = ['independent coverage','media outlets','written by a leading expert','active social media presence','diliput media nasional','dikutip oleh berbagai media','ditulis oleh pakar terkemuka','kehadiran media sosial yang aktif','dikenal luas oleh masyarakat']
 found_notab = [w for w in notab if w in body.lower()]
 if found_notab: issues.append('Notability emphasis: ' + ', '.join(found_notab))
 
 # 21. Challenges and future prospects
-challenges = ['despite its','faces several challenges','despite these challenges','challenges and legacy','future outlook']
+challenges = ['despite its','faces several challenges','despite these challenges','challenges and legacy','future outlook','menghadapi tantangan','di tengah tantangan','tantangan dan warisan','prospek masa depan','ke depannya diharapkan']
 found_ch = [w for w in challenges if w in body.lower()]
 if found_ch: issues.append('Challenges section: ' + ', '.join(found_ch))
 
@@ -263,30 +275,30 @@ emoji_pattern = re.compile('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F68
 if emoji_pattern.search(body): issues.append('Emojis found')
 
 # 25. Collaborative artifacts
-collab = ['i hope this helps','of course!','certainly!','would you like','want me to','let me know','here is a']
+collab = ['i hope this helps','of course!','certainly!','would you like','want me to','let me know','here is a','semoga membantu','tentu saja!','jika berminat','jika ingin tahu','beri tahu saya','berikut adalah']
 found_collab = [w for w in collab if w in body.lower()]
 if found_collab: issues.append('Collaborative artifacts: ' + ', '.join(found_collab))
 
 # 26. Knowledge-cutoff disclaimers
-cutoff = ['as of my last','up to my last training','while specific details are limited','while specific details are scarce','based on available information','not publicly available','maintains a low profile','keeps personal details private','it is believed that']
+cutoff = ['as of my last','up to my last training','while specific details are limited','while specific details are scarce','based on available information','not publicly available','maintains a low profile','keeps personal details private','it is believed that','berdasarkan informasi yang tersedia','tidak tersedia secara publik','menjaga profil rendah','detail pribadi dijaga privat','diduga bahwa','kemungkinan pernah']
 found_cutoff = [w for w in cutoff if w in body.lower()]
 if found_cutoff: issues.append('Knowledge-cutoff: ' + ', '.join(found_cutoff))
 
 # 27. Sycophantic tone
-sycoph = ['great question!','you\'re absolutely right!','that\'s an excellent point!','that\'s a great observation!']
+sycoph = ['great question!','you\'re absolutely right!','that\'s an excellent point!','that\'s a great observation!','pertanyaan yang bagus!','anda benar sekali!','poin yang sangat tepat!','pengamatan yang bagus!']
 found_sycoph = [w for w in sycoph if w in body.lower()]
 if found_sycoph: issues.append('Sycophantic: ' + ', '.join(found_sycoph))
 
 # 28. Excessive hedging
-hedging = re.findall(r'\b(could potentially|possibly be argued|might have some|may potentially)\b', body, re.I)
+hedging = re.findall(r'\b(could potentially|possibly be argued|might have some|may potentially|mungkin bisa dibilang|kemungkinan akan|mungkin saja|bisa jadi)\b', body, re.I)
 if len(hedging) > 2: issues.append('Excessive hedging: %d' % len(hedging))
 
 # 29. Tailing negations
-tailing = re.findall(r', no (\w+ing|\w+ed)\b', body, re.I)
+tailing = re.findall(r', no (\w+ing|\w+ed)\b|, tanpa perlu (\w+)|, tanpa harus (\w+)', body, re.I)
 if tailing: issues.append('Tailing negations: %d' % len(tailing))
 
 # 30. Diff-anchored writing
-diff_anchored = ['was added to replace','was introduced to','this function was added','was changed from','was updated to']
+diff_anchored = ['was added to replace','was introduced to','this function was added','was changed from','was updated to','ditambahkan untuk mengganti','ditambahkan untuk','fungsi ini ditambahkan','diubah dari','diperbarui menjadi']
 found_diff = [w for w in diff_anchored if w in body.lower()]
 if found_diff: issues.append('Diff-anchored: ' + ', '.join(found_diff))
 
