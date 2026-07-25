@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageResponse } from '@vercel/og';
 import sharp from 'sharp';
 import { OgTemplate, TemplateProps } from '../og/template';
-import { SeriesOgTemplate, SeriesTemplateProps } from '../og/series-template';
+import { SeriesOgTemplate } from '../og/series-template';
 import { getFonts } from '../og/fonts';
 import { uploadOGImage, getCDNUrl, OGImageType } from './r2';
 

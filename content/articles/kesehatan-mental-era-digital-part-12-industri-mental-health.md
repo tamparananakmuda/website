@@ -73,7 +73,7 @@ Pikirkan juga: ini bukan tentang menghentikan orang mencari bantuan. Bantuan pro
 
 ## Business Model yang Bertentangan dengan Kesembuhan
 
-JMIR, dalam analisis 93 mental health apps, menemukan bahwa median 30-day retention hanya 3,3%. JMIR, dalam analisis 93 mental health apps, menemukan bahwa median 30-day retention hanya 3,3%. JMIR, dalam analisis 93 mental health apps, menemukan bahwa median 30-day retention hanya 3,3%. JMIR menemukan bahwa median 30-day retention hanya 3,3%, yang berarti 96,7% user berhenti dalam 30 hari. Ini bukan karena mereka sembuh. Ini karena app tidak membantu.
+JMIR, dalam analisis 93 mental health apps, menemukan bahwa median 30-day retention hanya 3,3%, yang berarti 96,7% user berhenti dalam 30 hari. Ini bukan karena mereka sembuh. Ini karena app tidak membantu.
 
 Review pada 2025, yang dikutip Dr Scott Wallace, menemukan bahwa dropout rate app-based intervention 49% lebih tinggi dari waitlist control. Artinya, orang yang tidak menggunakan app justru lebih sedikit yang drop out dibandingkan orang yang menggunakan app. App mental health, dalam banyak kasus, tidak membantu. Malah sebaliknya.
 
