@@ -7,7 +7,7 @@ import { TableOfContents } from '@/components/table-of-contents';
 import { ShareButtons } from '@/components/share-buttons';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { ArticleSchema } from '@/components/schema/article-schema';
-import { FileText, Clock, Download } from 'lucide-react';
+import { FileText, Clock, Download, ArrowLeft, ArrowRight, BarChart3 } from 'lucide-react';
 
 interface WhitepaperPageProps {
   params: { slug: string };
@@ -56,7 +56,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
   const related = await getRelatedWhitepapers(wp.id, 3);
 
   return (
-    <article className="container mx-auto px-4 py-12">
+    <article>
       <BreadcrumbSchema
         items={[
           { name: 'Home', href: '/' },
@@ -75,100 +75,173 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
         urlPrefix="whitepaper"
       />
 
-      <header className="mx-auto max-w-3xl">
-        <div className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
-          <FileText className="w-4 h-4" />
-          <span>Whitepaper</span>
-          <span>&middot;</span>
-          <span className="flex items-center gap-1">
-            <Clock className="w-3 h-3" />
-            {wp.readingTime} menit baca
-          </span>
+      {/* Hero Section */}
+      <section className="relative w-full overflow-hidden border-b border-border">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C0A08] via-[#0A0A0A] to-[#141210]" />
+          <div
+            className="absolute inset-0 opacity-[0.10]"
+            style={{
+              backgroundImage: 'radial-gradient(ellipse at 20% 0%, hsl(38 90% 55%) 0%, transparent 55%), radial-gradient(ellipse at 90% 100%, hsl(38 90% 55% / 0.25) 0%, transparent 45%)',
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(38 90% 55%) 1px, transparent 1px), linear-gradient(90deg, hsl(38 90% 55%) 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
         </div>
 
-        <h1 className="mb-4 text-3xl font-bold leading-tight md:text-4xl">
-          {wp.title}
-        </h1>
+        <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+          {/* Back link */}
+          <Link
+            href="/whitepaper"
+            className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+          >
+            <ArrowLeft size={15} />
+            Semua Whitepaper
+          </Link>
 
-        {wp.subtitle && (
-          <p className="mb-6 text-lg text-muted-foreground">{wp.subtitle}</p>
-        )}
+          {/* Badges */}
+          <div className="mb-6 flex items-center gap-2">
+            <span className="inline-flex items-center rounded-full border border-amber-500/20 bg-amber-500/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400/80">
+              <BarChart3 size={12} className="mr-1" />
+              Whitepaper
+            </span>
+            {wp.readingTime && (
+              <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-white/40">
+                <Clock size={13} />
+                {wp.readingTime} menit baca
+              </span>
+            )}
+          </div>
 
-        {wp.summary && (
-          <p className="mb-8 rounded-xl border border-border bg-card p-4 text-sm leading-relaxed text-muted-foreground">
-            {wp.summary}
-          </p>
-        )}
+          {/* Title */}
+          <h1 className="mb-4 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+            {wp.title}
+          </h1>
 
-        <div className="mb-8 flex items-center justify-between">
-          <div className="text-sm text-muted-foreground">
-            {wp.author}
+          {/* Subtitle */}
+          {wp.subtitle && (
+            <p className="mb-6 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              {wp.subtitle}
+            </p>
+          )}
+
+          {/* Meta row */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/50">
+            <span className="font-medium text-white/70">{wp.author}</span>
             {wp.publishedAt && (
-              <span className="ml-2">
-                &middot; {new Date(wp.publishedAt).toLocaleDateString('id-ID', {
+              <span>
+                {new Date(wp.publishedAt).toLocaleDateString('id-ID', {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
                 })}
               </span>
             )}
+            {wp.downloadUrl && (
+              <a
+                href={wp.downloadUrl}
+                className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-4 py-1.5 text-xs font-semibold text-amber-950 transition-colors hover:bg-amber-400"
+              >
+                <Download size={14} />
+                Download PDF
+              </a>
+            )}
           </div>
-          {wp.downloadUrl && (
-            <a
-              href={wp.downloadUrl}
-              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              Download PDF
-            </a>
+
+          {/* Tags */}
+          {wp.tags && wp.tags.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {wp.tags.map((tag: string) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/60"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           )}
         </div>
+      </section>
 
-        {wp.tags && wp.tags.length > 0 && (
-          <div className="mb-8 flex flex-wrap gap-2">
-            {wp.tags.map((tag: string) => (
-              <span
-                key={tag}
-                className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
+      {/* Summary box */}
+      {wp.summary && (
+        <section className="mx-auto max-w-3xl px-4 pt-12 md:pt-16">
+          <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-500">
+              Ringkasan
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+              {wp.summary}
+            </p>
           </div>
-        )}
-      </header>
+        </section>
+      )}
 
-      <div className="mx-auto max-w-3xl">
+      {/* Content */}
+      <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <TableOfContents body={wp.body} />
         <MarkdownContent body={wp.body} />
       </div>
 
-      <div className="mx-auto max-w-3xl mt-8 pt-6 border-t border-border">
-        <ShareButtons title={wp.title} slug={wp.slug} />
+      {/* Share */}
+      <div className="mx-auto max-w-3xl px-4 pb-8">
+        <div className="border-t border-border pt-6">
+          <ShareButtons title={wp.title} slug={wp.slug} />
+        </div>
       </div>
 
+      {/* Related */}
       {related && related.length > 0 && (
-        <div className="mx-auto max-w-3xl mt-12">
-          <h2 className="mb-6 text-xl font-bold text-foreground">
+        <section className="mx-auto max-w-5xl px-4 py-16 md:py-20">
+          <h2 className="mb-8 font-display text-xl font-bold text-foreground">
             Whitepaper lainnya
           </h2>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {related.map((r) => (
               <Link
                 key={r.slug}
                 href={`/whitepaper/${r.slug}`}
-                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/50 transition-colors"
+                className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-amber-500/30 hover:shadow-md"
               >
-                <h3 className="mb-2 text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                  {r.title}
-                </h3>
-                <p className="text-xs text-muted-foreground line-clamp-2">
-                  {r.summary || r.subtitle}
-                </p>
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="inline-flex items-center rounded-full border border-amber-500/15 bg-amber-500/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-600">
+                      <FileText size={10} className="mr-1" />
+                      Whitepaper
+                    </span>
+                    {r.readingTime && (
+                      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                        <Clock size={12} />
+                        {r.readingTime} min
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="mb-2 font-display text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-amber-600 line-clamp-2">
+                    {r.title}
+                  </h3>
+                  {r.summary && (
+                    <p className="line-clamp-2 text-sm text-muted-foreground">
+                      {r.summary}
+                    </p>
+                  )}
+                  <div className="mt-auto pt-4">
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-amber-600 transition-all group-hover:gap-2">
+                      Baca laporan
+                      <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
-        </div>
+        </section>
       )}
     </article>
   );
