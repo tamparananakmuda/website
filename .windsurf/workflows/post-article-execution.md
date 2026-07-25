@@ -211,155 +211,171 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 "
 ```
 
-## Step 1: Editorial QC Audit
+## Step 1: Editorial QC Audit (All-in-One)
 
-Validasi semua data dan klaim dalam artikel sebelum masuk ke file Markdown.
+Validasi semua data, klaim, pola AI, heading, dan metadata dalam satu command. Jalankan sampai CLEAN, fix semua FAIL, re-run.
 
-**Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori + audit script).
+**Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori).
 
-**Checklist Faktual:**
-- [ ] Setiap angka punya sumber yang bisa ditrace (URL aktif)
-- [ ] POV tag dipilih: kontra-narasi / refleksi / data / framework / tamparan / riset / opini / panduan / inspirasi
-- [ ] Heading structure: h2/h3 only, minimal 3 h2, tidak ada h1
+**Checklist (wajib semua sebelum lanjut Step 2):**
+- [ ] Setiap angka punya sumber yang bisa ditrace (URL aktif di sourceReferences)
+- [ ] Angka di artikel cocok dengan sumber (tidak dibulat-bulat)
+- [ ] Tidak ada angka tanpa atribusi sumber di kalimat yang sama
+- [ ] Data tidak outdated (max 2 tahun untuk data ekonomi)
+- [ ] POV tag dipilih dan konsisten
+- [ ] Heading: h2/h3 only, minimal 3 h2, tidak ada h1
 - [ ] Internal linking: minimal 2 link ke artikel TAM lain
 - [ ] Tidak ada raw HTML script/iframe/style di body
 - [ ] OG headline berbeda dari title, max 50 karakter, conversational
-- [ ] Word count: 1.000-2.500 kata (di bawah 1.000 = expand, di atas 2.500 = trim)
+- [ ] Word count: 1.000-2.500 kata
+- [ ] No em dash, no en dash, no curly quotes
+- [ ] No AI vocab EN/ID (lihat HumanizerRules.md)
+- [ ] No staccato drama, rule-of-three abuse (>2x), negative parallelisms
+- [ ] No promotional language, signposting, filler, generic conclusions
+- [ ] Max 1 exclamation mark
+- [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
+- [ ] Tone: jujur, rasional, berani, tidak menggurui
 
-**Checklist Humanizer (detail di `files/HumanizerRules.md`):**
-- [ ] Punctuation: no em dash (—), no en dash (–), no curly quotes, max 1 exclamation, sentence case headings
-- [ ] AI vocabulary EN: no crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, dll (lihat HumanizerRules.md section 2)
-- [ ] AI vocabulary ID: no signifikan, krusial, esensial, vital, mendalam, memperhatikan, pada dasarnya, dll (lihat HumanizerRules.md section 3)
-- [ ] Structural: no staccato drama, no rule-of-three abuse (>2x), no fragmented headers, no negative parallelisms (>1x), no aphorism formulas
-- [ ] Promotional: no game-changing, revolutionary, groundbreaking, seamless, empower, transform, unlock, dll
-- [ ] Vague attribution: "studi menunjukkan" wajib sebut nama studi + tahun + link
-- [ ] Copula avoidance: no "serves as", "stands as", "represents a" -> gunakan "adalah" atau kalimat aktif
-- [ ] Signposting: no "let's dive in", "marilah kita bahas", "berikut hal yang perlu kamu tahu"
-- [ ] Filler: no "in order to", "due to the fact", "perlu diketahui bahwa"
-- [ ] Generic conclusions: no "masa depan cerah", "exciting times", "peluang tak terbatas"
-- [ ] Authority tropes: no "the real question is", "pada hakikatnya", "inti permasalahannya"
-- [ ] Conversational openers: no "Honestly?", "Jujur saja,", "Begini"
-- [ ] Hyphenated pairs: maks 2x per artikel
-- [ ] Boldface: hanya untuk key terms/angka penting, bukan istilah umum
-- [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik, gunakan "kita"/"kamu" (bukan "Anda")
-- [ ] Tone check: jujur, rasional, berani, tidak menggurui
-- [ ] Ada opinions/reactions, bukan hanya neutral reporting
-- [ ] Ada acknowledgment of uncertainty atau mixed feelings jika relevan
-- [ ] Sentence length variety: campuran kalimat pendek dan panjang
-
-**Command:**
+**Command (all-in-one audit, jalankan sampai CLEAN):**
 ```bash
-# Cek heading + internal links + word count
-node -e "
+npx tsx -e "
 const fs = require('fs');
-const a = JSON.parse(fs.readFileSync('$ARTICLE_JSON', 'utf8'));
-const b = a.body;
-const h1 = (b.match(/^# /gm) || []).length;
-const h2 = (b.match(/^## /gm) || []).length;
-const h3 = (b.match(/^### /gm) || []).length;
-const il = (b.match(/\]\(\/artikel\//g) || []).length;
-const words = b.split(/\s+/).filter(w => w.length > 0).length;
-console.log('h1:', h1, h1 > 0 ? 'WARNING' : 'OK');
-console.log('h2:', h2, h2 < 3 ? 'WARNING: need 3+' : 'OK');
-console.log('h3:', h3);
-console.log('internal links:', il, il < 2 ? 'WARNING: need 2+' : 'OK');
-console.log('word count:', words, words < 1000 ? 'WARNING: need 1000+' : words > 2500 ? 'WARNING: trim to 2500' : 'OK');
-"
+const a = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
+const body = a.body || '';
+const title = a.title || '';
+const excerpt = a.excerpt || '';
+const full = body + ' ' + title + ' ' + excerpt;
+const issues = [];
 
-# Cek humanizer patterns (full audit dari HumanizerRules.md)
-python3 -c "
-import json, re, sys
-d = json.load(open('$ARTICLE_JSON'))
-body = d.get('body', '')
-title = d.get('title', '')
-excerpt = d.get('excerpt', '')
-full = body + ' ' + title + ' ' + excerpt
-issues = []
+// Punctuation
+if (full.includes('\u2014') || full.includes('\u2013')) issues.push('Em/en dash found');
+if (body.includes('\u201c') || body.includes('\u201d')) issues.push('Curly quotes');
+const exclCount = (body.match(/!/g) || []).length;
+if (exclCount > 1) issues.push('Exclamation marks: ' + exclCount + ' (max 1)');
 
-# 1. Em/en dash
-if '\u2014' in full or '\u2013' in full:
-    issues.append('Em/en dash found')
+// AI vocab EN
+const aiEn = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash'];
+const foundEn = aiEn.filter(w => body.toLowerCase().includes(w));
+if (foundEn.length) issues.push('AI vocab EN: ' + foundEn.join(', '));
 
-# 2. AI vocab EN
-ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash']
-found_en = [w for w in ai_en if w in body.lower()]
-if found_en: issues.append('AI vocab EN: ' + ', '.join(found_en))
+// AI vocab ID
+const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri'];
+const foundId = aiId.filter(w => body.toLowerCase().includes(w));
+if (foundId.length) issues.push('AI vocab ID: ' + foundId.join(', '));
 
-# 3. AI vocab ID
-ai_id = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri']
-found_id = [w for w in ai_id if w in body.lower()]
-if found_id: issues.append('AI vocab ID: ' + ', '.join(found_id))
+// Staccato drama
+const sentences = body.split(/[.!?]\s+/);
+let currentRun = 0, maxRun = 0;
+for (const s of sentences) {
+  if (s.split(/\s+/).length <= 6) { currentRun++; maxRun = Math.max(maxRun, currentRun); }
+  else currentRun = 0;
+}
+if (maxRun >= 3) issues.push('Staccato drama (max run: ' + maxRun + ')');
 
-# 4. Staccato drama
-sentences = re.split(r'[.!?]\s+', body)
-current_run = max_run = 0
-for s in sentences:
-    if len(s.split()) <= 6: current_run += 1; max_run = max(max_run, current_run)
-    else: current_run = 0
-if max_run >= 3: issues.append('Staccato drama (max run: %d)' % max_run)
+// Rule of three
+const triples = body.match(/(\w+,\s+\w+,\s+(?:dan|and)\s+\w+)/g) || [];
+if (triples.length > 2) issues.push('Rule of three: ' + triples.length + ' (max 2)');
 
-# 5. Rule of three
-triples = re.findall(r'(\w+,\s+\w+,\s+(?:dan|and)\s+\w+)', body)
-if len(triples) > 2: issues.append('Rule of three: %d' % len(triples))
+// Negative parallelisms
+const neg = body.match(/(tidak hanya.*tapi juga|bukan hanya.*melainkan|not only.*but also|it.s not just.*it.s)/gi) || [];
+if (neg.length) issues.push('Negative parallelisms: ' + neg.length);
 
-# 6. Negative parallelisms
-neg = re.findall(r'(tidak hanya.*tapi juga|bukan hanya.*melainkan|not only.*but also|it.s not just.*it.s)', body, re.I)
-if neg: issues.append('Negative parallelisms: %d' % len(neg))
+// -ing superficial
+const ing = body.match(/(\w+ing (?:the|its|a|this|that))/g) || [];
+if (ing.length > 2) issues.push('-ing superficial: ' + ing.length);
 
-# 7. Curly quotes
-if '\u201c' in body or '\u201d' in body:
-    issues.append('Curly quotes')
+// Promotional
+const promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket'];
+const foundPromo = promo.filter(w => body.toLowerCase().includes(w));
+if (foundPromo.length) issues.push('Promotional: ' + foundPromo.join(', '));
 
-# 8. -ing superficial
-ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
-if len(ing) > 2: issues.append('-ing superficial: %d' % len(ing))
+// Signposting
+const signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar'];
+if (signs.some(w => new RegExp(w, 'i').test(body))) issues.push('Signposting detected');
 
-# 9. Promotional
-promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket']
-found_promo = [w for w in promo if w in body.lower()]
-if found_promo: issues.append('Promotional: ' + ', '.join(found_promo))
+// Filler
+const fillers = ['in order to','due to the fact','at this point in time','it is important to note','perlu diketahui bahwa'];
+const foundFillers = fillers.filter(w => body.toLowerCase().includes(w));
+if (foundFillers.length) issues.push('Filler: ' + foundFillers.join(', '));
 
-# 10. Signposting
-signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar']
-found_signs = [w for w in signs if re.search(w, body, re.I)]
-if found_signs: issues.append('Signposting')
+// Generic conclusions
+const generic = ['the future looks bright','exciting times','masa depan yang cerah','awal dari sesuatu yang besar','peluang tak terbatas'];
+const foundGeneric = generic.filter(w => body.toLowerCase().includes(w));
+if (foundGeneric.length) issues.push('Generic conclusion: ' + foundGeneric.join(', '));
 
-# 11. Filler
-fillers = ['in order to','due to the fact','at this point in time','it is important to note','perlu diketahui bahwa']
-found_fillers = [w for w in fillers if w in body.lower()]
-if found_fillers: issues.append('Filler: ' + ', '.join(found_fillers))
+// Human signature
+const personal = (body.match(/\bkita\b|\bkamu\b|\bsaya\b/gi) || []).length;
+if (personal < 3) issues.push('Human signature weak (kita/kamu/saya: ' + personal + ', need 3+)');
 
-# 12. Generic conclusions
-generic = ['the future looks bright','exciting times','masa depan yang cerah','awal dari sesuatu yang besar','peluang tak terbatas']
-found_generic = [w for w in generic if w in body.lower()]
-if found_generic: issues.append('Generic conclusion: ' + ', '.join(found_generic))
+// Fragmented headers
+const lines = body.split('\n');
+for (let i = 0; i < lines.length; i++) {
+  if (lines[i].startsWith('## ') && i + 1 < lines.length) {
+    const next = lines[i+1].trim() || (lines[i+2] ? lines[i+2].trim() : '');
+    if (next) {
+      const hw = new Set(lines[i].replace('## ','').toLowerCase().split(/\s+/));
+      const nw = new Set(next.toLowerCase().split(/\s+/));
+      const overlap = [...hw].filter(w => nw.has(w));
+      if (overlap.length >= 2) issues.push('Fragmented header: \"' + lines[i].trim() + '\"');
+    }
+  }
+}
 
-# 13. Exclamation marks
-if body.count('!') > 1: issues.append('Exclamation marks: %d' % body.count('!'))
+// Heading structure
+const h1 = (body.match(/^# /gm) || []).length;
+const h2 = (body.match(/^## /gm) || []).length;
+const h3 = (body.match(/^### /gm) || []).length;
+if (h1 > 0) issues.push('h1 found: ' + h1 + ' (use h2/h3 only)');
+if (h2 < 3) issues.push('h2 count: ' + h2 + ' (need min 3)');
 
-# 14. Human signature check
-personal = len(re.findall(r'\bkita\b|\bkamu\b|\bsaya\b', body, re.I))
-if personal < 3: issues.append('Human signature weak (kita/kamu/saya: %d)' % personal)
+// Internal links
+const il = (body.match(/\]\(\/artikel\//g) || []).length;
+if (il < 2) issues.push('Internal links: ' + il + ' (need min 2)');
 
-# 15. Fragmented headers
-lines = body.split('\n')
-for i, line in enumerate(lines):
-    if line.startswith('## ') and i+1 < len(lines):
-        next_line = lines[i+1].strip() if lines[i+1].strip() else (lines[i+2].strip() if i+2 < len(lines) else '')
-        heading_text = line.replace('## ','').lower()
-        if next_line and len(next_line) < 50:
-            words_overlap = set(heading_text.split()) & set(next_line.lower().split())
-            if len(words_overlap) >= 2:
-                issues.append('Fragmented header: \"%s\"' % line.strip())
+// Word count
+const wc = body.split(/\s+/).filter(w => w.length > 0).length;
+if (wc < 1000) issues.push('Word count: ' + wc + ' (need min 1.000)');
+if (wc > 2500) issues.push('Word count: ' + wc + ' (max 2.500)');
 
-print('=== HUMANIZER AUDIT ===')
-if issues:
-    for i in issues: print('  FAIL:', i)
-    print('\nTOTAL ISSUES:', len(issues))
-else:
-    print('  CLEAN: No issues detected.')
+// OG headline
+const og = a.og_headline || '';
+if (!og) issues.push('og_headline: MISSING');
+else if (og === title) issues.push('og_headline == title: must be different');
+else if (og.length > 50) issues.push('og_headline length: ' + og.length + ' (max 50)');
+
+// Source references
+const refs = a.source_references || [];
+if (!Array.isArray(refs)) issues.push('source_references: must be array');
+
+// Data attribution check
+const numberSentences = sentences.filter(s => /\d+%|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d+\s*(persen|%)/i.test(s));
+const unattributed = numberSentences.filter(s => !/(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat)/i.test(s));
+if (unattributed.length > 0) issues.push('Unattributed numbers: ' + unattributed.length + ' sentences with numbers but no source');
+
+// Excerpt & SEO desc length
+if (excerpt.length > 160) issues.push('Excerpt: ' + excerpt.length + ' chars (max 160)');
+const seoDesc = a.seo_meta_description || '';
+if (seoDesc.length > 160) issues.push('SEO description: ' + seoDesc.length + ' chars (max 160)');
+
+console.log('=== ALL-IN-ONE QC AUDIT ===');
+console.log('Word count:', wc, '| h2:', h2, '| h3:', h3, '| internal links:', il, '| sources:', refs.length);
+console.log('og_headline:', og || 'MISSING');
+if (issues.length) {
+  console.log('\nFAIL (' + issues.length + ' issues):');
+  issues.forEach(i => console.log('  - ' + i));
+  console.log('\nFix all issues above, then re-run this command.');
+  process.exit(1);
+} else {
+  console.log('\nCLEAN: All checks passed. Safe to proceed to Step 2.');
+}
 "
 ```
+
+**Aturan:**
+- Jalankan command di atas, fix semua FAIL, re-run sampai CLEAN
+- Maksimal 5 round. Kalau setelah 5 round masih ada issue, review manual
+- Setelah CLEAN, set `human_signature: true` di article JSON
+- Step 1 CLEAN adalah **gate** untuk lanjut ke Step 2
 
 **Content Quality Score (0-100, target > 80):**
 
@@ -370,346 +386,83 @@ else:
 | Fact-check | 25 | Semua klaim terverifikasi (25), minor issues (15), flagged (0) |
 | POV clarity | 25 | POV tag dipilih dan konsisten (25), tidak konsisten (10), tidak ada (0) |
 
-## Step 1.5: Data & Fact Verification (MANDATORY)
+## Step 2: SEO & Source Verification
 
-Setiap angka, statistik, persentase, dan klaim faktual di artikel WAJIB diverifikasi sebelum lanjut. Tidak boleh ada angka tanpa sumber.
+Verifikasi semua source URL aktif dan optimize SEO metadata sebelum insert.
 
-**Kenapa ini penting:**
-- Angka yang tidak akurat merusak kredibilitas TAM
-- Misinterpretasi data (misal: konflasi korelasi dengan kausalitas) bisa menyesatkan pembaca
-- Data outdated masih sering dipakai padahal ada update terbaru
-- Cherry-picking data tanpa konteks adalah pola yang harus dihindari
+### 2a. Source Verification (Tier System)
 
-**Proses:**
+**Tier 1: Terverifikasi langsung dari publikasi asli** - URL aktif, data bisa dikonfirmasi
+**Tier 2: Tidak terverifikasi langsung** - Data dikutip dari media sekunder, wajib label atribusi
 
-1. Extract setiap angka/statistik/persentase dari body artikel
-2. Map setiap angka ke sumber di `sourceReferences`
-3. Verifikasi angka di artikel cocok dengan angka di sumber
-4. Flag angka tanpa sumber
-5. Cek apakah data masih relevan (tidak outdated)
-
-**Command (extract semua angka dari draft):**
-```bash
-python3 << 'PYEOF'
-import re
-
-body = open('DRAFT_FILE_PATH').read()
-
-# Extract kalimat yang mengandung angka/persentase
-sentences = re.split(r'(?<=[.!?])\s+', body)
-number_sentences = []
-for s in sentences:
-    # Cari pola: persentase, rupiah, triliun/miliar/juta, tahun, jumlah
-    if re.search(r'\d+[%]|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d{4}|\d+\s*(persen|%)', s, re.I):
-        number_sentences.append(s.strip())
-
-print(f'=== DATA & FACT EXTRACTION ===')
-print(f'Total sentences with numbers: {len(number_sentences)}')
-print()
-for i, s in enumerate(number_sentences, 1):
-    # Highlight angka
-    numbers = re.findall(r'\d+[%]|\d+\s*(?:triliun|miliar|juta|ribu)|Rp[\d.,]+|\d{4}|\d+\s*(?:persen|%)', s, re.I)
-    print(f'{i}. Numbers: {numbers}')
-    print(f'   Text: {s[:120]}...' if len(s) > 120 else f'   Text: {s}')
-    print()
-
-print('=== VERIFICATION CHECKLIST ===')
-print('For each number above, verify:')
-print('  [ ] Number matches source exactly')
-print('  [ ] Source is listed in sourceReferences')
-print('  [ ] Source URL is active (Step 2 will check)')
-print('  [ ] Data is not outdated (check publication date)')
-print('  [ ] No misinterpretation (correlation vs causation)')
-print('  [ ] Context is provided (not cherry-picked)')
-PYEOF
-```
-
-**Command (cross-check angka vs sourceReferences):**
-```bash
-python3 << 'PYEOF'
-import json, re
-
-# Load article JSON
-d = json.load(open('ARTICLE_JSON_PATH'))
-body = d.get('body', '')
-refs = d.get('source_references', [])  # JSON intermediate uses snake_case
-
-print('=== SOURCE COVERAGE CHECK ===')
-print(f'Source references: {len(refs)}')
-for r in refs:
-    print(f'  - {r.get("label", r.get("title", "?"))}: {r.get("url", "?")}')
-
-# Extract semua angka dari body
-numbers = re.findall(r'\d+(?:[.,]\d+)?\s*(?:%|persen|triliun|miliar|juta|ribu|orang|rekening|tahun)', body, re.I)
-print(f'\nTotal numbers found in body: {len(numbers)}')
-print('Numbers:', list(set(numbers)))
-
-# Cek apakah ada angka tanpa atribusi sumber di kalimat yang sama
-sentences = re.split(r'(?<=[.!?])\s+', body)
-unattributed = []
-for s in sentences:
-    has_number = bool(re.search(r'\d+[%]|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+', s, re.I))
-    has_source = bool(re.search(r'(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat)', s, re.I))
-    if has_number and not has_source:
-        unattributed.append(s.strip()[:100])
-
-if unattributed:
-    print(f'\nWARNING: {len(unattributed)} sentences with numbers but no source attribution:')
-    for s in unattributed:
-        print(f'  -> {s}...')
-else:
-    print('\nAll numbers have source attribution in same sentence.')
-PYEOF
-```
-
-**Checklist Data & Fact Verification:**
-- [ ] Setiap angka di body punya sumber yang bisa ditrace
-- [ ] Angka di artikel cocok dengan angka di sumber (bukan dibulat-bulat atau diubah)
-- [ ] Tidak ada angka tanpa atribusi sumber di kalimat yang sama
-- [ ] Data tidak outdated (cek tanggal publikasi sumber, max 2 tahun untuk data ekonomi)
-- [ ] Tidak ada misinterpretasi: korelasi tidak diperlakukan sebagai kausalitas
-- [ ] Tidak ada cherry-picking: data disajikan dengan konteks yang adil
-- [ ] Persentase dijelaskan basisnya (dari berapa sampel, populasi apa)
-- [ ] Klaim ekstrem (superlatif: "tertinggi", "terbesar", "pertama") punya sumber kuat
-- [ ] Kutipan langsung punya nama + jabatan + institusi (bukan hanya "pakar mengatakan")
-
-**Aturan:**
-- Jika angka tidak bisa diverifikasi: **HAPUS angka tersebut** atau ganti dengan klaim yang lebih umum
-- Jika sumber outdated (>2 tahun untuk data ekonomi/sosial): cari data terbaru atau beri label tahun (contoh: "data 2023" bukan "data terbaru")
-- Jika ada misinterpretasi: rewrite kalimat untuk akurat
-- Data & Fact Verification PASS adalah **gate** untuk lanjut ke Step 1.6
-
-## Step 1.6: Humanizer Double Verification (MANDATORY)
-
-Setelah Step 1 audit dijalankan dan fixes diterapkan, WAJIB re-run audit untuk konfirmasi semua issue sudah resolved. Tidak boleh lanjut ke Step 2 sebelum audit kedua CLEAN.
-
-**Kenapa double verification diperlukan:**
-- Fix untuk satu issue kadang menimbulkan issue baru (misal: gabung kalimat pendek bisa buat rule-of-three baru)
-- Header rename bisa tidak sengaja buat fragmented header baru dengan kalimat pertama
-- AI vocab bisa lolos saat paraphrase
-- Staccato drama bisa terbentuk ulang saat edit paragraf
-
-**Proses:**
-
-1. Jalankan audit script yang sama dengan Step 1 (python3 humanizer audit) terhadap draft yang sudah di-fix
-2. Jika masih ada FAIL: fix issue, re-run audit lagi (bisa berulang sampai CLEAN)
-3. Jika CLEAN: catat "Humanizer Double Verification: PASS (round N)" di log
-4. Set `human_signature: true` di article JSON (akan menjadi `humanSignature: true` di frontmatter) hanya setelah double verification PASS
-
-**Command (re-run audit dari file draft markdown langsung):**
-```bash
-python3 << 'PYEOF'
-import re, sys
-
-body = open('DRAFT_FILE_PATH').read()
-title = body.split('\n')[0].replace('# ','')
-full = body + ' ' + title
-issues = []
-
-if '\u2014' in full or '\u2013' in full: issues.append('Em/en dash found')
-
-ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash']
-found_en = [w for w in ai_en if w in body.lower()]
-if found_en: issues.append('AI vocab EN: ' + ', '.join(found_en))
-
-ai_id = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri']
-found_id = [w for w in ai_id if w in body.lower()]
-if found_id: issues.append('AI vocab ID: ' + ', '.join(found_id))
-
-sentences = re.split(r'[.!?]\s+', body)
-current_run = max_run = 0
-for s in sentences:
-    if len(s.split()) <= 6: current_run += 1; max_run = max(max_run, current_run)
-    else: current_run = 0
-if max_run >= 3: issues.append('Staccato drama (max run: %d)' % max_run)
-
-triples = re.findall(r'(\w+,\s+\w+,\s+(?:dan|and)\s+\w+)', body)
-if len(triples) > 2: issues.append('Rule of three: %d' % len(triples))
-
-neg = re.findall(r'(tidak hanya.*tapi juga|bukan hanya.*melainkan|not only.*but also|it.s not just.*it.s)', body, re.I)
-if neg: issues.append('Negative parallelisms: %d' % len(neg))
-
-if '\u201c' in body or '\u201d' in body: issues.append('Curly quotes')
-
-ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
-if len(ing) > 2: issues.append('-ing superficial: %d' % len(ing))
-
-promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket']
-found_promo = [w for w in promo if w in body.lower()]
-if found_promo: issues.append('Promotional: ' + ', '.join(found_promo))
-
-signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar']
-found_signs = [w for w in signs if re.search(w, body, re.I)]
-if found_signs: issues.append('Signposting')
-
-fillers = ['in order to','due to the fact','at this point in time','it is important to note','perlu diketahui bahwa']
-found_fillers = [w for w in fillers if w in body.lower()]
-if found_fillers: issues.append('Filler: ' + ', '.join(found_fillers))
-
-generic = ['the future looks bright','exciting times','masa depan yang cerah','awal dari sesuatu yang besar','peluang tak terbatas']
-found_generic = [w for w in generic if w in body.lower()]
-if found_generic: issues.append('Generic conclusion: ' + ', '.join(found_generic))
-
-if body.count('!') > 1: issues.append('Exclamation marks: %d' % body.count('!'))
-
-personal = len(re.findall(r'\bkita\b|\bkamu\b|\bsaya\b', body, re.I))
-if personal < 3: issues.append('Human signature weak (kita/kamu/saya: %d)' % personal)
-
-lines = body.split('\n')
-for j, line in enumerate(lines):
-    if line.startswith('## ') and j+1 < len(lines) and j+2 < len(lines):
-        next_line = lines[j+1].strip() if lines[j+1].strip() else (lines[j+2].strip() if j+2 < len(lines) else '')
-        if next_line:
-            header_words = set(line.replace('#','').lower().split())
-            next_words = set(next_line.lower().split())
-            overlap = header_words & next_words
-            if len(overlap) >= 2:
-                issues.append('Fragmented header: "%s"' % line.strip())
-
-words = len(body.split())
-print('=== HUMANIZER DOUBLE VERIFICATION ===')
-print(f'Word count: {words}')
-if issues:
-    for i in issues: print('  FAIL:', i)
-    print(f'\nTOTAL ISSUES: {len(issues)}')
-    print('ACTION: Fix issues above, then re-run this audit.')
-    sys.exit(1)
-else:
-    print('  CLEAN: Double verification PASSED.')
-    print('  Safe to proceed to Step 2.')
-PYEOF
-```
-
-**Checklist Double Verification:**
-- [ ] Audit re-run setelah semua fixes dari Step 1 diterapkan
-- [ ] Hasil: CLEAN (0 issues)
-- [ ] Word count: 1.000-2.500 kata
-- [ ] `humanSignature: true` di-set di article JSON (maps ke frontmatter)
-- [ ] Catat round number (berapa kali audit dijalankan sampai CLEAN)
-
-**Aturan:**
-- Maksimal 5 round audit. Kalau setelah 5 round masih ada issue, hentikan dan review manual.
-- Setiap round: fix semua FAIL, re-run audit.
-- Jika fix di round N menimbulkan issue baru di round N+1, fix issue baru tersebut juga.
-- Double verification PASS adalah **gate** untuk lanjut ke Step 2.
-
-## Step 2: Source Verification (Tier System)
-
-Klasifikasi semua sumber ke dalam tier reliability.
-
-**Tier 1: Terverifikasi langsung dari publikasi asli**
-- URL aktif dan bisa diakses
-- Data bisa dikonfirmasi di halaman sumber
-- Tidak ada perantara (artikel sekunder yang mengutip)
-
-**Tier 2: Tidak terverifikasi langsung, digunakan dengan atribusi jelas**
-- Data dikutip dari media sekunder (contoh: "menurut data Jakpat yang dikutip Mojok.co")
-- Tidak bisa konfirmasi langsung dari publikasi primer
-- Wajib label atribusi di body artikel
-
-**Yang harus dihapus:**
-- Sumber yang URL-nya dead link
-- Data dari survei internal dengan sample terlalu kecil (n < 5.000 untuk klaim general)
-- Blog post tanpa data primer
-- Artikel sekunder yang tidak menambah data unik
-
-**Output:** Update `sourceReferences` di JSON dengan hanya sumber yang lulus verifikasi.
+**Yang harus dihapus:** Dead link, sample terlalu kecil (n < 5.000), blog post tanpa data primer
 
 **Command cek HTTP status semua source references:**
 ```bash
 node -e "
 const fs = require('fs');
-const a = JSON.parse(fs.readFileSync('$ARTICLE_JSON', 'utf8'));
-const refs = a.source_references || [];  // JSON intermediate uses snake_case
+const a = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
+const refs = a.source_references || [];
 (async () => {
   for (const ref of refs) {
     try {
       const res = await fetch(ref.url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(10000) });
-      const status = res.status;
-      const tag = status >= 200 && status < 400 ? 'OK' : 'DEAD';
-      console.log(tag + ' [' + status + '] ' + ref.url);
+      console.log((res.status >= 200 && res.status < 400 ? 'OK' : 'DEAD') + ' [' + res.status + '] ' + ref.url);
     } catch (e) {
-      // HEAD might not be supported, try GET
       try {
         const res = await fetch(ref.url, { redirect: 'follow', signal: AbortSignal.timeout(10000) });
-        const tag = res.status >= 200 && res.status < 400 ? 'OK' : 'DEAD';
-        console.log(tag + ' [' + res.status + '] ' + ref.url);
+        console.log((res.status >= 200 && res.status < 400 ? 'OK' : 'DEAD') + ' [' + res.status + '] ' + ref.url);
       } catch (e2) {
-        console.log('DEAD [ERR] ' + ref.url + ' (' + e2.message + ')');
+        console.log('DEAD [ERR] ' + ref.url);
       }
     }
   }
 })();
 "
+```
 
-## Step 3: SEO Metadata Finalization
-
-Pastikan semua metadata SEO optimal sebelum insert file Markdown.
-
-### 3a. Keyword Research
-
-Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan search volume tinggi + competition rendah.
-
-**Tools:**
-- Google Keyword Planner (gratis, butuh Google Ads account)
-- Ubersuggest (free tier 3x/hari)
-- Google autocomplete (ketik keyword utama, liati saran)
-- Related searches di Google SERP
-
-**Simpan ke `seoKeywords` field:** array string, contoh: `["hustle culture gen z", "dampak hustle culture", "burnout gen z indonesia"]`
-
-### 3b. Meta Title & Description
+### 2b. SEO Metadata Check
 
 **Meta Title Formula:** `[Keyword Utama] + [Hook] | TAM` (max 70 karakter)
-- Contoh: `Hustle Culture Bikin Gen Z Berhenti Berlari | TAM`
-- Keyword utama di awal untuk SEO weight
+**Meta Description Formula:** `[Konteks] + [Value Prop] + [CTA]` (max 160 karakter)
+**Slug:** kebab-case, keyword di awal, max 60 karakter, unique
 
-**Meta Description Formula:** `[Konteks Keyword] + [Value Proposition] + [CTA]` (max 160 karakter)
-- Contoh: `Hustle culture menjual mimpi sukses tanpa henti. Tapi data menunjukkan gen Z sudah berhenti berlari. Baca analisis lengkapnya di sini.`
-- Mengandung keyword utama secara natural
-- Jangan copy paste excerpt
-
-### 3c. Slug Optimization
-
-- Kebab-case: `hustle-culture-gen-z-berhenti-berlari`
-- Keyword utama di awal slug
-- Max 60 karakter
-- Unique (cek di Step 0)
-
-### 3d. Heading SEO
-
-- h2 mengandung secondary keyword (variasi dari keyword utama)
-- h3 untuk long-tail keyword variations
-- Jangan repeat keyword utama berlebihan (keyword stuffing)
-- Natural reading flow > keyword density
-
-### 3e. Image Alt Text
-
-- Deskriptif + keyword when natural: `Infografik hustle culture dan dampaknya ke gen z Indonesia`
-- Jangan keyword stuffing di alt text
-- Setiap gambar wajib punya alt text
-
-### 3f. Internal Linking
-
-- Minimal 2 link ke artikel TAM lain di body
-- Anchor text bervariasi (jangan selalu "baca juga" atau judul persis)
-- Link dari konteks yang relevan, bukan di akhir artikel saja
-- Cek artikel relevan via command di Step 0.5
+**Command (SEO metadata validation):**
+```bash
+npx tsx -e "
+const fs = require('fs');
+const a = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
+console.log('SEO title:', (a.seo_meta_title||'').length, 'chars (max 70)');
+console.log('SEO desc:', (a.seo_meta_description||'').length, 'chars (max 160)');
+console.log('Slug:', (a.slug||'').length, 'chars (max 60)');
+console.log('Excerpt:', (a.excerpt||'').length, 'chars (max 160)');
+console.log('Keywords:', (a.seo_keywords||[]).length, '(target 3-8)');
+const issues = [];
+if ((a.seo_meta_title||'').length > 70) issues.push('SEO title > 70');
+if ((a.seo_meta_description||'').length > 160) issues.push('SEO desc > 160');
+if ((a.excerpt||'').length > 160) issues.push('Excerpt > 160');
+if ((a.slug||'').length > 60) issues.push('Slug > 60');
+if (!a.seo_keywords || a.seo_keywords.length < 3) issues.push('Keywords < 3');
+if (issues.length) { console.log('\nFAIL:', issues.join(', ')); process.exit(1); }
+else console.log('\nCLEAN: SEO metadata OK.');
+"
+```
 
 **Checklist:**
+- [ ] Semua source URL aktif (HTTP 200-399)
+- [ ] Tidak ada dead link di sourceReferences
 - [ ] `seoKeywords`: 3-8 keyword long-tail, Bahasa Indonesia
 - [ ] `seoMetaTitle`: max 70 karakter, keyword utama di awal, ada `| TAM`
-- [ ] `seoMetaDescription`: **MAX 160 karakter**, mengandung keyword
-- [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, **unique**
-- [ ] `excerpt`: **MAX 160 karakter**
-- [ ] `ogHeadline`: max 50 karakter untuk OG image (fallback ke title)
+- [ ] `seoMetaDescription`: max 160 karakter, mengandung keyword
+- [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, unique
+- [ ] `excerpt`: max 160 karakter
+- [ ] `ogHeadline`: max 50 karakter, berbeda dari title
 - [ ] h2 mengandung secondary keyword
 - [ ] Internal linking: minimal 2 link, anchor text bervariasi
-- [ ] Image alt text: deskriptif + keyword when natural
-- [ ] `category`: slug kategori valid dari `content/config.ts` (Step 0)
-- [ ] `author`: slug author valid dari `content/config.ts` (default: `yovie-setiawan`)
+- [ ] `category`: slug kategori valid dari `content/config.ts`
+- [ ] `author`: slug author valid dari `content/config.ts`
 
-### 3g. SEO Scoring Rubric (0-100, target > 80)
+**SEO Scoring Rubric (0-100, target > 80):**
 
 | Komponen | Max | Kriteria |
 |----------|-----|----------|
@@ -720,25 +473,6 @@ Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan s
 | Internal linking | 15 | 3+ link bervariasi (15), 2 link (10), <2 (0) |
 | Slug | 10 | Kebab-case + keyword di awal + max 60 (10), ada keyword (7), >60 (0) |
 | Alt text | 10 | Semua gambar punya alt + keyword natural (10), ada alt (5), ada gambar tanpa alt (0) |
-
-**Command:**
-```bash
-python3 -c "
-import json
-d = json.load(open('$ARTICLE_JSON'))
-print(f'SEO title: {len(d[\"seo_meta_title\"])} chars (max 70)')
-print(f'SEO desc: {len(d[\"seo_meta_description\"])} chars (max 160)')
-print(f'Slug: {len(d[\"slug\"])} chars (max 60)')
-excerpt_len = len(d['excerpt'])
-print(f'Excerpt: {excerpt_len} chars (max 160)')
-if excerpt_len > 160:
-    print('WARNING: Excerpt exceeds 160 chars! Will fail file insert.')
-    print('Trim to:', d['excerpt'][:157] + '...')
-seo_desc_len = len(d['seo_meta_description'])  # JSON uses snake_case
-if seo_desc_len > 160:
-    print('WARNING: SEO description exceeds 160 chars! Will fail file insert.')
-"
-```
 
 ## Step 4: File-Based Article Insert
 
