@@ -103,10 +103,18 @@ Kedua, pakai AI untuk produksi, bukan cuma konsumsi. Bikin video lucu pakai AI m
 
 Ketiga, pahami risiko. AI tidak sempurna. Bisa halusinasi, bisa bias, bisa salah. Belar verifikasi informasi yang dihasilkan. Jangan jadi orang yang percaya AI 100 persen tanpa cek silang. Tapi juga jangan jadi orang yang 81,8 persen tidak pakai karena tidak tahu.
 
+Keempat, ajarkan orang di sekitarmu. Literasi AI bukan cuma masalahmu. Kalau kamu paham AI, bantu keluarga, teman, atau rekan kerja yang belum paham. 46,6 persen responden APJII tidak tahu apa itu AI. Itu orang-orang di sekitarmu. Mereka bisa jadi orang tuamu, saudaramu, tetanggamu. Kalau kamu tidak bantu mereka, siapa yang akan?
+
 ## Akses Tanpa Pemahaman
 
-Indonesia punya 235 juta pengguna internet. Tapi 81,8 persen tidak mengakses AI. Ini bukan soal teknologi yang tidak tersedia. AI gratis, bisa diakses dari HP. Ini soal pemahaman yang tidak tersebar.
+Indonesia punya 235 juta pengguna internet. Tapi 81,8 persen tidak mengakses AI. Ini bukan soal teknologi yang tidak tersedia. AI gratis, bisa diakses dari HP. ChatGPT punya versi gratis. Gemini punya versi gratis. Claude punya versi gratis. Tapi 46,6 persen responden APJII tidak tahu apa itu AI. Bagaimana kamu pakai sesuatu yang kamu tidak tahu ada?
 
-Boom global AI tidak akan otomatis sampai ke Indonesia kalau literasi tidak di bangun. Dan kalau Indonesia tertinggal dalam adopsi AI, yang rugi bukan pemerintah. Yang rugi adalah generasi yang tumbuh tanpa alat yang dibutuhkan untuk bersaing di pasar kerja masa depan.
+Yang lebih mengkhawatirkan: adopsi AI di Indonesia tidak cuma rendah, tapi turun. Dari 27,3 persen pada 2025 ke 18,2 persen pada 2026. Boom global AI justru bersamaan dengan penurunan penggunaan AI di Indonesia. Dunia maju, kita mundur.
+
+Penyebabnya bukan teknologi. Penyebabnya literasi. Tidak ada strategi nasional untuk edukasi masyarakat tentang AI. Tidak ada kurikulum AI di sekolah. Tidak ada program pemerintah yang menyentuh akar masalah. Yang ada adalah discourse di media sosial tentang AI mengambil pekerjaan, tanpa diiringi pemahaman tentang cara AI bekerja dan bagaimana memanfaatkannya.
+
+Seperti yang kita bahas tentang [AI yang mengambil tahap belajarmu](/artikel/ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), ancaman terbesar bukan AI mengambil kerjaanmu. Ancaman terbesar adalah kamu tidak bisa pakai AI sementara orang lain bisa. Dan di Indonesia, 81,8 persen berada di posisi itu.
+
+Boom global AI tidak akan otomatis sampai ke Indonesia kalau literasi tidak dibangun. Dan kalau Indonesia tertinggal dalam adopsi AI, yang rugi bukan pemerintah. Yang rugi adalah generasi yang tumbuh tanpa alat yang dibutuhkan untuk bersaing di pasar kerja masa depan.
 
 81,8 persen bukan angka kerelaan. Itu angka ketidaktahuan. Dan ketidaktahuan bukan sesuatu yang bisa dibiarkan di era di mana AI sedang mengubah segalanya.

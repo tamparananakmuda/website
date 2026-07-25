@@ -91,6 +91,8 @@ Kemkomdigi melaporkan Gen Z (17-27 tahun) dan Milenial (28-43 tahun) menjadi kel
 
 Ini masuk akal. Generasi yang paling sering online punya paparan terbesar. 55 paparan per tahun berarti lebih banyak kesempatan untuk tertipu. Dan karena mereka merasa "saya digital native, saya tahu", kewaspadaan mereka justru lebih rendah.
 
+Kemkomdigi melalui layanan CekRekening.id yang beroperasi sejak 2017 telah menerima lebih dari 849 ribu laporan masyarakat terkait dugaan penipuan transaksi elektronik. AduanNomor.id yang diluncurkan pada 2022 mencatat sekitar 176 ribu aduan terkait penyalahgunaan nomor komunikasi. Dan angka ini hanya yang dilaporkan. Banyak korban enggan melapor karena nominal kerugian kecil atau merasa malu. Padahal laporan sangat penting untuk upaya pencegahan.
+
 Seperti yang kita bahas tentang [81 persen Indonesia yang enggan pakai AI](/artikel/81-persen-enggan-ai-boom-global-indonesia-mundur), punya akses internet tidak sama dengan punya literasi digital. Punya HP tidak sama dengan punya pertahanan terhadap penipuan. Dan merasa tahu tidak sama dengan benar-benar tahu.
 
 ## Apa yang Bisa Kamu Lakukan
@@ -103,10 +105,18 @@ Ketiga, verifikasi selalu. Kalau ada yang minta transfer, konfirmasi melalui cha
 
 Keempat, jangan malu kalau pernah kena. 35 persen orang Indonesia pernah jadi korban. Kamu tidak sendirian. Dan kamu tidak bodoh. Lapor ke IASC atau CekRekening.id. Laporanmu bisa membantu orang lain tidak ikut kena.
 
+Kelima, kenali titik lemahmu sendiri. Reski Damayanti dari GASA Indonesia mengakui bahwa scammer pintar menemukan titik lemah manusia. Titik lemahnya bukan kebodohan, tapi keinginan. Ingin fashionable, beli baju, beli peralatan rumah, atau yang paling besar: investasi. Kalau kamu tahu titik lemahmu, kamu bisa lebih waspada saat topik itu muncul. Kalau kamu sering tergoda investasi cepat, jangan percaya tawaran investasi dari orang yang tidak kamu kenal. Kalau kamu suka belanja online, cek reputasi toko sebelum transfer.
+
 ## Percaya Diri Bukan Perlindungan
 
 86 persen merasa bisa kenali scam. 35 persen tetap kena. Rp49 triliun hilang dalam setahun. 55 paparan per orang per tahun.
 
 Angka-angka ini bicara jelas: percaya diri bukan perlindungan. Overconfidence justru celah. Dan selama kamu merasa kebal, kamu adalah target yang ideal.
+
+Kaspersky memberikan data pelengkap. 83 persen pebelanja online di Indonesia mengandalkan kewaspadaan pribadi, jauh di atas rata-rata global 65 persen. Tapi hanya 58 persen yang pakai solusi keamanan digital. Hanya 33 persen yang pakai kartu khusus untuk transaksi online. Hanya 26 persen yang pakai email terpisah untuk toko online yang tidak dikenal.
+
+Artinya, mayoritas orang Indonesia percaya pada insting mereka. Insting yang sama yang membuat 35 persen dari mereka tertipu. Rasa percaya diri tanpa perlindungan teknis adalah pintu yang terbuka untuk penipu. Kamu tidak akan masuk ke rumah tanpa kunci, tapi kamu akan masuk ke transaksi digital tanpa proteksi. Kenapa?
+
+Karena kamu merasa tahu. Karena kamu merasa bisa kenali scam. Karena 86 persen dari kita sudah memberikan rasa aman yang berlebihan kepada diri sendiri. Dan penipu tahu persis ini. Mereka tidak menyerang orang yang curiga. Mereka menyerang orang yang merasa sudah tahu.
 
 Penipu tidak butuh kamu bodoh. Mereka butuh kamu merasa cukup pintar untuk menurunkan kewaspadaan. Dan sayangnya, 86 persen dari kita sudah memberikan itu.

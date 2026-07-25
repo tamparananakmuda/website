@@ -105,9 +105,19 @@ Kedua, verifikasi sebelum transfer. Kalau ada yang minta transfer darurat, hubun
 
 Ketiga, laporkan cepat. OJK mengingatkan: pelaku butuh kurang dari satu jam untuk memindahkan dana. Kalau kamu tertipu, lapor dalam hitungan menit, bukan jam. Hubungi bank, blokir rekening, hubungi IASC. Kecepatan laporan menentukan apakah uangmu bisa diselamatkan.
 
+Keempat, waspadai modus baru. OJK mencatat modus yang terus berevolusi: tawaran menonton film drama China untuk dapat komisi, pembelian hak cipta film, penawaran saham IPO fiktif, skema komisi e-commerce, hingga love scam. Setiap modus punya pola yang sama: janji uang mudah, tekanan untuk cepat transfer, dan permintaan data pribadi. Kalau kamu melihat pola ini, berhenti dan verifikasi.
+
+Kelima, aktifkan notifikasi transaksi. Banyak bank dan e-wallet punya fitur notifikasi real-time untuk setiap transaksi. Aktifkan. Kalau ada transaksi yang tidak kamu lakukan, kamu bisa langsung blokir. 80 persen korban terlambat melapor karena baru sadar berjam-jam setelah transaksi. Notifikasi memotong waktu itu menjadi detik.
+
 ## Bukan Kamu, Sistemnya
 
 Rp9,5 triliun. Itu uang rakyat yang hilang karena sistem telekomunikasi memungkinkan kartu SIM tanpa verifikasi, sistem keuangan memungkinkan transfer tanpa verifikasi cukup, dan sistem hukum bergerak terlalu lambat untuk mengejar pelaku yang bergerak cepat.
+
+UNODC memperkirakan kerugian dari penipuan online di wilayah Asia Timur dan Tenggara mencapai lebih dari USD 37 miliar. Asia Tenggara muncul sebagai pusat operasi penipuan skala industri. Indonesia bukan korban kecil di lanskap ini. 1 dari 4 konsumen Indonesia melaporkan kehilangan uang akibat penipuan. Ini bukan masalah individu. Ini masalah regional yang membutuhkan respons sistemik.
+
+Menkomdigi Meutya Hafid pada Januari 2026 mencatat fraud digital di ekosistem pembayaran Indonesia menimbulkan kerugian Rp4,6 triliun hingga Agustus 2025. Ini terpisah dari angka Rp9,5 triliun dari IASC. Total kerugian bisa jauh lebih besar kalau digabung. Dan ini hanya yang dilaporkan. Friderica mengakui angka sebenarnya jauh lebih besar karena banyak korban enggan melapor.
+
+Pemerintah sudah mengambil langkah dengan Permen Komdigi Nomor 7 Tahun 2026 tentang Registrasi Pelanggan Jasa Telekomunikasi melalui Jaringan Bergerak Seluler, yang mewajibkan verifikasi biometrik untuk kartu SIM. Tapi aturan ini baru efektif, dan penipuan yang terjadi sebelum aturan ini berlaku sudah menelan Rp9,5 triliun.
 
 Penipuan online bukan soal bodoh. Ini soal sistem yang tidak melindungi. Dan selama sistem tidak berubah, 1 dari 4 akan terus menjadi korban.
 

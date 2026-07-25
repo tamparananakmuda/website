@@ -111,8 +111,16 @@ Kedua, pindah dengan strategi, bukan emosi. Kalau kamu pindah karena gaji, pasti
 
 Ketiga, bangun skill yang membuat kamu layak diperebutkan. Seperti yang kita bahas tentang [skill vs ijazah](/artikel/skill-not-school-tapi-sistem-tetap-pakai-ijazah), sistem masih pakai ijazah sebagai filter, tapi skill yang membuat kamu tidak mudah diganti. Kalau kamu punya skill yang langka, kamu punya posisi tawar.
 
+Keempat, jangan takut menjadi "kutu loncat" kalau itu strategi. Generasi sebelummu mungkin menganggap pindah kerja sebagai tanda ketidakstabilan. Tapi konteksnya berbeda. Mereka hidup di era di mana perusahaan menjamin pensiun, gaji naik stabil, dan PHK jarang terjadi. Kamu hidup di era di mana semua janji itu sudah tidak berlaku. Pindah kerja bukan ketidakstabilan. Itu adaptasi.
+
 ## Loyalitas Butuh Alasan
 
 Loyalitas tidak tumbuh di tanah yang tandus. Gen Z tidak menolak loyalitas. Mereka menolak memberikan loyalitas tanpa menerima apa pun sebagai gantinya.
+
+Survei Gateway Commercial Finance menemukan 58 persen Gen Z melihat pekerjaan mereka sebagai situationship. Hubungan tanpa kejelasan, tanpa komitmen, tanpa janji masa depan. Kalau perusahaan sendiri tidak berkomitmen, kenapa menuntut karyawan berkomitmen?
+
+Randstad menemukan 45 persen Gen Z saat ini berada dalam pekerjaan penuh waktu tradisional. Sisanya? Freelance, kontrak, side hustle. Generasi yang tumbuh di tengah ketidakpastian belajar satu hal: jangan menaruh harapan pada satu pintu. Kalau pintu itu tertutup, kamu butuh pintu lain.
+
+Dan angka 96 persen terbuka pindah bukan sekadar angka. Itu adalah suara generasi yang sudah lelah dituntut setia pada sistem yang tidak setia pada mereka. Perusahaan menuntut loyalitas, tapi memberikan kontrak pendek, gaji stagnan, dan lingkungan kerja yang tidak sehat. Menuntut dedikasi, tapi PHK tanpa kompensasi yang adil saat bisnis turun.
 
 96 persen terbuka pindah bukan angka ketidakloyalan. Itu angka kekecewaan. Dan kekecewaan itu bukan salah Gen Z. Sistem yang tidak memberi alasan untuk setia, tidak berhak menuntut kesetiaan.

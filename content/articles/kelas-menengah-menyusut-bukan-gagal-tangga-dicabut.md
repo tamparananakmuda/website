@@ -115,6 +115,8 @@ Ketiga, jangan andalkan satu sumber pendapatan. Lapangan kerja formal menyusut, 
 
 Keempat, upgrade skill yang tidak bisa diganti. Pekerja berkeahlian tinggi mengalami penurunan upah riil 2 persen per tahun. Tapi pekerja berkeahlian rendah naik 1,7 persen. Artinya, pasar tidak menghargai keahlian tinggi seperti dulu. Solusinya: punya keahlian yang langka dan sulit diganti, bukan keahlian yang banyak orang punya.
 
+Kelima, pahami bahwa kamu tidak sendirian. 142 juta orang Indonesia berada di zona aspiring middle class. Ini bukan kegagalan pribadi. Ini struktur ekonomi yang tidak bekerja untuk mayoritas. Jangan terjebak menyalahkan diri sendiri untuk masalah yang bersifat sistemik. Fokus energi kamu pada hal yang bisa kamu kendalikan: skill, tabungan, jaringan, dan kesehatan mental.
+
 ## Tangga Dicabut, Bukan Kamu yang Jatuh
 
 Kelas menengah menyusut bukan karena orang malas naik. Tangganya yang dicabut. Upah riil turun, lapangan kerja formal menyusut, jaminan sosial tipis, dan pemerintah tidak punya rencana khusus.
