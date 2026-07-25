@@ -42,7 +42,7 @@ export function NewsletterCta() {
   return (
     <section className="py-24 md:py-40">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[48px] border border-border bg-card">
           <div className="px-6 py-16 text-center md:px-12 md:py-24">
             <div className="mb-8 flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-primary" />
