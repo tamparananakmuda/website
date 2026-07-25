@@ -25,16 +25,16 @@ const { getCategoryBySlug, getAuthorBySlug, getSeriesBySlug } = require('../cont
 async function main() {
   const now = new Date().toISOString();
   const allRaw = getAllArticlesUncached();
-  const published = allRaw
-    .filter((a) => a.status === 'published' && a.publishedAt <= now)
+  const eligible = allRaw
+    .filter((a) => (a.status === 'published' || a.status === 'scheduled'))
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
-  console.log(`Found ${published.length} published posts to generate OG images for\n`);
+  console.log(`Found ${eligible.length} posts (published + scheduled) to generate OG images for\n`);
 
   let success = 0;
   let failed = 0;
 
-  for (const raw of published) {
+  for (const raw of eligible) {
     const category = getCategoryBySlug(raw.categorySlug) ?? null;
     const author = getAuthorBySlug(raw.authorSlug) ?? null;
     const series = raw.seriesSlug ? getSeriesBySlug(raw.seriesSlug) : null;
@@ -42,7 +42,7 @@ async function main() {
     let seriesCurrent: number | undefined;
     let seriesTotal: number | undefined;
     if (series && raw.seriesOrder) {
-      seriesTotal = published.filter((a) => a.seriesSlug === raw.seriesSlug).length;
+      seriesTotal = eligible.filter((a) => a.seriesSlug === raw.seriesSlug).length;
       seriesCurrent = raw.seriesOrder;
     }
 
