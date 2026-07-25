@@ -1,33 +1,49 @@
 ---
-title: "Mental Health Industry: Sistem yang Membuatmu Sakit Menjual Obatnya"
-slug: "kesehatan-mental-era-digital-part-12-industri-mental-health"
-excerpt: "Industri mental health digital tidak menjual kesembuhan, tapi rasa sedang disembuhkan. User yang sembuh = churn. User yang tetap tidak sembuh = subscribe."
-publishedAt: "2026-07-25T12:54:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'Mental Health Industry: Sistem yang Membuatmu Sakit Menjual Obatnya'
+slug: kesehatan-mental-era-digital-part-12-industri-mental-health
+excerpt: >-
+  Industri mental health digital tidak menjual kesembuhan, tapi rasa sedang
+  disembuhkan. User yang sembuh = churn. User yang tetap tidak sembuh =
+  subscribe.
+publishedAt: '2026-07-25T12:54:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 12
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "User sembuh = churn. User sakit = subscribe."
-seoMetaTitle: "Mental Health Industry: Sistem Sakit Menjual Obat | TAM"
-seoMetaDescription: "Industri mental health digital tidak menjual kesembuhan, tapi rasa sedang disembuhkan. User yang sembuh = churn. User yang tetap tidak sembuh = subscribe."
+ogHeadline: User sembuh = churn. User sakit = subscribe.
+seoMetaTitle: 'Mental Health Industry: Sistem Sakit Menjual Obat | TAM'
+seoMetaDescription: >-
+  Industri mental health digital tidak menjual kesembuhan, tapi rasa sedang
+  disembuhkan. User yang sembuh = churn. User yang tetap tidak sembuh =
+  subscribe.
 seoKeywords:
-  - "mental health app industry"
-  - "mental health profit incentive"
-  - "betterhelp subscription model"
-  - "industri kesehatan mental digital"
+  - mental health app industry
+  - mental health profit incentive
+  - betterhelp subscription model
+  - industri kesehatan mental digital
 sourceReferences:
-  - {"type":"link","url":"https://drscottwallace.substack.com/p/when-getting-better-is-bad-for-business","label":"Dr Scott Wallace - Mental health app business model"}
-  - {"type":"link","url":"https://drscottwallace.substack.com/p/the-engagement-trap","label":"Dr Scott Wallace - Engagement trap mental health"}
-  - {"type":"link","url":"https://beyondbillions.substack.com/p/lets-buy-betterhelp","label":"Beyond Billions - BetterHelp analysis"}
-  - {"type":"link","url":"https://revsoc21.uk/2025/04/08/commodifying-mental-health-apps-care-and-profitability/","label":"RS21 - Commodifying mental health apps"}
+  - type: link
+    url: >-
+      https://drscottwallace.substack.com/p/when-getting-better-is-bad-for-business
+    label: Dr Scott Wallace - Mental health app business model
+  - type: link
+    url: 'https://drscottwallace.substack.com/p/the-engagement-trap'
+    label: Dr Scott Wallace - Engagement trap mental health
+  - type: link
+    url: 'https://beyondbillions.substack.com/p/lets-buy-betterhelp'
+    label: Beyond Billions - BetterHelp analysis
+  - type: link
+    url: >-
+      https://revsoc21.uk/2025/04/08/commodifying-mental-health-apps-care-and-profitability/
+    label: RS21 - Commodifying mental health apps
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -36,6 +52,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** QLC bukan krisis individu, tapi krisis sistemik. Standar yang tidak mungkin dicapai. Bukan kamu yang gagal, standar itu yang tidak mungkin. Baca [Part 11](/artikel/kesehatan-mental-era-digital-part-11-quarter-life-crisis).

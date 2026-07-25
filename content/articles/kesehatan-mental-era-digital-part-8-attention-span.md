@@ -1,33 +1,47 @@
 ---
-title: "Attention Span: Otakmu Tidak Rusak, Tapi Beradaptasi ke Lingkungan yang Dirancang untuk Fragmentasi"
-slug: "kesehatan-mental-era-digital-part-8-attention-span"
-excerpt: "Otak Gen Z tidak rusak, tapi beradaptasi ke lingkungan yang dirancang untuk fragmentasi. Brain rot = Oxford Word of the Year 2024."
-publishedAt: "2026-07-25T12:50:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Attention Span: Otakmu Tidak Rusak, Tapi Beradaptasi ke Lingkungan yang
+  Dirancang untuk Fragmentasi
+slug: kesehatan-mental-era-digital-part-8-attention-span
+excerpt: >-
+  Otak Gen Z tidak rusak, tapi beradaptasi ke lingkungan yang dirancang untuk
+  fragmentasi. Brain rot = Oxford Word of the Year 2024.
+publishedAt: '2026-07-25T12:50:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 8
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Otakmu tidak rusak. Tapi lingkunganmu dirancang."
-seoMetaTitle: "Attention Span Gen Z: Otak Adaptasi, Bukan Rusak | TAM"
-seoMetaDescription: "Otak Gen Z tidak rusak, tapi beradaptasi ke lingkungan yang dirancang untuk fragmentasi. Brain rot = Oxford Word of the Year 2024."
+ogHeadline: Otakmu tidak rusak. Tapi lingkunganmu dirancang.
+seoMetaTitle: 'Attention Span Gen Z: Otak Adaptasi, Bukan Rusak | TAM'
+seoMetaDescription: >-
+  Otak Gen Z tidak rusak, tapi beradaptasi ke lingkungan yang dirancang untuk
+  fragmentasi. Brain rot = Oxford Word of the Year 2024.
 seoKeywords:
-  - "attention span gen z"
-  - "otak adaptasi digital"
-  - "brain rot doomscrolling"
-  - "neuroplasticity gen z"
+  - attention span gen z
+  - otak adaptasi digital
+  - brain rot doomscrolling
+  - neuroplasticity gen z
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.54082/jupin.1673","label":"JUPIN (2025) - Scroll culture attention span Gen Z"}
-  - {"type":"link","url":"https://doi.org/10.3390/brainsci15030283","label":"Brain Sci (2025) - Brain rot digital era"}
-  - {"type":"link","url":"https://giest.org/adaptive-neuroplasticity-gen-z/","label":"GIEST - Adaptive neuroplasticity Gen Z"}
-  - {"type":"link","url":"https://attentiondebt.org/the-attention-native","label":"Attention Debt - Attention native post-2007"}
+  - type: link
+    url: 'https://doi.org/10.54082/jupin.1673'
+    label: JUPIN (2025) - Scroll culture attention span Gen Z
+  - type: link
+    url: 'https://doi.org/10.3390/brainsci15030283'
+    label: Brain Sci (2025) - Brain rot digital era
+  - type: link
+    url: 'https://giest.org/adaptive-neuroplasticity-gen-z/'
+    label: GIEST - Adaptive neuroplasticity Gen Z
+  - type: link
+    url: 'https://attentiondebt.org/the-attention-native'
+    label: Attention Debt - Attention native post-2007
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -36,6 +50,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Trauma content = engagement tertinggi. Algoritma tidak peduli, penderitaan adalah mata uang sosial. Echo chamber penderitaan sebagai pengganti koneksi asli. Baca [Part 7](/artikel/kesehatan-mental-era-digital-part-7-trauma-content).

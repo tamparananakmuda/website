@@ -6,6 +6,7 @@ import { getPostsByCategorySlug } from '@/lib/db/queries/posts';
 import { ArticleCard } from '@/components/article-card';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { CollectionPageSchema } from '@/components/schema/collection-page-schema';
+import { ArrowLeft, FileText } from 'lucide-react';
 
 interface CategoryPageProps {
   params: { slug: string };
@@ -59,9 +60,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   );
 
   const posts = await getPostsByCategorySlug(category.slug, 12);
+  const catColor = category.color || '#D13A3A';
 
   return (
-    <main className="container mx-auto px-4 py-20 md:py-32">
+    <main>
       <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Kategori', href: '/kategori' }, { name: category.title, href: `/kategori/${category.slug}` }]} />
       <CollectionPageSchema
         name={category.title}
@@ -69,44 +71,87 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         description={category.description || undefined}
         items={posts.map((p) => ({ title: p.title, slug: p.slug }))}
       />
-      <header className="mb-12 max-w-2xl">
-        <h1
-          className="mb-4 text-3xl font-bold md:text-4xl"
-          style={{ color: category.color }}
-        >
-          {category.title}
-        </h1>
-        {category.description && (
-          <p className="text-lg text-muted-foreground">{category.description}</p>
-        )}
-      </header>
 
-      {sortedSubs.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-2">
-          <span className="text-sm font-medium text-muted-foreground">Pillar:</span>
-          {sortedSubs.map((sub) => (
-            <Link
-              key={sub.id}
-              href={`/kategori/${category.slug}?pillar=${sub.slug}`}
-              className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+      {/* Hero */}
+      <section className="relative w-full overflow-hidden border-b border-border">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
+          <div
+            className="absolute inset-0 opacity-[0.12]"
+            style={{
+              backgroundImage: `radial-gradient(circle at 25% 15%, ${catColor} 0%, transparent 50%), radial-gradient(circle at 85% 85%, ${catColor}30 0%, transparent 40%)`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+          {/* Back link */}
+          <Link
+            href="/kategori"
+            className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+          >
+            <ArrowLeft size={15} />
+            Semua Kategori
+          </Link>
+
+          {/* Category badge */}
+          <div className="mb-6">
+            <span
+              className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white"
+              style={{ backgroundColor: catColor }}
             >
-              {sub.title}
-            </Link>
-          ))}
-        </div>
-      )}
+              {category.title}
+            </span>
+          </div>
 
-      {posts && posts.length > 0 ? (
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <ArticleCard key={post.id} post={post} />
-          ))}
+          {/* Title */}
+          <h1 className="mb-4 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+            {category.title}
+          </h1>
+
+          {/* Description */}
+          {category.description && (
+            <p className="max-w-xl text-base leading-relaxed text-white/60 md:text-lg">
+              {category.description}
+            </p>
+          )}
+
+          {/* Pillars */}
+          {sortedSubs.length > 0 && (
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium uppercase tracking-wider text-white/40">Pillar:</span>
+              {sortedSubs.map((sub) => (
+                <Link
+                  key={sub.id}
+                  href={`/kategori/${category.slug}?pillar=${sub.slug}`}
+                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/70 transition-colors hover:border-white/30 hover:text-white"
+                >
+                  {sub.title}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
-      ) : (
-        <p className="text-muted-foreground">
-          Belum ada artikel di kategori ini.
-        </p>
-      )}
+      </section>
+
+      {/* Articles */}
+      <section className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+        {posts && posts.length > 0 ? (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <ArticleCard key={post.id} post={post} />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-20 text-center">
+            <FileText size={40} className="mb-4 text-muted-foreground/40" />
+            <p className="text-muted-foreground">
+              Belum ada artikel di kategori ini.
+            </p>
+          </div>
+        )}
+      </section>
     </main>
   );
 }

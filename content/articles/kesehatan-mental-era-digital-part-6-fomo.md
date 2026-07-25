@@ -1,31 +1,39 @@
 ---
-title: "FOMO: Perasaan Tidak Cukup Bukan Bug, Tapi Core Business Model"
-slug: "kesehatan-mental-era-digital-part-6-fomo"
-excerpt: "FOMO dan perasaan tidak cukup BUKAN bug, tapi core business model. Algoritma sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app."
-publishedAt: "2026-07-25T12:48:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'FOMO: Perasaan Tidak Cukup Bukan Bug, Tapi Core Business Model'
+slug: kesehatan-mental-era-digital-part-6-fomo
+excerpt: >-
+  FOMO dan perasaan tidak cukup BUKAN bug, tapi core business model. Algoritma
+  sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app.
+publishedAt: '2026-07-25T12:48:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 6
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Perasaan tidak cukup itu fitur, bukan bug"
-seoMetaTitle: "FOMO: Perasaan Tidak Cukup = Core Business Model | TAM"
-seoMetaDescription: "FOMO dan perasaan tidak cukup BUKAN bug, tapi core business model. Algoritma sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app."
+ogHeadline: 'Perasaan tidak cukup itu fitur, bukan bug'
+seoMetaTitle: 'FOMO: Perasaan Tidak Cukup = Core Business Model | TAM'
+seoMetaDescription: >-
+  FOMO dan perasaan tidak cukup BUKAN bug, tapi core business model. Algoritma
+  sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app.
 seoKeywords:
-  - "FOMO gen z media sosial"
-  - "perasaan tidak cukup algoritma"
-  - "FOMO business model engagement"
-  - "fomo gen z indonesia"
+  - FOMO gen z media sosial
+  - perasaan tidak cukup algoritma
+  - FOMO business model engagement
+  - fomo gen z indonesia
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.61132/jupendir.v3i1.1011","label":"JUPENDIR - FOMO Gen Z influencer"}
-  - {"type":"link","url":"https://journaledutech.com/index.php/great/article/view/1186","label":"GREAT - Algoritma TikTok FOMO konsumen Gen Z"}
+  - type: link
+    url: 'https://doi.org/10.61132/jupendir.v3i1.1011'
+    label: JUPENDIR - FOMO Gen Z influencer
+  - type: link
+    url: 'https://journaledutech.com/index.php/great/article/view/1186'
+    label: GREAT - Algoritma TikTok FOMO konsumen Gen Z
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -34,6 +42,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Algoritma media sosial dirancang seperti mesin slot kasino, menggunakan variable reward schedule. Kamu tidak kecanduan karena lemah, tapi karena sistem dirancang. Baca [Part 5](/artikel/kesehatan-mental-era-digital-part-5-dopamin-loop).

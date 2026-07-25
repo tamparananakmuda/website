@@ -1,32 +1,46 @@
 ---
-title: "Toxic Productivity: Rasa Bersalah saat Istirahat Bukan Sifat Alami, Tapi Conditioning"
-slug: "kesehatan-mental-era-digital-part-3-toxic-productivity"
-excerpt: "Rasa bersalah saat istirahat bukan sifat alami. Itu conditioning sistematis dari sekolah, media, dan kerja. 77% orang mengalami burnout."
-publishedAt: "2026-07-25T12:45:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Toxic Productivity: Rasa Bersalah saat Istirahat Bukan Sifat Alami, Tapi
+  Conditioning
+slug: kesehatan-mental-era-digital-part-3-toxic-productivity
+excerpt: >-
+  Rasa bersalah saat istirahat bukan sifat alami. Itu conditioning sistematis
+  dari sekolah, media, dan kerja. 77% orang mengalami burnout.
+publishedAt: '2026-07-25T12:45:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 3
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Istirahat terasa kejahatan? Itu conditioning"
-seoMetaTitle: "Toxic Productivity: Istirahat Bukan Kejahatan | TAM"
-seoMetaDescription: "Rasa bersalah saat istirahat bukan sifat alami. Itu conditioning sistematis dari sekolah, media, dan kerja. 77% orang mengalami burnout."
+ogHeadline: Istirahat terasa kejahatan? Itu conditioning
+seoMetaTitle: 'Toxic Productivity: Istirahat Bukan Kejahatan | TAM'
+seoMetaDescription: >-
+  Rasa bersalah saat istirahat bukan sifat alami. Itu conditioning sistematis
+  dari sekolah, media, dan kerja. 77% orang mengalami burnout.
 seoKeywords:
-  - "toxic productivity gen z"
-  - "rasa bersalah saat istirahat"
-  - "hustle culture burnout"
-  - "burnout gen z indonesia"
+  - toxic productivity gen z
+  - rasa bersalah saat istirahat
+  - hustle culture burnout
+  - burnout gen z indonesia
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.55123/sosmaniora.v2i4.2774","label":"Tsabita et al. (2023) - Toxic productivity burnout Bandung"}
-  - {"type":"link","url":"https://www.depokpos.com/2026/06/gen-z-dan-toxic-productivity-ketika-istirahat-menjadi-rasa-bersalah/","label":"Depok Pos (2026) - Toxic productivity Gen Z"}
-  - {"type":"link","url":"https://mindset.viva.co.id/tren/9694-produktif-tapi-burnout-paradoks-gen-z-di-era-serba-cepat","label":"Viva Mindset - Produktif tapi burnout Gen Z"}
+  - type: link
+    url: 'https://doi.org/10.55123/sosmaniora.v2i4.2774'
+    label: Tsabita et al. (2023) - Toxic productivity burnout Bandung
+  - type: link
+    url: >-
+      https://www.depokpos.com/2026/06/gen-z-dan-toxic-productivity-ketika-istirahat-menjadi-rasa-bersalah/
+    label: Depok Pos (2026) - Toxic productivity Gen Z
+  - type: link
+    url: >-
+      https://mindset.viva.co.id/tren/9694-produktif-tapi-burnout-paradoks-gen-z-di-era-serba-cepat
+    label: Viva Mindset - Produktif tapi burnout Gen Z
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +49,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Healing industry menjual perasaan sedang menyembuhkan diri, bukan kesembuhan. Healing jadi konsumsi yang dikemas sebagai perawatan. Baca [Part 2](/artikel/kesehatan-mental-era-digital-part-2-healing-industri).

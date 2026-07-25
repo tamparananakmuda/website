@@ -1,32 +1,46 @@
 ---
-title: "Self-Improvement Industry: Mereka Tidak Ingin Kamu Improve, Mereka Butuh Kamu Inadequate"
-slug: "kesehatan-mental-era-digital-part-9-self-improvement"
-excerpt: "Industri self-improvement tidak ingin kamu improve. Mereka butuh kamu merasa inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting."
-publishedAt: "2026-07-25T12:51:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Self-Improvement Industry: Mereka Tidak Ingin Kamu Improve, Mereka Butuh Kamu
+  Inadequate
+slug: kesehatan-mental-era-digital-part-9-self-improvement
+excerpt: >-
+  Industri self-improvement tidak ingin kamu improve. Mereka butuh kamu merasa
+  inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting.
+publishedAt: '2026-07-25T12:51:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 9
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Industri self-help butuh kamu merasa gagal"
-seoMetaTitle: "Self-Improvement Industry: Gaslighting Sistematis | TAM"
-seoMetaDescription: "Industri self-improvement tidak ingin kamu improve. Mereka butuh kamu merasa inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting."
+ogHeadline: Industri self-help butuh kamu merasa gagal
+seoMetaTitle: 'Self-Improvement Industry: Gaslighting Sistematis | TAM'
+seoMetaDescription: >-
+  Industri self-improvement tidak ingin kamu improve. Mereka butuh kamu merasa
+  inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting.
 seoKeywords:
-  - "self improvement industry"
-  - "growth mindset dipelintir"
-  - "toxic self help"
-  - "industri self help indonesia"
+  - self improvement industry
+  - growth mindset dipelintir
+  - toxic self help
+  - industri self help indonesia
 sourceReferences:
-  - {"type":"link","url":"https://createhighervibrations.com/the-toxic-world-of-self-help/","label":"Create Higher Vibrations - Toxic self-help industry"}
-  - {"type":"link","url":"https://houseofculturalinfluence.substack.com/p/how-self-help-became-a-demobilization","label":"House of Cultural Influence - Self-help demobilization"}
-  - {"type":"link","url":"https://blog.penelopetrunk.com/2025/08/26/growth-mindset-is-a-corporate-cult/","label":"Penelope Trunk - Growth mindset corporate cult"}
+  - type: link
+    url: 'https://createhighervibrations.com/the-toxic-world-of-self-help/'
+    label: Create Higher Vibrations - Toxic self-help industry
+  - type: link
+    url: >-
+      https://houseofculturalinfluence.substack.com/p/how-self-help-became-a-demobilization
+    label: House of Cultural Influence - Self-help demobilization
+  - type: link
+    url: >-
+      https://blog.penelopetrunk.com/2025/08/26/growth-mindset-is-a-corporate-cult/
+    label: Penelope Trunk - Growth mindset corporate cult
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +49,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Otak Gen Z tidak rusak, tapi beradaptasi ke lingkungan yang dirancang untuk fragmentasi. Sistem yang merancang lingkungan ini butuh fragmentasi perhatian untuk profit. Baca [Part 8](/artikel/kesehatan-mental-era-digital-part-8-attention-span).

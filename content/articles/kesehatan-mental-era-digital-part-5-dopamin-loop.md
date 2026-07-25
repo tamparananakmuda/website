@@ -1,32 +1,42 @@
 ---
-title: "Dopamin Loop: Media Sosial Dirancang seperti Mesin Slot Kasino"
-slug: "kesehatan-mental-era-digital-part-5-dopamin-loop"
-excerpt: "Algoritma media sosial dirancang dengan prinsip yang sama dengan mesin slot kasino. Variable reward schedule. Psikolog kasino direkrut tech companies."
-publishedAt: "2026-07-25T12:47:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'Dopamin Loop: Media Sosial Dirancang seperti Mesin Slot Kasino'
+slug: kesehatan-mental-era-digital-part-5-dopamin-loop
+excerpt: >-
+  Algoritma media sosial dirancang dengan prinsip yang sama dengan mesin slot
+  kasino. Variable reward schedule. Psikolog kasino direkrut tech companies.
+publishedAt: '2026-07-25T12:47:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 5
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "HP-mu dirancang seperti mesin slot kasino"
-seoMetaTitle: "Dopamin Loop: Media Sosial = Mesin Slot Kasino | TAM"
-seoMetaDescription: "Algoritma media sosial dirancang dengan prinsip yang sama dengan mesin slot kasino. Variable reward schedule. Psikolog kasino direkrut tech companies."
+ogHeadline: HP-mu dirancang seperti mesin slot kasino
+seoMetaTitle: 'Dopamin Loop: Media Sosial = Mesin Slot Kasino | TAM'
+seoMetaDescription: >-
+  Algoritma media sosial dirancang dengan prinsip yang sama dengan mesin slot
+  kasino. Variable reward schedule. Psikolog kasino direkrut tech companies.
 seoKeywords:
-  - "dopamin loop media sosial"
-  - "variable reward algoritma"
-  - "media sosial mesin slot kasino"
-  - "kecanduan media sosial"
+  - dopamin loop media sosial
+  - variable reward algoritma
+  - media sosial mesin slot kasino
+  - kecanduan media sosial
 sourceReferences:
-  - {"type":"link","url":"https://link.springer.com/article/10.1007/s11245-024-10031-0","label":"Springer (2024) - Digital slot machines social media"}
-  - {"type":"link","url":"https://datafield.dev/algorithmic-addiction/part-02/chapter-07/","label":"Datafield - Dopamine loops variable ratio"}
-  - {"type":"link","url":"https://saintif.com/kecanduan-video-pendek/","label":"Saintif - Sains candu video pendek"}
+  - type: link
+    url: 'https://link.springer.com/article/10.1007/s11245-024-10031-0'
+    label: Springer (2024) - Digital slot machines social media
+  - type: link
+    url: 'https://datafield.dev/algorithmic-addiction/part-02/chapter-07/'
+    label: Datafield - Dopamine loops variable ratio
+  - type: link
+    url: 'https://saintif.com/kecanduan-video-pendek/'
+    label: Saintif - Sains candu video pendek
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +45,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Emotional exhaustion bukan capek, tapi kosong. Sistem tidak menawarkan cara mengisi ulang, hanya cara menguras lebih efisien. Baca [Part 4](/artikel/kesehatan-mental-era-digital-part-4-emotional-exhaustion).

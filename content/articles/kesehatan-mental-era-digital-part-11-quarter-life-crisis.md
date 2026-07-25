@@ -1,32 +1,45 @@
 ---
-title: "Quarter-Life Crisis: Bukan Masalah Pribadi, Tapi Krisis Sistemik yang Dikaburkan"
-slug: "kesehatan-mental-era-digital-part-11-quarter-life-crisis"
-excerpt: "QLC bukan krisis individu, tapi krisis sistemik yang dikaburkan sebagai masalah pribadi. 98% partisipan Indonesia mengalami QLC."
-publishedAt: "2026-07-25T12:53:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Quarter-Life Crisis: Bukan Masalah Pribadi, Tapi Krisis Sistemik yang
+  Dikaburkan
+slug: kesehatan-mental-era-digital-part-11-quarter-life-crisis
+excerpt: >-
+  QLC bukan krisis individu, tapi krisis sistemik yang dikaburkan sebagai
+  masalah pribadi. 98% partisipan Indonesia mengalami QLC.
+publishedAt: '2026-07-25T12:53:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 11
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Krisis usia 20-an: sistemnya rusak, bukan kamu"
-seoMetaTitle: "Quarter-Life Crisis: Krisis Sistemik, Bukan Pribadi | TAM"
-seoMetaDescription: "QLC bukan krisis individu, tapi krisis sistemik yang dikaburkan sebagai masalah pribadi. 98% partisipan Indonesia mengalami QLC."
+ogHeadline: 'Krisis usia 20-an: sistemnya rusak, bukan kamu'
+seoMetaTitle: 'Quarter-Life Crisis: Krisis Sistemik, Bukan Pribadi | TAM'
+seoMetaDescription: >-
+  QLC bukan krisis individu, tapi krisis sistemik yang dikaburkan sebagai
+  masalah pribadi. 98% partisipan Indonesia mengalami QLC.
 seoKeywords:
-  - "quarter life crisis gen z"
-  - "QLC krisis sistemik"
-  - "mismatch pendidikan kerja"
-  - "krisis usia 20-an indonesia"
+  - quarter life crisis gen z
+  - QLC krisis sistemik
+  - mismatch pendidikan kerja
+  - krisis usia 20-an indonesia
 sourceReferences:
-  - {"type":"link","url":"https://yoursay.suara.com/kolom/2026/01/28/183500/quarter-life-crisis-di-kota-besar-masalah-personal-atau-sistemik","label":"Suara (2026) - QLC masalah personal atau sistemik"}
-  - {"type":"link","url":"https://kaltimpedia.com/quarter-life-crisis-dan-mismatch-kebijakan-publik/","label":"Kaltimpedia - QLC mismatch kebijakan publik"}
-  - {"type":"link","url":"https://doi.org/10.33369/consilia.8.2.9-16","label":"Consilia - Faktor QLC Gen Z Indonesia"}
+  - type: link
+    url: >-
+      https://yoursay.suara.com/kolom/2026/01/28/183500/quarter-life-crisis-di-kota-besar-masalah-personal-atau-sistemik
+    label: Suara (2026) - QLC masalah personal atau sistemik
+  - type: link
+    url: 'https://kaltimpedia.com/quarter-life-crisis-dan-mismatch-kebijakan-publik/'
+    label: Kaltimpedia - QLC mismatch kebijakan publik
+  - type: link
+    url: 'https://doi.org/10.33369/consilia.8.2.9-16'
+    label: Consilia - Faktor QLC Gen Z Indonesia
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +48,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Label "Generasi Stroberi" adalah deflection mechanism untuk menyalahkan korban. Generasi yang menamamu lemah tumbuh di kondisi ekonomi berbeda. Baca [Part 10](/artikel/kesehatan-mental-era-digital-part-10-generasi-stroberi).

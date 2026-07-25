@@ -1,32 +1,45 @@
 ---
-title: "Trauma Content: Algoritma Tidak Peduli, Penderitaan adalah Engagement Tertinggi"
-slug: "kesehatan-mental-era-digital-part-7-trauma-content"
-excerpt: "Algoritma tidak menampilkan konten trauma karena peduli. Trauma content = engagement tertinggi. Echo chamber penderitaan sebagai pengganti koneksi asli."
-publishedAt: "2026-07-25T12:49:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Trauma Content: Algoritma Tidak Peduli, Penderitaan adalah Engagement
+  Tertinggi
+slug: kesehatan-mental-era-digital-part-7-trauma-content
+excerpt: >-
+  Algoritma tidak menampilkan konten trauma karena peduli. Trauma content =
+  engagement tertinggi. Echo chamber penderitaan sebagai pengganti koneksi asli.
+publishedAt: '2026-07-25T12:49:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 7
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Penderitaanmu adalah mata uang sosial di TikTok"
-seoMetaTitle: "Trauma Content TikTok: Penderitaan = Engagement | TAM"
-seoMetaDescription: "Algoritma tidak menampilkan konten trauma karena peduli. Trauma content = engagement tertinggi. Echo chamber penderitaan sebagai pengganti koneksi asli."
+ogHeadline: Penderitaanmu adalah mata uang sosial di TikTok
+seoMetaTitle: 'Trauma Content TikTok: Penderitaan = Engagement | TAM'
+seoMetaDescription: >-
+  Algoritma tidak menampilkan konten trauma karena peduli. Trauma content =
+  engagement tertinggi. Echo chamber penderitaan sebagai pengganti koneksi asli.
 seoKeywords:
-  - "trauma content tiktok"
-  - "echo chamber penderitaan"
-  - "komodifikasi emosi media sosial"
-  - "performative grief tiktok"
+  - trauma content tiktok
+  - echo chamber penderitaan
+  - komodifikasi emosi media sosial
+  - performative grief tiktok
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.18326/inject.v10i2.5190","label":"INJECT (2025) - Performing suffering TikTok Indonesia"}
-  - {"type":"link","url":"https://jurnal.bsi.ac.id/index.php/jkom/article/view/12501","label":"Jurnal Komunikasi BSI - Performative grief TikTok"}
-  - {"type":"link","url":"https://www.kompasiana.com/kaylanahlahanina9006/685fb424c925c430655682a2/viral-demi-validasi-budaya-curhat-trauma-di-media-sosial","label":"Kompasiana - Budaya curhat trauma"}
+  - type: link
+    url: 'https://doi.org/10.18326/inject.v10i2.5190'
+    label: INJECT (2025) - Performing suffering TikTok Indonesia
+  - type: link
+    url: 'https://jurnal.bsi.ac.id/index.php/jkom/article/view/12501'
+    label: Jurnal Komunikasi BSI - Performative grief TikTok
+  - type: link
+    url: >-
+      https://www.kompasiana.com/kaylanahlahanina9006/685fb424c925c430655682a2/viral-demi-validasi-budaya-curhat-trauma-di-media-sosial
+    label: Kompasiana - Budaya curhat trauma
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +48,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** FOMO dan perasaan tidak cukup bukan bug, tapi core business model. Pertanyaan seri berubah: siapa yang untung dari penderitaanmu? Baca [Part 6](/artikel/kesehatan-mental-era-digital-part-6-fomo).

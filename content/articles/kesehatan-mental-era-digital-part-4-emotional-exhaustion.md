@@ -1,31 +1,42 @@
 ---
-title: "Emotional Exhaustion: Bukan Capek, Tapi Kosong. Sistem Tidak Punya Cara Mengisi Ulang"
-slug: "kesehatan-mental-era-digital-part-4-emotional-exhaustion"
-excerpt: "Emotional exhaustion bukan ekstrem dari capek. Capek = kehilangan energi. Kosong = kehilangan kapasitas untuk merasa. 54% Gen Z mengalami burnout."
-publishedAt: "2026-07-25T12:46:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: >-
+  Emotional Exhaustion: Bukan Capek, Tapi Kosong. Sistem Tidak Punya Cara
+  Mengisi Ulang
+slug: kesehatan-mental-era-digital-part-4-emotional-exhaustion
+excerpt: >-
+  Emotional exhaustion bukan ekstrem dari capek. Capek = kehilangan energi.
+  Kosong = kehilangan kapasitas untuk merasa. 54% Gen Z mengalami burnout.
+publishedAt: '2026-07-25T12:46:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 4
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Capek bisa diistirahatkan. Kosong tidak bisa."
-seoMetaTitle: "Emotional Exhaustion: Bukan Capek, Tapi Kosong | TAM"
-seoMetaDescription: "Emotional exhaustion bukan ekstrem dari capek. Capek = kehilangan energi. Kosong = kehilangan kapasitas untuk merasa. 54% Gen Z mengalami burnout."
+ogHeadline: Capek bisa diistirahatkan. Kosong tidak bisa.
+seoMetaTitle: 'Emotional Exhaustion: Bukan Capek, Tapi Kosong | TAM'
+seoMetaDescription: >-
+  Emotional exhaustion bukan ekstrem dari capek. Capek = kehilangan energi.
+  Kosong = kehilangan kapasitas untuk merasa. 54% Gen Z mengalami burnout.
 seoKeywords:
-  - "emotional exhaustion"
-  - "burnout vs emotional exhaustion"
-  - "kosong vs capek mental"
-  - "burnout gen z indonesia"
+  - emotional exhaustion
+  - burnout vs emotional exhaustion
+  - kosong vs capek mental
+  - burnout gen z indonesia
 sourceReferences:
-  - {"type":"link","url":"https://www.detik.com/edu/detikpedia/d-8282002/benarkah-milenial-dan-gen-z-lebih-rentan-burnout-ini-jawaban-psikolog","label":"Detik (2025) - Burnout Gen Z psikolog UGM"}
-  - {"type":"link","url":"https://doi.org/10.46806/jm.v15i1.1927","label":"Jurnal Manajemen (2025) - Technostress burnout Gen Z"}
+  - type: link
+    url: >-
+      https://www.detik.com/edu/detikpedia/d-8282002/benarkah-milenial-dan-gen-z-lebih-rentan-burnout-ini-jawaban-psikolog
+    label: Detik (2025) - Burnout Gen Z psikolog UGM
+  - type: link
+    url: 'https://doi.org/10.46806/jm.v15i1.1927'
+    label: Jurnal Manajemen (2025) - Technostress burnout Gen Z
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -34,6 +45,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Rasa bersalah saat istirahat bukan sifat alami, tapi conditioning sistematis. Toxic productivity membuat kamu terus dorong sampai habis. Baca [Part 3](/artikel/kesehatan-mental-era-digital-part-3-toxic-productivity).

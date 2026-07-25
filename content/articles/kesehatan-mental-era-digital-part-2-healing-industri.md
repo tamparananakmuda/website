@@ -1,32 +1,45 @@
 ---
-title: "Healing Industry: Self-Care yang Dijual Bukan Penyembuhan, Tapi Konsumsi"
-slug: "kesehatan-mental-era-digital-part-2-healing-industri"
-excerpt: "Healing bergeser dari pemulihan psikologis menjadi praktik konsumsi simbolik. Gen Z memaknai healing sebagai kewajiban, beban, dan unjuk diri di media sosial."
-publishedAt: "2026-07-25T12:44:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'Healing Industry: Self-Care yang Dijual Bukan Penyembuhan, Tapi Konsumsi'
+slug: kesehatan-mental-era-digital-part-2-healing-industri
+excerpt: >-
+  Healing bergeser dari pemulihan psikologis menjadi praktik konsumsi simbolik.
+  Gen Z memaknai healing sebagai kewajiban, beban, dan unjuk diri di media
+  sosial.
+publishedAt: '2026-07-25T12:44:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 2
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Healing kamu butuh kamera? Itu bukan healing"
-seoMetaTitle: "Healing Industry: Self-Care atau Konsumsi yang Dikemas? | TAM"
-seoMetaDescription: "Healing bergeser dari pemulihan psikologis menjadi praktik konsumsi simbolik. Gen Z memaknai healing sebagai kewajiban, beban, dan unjuk diri di media sosial."
+ogHeadline: Healing kamu butuh kamera? Itu bukan healing
+seoMetaTitle: 'Healing Industry: Self-Care atau Konsumsi yang Dikemas? | TAM'
+seoMetaDescription: >-
+  Healing bergeser dari pemulihan psikologis menjadi praktik konsumsi simbolik.
+  Gen Z memaknai healing sebagai kewajiban, beban, dan unjuk diri di media
+  sosial.
 seoKeywords:
-  - "healing industry gen z"
-  - "self care konsumtif"
-  - "komodifikasi healing"
-  - "budaya healing indonesia"
+  - healing industry gen z
+  - self care konsumtif
+  - komodifikasi healing
+  - budaya healing indonesia
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.20527/h-js.v3i3.230","label":"Putri & Hidayah (2024) - Self healing konsumtif ULM"}
-  - {"type":"link","url":"https://ejournal.tebarscience.com/index.php/JKSB/article/view/267","label":"Assa (2026) - Budaya healing konsumsi simbolik"}
-  - {"type":"link","url":"https://money.kompas.com/read/2025/07/24/201307626/healing-jadi-prioritas-konsumsi-bisa-dongkrak-ekonomi-domestik","label":"Kompas (2025) - Healing prioritas konsumsi"}
+  - type: link
+    url: 'https://doi.org/10.20527/h-js.v3i3.230'
+    label: Putri & Hidayah (2024) - Self healing konsumtif ULM
+  - type: link
+    url: 'https://ejournal.tebarscience.com/index.php/JKSB/article/view/267'
+    label: Assa (2026) - Budaya healing konsumsi simbolik
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2025/07/24/201307626/healing-jadi-prioritas-konsumsi-bisa-dongkrak-ekonomi-domestik
+    label: Kompas (2025) - Healing prioritas konsumsi
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +48,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Algoritma TikTok tidak mengidentifikasi penyakit, tapi menciptakan gejala melalui self-fulfilling prophecy. Baca [Part 1](/artikel/kesehatan-mental-era-digital-part-1-tiktok-diagnosis).

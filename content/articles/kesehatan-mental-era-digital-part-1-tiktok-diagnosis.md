@@ -1,32 +1,44 @@
 ---
-title: "TikTok Bukan Terapis: Algoritma Menciptakan Gejala, Bukan Mengidentifikasi"
-slug: "kesehatan-mental-era-digital-part-1-tiktok-diagnosis"
-excerpt: "76% pengguna TikTok adalah Gen Z. Algoritma tidak mengidentifikasi penyakit, algoritma menciptakan gejala melalui self-fulfilling prophecy kesehatan mental."
-publishedAt: "2026-07-25T12:43:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'TikTok Bukan Terapis: Algoritma Menciptakan Gejala, Bukan Mengidentifikasi'
+slug: kesehatan-mental-era-digital-part-1-tiktok-diagnosis
+excerpt: >-
+  76% pengguna TikTok adalah Gen Z. Algoritma tidak mengidentifikasi penyakit,
+  algoritma menciptakan gejala melalui self-fulfilling prophecy kesehatan
+  mental.
+publishedAt: '2026-07-25T12:43:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 1
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Algoritma TikTok bikin kamu sakit, bukan sadar"
-seoMetaTitle: "Self-Diagnosis TikTok: Algoritma Menciptakan Gejala | TAM"
-seoMetaDescription: "76% pengguna TikTok adalah Gen Z. Algoritma tidak mengidentifikasi penyakit, algoritma menciptakan gejala. Self-fulfilling prophecy kesehatan mental."
+ogHeadline: 'Algoritma TikTok bikin kamu sakit, bukan sadar'
+seoMetaTitle: 'Self-Diagnosis TikTok: Algoritma Menciptakan Gejala | TAM'
+seoMetaDescription: >-
+  76% pengguna TikTok adalah Gen Z. Algoritma tidak mengidentifikasi penyakit,
+  algoritma menciptakan gejala. Self-fulfilling prophecy kesehatan mental.
 seoKeywords:
-  - "self diagnosis gen z tiktok"
-  - "algoritma tiktok kesehatan mental"
-  - "fenomena self diagnosis"
-  - "kesehatan mental gen z"
+  - self diagnosis gen z tiktok
+  - algoritma tiktok kesehatan mental
+  - fenomena self diagnosis
+  - kesehatan mental gen z
 sourceReferences:
-  - {"type":"link","url":"https://ejurnal.politeknikpratama.ac.id/index.php/Lencana/article/view/4063","label":"Febriana & Amalia (2024) - TikTok self-diagnosis Gen Z"}
-  - {"type":"link","url":"https://repository.mercubuana.ac.id/94534/","label":"Ocktaviani (2025) - Literasi kesehatan mental self-diagnosis"}
-  - {"type":"link","url":"http://www.buletin.k-pin.org/index.php/arsip-artikel/1885","label":"K-PIN Bulletin (2025) - Self-diagnosis era algoritma"}
+  - type: link
+    url: >-
+      https://ejurnal.politeknikpratama.ac.id/index.php/Lencana/article/view/4063
+    label: Febriana & Amalia (2024) - TikTok self-diagnosis Gen Z
+  - type: link
+    url: 'https://repository.mercubuana.ac.id/94534/'
+    label: Ocktaviani (2025) - Literasi kesehatan mental self-diagnosis
+  - type: link
+    url: 'http://www.buletin.k-pin.org/index.php/arsip-artikel/1885'
+    label: K-PIN Bulletin (2025) - Self-diagnosis era algoritma
 featured: true
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +47,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Ini adalah Part 1 dari 12 part investigasi tentang sistem kesehatan mental di era digital.

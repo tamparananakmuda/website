@@ -1,32 +1,42 @@
 ---
-title: "Generasi Stroberi: Label untuk Sistem yang Gagal, Bukan Generasi yang Lemah"
-slug: "kesehatan-mental-era-digital-part-10-generasi-stroberi"
-excerpt: "Label 'Generasi Stroberi' bukan deskripsi, tapi deflection mechanism. Generasi yang menamamu lemah tumbuh di kondisi ekonomi berbeda, lalu menyalahkanmu."
-publishedAt: "2026-07-25T12:52:13.692Z"
-status: "published"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-series: "kesehatan-mental-era-digital"
+title: 'Generasi Stroberi: Label untuk Sistem yang Gagal, Bukan Generasi yang Lemah'
+slug: kesehatan-mental-era-digital-part-10-generasi-stroberi
+excerpt: >-
+  Label 'Generasi Stroberi' bukan deskripsi, tapi deflection mechanism. Generasi
+  yang menamamu lemah tumbuh di kondisi ekonomi berbeda, lalu menyalahkanmu.
+publishedAt: '2026-07-25T12:52:13.692Z'
+status: published
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+series: kesehatan-mental-era-digital
 seriesOrder: 10
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "'Generasi stroberi' adalah pelarian sistem gagal"
-seoMetaTitle: "Generasi Stroberi: Label untuk Sistem yang Gagal | TAM"
-seoMetaDescription: "Label 'Generasi Stroberi' bukan deskripsi, tapi deflection mechanism. Generasi yang menamamu lemah tumbuh di kondisi ekonomi berbeda, lalu menyalahkanmu."
+ogHeadline: '''Generasi stroberi'' adalah pelarian sistem gagal'
+seoMetaTitle: 'Generasi Stroberi: Label untuk Sistem yang Gagal | TAM'
+seoMetaDescription: >-
+  Label 'Generasi Stroberi' bukan deskripsi, tapi deflection mechanism. Generasi
+  yang menamamu lemah tumbuh di kondisi ekonomi berbeda, lalu menyalahkanmu.
 seoKeywords:
-  - "generasi stroberi"
-  - "label menyalahkan korban"
-  - "victim blaming gen z"
-  - "gen z indonesia lemah"
+  - generasi stroberi
+  - label menyalahkan korban
+  - victim blaming gen z
+  - gen z indonesia lemah
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.64924/kns3ye07","label":"KNS3YE07 - Dekonstruksi generasi stroberi"}
-  - {"type":"link","url":"https://semutapi.id/kebusukan-moral-victim-blaming-di-indonesia/","label":"Semut Api - Victim blaming Indonesia"}
-  - {"type":"link","url":"https://www.kompas.id/artikel/kemarahan-gen-z-generasi-yang-dikhianati","label":"Kompas (2025) - Kemarahan Gen Z dikhianati"}
+  - type: link
+    url: 'https://doi.org/10.64924/kns3ye07'
+    label: KNS3YE07 - Dekonstruksi generasi stroberi
+  - type: link
+    url: 'https://semutapi.id/kebusukan-moral-victim-blaming-di-indonesia/'
+    label: Semut Api - Victim blaming Indonesia
+  - type: link
+    url: 'https://www.kompas.id/artikel/kemarahan-gen-z-generasi-yang-dikhianati'
+    label: Kompas (2025) - Kemarahan Gen Z dikhianati
 featured: false
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -35,6 +45,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+readingTime: 6
 ---
 
 > **Sebelumnya di Mental Health di Era Digital:** Industri self-improvement butuh kamu merasa inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting. Baca [Part 9](/artikel/kesehatan-mental-era-digital-part-9-self-improvement).
