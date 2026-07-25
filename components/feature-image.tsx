@@ -15,7 +15,12 @@ export function FeatureImage({ src, alt }: FeatureImageProps) {
     <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
       <div className="relative aspect-[16/9] w-full bg-muted/20">
         {!loaded && (
-          <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 via-muted/20 to-muted/40" />
+          <div className="absolute inset-0 flex items-center justify-center bg-muted/20">
+            <div className="flex gap-1.5 animate-pulse">
+              <div className="h-10 w-1.5 rounded-full bg-primary" />
+              <div className="h-10 w-1.5 rounded-full bg-primary" />
+            </div>
+          </div>
         )}
         <Image
           src={src}
