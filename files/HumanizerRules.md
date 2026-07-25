@@ -152,7 +152,7 @@ if '—' in full or '–' in full:
     issues.append('Em/en dash found')
 
 # 2. AI vocab EN
-ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','beacon','bastion','quintessential','epitome','harbinger','catalyst','conduit','formidable','profound','resolute','steadfast','unwavering','seamless','empower','transform','unlock','unleash']
+ai_en = ['actually','additionally','align with','crucial','delve','emphasizing','enduring','enhance','fostering','garner','highlight','interplay','intricate','intricacies','key','landscape','pivotal','showcase','tapestry','testament','underscore','valuable','vibrant','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','beacon','bastion','quintessential','epitome','harbinger','catalyst','conduit','formidable','profound','resolute','steadfast','unwavering','seamless','empower','transform','unlock','unleash']
 found_en = [w for w in ai_en if w in body.lower()]
 if found_en: issues.append('AI vocab EN: ' + ', '.join(found_en))
 
@@ -186,12 +186,12 @@ ing = re.findall(r'(\w+ing (?:the|its|a|this|that))', body)
 if len(ing) > 2: issues.append('-ing superficial: %d' % len(ing))
 
 # 9. Promotional
-promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket']
+promo = ['game-changing','game-changer','revolutionary','boasts','stunning','breathtaking','nestled','renowned','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket','rich','exemplifies','commitment to','natural beauty','in the heart of','must-visit']
 found_promo = [w for w in promo if w in body.lower()]
 if found_promo: issues.append('Promotional: ' + ', '.join(found_promo))
 
 # 10. Signposting
-signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar']
+signs = ['let.s dive','let.s explore','let.s break this down','here.s what you need','now let.s look at','without further ado','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar']
 found_signs = [w for w in signs if re.search(w, body, re.I)]
 if found_signs: issues.append('Signposting')
 
@@ -213,7 +213,7 @@ personal = len(re.findall(r'\bkita\b|\bkamu\b|\bsaya\b', body, re.I))
 if personal < 3: issues.append('Human signature weak (kita/kamu/saya: %d)' % personal)
 
 # 15. Copula avoidance
-copula = ['serves as','stands as','represents a','acts as','functions as']
+copula = ['serves as','stands as','represents a','acts as','functions as','boasts','features','offers','marks']
 found_copula = [w for w in copula if w in body.lower()]
 if found_copula: issues.append('Copula: ' + ', '.join(found_copula))
 
@@ -223,7 +223,7 @@ found_auth = [w for w in auth if w in body.lower()]
 if found_auth: issues.append('Authority tropes: ' + ', '.join(found_auth))
 
 # 17. Conversational rhetorical openers
-rhet = ['honestly?','look,','here.s the thing','jujur saja,','coba lihat,','begini']
+rhet = ['honestly?','look,','here.s the thing','the thing is','let.s be honest','real talk','jujur saja,','coba lihat,','begini']
 found_rhet = [w for w in rhet if re.search(w, body, re.I)]
 if found_rhet: issues.append('Rhetorical openers: ' + ', '.join(found_rhet))
 

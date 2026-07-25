@@ -12,7 +12,7 @@ Dari `/artikel-07-qc`
 
 ## Humanizer rules lengkap
 
-Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori).
+Lihat `files/HumanizerRules.md` (single source of truth, 29 kategori).
 
 ## Tabel Pengganti Kata AI
 
@@ -46,21 +46,27 @@ Ganti kata formal AI dengan kata natural:
 | Kata AI (EN) | Ganti dengan |
 |--------------|-------------|
 | crucial | key, important |
+| actually | nyatanya, memang |
+| additionally | juga, plus |
+| align with | sesuai, cocok |
 | pivotal | central, key |
 | vibrant | lively, active |
 | tapestry | mix, blend |
 | delve | dig, explore |
+| emphasizing | menekankan, sorot |
 | showcase | show, highlight |
 | underscore | show, prove |
 | testament | proof, sign |
 | foster | build, grow |
+| fostering | membangun, mengembangkan |
 | garner | get, earn |
 | intricate | complex, detailed |
 | landscape | scene, world |
-| additionally | also, plus |
 | enduring | lasting, long |
 | enhance | improve, boost |
 | highlight | show, point out |
+| key (adjective) | utama, kunci |
+| valuable | berguna, penting |
 | interplay | interaction, mix |
 | multifaceted | many-sided, complex |
 | nuanced | subtle, detailed |
@@ -86,6 +92,12 @@ Ganti kata formal AI dengan kata natural:
 | resolute | firm, determined |
 | steadfast | steady, loyal |
 | unwavering | steady, consistent |
+| rich (figurative) | kaya, penuh |
+| exemplifies | contoh, tunjukkan |
+| commitment to | komitmen pada |
+| natural beauty | keindahan alam |
+| in the heart of | di tengah |
+| must-visit | wajib kunjungi |
 
 ## Yang diperbaiki di step ini
 
@@ -154,12 +166,12 @@ const exclCount = (body.match(/!/g) || []).length;
 if (exclCount > 1) issues.push('Exclamation marks: ' + exclCount + ' (max 1)');
 
 // AI vocab EN
-const aiEn = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash'];
+const aiEn = ['actually','additionally','align with','crucial','delve','emphasizing','enduring','enhance','fostering','garner','highlight','interplay','intricate','intricacies','key','landscape','pivotal','showcase','tapestry','testament','underscore','valuable','vibrant','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','beacon','bastion','quintessential','epitome','harbinger','catalyst','conduit','formidable','profound','resolute','steadfast','unwavering','seamless','empower','transform','unlock','unleash'];
 const foundEn = aiEn.filter(w => body.toLowerCase().includes(w));
 if (foundEn.length) issues.push('AI vocab EN: ' + foundEn.join(', '));
 
 // AI vocab ID
-const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','yang menarik','hal yang menarik','perlu dicatat','perlu diingat','penting untuk','penting untuk dicatat','tidak dapat dipungkiri','tidak hanya.*tapi juga','bukan hanya.*melainkan'];
+const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','yang menarik','hal yang menarik','perlu dicatat','perlu diingat','penting untuk','penting untuk dicatat','tidak dapat dipungkiri','tidak diragukan lagi','sungguh-sungguh','sepenuhnya','tidak hanya.*tapi juga','bukan hanya.*melainkan'];
 const foundId = aiId.filter(w => body.toLowerCase().includes(w));
 if (foundId.length) issues.push('AI vocab ID: ' + foundId.join(', '));
 
@@ -178,12 +190,12 @@ const neg = body.match(/(tidak hanya.*tapi juga|bukan hanya.*melainkan|not only.
 if (neg.length) issues.push('Negative parallelisms: ' + neg.length);
 
 // Promotional
-const promo = ['game-changing','revolutionary','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket'];
+const promo = ['game-changing','game-changer','revolutionary','boasts','stunning','breathtaking','nestled','renowned','groundbreaking','cutting-edge','state-of-the-art','world-class','seamless','empower','transform','unlock','unleash','supercharge','skyrocket','rich','exemplifies','commitment to','natural beauty','in the heart of','must-visit'];
 const foundPromo = promo.filter(w => body.toLowerCase().includes(w));
 if (foundPromo.length) issues.push('Promotional: ' + foundPromo.join(', '));
 
 // Signposting
-const signs = ['let.s dive','here.s what you need','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar'];
+const signs = ['let.s dive','let.s explore','let.s break this down','here.s what you need','now let.s look at','without further ado','marilah kita','berikut adalah hal yang perlu','tanpa berpanjang lebar'];
 if (signs.some(w => new RegExp(w, 'i').test(body))) issues.push('Signposting detected');
 
 // Fillers
@@ -214,7 +226,7 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 // Copula avoidance
-const copula = ['serves as','stands as','represents a','acts as','functions as'];
+const copula = ['serves as','stands as','represents a','acts as','functions as','boasts','features','offers','marks'];
 const foundCopula = copula.filter(w => body.toLowerCase().includes(w));
 if (foundCopula.length) issues.push('Copula: ' + foundCopula.join(', '));
 
@@ -224,7 +236,7 @@ const foundAuth = auth.filter(w => body.toLowerCase().includes(w));
 if (foundAuth.length) issues.push('Authority tropes: ' + foundAuth.join(', '));
 
 // Conversational rhetorical openers
-const rhet = ['honestly?','look,','here.s the thing','jujur saja,','coba lihat,','begini'];
+const rhet = ['honestly?','look,','here.s the thing','the thing is','let.s be honest','real talk','jujur saja,','coba lihat,','begini'];
 const foundRhet = rhet.filter(w => new RegExp(w, 'i').test(body));
 if (foundRhet.length) issues.push('Rhetorical openers: ' + foundRhet.join(', '));
 
