@@ -10,12 +10,9 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Artikel', href: '/artikel' },
-  { name: 'Whitepaper', href: '/whitepaper' },
-  { name: 'Sosial', href: '/sosial' },
   { name: 'Kategori', href: '/kategori' },
-  { name: 'Seri', href: '/seri' },
+  { name: 'Whitepaper', href: '/whitepaper' },
   { name: 'Tentang', href: '/tentang' },
-  { name: 'Donasi', href: '/donasi' },
 ];
 
 export function SiteHeader() {
@@ -98,6 +95,15 @@ export function SiteHeader() {
               {loggedIn ? 'Akun' : 'Masuk'}
             </Link>
             <Link
+              href="/donasi"
+              className={cn(
+                'flex items-center justify-center rounded-full border border-border font-medium text-foreground transition-all duration-300 ease-in-out hover:bg-secondary active:scale-95',
+                isCompact ? 'px-4 py-2 text-sm' : 'px-5 py-2.5 text-sm'
+              )}
+            >
+              Donasi
+            </Link>
+            <Link
               href="/newsletter"
               className={cn(
                 'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all duration-300 ease-in-out hover:bg-primary/90 active:scale-95',
@@ -149,8 +155,15 @@ export function SiteHeader() {
                 {loggedIn ? 'Akun Saya' : 'Masuk'}
               </Link>
               <Link
+                href="/donasi"
+                className="mt-2 flex w-full items-center justify-center rounded-full border border-border py-3 font-medium text-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                Donasi
+              </Link>
+              <Link
                 href="/newsletter"
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3 font-bold text-primary-foreground"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3 font-bold text-primary-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 Newsletter
@@ -204,6 +217,12 @@ export function SiteHeader() {
               {loggedIn ? 'Akun' : 'Masuk'}
             </Link>
             <Link
+              href="/donasi"
+              className="rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              Donasi
+            </Link>
+            <Link
               href="/newsletter"
               className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
@@ -250,6 +269,13 @@ export function SiteHeader() {
             >
               <User className="w-4 h-4" />
               {loggedIn ? 'Akun Saya' : 'Masuk'}
+            </Link>
+            <Link
+              href="/donasi"
+              className="mt-2 flex items-center justify-center rounded-full border border-border px-5 py-3 text-base font-medium text-foreground"
+              onClick={() => setIsOpen(false)}
+            >
+              Donasi
             </Link>
             <Link
               href="/newsletter"
