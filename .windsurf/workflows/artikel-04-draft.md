@@ -6,6 +6,31 @@ description: Artikel step 04 - Menulis artikel lengkap mengikuti outline
 
 Menulis artikel lengkap mengikuti outline dari `/artikel-03-outline`.
 
+## Prev
+
+Dari `/artikel-03-outline`
+
+## Artikel Struktur Template
+
+```
+## Hook (1-2 paragraf)
+[Hook formula dari outline]
+
+## Konteks (2-3 paragraf)
+[Background masalah, kenapa relevan sekarang]
+
+## Data/Analysis (3-5 section, tiap section h2)
+### [Sub-topic 1]
+### [Sub-topic 2]
+### [Sub-topic 3]
+
+## Insight (1-2 paragraf)
+[Interpretasi data, TAM angle, human signature]
+
+## Conclusion (1-2 paragraf)
+[Conclusion formula dari outline, tidak generic]
+```
+
 ## Word Count (STANDAR TAM)
 
 - Target: 1.000-2.500 kata (5-12 menit baca)
@@ -31,6 +56,48 @@ Menulis artikel lengkap mengikuti outline dari `/artikel-03-outline`.
 - Jujur, rasional, berani, tidak menggurui
 - "Mengatakan hal yang perlu didengar, bukan yang ingin didengar"
 - Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
+
+## Subcategory Reference
+
+Subcategory optional (bisa null). Kalau dipakai, pilih dari `content/config.ts`. Contoh subcategory yang valid:
+- `mindset-realita`, `mindset-mental-health`
+- `karier-freelance`, `karier-korporat`, `karier-transisi`
+- `kehidupan-relasi`, `kehidupan-keluarga`
+- `uang-finansial`, `uang-investasi`
+- `bisnis-startup`, `bisnis-side-hustle`
+- `teknologi-ai`, `teknologi-produktivitas`
+
+Jika tidak yakin, set `subcategory: null`. Tidak wajib.
+
+## Tags Assignment
+
+- Jumlah: 3-7 tags per artikel
+- Format: kebab-case, Bahasa Indonesia
+- Sumber: dari `seo_keywords` + topic keywords
+- Contoh: `["gen-z", "phk", "karier", "kerja-keras", "ilusi"]`
+- Tidak pakai brand tag ("tamparan-anak-muda"), otomatis ditambahkan oleh sistem
+
+## Source Integration di Body Text
+
+Format kalimat saat kutip data dari source:
+
+| Pola | Contoh |
+|------|--------|
+| Data + sumber langsung | "Data BPS 2025 menunjukkan 74% lulusan menganggur." |
+| Atribusi di awal | "Menurut laporan We Are Social 2025, ..." |
+| Atribusi di akhir | "...demikian hasil survei Jakpat 2025." |
+| Kutipan langsung | "Kita tidak bisa terus menyalahkan generasi," kata Ketua OJK. |
+| Data dari sumber sekunder | "Dilansir dari Katadata, data BPS menunjukkan..." |
+
+Setiap angka di body HARUS punya sumber yang bisa ditrace ke `sourceReferences`.
+
+## Featured Criteria
+
+`featured: true` berarti artikel muncul di homepage hero. Kriteria:
+- Artikel dengan angle paling tajam / paling kontra-narasi
+- Max 3-6 artikel featured di homepage pada satu waktu
+- Artikel featured harus punya OG image yang menarik
+- Jika ragu, set `featured: false`. Bisa di-update nanti.
 
 ## Simpan draft ke `$ARTICLE_JSON`
 

@@ -6,17 +6,47 @@ description: Artikel step 02 - Keyword research, competitor analysis, data pendu
 
 Keyword research, competitor analysis, data pendukung, dan referensi.
 
+## Prev
+
+Dari `/artikel-01-idea`
+
 ## Keyword Research
 
 - Target: 3-8 keyword long-tail, Bahasa Indonesia
 - Prioritas: search volume medium + difficulty low
 - Cek 3 artikel pertama Google untuk keyword target
 
+### Cara keyword research tanpa paid tools
+
+1. **Google Suggest:** Ketik keyword utama di Google, catat auto-suggest
+2. **People Also Ask:** Scroll ke "People Also Ask" section, catat 3-5 pertanyaan
+3. **Related Searches:** Scroll ke bawah Google, catat related searches
+4. **Google Trends:** Cek tren keyword (tamparananakmuda.com tidak punya akses paid tools)
+
 ## Competitor Analysis
 
 - Baca 3 artikel pertama Google untuk keyword target
 - Identifikasi gap: apa yang mereka tidak bahas?
 - Minimal 1 insight unik yang tidak ada di 3 artikel tersebut
+
+### Framework competitor analysis
+
+| Aspek | Yang dicari |
+|-------|-------------|
+| Structure | Heading structure, panjang artikel, ada FAQ? |
+| Depth | Seberapa dalam datanya? Ada sumber primer? |
+| Data | Angka apa yang mereka pakai? Sumbernya kredibel? |
+| Angle | Angle mereka apa? Kontra-narasi? Edukasi? |
+| Tone | Formal/casual/akademis? |
+| Gap | Apa yang TIDAK mereka bahas? (ini peluang TAM) |
+
+## AI SEO / AEO Research
+
+TAM sudah punya `llms.txt` dan robots.txt yang allow AI bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended). Cek apakah topik ini bisa dicited oleh AI search engines:
+
+- Cek apakah artikel kompetitor sudah dicited di Perplexity/ChatGPT untuk query terkait
+- Identifikasi format yang mudah di-extract AI: definisi jelas, data self-contained, Q&A format
+- Target: artikel TAM harus lebih mudah di-cite dari kompetitor karena struktur heading jelas + data terverifikasi
 
 ## Data Pendukung
 
@@ -56,14 +86,44 @@ const refs = a.source_references || [];
 "
 ```
 
+## Template Output Research
+
+Dokumentasi research dalam format ini (dipakai di step berikutnya):
+
+```
+Keywords:
+- [keyword 1] (search intent: informational, volume: medium)
+- [keyword 2] (search intent: transactional, volume: low)
+- [keyword 3] (search intent: informational, volume: medium)
+...
+
+Competitor gaps:
+- Kompetitor 1: [judul] - tidak bahas [gap]
+- Kompetitor 2: [judul] - tidak punya data [gap]
+- Kompetitor 3: [judul] - angle terlalu generik
+
+Data sources:
+- [Sumber 1]: [URL], [data utama], [tier 1/2]
+- [Sumber 2]: [URL], [data utama], [tier 1/2]
+
+AI SEO check:
+- Kompetitor cited di AI search: ya/tidak
+- Format yang mudah di-extract: [definisi/data/Q&A]
+
+Insight unik TAM:
+- [1-2 kalimat insight yang tidak ada di kompetitor]
+```
+
 ## Checklist
 
-- [ ] Keyword research selesai (3-8 long-tail keyword)
-- [ ] Competitor analysis selesai (3 artikel Google diperiksa)
+- [ ] Keyword research selesai (3-8 long-tail keyword, via Google Suggest/PAA/Related)
+- [ ] Competitor analysis selesai (3 artikel Google diperiksa, framework di atas)
 - [ ] Minimal 1 insight unik teridentifikasi
-- [ ] Data pendukung terkumpul (min 2 sources)
+- [ ] Data pendukung terkumpul (min 2 sources, tier 1 atau 2)
 - [ ] Semua source URL aktif (HTTP 200-399)
 - [ ] Tidak ada dead link
+- [ ] AI SEO/AEO check: kompetitor cited di AI search?
+- [ ] Template output research diisi
 
 ## Next
 

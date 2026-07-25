@@ -6,6 +6,10 @@ description: Artikel step 09 - Publish artikel ke production
 
 Publish artikel ke production.
 
+## Prev
+
+Dari `/artikel-08-humanizer`
+
 ## Scheduling Verification (jika scheduled)
 
 ```bash
@@ -40,9 +44,53 @@ curl -s -o /dev/null -w "feature: %{http_code}\n" "https://cdn.tamparananakmuda.
 
 ## Deploy
 
+### Pre-deploy build check
+
+```bash
+# Pastikan build sukses sebelum push
+npm run build 2>&1 | tail -5
+```
+
+Jika build fail, fix error sebelum push. Jangan push kode yang gagal build.
+
+### Push to production
+
 ```bash
 git add -A && git commit -m "feat: add new article SLUG" && git push origin main
 ```
+
+### Error handling
+
+| Error | Solusi |
+|-------|--------|
+| Build fail | Fix error, re-run `npm run build` |
+| Git push reject | `git pull --rebase origin main && git push` |
+| Vercel deploy fail | Cek Vercel dashboard, lihat build log |
+| OG generation fail (401) | Admin session cookie expired, login ulang di `/masuk` |
+| OG generation fail (500) | Cek API logs di Vercel, pastikan R2 credentials valid |
+| HTTP 404 di production | Cek slug di file, pastikan tidak ada typo |
+| Schema MISSING | Cek `components/schema/article-schema.tsx`, pastikan import correct |
+
+### Cara dapat admin session cookie
+
+1. Login di `https://tamparananakmuda.com/masuk`
+2. Buka DevTools > Application > Cookies
+3. Copy value `sb-access-token` (atau cookie session Supabase)
+4. Pakai di command: `-H "Cookie: sb-access-token=VALUE"`
+
+## Scheduling: 3 Artikel Per Hari
+
+Target publishing: 3 artikel/hari di jam 08:00, 12:00, 17:00 WIB.
+
+| Slot | WIB | UTC | Status |
+|------|-----|-----|--------|
+| Pagi | 08:00 | 01:00 | `scheduled` + `publishedAt: 2026-01-01T01:00:00.000Z` |
+| Siang | 12:00 | 05:00 | `scheduled` + `publishedAt: 2026-01-01T05:00:00.000Z` |
+| Sore | 17:00 | 10:00 | `scheduled` + `publishedAt: 2026-01-01T10:00:00.000Z` |
+
+Cron job GitHub Actions berjalan every 5 minutes, auto-publish saat `publishedAt <= now()`. Cron juga auto-generate OG images. Tidak perlu manual deploy untuk scheduled articles.
+
+**Untuk scheduled articles:** OG images auto-generate oleh cron, skip manual OG generation step.
 
 ## Verifikasi production
 

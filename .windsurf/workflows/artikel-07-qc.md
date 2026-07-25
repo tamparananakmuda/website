@@ -6,6 +6,10 @@ description: Artikel step 07 - Grammar, SEO, broken link, formatting, dan readab
 
 Grammar, SEO, broken link, formatting, dan readability.
 
+## Prev
+
+Dari `/artikel-06-build`
+
 ```bash
 export ARTICLE_JSON="/tmp/tam-article.json"
 ```

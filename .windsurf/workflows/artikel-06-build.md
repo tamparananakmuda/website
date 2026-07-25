@@ -6,6 +6,10 @@ description: Artikel step 06 - Upload ke CMS (file Markdown), meta SEO, schema, 
 
 Upload ke CMS (file Markdown), meta SEO, schema, gambar, dan internal/external link.
 
+## Prev
+
+Dari `/artikel-05-review`
+
 ## Env Var Reference
 
 | Env Var | Fungsi | Scope |
