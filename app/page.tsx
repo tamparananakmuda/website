@@ -1,10 +1,11 @@
 import { getAllCategories } from '@/lib/db/queries/categories';
-import { getPublishedPostsWithRelations } from '@/lib/db/queries/posts';
+import { getNonSeriesPublishedPostsWithRelations, getLatestSeriesWithPosts } from '@/lib/db/queries/posts';
 import { Hero } from '@/components/sections/hero';
 import { FeaturedQuote } from '@/components/sections/featured-quote';
 import { Philosophy } from '@/components/sections/philosophy';
 import { Topics } from '@/components/sections/topics';
 import { LatestArticles } from '@/components/sections/latest-articles';
+import { LatestSeries } from '@/components/sections/latest-series';
 import { WhyTam } from '@/components/sections/why-tam';
 import { Faq, faqItems } from '@/components/sections/faq';
 import { NewsletterCta } from '@/components/sections/newsletter-cta';
@@ -15,9 +16,10 @@ import { FAQSchema } from '@/components/schema/faq-schema';
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const [categories, recentPosts] = await Promise.all([
+  const [categories, recentPosts, latestSeries] = await Promise.all([
     getAllCategories(),
-    getPublishedPostsWithRelations(3),
+    getNonSeriesPublishedPostsWithRelations(3),
+    getLatestSeriesWithPosts(1),
   ]);
 
   return (
@@ -31,6 +33,7 @@ export default async function HomePage() {
       <Philosophy />
       <Topics categories={categories || []} />
       <LatestArticles posts={recentPosts || []} />
+      <LatestSeries series={latestSeries || []} />
       <WhyTam />
       <Faq />
       <NewsletterCta />

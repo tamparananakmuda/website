@@ -21,6 +21,8 @@ import {
   getPublishedPostsForSitemap as fileGetPublishedPostsForSitemap,
   countPublishedPostsInSeries as fileCountPublishedPostsInSeries,
   getAnalyticsOverview as fileGetAnalyticsOverview,
+  getNonSeriesPublishedPostsWithRelations as fileGetNonSeriesPublishedPostsWithRelations,
+  getLatestSeriesWithPosts as fileGetLatestSeriesWithPosts,
 } from '@/lib/articles/loader';
 
 export async function getPublishedPosts(limit = 10): Promise<Post[]> {
@@ -142,4 +144,12 @@ export async function countPublishedPostsInSeries(seriesIdOrSlug: string): Promi
 
 export async function getAnalyticsOverview() {
   return fileGetAnalyticsOverview();
+}
+
+export async function getNonSeriesPublishedPostsWithRelations(limit = 10): Promise<PostWithRelations[]> {
+  return fileGetNonSeriesPublishedPostsWithRelations(limit);
+}
+
+export async function getLatestSeriesWithPosts(limit = 3) {
+  return fileGetLatestSeriesWithPosts(limit);
 }
