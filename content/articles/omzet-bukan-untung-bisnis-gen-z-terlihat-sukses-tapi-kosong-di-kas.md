@@ -30,6 +30,7 @@ sourceReferences:
   - "BPS: 45% kegagalan bisnis karena produk tidak sesuai pasar"
   - "Kemenkop UKM: 60% bisnis rintisan gagal di 3 tahun pertama"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

@@ -47,6 +47,7 @@ sourceReferences:
     url: "https://www.prnewswire.com/news-releases/global-employee-engagement-drops-for-only-the-second-time-in-12-years-costing-the-worlds-economy-us438-billion-302434901.html"
     label: "PRNewswire: Global Engagement Drop Costs $438B (2024)"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

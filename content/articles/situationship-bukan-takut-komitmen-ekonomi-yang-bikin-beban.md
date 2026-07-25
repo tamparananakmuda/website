@@ -41,6 +41,7 @@ sourceReferences:
     url: "https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah"
     label: "Kompas: Ekonom Bhima Yudhistira tentang Upah vs Biaya Hidup (Aug 2025)"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

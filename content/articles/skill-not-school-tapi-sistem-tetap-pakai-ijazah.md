@@ -30,6 +30,7 @@ sourceReferences:
   - "Kemenaker: Data 12 juta pencari kerja vs 9 juta lowongan 2026"
   - "Survei Katadata Insight Center: 73% HRD jadikan ijazah sebagai filter awal"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

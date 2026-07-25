@@ -31,6 +31,7 @@ sourceReferences:
   - "World Economic Forum: 66% Gen Z rutin pakai aplikasi wellness"
   - "Global Wellness Institute: Pergeseran ke pendekatan istirahat berkelanjutan"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"
