@@ -18,6 +18,21 @@ import { eq, inArray } from 'drizzle-orm';
 const ARTICLES_DIR = join(process.cwd(), 'content', 'articles');
 const SERIES_DIR = join(process.cwd(), 'content', 'seri');
 
+function readDirRecursive(dir: string): string[] {
+  const results: string[] = [];
+  if (!existsSync(dir)) return results;
+  const entries = readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...readDirRecursive(fullPath));
+    } else if (entry.name.endsWith('.md')) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
 interface RawArticle {
   slug: string;
   title: string;
@@ -58,13 +73,14 @@ interface RawArticle {
 function readAllFiles(): RawArticle[] {
   const articles: RawArticle[] = [];
 
-  const dirs = [ARTICLES_DIR, SERIES_DIR];
-  for (const dir of dirs) {
-    if (!existsSync(dir)) continue;
-    const files = readdirSync(dir).filter((f) => f.endsWith('.md'));
+  const articleFiles = existsSync(ARTICLES_DIR)
+    ? readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')).map((f) => join(ARTICLES_DIR, f))
+    : [];
+  const seriesFiles = readDirRecursive(SERIES_DIR);
+  const allFiles = [...articleFiles, ...seriesFiles];
 
-  for (const file of files) {
-    const filePath = join(dir, file);
+  for (const filePath of allFiles) {
+    const file = filePath.split('/').pop() || '';
     const content = readFileSync(filePath, 'utf8');
     const parsed = parseFrontmatter(content, file);
     if (!parsed) continue;
@@ -106,7 +122,6 @@ function readAllFiles(): RawArticle[] {
       updatedAt: fm.publishedAt,
       fileMtime: statSync(filePath).mtime.toISOString(),
     });
-  }
   }
 
   return articles;
@@ -496,8 +511,10 @@ export async function publishArticleFile(slug: string): Promise<boolean> {
   const fileName = `${slug}.md`;
   let filePath = join(ARTICLES_DIR, fileName);
   if (!existsSync(filePath)) {
-    filePath = join(SERIES_DIR, fileName);
-    if (!existsSync(filePath)) return false;
+    const seriesFiles = readDirRecursive(SERIES_DIR);
+    const found = seriesFiles.find((f) => f.endsWith(fileName));
+    if (!found) return false;
+    filePath = found;
   }
 
   const fileContent = readFileSync(filePath, 'utf8');
