@@ -78,15 +78,22 @@ git add -A && git commit -m "feat: add new article SLUG" && git push origin main
 3. Copy value `sb-access-token` (atau cookie session Supabase)
 4. Pakai di command: `-H "Cookie: sb-access-token=VALUE"`
 
+## publishedAt Format
+
+**WAJIB** pakai format: `"YYYY-MM-DD HH:MM:SS+00"` (contoh: `"2026-07-26 01:00:00+00"`).
+
+JANGAN pakai format ISO `T` dengan `.000Z` (contoh: `"2026-07-26T01:00:00.000Z"`).
+Format `+00` lebih ringkas dan konsisten dengan artikel existing.
+
 ## Scheduling: 3 Artikel Per Hari
 
 Target publishing: 3 artikel/hari di jam 08:00, 12:00, 17:00 WIB.
 
 | Slot | WIB | UTC | Status |
 |------|-----|-----|--------|
-| Pagi | 08:00 | 01:00 | `scheduled` + `publishedAt: 2026-01-01T01:00:00.000Z` |
-| Siang | 12:00 | 05:00 | `scheduled` + `publishedAt: 2026-01-01T05:00:00.000Z` |
-| Sore | 17:00 | 10:00 | `scheduled` + `publishedAt: 2026-01-01T10:00:00.000Z` |
+| Pagi | 08:00 | 01:00 | `scheduled` + `publishedAt: "2026-01-01 01:00:00+00"` |
+| Siang | 12:00 | 05:00 | `scheduled` + `publishedAt: "2026-01-01 05:00:00+00"` |
+| Sore | 17:00 | 10:00 | `scheduled` + `publishedAt: "2026-01-01 10:00:00+00"` |
 
 Cron job GitHub Actions berjalan every 5 minutes, auto-publish saat `publishedAt <= now()`. Cron juga auto-generate OG images. Tidak perlu manual deploy untuk scheduled articles.
 

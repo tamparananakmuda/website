@@ -30,7 +30,7 @@ Ganti kata formal AI dengan kata natural:
 | secara fundamental | mendasar, dari akar |
 | pada intinya | intinya, pokoknya |
 | pada akhirnya | akhirnya, ujungnya |
-| menariknya | yang menarik |
+| menariknya | yang patut dicermati, yang perlu dilihat |
 | perlu dicatat | catat |
 | perlu diingat | ingat |
 | tidak dapat dipungkiri | memang, jelas |
@@ -139,7 +139,7 @@ const foundEn = aiEn.filter(w => body.toLowerCase().includes(w));
 if (foundEn.length) issues.push('AI vocab EN: ' + foundEn.join(', '));
 
 // AI vocab ID
-const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri'];
+const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','yang menarik','hal yang menarik','perlu dicatat','perlu diingat','penting untuk','penting untuk dicatat','tidak dapat dipungkiri','tidak hanya.*tapi juga','bukan hanya.*melainkan'];
 const foundId = aiId.filter(w => body.toLowerCase().includes(w));
 if (foundId.length) issues.push('AI vocab ID: ' + foundId.join(', '));
 

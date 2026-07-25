@@ -122,10 +122,11 @@ export ARTICLE_JSON="/tmp/tam-article.json"
     {"type": "link", "url": "https://sumber.com", "label": "Nama Sumber"}
   ],
   "featured": true,
+  "reading_time": 6,
   "seo_meta_title": "SEO Title max 70",
   "seo_meta_description": "SEO desc max 160",
   "og_headline": "OG headline max 50",
-  "published_at": "2026-01-01T00:00:00.000Z",
+  "published_at": "2026-01-01 01:00:00+00",
   "series": null,
   "series_order": null
 }
@@ -164,6 +165,8 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 - [ ] `sourceReferences`: array `{type, url, label}`
 - [ ] `excerpt`: max 160 karakter
 - [ ] `ogHeadline`: berbeda dari title, max 50 karakter
+- [ ] `reading_time`: di-set di JSON (estimasi: word_count / 200)
+- [ ] `published_at`: format "YYYY-MM-DD HH:MM:SS+00"
 - [ ] JSON disimpan ke `$ARTICLE_JSON`
 
 ## Next
