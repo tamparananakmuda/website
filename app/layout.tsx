@@ -50,6 +50,14 @@ export const metadata: Metadata = {
     title: 'Menyadarkan Generasi Muda akan Kenyataan - Tamparan Anak Muda',
     description:
       'Editorial media digital untuk anak muda Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset.',
+    images: [
+      {
+        url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp',
+        width: 1600,
+        height: 900,
+        alt: 'TAMPARAN ANAK MUDA - Melawan Ilusi. Membangun Realita.',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -58,6 +66,7 @@ export const metadata: Metadata = {
     title: 'Menyadarkan Generasi Muda akan Kenyataan - Tamparan Anak Muda',
     description:
       'Editorial media digital untuk anak muda Indonesia. Tulisan mendalam tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset.',
+    images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
   },
   robots: {
     index: true,
