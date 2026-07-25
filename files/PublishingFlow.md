@@ -56,7 +56,7 @@ TAM punya dua cara untuk publish artikel:
 
 **Actor: Author/Cascade (saat insert artikel via workflow)**
 
-Saat insert artikel ke database, author (atau Cascade via `/post-article-execution` workflow) menentukan:
+Saat insert artikel, author (atau Cascade via `/artikel-1-execution` atau `/seri-1-execution` workflow) menentukan:
 
 | Field | Direct Publish | Scheduled Publish | Draft |
 |-------|---------------|-------------------|-------|

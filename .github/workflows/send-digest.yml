@@ -1,9 +1,9 @@
-name: Send Daily Digest Email
+name: Send Weekly Digest Email
 
 on:
   schedule:
-    # 8 PM WIB (13:00 UTC)
-    - cron: '0 13 * * *'
+    # Every Monday 8 PM WIB (13:00 UTC)
+    - cron: '0 13 * * 1'
   workflow_dispatch:
 
 jobs:

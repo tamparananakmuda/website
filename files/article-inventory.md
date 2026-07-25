@@ -1,6 +1,6 @@
 # Article Inventory TAM
 
-Daftar semua artikel published di TAM. File ini di-maintain secara manual setiap kali artikel baru dipublish. Workflow `/post-article-execution` baca file ini untuk internal linking, nggak perlu query DB atau search online.
+Daftar semua artikel published di TAM. File ini di-maintain secara manual setiap kali artikel baru dipublish. Workflow `/artikel-1-execution` dan `/seri-1-execution` baca file ini untuk internal linking, nggak perlu query DB atau search online.
 
 ## Cara Update
 

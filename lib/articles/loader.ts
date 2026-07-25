@@ -433,6 +433,24 @@ export async function getPostsPublishedToday(): Promise<PostWithRelations[]> {
   return todayArticles.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
 }
 
+export async function getPostsPublishedThisWeek(): Promise<PostWithRelations[]> {
+  const now = new Date();
+  const weekAgo = new Date(now);
+  weekAgo.setDate(weekAgo.getDate() - 7);
+  weekAgo.setHours(0, 0, 0, 0);
+
+  const all = await getAllArticles();
+  const weekArticles = all
+    .filter(
+      (a) =>
+        a.status === 'published' &&
+        a.publishedAt >= weekAgo.toISOString()
+    )
+    .sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime());
+  const ogMap = await getOgMetadataMap(weekArticles.map((a) => a.slug));
+  return weekArticles.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
+}
+
 export async function publishArticleFile(slug: string): Promise<boolean> {
   const fileName = `${slug}.md`;
   const filePath = join(ARTICLES_DIR, fileName);

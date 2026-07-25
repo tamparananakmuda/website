@@ -206,7 +206,7 @@ Validated ideas siap draft:
 [Kategori] | [Topik] | [POV] | [Angle 1-liner] | [Working title] | [seo_keywords: keyword1, keyword2, keyword3]
 ```
 
-**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` (Drizzle ORM: `seoKeywords: text('seo_keywords').array()`) saat insert via `/post-article-execution` Step 4.
+**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` (Drizzle ORM: `seoKeywords: text('seo_keywords').array()`) saat insert via `/artikel-1-execution` atau `/seri-1-execution` Step 4.
 
 ## Step 4: Prioritisasi
 
@@ -332,9 +332,12 @@ Sebelum trend scan mingguan, cek performa artikel yang sudah published. Insight 
 [Review date] | Top 3 artikel: [slugs] | Bottom 3: [slugs] | Pillar insight: [naik/turun] | POV insight: [tag] | Action: [adjust scoring]
 ```
 
-## Handoff ke Post-Article Execution
+## Handoff ke Execution Workflow
 
-Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflow `/post-article-execution` mulai dari Step 0.5 (Draft Writing Guidelines).
+Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflow berikut, mulai dari Step 0.5 (Draft Writing Guidelines):
+- **Artikel standalone:** `/artikel-1-execution`
+- **Seri multi-part:** `/seri-1-execution`
+- **Whitepaper:** `/whitepaper-1-execution`
 
 ## Checklist Final
 
@@ -355,4 +358,4 @@ Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflo
 - [ ] `seo_keywords` array siap untuk pass ke `posts.seo_keywords` di Step 4 execution
 - [ ] Min 1 insight unik yang tidak ada di 3 artikel pertama Google
 - [ ] Output disimpan ke `files/ideation-backlog.md` (gunakan template format)
-- [ ] Ide prioritas di-handoff ke `/post-article-execution`
+- [ ] Ide prioritas di-handoff ke `/artikel-1-execution`, `/seri-1-execution`, atau `/whitepaper-1-execution` (sesuai tipe konten)

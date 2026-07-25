@@ -1,58 +1,14 @@
 ---
-description: Workflow lengkap untuk eksekusi konten TAM (artikel, seri, whitepaper), dari riset topik sampai distribusi multi-platform
+description: Workflow eksekusi seri multi-part TAM, dari riset topik sampai distribusi multi-platform
 ---
 
-# Post-Content Execution Workflow
+# Seri Execution Workflow
 
-Workflow ini mencakup seluruh pipeline untuk 3 tipe konten: **Artikel**, **Seri**, dan **Whitepaper**. Setiap step harus complete sebelum lanjut.
-
-## Step -2: Content Type Selection (WAJIB)
-
-Pilih tipe konten sebelum mulai. Setiap tipe punya perbedaan di penyimpanan, insert, dan distribusi.
-
-### Tipe A: Artikel (Standalone)
-- **Penyimpanan:** File Markdown di `content/articles/{slug}.md`
-- **URL:** `/artikel/{slug}`
-- **Word count:** 1.000-2.500 kata (5-12 menit baca)
-- **Frontmatter:** Standard (lihat Step 0), `series: null`, `seriesOrder: null`
-- **Insert:** Buat file `.md` di `content/articles/` (Step 4)
-- **OG Image:** Auto-generate via API atau cron
-- **Distribusi:** Full pipeline (Step 7-8)
-
-### Tipe B: Seri (Multi-Part)
-- **Penyimpanan:** File Markdown di `content/articles/{slug}.md` (sama dengan artikel)
-- **URL:** `/artikel/{slug}` (setiap part punya URL sendiri)
-- **Word count:** 1.000-2.500 kata per part
-- **Frontmatter:** Standard + `series` (slug seri) + `seriesOrder` (nomor part, mulai dari 1)
-- **Prasyarat:** Definisikan seri di `content/config.ts` (`series` array) sebelum insert
-- **Insert:** Buat file `.md` per part, semua di `content/articles/`
-- **Internal linking:** WAJIB link ke part sebelumnya dan sesudahnya dalam seri
-- **OG Image:** Auto-generate per part (sama dengan artikel)
-- **Distribusi:** Full pipeline + promo seri secara keseluruhan
-- **Naming convention slug:** `{series-slug}-part-{n}-{article-slug}` (contoh: `detoks-dopamin-part-1-kenapa-kamu-kecanduan`)
-
-### Tipe C: Whitepaper
-- **Penyimpanan:** PostgreSQL DB (Drizzle ORM, tabel `whitepapers`)
-- **URL:** `/whitepaper/{slug}`
-- **Word count:** 3.000-10.000 kata (15-60 menit baca)
-- **Fields:** `title`, `slug`, `subtitle`, `summary`, `body`, `coverImageUrl`, `author`, `downloadUrl`, `readingTime`, `tags`, `status`, `publishedAt`
-- **Insert:** DB insert via Drizzle ORM (bukan file Markdown)
-- **OG Image:** Generate manual (template berbeda dari artikel)
-- **Distribusi:** Full pipeline + PDF download link
-- **Tidak ada frontmatter** - langsung insert ke DB
-
-**Checklist pemilihan tipe:**
-- [ ] Tipe konten dipilih: A (Artikel) / B (Seri) / C (Whitepaper)
-- [ ] Untuk Seri: jumlah part ditentukan, outline per part dibuat
-- [ ] Untuk Whitepaper: pastikan ada `DATABASE_URL` di `.env.local`
-
----
-
-**Setelah pemilihan tipe, ikuti step berikutnya. Catatan perbedaan tipe akan ditandai dengan [A], [B], atau [C] di setiap step.**
+Workflow untuk seri (multi-part). Setiap part disimpan sebagai file Markdown terpisah di `content/articles/`. Setiap step harus complete sebelum lanjut.
 
 ## Env Var Reference
 
-**Database (Drizzle ORM):** DB dipakai untuk `post_metadata` (OG image URLs), `whitepapers`, bookmarks, comments, dan email subscribers. Artikel dan Seri disimpan sebagai file Markdown di `content/articles/`.
+**Database (Drizzle ORM):** DB dipakai untuk `post_metadata` (OG image URLs), bookmarks, comments, dan email subscribers. Seri disimpan sebagai file Markdown di `content/articles/`.
 
 **Supabase (auth only):** Supabase hanya digunakan untuk auth/session (`@supabase/ssr`).
 
@@ -76,16 +32,12 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 ```
 
 **CRITICAL:**
-- **[A] Artikel & [B] Seri:** Disimpan sebagai file Markdown di `content/articles/`. DB hanya dipakai untuk `post_metadata` (OG URLs).
-- **[C] Whitepaper:** Disimpan langsung di DB (tabel `whitepapers`). Tidak ada file Markdown.
+- Seri disimpan sebagai file Markdown di `content/articles/` (sama dengan artikel standalone). DB hanya dipakai untuk `post_metadata` (OG URLs).
 - Jangan pakai Supabase REST API untuk insert konten.
 
 ## Step -1: Topic Research & Angle Test
 
-Sebelum drafting, validasi ide konten. Mencegah konten generik dan memastikan angle TAM unik.
-
-**[A] Artikel & [B] Seri:** Angle test wajib. Untuk Seri, setiap part harus punya angle sendiri yang berdiri sendiri tapi tetap terhubung ke tema seri.
-**[C] Whitepaper:** Angle test wajib. Fokus pada data + riset, bukan opini. Pastikan ada minimal 5 sumber primer.
+Sebelum drafting, validasi ide seri. Setiap part harus punya angle sendiri yang berdiri sendiri tapi tetap terhubung ke tema seri.
 
 **Untuk ide yang sudah melalui workflow `/content-ideation`** (file: `.windsurf/workflows/content-ideation.md`), langsung lanjut ke Step 0 dengan ide yang sudah terpilih.
 
@@ -122,28 +74,34 @@ Sebelum drafting, validasi ide konten. Mencegah konten generik dan memastikan an
 - [ ] Category dipilih
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
 - [ ] Minimal 1 insight unik yang tidak ada di 3 artikel pertama Google
-- [ ] **[B] Seri:** Tema seri didefinisikan, jumlah part ditentukan, outline per part dibuat
-- [ ] **[C] Whitepaper:** Minimal 5 sumber primer teridentifikasi, outline section dibuat
+- [ ] Tema seri didefinisikan, jumlah part ditentukan, outline per part dibuat
 
 ## Step 0: Pre-Flight File Check
 
-Verifikasi struktur data sebelum insert.
+Verifikasi struktur data sebelum insert. Cek slug uniqueness, category, dan author dari config.
 
-**[A] Artikel & [B] Seri:** Cek slug uniqueness, category, dan author dari `content/config.ts`. File disimpan di `content/articles/`.
-**[C] Whitepaper:** Cek slug uniqueness di DB (tabel `whitepapers`). Tidak ada file frontmatter.
+**Prasyarat Seri:** Sebelum insert part pertama, pastikan seri sudah didefinisikan di `content/config.ts`:
+```typescript
+export const series: SeriesConfig[] = [
+  { id: 'uuid-generated', title: 'Nama Seri', slug: 'slug-seri', description: 'Deskripsi seri' },
+];
+```
 
-**[A][B] Cek slug uniqueness + category + author (file-based):**
+**Cek slug uniqueness + category + author (file-based):**
 ```bash
 npx tsx -e "
 const { existsSync } = require('fs');
 const { join } = require('path');
-const { categories, authors, getCategoryBySlug, getAuthorBySlug } = require('./content/config');
+const { categories, authors, series, getCategoryBySlug, getAuthorBySlug } = require('./content/config');
 
 console.log('=== CATEGORIES ===');
 categories.forEach(c => console.log(c.slug + ' | ' + c.title + ' | color: ' + c.color));
 
 console.log('\n=== AUTHORS ===');
 authors.forEach(a => console.log(a.slug + ' | ' + a.name));
+
+console.log('\n=== SERIES ===');
+series.forEach(s => console.log(s.slug + ' | ' + s.title));
 
 const slug = 'SLUG_ARTIKEL';
 const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
@@ -157,10 +115,11 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 "
 ```
 
-**[A][B] Frontmatter fields (file-based system):**
+**Frontmatter fields (file-based system):**
 - `title`, `slug`, `excerpt`, `body` (below frontmatter), `publishedAt`, `status`
 - `category` (slug, bukan UUID), `subcategory` (slug atau null), `author` (slug, bukan UUID)
-- `series` (slug atau null), `seriesOrder` (number atau null) — **[B] WAJIB diisi untuk Seri**
+- `series` (slug seri dari `content/config.ts`) — WAJIB diisi
+- `seriesOrder` (number, mulai dari 1) — WAJIB diisi
 - `povTag`, `tags` (array string), `ogHeadline`
 - `seoMetaTitle`, `seoMetaDescription`, `seoKeywords` (array string)
 - `sourceReferences` (array `{type, url, label}`)
@@ -169,12 +128,11 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 - `isPremium`, `premiumExcerpt`
 - `coverImageUrl`, `coverImageAlt` (null jika pakai OG image dynamic)
 
-**[C] Whitepaper DB fields (tabel `whitepapers`):**
-- `title`, `slug`, `subtitle`, `summary`, `body` (markdown string)
-- `coverImageUrl`, `author` (default: 'TAMPARAN ANAK MUDA'), `downloadUrl`
-- `readingTime` (integer, default 10), `tags` (text array)
-- `status` ('draft' atau 'published'), `publishedAt` (timestamp)
-- Tidak ada frontmatter, POV tag, atau SEO fields terpisah (SEO dari title + summary)
+**Naming convention slug (WAJIB):**
+```
+{series-slug}-part-{n}-{article-slug}
+```
+Contoh: `detoks-dopamin-part-1-kenapa-kamu-kecanduan`, `detoks-dopamin-part-2-cara-algoritma-membajak-otakmu`
 
 **Subcategory (Pillar) Reference (dari `content/config.ts`):**
 | Slug | Title | Category |
@@ -198,25 +156,22 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 | `pendidikan` | Pendidikan | kehidupan |
 
 **CRITICAL rules:**
-- **[A][B]** `sourceReferences`: HARUS array, bukan string. Format: `[{type: "link", url: "...", label: "..."}]`
-- **[A][B]** `excerpt`: MAX 160 karakter
-- **[A][B]** `seoMetaDescription`: MAX 160 karakter
-- **[A][B]** `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
-- **[A][B]** `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage. Jika `status='scheduled'`, set ke waktu publish di masa depan. Cron job akan auto-publish saat `publishedAt <= now()`.
-- **[C]** `publishedAt`: WAJIB set untuk whitepaper. `readingTime` di-set manual (default 10).
-- **[B]** `series` dan `seriesOrder` WAJIB diisi. `series` = slug seri dari `content/config.ts`, `seriesOrder` = nomor part (mulai dari 1).
+- `sourceReferences`: HARUS array, bukan string. Format: `[{type: "link", url: "...", label: "..."}]`
+- `excerpt`: MAX 160 karakter
+- `seoMetaDescription`: MAX 160 karakter
+- `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
+- `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage. Jika `status='scheduled'`, set ke waktu publish di masa depan. Cron job akan auto-publish saat `publishedAt <= now()`.
+- `series` dan `seriesOrder` WAJIB diisi. `series` = slug seri dari `content/config.ts`, `seriesOrder` = nomor part (mulai dari 1).
 
 ## Step 0.5: Draft Writing Guidelines
 
-Aturan formatting markdown body konten sebelum masuk ke QC.
+Aturan formatting markdown body per part sebelum masuk ke QC.
 
 **Word Count (STANDAR TAM):**
-- **[A] Artikel:** 1.000-2.500 kata (5-12 menit baca)
-- **[B] Seri:** 1.000-2.500 kata per part (5-12 menit baca per part)
-- **[C] Whitepaper:** 3.000-10.000 kata (15-60 menit baca)
+- Target: 1.000-2.500 kata per part (5-12 menit baca per part)
 - Referensi: `files/templates/article-template.md`, `files/ContentStrategy.md`, `files/ContentCalendar.md`, `files/Payment.md` (untuk CTA "Dukung TAM" di artikel)
-- **[A][B]** Di bawah 1.000 kata = perlu expand depth. Di atas 2.500 kata = perlu trim atau pecah jadi multi-part series
-- **[C]** Di bawah 3.000 kata = terlalu tipis untuk whitepaper, pertimbangkan jadi artikel
+- Di bawah 1.000 kata = perlu expand depth (data tambahan, contoh kasus, elaborasi argumentasi)
+- Di atas 2.500 kata = perlu trim atau pecah jadi part tambahan
 
 **Heading Structure (CRITICAL untuk Table of Contents):**
 - Gunakan `##` (h2) untuk section utama, `###` (h3) untuk sub-section
@@ -225,10 +180,9 @@ Aturan formatting markdown body konten sebelum masuk ke QC.
 - Minimal 3 heading h2 untuk TOC berfungsi
 
 **Internal Linking (Wajib):**
-- **[A]** Minimal 2 link ke artikel TAM lain di body
-- **[B]** Minimal 2 link ke artikel TAM lain + WAJIB link ke part sebelumnya/sesudahnya dalam seri
-- **[C]** Minimal 3 link ke artikel atau whitepaper TAM lain di body
-- Format: `[judul](/artikel/slug-artikel)` atau `[judul](/whitepaper/slug-whitepaper)`
+- Minimal 2 link ke artikel TAM lain di body
+- WAJIB link ke part sebelumnya dan sesudahnya dalam seri (jika ada)
+- Format: `[judul](/artikel/slug-artikel)`
 - Cek artikel relevan via `files/article-inventory.md` (baca file lokal, nggak perlu query DB atau search online)
 - Kalau artikel di kategori yang relevan belum ada, link ke category page: `/kategori/[kategori-slug]`
 
@@ -240,7 +194,7 @@ Aturan formatting markdown body konten sebelum masuk ke QC.
 
 **Punctuation:**
 - Tidak pakai em dash (—) atau en dash (–)
-- Maks 1 exclamation mark per artikel
+- Maks 1 exclamation mark per part
 - Tidak pakai ellipsis (...) sebagai desain
 
 **OG Headline (CRITICAL):**
@@ -276,15 +230,15 @@ console.log('og_headline length:', og.length, og.length > 50 ? 'WARNING: max 50'
 // Cek word count
 const wc = b.split(/\s+/).length;
 console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 2500 ? 'WARNING: max 2.500' : 'OK');
+// Cek series fields
+console.log('series:', a.series || 'MISSING');
+console.log('series_order:', a.series_order || 'MISSING');
 "
 ```
 
 ## Step 1: Editorial QC Audit (All-in-One)
 
-Validasi semua data, klaim, pola AI, heading, dan metadata dalam satu command. Jalankan sampai CLEAN, fix semua FAIL, re-run.
-
-**[A] Artikel & [B] Seri:** Jalankan command audit di bawah. Untuk Seri, cek juga link ke part lain dalam seri.
-**[C] Whitepaper:** Jalankan command audit yang sama, tapi skip cek `og_headline`, `excerpt`, dan `seo_meta_*` (field ini tidak ada di whitepaper). Word count target: 3.000-10.000.
+Validasi semua data, klaim, pola AI, heading, dan metadata dalam satu command. Jalankan sampai CLEAN, fix semua FAIL, re-run. Untuk Seri, cek juga link ke part lain dalam seri.
 
 **Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori).
 
@@ -293,21 +247,19 @@ Validasi semua data, klaim, pola AI, heading, dan metadata dalam satu command. J
 - [ ] Angka di konten cocok dengan sumber (tidak dibulat-bulat)
 - [ ] Tidak ada angka tanpa atribusi sumber di kalimat yang sama
 - [ ] Data tidak outdated (max 2 tahun untuk data ekonomi)
-- [ ] **[A][B]** POV tag dipilih dan konsisten
+- [ ] POV tag dipilih dan konsisten
 - [ ] Heading: h2/h3 only, minimal 3 h2, tidak ada h1
-- [ ] **[A]** Internal linking: minimal 2 link ke artikel TAM lain
-- [ ] **[B]** Internal linking: minimal 2 link + link ke part lain dalam seri
-- [ ] **[C]** Internal linking: minimal 3 link ke konten TAM lain
+- [ ] Internal linking: minimal 2 link + link ke part lain dalam seri
 - [ ] Tidak ada raw HTML script/iframe/style di body
-- [ ] **[A][B]** OG headline berbeda dari title, max 50 karakter, conversational
-- [ ] **[A][B]** Word count: 1.000-2.500 kata | **[C]** Word count: 3.000-10.000 kata
+- [ ] OG headline berbeda dari title, max 50 karakter, conversational
+- [ ] Word count: 1.000-2.500 kata per part
 - [ ] No em dash, no en dash, no curly quotes
 - [ ] No AI vocab EN/ID (lihat HumanizerRules.md)
 - [ ] No staccato drama, rule-of-three abuse (>2x), negative parallelisms
 - [ ] No promotional language, signposting, filler, generic conclusions
 - [ ] Max 1 exclamation mark
 - [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
-- [ ] Tone: jujur, rasional, berani, tidak menggurui
+- [ ] Tone: jujur, rasional, berani, tidak menggurudi
 
 **Command (all-in-one audit, jalankan sampai CLEAN):**
 ```bash
@@ -420,6 +372,10 @@ else if (og.length > 50) issues.push('og_headline length: ' + og.length + ' (max
 const refs = a.source_references || [];
 if (!Array.isArray(refs)) issues.push('source_references: must be array');
 
+// Series fields
+if (!a.series) issues.push('series: MISSING (required for Seri)');
+if (!a.series_order) issues.push('series_order: MISSING (required for Seri)');
+
 // Data attribution check
 const numberSentences = sentences.filter(s => /\d+%|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d+\s*(persen|%)/i.test(s));
 const unattributed = numberSentences.filter(s => !/(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat)/i.test(s));
@@ -430,9 +386,10 @@ if (excerpt.length > 160) issues.push('Excerpt: ' + excerpt.length + ' chars (ma
 const seoDesc = a.seo_meta_description || '';
 if (seoDesc.length > 160) issues.push('SEO description: ' + seoDesc.length + ' chars (max 160)');
 
-console.log('=== ALL-IN-ONE QC AUDIT ===');
+console.log('=== ALL-IN-ONE QC AUDIT (SERI) ===');
 console.log('Word count:', wc, '| h2:', h2, '| h3:', h3, '| internal links:', il, '| sources:', refs.length);
 console.log('og_headline:', og || 'MISSING');
+console.log('series:', a.series || 'MISSING', '| series_order:', a.series_order || 'MISSING');
 if (issues.length) {
   console.log('\nFAIL (' + issues.length + ' issues):');
   issues.forEach(i => console.log('  - ' + i));
@@ -498,7 +455,7 @@ const refs = a.source_references || [];
 
 **Meta Title Formula:** `[Keyword Utama] + [Hook] | TAM` (max 70 karakter)
 **Meta Description Formula:** `[Konteks] + [Value Prop] + [CTA]` (max 160 karakter)
-**Slug:** kebab-case, keyword di awal, max 60 karakter, unique
+**Slug:** kebab-case, keyword di awal, max 60 karakter, unique. Format seri: `{series-slug}-part-{n}-{article-slug}`
 
 **Command (SEO metadata validation):**
 ```bash
@@ -527,13 +484,15 @@ else console.log('\nCLEAN: SEO metadata OK.');
 - [ ] `seoKeywords`: 3-8 keyword long-tail, Bahasa Indonesia
 - [ ] `seoMetaTitle`: max 70 karakter, keyword utama di awal, ada `| TAM`
 - [ ] `seoMetaDescription`: max 160 karakter, mengandung keyword
-- [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, unique
+- [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, unique, format `{series-slug}-part-{n}-{article-slug}`
 - [ ] `excerpt`: max 160 karakter
 - [ ] `ogHeadline`: max 50 karakter, berbeda dari title
 - [ ] h2 mengandung secondary keyword
-- [ ] Internal linking: minimal 2 link, anchor text bervariasi
+- [ ] Internal linking: minimal 2 link + link ke part lain dalam seri, anchor text bervariasi
 - [ ] `category`: slug kategori valid dari `content/config.ts`
 - [ ] `author`: slug author valid dari `content/config.ts`
+- [ ] `series`: slug seri valid dari `content/config.ts`
+- [ ] `seriesOrder`: nomor part yang benar (mulai dari 1)
 
 **SEO Scoring Rubric (0-100, target > 80):**
 
@@ -543,45 +502,15 @@ else console.log('\nCLEAN: SEO metadata OK.');
 | Meta title | 15 | Keyword di awal + hook + max 70 (15), keyword ada tapi tidak di awal (10), >70 chars (0) |
 | Meta description | 15 | Keyword + value prop + CTA + max 160 (15), ada keyword (10), >160 (0) |
 | Heading SEO | 15 | h2 ada secondary keyword (15), h2 ada tapi no keyword (10), no h2 (0) |
-| Internal linking | 15 | 3+ link bervariasi (15), 2 link (10), <2 (0) |
-| Slug | 10 | Kebab-case + keyword di awal + max 60 (10), ada keyword (7), >60 (0) |
+| Internal linking | 15 | 3+ link bervariasi + link ke part lain (15), 2 link (10), <2 (0) |
+| Slug | 10 | Kebab-case + keyword di awal + max 60 + format seri (10), ada keyword (7), >60 (0) |
 | Alt text | 10 | Semua gambar punya alt + keyword natural (10), ada alt (5), ada gambar tanpa alt (0) |
 
-## Step 4: Content Insert
+## Step 4: File-Based Seri Insert
 
-**[A] Artikel & [B] Seri:** Insert sebagai file Markdown dengan YAML frontmatter di `content/articles/`. Tidak ada DB insert untuk artikel — disimpan sebagai file `.md` dan dibaca oleh `lib/articles/loader.ts`.
-**[C] Whitepaper:** Insert langsung ke DB via Drizzle ORM (tabel `whitepapers`). Lihat Step 4C di bawah.
+Insert setiap part sebagai file Markdown dengan YAML frontmatter di `content/articles/`. Tidak ada DB insert — disimpan sebagai file `.md` dan dibaca oleh `lib/articles/loader.ts`.
 
-### Step 4A/4B: File-Based Article/Seri Insert
-
-**[A] Article JSON Template (simpan ke `$ARTICLE_JSON`):**
-```json
-{
-  "title": "Judul Artikel",
-  "slug": "slug-artikel-kebab-case",
-  "excerpt": "Excerpt max 160 karakter",
-  "body": "## Heading 1\n\nKonten...\n\n## Heading 2\n\nKonten...\n\n### Sub-heading\n\nKonten...",
-  "category": "kehidupan",
-  "subcategory": "mindset-realita",
-  "author": "yovie-setiawan",
-  "status": "published",
-  "seo_keywords": ["keyword 1", "keyword 2", "keyword 3"],
-  "pov_tag": "data",
-  "human_signature": true,
-  "source_references": [
-    {"type": "link", "url": "https://sumber.com", "label": "Nama Sumber"}
-  ],
-  "featured": true,
-  "seo_meta_title": "SEO Title max 70",
-  "seo_meta_description": "SEO desc max 160",
-  "og_headline": "OG headline max 50",
-  "published_at": "2026-01-01T00:00:00.000Z",
-  "series": null,
-  "series_order": null
-}
-```
-
-**[B] Seri JSON Template (perbedaan dari Artikel):**
+**Seri JSON Template (simpan ke `$ARTICLE_JSON`):**
 ```json
 {
   "title": "Judul Part 1",
@@ -608,18 +537,12 @@ else console.log('\nCLEAN: SEO metadata OK.');
 }
 ```
 
-**[B] Prasyarat Seri:** Sebelum insert part pertama, pastikan seri sudah didefinisikan di `content/config.ts`:
-```typescript
-export const series: SeriesConfig[] = [
-  { id: 'uuid-generated', title: 'Nama Seri', slug: 'slug-seri', description: 'Deskripsi seri' },
-];
-```
-
 **Field mapping (JSON → frontmatter):**
 - `category`: slug kategori dari `content/config.ts` (bukan UUID)
 - `subcategory`: slug subkategori dari `content/config.ts` (bukan UUID, null jika tidak relevan)
 - `author`: slug author dari `content/config.ts` (bukan UUID)
-- `series`: slug series dari `content/config.ts` (null jika tidak ada)
+- `series`: slug series dari `content/config.ts` (WAJIB diisi)
+- `series_order`: nomor part, mulai dari 1 (WAJIB diisi)
 - `seo_keywords`: array string → `seoKeywords` di frontmatter
 - `pov_tag`: string → `povTag` di frontmatter
 - `source_references`: array `{type, url, label}` → `sourceReferences` di frontmatter
@@ -647,7 +570,7 @@ export const series: SeriesConfig[] = [
 - `sourceReferences`: Format array `{type, url, label}` di frontmatter
 - File disimpan di `content/articles/{slug}.md`
 
-**Insert command (buat file Markdown):**
+**Insert command (buat file Markdown, sama dengan artikel tapi dengan series fields):**
 ```bash
 npx tsx -e "
 const { readFileSync, writeFileSync, mkdirSync } = require('fs');
@@ -671,6 +594,12 @@ if (!article.published_at) {
 if (!article.slug || !article.title || !article.body) {
   console.error('FATAL: slug, title, body are required'); process.exit(1);
 }
+if (!article.series) {
+  console.error('FATAL: series is required for Seri'); process.exit(1);
+}
+if (!article.series_order) {
+  console.error('FATAL: series_order is required for Seri'); process.exit(1);
+}
 
 // Build YAML frontmatter
 const frontmatter = {
@@ -682,8 +611,8 @@ const frontmatter = {
   category: article.category || 'kehidupan',
   subcategory: article.subcategory || null,
   author: article.author || 'yovie-setiawan',
-  series: article.series || null,
-  seriesOrder: article.series_order || null,
+  series: article.series,
+  seriesOrder: article.series_order,
   povTag: article.pov_tag || 'data',
   tags: [],
   ogHeadline: article.og_headline || article.title,
@@ -712,8 +641,7 @@ function toYaml(obj, indent = '') {
     if (value === null) {
       lines.push(indent + key + ': null');
     } else if (typeof value === 'string') {
-      // Escape quotes in string values
-      const escaped = value.replace(/"/g, '\\"');
+      const escaped = value.replace(/\"/g, '\\\"');
       lines.push(indent + key + ': \"' + escaped + '\"');
     } else if (typeof value === 'boolean' || typeof value === 'number') {
       lines.push(indent + key + ': ' + value);
@@ -722,7 +650,7 @@ function toYaml(obj, indent = '') {
         lines.push(indent + key + ': []');
       } else if (typeof value[0] === 'string') {
         lines.push(indent + key + ':');
-        value.forEach(v => lines.push(indent + '  - \"' + v.replace(/"/g, '\\"') + '\"'));
+        value.forEach(v => lines.push(indent + '  - \"' + v.replace(/\"/g, '\\\"') + '\"'));
       } else {
         lines.push(indent + key + ':');
         value.forEach(v => {
@@ -751,99 +679,19 @@ writeFileSync(filePath, markdown, 'utf8');
 
 console.log('File created:', filePath);
 console.log('slug:', article.slug);
+console.log('series:', frontmatter.series);
+console.log('seriesOrder:', frontmatter.seriesOrder);
 console.log('status:', frontmatter.status);
 console.log('published_at:', frontmatter.publishedAt);
 console.log('source_references count:', frontmatter.sourceReferences.length);
 "
 ```
 
-### Step 4C: Whitepaper DB Insert
-
-**[C] Whitepaper JSON Template (simpan ke `$ARTICLE_JSON`):**
-```json
-{
-  "title": "Judul Whitepaper",
-  "slug": "slug-whitepaper-kebab-case",
-  "subtitle": "Subtitle whitepaper (opsional)",
-  "summary": "Summary untuk SEO dan card display (max 300 karakter)",
-  "body": "## Section 1\n\nKonten...\n\n## Section 2\n\nKonten...",
-  "author": "TAMPARAN ANAK MUDA",
-  "download_url": null,
-  "reading_time": 15,
-  "tags": ["riset", "gen z", "data"],
-  "status": "published",
-  "published_at": "2026-01-01T00:00:00.000Z"
-}
-```
-
-**[C] Insert command (DB via Drizzle ORM):**
-```bash
-npx tsx -e "
-const fs = require('fs');
-const path = require('path');
-
-// Load env
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim();
-    if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('=');
-    if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-
-const { db } = require('./lib/db');
-const { whitepapers } = require('./lib/db/schema');
-
-const wp = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
-
-// VALIDASI
-if (!wp.slug || !wp.title || !wp.body) {
-  console.error('FATAL: slug, title, body are required'); process.exit(1);
-}
-if (!wp.published_at) {
-  console.error('FATAL: published_at is required'); process.exit(1);
-}
-
-db.insert(whitepapers).values({
-  slug: wp.slug,
-  title: wp.title,
-  subtitle: wp.subtitle || null,
-  summary: wp.summary || null,
-  body: wp.body,
-  coverImageUrl: wp.cover_image_url || null,
-  author: wp.author || 'TAMPARAN ANAK MUDA',
-  downloadUrl: wp.download_url || null,
-  readingTime: wp.reading_time || 10,
-  tags: wp.tags || [],
-  status: wp.status === 'scheduled' ? 'draft' : (wp.status || 'published'),
-  publishedAt: wp.published_at,
-}).then(() => {
-  console.log('Whitepaper inserted to DB:', wp.slug);
-  console.log('status:', wp.status || 'published');
-  console.log('published_at:', wp.published_at);
-  console.log('reading_time:', wp.reading_time || 10, 'min');
-}).catch(e => {
-  console.error('FATAL:', e.message);
-  process.exit(1);
-});
-"
-```
-
-**[C] Catatan Whitepaper:**
-- Tidak ada frontmatter, tidak ada file Markdown
-- Slug harus unique di tabel `whitepapers`
-- `status='draft'` untuk unpublished, `status='published'` untuk live
-- Tidak ada scheduled/cron untuk whitepaper — publish manual dengan ubah `status` di DB
-- OG image untuk whitepaper: generate manual (template berbeda dari artikel)
-
 ## Step 4.5: Post-Insert Verification
 
-**[A][B]** Verifikasi file Markdown yang dibuat sudah benar. **[C]** Verifikasi whitepaper tersimpan di DB.
+Verifikasi file Markdown yang dibuat sudah benar.
 
-**[A][B] Command (parse & verify frontmatter):**
+**Command (parse & verify frontmatter):**
 ```bash
 npx tsx -e "
 const { readFileSync } = require('fs');
@@ -854,12 +702,14 @@ const filePath = join(process.cwd(), 'content', 'articles', 'SLUG' + '.md');
 const fileContent = readFileSync(filePath, 'utf8');
 const { data: frontmatter, content: body } = matter(fileContent);
 
-console.log('=== File Verification ===');
+console.log('=== File Verification (Seri) ===');
 console.log('slug:', frontmatter.slug);
 console.log('status:', frontmatter.status);
 console.log('publishedAt:', frontmatter.publishedAt);
 console.log('category:', frontmatter.category);
 console.log('author:', frontmatter.author);
+console.log('series:', frontmatter.series);
+console.log('seriesOrder:', frontmatter.seriesOrder);
 console.log('sourceReferences isArray:', Array.isArray(frontmatter.sourceReferences));
 console.log('excerpt length:', frontmatter.excerpt ? frontmatter.excerpt.length : 'null', '(max 160)');
 console.log('body length:', body.length, 'chars');
@@ -868,6 +718,8 @@ const issues = [];
 if (!frontmatter.publishedAt) issues.push('publishedAt is null');
 if (!frontmatter.author) issues.push('author is null');
 if (!frontmatter.category) issues.push('category is null');
+if (!frontmatter.series) issues.push('series is null (REQUIRED for Seri)');
+if (!frontmatter.seriesOrder) issues.push('seriesOrder is null (REQUIRED for Seri)');
 if (!Array.isArray(frontmatter.sourceReferences)) issues.push('sourceReferences not array');
 if (frontmatter.excerpt && frontmatter.excerpt.length > 160) issues.push('excerpt > 160');
 if (!frontmatter.title) issues.push('title is missing');
@@ -881,57 +733,20 @@ if (issues.length > 0) {
 "
 ```
 
-**[A][B] Checklist:**
+**Checklist:**
 - [ ] File `content/articles/SLUG.md` exists
 - [ ] `slug` di frontmatter = slug yang diharapkan
 - [ ] `status` = `published` atau `scheduled`
 - [ ] `publishedAt` tidak null
 - [ ] `category` = slug kategori yang valid (dari `content/config.ts`)
 - [ ] `author` = slug author yang valid (dari `content/config.ts`)
+- [ ] `series` = slug seri yang valid (dari `content/config.ts`)
+- [ ] `seriesOrder` = nomor part yang benar (mulai dari 1)
 - [ ] `sourceReferences` isArray = `true`
 - [ ] `excerpt` length <= 160
 - [ ] Body content tidak kosong
-- [ ] **[B]** `series` = slug seri yang valid, `seriesOrder` = nomor part yang benar
 
-**[C] Whitepaper verification command:**
-```bash
-npx tsx -e "
-const fs = require('fs');
-const path = require('path');
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim();
-    if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('=');
-    if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-const { db } = require('./lib/db');
-const { whitepapers } = require('./lib/db/schema');
-const { eq } = require('drizzle-orm');
-db.select().from(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(r => {
-  const w = r[0];
-  if (!w) { console.error('FATAL: Whitepaper not found in DB'); process.exit(1); }
-  console.log('slug:', w.slug);
-  console.log('status:', w.status);
-  console.log('publishedAt:', w.publishedAt);
-  console.log('readingTime:', w.readingTime);
-  console.log('body length:', w.body.length, 'chars');
-  console.log('All checks passed.');
-}).catch(e => { console.error('FATAL:', e.message); process.exit(1); });
-"
-```
-
-**[C] Checklist:**
-- [ ] Whitepaper exists di DB dengan slug yang benar
-- [ ] `status` = `published` atau `draft`
-- [ ] `publishedAt` tidak null
-- [ ] `body` tidak kosong
-- [ ] `readingTime` > 0
-
-**Update article inventory (WAJIB untuk [A][B]):**
+**Update article inventory (WAJIB):**
 Setelah verifikasi lolos, update `files/article-inventory.md` dengan baris baru:
 ```
 | [N] | [Title] | [slug] | [Kategori] | [Pillar] | [POV] | [YYYY-MM-DD] |
@@ -940,9 +755,7 @@ File ini dipakai workflow untuk internal linking di artikel selanjutnya, jadi ha
 
 ## Step 4.6: Scheduling Verification
 
-**[A][B] Only.** Whitepaper tidak punya scheduling (publish manual via DB status update).
-
-Jika artikel/seri di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
+Jika part di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
 
 **Cek status & publishedAt dari file frontmatter:**
 ```bash
@@ -987,11 +800,11 @@ if (f.status === 'scheduled') {
 
 ## Step 5: OG Image Generation (WebP via R2 CDN)
 
-Setelah artikel di-insert, generate OG images ke R2 CDN. Sistem menghasilkan **2 WebP images per post**:
+Setelah part di-insert, generate OG images ke R2 CDN. Sistem menghasilkan **2 WebP images per post**:
 - **Card** (800x450) → `og/{slug}-card.webp` → untuk thumbnail article list
 - **Feature** (1600x900) → `og/{slug}-feature.webp` → untuk header artikel + social meta tags
 
-**Note: Untuk artikel scheduled (status='scheduled'), OG images akan di-auto-generate oleh cron job saat artikel di-publish.** Step ini hanya wajib untuk artikel yang di-publish langsung (status='published').
+**Note: Untuk part scheduled (status='scheduled'), OG images akan di-auto-generate oleh cron job saat artikel di-publish.** Step ini hanya wajib untuk part yang di-publish langsung (status='published').
 
 **Generate via API (admin auth required):**
 ```bash
@@ -1031,16 +844,14 @@ npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('pa
 
 ## Step 6: Production Deployment Check
 
-Setelah konten live di local, deploy dan verifikasi production.
+Setelah part live di local, deploy dan verifikasi production.
 
-**[A][B] Deploy (file-based):**
+**Deploy:**
 ```bash
-git add -A && git commit -m "feat: add new [article/seri] SLUG" && git push origin main
+git add -A && git commit -m "feat: add new seri part SLUG" && git push origin main
 ```
 
-**[C] Whitepaper:** Tidak perlu deploy. Whitepaper di-insert ke DB, langsung live saat `status='published'`. Tidak ada file yang di-commit.
-
-**[A][B] Verifikasi production:**
+**Tunggu Vercel auto-deploy, lalu verifikasi:**
 ```bash
 # HTTP status
 curl -s -o /dev/null -w "article: %{http_code}\n" "https://tamparananakmuda.com/artikel/SLUG"
@@ -1058,15 +869,6 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 curl -s "https://tamparananakmuda.com/rss.xml" | grep "SLUG" && echo "RSS OK" || echo "RSS MISSING"
 ```
 
-**[C] Verifikasi production whitepaper:**
-```bash
-# HTTP status
-curl -s -o /dev/null -w "whitepaper: %{http_code}\n" "https://tamparananakmuda.com/whitepaper/SLUG"
-
-# Sitemap includes whitepaper
-curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitemap OK" || echo "Sitemap MISSING"
-```
-
 **Checklist:**
 - [ ] `git push` sukses
 - [ ] Vercel deploy sukses (cek GitHub deployment status)
@@ -1075,15 +877,8 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 - [ ] OG meta tags present (`og:title`, `og:description`, `og:image`)
 - [ ] Sitemap includes new slug
 - [ ] RSS feed includes new article
-- [ ] Jika 500: cek Vercel serverless issues di bawah
 
-**Note: `llms.txt` dan `llms-full.txt` tidak perlu update per artikel.** Hanya update jika ada perubahan struktur (kategori baru, halaman baru).
-
-**Scheduling note:** Jika artikel di-insert sebagai `status='scheduled'`, tidak perlu code deploy. GitHub Actions cron job (every 5 min) akan auto-publish saat `published_at <= now()` dan langsung auto-generate OG images. Tidak perlu manual Step 5 untuk scheduled articles.
-
-**Known Vercel serverless issues:**
-- `isomorphic-dompurify` crash di Vercel (jsdom dependency). Sudah diganti regex sanitizer di `components/markdown-content.tsx`. Jangan import library ini lagi.
-- `cookies()` dari `next/headers` bisa fail di `generateMetadata` saat static generation. Gunakan server-side Supabase client dari `@/lib/supabase/server.ts` dengan proper error handling. Note: Article pages sekarang SSG dengan `generateStaticParams`, jadi ini kurang relevan untuk article pages.
+**Scheduling note:** Jika part di-insert sebagai `status='scheduled'`, tidak perlu code deploy. GitHub Actions cron job (every 5 min) akan auto-publish saat `published_at <= now()` dan langsung auto-generate OG images.
 
 ## Step 6.5: SEO Indexing
 
@@ -1099,40 +894,28 @@ Submit URL baru ke Google dan cek indexing.
 curl -s "https://www.google.com/ping?sitemap=https://tamparananakmuda.com/sitemap.xml" && echo "Sitemap pinged"
 ```
 
-**Cek robots.txt accessible:**
-```bash
-curl -s -o /dev/null -w "robots: %{http_code}\n" "https://tamparananakmuda.com/robots.txt"
-```
-
 **Checklist:**
 - [ ] URL submitted ke Google Search Console
 - [ ] Sitemap pinged
-- [ ] robots.txt HTTP 200
 
 ## Step 7: Content Atomization
 
-Pecah konten jadi format distribusi multi-platform.
+Pecah setiap part jadi format distribusi multi-platform. Buat juga 1 carousel/konten promo seri secara keseluruhan.
 
-**[A] Artikel:** Pecah jadi carousel, newsletter, stories, thread, LinkedIn.
-**[B] Seri:** Pecah per part, tapi buat juga 1 carousel/konten promo seri secara keseluruhan.
-**[C] Whitepaper:** Pecah jadi carousel (lebih banyak slide, 8-12), newsletter (lebih panjang, 600-800 words), LinkedIn article (publish native), tidak ada TikTok (terlalu kompleks untuk whitepaper).
-
-### 7a. Instagram Carousel
-- **[A]** 5-8 slides | **[B]** 5-8 slides per part + 1 carousel seri overview (10-12 slides) | **[C]** 8-12 slides
+### 7a. Instagram Carousel (5-8 slides per part + 1 carousel seri overview 10-12 slides)
 - Slide 1: Hook headline + visual (brand colors, Syne font)
 - Slide 2-6: Key data points (1 per slide, max 3 angka per slide)
 - Slide 7: Pertanyaan refleksi
-- Slide 8: CTA ke full konten (`tamparananakmuda.com/artikel/SLUG` atau `/whitepaper/SLUG`)
+- Slide 8: CTA ke full article (`tamparananakmuda.com/artikel/SLUG`)
 
 **Spec:** 1080x1080px, OLED black background, category color accent
 
-### 7b. Newsletter
-- **[A]** 400-600 words | **[B]** 400-600 words per part | **[C]** 600-800 words
-- Subject line: 1 insight utama, bukan judul konten
-- Opening: 1 paragraf hook (bukan copy konten)
+### 7b. Newsletter (400-600 words per part)
+- Subject line: 1 insight utama, bukan judul artikel
+- Opening: 1 paragraf hook (bukan copy artikel)
 - Body: 1 insight + 1 quote yang striking
 - Closing: 1 pertanyaan untuk subscriber
-- CTA: Link ke full konten
+- CTA: Link ke full article
 
 **Kirim via:** Brevo dashboard (manual, bukan automated API)
 
@@ -1140,30 +923,27 @@ Pecah konten jadi format distribusi multi-platform.
 - Story 1: Polling question terkait topik
 - Story 2-3: Key takeaways dengan visual
 - Story 4: Q&A sticker
-- Story 5: Link sticker ke konten
+- Story 5: Link sticker ke artikel
 
 ### 7d. TikTok/Reels Script (Phase 2)
-- **[A][B] Only.** Whitepaper terlalu kompleks untuk short-form video.
 - Generate via `/api/tiktok/generate-script`
 - 30-60 detik, 1 insight per video
 - Hook line wajib di 3 detik pertama
 - CTA: "Baca full artikel di bio"
 
-### 7e. X/Twitter Thread (3-5 tweets)
-- **[A]** 3-5 tweets | **[B]** 3-5 tweets per part | **[C]** 5-8 tweets (whitepaper lebih data-heavy)
+### 7e. X/Twitter Thread (3-5 tweets per part)
 - Tweet 1: Hook (1 kalimat tajam + angka/data yang mengejutkan)
 - Tweet 2-3: Key insight (1 insight per tweet, max 280 chars, pakai thread numbering)
-- Tweet 4: Quote atau data yang striking dari konten
-- Tweet 5: CTA ke full konten (`tamparananakmuda.com/artikel/SLUG` atau `/whitepaper/SLUG`)
+- Tweet 4: Quote atau data yang striking dari artikel
+- Tweet 5: CTA ke full article (`tamparananakmuda.com/artikel/SLUG`)
 - Tone: langsung, no fluff, pakai bahasa Indonesia
 - Posting: manual via X app atau scheduler (Buffer/Hootsuite)
 
-### 7f. LinkedIn Post (200-400 words)
-- **[A]** 200-400 words | **[B]** 200-400 words per part | **[C]** 400-600 words + publish sebagai LinkedIn Article
+### 7f. LinkedIn Post (200-400 words per part)
 - Hook line: 1 kalimat yang relevan untuk professional audience (karir, bisnis, keuangan)
-- Body: 1 insight utama dengan sudut pandang professional (bukan copy konten)
+- Body: 1 insight utama dengan sudut pandang professional (bukan copy artikel)
 - Format: short paragraphs, no bullet spam, conversational tone
-- CTA: "Baca analisis lengkapnya di sini: tamparananakmuda.com/artikel/SLUG" atau "/whitepaper/SLUG"
+- CTA: "Baca analisis lengkapnya di sini: tamparananakmuda.com/artikel/SLUG"
 - Hashtags: 3-5 relevant hashtags (contoh: #GenZ #Karir #Mindset #Indonesia)
 - Posting: manual via LinkedIn atau scheduler
 
@@ -1173,7 +953,7 @@ Jadwalkan distribusi sesuai content calendar.
 
 **Timeline:**
 ```
-Hari 1 (Senin): Publish artikel di website
+Hari 1 (Senin): Publish part di website
 Hari 2 (Selasa): Post IG Carousel + Stories + X/Twitter thread
 Hari 3 (Rabu): Kirim newsletter + LinkedIn post
 Hari 4 (Kamis): TikTok/Reels video (jika Phase 2 aktif)
@@ -1189,7 +969,7 @@ Hari 7 (Senin): Review analytics awal
 
 ## Step 9: Analytics Tracking
 
-Monitor performa artikel 7 hari setelah publish.
+Monitor performa part 7 hari setelah publish.
 
 **Metrics to track (via Umami):**
 - Page views
@@ -1199,13 +979,6 @@ Monitor performa artikel 7 hari setelah publish.
 - Email subscribe rate dari artikel
 - Social referral traffic
 - Bounce rate
-
-**Events to verify:**
-- `article_published` fired saat publish
-- `newsletter_sent` fired saat newsletter dikirim
-- `tiktok_video_published` fired saat video upload (Phase 2)
-- `donation_cta_click` fired saat user klik CTA "Dukung TAM" di artikel (Phase 2, lihat `files/Payment.md` Section 9)
-- `donation_success` fired saat donasi berhasil settled via webhook (Phase 2)
 
 **Review schedule:**
 - H+1: Cek apakah artikel ter-index Google (site:search)
@@ -1218,17 +991,17 @@ Monitor performa artikel 7 hari setelah publish.
 **Monthly:**
 - Cek apakah data di artikel masih relevan
 - Update jika ada survei baru yang relevan
-- Cek internal links masih aktif
+- Cek internal links masih aktif (termasuk link antar part)
 - Refresh SEO jika ranking turun
 
 **Quarterly:**
-- Review artikel di cluster topik yang sama
-- Identifikasi artikel untuk update vs archive
+- Review seri secara keseluruhan
+- Identifikasi part untuk update vs archive
 - Plan seri konten baru berdasarkan performa
 
 ## Step 11: Rollback Procedure
 
-Jika insert gagal atau artikel salah publish, undo dengan:
+Jika insert gagal atau part salah publish, undo dengan:
 
 **Delete article file:**
 ```bash
@@ -1243,42 +1016,9 @@ npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('pa
 
 **Delete OG images dari R2:**
 ```bash
-# Hapus card + feature WebP untuk slug tersebut
-curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-card.webp"
-curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-feature.webp"
-
-# Atau jalankan via script (otomatis hapus semua varian OG untuk slug):
 npx tsx -e "
 require('fs').readFileSync('.env.local','utf8').split('\n').forEach(l => { const i=l.indexOf('='); if(i>0) process.env[l.substring(0,i).trim()] = l.substring(i+1).trim(); });
 const { deleteOldOGImages } = require('./lib/cdn/r2');
 deleteOldOGImages('SLUG').then(() => console.log('OG images deleted from R2'));
 "
 ```
-
-**Note:** Setelah rollback, slug bisa dipakai ulang karena file sudah dihapus. Jika artikel sudah di-deploy ke production, lakukan `git rm content/articles/SLUG.md && git commit && git push` untuk hapus dari production juga.
-
-## Error Prevention Reference
-
-Bug yang pernah terjadi dan cara mencegah:
-
-| Bug | Penyebab | Pencegahan |
-|-----|----------|------------|
-| Artikel tidak muncul di homepage | `publishedAt` null atau di masa depan dengan status `published` | Step 4: WAJIB set `publishedAt` ke now/past untuk published, future untuk scheduled |
-| Artikel tidak punya penulis | `author` null atau slug salah di frontmatter | Step 0: cek author slug dari `content/config.ts` |
-| TOC kosong di artikel | Heading pakai h1 atau tidak ada h2 | Step 0.5: h2/h3 only, min 3 h2 |
-| Internal link kurang dari 2 | Tidak ada validasi internal linking | Step 0.5: cek min 2 link ke `/artikel/` |
-| Slug duplikat | Tidak cek file exists sebelum insert | Step 0: cek `existsSync(content/articles/SLUG.md)` |
-| Scheduled article muncul sebelum waktunya | Loader tidak filter `publishedAt <= now()` | Loader sudah filter `status === 'published' && publishedAt <= now()` |
-| Scheduled article tidak auto-publish | `CRON_SECRET` belum set atau tidak sinkron antara Vercel dan GitHub Secrets | Set `CRON_SECRET` di Vercel dashboard DAN GitHub Secrets, pastikan nilai sama |
-| OG image null di meta tags | `post_metadata` belum di-populate (OG belum di-generate) | Step 5: generate OG via API atau tunggu cron auto-generate untuk scheduled |
-| Artikel terdeteksi AI-generated | AI vocabulary (EN+ID), staccato drama, copula avoidance, significance inflation, signposting, filler, promotional language | Step 1: jalankan humanizer audit script (15 kategori di `files/HumanizerRules.md`), fix semua FAIL sebelum insert |
-| AI vocab Indonesia (signifikan, krusial, mendalam) | Kata-kata formal yang sering dihasilkan AI bahasa Indonesia | Step 1: audit script cek AI vocab ID, ganti dengan kata natural |
-| Curly quotes di body | Editor/CMS auto-convert straight quotes | Step 1: cek curly quotes, replace dengan straight quotes |
-| Fragmented headers (heading + 1 kalimat restates) | AI pattern: heading diikuti kalimat yang hanya mengulang heading | Step 1: hapus kalimat restates, langsung masuk konten |
-| Rule of three overuse | AI pattern: memaksakan 3 item beruntun | Step 1: max 2x per artikel, pecah jadi 2 item atau kalimat terpisah |
-| Negative parallelisms ("not only...but also") | AI pattern: konstruksi "tidak hanya...tapi juga" berlebihan | Step 1: rewrite jadi kalimat langsung tanpa parallel construction |
-| Aphorism formulas ("X is the Y of Z") | AI pattern: kalimat terdengar profound tapi tidak presisi | Step 1: ganti dengan klaim konkret tanpa formula |
-| Vague attribution ("studi menunjukkan") | AI pattern: klaim tanpa sumber spesifik | Step 1: wajib sebut nama studi + tahun + link |
-| Generic conclusions ("masa depan cerah") | AI pattern: penutup generic dan tidak spesifik | Step 1: ganti dengan perspektif spesifik TAM |
-| OG headline sama dengan title | Copy-paste title ke ogHeadline, OG image tidak optimal untuk social CTR | Step 0.5: ogHeadline HARUS berbeda, lebih pendek, punchy, conversational (max 50 chars) |
-| Sitemap lastModified tidak update | `updatedAt` pakai `publishedAt` bukan file mtime | Loader sekarang pakai `statSync(filePath).mtime` untuk `updatedAt` |

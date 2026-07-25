@@ -34,8 +34,8 @@ export function renderDigestEmail(data: DigestEmailData): { subject: string; htm
   const today = new Date().toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 
   const subject = count === 1
-    ? `Artikel baru hari ini: ${articles[0].title}`
-    : `${count} artikel baru hari ini dari TAM`;
+    ? `Artikel baru minggu ini: ${articles[0].title}`
+    : `${count} artikel baru minggu ini dari TAM`;
 
   const preheader = articles.map(a => escapeHtml(a.title)).join(' | ').substring(0, 120);
 
@@ -74,8 +74,8 @@ export function renderDigestEmail(data: DigestEmailData): { subject: string; htm
 <p style="text-align:center;margin:0 0 24px 0;color:#a1a1aa;font-size:13px;">${today}</p>
 
 <div style="background:#fff;border-radius:12px;padding:32px;">
-<h1 style="margin:0 0 8px 0;font-size:22px;font-weight:800;color:#0a0a0a;">Update artikel baru hari ini</h1>
-<p style="margin:0 0 24px 0;color:#71717a;font-size:14px;">Rekapan artikel yang publish hari ini.</p>
+<h1 style="margin:0 0 8px 0;font-size:22px;font-weight:800;color:#0a0a0a;">Update artikel minggu ini</h1>
+<p style="margin:0 0 24px 0;color:#71717a;font-size:14px;">Rekapan artikel yang publish minggu ini.</p>
 
 ${articleItems}
 

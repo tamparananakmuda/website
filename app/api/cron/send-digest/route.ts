@@ -3,7 +3,7 @@ import { getPostWithRelationsBySlug } from '@/lib/db/queries/posts';
 import { getActiveSubscribers } from '@/lib/db/queries/newsletter';
 import { sendEmail } from '@/lib/email/client';
 import { renderDigestEmail, DigestArticle } from '@/lib/email/templates/article-notification';
-import { getPostsPublishedToday } from '@/lib/articles/loader';
+import { getPostsPublishedThisWeek } from '@/lib/articles/loader';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -17,16 +17,16 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const todayPosts = await getPostsPublishedToday();
+    const weekPosts = await getPostsPublishedThisWeek();
 
-    if (todayPosts.length === 0) {
-      return NextResponse.json({ sent: false, reason: 'No articles published today' });
+    if (weekPosts.length === 0) {
+      return NextResponse.json({ sent: false, reason: 'No articles published this week' });
     }
 
-    console.log(`[digest] Found ${todayPosts.length} articles published today`);
+    console.log(`[digest] Found ${weekPosts.length} articles published this week`);
 
     const articles: DigestArticle[] = [];
-    for (const fullPost of todayPosts) {
+    for (const fullPost of weekPosts) {
       const category = fullPost.category ?? null;
       const author = fullPost.author ?? null;
 
@@ -64,7 +64,7 @@ export async function GET(request: NextRequest) {
         to: sub.email,
         subject,
         htmlContent: html,
-        tags: ['daily-digest'],
+        tags: ['weekly-digest'],
       });
       if (result.success) {
         emailsSent++;
