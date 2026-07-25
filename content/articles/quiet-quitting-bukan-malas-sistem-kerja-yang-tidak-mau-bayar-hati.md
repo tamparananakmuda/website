@@ -28,6 +28,7 @@ sourceReferences:
   - "SERUJI Survey 2026: Gen Z dan engagement kerja"
   - "McKinsey 2026: 48% Gen Z butuh fleksibilitas kerja"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

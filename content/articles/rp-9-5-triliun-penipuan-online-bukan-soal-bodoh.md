@@ -38,6 +38,7 @@ sourceReferences:
     url: "https://nasional.kompas.com/read/2026/01/27/19151301/menkomdigi-kerugian-masyarakat-akibat-penipuan-digital-rp-91-triliun"
     label: "Kompas: Menkomdigi Kerugian Penipuan Digital Rp9,1 Triliun (Jan 2026)"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

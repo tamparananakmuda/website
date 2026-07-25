@@ -38,6 +38,7 @@ sourceReferences:
     url: "https://ftnews.co.id/data-86-persen-ngaku-mampu-kenali-scam-tapi-35-persen-di-antaranya-tetap-jadi-korban"
     label: "FTNews: 86 Persen Ngaku Mampu Kenali Scam tapi 35 Persen Tetap Jadi Korban"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

@@ -28,6 +28,7 @@ sourceReferences:
   - "Jakpat/GoodStats Apr 2026: 60% Gen Z cemas masa depan, 57% tekanan finansial"
   - "IDN Research Institute IMGR 2027: Kelas menengah menyusut, adaptasi generasi muda"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

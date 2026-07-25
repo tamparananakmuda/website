@@ -38,6 +38,7 @@ sourceReferences:
     url: "https://insight.kontan.co.id/news/erosi-kelas-menengah-ancaman-middle-income-trap"
     label: "Kontan: Erosi Kelas Menengah, Ancaman Middle Income Trap"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

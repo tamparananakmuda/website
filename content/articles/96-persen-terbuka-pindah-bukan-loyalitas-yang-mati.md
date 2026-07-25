@@ -41,6 +41,7 @@ sourceReferences:
     url: "https://www.randstad.com/press/2025/work-life-balance-tops-pay-randstads-workmonitor-reveals/"
     label: "Randstad Workmonitor 2025: Work-life Balance Tops Pay"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

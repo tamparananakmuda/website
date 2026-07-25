@@ -38,6 +38,7 @@ sourceReferences:
     url: "https://news.detik.com/berita/d-8513574/orang-indonesia-pakai-ai-paling-sering-buat-apa"
     label: "detikNews: Orang Indonesia Pakai AI Paling Sering Buat Apa"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

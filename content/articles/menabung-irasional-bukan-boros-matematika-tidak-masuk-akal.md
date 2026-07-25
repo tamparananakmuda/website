@@ -41,6 +41,7 @@ sourceReferences:
     url: "https://databoks.katadata.co.id/en/employment/statistics/6819b35f46b23/average-wage-growth-of-indonesian-workers-until-early-2025"
     label: "BPS Average Wage Growth Feb 2025 via Databoks"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"

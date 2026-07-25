@@ -56,6 +56,7 @@ sourceReferences:
     url: "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q4/apac-and-gc/greater-jakarta-land-residential-2h2025.pdf"
     label: "Cushman & Wakefield: Greater Jakarta Landed Residential 2H 2025"
 featured: false
+readingTime: 6
 humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"
