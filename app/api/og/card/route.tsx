@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { getPublishedPostWithRelationsBySlug } from '@/lib/db/queries/posts';
+import { getPublishedPostWithRelationsBySlug, countPublishedPostsInSeries } from '@/lib/db/queries/posts';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
 
@@ -23,6 +23,14 @@ export async function GET(request: Request) {
   const fonts = await getFonts();
 
   const category = post.category ?? null;
+  const series = post.series ?? null;
+
+  let seriesCurrent: number | undefined;
+  let seriesTotal: number | undefined;
+  if (series && post.seriesOrder) {
+    seriesTotal = await countPublishedPostsInSeries(series.id);
+    seriesCurrent = post.seriesOrder ?? undefined;
+  }
 
   return new ImageResponse(
     (
@@ -34,6 +42,8 @@ export async function GET(request: Request) {
         publishedAt={post.publishedAt}
         isPremium={post.isPremium || undefined}
         isSponsored={post.isSponsored || undefined}
+        seriesCurrent={seriesCurrent}
+        seriesTotal={seriesTotal}
         coverImageUrl={post.coverImageUrl}
         ogHeadline={post.ogHeadline || undefined}
         size="card"

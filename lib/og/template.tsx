@@ -780,19 +780,48 @@ export function OgTemplate(props: TemplateProps): ReactElement {
             backgroundColor: categoryColor,
           }} />
 
-          {/* Category eyebrow */}
-          <span style={{
-            fontFamily: FONT_DISPLAY,
-            fontSize: `${cfg.categoryFont}px`,
-            fontWeight: 700,
-            color: categoryColor,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            marginBottom: '16px',
+          {/* Category eyebrow + Series badge */}
+          <div style={{
             display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: '12px',
+            marginBottom: '16px',
+            flexShrink: 0,
           }}>
-            {(props.category || 'ARTIKEL')}
-          </span>
+            <span style={{
+              fontFamily: FONT_DISPLAY,
+              fontSize: `${cfg.categoryFont}px`,
+              fontWeight: 700,
+              color: categoryColor,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              display: 'flex',
+            }}>
+              {(props.category || 'ARTIKEL')}
+            </span>
+            {props.seriesCurrent !== undefined && props.seriesTotal !== undefined && (
+              <span style={{
+                fontFamily: FONT_DISPLAY,
+                fontSize: `${cfg.categoryFont}px`,
+                fontWeight: 700,
+                color: COLORS.textPrimary,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                backgroundColor: 'rgba(229,229,229,0.08)',
+                paddingTop: `${Math.round(cfg.categoryFont * 0.2)}px`,
+                paddingBottom: `${Math.round(cfg.categoryFont * 0.2)}px`,
+                paddingLeft: `${Math.round(cfg.categoryFont * 0.5)}px`,
+                paddingRight: `${Math.round(cfg.categoryFont * 0.5)}px`,
+                borderRadius: `${Math.round(cfg.categoryFont * 0.2)}px`,
+              }}>
+                SERI {String(props.seriesCurrent).padStart(2, '0')}/{String(props.seriesTotal).padStart(2, '0')}
+              </span>
+            )}
+          </div>
 
           {/* Hook headline wrapper to ensure clean separation from excerpt */}
           <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
