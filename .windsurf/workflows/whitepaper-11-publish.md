@@ -10,9 +10,9 @@ Publikasi PDF atau landing page.
 
 Dari `/whitepaper-10-humanizer`
 
-## Whitepaper tidak perlu deploy
+## Whitepaper publish = set status di file Markdown
 
-Di-insert ke DB, langsung live saat `status='published'`. Tidak ada file yang di-commit.
+Set `status: "published"` di frontmatter file `content/whitepaper/SLUG.md`. Commit dan push ke main untuk deploy.
 
 ## OG Image Generation (manual, template berbeda dari artikel)
 
@@ -36,7 +36,7 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 
 ## Checklist
 
-- [ ] `status` = `published` di DB
+- [ ] `status` = `published` di frontmatter file
 - [ ] OG image generated
 - [ ] HTTP 200 di production `/whitepaper/SLUG`
 - [ ] Sitemap includes slug

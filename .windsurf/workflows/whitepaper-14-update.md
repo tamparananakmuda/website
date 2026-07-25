@@ -28,25 +28,19 @@ Dari `/whitepaper-13-monitor`
 ```bash
 # Cek semua internal link di whitepaper
 npx tsx -e "
-const fs = require('fs'); const path = require('path');
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim(); if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('='); if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema'); const { eq } = require('drizzle-orm');
-db.select().from(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(r => {
-  const w = r[0]; if (!w) { console.error('NOT FOUND'); process.exit(1); }
-  const links = [...w.body.matchAll(/\]\(\/(artikel|whitepaper)\/([^)]+)\)/g)].map(m => m[2]);
-  const { existsSync } = require('fs');
-  const { join } = require('path');
-  links.forEach(slug => {
-    const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
-    console.log((existsSync(filePath) ? 'OK' : 'BROKEN') + ': ' + slug);
-  });
+const { readFileSync, existsSync } = require('fs');
+const { join } = require('path');
+const matter = require('gray-matter');
+const filePath = join(process.cwd(), 'content', 'whitepaper', 'SLUG.md');
+if (!existsSync(filePath)) { console.error('NOT FOUND'); process.exit(1); }
+const { content } = matter(readFileSync(filePath, 'utf8'));
+const links = [...content.matchAll(/\]\(\/(artikel|whitepaper)\/([^)]+)\)/g)].map(m => m[2]);
+links.forEach(slug => {
+  const articlePath = join(process.cwd(), 'content', 'articles');
+  const seriPath = join(process.cwd(), 'content', 'seri');
+  const wpPath = join(process.cwd(), 'content', 'whitepaper', slug + '.md');
+  const found = existsSync(wpPath) || require('child_process').execSync('find ' + articlePath + ' ' + seriPath + ' -name ' + slug + '.md 2>/dev/null').toString().trim();
+  console.log((found ? 'OK' : 'BROKEN') + ': ' + slug);
 });
 "
 ```
@@ -56,26 +50,23 @@ db.select().from(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(r => {
 1. Update body di `$ARTICLE_JSON`
 2. Jalankan ulang `/whitepaper-09-qc` untuk verifikasi
 3. Jalankan ulang `/whitepaper-10-humanizer` untuk verifikasi
-4. Update DB:
+4. Update file Markdown:
    ```bash
    npx tsx -e "
    const fs = require('fs'); const path = require('path');
-   const envPath = path.join(process.cwd(), '.env.local');
-   if (fs.existsSync(envPath)) {
-     fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-       const t = line.trim(); if (!t || t.startsWith('#')) return;
-       const i = t.indexOf('='); if (i === -1) return;
-       process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-     });
-   }
-   const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema'); const { eq } = require('drizzle-orm');
+   const matter = require('gray-matter');
    const wp = JSON.parse(fs.readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
-   db.update(whitepapers).set({
-     body: wp.body, summary: wp.summary, title: wp.title, subtitle: wp.subtitle || null,
-     tags: wp.tags || [], readingTime: wp.reading_time || 10,
-   }).where(eq(whitepapers.slug, wp.slug)).then(() => {
-     console.log('Whitepaper updated:', wp.slug);
-   }).catch(e => console.error('FATAL:', e.message));
+   const filePath = path.join(process.cwd(), 'content', 'whitepaper', wp.slug + '.md');
+   if (!fs.existsSync(filePath)) { console.error('FATAL: file not found'); process.exit(1); }
+   const { data, content } = matter(fs.readFileSync(filePath, 'utf8'));
+   data.title = wp.title;
+   data.subtitle = wp.subtitle || null;
+   data.summary = wp.summary || null;
+   data.tags = wp.tags || [];
+   data.readingTime = wp.reading_time || 10;
+   const fileContent = matter.stringify(wp.body, data);
+   fs.writeFileSync(filePath, fileContent, 'utf8');
+   console.log('Whitepaper updated:', wp.slug);
    "
    ```
 5. Regenerate OG image jika title berubah
@@ -94,19 +85,7 @@ db.select().from(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(r => {
 ## Rollback (jika perlu hapus whitepaper)
 
 ```bash
-npx tsx -e "
-const fs = require('fs'); const path = require('path');
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim(); if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('='); if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema'); const { eq } = require('drizzle-orm');
-db.delete(whitepapers).where(eq(whitepapers.slug, 'SLUG')).then(() => console.log('Whitepaper deleted: SLUG')).catch(e => console.error('FATAL:', e.message));
-"
+rm content/whitepaper/SLUG.md
 ```
 
 ## Checklist

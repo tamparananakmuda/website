@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPublishedWhitepaperBySlug, getRelatedWhitepapers } from '@/lib/db/queries/whitepapers';
-import { MarkdownContent } from '@/components/markdown-content';
 import { TableOfContents } from '@/components/table-of-contents';
 import { ShareButtons } from '@/components/share-buttons';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
@@ -53,7 +52,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
     notFound();
   }
 
-  const related = await getRelatedWhitepapers(wp.id, 3);
+  const related = await getRelatedWhitepapers(wp.slug, 3);
 
   return (
     <article>
@@ -187,7 +186,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
       {/* Content */}
       <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <TableOfContents body={wp.body} />
-        <MarkdownContent body={wp.body} />
+        <div dangerouslySetInnerHTML={{ __html: wp.bodyHtml }} />
       </div>
 
       {/* Share */}

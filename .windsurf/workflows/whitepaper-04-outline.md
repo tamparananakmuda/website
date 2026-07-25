@@ -176,22 +176,12 @@ Whitepaper menggunakan Article schema (bukan BlogPosting). Pastikan:
 # Cek artikel existing di folder
 find content/articles/ -name "*.md" | xargs grep -li "KEYWORD"
 
-# Cek whitepaper existing di DB
-npx tsx -e "
-const fs = require('fs'); const path = require('path');
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim(); if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('='); if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema');
-db.select().from(whitepapers).then(r => {
-  r.forEach(w => console.log(w.slug, '|', w.title));
-}).catch(e => console.error('FATAL:', e.message));
-"
+# Cek whitepaper existing di folder
+ls content/whitepaper/*.md 2>/dev/null | while read f; do
+  slug=$(basename "$f" .md)
+  title=$(grep -m1 '^title:' "$f" | sed 's/title: //; s/"//g')
+  echo "$slug | $title"
+done
 ```
 
 ## Checklist

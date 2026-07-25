@@ -156,11 +156,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <span className="text-muted-foreground">&bull;</span>
             <span className="text-muted-foreground">{post.readingTime ?? 1} menit baca</span>
           </div>
-          <h1 className="mb-6 text-3xl font-bold leading-tight md:text-5xl">
+          <h1 className="mb-10 text-3xl font-bold leading-tight md:text-5xl">
             {post.title}
           </h1>
           {post.excerpt && (
-            <p className="mb-6 text-lg text-muted-foreground" data-testid="article-excerpt">{post.excerpt}</p>
+            <p className="mb-8 text-lg text-muted-foreground" data-testid="article-excerpt">{post.excerpt}</p>
           )}
           {post.author && (
             <div className="mb-8 flex items-center justify-between text-sm text-muted-foreground">

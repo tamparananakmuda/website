@@ -67,22 +67,13 @@ Whitepaper target audience berbeda dari artikel:
 Cek whitepaper dan artikel existing yang topiknya berdekatan:
 
 ```bash
-# Cek whitepaper existing di DB
-npx tsx -e "
-const fs = require('fs'); const path = require('path');
-const envPath = path.join(process.cwd(), '.env.local');
-if (fs.existsSync(envPath)) {
-  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
-    const t = line.trim(); if (!t || t.startsWith('#')) return;
-    const i = t.indexOf('='); if (i === -1) return;
-    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
-  });
-}
-const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema');
-db.select().from(whitepapers).then(r => {
-  r.forEach(w => console.log(w.slug, '|', w.title, '|', w.status));
-}).catch(e => console.error('FATAL:', e.message));
-"
+# Cek whitepaper existing di folder
+ls content/whitepaper/*.md 2>/dev/null | while read f; do
+  slug=$(basename "$f" .md)
+  title=$(grep -m1 '^title:' "$f" | sed 's/title: //; s/"//g')
+  status=$(grep -m1 '^status:' "$f" | sed 's/status: //; s/"//g')
+  echo "$slug | $title | $status"
+done
 
 # Cek artikel existing yang topiknya mirip
 grep -ril "KEYWORD" content/articles/ --include="*.md" | head -10
@@ -120,14 +111,14 @@ Tujuan: pastikan whitepaper baru tidak overlap dengan existing, dan bisa di-link
 | 05-draft | **DIBUAT** - JSON pertama kali diisi dengan title, slug, body, dll. |
 | 06-review | JSON di-update jika ada revisi editorial |
 | 07-design | JSON di-update jika ada coverImageUrl/downloadUrl |
-| 08-build | **TERAKHIR DIPAKAI** - JSON dibaca untuk insert ke DB |
+| 08-build | **TERAKHIR DIPAKAI** - JSON dibaca untuk write file Markdown |
 | 09-qc | JSON dibaca untuk audit (read-only) |
 | 10-humanizer | JSON di-update jika ada perubahan body |
-| 11+ | JSON tidak dipakai lagi (sudah di DB) |
+| 11+ | JSON tidak dipakai lagi (sudah di file) |
 
 ## Lifecycle
 
-Whitepaper disimpan langsung di DB (tabel `whitepapers`) via Drizzle ORM. Tidak ada file Markdown, tidak ada frontmatter. Pastikan `DATABASE_URL` di `.env.local`.
+Whitepaper disimpan sebagai file Markdown di `content/whitepaper/` dengan frontmatter. Tidak ada DB insert untuk whitepaper.
 
 Draft disimpan ke `$ARTICLE_JSON` (`/tmp/tam-article.json`) dari step 05 sampai 08.
 
