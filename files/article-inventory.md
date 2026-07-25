@@ -35,6 +35,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 23 | Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan | detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan | Mindset | Mindset & Realita | kontra-narasi | 2026-07-24 (scheduled 08:00 WIB) |
 | 24 | Skill Not School: Tapi Sistem Tetap Pakai Ijazah | skill-not-school-tapi-sistem-tetap-pakai-ijazah | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-24 (scheduled 12:00 WIB) |
 | 25 | Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses, Tapi Kosong di Kas | omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas | Bisnis | Bisnis | tamparan | 2026-07-24 (scheduled 17:00 WIB) |
+| 26 | Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji Tanpa Makan | beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan | Uang | Keuangan & Uang | kontra-narasi | 2026-07-25 (published 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

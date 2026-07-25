@@ -63,7 +63,7 @@ OJK mencatat 52% UMKM di Indonesia tidak punya pembukuan terpisah antara uang pr
 
 ## Jebakan perang harga
 
-Salah satu alasan bisnis Gen Z omzet tinggi tapi laba nol adalah perang harga. Marketplace seperti Shopee dan Tokopedia mendorong seller untuk memberikan diskon besar-besaran. Flash sale, gratis ongkir, cashback. Konsumen senang, tapi siapa yang bayar? Kamu.
+Salah satu alasan bisnis Gen Z omzet tinggi tapi laba nol adalah perang harga. Marketplace seperti Shopee dan Tokopedia mendorong seller untuk memberikan diskon besar-besaran. Flash sale, gratis ongkir, cashback. Konsumen senang, tapi siapa yang menanggung biayanya adalah kamu sendiri.
 
 Kamu jual produk dengan margin tipis, lalu potong lagi dengan diskon platform, biaya administrasi, dan ongkir yang kamu subsidi. Hasilnya: omzet naik karena volume, tapi laba per unit turun. Kamu kerja lebih keras untuk uang yang lebih sedikit.
 
