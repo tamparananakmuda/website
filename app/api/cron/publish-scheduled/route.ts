@@ -35,13 +35,15 @@ export async function GET(request: NextRequest) {
 
     for (const post of scheduled) {
       try {
-        const published = await publishArticleFile(post.slug);
-        if (!published) {
-          console.log(`[cron] Could not publish ${post.slug} (already published or file not found)`);
-          continue;
+        // Try to publish file (works locally, fails silently on Vercel read-only FS)
+        try {
+          await publishArticleFile(post.slug);
+          console.log(`[cron] Published: ${post.slug}`);
+        } catch (pubError) {
+          console.log(`[cron] File publish skipped for ${post.slug} (read-only FS or already published)`);
         }
-        console.log(`[cron] Published: ${post.slug}`);
 
+        // OG generation runs regardless of file publish result
         const fullPost = await getPostWithRelationsBySlug(post.slug);
         if (!fullPost) continue;
 
