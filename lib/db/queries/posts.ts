@@ -150,6 +150,6 @@ export async function getNonSeriesPublishedPostsWithRelations(limit = 10): Promi
   return fileGetNonSeriesPublishedPostsWithRelations(limit);
 }
 
-export async function getLatestSeriesWithPosts(limit = 3) {
-  return fileGetLatestSeriesWithPosts(limit);
+export async function getLatestSeriesWithPosts(maxSeries = 3, postsPerSeries = 3) {
+  return fileGetLatestSeriesWithPosts(maxSeries, postsPerSeries);
 }

@@ -5,6 +5,7 @@ interface LatestSeriesProps {
   series: Array<{
     seriesSlug: string;
     seriesTitle: string;
+    totalParts: number;
     posts: PostWithRelations[];
   }>;
 }
@@ -52,7 +53,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                     {s.seriesTitle}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    {s.posts.length} bagian seri lengkap
+                    {s.totalParts} bagian seri lengkap
                   </p>
                 </div>
               </div>
@@ -105,7 +106,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                         </p>
                       )}
                       <div className="mt-auto flex items-center gap-2 text-xs text-muted-foreground">
-                        <span>Bagian {order} dari {s.posts.length}</span>
+                        <span>Bagian {order} dari {s.totalParts}</span>
                         <span>&middot;</span>
                         <span>{post.readingTime} menit baca</span>
                       </div>

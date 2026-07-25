@@ -19,7 +19,7 @@ export default async function HomePage() {
   const [categories, recentPosts, latestSeries] = await Promise.all([
     getAllCategories(),
     getNonSeriesPublishedPostsWithRelations(3),
-    getLatestSeriesWithPosts(1),
+    getLatestSeriesWithPosts(1, 3),
   ]);
 
   return (

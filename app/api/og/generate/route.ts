@@ -51,6 +51,7 @@ export async function POST(request: NextRequest) {
       isSponsored: post.isSponsored ?? undefined,
       seriesCurrent,
       seriesTotal,
+      seriesTitle: series?.title,
       coverImageUrl: post.coverImageUrl ?? undefined,
       ogHeadline: post.ogHeadline || undefined,
     });

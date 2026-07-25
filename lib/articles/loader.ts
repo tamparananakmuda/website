@@ -256,7 +256,7 @@ export async function getNonSeriesPublishedPostsWithRelations(limit = 10): Promi
   return filtered.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
 }
 
-export async function getLatestSeriesWithPosts(limit = 3): Promise<Array<{ seriesSlug: string; seriesTitle: string; posts: PostWithRelations[] }>> {
+export async function getLatestSeriesWithPosts(maxSeries = 3, postsPerSeries = 3): Promise<Array<{ seriesSlug: string; seriesTitle: string; totalParts: number; posts: PostWithRelations[] }>> {
   const articles = await getPublishedArticles();
   const seriesMap = new Map<string, RawArticle[]>();
   for (const a of articles) {
@@ -265,20 +265,21 @@ export async function getLatestSeriesWithPosts(limit = 3): Promise<Array<{ serie
       seriesMap.get(a.seriesSlug)!.push(a);
     }
   }
-  const result: Array<{ seriesSlug: string; seriesTitle: string; posts: PostWithRelations[] }> = [];
+  const result: Array<{ seriesSlug: string; seriesTitle: string; totalParts: number; posts: PostWithRelations[] }> = [];
   const entries = Array.from(seriesMap.entries());
   for (const [seriesSlug, seriesPosts] of entries) {
     const sorted = seriesPosts.sort((a: RawArticle, b: RawArticle) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0));
-    const latest = sorted.slice(-limit);
+    const latest = sorted.slice(-postsPerSeries);
     const ogMap = await getOgMetadataMap(latest.map((a: RawArticle) => a.slug));
     const seriesConfig = getSeriesBySlug(seriesSlug);
     result.push({
       seriesSlug,
       seriesTitle: seriesConfig?.title || seriesSlug,
+      totalParts: sorted.length,
       posts: latest.map((a: RawArticle) => rawToPostWithRelations(a, ogMap.get(a.slug))),
     });
   }
-  return result.slice(0, limit);
+  return result.slice(0, maxSeries);
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {

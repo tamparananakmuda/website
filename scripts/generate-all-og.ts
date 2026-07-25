@@ -62,6 +62,7 @@ async function main() {
         isSponsored: raw.isSponsored ?? undefined,
         seriesCurrent,
         seriesTotal,
+        seriesTitle: series?.title,
         coverImageUrl: raw.coverImageUrl ?? undefined,
         ogHeadline: raw.ogHeadline || undefined,
       });

@@ -16,6 +16,7 @@ export interface TemplateProps {
   isSponsored?: boolean;
   seriesCurrent?: number;
   seriesTotal?: number;
+  seriesTitle?: string;
   coverImageUrl?: string | null;
   size: ImageSize;
   platform?: string;
@@ -780,48 +781,112 @@ export function OgTemplate(props: TemplateProps): ReactElement {
             backgroundColor: categoryColor,
           }} />
 
-          {/* Category eyebrow + Series badge */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: '12px',
-            marginBottom: '16px',
-            flexShrink: 0,
-          }}>
-            <span style={{
-              fontFamily: FONT_DISPLAY,
-              fontSize: `${cfg.categoryFont}px`,
-              fontWeight: 700,
-              color: categoryColor,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
+          {/* Category eyebrow OR Series header */}
+          {props.seriesCurrent !== undefined && props.seriesTotal !== undefined ? (
+            <div style={{
               display: 'flex',
+              flexDirection: 'column',
+              marginBottom: '20px',
+              flexShrink: 0,
+              gap: '8px',
             }}>
-              {(props.category || 'ARTIKEL')}
-            </span>
-            {props.seriesCurrent !== undefined && props.seriesTotal !== undefined && (
+              {/* Episode number row */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '10px',
+              }}>
+                <span style={{
+                  fontFamily: FONT_DISPLAY,
+                  fontSize: `${cfg.categoryFont * 1.8}px`,
+                  fontWeight: 700,
+                  color: categoryColor,
+                  letterSpacing: '0.02em',
+                  lineHeight: 1,
+                }}>
+                  {String(props.seriesCurrent).padStart(2, '0')}
+                </span>
+                <span style={{
+                  fontFamily: FONT_DISPLAY,
+                  fontSize: `${cfg.categoryFont * 0.9}px`,
+                  fontWeight: 700,
+                  color: COLORS.textSecondary,
+                  letterSpacing: '0.05em',
+                }}>
+                  / {String(props.seriesTotal).padStart(2, '0')}
+                </span>
+                <span style={{
+                  fontFamily: FONT_DISPLAY,
+                  fontSize: `${cfg.categoryFont}px`,
+                  fontWeight: 700,
+                  color: COLORS.textPrimary,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  marginLeft: '8px',
+                  paddingTop: `${Math.round(cfg.categoryFont * 0.15)}px`,
+                  paddingBottom: `${Math.round(cfg.categoryFont * 0.15)}px`,
+                  paddingLeft: `${Math.round(cfg.categoryFont * 0.6)}px`,
+                  paddingRight: `${Math.round(cfg.categoryFont * 0.6)}px`,
+                  border: `1px solid ${categoryColor}66`,
+                  borderRadius: '2px',
+                }}>
+                  SERI
+                </span>
+              </div>
+              {/* Series title */}
+              {props.seriesTitle && (
+                <span style={{
+                  fontFamily: FONT_BODY,
+                  fontSize: `${cfg.categoryFont * 1.1}px`,
+                  fontWeight: 600,
+                  color: COLORS.textSecondary,
+                  letterSpacing: '0.01em',
+                  display: 'flex',
+                  maxWidth: `${cfg.titleMaxWidth * 0.7}px`,
+                }}>
+                  {props.seriesTitle}
+                </span>
+              )}
+              {/* Progress bar */}
+              <div style={{
+                width: '120px',
+                height: '3px',
+                backgroundColor: COLORS.bgElevated,
+                borderRadius: '2px',
+                overflow: 'hidden',
+                display: 'flex',
+                marginTop: '2px',
+              }}>
+                <div style={{
+                  width: `${Math.round((props.seriesCurrent / props.seriesTotal) * 100)}%`,
+                  height: '100%',
+                  backgroundColor: categoryColor,
+                }} />
+              </div>
+            </div>
+          ) : (
+            <div style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: '12px',
+              marginBottom: '16px',
+              flexShrink: 0,
+            }}>
               <span style={{
                 fontFamily: FONT_DISPLAY,
                 fontSize: `${cfg.categoryFont}px`,
                 fontWeight: 700,
-                color: COLORS.textPrimary,
-                letterSpacing: '0.08em',
+                color: categoryColor,
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                backgroundColor: 'rgba(229,229,229,0.08)',
-                paddingTop: `${Math.round(cfg.categoryFont * 0.2)}px`,
-                paddingBottom: `${Math.round(cfg.categoryFont * 0.2)}px`,
-                paddingLeft: `${Math.round(cfg.categoryFont * 0.5)}px`,
-                paddingRight: `${Math.round(cfg.categoryFont * 0.5)}px`,
-                borderRadius: `${Math.round(cfg.categoryFont * 0.2)}px`,
               }}>
-                SERI {String(props.seriesCurrent).padStart(2, '0')}/{String(props.seriesTotal).padStart(2, '0')}
+                {(props.category || 'ARTIKEL')}
               </span>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Hook headline wrapper to ensure clean separation from excerpt */}
           <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>

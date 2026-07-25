@@ -48,6 +48,7 @@ export async function GET(request: Request) {
         isSponsored={post.isSponsored || undefined}
         seriesCurrent={seriesCurrent}
         seriesTotal={seriesTotal}
+        seriesTitle={series?.title}
         coverImageUrl={post.coverImageUrl}
         ogHeadline={post.ogHeadline || undefined}
         size="feature"
