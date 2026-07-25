@@ -56,7 +56,7 @@ console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
 - `sourceReferences`: HARUS array, bukan string
 - `excerpt`: MAX 160 karakter
 - `seoMetaDescription`: MAX 160 karakter
-- `readingTime`: Tidak perlu set. Loader auto-calculate
+- `readingTime`: WAJIB set manual (estimasi: word_count / 200, bulat ke atas). Loader TIDAK auto-calculate, fallback ke 1 jika kosong
 - `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di homepage
 
 ## Scheduling Strategy
@@ -92,7 +92,7 @@ const frontmatter = {
   seoMetaTitle: article.seo_meta_title || '', seoMetaDescription: article.seo_meta_description || '',
   seoKeywords: article.seo_keywords || [],
   sourceReferences: article.source_references.map((r) => ({ type: r.type || 'link', url: r.url, label: r.label || '' })),
-  featured: article.featured || false, humanSignature: article.human_signature !== false,
+  featured: article.featured || false, readingTime: article.reading_time || Math.ceil(article.body.split(/\s+/).filter(Boolean).length / 200), humanSignature: article.human_signature !== false,
   factCheckStatus: 'verified', reviewStatus: 'publish',
   isSponsored: false, sponsorName: null, sponsorUrl: null, sponsorDisclosure: null,
   isPremium: false, premiumExcerpt: null, coverImageUrl: null, coverImageAlt: null,
@@ -163,6 +163,7 @@ Update `files/article-inventory.md` dengan baris baru:
 - [ ] `sourceReferences` isArray = true
 - [ ] `excerpt` <= 160 chars
 - [ ] `publishedAt` tidak null
+- [ ] `readingTime` di-set (bukan 1)
 - [ ] Article inventory updated
 
 ## Next

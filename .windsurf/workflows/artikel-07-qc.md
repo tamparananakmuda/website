@@ -96,6 +96,9 @@ if (il < 2) issues.push('Internal links: ' + il + ' (need min 2)');
 const wc = body.split(/\s+/).filter(w => w.length > 0).length;
 if (wc < 1000) issues.push('Word count: ' + wc + ' (need min 1.000)');
 if (wc > 2500) issues.push('Word count: ' + wc + ' (max 2.500)');
+const rt = a.reading_time || Math.ceil(wc / 200);
+if (!a.reading_time) issues.push('readingTime: MISSING (set to ' + rt + ')');
+else if (a.reading_time < 1) issues.push('readingTime: invalid (' + a.reading_time + ')');
 const og = a.og_headline || '';
 if (!og) issues.push('og_headline: MISSING');
 else if (og === title) issues.push('og_headline == title: must be different');
@@ -126,6 +129,7 @@ Jalankan sampai CLEAN, fix semua FAIL, re-run. Maksimal 5 round.
 - [ ] Tidak ada broken link
 - [ ] Formatting markdown benar (h2/h3, no h1, min 3 h2)
 - [ ] Readability OK (word count 1.000-2.500)
+- [ ] `readingTime` di-set di frontmatter (bukan 1)
 - [ ] QC audit CLEAN
 
 ## Next
