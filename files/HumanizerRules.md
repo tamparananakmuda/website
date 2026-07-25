@@ -16,7 +16,7 @@ Dilarang: crucial, pivotal, vibrant, tapestry, delve, showcase, underscore, test
 
 ## 3. AI Vocabulary (Indonesia)
 
-Dilarang: signifikan, krusial, esensial, vital, mendalam, memperhatikan, pada dasarnya, secara fundamental, pada intinya, pada akhirnya, menariknya, yang menarik, perlu dicatat, perlu diingat, tidak dapat dipungkiri, tidak diragukan lagi, sungguh-sungguh, sepenuhnya, benar-benar (overuse >2x).
+Dilarang: signifikan, krusial, esensial, vital, mendalam, memperhatikan, pada dasarnya, secara fundamental, pada intinya, pada akhirnya, menariknya, yang menarik, hal yang menarik, perlu dicatat, perlu diingat, penting untuk, penting untuk dicatat, tidak dapat dipungkiri, tidak diragukan lagi, sungguh-sungguh, sepenuhnya, benar-benar (overuse >2x).
 
 ## 4. Structural Patterns
 
@@ -96,12 +96,12 @@ if '—' in full or '–' in full:
     issues.append('Em/en dash found')
 
 # 2. AI vocab EN
-ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','seamless','empower','transform','unlock','unleash']
+ai_en = ['crucial','pivotal','vibrant','tapestry','delve','showcase','underscore','testament','foster','garner','intricate','landscape','additionally','enduring','enhance','highlight','interplay','multifaceted','nuanced','robust','holistic','paradigm','leverage','realm','beacon','bastion','quintessential','epitome','harbinger','catalyst','conduit','formidable','profound','resolute','steadfast','unwavering','seamless','empower','transform','unlock','unleash']
 found_en = [w for w in ai_en if w in body.lower()]
 if found_en: issues.append('AI vocab EN: ' + ', '.join(found_en))
 
 # 3. AI vocab ID
-ai_id = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','perlu dicatat','perlu diingat','tidak dapat dipungkiri']
+ai_id = ['signifikan','krusial','esensial','vital','mendalam','memperhatikan','pada dasarnya','secara fundamental','pada intinya','pada akhirnya','menariknya','yang menarik','hal yang menarik','perlu dicatat','perlu diingat','penting untuk','penting untuk dicatat','tidak dapat dipungkiri','tidak diragukan lagi','sungguh-sungguh','sepenuhnya']
 found_id = [w for w in ai_id if w in body.lower()]
 if found_id: issues.append('AI vocab ID: ' + ', '.join(found_id))
 
@@ -155,6 +155,29 @@ if body.count('!') > 1: issues.append('Exclamation marks: %d' % body.count('!'))
 # 14. Human signature check
 personal = len(re.findall(r'\bkita\b|\bkamu\b|\bsaya\b', body, re.I))
 if personal < 3: issues.append('Human signature weak (kita/kamu/saya: %d)' % personal)
+
+# 15. Copula avoidance
+copula = ['serves as','stands as','represents a','acts as','functions as']
+found_copula = [w for w in copula if w in body.lower()]
+if found_copula: issues.append('Copula: ' + ', '.join(found_copula))
+
+# 16. Authority tropes
+auth = ['the real question is','at its core','what really matters','fundamentally','yang sebenarnya','pada hakikatnya','inti permasalahannya']
+found_auth = [w for w in auth if w in body.lower()]
+if found_auth: issues.append('Authority tropes: ' + ', '.join(found_auth))
+
+# 17. Conversational rhetorical openers
+rhet = ['honestly?','look,','here.s the thing','jujur saja,','coba lihat,','begini']
+found_rhet = [w for w in rhet if re.search(w, body, re.I)]
+if found_rhet: issues.append('Rhetorical openers: ' + ', '.join(found_rhet))
+
+# 18. Hyphenated word pair overuse
+hyph = re.findall(r'(\w+-\w+)', body)
+hyph_counts = {}
+for h in hyph:
+    hyph_counts[h] = hyph_counts.get(h, 0) + 1
+overused = [h for h, c in hyph_counts.items() if c > 2]
+if overused: issues.append('Hyphenated overuse: ' + ', '.join(overused))
 
 print('=== HUMANIZER AUDIT ===')
 if issues:

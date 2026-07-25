@@ -34,6 +34,14 @@ Ganti kata formal AI dengan kata natural:
 | perlu dicatat | catat |
 | perlu diingat | ingat |
 | tidak dapat dipungkiri | memang, jelas |
+| tidak diragukan lagi | pasti, jelas |
+| sungguh-sungguh | betul-betul, benar |
+| sepenuhnya | utuh, seluruh |
+| benar-benar (overuse >2x) | betul, memang |
+| penting untuk | perlu, harus |
+| penting untuk dicatat | catat, ingat |
+| yang menarik | yang patut dicermati |
+| hal yang menarik | hal yang patut dicermati |
 
 | Kata AI (EN) | Ganti dengan |
 |--------------|-------------|
@@ -66,6 +74,18 @@ Ganti kata formal AI dengan kata natural:
 | transform | change, shift |
 | unlock | open, free |
 | unleash | release, let loose |
+| beacon | symbol, sign |
+| bastion | stronghold, defender |
+| quintessential | classic, ultimate |
+| epitome | perfect example, model |
+| harbinger | sign, signal |
+| catalyst | driver, trigger |
+| conduit | channel, pipe |
+| formidable | tough, strong |
+| profound | deep, serious |
+| resolute | firm, determined |
+| steadfast | steady, loyal |
+| unwavering | steady, consistent |
 
 ## Yang diperbaiki di step ini
 
@@ -193,6 +213,28 @@ for (let i = 0; i < lines.length; i++) {
   }
 }
 
+// Copula avoidance
+const copula = ['serves as','stands as','represents a','acts as','functions as'];
+const foundCopula = copula.filter(w => body.toLowerCase().includes(w));
+if (foundCopula.length) issues.push('Copula: ' + foundCopula.join(', '));
+
+// Authority tropes
+const auth = ['the real question is','at its core','what really matters','fundamentally','yang sebenarnya','pada hakikatnya','inti permasalahannya'];
+const foundAuth = auth.filter(w => body.toLowerCase().includes(w));
+if (foundAuth.length) issues.push('Authority tropes: ' + foundAuth.join(', '));
+
+// Conversational rhetorical openers
+const rhet = ['honestly?','look,','here.s the thing','jujur saja,','coba lihat,','begini'];
+const foundRhet = rhet.filter(w => new RegExp(w, 'i').test(body));
+if (foundRhet.length) issues.push('Rhetorical openers: ' + foundRhet.join(', '));
+
+// Hyphenated word pair overuse
+const hyph = body.match(/(\w+-\w+)/g) || [];
+const hyphCounts = {};
+hyph.forEach(h => { hyphCounts[h] = (hyphCounts[h] || 0) + 1; });
+const overusedHyph = Object.entries(hyphCounts).filter(([h, c]) => c > 2).map(([h]) => h);
+if (overusedHyph.length) issues.push('Hyphenated overuse: ' + overusedHyph.join(', '));
+
 console.log('=== HUMANIZER CHECK ===');
 if (issues.length) {
   console.log('FAIL (' + issues.length + '):');
@@ -213,9 +255,13 @@ if (issues.length) {
 ## Checklist
 
 - [ ] No em dash, no en dash, no curly quotes
-- [ ] No AI vocab EN/ID (cek via command di atas)
+- [ ] No AI vocab EN/ID (cek via command di atas, termasuk: yang menarik, hal yang menarik, penting untuk, penting untuk dicatat, tidak diragukan lagi, sungguh-sungguh, sepenuhnya)
 - [ ] No staccato drama, rule-of-three abuse (>2x), negative parallelisms
 - [ ] No promotional language, signposting, filler, generic conclusions
+- [ ] No copula avoidance (serves as, stands as, represents a, acts as, functions as)
+- [ ] No authority tropes (the real question is, at its core, fundamentally, yang sebenarnya, pada hakikatnya)
+- [ ] No rhetorical openers (Honestly?, Look,, Here's the thing, Jujur saja,, Coba lihat,)
+- [ ] No hyphenated word pair overuse (max 2x per hyphenated pair)
 - [ ] Max 1 exclamation mark
 - [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
 - [ ] Tone: jujur, rasional, berani, tidak menggurudi
