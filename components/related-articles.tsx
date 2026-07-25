@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface RelatedArticle {
   id: string;
@@ -33,36 +34,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
         {articles.map((article) => {
           const cat = getCategory(article);
           return (
-            <article key={article.id} className="group">
-              <Link href={`/artikel/${article.slug}`} className="block">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-4">
-                  <Image
-                    src={article.ogCardUrl || `/api/og/card?slug=${article.slug}`}
-                    alt={article.title}
-                    fill
-                    unoptimized
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="mb-3 flex items-center gap-2 text-sm">
-                  {cat && (
-                    <span style={{ color: cat.color }}>
-                      {cat.title}
-                    </span>
-                  )}
-                  <span className="text-muted-foreground">•</span>
-                  <span className="text-muted-foreground">{article.readingTime} menit baca</span>
-                </div>
-                <h3 className="mb-2 text-xl font-bold leading-tight transition-colors group-hover:text-primary">
-                  {article.title}
-                </h3>
-                {article.excerpt && (
-                  <p className="mb-4 line-clamp-2 text-muted-foreground">{article.excerpt}</p>
-                )}
-                <span className="text-sm font-medium text-primary">Baca selengkapnya</span>
-              </Link>
-            </article>
+            <RelatedArticleCard key={article.id} article={article} cat={cat} />
           );
         })}
       </div>
@@ -75,5 +47,56 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
         </Link>
       </div>
     </section>
+  );
+}
+
+function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: ReturnType<typeof getCategory> }) {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  return (
+    <article className="group">
+      <Link href={`/artikel/${article.slug}`} className="block">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-4 bg-muted/20">
+          {!imgLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex gap-1.5 animate-pulse">
+                <div className="h-8 w-1.5 rounded-full bg-primary" />
+                <div className="h-8 w-1.5 rounded-full bg-primary" />
+              </div>
+            </div>
+          )}
+          <Image
+            src={article.ogCardUrl || `/api/og/card?slug=${article.slug}`}
+            alt={article.title}
+            fill
+            unoptimized
+            loading="lazy"
+            className={`
+              object-cover transition-all duration-500
+              ${imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
+              group-hover:scale-105
+            `}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            onLoad={() => setImgLoaded(true)}
+          />
+        </div>
+        <div className="mb-3 flex items-center gap-2 text-sm">
+          {cat && (
+            <span style={{ color: cat.color }}>
+              {cat.title}
+            </span>
+          )}
+          <span className="text-muted-foreground">•</span>
+          <span className="text-muted-foreground">{article.readingTime} menit baca</span>
+        </div>
+        <h3 className="mb-2 text-xl font-bold leading-tight transition-colors group-hover:text-primary">
+          {article.title}
+        </h3>
+        {article.excerpt && (
+          <p className="mb-4 line-clamp-2 text-muted-foreground">{article.excerpt}</p>
+        )}
+        <span className="text-sm font-medium text-primary">Baca selengkapnya</span>
+      </Link>
+    </article>
   );
 }

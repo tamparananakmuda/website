@@ -17,7 +17,12 @@ export function ArticleCard({ post }: ArticleCardProps) {
       <Link href={`/artikel/${post.slug}`} className="block">
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/30">
           {!imgLoaded && (
-            <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-muted/40 to-muted/10" />
+            <div className="absolute inset-0 flex items-center justify-center bg-muted/20">
+              <div className="flex gap-1.5 animate-pulse">
+                <div className="h-8 w-1.5 rounded-full bg-primary" />
+                <div className="h-8 w-1.5 rounded-full bg-primary" />
+              </div>
+            </div>
           )}
           <Image
             src={post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`}
