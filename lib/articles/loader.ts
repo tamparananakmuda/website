@@ -16,6 +16,7 @@ import { postMetadata } from '@/lib/db/schema';
 import { eq, inArray } from 'drizzle-orm';
 
 const ARTICLES_DIR = join(process.cwd(), 'content', 'articles');
+const SERIES_DIR = join(process.cwd(), 'content', 'seri');
 
 interface RawArticle {
   slug: string;
@@ -55,13 +56,15 @@ interface RawArticle {
 }
 
 function readAllFiles(): RawArticle[] {
-  if (!existsSync(ARTICLES_DIR)) return [];
-
-  const files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md'));
   const articles: RawArticle[] = [];
 
+  const dirs = [ARTICLES_DIR, SERIES_DIR];
+  for (const dir of dirs) {
+    if (!existsSync(dir)) continue;
+    const files = readdirSync(dir).filter((f) => f.endsWith('.md'));
+
   for (const file of files) {
-    const filePath = join(ARTICLES_DIR, file);
+    const filePath = join(dir, file);
     const content = readFileSync(filePath, 'utf8');
     const parsed = parseFrontmatter(content, file);
     if (!parsed) continue;
@@ -103,6 +106,7 @@ function readAllFiles(): RawArticle[] {
       updatedAt: fm.publishedAt,
       fileMtime: statSync(filePath).mtime.toISOString(),
     });
+  }
   }
 
   return articles;
@@ -490,8 +494,11 @@ export async function getPostsPublishedThisWeek(): Promise<PostWithRelations[]> 
 
 export async function publishArticleFile(slug: string): Promise<boolean> {
   const fileName = `${slug}.md`;
-  const filePath = join(ARTICLES_DIR, fileName);
-  if (!existsSync(filePath)) return false;
+  let filePath = join(ARTICLES_DIR, fileName);
+  if (!existsSync(filePath)) {
+    filePath = join(SERIES_DIR, fileName);
+    if (!existsSync(filePath)) return false;
+  }
 
   const fileContent = readFileSync(filePath, 'utf8');
   const parsed = parseFrontmatter(fileContent, fileName);
