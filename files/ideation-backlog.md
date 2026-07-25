@@ -197,9 +197,9 @@
 
 | Jam | Artikel | Kategori | Status |
 |---|---|---|---|
-| 08:00 WIB | Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji Tanpa Makan | Uang | pending draft |
-| 12:00 WIB | Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati | Karier | pending draft |
-| 17:00 WIB | Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi Beban | Kehidupan | pending draft |
+| 08:00 WIB | Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji Tanpa Makan | Uang | published |
+| 12:00 WIB | Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati | Karier | scheduled |
+| 17:00 WIB | Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi Beban | Kehidupan | scheduled |
 
 ### 26 Jul 2026
 
@@ -233,3 +233,4 @@
 | 1.9 | 23 Jul 2026 | Ideation scan #5. 3 new ideas for 24 Jul: Detoks Dopamin, Skill Not School, Omzet vs Laba. Income Stacking rejected (duplicate of Side Hustle article). |
 | 2.0 | 23 Jul 2026 | Articles 23-25 drafted, verified, and scheduled for 24 Jul. QC passed all checks. |
 | 3.0 | 25 Jul 2026 | Ideation scan #6. 11 raw ideas, 9 prioritized (skor >= 3.5), 2 rejected. Pipeline 25-27 Jul, 3 konten/hari. Kategori: Uang (2), Karier (2), Mindset (2), Kehidupan (1), Teknologi (1), Bisnis (1). Top ideas: beli rumah (4.5), penipuan online (4.45), quiet quitting (4.4). |
+| 3.1 | 25 Jul 2026 | Articles 26-28 drafted for 25 Jul. Beli rumah already published. Quiet quitting + situationship drafted, QC passed, humanizer passed, scheduled. |

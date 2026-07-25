@@ -34,6 +34,96 @@ Lakukan Angle Test (2 pertanyaan wajib):
 | Topik butuh alur bertahap, multiple sub-topic | Seri |
 | Target: professionals, decision makers, researchers | Whitepaper |
 | Target: general audience, gen Z | Artikel/Seri |
+| Goal: lead generation, authority building, influence policy | Whitepaper |
+| Goal: traffic, awareness, engagement | Artikel/Seri |
+| Ada data primer/original research | Whitepaper |
+| Data sekunder dari publikasi existing | Artikel/Seri |
+
+## Target Audience Framework (5 aspek)
+
+| Aspek | Pertanyaan | Contoh |
+|-------|------------|--------|
+| **Demografi** | Siapa mereka? Usia, pekerjaan, lokasi | Profesional 25-35, urban, middle management |
+| **Konteks** | Kapan mereka baca whitepaper? | Saat riset untuk decision making, weekend reading |
+| **Pain point** | Masalah apa yang mereka cari solusi? | Kurang data untuk justify strategic decision |
+| **Goal baca** | Apa yang mereka cari dari whitepaper? | Data, framework, rekomendasi actionable |
+| **Action setelah baca** | Apa yang mereka lakukan? | Share ke tim, implement rekomendasi, cite di proposal |
+
+Whitepaper target audience berbeda dari artikel:
+- **Artikel:** Gen Z umum, 18-30, cari awareness/refleksi
+- **Whitepaper:** Professionals, decision makers, 25-40, cari data + rekomendasi
+
+## Search Intent Analysis (4 tipe)
+
+| Intent | Pertanyaan user | Whitepaper cocok? |
+|--------|----------------|-------------------|
+| **Informational** | "Apa itu X?" "Bagaimana X bekerja?" | Ya, jika topik kompleks butuh depth |
+| **Investigational** | "Data terbaru tentang X" "Riset X Indonesia" | Ya, whitepaper ideal untuk ini |
+| **Comparative** | "X vs Y" "Alternatif Z" | Ya, jika perbandingan butuh data mendalam |
+| **Decisional** | "Harus gimana untuk X?" | Ya, recommendation section menjawab ini |
+
+## Content Cluster Awareness
+
+Cek whitepaper dan artikel existing yang topiknya berdekatan:
+
+```bash
+# Cek whitepaper existing di DB
+npx tsx -e "
+const fs = require('fs'); const path = require('path');
+const envPath = path.join(process.cwd(), '.env.local');
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, 'utf8').split('\n').forEach(line => {
+    const t = line.trim(); if (!t || t.startsWith('#')) return;
+    const i = t.indexOf('='); if (i === -1) return;
+    process.env[t.substring(0, i).trim()] = t.substring(i + 1).trim();
+  });
+}
+const { db } = require('./lib/db'); const { whitepapers } = require('./lib/db/schema');
+db.select().from(whitepapers).then(r => {
+  r.forEach(w => console.log(w.slug, '|', w.title, '|', w.status));
+}).catch(e => console.error('FATAL:', e.message));
+"
+
+# Cek artikel existing yang topiknya mirip
+grep -ril "KEYWORD" content/articles/ --include="*.md" | head -10
+```
+
+Tujuan: pastikan whitepaper baru tidak overlap dengan existing, dan bisa di-link satu sama lain.
+
+## Template Output Ide
+
+```markdown
+## Ide Whitepaper
+
+**Judul working:** [Judul sementara]
+**Slug:** slug-whitepaper-kebab-case
+**Masalah utama:** [1-2 kalimat masalah yang diangkat]
+**Thesis awal:** [1 kalimat argumen utama, akan difinalisasi di step 03]
+**POV tag:** [pilih salah satu dari list]
+**Target audience:** [Profesional/decision maker/researcher + detail dari framework]
+**Search intent:** [Informational/Investigational/Comparative/Decisional]
+**Goal:** [Educate/influence/convert/lead-gen]
+**Angle test 1:** [Jawaban: apakah media lain akan tulis ini?]
+**Angle test 2:** [Jawaban: kalau hapus nama TAM, pembaca tahu ini TAM?]
+**Cluster:** [Whitepaper/artikel existing yang relevan untuk internal linking]
+**Estimasi word count:** [3.000-10.000 kata]
+```
+
+## ARTICLE_JSON Lifecycle
+
+| Step | Artikel JSON status |
+|------|---------------------|
+| 01-idea | Belum dibuat |
+| 02-research | Belum dibuat (data riset di notes terpisah) |
+| 03-strategy | Belum dibuat (thesis di notes terpisah) |
+| 04-outline | Belum dibuat (outline di notes terpisah) |
+| 05-draft | **DIBUAT** - JSON pertama kali diisi dengan title, slug, body, dll. |
+| 06-review | JSON di-update jika ada revisi editorial |
+| 07-design | JSON di-update jika ada coverImageUrl/downloadUrl |
+| 08-build | **TERAKHIR DIPAKAI** - JSON dibaca untuk insert ke DB |
+| 09-qc | JSON dibaca untuk audit (read-only) |
+| 10-humanizer | JSON di-update jika ada perubahan body |
+| 11+ | JSON tidak dipakai lagi (sudah di DB) |
 
 ## Lifecycle
 
