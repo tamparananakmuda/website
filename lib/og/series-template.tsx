@@ -19,12 +19,13 @@ export interface SeriesTemplateProps {
 }
 
 const COLORS = {
-  bg: '#0A0A0A',
-  bgDeep: '#050505',
+  bg: '#0B0B0B',
+  bgDeep: '#070707',
   textPrimary: '#FAFAFA',
-  textSecondary: '#A0A0A0',
-  textMuted: '#555555',
+  textSecondary: '#9A9A9A',
+  textMuted: '#4A4A4A',
   white: '#FFFFFF',
+  rule: '#1C1C1C',
 };
 
 const FONT_DISPLAY = 'Syne';
@@ -35,42 +36,52 @@ const SIZE_CONFIG = {
   card: {
     width: 800,
     height: 450,
+    leftWidth: 520,
     paddingX: 52,
     paddingY: 40,
-    watermarkFont: 320,
-    watermarkRight: -40,
-    watermarkTop: 50,
-    watermarkOpacity: 0.05,
-    headlineFont: 36,
-    excerptFont: 15,
-    badgeFont: 12,
-    badgeHeight: 26,
-    badgePaddingX: 12,
-    brandFont: 11,
-    progressHeight: 3,
-    progressWidth: 100,
+    rightPaddingX: 36,
+    headlineFont: 34,
+    excerptFont: 14,
+    episodeNumFont: 72,
+    episodeLabelFont: 11,
+    seriesTitleFont: 13,
+    brandFont: 10,
     metaFont: 10,
-    glowOpacity: '08',
+    accentBarWidth: 4,
+    accentBarHeight: 80,
+    progressWidth: 80,
+    progressHeight: 2,
+    ruleWidth: 60,
+    ruleHeight: 1,
+    glowOpacity: '06',
+    gapBeforeHeadline: 16,
+    gapBeforeExcerpt: 18,
+    gapBeforeRule: 24,
   },
   feature: {
     width: 1600,
     height: 900,
+    leftWidth: 1040,
     paddingX: 90,
     paddingY: 68,
-    watermarkFont: 640,
-    watermarkRight: -80,
-    watermarkTop: 100,
-    watermarkOpacity: 0.04,
-    headlineFont: 64,
-    excerptFont: 26,
-    badgeFont: 20,
-    badgeHeight: 42,
-    badgePaddingX: 20,
-    brandFont: 18,
-    progressHeight: 5,
-    progressWidth: 180,
-    metaFont: 16,
-    glowOpacity: '06',
+    rightPaddingX: 60,
+    headlineFont: 62,
+    excerptFont: 24,
+    episodeNumFont: 140,
+    episodeLabelFont: 18,
+    seriesTitleFont: 22,
+    brandFont: 16,
+    metaFont: 14,
+    accentBarWidth: 6,
+    accentBarHeight: 160,
+    progressWidth: 160,
+    progressHeight: 3,
+    ruleWidth: 100,
+    ruleHeight: 2,
+    glowOpacity: '04',
+    gapBeforeHeadline: 28,
+    gapBeforeExcerpt: 28,
+    gapBeforeRule: 40,
   },
 };
 
@@ -94,9 +105,9 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
     width: `${cfg.width}px`,
     height: `${cfg.height}px`,
     backgroundColor: COLORS.bg,
-    backgroundImage: `radial-gradient(ellipse at 78% 50%, ${catColor}${cfg.glowOpacity} 0%, transparent 55%), linear-gradient(160deg, ${COLORS.bgDeep} 0%, ${COLORS.bg} 65%)`,
+    backgroundImage: `linear-gradient(160deg, ${COLORS.bgDeep} 0%, ${COLORS.bg} 50%, #0D0D0D 100%)`,
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     position: 'relative',
     overflow: 'hidden',
     boxSizing: 'border-box',
@@ -104,79 +115,61 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
 
   return (
     <div style={rootStyle}>
-      {/* 1. WATERMARK - painted first = behind everything. Massive episode number. */}
+      {/* Subtle radial glow behind right panel */}
       <div style={{
         position: 'absolute',
-        top: `${cfg.watermarkTop}px`,
-        right: `${cfg.watermarkRight}px`,
-        fontFamily: FONT_DISPLAY,
-        fontSize: `${cfg.watermarkFont}px`,
-        fontWeight: 800,
-        color: catColor,
-        opacity: cfg.watermarkOpacity,
-        lineHeight: 0.85,
-        letterSpacing: '-0.08em',
+        top: '0',
+        right: '0',
+        width: `${cfg.width - cfg.leftWidth}px`,
+        height: '100%',
+        backgroundImage: `radial-gradient(ellipse at 50% 45%, ${catColor}${cfg.glowOpacity} 0%, transparent 70%)`,
         display: 'flex',
         flexShrink: 0,
-      }}>
-        {epStr}
-      </div>
+      }} />
 
-      {/* 2. CONTENT - painted after = on top of watermark */}
-      {/* Top row: badge left, series total right */}
+      {/* LEFT 65% - The Hook (episode-specific content) */}
       <div style={{
         display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: `${cfg.paddingY}px ${cfg.paddingX}px 0`,
+        flexDirection: 'column',
+        width: `${cfg.leftWidth}px`,
+        height: '100%',
+        padding: `${cfg.paddingY}px ${cfg.paddingX}px`,
+        boxSizing: 'border-box',
         flexShrink: 0,
       }}>
-        {/* Episode badge - solid colored pill, consistent corner */}
+        {/* Top: category eyebrow */}
         <div style={{
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          backgroundColor: catColor,
-          borderRadius: `${cfg.badgeHeight / 2}px`,
-          paddingLeft: `${cfg.badgePaddingX}px`,
-          paddingRight: `${cfg.badgePaddingX}px`,
-          height: `${cfg.badgeHeight}px`,
           flexShrink: 0,
         }}>
+          <div style={{
+            width: `${cfg.accentBarWidth}px`,
+            height: `${cfg.episodeLabelFont}px`,
+            backgroundColor: catColor,
+            borderRadius: '1px',
+            flexShrink: 0,
+            display: 'flex',
+          }} />
           <span style={{
             fontFamily: FONT_DISPLAY,
-            fontSize: `${cfg.badgeFont}px`,
+            fontSize: `${cfg.episodeLabelFont}px`,
             fontWeight: 700,
-            color: COLORS.bg,
-            letterSpacing: '0.1em',
+            color: catColor,
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            marginLeft: '10px',
             display: 'flex',
           }}>
-            EP {epStr} / {totalStr}
+            {(props.category || 'SERI').toUpperCase()}
           </span>
         </div>
 
-        {/* Series total indicator - subtle */}
-        <span style={{
-          fontFamily: FONT_MONO,
-          fontSize: `${cfg.metaFont}px`,
-          color: COLORS.textMuted,
-          letterSpacing: '0.1em',
-          display: 'flex',
-        }}>
-          {progressPercent}% COMPLETE
-        </span>
-      </div>
+        {/* Gap */}
+        <div style={{ height: `${cfg.gapBeforeHeadline}px`, flexShrink: 0, display: 'flex' }} />
 
-      {/* 3. CENTER - Headline dominates 70% of frame */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: `0 ${cfg.paddingX}px`,
-        flex: 1,
-      }}>
+        {/* Headline - left-aligned, massive, editorial */}
         <span style={{
           fontFamily: FONT_DISPLAY,
           fontSize: `${cfg.headlineFont}px`,
@@ -184,41 +177,38 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           color: COLORS.textPrimary,
           letterSpacing: '-0.025em',
           lineHeight: 1.08,
-          textAlign: 'center',
+          textAlign: 'left',
           display: 'flex',
-          maxWidth: `${cfg.width * 0.62}px`,
+          maxWidth: `${cfg.leftWidth - cfg.paddingX * 2}px`,
+          flexShrink: 0,
         }}>
           {truncate(displayTitle, props.size === 'card' ? 48 : 80)}
         </span>
 
         {/* Excerpt - feature only */}
         {props.size === 'feature' && props.excerpt && (
-          <span style={{
-            fontFamily: FONT_BODY,
-            fontSize: `${cfg.excerptFont}px`,
-            fontWeight: 400,
-            color: COLORS.textSecondary,
-            lineHeight: 1.5,
-            textAlign: 'center',
-            marginTop: '24px',
-            display: 'flex',
-            maxWidth: `${cfg.width * 0.5}px`,
-          }}>
-            {truncate(props.excerpt, 130)}
-          </span>
+          <>
+            <div style={{ height: `${cfg.gapBeforeExcerpt}px`, flexShrink: 0, display: 'flex' }} />
+            <span style={{
+              fontFamily: FONT_BODY,
+              fontSize: `${cfg.excerptFont}px`,
+              fontWeight: 400,
+              color: COLORS.textSecondary,
+              lineHeight: 1.5,
+              textAlign: 'left',
+              display: 'flex',
+              maxWidth: `${cfg.leftWidth - cfg.paddingX * 2.2}px`,
+              flexShrink: 0,
+            }}>
+              {truncate(props.excerpt, 120)}
+            </span>
+          </>
         )}
-      </div>
 
-      {/* 4. BOTTOM - Brand left, progress bar right */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: `0 ${cfg.paddingX}px ${cfg.paddingY}px`,
-        flexShrink: 0,
-      }}>
-        {/* Brand */}
+        {/* Spacer - pushes brand to bottom */}
+        <div style={{ flex: 1, display: 'flex' }} />
+
+        {/* Bottom: thin rule + brand */}
         <div style={{
           display: 'flex',
           flexDirection: 'row',
@@ -226,49 +216,117 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           flexShrink: 0,
         }}>
           <div style={{
-            width: '3px',
-            height: `${cfg.brandFont}px`,
-            backgroundColor: '#D13A3A',
-            borderRadius: '1px',
+            width: `${cfg.ruleWidth}px`,
+            height: `${cfg.ruleHeight}px`,
+            backgroundColor: COLORS.rule,
             flexShrink: 0,
             display: 'flex',
           }} />
           <div style={{
-            width: '3px',
-            height: `${cfg.brandFont}px`,
-            backgroundColor: '#D13A3A',
-            borderRadius: '1px',
-            marginLeft: '2px',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginLeft: '14px',
             flexShrink: 0,
-            display: 'flex',
-          }} />
-          <span style={{
-            fontFamily: FONT_DISPLAY,
-            fontSize: `${cfg.brandFont * 0.65}px`,
-            fontWeight: 700,
-            color: COLORS.textPrimary,
-            letterSpacing: '0.08em',
-            marginLeft: '8px',
-            display: 'flex',
           }}>
-            TAMPARAN ANAK MUDA
-          </span>
+            <div style={{
+              width: '2px',
+              height: `${cfg.brandFont}px`,
+              backgroundColor: '#D13A3A',
+              borderRadius: '1px',
+              flexShrink: 0,
+              display: 'flex',
+            }} />
+            <div style={{
+              width: '2px',
+              height: `${cfg.brandFont}px`,
+              backgroundColor: '#D13A3A',
+              borderRadius: '1px',
+              marginLeft: '2px',
+              flexShrink: 0,
+              display: 'flex',
+            }} />
+            <span style={{
+              fontFamily: FONT_DISPLAY,
+              fontSize: `${cfg.brandFont * 0.7}px`,
+              fontWeight: 700,
+              color: COLORS.textPrimary,
+              letterSpacing: '0.1em',
+              marginLeft: '8px',
+              display: 'flex',
+            }}>
+              TAMPARAN ANAK MUDA
+            </span>
+          </div>
         </div>
+      </div>
 
-        {/* Progress bar */}
+      {/* RIGHT 35% - Episode Identity Zone (consistent across all episodes) */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: `${cfg.width - cfg.leftWidth}px`,
+        height: '100%',
+        padding: `${cfg.paddingY}px ${cfg.rightPaddingX}px`,
+        boxSizing: 'border-box',
+        flexShrink: 0,
+      }}>
+        {/* Vertical accent bar */}
+        <div style={{
+          width: `${cfg.accentBarWidth}px`,
+          height: `${cfg.accentBarHeight}px`,
+          backgroundColor: catColor,
+          borderRadius: '2px',
+          flexShrink: 0,
+          display: 'flex',
+        }} />
+
+        {/* Episode number - massive */}
+        <span style={{
+          fontFamily: FONT_DISPLAY,
+          fontSize: `${cfg.episodeNumFont}px`,
+          fontWeight: 700,
+          color: COLORS.textPrimary,
+          lineHeight: 0.9,
+          letterSpacing: '-0.05em',
+          marginTop: '20px',
+          display: 'flex',
+          flexShrink: 0,
+        }}>
+          {epStr}
+        </span>
+
+        {/* Total episodes - subtle */}
+        <span style={{
+          fontFamily: FONT_MONO,
+          fontSize: `${cfg.metaFont}px`,
+          color: COLORS.textMuted,
+          letterSpacing: '0.15em',
+          marginTop: '8px',
+          display: 'flex',
+          flexShrink: 0,
+        }}>
+          DARI {totalStr}
+        </span>
+
+        {/* Spacer */}
+        <div style={{ flex: 1, display: 'flex' }} />
+
+        {/* Progress bar - thin, minimal */}
         <div style={{
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: 'column',
           alignItems: 'center',
-          gap: '8px',
           flexShrink: 0,
         }}>
           <div style={{
             display: 'flex',
             width: `${cfg.progressWidth}px`,
             height: `${cfg.progressHeight}px`,
-            borderRadius: '2px',
-            backgroundColor: 'rgba(255,255,255,0.06)',
+            borderRadius: '1px',
+            backgroundColor: COLORS.rule,
             overflow: 'hidden',
             flexShrink: 0,
           }}>
@@ -276,7 +334,6 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
               width: `${progressPercent}%`,
               height: '100%',
               backgroundColor: catColor,
-              borderRadius: '2px',
               flexShrink: 0,
               display: 'flex',
             }} />
@@ -285,10 +342,11 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
             fontFamily: FONT_MONO,
             fontSize: `${cfg.metaFont}px`,
             color: COLORS.textMuted,
-            letterSpacing: '0.05em',
+            letterSpacing: '0.1em',
+            marginTop: '8px',
             display: 'flex',
           }}>
-            {epStr}/{totalStr}
+            {progressPercent}%
           </span>
         </div>
       </div>

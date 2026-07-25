@@ -73,9 +73,7 @@ interface RawArticle {
 function readAllFiles(): RawArticle[] {
   const articles: RawArticle[] = [];
 
-  const articleFiles = existsSync(ARTICLES_DIR)
-    ? readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')).map((f) => join(ARTICLES_DIR, f))
-    : [];
+  const articleFiles = readDirRecursive(ARTICLES_DIR);
   const seriesFiles = readDirRecursive(SERIES_DIR);
   const allFiles = [...articleFiles, ...seriesFiles];
 
@@ -509,13 +507,9 @@ export async function getPostsPublishedThisWeek(): Promise<PostWithRelations[]> 
 
 export async function publishArticleFile(slug: string): Promise<boolean> {
   const fileName = `${slug}.md`;
-  let filePath = join(ARTICLES_DIR, fileName);
-  if (!existsSync(filePath)) {
-    const seriesFiles = readDirRecursive(SERIES_DIR);
-    const found = seriesFiles.find((f) => f.endsWith(fileName));
-    if (!found) return false;
-    filePath = found;
-  }
+  const allFiles = [...readDirRecursive(ARTICLES_DIR), ...readDirRecursive(SERIES_DIR)];
+  const filePath = allFiles.find((f) => f.endsWith(fileName));
+  if (!filePath) return false;
 
   const fileContent = readFileSync(filePath, 'utf8');
   const parsed = parseFrontmatter(fileContent, fileName);
