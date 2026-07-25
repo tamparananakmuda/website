@@ -235,6 +235,61 @@ hyph.forEach(h => { hyphCounts[h] = (hyphCounts[h] || 0) + 1; });
 const overusedHyph = Object.entries(hyphCounts).filter(([h, c]) => c > 2).map(([h]) => h);
 if (overusedHyph.length) issues.push('Hyphenated overuse: ' + overusedHyph.join(', '));
 
+// Undue emphasis on significance
+const sig = ['stands as','serves as','is a testament','is a reminder','setting the stage for','marking a','shaping the','represents a shift','key turning point','evolving landscape','focal point','indelible mark','deeply rooted','contributing to the'];
+const foundSig = sig.filter(w => body.toLowerCase().includes(w));
+if (foundSig.length) issues.push('Significance emphasis: ' + foundSig.join(', '));
+
+// Undue emphasis on notability
+const notab = ['independent coverage','media outlets','written by a leading expert','active social media presence'];
+const foundNotab = notab.filter(w => body.toLowerCase().includes(w));
+if (foundNotab.length) issues.push('Notability emphasis: ' + foundNotab.join(', '));
+
+// Challenges and future prospects
+const challenges = ['despite its','faces several challenges','despite these challenges','challenges and legacy','future outlook'];
+const foundCh = challenges.filter(w => body.toLowerCase().includes(w));
+if (foundCh.length) issues.push('Challenges section: ' + foundCh.join(', '));
+
+// False ranges
+const falseRanges = (body.match(/from \w+ to \w+/gi) || []);
+if (falseRanges.length > 2) issues.push('False ranges: ' + falseRanges.length);
+
+// Inline-header vertical lists
+const inlineHeaders = (body.match(/- \*\*[^*]+\*\*:/g) || []);
+if (inlineHeaders.length > 3) issues.push('Inline-header lists: ' + inlineHeaders.length);
+
+// Emojis
+const emojiRe = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2700}-\u{27BF}]/u;
+if (emojiRe.test(body)) issues.push('Emojis found');
+
+// Collaborative artifacts
+const collab = ['i hope this helps','of course!','certainly!','would you like','want me to','let me know','here is a'];
+const foundCollab = collab.filter(w => body.toLowerCase().includes(w));
+if (foundCollab.length) issues.push('Collaborative artifacts: ' + foundCollab.join(', '));
+
+// Knowledge-cutoff disclaimers
+const cutoff = ['as of my last','up to my last training','while specific details are limited','while specific details are scarce','based on available information','not publicly available','maintains a low profile','keeps personal details private','it is believed that'];
+const foundCutoff = cutoff.filter(w => body.toLowerCase().includes(w));
+if (foundCutoff.length) issues.push('Knowledge-cutoff: ' + foundCutoff.join(', '));
+
+// Sycophantic tone
+const sycoph = ['great question!','you\'re absolutely right!','that\'s an excellent point!','that\'s a great observation!'];
+const foundSycoph = sycoph.filter(w => body.toLowerCase().includes(w));
+if (foundSycoph.length) issues.push('Sycophantic: ' + foundSycoph.join(', '));
+
+// Excessive hedging
+const hedging = (body.match(/\b(could potentially|possibly be argued|might have some|may potentially)\b/gi) || []);
+if (hedging.length > 2) issues.push('Excessive hedging: ' + hedging.length);
+
+// Tailing negations
+const tailing = (body.match(/, no (\w+ing|\w+ed)\b/gi) || []);
+if (tailing.length) issues.push('Tailing negations: ' + tailing.length);
+
+// Diff-anchored writing
+const diffAnchored = ['was added to replace','was introduced to','this function was added','was changed from','was updated to'];
+const foundDiff = diffAnchored.filter(w => body.toLowerCase().includes(w));
+if (foundDiff.length) issues.push('Diff-anchored: ' + foundDiff.join(', '));
+
 console.log('=== HUMANIZER CHECK ===');
 if (issues.length) {
   console.log('FAIL (' + issues.length + '):');
@@ -262,6 +317,18 @@ if (issues.length) {
 - [ ] No authority tropes (the real question is, at its core, fundamentally, yang sebenarnya, pada hakikatnya)
 - [ ] No rhetorical openers (Honestly?, Look,, Here's the thing, Jujur saja,, Coba lihat,)
 - [ ] No hyphenated word pair overuse (max 2x per hyphenated pair)
+- [ ] No undue emphasis on significance/legacy (stands as, is a testament, setting the stage for, indelible mark)
+- [ ] No undue emphasis on notability (independent coverage, media outlets, active social media presence)
+- [ ] No challenges/future prospects formulaic sections (Despite its... faces several challenges)
+- [ ] No false ranges (from X to Y where X and Y aren't on a meaningful scale)
+- [ ] No inline-header vertical lists (- **Header:** text pattern)
+- [ ] No emojis in headings or bullet points
+- [ ] No collaborative artifacts (I hope this helps, Of course!, Want me to...)
+- [ ] No knowledge-cutoff disclaimers (as of my last, while specific details are limited)
+- [ ] No sycophantic tone (Great question!, You're absolutely right!)
+- [ ] No excessive hedging (could potentially, possibly be argued)
+- [ ] No tailing negations (..., no guessing)
+- [ ] No diff-anchored writing (was added to replace)
 - [ ] Max 1 exclamation mark
 - [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
 - [ ] Tone: jujur, rasional, berani, tidak menggurudi
