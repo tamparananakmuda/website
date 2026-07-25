@@ -145,6 +145,158 @@ Pastikan minimal 1 paragraf pengalaman/observasi/opini spesifik.
 - **Observasi spesifik:** "Di kantor saya, 3 dari 5 anak muda sudah punya side hustle sebelum umur 25."
 - **Opini tajam:** "Menurut saya, masalahnya bukan generasi yang malas, tapi sistem yang tidak memberi ruang."
 
+### 6. Copula avoidance
+Ganti konstruksi pasif "serves as / stands as" dengan "adalah" atau kalimat aktif langsung.
+
+- Before: "Kebijakan ini serves as pengingat bagi semua pekerja."
+- After: "Kebijakan ini jadi pengingat buat semua pekerja." atau langsung: "Kebijakan ini mengingatkan semua pekerja."
+
+### 7. Authority tropes
+Hindari frasa yang terdengar seperti guru bijak. Langsung tulis poinnya.
+
+- Before: "Pada hakikatnya, masalahnya sederhana."
+- After: "Masalahnya sederhana."
+- Before: "Yang sebenarnya terjadi adalah..."
+- After: "Sebenarnya yang terjadi..."
+
+### 8. Rhetorical openers
+Hindari pembuka dramatis. Langsung masuk ke isi.
+
+- Before: "Jujur saja, saya juga dulu mikir begitu."
+- After: "Saya juga dulu mikir begitu."
+- Before: "Begini, masalahnya ada di sistem."
+- After: "Masalahnya ada di sistem."
+
+### 9. Signposting
+Hindari frasa pengantar yang tidak menambah informasi.
+
+- Before: "Tanpa berpanjang lebar, mari kita lihat datanya."
+- After: "Datanya jelas:" atau langsung tampilkan data.
+- Before: "Berikut adalah hal yang perlu kamu tahu."
+- After: Hapus. Langsung tulis isinya.
+
+### 10. Filler phrases
+Potong kata-kata tidak perlu.
+
+- Before: "Perlu diketahui bahwa angka pengangguran naik 5%."
+- After: "Angka pengangguran naik 5%."
+- Before: "Pada dasarnya, sistem ini tidak bekerja untuk anak muda."
+- After: "Sistem ini tidak bekerja untuk anak muda."
+
+### 11. Generic conclusions
+Hindari penutup yang terdengar seperti press release.
+
+- Before: "Masa depan yang cerah menanti generasi muda yang mau beradaptasi."
+- After: Hapus. Atau ganti dengan observasi spesifik: "Yang bertahan bukan yang paling pintar, tapi yang paling cepat beradaptasi."
+
+### 12. Promotional language
+Hindari kata pemasaran. Tulis netral.
+
+- Before: "Kebijakan ini adalah game-changer untuk pekerja muda."
+- After: "Kebijakan ini mengubah aturan main untuk pekerja muda."
+- Before: "Platform ini menawarkan solusi seamless."
+- After: "Platform ini gampang dipakai."
+
+### 13. Undue emphasis on significance/legacy
+Jangan berlebihan menekankan pentingnya sesuatu.
+
+- Before: "Fenomena ini menjadi catatan sejarah bagi generasi muda."
+- After: "Fenomena ini penting buat generasi muda." (atau hapus kalimat jika tidak menambah info)
+- Before: "Membuka jalan bagi perubahan yang lebih besar."
+- After: Hapus. Kalimat ini tidak mengatakan apa-apa.
+
+### 14. Undue emphasis on notability
+Tidak perlu menekankan seberapa terkenal/sesuatu.
+
+- Before: "Diliput media nasional, fenomena ini menarik perhatian banyak pihak."
+- After: Hapus. Fokus pada substansinya, bukan liputan medinya.
+
+### 15. Challenges and future prospects sections
+Hindari struktur formulaik "tantangan + prospek masa depan".
+
+- Before: "Meskipun demikian, fenomena ini menghadapi tantangan. Ke depannya diharapkan..."
+- After: Tulis tantangan spesifik apa dan solusinya apa. Jangan gunakan template.
+
+### 16. Elegant variation (synonym cycling)
+Jangan ganti satu kata dengan rentetan sinonim berurutan.
+
+- Before: "Pekerja muda menghadapi kesulitan. Generasi baru ini berjuang. Anak muda berusaha bertahan."
+- After: "Pekerja muda berusaha bertahan." (pakai satu kata konsisten)
+
+### 17. False ranges
+Hindari "dari X ke Y" dimana X dan Y tidak di skala yang bermakna.
+
+- Before: "Dari tingkat mikro hingga makro, dampaknya terasa."
+- After: "Dampaknya terasa di mana-mana." atau jelaskan secara spesifik.
+
+### 18. Passive voice and subjectless fragments
+Tulis aktif dengan subjek jelas.
+
+- Before: "Dapat dilihat bahwa angka PHK meningkat."
+- After: "Dari datanya, angka PHK meningkat."
+- Before: "Tidak diperlukan keahlian khusus."
+- After: "Kamu tidak perlu keahlian khusus."
+
+### 19. Inline-header vertical lists
+Jangan buat list item dengan **bold header** + colon. Tulis sebagai paragraf.
+
+- Before: "- **Masalah utama:** Sistem tidak mendukung pekerja muda."
+- After: "Masalah utamanya, sistem tidak mendukung pekerja muda." (paragraf mengalir)
+
+### 20. Emojis
+Hindari emoji di heading atau bullet.
+
+- Before: "🚀 **Peluang Baru**"
+- After: "**Peluang Baru**" (tanpa emoji)
+
+### 21. Collaborative artifacts
+Hindari frasa layanan pelanggan.
+
+- Before: "Semoga membantu memahami situasi ini."
+- After: Hapus. Langsung tulis isi artikelnya.
+
+### 22. Knowledge-cutoff disclaimers
+Jangan tulis seolah AI yang tidak tahu informasi.
+
+- Before: "Berdasarkan informasi yang tersedia, diduga bahwa angka ini akan naik."
+- After: "Angka ini kemungkinan naik." atau sebut sumber datanya.
+
+### 23. Sycophantic tone
+Hindari frasa yang menyanjung pembaca.
+
+- Before: "Pertanyaan yang bagus! Mari kita bahas."
+- After: Hapus. Langsung bahas.
+
+### 24. Excessive hedging
+Jangan over-qualify setiap pernyataan.
+
+- Before: "Mungkin bisa dibilang bahwa kebijakan ini kemungkinan akan berdampak."
+- After: "Kebijakan ini berdampak." atau "Kebijakan ini mungkin berdampak." (satu qualifier saja)
+
+### 25. Tailing negations
+Jangan potong negasi di akhir kalimat.
+
+- Before: "Datanya jelas, tanpa perlu menebak."
+- After: "Datanya jelas, tidak ada ruang untuk spekulasi."
+
+### 26. Diff-anchored writing
+Jangan tulis seolah sedang narrate perubahan.
+
+- Before: "Bagian ini ditambahkan untuk menjelaskan konteks baru."
+- After: Langsung tulis konteksnya tanpa meta-commentary.
+
+### 27. Hyphenated word pair overuse
+Maks 2x per pasangan hyphenated per artikel.
+
+- Before: "jangka panjang" muncul 5x
+- After: Gunakan sinonim: "jangka panjang", "ke depannya", "untuk masa depan" secara bergantian.
+
+### 28. Boldface overuse
+Bold hanya untuk key terms pertama kali, angka penting, atau 1-2 kata emphasis per paragraf.
+
+- Before: "Sistem ini **tidak adil** dan **bermasalah** karena **tidak transparan**."
+- After: "Sistem ini **tidak adil** karena tidak transparan." (max 1-2 bold per paragraf)
+
 ## Command auto-check pola AI (humanizer-specific)
 
 ```bash
