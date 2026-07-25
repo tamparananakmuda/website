@@ -81,7 +81,7 @@ Deloitte Global 2025 Gen Z and Millennial Survey, yang melibatkan 23.482 respond
 - Kenaikan kompensasi: 26 persen
 - Fleksibilitas waktu dan pengembangan karier
 
-Yang lebih mencolok: 89 persen Gen Z menganggap rasa memiliki tujuan dalam pekerjaan penting untuk kepuasan kerja. 44 persen pernah meninggalkan pekerjaan karena tugas yang dikerjakan tidak memiliki makna atau tidak selaras dengan nilai pribadi.
+Yang lebih mencolok: 89 persen Gen Z menganggap rasa memiliki tujuan dalam pekerjaan sebagai syarat kepuasan kerja. 44 persen pernah meninggalkan pekerjaan karena tugas yang dikerjakan tidak memiliki makna atau tidak selaras dengan nilai pribadi.
 
 Hanya 6 persen Gen Z yang menempatkan jabatan kepemimpinan sebagai target karier tertinggi. Mereka tidak mengejar kursi bos. Mereka mengejar stabilitas dan kesempatan belajar. Dan kalau tempat saat ini tidak memberi keduanya, mereka cari tempat lain.
 

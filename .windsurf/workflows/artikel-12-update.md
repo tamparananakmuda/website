@@ -91,3 +91,7 @@ npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('pa
 - [ ] Internal links masih aktif (monthly check)
 - [ ] SEO ranking stabil atau naik (monthly check)
 - [ ] Cluster review dilakukan (quarterly)
+
+## Next
+
+Kembali ke `/artikel-01-idea` untuk artikel baru, atau `/content-ideation` untuk ide baru

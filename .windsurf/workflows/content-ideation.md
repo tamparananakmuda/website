@@ -1,5 +1,5 @@
 ---
-description: Workflow untuk mencari ide konten artikel TAM per kategori — kombinasi trend scan + gap analysis dengan angle test TAM
+description: Workflow untuk mencari ide konten artikel TAM per kategori, kombinasi trend scan + gap analysis dengan angle test TAM
 ---
 
 # Content Ideation Workflow
@@ -195,9 +195,9 @@ Setiap idea yang lolos Step 2 harus lulus angle test.
 **Data Availability Check:** Sebelum lanjut ke scoring (Step 4), pastikan minimal 2 data sources tersedia untuk backup angle. Jika tidak ada data kuat, ide perlu di-research lebih lanjut atau diturunkan skornya.
 
 ### 3c. TAM Voice Check
-- [ ] Jujur — tidak menghindari kebenaran yang tidak nyaman
-- [ ] Langsung — tidak bertele-tele
-- [ ] Menghormati pembaca — tidak merendahkan, tidak menggurui
+- [ ] Jujur, tidak menghindari kebenaran yang tidak nyaman
+- [ ] Langsung, tidak bertele-tele
+- [ ] Menghormati pembaca, tidak merendahkan, tidak menggurui
 - [ ] Tone sesuai kategori (lihat tabel di atas)
 
 ### Output Step 3
@@ -206,7 +206,7 @@ Validated ideas siap draft:
 [Kategori] | [Topik] | [POV] | [Angle 1-liner] | [Working title] | [seo_keywords: keyword1, keyword2, keyword3]
 ```
 
-**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` (Drizzle ORM: `seoKeywords: text('seo_keywords').array()`) saat insert via `/artikel-1-execution` atau `/seri-1-execution` Step 4.
+**`seo_keywords` format:** 3-8 keyword long-tail dalam Bahasa Indonesia, dipilih dari Step 1e (Google Keyword Research). Prioritas: search volume medium + difficulty low. Field ini akan di-pass ke `posts.seo_keywords` (Drizzle ORM: `seoKeywords: text('seo_keywords').array()`) saat insert via `/artikel-06-build` atau `/seri-07-build`.
 
 ## Step 4: Prioritisasi
 
@@ -335,9 +335,9 @@ Sebelum trend scan mingguan, cek performa artikel yang sudah published. Insight 
 ## Handoff ke Execution Workflow
 
 Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflow berikut, mulai dari Step 0.5 (Draft Writing Guidelines):
-- **Artikel standalone:** `/artikel-1-execution`
-- **Seri multi-part:** `/seri-1-execution`
-- **Whitepaper:** `/whitepaper-1-execution`
+- **Artikel standalone:** `/artikel-01-idea`
+- **Seri multi-part:** `/seri-01-idea`
+- **Whitepaper:** `/whitepaper-01-idea`
 
 ## Checklist Final
 
@@ -355,7 +355,7 @@ Ide yang sudah diprioritisasi dan masuk calendar langsung dilanjutkan ke workflo
 - [ ] Prioritisasi skor >= 3.5
 - [ ] Calendar mapped sesuai alokasi pillar
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
-- [ ] `seo_keywords` array siap untuk pass ke `posts.seo_keywords` di Step 4 execution
+- [ ] `seo_keywords` array siap untuk pass ke `posts.seo_keywords` di step build
 - [ ] Min 1 insight unik yang tidak ada di 3 artikel pertama Google
 - [ ] Output disimpan ke `files/ideation-backlog.md` (gunakan template format)
-- [ ] Ide prioritas di-handoff ke `/artikel-1-execution`, `/seri-1-execution`, atau `/whitepaper-1-execution` (sesuai tipe konten)
+- [ ] Ide prioritas di-handoff ke `/artikel-01-idea`, `/seri-01-idea`, atau `/whitepaper-01-idea` (sesuai tipe konten)

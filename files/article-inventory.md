@@ -38,6 +38,12 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 26 | Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji Tanpa Makan | beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan | Uang | Keuangan & Uang | kontra-narasi | 2026-07-25 (published 08:00 WIB) |
 | 27 | Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati | quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-25 (scheduled 12:00 WIB) |
 | 28 | Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi Beban | situationship-bukan-takut-komitmen-ekonomi-yang-membuat-komitmen-jadi-beban | Kehidupan | Hubungan Sosial | refleksi | 2026-07-25 (scheduled 17:00 WIB) |
+| 29 | Menabung Jadi Irasional: Bukan Gen Z Boros, Matematikanya yang Tidak Masuk Akal | menabung-irasional-bukan-boros-matematika-tidak-masuk-akal | Mindset | Mindset & Realita | kontra-narasi | 2026-07-26 (scheduled 08:00 WIB) |
+| 30 | 96% Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi Alasan Setia | 96-persen-terbuka-pindah-bukan-loyalitas-yang-mati | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-26 (scheduled 12:00 WIB) |
+| 31 | 81% Enggan Pakai AI: Boom Global, Tapi Indonesia Malah Mundur | 81-persen-enggan-ai-boom-global-indonesia-mundur | Teknologi | Teknologi & AI | data | 2026-07-26 (scheduled 17:00 WIB) |
+| 32 | Rp9,5 Triliun Hilang: Penipuan Online Bukan Soal Bodoh, Soal Sistem | rp-9-5-triliun-penipuan-online-bukan-soal-bodoh | Uang | Keuangan & Uang | kontra-narasi | 2026-07-27 (scheduled 08:00 WIB) |
+| 33 | 86% Merasa Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Justru Celah | 86-persen-pede-kenali-scam-35-persen-tetap-kena | Mindset | Mindset & Realita | kontra-narasi | 2026-07-27 (scheduled 12:00 WIB) |
+| 34 | Kelas Menengah Menyusut: Bukan Gagal Naik, Tangganya yang Dicabut | kelas-menengah-menyusut-bukan-gagal-tangga-dicabut | Bisnis | Bisnis | kontra-narasi | 2026-07-27 (scheduled 17:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 
