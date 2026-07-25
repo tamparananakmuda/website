@@ -91,3 +91,23 @@
     scroll-behavior: auto !important;
   }
 }
+
+@layer utilities {
+  .brush-strike {
+    position: relative;
+    color: hsl(var(--muted-foreground));
+    opacity: 0.5;
+  }
+  .brush-strike::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: 50%;
+    height: 3px;
+    background: hsl(var(--primary));
+    transform: rotate(-3deg) translateY(-50%);
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+}

@@ -46,6 +46,18 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 34 | Kelas Menengah Menyusut: Bukan Gagal Naik, Tangganya yang Dicabut | kelas-menengah-menyusut-bukan-gagal-tangga-dicabut | Bisnis | Bisnis | kontra-narasi | 2026-07-27 (scheduled 17:00 WIB) |
 | 35 | Influencer Bukan Profesi, Itu Lotere yang Dikemas Sebagai Karier | influencer-bukan-profesi-itu-lotere-yang-dikemas-karier | Teknologi | Teknologi & AI | tamparan | 2026-07-28 (scheduled 08:00 WIB) |
 | 36 | Pulang ke Rumah Bukan Gagal Terbang, Sistem yang Hancurkan Landasannya | pulang-bukan-gagal-terbang-sistem-hancurkan-landasan | Kehidupan | Hubungan Sosial | kontra-narasi | 2026-07-28 (scheduled 12:00 WIB) |
+| 37 | Mental Health di Era Digital Part 1: TikTok Bukan Terapis | kesehatan-mental-era-digital-part-1-tiktok-diagnosis | Mindset | Psikologi | kontra-narasi | 2026-07-26 (scheduled 08:00 WIB) |
+| 38 | Mental Health di Era Digital Part 2: Healing Industry | kesehatan-mental-era-digital-part-2-healing-industri | Mindset | Psikologi | kontra-narasi | 2026-07-26 (scheduled 13:00 WIB) |
+| 39 | Mental Health di Era Digital Part 3: Toxic Productivity | kesehatan-mental-era-digital-part-3-toxic-productivity | Mindset | Psikologi | kontra-narasi | 2026-07-26 (scheduled 17:00 WIB) |
+| 40 | Mental Health di Era Digital Part 4: Emotional Exhaustion | kesehatan-mental-era-digital-part-4-emotional-exhaustion | Mindset | Psikologi | kontra-narasi | 2026-07-27 (scheduled 08:00 WIB) |
+| 41 | Mental Health di Era Digital Part 5: Dopamin Loop | kesehatan-mental-era-digital-part-5-dopamin-loop | Mindset | Psikologi | kontra-narasi | 2026-07-27 (scheduled 13:00 WIB) |
+| 42 | Mental Health di Era Digital Part 6: FOMO | kesehatan-mental-era-digital-part-6-fomo | Mindset | Psikologi | kontra-narasi | 2026-07-27 (scheduled 17:00 WIB) |
+| 43 | Mental Health di Era Digital Part 7: Trauma Content | kesehatan-mental-era-digital-part-7-trauma-content | Mindset | Psikologi | kontra-narasi | 2026-07-28 (scheduled 08:00 WIB) |
+| 44 | Mental Health di Era Digital Part 8: Attention Span | kesehatan-mental-era-digital-part-8-attention-span | Mindset | Psikologi | kontra-narasi | 2026-07-28 (scheduled 13:00 WIB) |
+| 45 | Mental Health di Era Digital Part 9: Self-Improvement Industry | kesehatan-mental-era-digital-part-9-self-improvement | Mindset | Psikologi | kontra-narasi | 2026-07-28 (scheduled 17:00 WIB) |
+| 46 | Mental Health di Era Digital Part 10: Generasi Stroberi | kesehatan-mental-era-digital-part-10-generasi-stroberi | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 08:00 WIB) |
+| 47 | Mental Health di Era Digital Part 11: Quarter-Life Crisis | kesehatan-mental-era-digital-part-11-quarter-life-crisis | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 13:00 WIB) |
+| 48 | Mental Health di Era Digital Part 12: Mental Health Industry | kesehatan-mental-era-digital-part-12-industri-mental-health | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 17:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

@@ -48,7 +48,7 @@ export function WhyTam() {
               key={index}
               className="flex flex-col gap-1 border-l-2 border-border pl-6 transition-colors hover:border-primary md:flex-row md:items-baseline md:gap-8 md:pl-8"
             >
-              <p className="text-base text-muted-foreground line-through decoration-muted-foreground/30 md:text-lg">
+              <p className="brush-strike text-base md:text-lg">
                 {item.negative}
               </p>
               <p className="font-display text-xl font-bold text-primary md:text-2xl">

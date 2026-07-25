@@ -100,7 +100,7 @@ Kalau perusahaan bisa PHK karyawan kapan saja, kenapa karyawan tidak boleh pinda
 
 Akademisi Kenny Roz menegaskan fenomena Gen Z sebagai kutu loncat tidak lagi dilihat sebagai kelemahan, melainkan sinyal dan kritik konstruktif bagi dunia industri agar mau beradaptasi. Perusahaan yang berhasil mempertahankan talenta Gen Z bukan yang menawarkan gaji tertinggi, tapi yang mampu mendengarkan kebutuhan karyawan secara proaktif.
 
-Tapi banyak perusahaan masih membaca ini sebagai masalah sikap. Solusi yang ditawarkan: wellness program, yoga, free coffee. Hal-hal yang tidak menyentuh akar masalah. Seperti yang kita bahas tentang [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-tidak-bayar-hati), sistem menolak melihat bahwa masalahnya ada di struktur, bukan di individu.
+Tapi banyak perusahaan masih membaca ini sebagai masalah sikap. Solusi yang ditawarkan: wellness program, yoga, free coffee. Hal-hal yang tidak menyentuh akar masalah. Seperti yang kita bahas tentang [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati), sistem menolak melihat bahwa masalahnya ada di struktur, bukan di individu.
 
 Deloitte mencatat 48 persen Gen Z merasa tidak aman secara finansial. Banyak hidup dari gaji ke gaji. Randstad menemukan 1 dari 3 pekerja Indonesia berhenti karena nilai pribadi tidak sejalan dengan budaya perusahaan. Ini bukan generasi yang tidak tahu apa yang mereka mau. Ini generasi yang tahu persis apa yang mereka mau, dan sistem tidak menyediakannya.
 
