@@ -58,6 +58,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 46 | Mental Health di Era Digital Part 10: Generasi Stroberi | kesehatan-mental-era-digital-part-10-generasi-stroberi | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 08:00 WIB) |
 | 47 | Mental Health di Era Digital Part 11: Quarter-Life Crisis | kesehatan-mental-era-digital-part-11-quarter-life-crisis | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 13:00 WIB) |
 | 48 | Mental Health di Era Digital Part 12: Mental Health Industry | kesehatan-mental-era-digital-part-12-industri-mental-health | Mindset | Psikologi | kontra-narasi | 2026-07-29 (scheduled 17:00 WIB) |
+| 49 | Freelance Bukan Kebebasan, Itu Jebakan Tanpa Jaring Pengaman | freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-30 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

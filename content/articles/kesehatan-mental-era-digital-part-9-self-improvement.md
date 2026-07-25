@@ -2,8 +2,8 @@
 title: "Self-Improvement Industry: Mereka Tidak Ingin Kamu Improve, Mereka Butuh Kamu Inadequate"
 slug: "kesehatan-mental-era-digital-part-9-self-improvement"
 excerpt: "Industri self-improvement tidak ingin kamu improve. Mereka butuh kamu merasa inadequate selamanya. Growth mindset dipelintir jadi senjata gaslighting."
-publishedAt: "2026-07-28T10:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:51:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -61,7 +61,7 @@ Self-help addiction adalah fenomena di mana consuming content menciptakan ilusi 
 
 House of Cultural Influence pada 2025 menulis: "The industry that promises confidence produces an ever-expanding list of reasons to doubt ourselves." Industri yang menjanjikan kepercayaan diri justru menghasilkan daftar alasan untuk meragukan diri yang terus berkembang.
 
-## Growth Mindset sebagai Senjata
+## Peliintiran Konsep Akademik
 
 Growth mindset, konsep yang aslinya tentang kemampuan belajar dan berkembang, dipelintir menjadi senjata gaslighting. Penelope Trunk pada 2025 menjelaskan: kalau kamu gagal, bukan sistemnya yang rusak, tapi mindset-mu. Growth mindset yang dipelintir membuat kamu menyalahkan diri sendiri untuk kegagalan yang sebenarnya disebabkan oleh sistem.
 
@@ -76,7 +76,7 @@ Saat kamu tidak bisa "grow", saat kamu gagal mencapai slogan "1% better everyday
 Ini benang merah yang menghubungkan Part 9 ke Part 10. Sistem tidak hanya menjual solusi yang tidak menyelesaikan masalah. Sistem juga menyalahkan kamu ketika solusinya tidak berhasil. Dan cara sistem menyalahkan kamu adalah dengan memberi kamu label.
 
 
-## Siklus yang Tidak Pernah Berakhir
+## Siklus Konsumsi yang Berulang
 
 Self-help addiction adalah fenomena di mana consuming content menciptakan ilusi kemajuan tanpa perubahan nyata. Kamu baca buku self-help, kamu merasa sudah "bekerja pada dirimu." Tapi sebenarnya kamu hanya mengkonsumsi konten. Tidak ada perubahan. Dan karena tidak ada perubahan, kamu beli buku self-help berikutnya. Siklus ini meniru siklus kecanduan, persis seperti dopamin loop di Part 5.
 

@@ -2,8 +2,8 @@
 title: "Healing Industry: Self-Care yang Dijual Bukan Penyembuhan, Tapi Konsumsi"
 slug: "kesehatan-mental-era-digital-part-2-healing-industri"
 excerpt: "Healing bergeser dari pemulihan psikologis menjadi praktik konsumsi simbolik. Gen Z memaknai healing sebagai kewajiban, beban, dan unjuk diri di media sosial."
-publishedAt: "2026-07-26T05:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:44:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -41,7 +41,7 @@ coverImageAlt: null
 
 ## Hook
 
-Coba ingat healing terakhir kamu. Ada kamera? Ada story? Ada check-in location? Kalau ada, mungkin yang kamu lakukan bukan healing. Itu performansi.
+Coba ingat healing terakhir kamu. Ada kamera, ada story, ada check-in location? Kalau ada, mungkin yang kamu lakukan bukan healing. Itu performansi.
 
 Healing sekarang bukan tentang menyembuhkan diri. Healing tentang menunjukkan bahwa kamu sedang menyembuhkan diri. Dan perbedaan itu sangat penting, karena satu adalah proses internal yang privat, yang lain adalah konsumsi yang publik.
 
@@ -73,7 +73,7 @@ Penelitian oleh Putri dan Hidayah pada 2024 menemukan bahwa Gen Z memaknai heali
 
 Sistem ini bekerja karena media sosial mengkomodifikasi perhatian. Healing yang tidak diposting tidak menghasilkan engagement, tidak menghasilkan data, tidak menghasilkan uang bagi platform. Jadi platform secara sistematis mendesain insentif yang membuat kamu merasa perlu memposting healing-mu. Dan kamu, tanpa sadar, menginternalisasi insentif ini sebagai kebutuhan.
 
-## Ketika Healing Menjadi Beban
+## Beban Pseudo-Pemulihan
 
 Inilah paradoks yang tidak banyak dibahas. Healing yang seharusnya melepaskan beban justru menambah beban. Healing yang seharusnya menjadi ruang untuk istirahat justru menjadi ruang untuk performansi.
 
@@ -82,19 +82,15 @@ Healing yang tidak "aesthetic" dianggap gagal. Healing yang tidak diposting dian
 Ini sama dengan pola [Doom Spending: Bukan Self-Care, Itu Gejala Menyerah](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah), di mana belanja dikemas sebagai self-care padahal sebenarnya gejala menyerah. Healing industry melakukan hal yang sama: mengemas konsumsi sebagai pemulihan, mengemas belanja sebagai self-care, mengemas performansi sebagai penyembuhan.
 
 
-## Sistem yang Untung dari Healing-mu
+## Penerima Manfaat Konsumsi Healing
 
-Pikirkan siapa yang untung dari healing yang tidak pernah selesai. Platform media sosial untung dari konten healing yang kamu post. Brand untung dari produk healing yang kamu beli. Destinasi wisata untung dari kunjungan healing kamu. Tapi kamu? Kamu tetap tidak sembuh.
-
-Dan ini bukan kebetulan. Healing industry, seperti industri lain, dirancang untuk membuat kamu terus kembali. Kalau kamu benar-benar sembuh setelah satu retreat, kamu tidak akan beli retreat lagi. Kalau kamu benar-benar pulih setelah satu produk, kamu tidak akan beli produk lagi. Jadi sistem memastikan kamu tidak pernah benar-benar sembuh, tapi selalu merasa "sedang dalam proses."
+Pikirkan siapa yang untung dari healing yang tidak pernah selesai. Platform media sosial untung dari konten healing yang kamu post. Brand untung dari produk healing yang kamu beli. Destinasi wisata untung dari kunjungan healing kamu. Tapi kamu tetap tidak sembuh, dan ini bukan kebetulan. Healing industry, seperti industri lain, dirancang untuk membuat kamu terus kembali. Kalau kamu benar-benar sembuh setelah satu retreat, kamu tidak akan beli retreat lagi. Kalau kamu benar-benar pulih setelah satu produk, kamu tidak akan beli produk lagi. Jadi sistem memastikan kamu tidak pernah benar-benar sembuh, tapi selalu merasa "sedang dalam proses."
 
 Penelitian oleh Putri dan Hidayah pada 2024 menemukan bahwa Gen Z memaknai healing sebagai "kewajiban." Kewajiban kepada siapa? Kepada diri sendiri? Atau kepada sistem yang mengajarkan bahwa kalau tidak healing, kamu tidak peduli dengan dirimu? Pertanyaan ini tidak pernah diajukan, karena jawabannya tidak nyaman.
 
 ## Insight
 
-Gue pernah ngobrol dengan teman yang habis "healing" ke Bali. Dia pulang dengan foto bagus, story aesthetic, dan perasaan yang sama persis seperti sebelum berangkat. Karena healing-nya bukan tentang menyembuhkan diri, tapi tentang mengumpulkan konten. Dan setelah konten habis diposting, kekosongan kembali. Karena healing yang dibeli adalah produk, bukan proses. Dan produk habis, prosus tidak.
-
-Industri self-care tidak menjual kesembuhan. Mereka menjual perasaan sedang menyembuhkan diri. Healing jadi konsumsi yang dikemas sebagai perawatan. Dan konsumsi tidak pernah benar-benar menyembuhkan, karena konsumsi dirancang untuk membuat kamu terus butuh. Kalau kamu sembuh, kamu berhenti beli. Dan industri tidak ingin kamu berhenti beli.
+Gue pernah ngobrol dengan teman yang habis "healing" ke Bali. Dia pulang dengan foto bagus, story aesthetic, dan perasaan yang sama persis seperti sebelum berangkat. Karena healing-nya bukan tentang menyembuhkan diri, tapi tentang mengumpulkan konten. Dan setelah konten habis diposting, kekosongan kembali. Karena healing yang dibeli adalah produk, bukan proses. Dan produk habis, proses tidak. Industri self-care tidak menjual kesembuhan, mereka menjual perasaan sedang menyembuhkan diri. Healing jadi konsumsi yang dikemas sebagai perawatan. Dan konsumsi tidak pernah benar-benar menyembuhkan, karena konsumsi dirancang untuk membuat kamu terus butuh. Kalau kamu sembuh, kamu berhenti beli. Dan industri tidak ingin kamu berhenti beli.
 
 ## Conclusion
 

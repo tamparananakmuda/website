@@ -2,8 +2,8 @@
 title: "TikTok Bukan Terapis: Algoritma Menciptakan Gejala, Bukan Mengidentifikasi"
 slug: "kesehatan-mental-era-digital-part-1-tiktok-diagnosis"
 excerpt: "76% pengguna TikTok adalah Gen Z. Algoritma tidak mengidentifikasi penyakit, algoritma menciptakan gejala melalui self-fulfilling prophecy kesehatan mental."
-publishedAt: "2026-07-26T01:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:43:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -65,11 +65,11 @@ Yang jarang disadari: algoritma merekam interaksi mikro. Bukan hanya like atau c
 
 Inilah bagian yang tidak dibahas banyak orang. Self-diagnosis di TikTok tidak sekadar "salah diagnosa." Ini lebih kejam dari itu, karena algoritma tidak hanya salah mengidentifikasi, tapi menciptakan gejala yang sebelumnya tidak ada.
 
-Penelitian oleh Febriana dan Amalia pada 2024 menemukan bahwa self-diagnosis menyebabkan gangguan aktivitas harian, penurunan energi, penurunan mood, dan meningkatnya kepekaan emosional. Artinya, sebelum kamu "tahu" kamu punya ADHD, kamu mungkin hanya kadang susah fokus, seperti banyak orang normal. Setelah kamu "tahu" dari TikTok, kamu mulai memperhatikan setiap kali kamu susah fokus, mengkonfirmasi diagnosa sendiri, dan perilaku kamu berubah sesuai label yang kamu tempel pada dirimu.
+Penelitian oleh Febriana dan Amalia pada 2024 menemukan bahwa self-diagnosis menyebabkan gangguan aktivitas harian, penurunan energi, penurunan mood, dan meningkatnya kepekaan emosional. Artinya, sebelum kamu "tahu" kamu punya ADHD, kamu mungkin hanya kadang susah fokus, seperti banyak orang normal. Setelah kamu "tahu" dari TikTok, kamu mulai perhatikan setiap kali kamu susah fokus, mengkonfirmasi diagnosa sendiri, dan perilaku kamu berubah sesuai label yang kamu tempel pada dirimu.
 
-Yang lebih mengejutkan: penelitian oleh Ocktaviani pada 2025 di Universitas Mercu Buana menemukan bahwa literasi kesehatan mental tidak berpengaruh signifikan terhadap kecenderungan self-diagnosis. Artinya, masalahnya bukan kamu kurang pengetahuan. Orang yang paham kesehatan mental pun tetap rentan self-diagnosis di TikTok. Masalahnya adalah desain algoritma yang terlalu efektif membuat kamu percaya, terlepas dari seberapa well-informed kamu.
+Yang lebih mengejutkan: penelitian oleh Ocktaviani pada 2025 di Universitas Mercu Buana menemukan bahwa literasi kesehatan mental tidak berpengaruh banyak terhadap kecenderungan self-diagnosis. Artinya, masalahnya bukan kamu kurang pengetahuan. Orang yang paham kesehatan mental pun tetap rentan self-diagnosis di TikTok. Masalahnya adalah desain algoritma yang terlalu efektif membuat kamu percaya, terlepas dari seberapa well-informed kamu.
 
-Self-diagnosis kesehatan mental di TikTok terjadi ketika algoritma menampilkan konten tentang kondisi mental tertentu secara berulang, menciptakan filter bubble yang memperkuat keyakinan individu bahwa mereka memiliki kondisi tersebut. Studi menunjukkan literasi kesehatan mental tidak berpengaruh signifikan terhadap kecenderungan self-diagnosis, yang berarti masalahnya bukan kurang pengetahuan, tapi desain algoritma yang menciptakan self-fulfilling prophecy.
+Self-diagnosis kesehatan mental di TikTok terjadi ketika algoritma menampilkan konten tentang kondisi mental tertentu secara berulang, menciptakan filter bubble yang memperkuat keyakinan individu bahwa mereka memiliki kondisi tersebut. Studi menunjukkan literasi kesehatan mental tidak berpengaruh banyak terhadap kecenderungan self-diagnosis, yang berarti masalahnya bukan kurang pengetahuan, tapi desain algoritma yang menciptakan self-fulfilling prophecy.
 
 ## Dari "Tahu" ke "Candu"
 
@@ -85,7 +85,7 @@ Ini yang disebut candu yang dikemas ulang: kamu pikir kamu mencari kesembuhan, t
 
 Gue perhatikan pola ini di teman-teman gue. Seseorang yang sebelumnya tidak pernah bicara tentang kesehatan mental, tiba-tiba punya daftar diagnosa setelah dua minggu intensif TikTok. Bukan karena mereka tiba-tiba sadar. Tapi karena algoritma berhasil meyakinkan mereka bahwa setiap perilaku normal manusia adalah gejala dari suatu kondisi.
 
-Sulit fokus? ADHD. Suka sendirian? Introvert yang ternyata autism spectrum. Mudah emosi? Trauma. Tidak suka kerjaan rutin? Dopamine deficiency. Semua label tersedia, semua "relatable", dan algoritma cenderung menemukan label yang pas untuk kamu. Karena algoritma tidak mencari diagnosa yang akurat, algoritma mencari konten yang membuat kamu stay.
+Sulit fokus, itu ADHD. Suka sendirian, itu introvert yang ternyata autism spectrum. Mudah emosi, itu trauma. Tidak suka kerjaan rutin, itu dopamine deficiency. Semua label tersedia, semua "relatable", dan algoritma cenderung menemukan label yang pas untuk kamu. Karena algoritma tidak mencari diagnosa yang akurat, algoritma mencari konten yang membuat kamu stay.
 
 Algoritma tidak peduli apakah kamu benar-benar ADHD atau tidak. Yang penting adalah kamu stay di app, scroll lebih lama, engage lebih banyak. Self-diagnosis adalah engagement goldmine untuk algoritma. Setiap video tentang gejala menghasilkan jutaan views, dan setiap view adalah uang. Semakin banyak orang yang "diagnosa" diri sendiri, semakin banyak konten tentang diagnosa yang dibuat, semakin banyak orang yang "diagnosa" diri sendiri. Siklus ini memperkuat dirinya sendiri.
 

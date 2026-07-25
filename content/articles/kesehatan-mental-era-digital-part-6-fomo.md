@@ -2,8 +2,8 @@
 title: "FOMO: Perasaan Tidak Cukup Bukan Bug, Tapi Core Business Model"
 slug: "kesehatan-mental-era-digital-part-6-fomo"
 excerpt: "FOMO dan perasaan tidak cukup BUKAN bug, tapi core business model. Algoritma sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app."
-publishedAt: "2026-07-27T10:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:48:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -48,13 +48,13 @@ FOMO, atau Fear of Missing Out, didefinisikan oleh Alt pada 2020 sebagai kecemas
 
 Data dari Pew Research Center pada 2022 menunjukkan 95% remaja Gen Z di Amerika menggunakan media sosial setiap hari, dan hampir separuh mengakui sulit berhenti. Di Indonesia, Rachmi dan rekan pada 2024 menemukan bahwa kelompok usia 18-24 tahun adalah pengguna media sosial terbesar, dengan rata-rata lebih dari 3 jam per hari.
 
-Zhu dan rekan pada 2023 menemukan bahwa FOMO berkorelasi dengan stres, kecemasan, dan gangguan tidur. Artinya, FOMO bukan sekadar "perasaan tidak enak." FOMO punya dampak nyata pada kesehatan mental.
+Zhu dan rekan pada 2023 menemukan bahwa FOMO berkorelasi dengan stres serta kecemasan dan gangguan tidur. Artinya, FOMO bukan sekadar "perasaan tidak enak." FOMO punya dampak nyata pada kesehatan mental.
 
 Artikel [FOMO: Desain Algoritma](/artikel/fomo-desain-algoritma) dan [Perbandingan Diri di Era Media Sosial](/artikel/perbandingan-diri-era-media-sosial) sudah membahas permukaan. Tapi di part ini, sesuatu berubah. Pertanyaan seri berubah.
 
-Pikirkan juga: FOMO tidak hanya tentang barang atau pengalaman. FOMO juga tentang identitas. Kamu melihat orang lain yang "sudah nemu passion", "sudah punya career path", "sudah stable", dan kamu merasa ketinggalan. Algoritma menampilkan highlight reel ini tepat saat kamu sedang ragu dengan dirimu sendiri. Dan algoritma tahu kapan kamu ragu, karena algoritma merekam setiap interaksi mikro yang menunjukkan keraguanmu. Ini bukan kebetulan. Ini desain yang sangat presisi.
+Pikirkan juga: FOMO tidak hanya tentang barang atau pengalaman. FOMO juga tentang identitas. Kamu melihat orang lain yang "sudah nemu passion", "sudah punya career path", "sudah stable", dan kamu merasa ketinggalan. Algoritma menampilkan sisi terbaik ini tepat saat kamu sedang ragu dengan dirimu sendiri. Dan algoritma tahu kapan kamu ragu, karena algoritma merekam setiap interaksi mikro yang menunjukkan keraguanmu. Ini bukan kebetulan. Ini desain yang sangat presisi.
 
-## Algoritma Highlight Reel
+## Algoritma Sisi Terbaik
 
 Algoritma media sosial menonjolkan konten viral dan gaya hidup ideal, yang memperkuat perasaan kehilangan. Vogel pada 2021 menemukan bahwa paparan konten ideal di media sosial menurunkan kepuasan diri. JOECY pada 2025 menemukan bahwa AI dan algoritma adalah penguat utama budaya FOMO: sistem rekomendasi dan iklan tertarget bekerja sama untuk membuat kamu merasa selalu kurang.
 
@@ -64,13 +64,13 @@ Triwikrama pada 2025 menemukan bahwa FOMO mendorong perilaku konsumtif impulsif.
 
 Di sinilah pertanyaan seri berubah total. Sampai part 5, kita bertanya: "kenapa kamu sakit?" Mulai part 6, pertanyaannya berubah: "siapa yang untung dari penderitaanmu?"
 
-FOMO dan perasaan tidak cukup BUKAN bug. Ini core business model. Algoritma sengaja menampilkan highlight reel karena rasa inadequate membuat kamu stay lebih lama di app. Semakin lama kamu stay, semakin banyak ad revenue. Perasaan tidak cukup adalah fitur, bukan bug.
+FOMO dan perasaan tidak cukup BUKAN bug. Ini core business model. Algoritma sengaja menampilkan sisi terbaik orang lain karena rasa inadequate membuat kamu stay lebih lama di app. Semakin lama kamu stay, semakin banyak ad revenue. Perasaan tidak cukup adalah fitur, bukan bug.
 
 Pikirkan: kalau media sosial membuat kamu merasa cukup, kamu akan berhenti scroll. Kalau kamu berhenti scroll, platform tidak dapat uang. Jadi platform harus membuat kamu merasa tidak cukup, karena perasaan tidak cukup yang membuat kamu terus cari "lebih."
 
-FOMO (Fear of Missing Out) dalam konteks media sosial bukan sekadar respons psikologis individu, melainkan bagian dari core business model platform. Algoritma sengaja menampilkan highlight reel dan gaya hidup ideal karena perasaan inadequate membuat pengguna stay lebih lama di aplikasi, yang berarti lebih banyak ad revenue. FOMO berkorelasi dengan stres, kecemasan, dan gangguan tidur, namun justru kondisi inilah yang menguntungkan platform secara finansial.
+FOMO (Fear of Missing Out) dalam konteks media sosial bukan sekadar respons psikologis individu, melainkan bagian dari core business model platform. Algoritma sengaja menampilkan sisi terbaik dan gaya hidup ideal karena perasaan inadequate membuat pengguna stay lebih lama di aplikasi, yang berarti lebih banyak ad revenue. FOMO berkorelasi dengan stres, kecemasan, dan gangguan tidur, namun justru kondisi inilah yang menguntungkan platform secara finansial.
 
-## Sistem yang Untung dari Penderitaanmu
+## Ekonomi Ketakutan
 
 Ini adalah reversal total. Selama ini kamu pikir FOMO adalah masalahmu. Kamu pikir kamu perlu "mindset lebih positif" atau "kurangi compare diri." Tapi sebenarnya, FOMO adalah desain. Sistem yang membuat kamu merasa tidak cukup adalah sistem yang menguntungkan dari perasaan tidak cukup itu sendiri.
 
@@ -91,7 +91,7 @@ Zhu dan rekan pada 2023 menemukan bahwa FOMO berkorelasi dengan stres, kecemasan
 
 Gue sadar hal ini ketika gue cek berapa lama gue habiskan waktu di Instagram setelah melihat story teman yang lagi liburan. Gue tidak butuh liburan. Tapi algoritma membuat gue merasa butuh. Dan setelah gue merasa butuh, gue scroll lebih lama, mencari liburan "alternatif" yang "terjangkau." Algoritma menang dua kali: sekali dari FOMO yang gue rasakan, sekali dari waktu yang gue habiskan di app.
 
-FOMO dan perasaan tidak cukup bukan bug, tapi fitur. Algoritma sengaja menampilkan highlight reel karena rasa inadequate = lebih lama di app. Dan pertanyaan seri berubah: dari "kenapa kamu sakit?" menjadi "siapa yang untung dari penderitaanmu?"
+FOMO dan perasaan tidak cukup bukan bug, tapi fitur. Algoritma sengaja menampilkan sisi terbaik karena rasa inadequate = lebih lama di app. Dan pertanyaan seri berubah: dari "kenapa kamu sakit?" menjadi "siapa yang untung dari penderitaanmu?"
 
 ## Conclusion
 
@@ -99,4 +99,4 @@ Jadi kalau perasaan tidak cukup itu fitur, bukan bug, pertanyaannya bukan "kenap
 
 ---
 
-**Selanjutnya di Mental Health di Era Digital:** Dan saat kamu merasa tidak cukup, kamu merasa sendirian. Kamu butuh koneksi. Tapi benda yang membuatmu kesepian adalah benda yang kamu pakai untuk merasa terhubung. Dan algoritma tahu ini. Algoritma makan kesepianmu untuk engagement. [Lanjut ke Part 7](/artikel/kesehatan-mental-era-digital-part-7-trauma-content)
+**Selanjutnya di Mental Health di Era Digital:** Dan saat kamu merasa tidak cukup, kamu merasa sendirian. Kamu butuh koneksi. Tapi benda yang membuatmu kesepian adalah benda yang kamu pakai untuk merasa terhubung. Dan algoritma tahu ini, algoritma makan kesepianmu untuk engagement. [Lanjut ke Part 7](/artikel/kesehatan-mental-era-digital-part-7-trauma-content)

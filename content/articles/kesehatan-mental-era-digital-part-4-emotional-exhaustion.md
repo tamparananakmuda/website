@@ -2,8 +2,8 @@
 title: "Emotional Exhaustion: Bukan Capek, Tapi Kosong. Sistem Tidak Punya Cara Mengisi Ulang"
 slug: "kesehatan-mental-era-digital-part-4-emotional-exhaustion"
 excerpt: "Emotional exhaustion bukan ekstrem dari capek. Capek = kehilangan energi. Kosong = kehilangan kapasitas untuk merasa. 54% Gen Z mengalami burnout."
-publishedAt: "2026-07-27T01:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:46:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -58,7 +58,7 @@ Yang membuat emotional exhaustion berbahaya adalah invisibility-nya. Capek terli
 
 Capek adalah kehilangan energi. Solusinya jelas: tidur, istirahat, liburan. Kamu bangun besok dan punya energi lagi.
 
-Kosong adalah kehilangan kapasitas untuk merasa. Solusinya tidak jelas. Tidur tidak mengembalikan kapasitas untuk merasa. Liburan tidak mengisi kembali emosi yang habis. Kamu bangun besok dan masih kosong.
+Kosong adalah kehilangan kapasitas untuk merasa, dan solusinya tidak jelas. Tidur tidak mengembalikan kapasitas untuk merasa. Liburan tidak mengisi kembali emosi yang habis. Kamu bangun besok dan masih kosong.
 
 Penelitian oleh Pratiwi dan rekan pada 2025 menemukan bahwa burnout bermediasi hubungan antara workload dan turnover intention. Artinya, bukan beban kerja yang membuat orang keluar, tapi kekosongan emosional yang diakibatkan beban kerja. Orang tidak keluar karena capek. Orang keluar karena kosong.
 
@@ -68,9 +68,9 @@ Penelitian di Jurnal Manajemen 2025 menemukan bahwa technostress dan burnout ber
 
 Technostress adalah stres yang datang dari teknologi: notifikasi yang tidak berhenti, email yang masuk 24/7, ekspektasi untuk selalu responsif. Ini bukan stres yang kamu rasai secara langsung. Ini adalah stres yang meresap, yang kamu tidak sadari sampai kamu kosong.
 
-Emotional exhaustion adalah komponen utama burnout yang ditandai dengan kehilangan energi emosional dan mental. Berbeda dari kelelahan fisik yang bisa diatasi dengan istirahat, emotional exhaustion menghilangkan kapasitas untuk merasa. Penelitian menunjukkan technostress dan burnout bersama-sama menjelaskan 63,1% varians kesehatan mental, yang berarti lingkungan digital berkontribusi signifikan terhadap kekosongan emosional.
+Emotional exhaustion adalah komponen utama burnout yang ditandai dengan kehilangan energi emosional dan mental. Berbeda dari kelelahan fisik yang bisa diatasi dengan istirahat, emotional exhaustion menghilangkan kapasitas untuk merasa. Penelitian menunjukkan technostress dan burnout bersama-sama menjelaskan 63,1% varians kesehatan mental, yang berarti lingkungan digital berkontribusi banyak terhadap kekosongan emosional.
 
-## Sistem Tidak Menawarkan Cara Mengisi Ulang
+## Defisit Pengisian Emosional
 
 Sistem menawarkan healing (Part 2), yang ternyata adalah konsumsi. Sistem menawarkan toxic productivity (Part 3), yang ternyata adalah conditioning. Tidak ada yang mengajarkan cara mengisi ulang.
 
@@ -79,7 +79,7 @@ Yang ada hanya cara menguras lebih efisien. Aplikasi produktivitas, teknik time 
 Ini sama dengan pola yang dibahas dalam [Quiet Quitting: Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati). Sistem butuh kamu terus produksi, tapi tidak peduli dengan kapasitas emosionalmu.
 
 
-## Sistem yang Untung dari Kehilanganmu
+## Penerima Manfaat dari Kehilanganmu
 
 Sistem menawarkan healing (Part 2), yang ternyata adalah konsumsi. Sistem menawarkan toxic productivity (Part 3), yang ternyata adalah conditioning. Tidak ada yang mengajarkan cara mengisi ulang. Yang ada hanya cara menguras lebih efisien.
 
@@ -93,7 +93,7 @@ Data dari Eagle Hill Consulting pada 2024 menunjukkan 54% karyawan Gen Z mengala
 
 ## Insight
 
-Gue pernah sampai ke titik kosong ini. Bukan capek, tapi kosong. Bangun pagi, tidak ada perasaan. Tidak sedih, tidak senang, tidak marah. Hanya kosong. Dan yang paling menakutkan adalah: gue tidak tahu kenapa. Tidak ada satu kejadian spesifik yang membuat gue kosong. Kehilangan itu terjadi secara bertahap, tanpa gue sadari, sampai suatu hari gue bangun dan tidak merasa apa-apa.
+Gue pernah sampai ke titik kosong ini. Bukan capek tapi kosong. Bangun pagi masih tidak ada perasaan, tidak sedih, tidak senang, tidak marah, hanya kosong. Dan yang paling menakutkan adalah: gue tidak tahu kenapa. Tidak ada satu kejadian spesifik yang membuat gue kosong. Kehilangan itu terjadi secara bertahap, tanpa gue sadari, sampai suatu hari gue bangun dan tidak merasa apa-apa.
 
 Sistem tidak mengajarkan kita kapan harus berhenti. Sistem hanya mengajarkan cara terus jalan. Dan ketika kamu akhirnya berhenti karena tidak bisa lagi, sistem menyebutmu "lemah." Padahal yang lemah bukan kamu. Yang lemah adalah sistem yang tidak punya mekanisme untuk mengisi ulang sumber daya yang ia ambil.
 

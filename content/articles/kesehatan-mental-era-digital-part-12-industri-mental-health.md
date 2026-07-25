@@ -2,8 +2,8 @@
 title: "Mental Health Industry: Sistem yang Membuatmu Sakit Menjual Obatnya"
 slug: "kesehatan-mental-era-digital-part-12-industri-mental-health"
 excerpt: "Industri mental health digital tidak menjual kesembuhan, tapi rasa sedang disembuhkan. User yang sembuh = churn. User yang tetap tidak sembuh = subscribe."
-publishedAt: "2026-07-29T10:00:00.000Z"
-status: "scheduled"
+publishedAt: "2026-07-25T12:54:13.692Z"
+status: "published"
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"
@@ -64,7 +64,7 @@ Gamification tidak membantu retention, dan mungkin memperburuk. Engagement mecha
 
 ## Engagement Trap
 
-Dr Scott Wallace pada 2025 menjelaskan engagement trap: app mental health mulai menggunakan mekanisme engagement yang sama dengan media sosial. Streaks, notifications, gamification. Tapi tujuannya bukan membuat kamu sembuh. Tujuannya membuat kamu tetap di app.
+Dr Scott Wallace pada 2025 menjelaskan engagement trap: app mental health mulai menggunakan mekanisme engagement yang sama dengan media sosial. Streaks, notifications, gamification, tapi tujuannya bukan membuat kamu sembuh, tujuannya membuat kamu tetap di app.
 
 BetterHelp, platform mental health terbesar, menghasilkan $1,1 miliar revenue pada 2023, menurut beyondbillions pada 2025. Beyondbillions pada 2025 melaporkan bahwa DTC subscription BetterHelp $60-100 per minggu. Tapi insurance revenue kurang dari 2% menurut beyondbillions 2025. Artinya, BetterHelp menghasilkan uang dari subscription langsung, bukan dari hasil klinis.
 
@@ -76,28 +76,26 @@ Industri mental health app memiliki business model yang bertentangan dengan kese
 
 Sekarang, ingat kembali semua yang kamu baca.
 
-Ingat [Part 1](/artikel/kesehatan-mental-era-digital-part-1-tiktok-diagnosis)? TikTok bilang kamu ADHD. Algoritma menciptakan gejala, bukan mengidentifikasi.
+Ingat [Part 1](/artikel/kesehatan-mental-era-digital-part-1-tiktok-diagnosis)? TikTok bilang kamu ADHD, algoritma menciptakan gejala, bukan mengidentifikasi.
 
 Ingat [Part 2](/artikel/kesehatan-mental-era-digital-part-2-healing-industri)? Kamu beli candle untuk healing. Healing jadi konsumsi yang dikemas sebagai perawatan.
 
 Ingat [Part 5](/artikel/kesehatan-mental-era-digital-part-5-dopamin-loop)? Algoritma membuatmu kecanduan. Media sosial dirancang seperti mesin slot kasino.
 
-Ingat [Part 9](/artikel/kesehatan-mental-era-digital-part-9-self-improvement)? Growth mindset menyalahkanmu. Industri self-improvement butuh kamu merasa inadequate.
+Ingat [Part 9](/artikel/kesehatan-mental-era-digital-part-9-self-improvement)? Growth mindset menyalahkanmu dan industri self-improvement butuh kamu merasa inadequate, sehingga kamu beli kursus namun tidak berubah.
 
 Semua ini adalah satu sistem yang sama. Sistem yang membuatmu sakit adalah sistem yang menjual "solusi." Kondisi yang membuatmu sakit diciptakan oleh sistem yang sama yang menjual obatnya. TikTok membuatmu merasa sakit, healing industry menjual obat yang tidak menyembuhkan, self-improvement industry menyalahkanmu karena tidak sembuh, dan mental health app industry menghasilkan uang dari kamu yang tetap tidak sembuh.
 
 
-## Sistem yang Sama
+## Rekontekstualisasi
 
-Sekarang, ingat kembali semua yang kamu baca. Semua yang dari Part 1 sampai 11 bukan fenomena terpisah. Semuanya adalah satu sistem yang sama.
+Sekarang, ingat kembali semua yang kamu baca. Semua yang dari Part 1 sampai 11 bukan fenomena terpisah. Semuanya adalah satu sistem yang sama. Ingat [Part 1](/artikel/kesehatan-mental-era-digital-part-1-tiktok-diagnosis)? TikTok bilang kamu ADHD, algoritma menciptakan gejala bukan mengidentifikasi, kamu mulai merasa ada yang salah denganmu.
 
-Ingat [Part 1](/artikel/kesehatan-mental-era-digital-part-1-tiktok-diagnosis)? TikTok bilang kamu ADHD. Algoritma menciptakan gejala, bukan mengidentifikasi. Kamu mulai merasa ada yang salah denganmu.
+Ingat [Part 2](/artikel/kesehatan-mental-era-digital-part-2-healing-industri)? Kamu beli candle untuk healing, healing jadi konsumsi yang dikemas sebagai perawatan, kamu beli produk tapi tidak sembuh.
 
-Ingat [Part 2](/artikel/kesehatan-mental-era-digital-part-2-healing-industri)? Kamu beli candle untuk healing. Healing jadi konsumsi yang dikemas sebagai perawatan. Kamu beli produk, tapi tidak sembuh.
+Ingat [Part 5](/artikel/kesehatan-mental-era-digital-part-5-dopamin-loop)? Algoritma membuatmu kecanduan, media sosial dirancang seperti mesin slot kasino, kamu tidak bisa berhenti scroll.
 
-Ingat [Part 5](/artikel/kesehatan-mental-era-digital-part-5-dopamin-loop)? Algoritma membuatmu kecanduan. Media sosial dirancang seperti mesin slot kasino. Kamu tidak bisa berhenti scroll.
-
-Ingat [Part 9](/artikel/kesehatan-mental-era-digital-part-9-self-improvement)? Growth mindset menyalahkanmu. Industri self-improvement butuh kamu merasa inadequate. Kamu beli kursus, tapi tidak berubah.
+Ingat [Part 9](/artikel/kesehatan-mental-era-digital-part-9-self-improvement)? Growth mindset menyalahkanmu dan industri self-improvement butuh kamu merasa inadequate, sehingga kamu beli kursus namun tidak berubah.
 
 Semua ini adalah satu sistem yang sama. Sistem yang membuatmu sakit adalah sistem yang menjual "solusi." Kondisi yang membuatmu sakit diciptakan oleh sistem yang sama yang menjual obatnya. TikTok membuatmu merasa sakit, healing industry menjual obat yang tidak menyembuhkan, self-improvement industry menyalahkanmu karena tidak sembuh, dan mental health app industry menghasilkan uang dari kamu yang tetap tidak sembuh. Siklus ini sempurna, dan kamu adalah pelanggan yang terjebak di dalamnya.
 
