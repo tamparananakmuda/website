@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
       ogHeadline: post.ogHeadline || undefined,
     });
 
-    await updatePostOGUrls(post.id, {
+    await updatePostOGUrls(post.slug, {
       ogCardUrl: urls.card,
       ogFeatureUrl: urls.feature,
       ogImageUrl: urls.feature,

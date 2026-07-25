@@ -10,11 +10,11 @@ export const dynamic = 'force-dynamic';
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const postId = searchParams.get('post_id');
+    const postSlug = searchParams.get('post_slug');
 
-    if (!postId) {
+    if (!postSlug) {
       return NextResponse.json(
-        { error: 'Post ID wajib diisi' },
+        { error: 'Post slug wajib diisi' },
         { status: 400 }
       );
     }
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ unlocked: false });
     }
 
-    const unlocked = await isPremiumUnlocked(user.id, postId);
+    const unlocked = await isPremiumUnlocked(user.id, postSlug);
 
     return NextResponse.json({ unlocked });
   } catch {
@@ -60,9 +60,9 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, premiumUnlockSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    const { post_id } = parsed.data;
+    const { post_slug } = parsed.data;
 
-    await unlockPremium(user.id, post_id);
+    await unlockPremium(user.id, post_slug);
 
     return NextResponse.json({ success: true, unlocked: true });
   } catch (error) {

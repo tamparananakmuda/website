@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export function ReadingTracker({ postId }: { postId: string }) {
+export function ReadingTracker({ postSlug }: { postSlug: string }) {
   const lastReported = useRef(0);
   const userId = useRef<string | null>(null);
 
@@ -17,7 +17,7 @@ export function ReadingTracker({ postId }: { postId: string }) {
           await fetch('/api/reading-history', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ post_id: postId, progress: 0 }),
+            body: JSON.stringify({ post_slug: postSlug, progress: 0 }),
           });
         }
       } catch {
@@ -44,7 +44,7 @@ export function ReadingTracker({ postId }: { postId: string }) {
           fetch('/api/reading-history', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ post_id: postId, progress }),
+            body: JSON.stringify({ post_slug: postSlug, progress }),
           }).catch(() => {});
         }
       }, 200);
@@ -56,7 +56,7 @@ export function ReadingTracker({ postId }: { postId: string }) {
       clearTimeout(debounceTimer);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [postId]);
+  }, [postSlug]);
 
   return null;
 }

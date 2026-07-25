@@ -4,13 +4,13 @@ description: Workflow lengkap untuk eksekusi artikel TAM, dari riset topik sampa
 
 # Post-Article Execution Workflow
 
-Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert database, deploy, distribusi, dan maintenance. Setiap step harus complete sebelum lanjut.
+Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert file Markdown, deploy, distribusi, dan maintenance. Setiap step harus complete sebelum lanjut.
 
 ## Env Var Reference
 
-**Database (Drizzle ORM):** Project sudah migrasi ke Drizzle ORM. Semua DB operations menggunakan `lib/db/index.ts` yang connect ke PostgreSQL langsung. Env vars DB ada di `.env.local`.
+**Database (Drizzle ORM):** DB hanya dipakai untuk `post_metadata` (OG image URLs), bookmarks, comments, dan email subscribers. Artikel disimpan sebagai file Markdown di `content/articles/`.
 
-**Supabase (auth only):** Supabase hanya digunakan untuk auth/session (`@supabase/ssr`). Tidak ada lagi Supabase DB queries di project code.
+**Supabase (auth only):** Supabase hanya digunakan untuk auth/session (`@supabase/ssr`).
 
 | Env Var | Fungsi | Scope |
 |---------|--------|-------|
@@ -31,7 +31,7 @@ Workflow ini mencakup seluruh pipeline: riset, drafting, QC, insert database, de
 export ARTICLE_JSON="/tmp/tam-article.json"
 ```
 
-**CRITICAL:** Semua DB commands di workflow ini menggunakan Drizzle ORM via `npx tsx -e "..."`. Jangan pakai Supabase REST API (`curl $SUPA_URL/rest/v1/...`) karena sudah deprecated.
+**CRITICAL:** Artikel disimpan sebagai file Markdown di `content/articles/`. DB hanya dipakai untuk `post_metadata` (OG URLs). Jangan pakai Supabase REST API.
 
 ## Step -1: Topic Research & Angle Test
 
@@ -73,59 +73,74 @@ Sebelum drafting, validasi ide artikel. Mencegah artikel generik dan memastikan 
 - [ ] Keyword target ditentukan (long-tail, Bahasa Indonesia)
 - [ ] Minimal 1 insight unik yang tidak ada di 3 artikel pertama Google
 
-## Step 0: Pre-Flight Database Check
+## Step 0: Pre-Flight File Check
 
-Verifikasi struktur data sesuai schema database aktual. Mencegah error 500 di production.
+Verifikasi struktur data sesuai file-based system. Cek slug uniqueness, category, dan author dari config.
 
-**Cek koneksi database + slug uniqueness + category + author (via Drizzle ORM):**
+**Cek slug uniqueness + category + author (file-based):**
 ```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { posts, categories, authors } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); async function check() { const cats = await db.select().from(categories); cats.forEach(c => console.log('CATEGORY:', c.slug, '|', c.title, '| id:', c.id, '| color:', c.color)); const auths = await db.select().from(authors); auths.forEach(a => console.log('AUTHOR:', a.slug, '|', a.name, '| id:', a.id)); const slug = 'SLUG_ARTIKEL'; const existing = await db.select({ id: posts.id }).from(posts).where(eq(posts.slug, slug)); console.log(existing.length > 0 ? 'FATAL: SLUG EXISTS' : 'SLUG AVAILABLE: ' + slug); } check().catch(console.error);"
+npx tsx -e "
+const { existsSync } = require('fs');
+const { join } = require('path');
+const { categories, authors, getCategoryBySlug, getAuthorBySlug } = require('./content/config');
+
+console.log('=== CATEGORIES ===');
+categories.forEach(c => console.log(c.slug + ' | ' + c.title + ' | color: ' + c.color));
+
+console.log('\n=== AUTHORS ===');
+authors.forEach(a => console.log(a.slug + ' | ' + a.name));
+
+const slug = 'SLUG_ARTIKEL';
+const filePath = join(process.cwd(), 'content', 'articles', slug + '.md');
+console.log('\nSLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG AVAILABLE: ' + slug);
+
+const cat = getCategoryBySlug('CATEGORY_SLUG');
+console.log('Category valid:', cat ? cat.title : 'FATAL: CATEGORY NOT FOUND');
+
+const auth = getAuthorBySlug('AUTHOR_SLUG');
+console.log('Author valid:', auth ? auth.name : 'FATAL: AUTHOR NOT FOUND');
+"
 ```
 
-**Kolom ADA di `posts` (verified dari schema + migrations):**
-- `id`, `title`, `slug`, `excerpt`, `body`, `category_id`, `subcategory_id`, `author_id`, `status`
-- `pov_tag`, `human_signature`, `fact_check_status`, `review_status`
-- `source_references` (JSONB array, BUKAN string)
-- `seo_meta_title`, `seo_meta_description`, `seo_keywords` (text[]), `reading_time`
-- `og_headline`, `og_card_url`, `og_feature_url`, `og_image_url`, `cover_image_url`, `cover_image_alt`, `is_premium`, `is_sponsored`
-- `sponsor_name`, `sponsor_url`, `sponsor_disclosure`, `premium_excerpt`
-- `series_id`, `series_order`, `published_at`, `created_at`, `updated_at`, `featured`
+**Frontmatter fields (file-based system):**
+- `title`, `slug`, `excerpt`, `body` (below frontmatter), `publishedAt`, `status`
+- `category` (slug, bukan UUID), `subcategory` (slug atau null), `author` (slug, bukan UUID)
+- `series` (slug atau null), `seriesOrder` (number atau null)
+- `povTag`, `tags` (array string), `ogHeadline`
+- `seoMetaTitle`, `seoMetaDescription`, `seoKeywords` (array string)
+- `sourceReferences` (array `{type, url, label}`)
+- `featured`, `humanSignature`, `factCheckStatus`, `reviewStatus`
+- `isSponsored`, `sponsorName`, `sponsorUrl`, `sponsorDisclosure`
+- `isPremium`, `premiumExcerpt`
+- `coverImageUrl`, `coverImageAlt` (null jika pakai OG image dynamic)
 
-**Kolom TIDAK ADA:** `tags`
-
-**Subcategory (Pillar) Reference:**
-17 pillars di DB (tabel `subcategories`). Query by category_id untuk pilih pillar yang relevan:
-```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { subcategories } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.select().from(subcategories).where(eq(subcategories.categoryId, 'CATEGORY_UUID')).then(rows => rows.forEach(s => console.log(s.slug + ' | ' + s.title + ' | ' + s.id))).catch(console.error);"
-```
-
-Daftar lengkap 17 pillars:
-| Slug | Title |
-|------|-------|
-| `mindset-realita` | Mindset & Realita |
-| `karier-dunia-kerja` | Karier & Dunia Kerja |
-| `keuangan-uang` | Keuangan & Uang |
-| `bisnis` | Bisnis |
-| `teknologi-ai` | Teknologi & AI |
-| `hubungan-sosial` | Hubungan Sosial |
-| `produktivitas` | Produktivitas |
-| `psikologi` | Psikologi |
-| `analisis-fenomena` | Analisis Fenomena |
-| `lifestyle` | Lifestyle |
-| `skill-masa-depan` | Skill Masa Depan |
-| `sejarah-orang-sukses` | Sejarah Orang Sukses |
-| `komunikasi` | Komunikasi |
-| `filosofi-hidup` | Filosofi Hidup |
-| `tamparan` | Tamparan |
-| `ulasan-buku` | Ulasan Buku |
-| `pendidikan` | Pendidikan |
+**Subcategory (Pillar) Reference (dari `content/config.ts`):**
+| Slug | Title | Category |
+|------|-------|----------|
+| `mindset-realita` | Mindset & Realita | mindset |
+| `karier-dunia-kerja` | Karier & Dunia Kerja | karier |
+| `keuangan-uang` | Keuangan & Uang | uang |
+| `bisnis` | Bisnis | bisnis |
+| `teknologi-ai` | Teknologi & AI | teknologi |
+| `hubungan-sosial` | Hubungan Sosial | kehidupan |
+| `produktivitas` | Produktivitas | kehidupan |
+| `psikologi` | Psikologi | kehidupan |
+| `analisis-fenomena` | Analisis Fenomena | kehidupan |
+| `lifestyle` | Lifestyle | kehidupan |
+| `skill-masa-depan` | Skill Masa Depan | karier |
+| `sejarah-orang-sukses` | Sejarah Orang Sukses | bisnis |
+| `komunikasi` | Komunikasi | karier |
+| `filosofi-hidup` | Filosofi Hidup | mindset |
+| `tamparan` | Tamparan | mindset |
+| `ulasan-buku` | Ulasan Buku | mindset |
+| `pendidikan` | Pendidikan | kehidupan |
 
 **CRITICAL rules:**
-- `source_references`: HARUS JSON array, bukan string. Format: `[{"type":"link","url":"...","label":"..."}]`
-- `excerpt`: MAX 160 karakter (DB constraint `char_length <= 160`)
-- `seo_meta_description`: MAX 160 karakter (DB constraint)
-- `reading_time`: Auto-calculated by DB trigger, tidak perlu manual insert
-- `published_at`: WAJIB set ke `new Date().toISOString()`. Jika null, artikel tidak muncul di top homepage (sort by `published_at DESC`). Jika `status='scheduled'`, set `published_at` ke waktu publish di masa depan. Cron job akan auto-publish saat `published_at <= now()`.
+- `sourceReferences`: HARUS array, bukan string. Format: `[{type: "link", url: "...", label: "..."}]`
+- `excerpt`: MAX 160 karakter
+- `seoMetaDescription`: MAX 160 karakter
+- `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
+- `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage. Jika `status='scheduled'`, set ke waktu publish di masa depan. Cron job akan auto-publish saat `publishedAt <= now()`.
 
 ## Step 0.5: Draft Writing Guidelines
 
@@ -161,15 +176,15 @@ Aturan formatting markdown body artikel sebelum masuk ke QC.
 - Tidak pakai ellipsis (...) sebagai desain
 
 **OG Headline (CRITICAL):**
-- `og_headline` HARUS berbeda dari `title`. Jangan copy-paste title ke og_headline
-- `og_headline` harus lebih pendek, punchy, dan conversational (max 50 karakter, sesuai card template `titleMaxChars=50`)
+- `ogHeadline` HARUS berbeda dari `title`. Jangan copy-paste title ke ogHeadline
+- `ogHeadline` harus lebih pendek, punchy, dan conversational (max 50 karakter, sesuai card template `titleMaxChars=50`)
 - Fungsi: hook untuk OG image yang membuat orang klik saat share di social media
 - Format: kalimat langsung, bukan judul formal. Contoh:
   - title: "Perbandingan Diri di Era Media Sosial: Kenapa Kamu Merasa Tidak Cukup"
-  - og_headline: "Scroll media sosial bikin kamu merasa gagal?"
+  - ogHeadline: "Scroll media sosial bikin kamu merasa gagal?"
   - title: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
-  - og_headline: "Kerja keras tidak menjamin kamu aman dari PHK"
-- Jika `og_headline` null, OG image akan fallback ke `title` (tidak ideal untuk social click-through)
+  - ogHeadline: "Kerja keras tidak menjamin kamu aman dari PHK"
+- Jika `ogHeadline` null, OG image akan fallback ke `title` (tidak ideal untuk social click-through)
 
 **Command cek heading + internal links:**
 ```bash
@@ -198,7 +213,7 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 
 ## Step 1: Editorial QC Audit
 
-Validasi semua data dan klaim dalam artikel sebelum masuk ke database.
+Validasi semua data dan klaim dalam artikel sebelum masuk ke file Markdown.
 
 **Humanizer rules lengkap:** Lihat `files/HumanizerRules.md` (single source of truth, 15 kategori + audit script).
 
@@ -368,7 +383,7 @@ Setiap angka, statistik, persentase, dan klaim faktual di artikel WAJIB diverifi
 **Proses:**
 
 1. Extract setiap angka/statistik/persentase dari body artikel
-2. Map setiap angka ke sumber di `source_references`
+2. Map setiap angka ke sumber di `sourceReferences`
 3. Verifikasi angka di artikel cocok dengan angka di sumber
 4. Flag angka tanpa sumber
 5. Cek apakah data masih relevan (tidak outdated)
@@ -401,7 +416,7 @@ for i, s in enumerate(number_sentences, 1):
 print('=== VERIFICATION CHECKLIST ===')
 print('For each number above, verify:')
 print('  [ ] Number matches source exactly')
-print('  [ ] Source is listed in source_references')
+print('  [ ] Source is listed in sourceReferences')
 print('  [ ] Source URL is active (Step 2 will check)')
 print('  [ ] Data is not outdated (check publication date)')
 print('  [ ] No misinterpretation (correlation vs causation)')
@@ -409,7 +424,7 @@ print('  [ ] Context is provided (not cherry-picked)')
 PYEOF
 ```
 
-**Command (cross-check angka vs source_references):**
+**Command (cross-check angka vs sourceReferences):**
 ```bash
 python3 << 'PYEOF'
 import json, re
@@ -417,7 +432,7 @@ import json, re
 # Load article JSON
 d = json.load(open('ARTICLE_JSON_PATH'))
 body = d.get('body', '')
-refs = d.get('source_references', [])
+refs = d.get('source_references', [])  # JSON intermediate uses snake_case
 
 print('=== SOURCE COVERAGE CHECK ===')
 print(f'Source references: {len(refs)}')
@@ -479,7 +494,7 @@ Setelah Step 1 audit dijalankan dan fixes diterapkan, WAJIB re-run audit untuk k
 1. Jalankan audit script yang sama dengan Step 1 (python3 humanizer audit) terhadap draft yang sudah di-fix
 2. Jika masih ada FAIL: fix issue, re-run audit lagi (bisa berulang sampai CLEAN)
 3. Jika CLEAN: catat "Humanizer Double Verification: PASS (round N)" di log
-4. Set `human_signature: true` di article JSON hanya setelah double verification PASS
+4. Set `human_signature: true` di article JSON (akan menjadi `humanSignature: true` di frontmatter) hanya setelah double verification PASS
 
 **Command (re-run audit dari file draft markdown langsung):**
 ```bash
@@ -569,7 +584,7 @@ PYEOF
 - [ ] Audit re-run setelah semua fixes dari Step 1 diterapkan
 - [ ] Hasil: CLEAN (0 issues)
 - [ ] Word count: 1.000-2.500 kata
-- [ ] `human_signature: true` di-set di article JSON
+- [ ] `humanSignature: true` di-set di article JSON (maps ke frontmatter)
 - [ ] Catat round number (berapa kali audit dijalankan sampai CLEAN)
 
 **Aturan:**
@@ -598,14 +613,14 @@ Klasifikasi semua sumber ke dalam tier reliability.
 - Blog post tanpa data primer
 - Artikel sekunder yang tidak menambah data unik
 
-**Output:** Update `source_references` di JSON dengan hanya sumber yang lulus verifikasi.
+**Output:** Update `sourceReferences` di JSON dengan hanya sumber yang lulus verifikasi.
 
 **Command cek HTTP status semua source references:**
 ```bash
 node -e "
 const fs = require('fs');
 const a = JSON.parse(fs.readFileSync('$ARTICLE_JSON', 'utf8'));
-const refs = a.source_references || [];
+const refs = a.source_references || [];  // JSON intermediate uses snake_case
 (async () => {
   for (const ref of refs) {
     try {
@@ -629,7 +644,7 @@ const refs = a.source_references || [];
 
 ## Step 3: SEO Metadata Finalization
 
-Pastikan semua metadata SEO optimal sebelum insert ke database.
+Pastikan semua metadata SEO optimal sebelum insert file Markdown.
 
 ### 3a. Keyword Research
 
@@ -641,7 +656,7 @@ Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan s
 - Google autocomplete (ketik keyword utama, liati saran)
 - Related searches di Google SERP
 
-**Simpan ke `seo_keywords` field:** array string, contoh: `["hustle culture gen z", "dampak hustle culture", "burnout gen z indonesia"]`
+**Simpan ke `seoKeywords` field:** array string, contoh: `["hustle culture gen z", "dampak hustle culture", "burnout gen z indonesia"]`
 
 ### 3b. Meta Title & Description
 
@@ -649,7 +664,7 @@ Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan s
 - Contoh: `Hustle Culture Bikin Gen Z Berhenti Berlari | TAM`
 - Keyword utama di awal untuk SEO weight
 
-**Meta Description Formula:** `[Konteks Keyword] + [Value Proposition] + [CTA]` (max 160 karakter, DB constraint)
+**Meta Description Formula:** `[Konteks Keyword] + [Value Proposition] + [CTA]` (max 160 karakter)
 - Contoh: `Hustle culture menjual mimpi sukses tanpa henti. Tapi data menunjukkan gen Z sudah berhenti berlari. Baca analisis lengkapnya di sini.`
 - Mengandung keyword utama secara natural
 - Jangan copy paste excerpt
@@ -682,17 +697,17 @@ Target 3-8 keyword long-tail dalam Bahasa Indonesia. Prioritas: keyword dengan s
 - Cek artikel relevan via command di Step 0.5
 
 **Checklist:**
-- [ ] `seo_keywords`: 3-8 keyword long-tail, Bahasa Indonesia
-- [ ] `seo_meta_title`: max 70 karakter, keyword utama di awal, ada `| TAM`
-- [ ] `seo_meta_description`: **MAX 160 karakter** (DB constraint), mengandung keyword
+- [ ] `seoKeywords`: 3-8 keyword long-tail, Bahasa Indonesia
+- [ ] `seoMetaTitle`: max 70 karakter, keyword utama di awal, ada `| TAM`
+- [ ] `seoMetaDescription`: **MAX 160 karakter**, mengandung keyword
 - [ ] `slug`: kebab-case, keyword di awal, max 60 karakter, **unique**
-- [ ] `excerpt`: **MAX 160 karakter** (DB constraint)
-- [ ] `og_headline`: max 50 karakter untuk OG image (fallback ke title)
+- [ ] `excerpt`: **MAX 160 karakter**
+- [ ] `ogHeadline`: max 50 karakter untuk OG image (fallback ke title)
 - [ ] h2 mengandung secondary keyword
 - [ ] Internal linking: minimal 2 link, anchor text bervariasi
 - [ ] Image alt text: deskriptif + keyword when natural
-- [ ] `category_id`: sudah di-query dari Step 0
-- [ ] `author_id`: sudah di-query dari Step 0 (default: Yovie Setiawan)
+- [ ] `category`: slug kategori valid dari `content/config.ts` (Step 0)
+- [ ] `author`: slug author valid dari `content/config.ts` (default: `yovie-setiawan`)
 
 ### 3g. SEO Scoring Rubric (0-100, target > 80)
 
@@ -717,19 +732,17 @@ print(f'Slug: {len(d[\"slug\"])} chars (max 60)')
 excerpt_len = len(d['excerpt'])
 print(f'Excerpt: {excerpt_len} chars (max 160)')
 if excerpt_len > 160:
-    print('WARNING: Excerpt exceeds 160 chars! Will fail DB insert.')
+    print('WARNING: Excerpt exceeds 160 chars! Will fail file insert.')
     print('Trim to:', d['excerpt'][:157] + '...')
-seo_desc_len = len(d['seo_meta_description'])
+seo_desc_len = len(d['seo_meta_description'])  # JSON uses snake_case
 if seo_desc_len > 160:
-    print('WARNING: SEO description exceeds 160 chars! Will fail DB insert.')
+    print('WARNING: SEO description exceeds 160 chars! Will fail file insert.')
 "
 ```
 
-## Step 4: Database Insert
+## Step 4: File-Based Article Insert
 
-Insert artikel ke database via Drizzle ORM. Semua DB operations menggunakan server-side Drizzle queries.
-
-**CRITICAL - Gunakan Drizzle ORM (`npx tsx -e "..."`), bukan Supabase REST API.**
+Insert artikel sebagai file Markdown dengan YAML frontmatter di `content/articles/`. Tidak ada DB insert untuk artikel lagi — artikel disimpan sebagai file `.md` dan dibaca oleh `lib/articles/loader.ts`.
 
 **Article JSON Template (simpan ke `$ARTICLE_JSON`):**
 ```json
@@ -738,15 +751,13 @@ Insert artikel ke database via Drizzle ORM. Semua DB operations menggunakan serv
   "slug": "slug-artikel-kebab-case",
   "excerpt": "Excerpt max 160 karakter",
   "body": "## Heading 1\n\nKonten...\n\n## Heading 2\n\nKonten...\n\n### Sub-heading\n\nKonten...",
-  "category_id": "UUID dari Step 0",
-  "subcategory_id": "UUID pillar dari Step 0 (opsional, null jika tidak relevan)",
-  "author_id": "UUID dari Step 0",
+  "category": "kehidupan",
+  "subcategory": "mindset-realita",
+  "author": "yovie-setiawan",
   "status": "published",
   "seo_keywords": ["keyword 1", "keyword 2", "keyword 3"],
   "pov_tag": "data",
   "human_signature": true,
-  "fact_check_status": "verified",
-  "review_status": "publish",
   "source_references": [
     {"type": "link", "url": "https://sumber.com", "label": "Nama Sumber"}
   ],
@@ -754,57 +765,49 @@ Insert artikel ke database via Drizzle ORM. Semua DB operations menggunakan serv
   "seo_meta_title": "SEO Title max 70",
   "seo_meta_description": "SEO desc max 160",
   "og_headline": "OG headline max 50",
-  "published_at": "2026-01-01T00:00:00.000Z"
+  "published_at": "2026-01-01T00:00:00.000Z",
+  "series": null,
+  "series_order": null
 }
 ```
 
+**Field mapping (JSON → frontmatter):**
+- `category`: slug kategori dari `content/config.ts` (bukan UUID)
+- `subcategory`: slug subkategori dari `content/config.ts` (bukan UUID, null jika tidak relevan)
+- `author`: slug author dari `content/config.ts` (bukan UUID)
+- `series`: slug series dari `content/config.ts` (null jika tidak ada)
+- `seo_keywords`: array string → `seoKeywords` di frontmatter
+- `pov_tag`: string → `povTag` di frontmatter
+- `source_references`: array `{type, url, label}` → `sourceReferences` di frontmatter
+
 **Optional fields (tambah hanya jika perlu):**
-- `cover_image_url`, `cover_image_alt`: null (OG image auto-generate via R2)
-- `og_card_url`, `og_feature_url`, `og_image_url`: null (auto-populated by OG generate step)
-- `is_premium`, `premium_excerpt`: false, null
-- `is_sponsored`, `sponsor_name`, `sponsor_url`, `sponsor_disclosure`: false, null
-- `series_id`, `series_order`: null (untuk multi-part articles)
+- `is_premium`, `premium_excerpt` → `isPremium`, `premiumExcerpt` di frontmatter: false, null
+- `is_sponsored`, `sponsor_name`, `sponsor_url`, `sponsor_disclosure` → `isSponsored`, `sponsorName`, `sponsorUrl`, `sponsorDisclosure` di frontmatter: false, null
 
 **Scheduling Strategy (WAJIB BACA):**
 - **Setiap hari harus ada minimal 1 artikel di-publish.** Kalau hari ini sudah publish langsung, artikel berikutnya harus scheduled untuk hari berikutnya.
 - **Jam posting ideal:** Pagi 08:00 WIB (01:00 UTC) atau Siang 12:00 WIB (05:00 UTC) atau Sore 17:00 WIB (10:00 UTC)
-- **Publish langsung:** `"status": "published"`, `"published_at": "2026-01-01T00:00:00.000Z"` (now atau past)
-  - **WARNING: `published_at` HARUS di masa lalu atau sekarang (UTC).** Jika di masa depan, artikel tidak muncul karena query DB memfilter `published_at <= now()`. Gunakan format UTC yang sudah lewat, contoh: `new Date().toISOString()` saat insert.
-  - QC harus dilakukan SEBELUM insert (draft review, editorial QC, SEO validation). Begitu insert, langsung live.
-- **Scheduled:** `"status": "scheduled"`, `"published_at": "2026-07-18T01:00:00.000Z"` (future date, 08:00 WIB)
-  - GitHub Actions cron job berjalan every 5 minutes, auto-publish artikel dengan `status='scheduled'` dan `published_at <= now()`
+- **Publish langsung:** `"status": "published"`, `"published_at": "2026-01-01T00:00:00.000Z"` (now atau past) → `publishedAt` di frontmatter
+  - **WARNING: `publishedAt` HARUS di masa lalu atau sekarang (UTC).** Jika di masa depan, artikel tidak muncul karena loader memfilter `publishedAt <= now()`.
+  - QC harus dilakukan SEBELUM insert (draft review, editorial QC, SEO validation). Begitu file dibuat, langsung live.
+- **Scheduled:** `"status": "scheduled"`, `"published_at": "2026-07-18T01:00:00.000Z"` (future date, 08:00 WIB) → `publishedAt` di frontmatter
+  - GitHub Actions cron job berjalan every 5 minutes, auto-publish artikel dengan `status='scheduled'` dan `publishedAt <= now()` (cron mengubah status di file frontmatter)
   - Cron job juga auto-generate OG images untuk setiap artikel yang di-publish
   - Max delay: 5 menit dari waktu scheduled
   - Tidak perlu manual Step 5 (OG generation) untuk scheduled articles
   - Tidak perlu code deploy, cron yang handle publish + OG
 
 **Catatan:**
-- `reading_time`: Tidak perlu insert. DB trigger auto-calculate dari body
-- `published_at`: WAJIB set. Jika null, artikel tidak muncul di top homepage
-- `source_references`: Field di DB pakai `label`, bukan `title`
+- `readingTime`: Tidak perlu set di frontmatter. Loader auto-calculate dari body (jumlah kata / 200)
+- `publishedAt`: WAJIB set. Jika null, artikel tidak muncul di top homepage
+- `sourceReferences`: Format array `{type, url, label}` di frontmatter
+- File disimpan di `content/articles/{slug}.md`
 
-**Insert command (via Drizzle ORM):**
+**Insert command (buat file Markdown):**
 ```bash
 npx tsx -e "
-const { readFileSync } = require('fs');
+const { readFileSync, writeFileSync, mkdirSync } = require('fs');
 const { join } = require('path');
-
-// Load .env.local manually BEFORE requiring DB modules
-const envPath = join(process.cwd(), '.env.local');
-const envContent = readFileSync(envPath, 'utf8');
-envContent.split('\n').forEach((line) => {
-  const trimmed = line.trim();
-  if (!trimmed || trimmed.startsWith('#')) return;
-  const eqIdx = trimmed.indexOf('=');
-  if (eqIdx === -1) return;
-  const key = trimmed.substring(0, eqIdx).trim();
-  const value = trimmed.substring(eqIdx + 1).trim();
-  if (!process.env[key]) process.env[key] = value;
-});
-
-const { db } = require('./lib/db');
-const { posts } = require('./lib/db/schema');
-const { eq } = require('drizzle-orm');
 
 const article = JSON.parse(readFileSync(process.env.ARTICLE_JSON || '/tmp/tam-article.json', 'utf8'));
 
@@ -821,53 +824,146 @@ if (!Array.isArray(article.source_references)) {
 if (!article.published_at) {
   console.error('FATAL: published_at is required'); process.exit(1);
 }
+if (!article.slug || !article.title || !article.body) {
+  console.error('FATAL: slug, title, body are required'); process.exit(1);
+}
 
-const [inserted] = await db.insert(posts).values({
+// Build YAML frontmatter
+const frontmatter = {
   title: article.title,
   slug: article.slug,
-  excerpt: article.excerpt,
-  body: article.body,
-  categoryId: article.category_id,
-  subcategoryId: article.subcategory_id || null,
-  authorId: article.author_id,
+  excerpt: article.excerpt || '',
+  publishedAt: article.published_at,
   status: article.status === 'scheduled' ? 'scheduled' : 'published',
-  seoKeywords: article.seo_keywords || null,
+  category: article.category || 'kehidupan',
+  subcategory: article.subcategory || null,
+  author: article.author || 'yovie-setiawan',
+  series: article.series || null,
+  seriesOrder: article.series_order || null,
   povTag: article.pov_tag || 'data',
+  tags: [],
+  ogHeadline: article.og_headline || article.title,
+  seoMetaTitle: article.seo_meta_title || '',
+  seoMetaDescription: article.seo_meta_description || '',
+  seoKeywords: article.seo_keywords || [],
+  sourceReferences: article.source_references.map((r) => ({ type: r.type || 'link', url: r.url, label: r.label || r.title || '' })),
+  featured: article.featured || false,
   humanSignature: article.human_signature !== false,
   factCheckStatus: 'verified',
   reviewStatus: 'publish',
-  sourceReferences: article.source_references.map((r: any) => ({ type: r.type || 'link', url: r.url, label: r.label || r.title })),
-  featured: article.featured || false,
-  seoMetaTitle: article.seo_meta_title,
-  seoMetaDescription: article.seo_meta_description,
-  ogHeadline: article.og_headline || article.title,
-  publishedAt: article.published_at || new Date().toISOString(),
-}).returning();
+  isSponsored: article.is_sponsored || false,
+  sponsorName: article.sponsor_name || null,
+  sponsorUrl: article.sponsor_url || null,
+  sponsorDisclosure: article.sponsor_disclosure || null,
+  isPremium: article.is_premium || false,
+  premiumExcerpt: article.premium_excerpt || null,
+  coverImageUrl: null,
+  coverImageAlt: null,
+};
 
-console.log('Inserted:', inserted.slug);
-console.log('source_references isArray:', Array.isArray(inserted.sourceReferences));
-console.log('published_at:', inserted.publishedAt);
-if (!Array.isArray(inserted.sourceReferences)) console.error('WARNING: source_references not array!');
-if (!inserted.publishedAt) console.error('WARNING: published_at is null!');
+// Convert to YAML frontmatter string
+function toYaml(obj, indent = '') {
+  let lines = [];
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === null) {
+      lines.push(indent + key + ': null');
+    } else if (typeof value === 'string') {
+      // Escape quotes in string values
+      const escaped = value.replace(/"/g, '\\"');
+      lines.push(indent + key + ': \"' + escaped + '\"');
+    } else if (typeof value === 'boolean' || typeof value === 'number') {
+      lines.push(indent + key + ': ' + value);
+    } else if (Array.isArray(value)) {
+      if (value.length === 0) {
+        lines.push(indent + key + ': []');
+      } else if (typeof value[0] === 'string') {
+        lines.push(indent + key + ':');
+        value.forEach(v => lines.push(indent + '  - \"' + v.replace(/"/g, '\\"') + '\"'));
+      } else {
+        lines.push(indent + key + ':');
+        value.forEach(v => {
+          if (typeof v === 'object' && v !== null) {
+            lines.push(indent + '  - ' + JSON.stringify(v));
+          } else {
+            lines.push(indent + '  - ' + v);
+          }
+        });
+      }
+    } else if (typeof value === 'object') {
+      lines.push(indent + key + ':');
+      lines.push(toYaml(value, indent + '  '));
+    }
+  }
+  return lines.join('\n');
+}
+
+const yaml = toYaml(frontmatter);
+const markdown = '---\n' + yaml + '\n---\n\n' + article.body + '\n';
+
+const articlesDir = join(process.cwd(), 'content', 'articles');
+mkdirSync(articlesDir, { recursive: true });
+const filePath = join(articlesDir, article.slug + '.md');
+writeFileSync(filePath, markdown, 'utf8');
+
+console.log('File created:', filePath);
+console.log('slug:', article.slug);
+console.log('status:', frontmatter.status);
+console.log('published_at:', frontmatter.publishedAt);
+console.log('source_references count:', frontmatter.sourceReferences.length);
 "
 
-## Step 4.5: Post-Insert Data Verification
+## Step 4.5: Post-Insert File Verification
 
-Verifikasi data yang masuk DB sudah benar sebelum lanjut.
+Verifikasi file Markdown yang dibuat sudah benar sebelum lanjut.
 
-**Command (via Drizzle ORM):**
+**Command (parse & verify frontmatter):**
 ```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { posts } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); async function verify() { const result = await db.select().from(posts).where(eq(posts.slug, 'SLUG')); const p = result[0]; if (!p) { console.error('NOT FOUND'); process.exit(1); } console.log('=== Post-Insert Verification ==='); console.log('slug:', p.slug); console.log('status:', p.status); console.log('published_at:', p.publishedAt); console.log('author_id:', p.authorId); console.log('category_id:', p.categoryId); console.log('source_references isArray:', Array.isArray(p.sourceReferences)); console.log('excerpt length:', p.excerpt ? p.excerpt.length : 'null', '(max 160)'); console.log('reading_time:', p.readingTime); console.log('featured:', p.featured); const issues = []; if (!p.publishedAt) issues.push('published_at is null'); if (!p.authorId) issues.push('author_id is null'); if (!p.categoryId) issues.push('category_id is null'); if (!Array.isArray(p.sourceReferences)) issues.push('source_references not array'); if (p.excerpt && p.excerpt.length > 160) issues.push('excerpt > 160'); if (issues.length > 0) { console.error('ISSUES:', issues.join(', ')); process.exit(1); } else { console.log('All checks passed.'); } } verify().catch(console.error);"
+npx tsx -e "
+const { readFileSync } = require('fs');
+const { join } = require('path');
+const matter = require('gray-matter');
+
+const filePath = join(process.cwd(), 'content', 'articles', 'SLUG' + '.md');
+const fileContent = readFileSync(filePath, 'utf8');
+const { data: frontmatter, content: body } = matter(fileContent);
+
+console.log('=== File Verification ===');
+console.log('slug:', frontmatter.slug);
+console.log('status:', frontmatter.status);
+console.log('publishedAt:', frontmatter.publishedAt);
+console.log('category:', frontmatter.category);
+console.log('author:', frontmatter.author);
+console.log('sourceReferences isArray:', Array.isArray(frontmatter.sourceReferences));
+console.log('excerpt length:', frontmatter.excerpt ? frontmatter.excerpt.length : 'null', '(max 160)');
+console.log('body length:', body.length, 'chars');
+
+const issues = [];
+if (!frontmatter.publishedAt) issues.push('publishedAt is null');
+if (!frontmatter.author) issues.push('author is null');
+if (!frontmatter.category) issues.push('category is null');
+if (!Array.isArray(frontmatter.sourceReferences)) issues.push('sourceReferences not array');
+if (frontmatter.excerpt && frontmatter.excerpt.length > 160) issues.push('excerpt > 160');
+if (!frontmatter.title) issues.push('title is missing');
+if (!frontmatter.slug) issues.push('slug is missing');
+if (issues.length > 0) {
+  console.error('ISSUES:', issues.join(', '));
+  process.exit(1);
+} else {
+  console.log('All checks passed.');
+}
+"
 ```
 
 **Checklist:**
-- [ ] Response tidak ada `message` field (error)
-- [ ] `source_references` isArray = `true`
-- [ ] `published_at` tidak null
-- [ ] `author_id` tidak null
-- [ ] `category_id` tidak null
+- [ ] File `content/articles/SLUG.md` exists
+- [ ] `slug` di frontmatter = slug yang diharapkan
+- [ ] `status` = `published` atau `scheduled`
+- [ ] `publishedAt` tidak null
+- [ ] `category` = slug kategori yang valid (dari `content/config.ts`)
+- [ ] `author` = slug author yang valid (dari `content/config.ts`)
+- [ ] `sourceReferences` isArray = `true`
 - [ ] `excerpt` length <= 160
-- [ ] `reading_time` terisi (auto-calculated by trigger)
+- [ ] Body content tidak kosong
 
 **Update article inventory (WAJIB):**
 Setelah verifikasi lolos, update `files/article-inventory.md` dengan baris baru:
@@ -880,22 +976,45 @@ File ini dipakai workflow untuk internal linking di artikel selanjutnya, jadi ha
 
 Jika artikel di-insert dengan `status='scheduled'`, verifikasi scheduling akan berjalan.
 
-**Cek status & published_at (via Drizzle ORM):**
+**Cek status & publishedAt dari file frontmatter:**
 ```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { posts } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); async function check() { const result = await db.select({ status: posts.status, publishedAt: posts.publishedAt }).from(posts).where(eq(posts.slug, 'SLUG')); const p = result[0]; if (!p) { console.error('NOT FOUND'); process.exit(1); } console.log('status:', p.status); console.log('published_at:', p.publishedAt); if (p.status === 'scheduled') { const now = new Date(); const pubDate = new Date(p.publishedAt!); if (pubDate <= now) { console.error('WARNING: published_at is in the past but status is scheduled! Cron should have published this.'); } else { const minsUntil = Math.ceil((pubDate.getTime() - now.getTime()) / 60000); console.log('Will auto-publish in ~' + minsUntil + ' minutes (GitHub Actions cron runs every 5 min)'); } } else if (p.status === 'published') { console.log('Already published'); } } check().catch(console.error);"
+npx tsx -e "
+const { readFileSync } = require('fs');
+const { join } = require('path');
+const matter = require('gray-matter');
+
+const filePath = join(process.cwd(), 'content', 'articles', 'SLUG' + '.md');
+const { data: f } = matter(readFileSync(filePath, 'utf8'));
+
+console.log('status:', f.status);
+console.log('publishedAt:', f.publishedAt);
+
+if (f.status === 'scheduled') {
+  const now = new Date();
+  const pubDate = new Date(f.publishedAt);
+  if (pubDate <= now) {
+    console.error('WARNING: publishedAt is in the past but status is scheduled! Cron should have published this.');
+  } else {
+    const minsUntil = Math.ceil((pubDate.getTime() - now.getTime()) / 60000);
+    console.log('Will auto-publish in ~' + minsUntil + ' minutes (GitHub Actions cron runs every 5 min)');
+  }
+} else if (f.status === 'published') {
+  console.log('Already published');
+}
+"
 ```
 
 **Checklist (if scheduled):**
-- [ ] `status` = `scheduled` di DB
-- [ ] `published_at` di masa depan
+- [ ] `status` = `scheduled` di frontmatter file
+- [ ] `publishedAt` di masa depan
 - [ ] `CRON_SECRET` env var set di Vercel dashboard dan GitHub Secrets
 - [ ] GitHub Actions workflow `.github/workflows/publish-scheduled.yml` deployed
-- [ ] Frontend tidak menampilkan artikel (safety filter `published_at <= now()` aktif)
+- [ ] Frontend tidak menampilkan artikel (loader filter `status === 'published' && publishedAt <= now()` aktif)
 - [ ] OG images akan auto-generate saat cron publish artikel (tidak perlu manual Step 5 untuk scheduled articles)
 
 **Checklist (if published directly):**
-- [ ] `status` = `published` di DB
-- [ ] `published_at` di now atau past
+- [ ] `status` = `published` di frontmatter file
+- [ ] `publishedAt` di now atau past
 - [ ] Artikel muncul di homepage/article list
 
 ## Step 5: OG Image Generation (WebP via R2 CDN)
@@ -925,22 +1044,22 @@ curl -s -o /dev/null -w "card: %{http_code} (%{size_download} bytes)\n" "https:/
 curl -s -o /dev/null -w "feature: %{http_code} (%{size_download} bytes)\n" "https://cdn.tamparananakmuda.com/og/SLUG-feature.webp"
 ```
 
-**Verify DB updated (via Drizzle ORM):**
+**Verify post_metadata updated (via Drizzle ORM):**
 ```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { posts } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.select({ ogCardUrl: posts.ogCardUrl, ogFeatureUrl: posts.ogFeatureUrl, ogImageUrl: posts.ogImageUrl }).from(posts).where(eq(posts.slug, 'SLUG')).then(r => { const p = r[0]; console.log('card:', p?.ogCardUrl); console.log('feature:', p?.ogFeatureUrl); console.log('og:', p?.ogImageUrl); }).catch(console.error);"
+npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { postMetadata } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.select().from(postMetadata).where(eq(postMetadata.slug, 'SLUG')).then(r => { const p = r[0]; console.log('card:', p?.ogCardUrl); console.log('feature:', p?.ogFeatureUrl); console.log('og:', p?.ogImageUrl); }).catch(console.error);"
 ```
 
 **Checklist:**
 - [ ] API/batch script sukses generate (no errors)
 - [ ] `og/{slug}-card.webp` HTTP 200 di CDN
 - [ ] `og/{slug}-feature.webp` HTTP 200 di CDN
-- [ ] DB: `og_card_url` = `https://cdn.tamparananakmuda.com/og/{slug}-card.webp`
-- [ ] DB: `og_feature_url` = `https://cdn.tamparananakmuda.com/og/{slug}-feature.webp`
-- [ ] DB: `og_image_url` = sama dengan `og_feature_url` (untuk social meta)
+- [ ] post_metadata: `og_card_url` = `https://cdn.tamparananakmuda.com/og/{slug}-card.webp`
+- [ ] post_metadata: `og_feature_url` = `https://cdn.tamparananakmuda.com/og/{slug}-feature.webp`
+- [ ] post_metadata: `og_image_url` = sama dengan `og_feature_url` (untuk social meta)
 - [ ] Category color ter-aplikasi di accent pillar
 - [ ] Headline tidak terpotong
 - [ ] Brand mark (TAMPARAN ANAK MUDA) terlihat
-- [ ] `og_headline` dipakai jika ada (fallback ke `title`)
+- [ ] `ogHeadline` dipakai jika ada (fallback ke `title`)
 
 ## Step 6: Production Deployment Check
 
@@ -985,7 +1104,7 @@ curl -s "https://tamparananakmuda.com/rss.xml" | grep "SLUG" && echo "RSS OK" ||
 
 **Known Vercel serverless issues:**
 - `isomorphic-dompurify` crash di Vercel (jsdom dependency). Sudah diganti regex sanitizer di `components/markdown-content.tsx`. Jangan import library ini lagi.
-- `cookies()` dari `next/headers` bisa fail di `generateMetadata` saat static generation. Gunakan server-side Supabase client dari `@/lib/supabase/server.ts` dengan proper error handling.
+- `cookies()` dari `next/headers` bisa fail di `generateMetadata` saat static generation. Gunakan server-side Supabase client dari `@/lib/supabase/server.ts` dengan proper error handling. Note: Article pages sekarang SSG dengan `generateStaticParams`, jadi ini kurang relevan untuk article pages.
 
 ## Step 6.5: SEO Indexing
 
@@ -1123,14 +1242,19 @@ Monitor performa artikel 7 hari setelah publish.
 
 Jika insert gagal atau artikel salah publish, undo dengan:
 
-**Delete post dari DB (via Drizzle ORM):**
+**Delete article file:**
 ```bash
-npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { posts } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.delete(posts).where(eq(posts.slug, 'SLUG')).then(() => console.log('Deleted: SLUG')).catch(console.error);"
+rm content/articles/SLUG.md
+echo "Deleted: content/articles/SLUG.md"
+```
+
+**Delete post_metadata dari DB (via Drizzle ORM):**
+```bash
+npx tsx -e "const { readFileSync } = require('fs'); const { join } = require('path'); const envPath = join(process.cwd(), '.env.local'); const envContent = readFileSync(envPath, 'utf8'); envContent.split('\n').forEach((line) => { const t = line.trim(); if (!t || t.startsWith('#')) return; const i = t.indexOf('='); if (i === -1) return; const k = t.substring(0, i).trim(); const v = t.substring(i + 1).trim(); if (!process.env[k]) process.env[k] = v; }); const { db } = require('./lib/db'); const { postMetadata } = require('./lib/db/schema'); const { eq } = require('drizzle-orm'); db.delete(postMetadata).where(eq(postMetadata.slug, 'SLUG')).then(() => console.log('post_metadata deleted: SLUG')).catch(console.error);"
 ```
 
 **Delete OG images dari R2:**
 ```bash
-# OG images sekarang disimpan di R2, bukan Vercel cache
 # Hapus card + feature WebP untuk slug tersebut
 curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-card.webp"
 curl -s -X DELETE "https://cdn.tamparananakmuda.com/og/SLUG-feature.webp"
@@ -1143,7 +1267,7 @@ deleteOldOGImages('SLUG').then(() => console.log('OG images deleted from R2'));
 "
 ```
 
-**Note:** Setelah rollback, slug bisa dipakai ulang karena row sudah dihapus.
+**Note:** Setelah rollback, slug bisa dipakai ulang karena file sudah dihapus. Jika artikel sudah di-deploy ke production, lakukan `git rm content/articles/SLUG.md && git commit && git push` untuk hapus dari production juga.
 
 ## Error Prevention Reference
 
@@ -1151,21 +1275,14 @@ Bug yang pernah terjadi dan cara mencegah:
 
 | Bug | Penyebab | Pencegahan |
 |-----|----------|------------|
-| 500 di production (semua artikel) | `post.tags` di-reference di page.tsx tapi kolom tidak ada | Step 0: cek kolom yang ada |
-| 500 di production (semua artikel) | `isomorphic-dompurify` crash di Vercel serverless | Sudah diganti regex sanitizer, jangan import lagi |
-| `citations.map is not a function` | `source_references` di-insert sebagai string, bukan array | Step 4: verifikasi isArray setelah insert |
-| DB insert ditolak | `excerpt` > 160 karakter (constraint violation) | Step 3: cek excerpt length sebelum insert |
-| DB insert ditolak | `seo_meta_description` > 160 karakter (constraint violation) | Step 3: cek seo_meta_description length |
-| DB insert ditolak | Constraint violation (excerpt > 160, seo_meta_description > 160, dll) | Step 4: validasi payload sebelum insert via Drizzle ORM |
-| 500 setelah deploy | Code belum di-deploy ke production | Step 6: commit + push, tunggu Vercel deploy |
-| Artikel tidak muncul di homepage | `published_at` null saat insert | Step 4: WAJIB set `published_at` |
-| Artikel tidak punya penulis | `author_id` null saat insert | Step 0: query author_id, Step 4: include di payload |
+| Artikel tidak muncul di homepage | `publishedAt` null atau di masa depan dengan status `published` | Step 4: WAJIB set `publishedAt` ke now/past untuk published, future untuk scheduled |
+| Artikel tidak punya penulis | `author` null atau slug salah di frontmatter | Step 0: cek author slug dari `content/config.ts` |
 | TOC kosong di artikel | Heading pakai h1 atau tidak ada h2 | Step 0.5: h2/h3 only, min 3 h2 |
 | Internal link kurang dari 2 | Tidak ada validasi internal linking | Step 0.5: cek min 2 link ke `/artikel/` |
-| Slug duplikat, insert fail | Tidak cek slug uniqueness sebelum insert | Step 0: cek slug uniqueness |
-| Scheduled article muncul sebelum waktunya | Frontend query tidak filter `published_at <= now()` | Semua frontend query sudah pakai `.lte('published_at', new Date().toISOString())` |
-| Scheduled article tidak auto-publish | `CRON_SECRET` belum set atau tidak sinkron antara Vercel dan GitHub Secrets | Set `CRON_SECRET` di Vercel dashboard DAN GitHub Secrets, pastikan nilai sama. Cron dijalankan via GitHub Actions (`.github/workflows/publish-scheduled.yml`), bukan Vercel cron |
-| SEO keywords tidak tersimpan | `seo_keywords` column belum ada di DB | Schema Drizzle sudah include `seoKeywords: text('seo_keywords').array()`. Jalankan `npx drizzle-kit push` jika migration belum diapply |
+| Slug duplikat | Tidak cek file exists sebelum insert | Step 0: cek `existsSync(content/articles/SLUG.md)` |
+| Scheduled article muncul sebelum waktunya | Loader tidak filter `publishedAt <= now()` | Loader sudah filter `status === 'published' && publishedAt <= now()` |
+| Scheduled article tidak auto-publish | `CRON_SECRET` belum set atau tidak sinkron antara Vercel dan GitHub Secrets | Set `CRON_SECRET` di Vercel dashboard DAN GitHub Secrets, pastikan nilai sama |
+| OG image null di meta tags | `post_metadata` belum di-populate (OG belum di-generate) | Step 5: generate OG via API atau tunggu cron auto-generate untuk scheduled |
 | Artikel terdeteksi AI-generated | AI vocabulary (EN+ID), staccato drama, copula avoidance, significance inflation, signposting, filler, promotional language | Step 1: jalankan humanizer audit script (15 kategori di `files/HumanizerRules.md`), fix semua FAIL sebelum insert |
 | AI vocab Indonesia (signifikan, krusial, mendalam) | Kata-kata formal yang sering dihasilkan AI bahasa Indonesia | Step 1: audit script cek AI vocab ID, ganti dengan kata natural |
 | Curly quotes di body | Editor/CMS auto-convert straight quotes | Step 1: cek curly quotes, replace dengan straight quotes |
@@ -1175,4 +1292,5 @@ Bug yang pernah terjadi dan cara mencegah:
 | Aphorism formulas ("X is the Y of Z") | AI pattern: kalimat terdengar profound tapi tidak presisi | Step 1: ganti dengan klaim konkret tanpa formula |
 | Vague attribution ("studi menunjukkan") | AI pattern: klaim tanpa sumber spesifik | Step 1: wajib sebut nama studi + tahun + link |
 | Generic conclusions ("masa depan cerah") | AI pattern: penutup generic dan tidak spesifik | Step 1: ganti dengan perspektif spesifik TAM |
-| OG headline sama dengan title | Copy-paste title ke og_headline, OG image tidak optimal untuk social CTR | Step 0.5: og_headline HARUS berbeda, lebih pendek, punchy, conversational (max 50 chars) |
+| OG headline sama dengan title | Copy-paste title ke ogHeadline, OG image tidak optimal untuk social CTR | Step 0.5: ogHeadline HARUS berbeda, lebih pendek, punchy, conversational (max 50 chars) |
+| Sitemap lastModified tidak update | `updatedAt` pakai `publishedAt` bukan file mtime | Loader sekarang pakai `statSync(filePath).mtime` untuk `updatedAt` |

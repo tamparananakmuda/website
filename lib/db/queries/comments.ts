@@ -3,14 +3,14 @@ import { comments, commentLikes } from '@/lib/db/schema';
 import { eq, desc, and, sql } from 'drizzle-orm';
 import type { Comment } from '@/lib/db/schema';
 
-export async function getApprovedCommentsByPost(postId: string): Promise<Comment[]> {
+export async function getApprovedCommentsByPost(postSlug: string): Promise<Comment[]> {
   return db.select().from(comments)
-    .where(and(eq(comments.postId, postId), eq(comments.status, 'approved')))
+    .where(and(eq(comments.postSlug, postSlug), eq(comments.status, 'approved')))
     .orderBy(desc(comments.createdAt));
 }
 
 export async function createComment(data: {
-  postId: string;
+  postSlug: string;
   parentId?: string | null;
   authorName: string;
   authorEmail: string;
@@ -19,7 +19,7 @@ export async function createComment(data: {
   status?: string;
 }): Promise<Comment> {
   const result = await db.insert(comments).values({
-    postId: data.postId,
+    postSlug: data.postSlug,
     parentId: data.parentId ?? null,
     authorName: data.authorName,
     authorEmail: data.authorEmail,

@@ -1,296 +1,145 @@
 import { db } from '@/lib/db';
-import { posts, categories, contentQueue, subcategories } from '@/lib/db/schema';
-import { eq, desc, asc, and, ilike, or, lte, ne, sql } from 'drizzle-orm';
-import type { Post, PostWithRelations, Tag } from '@/lib/db/schema';
-
-function mapToPostWithRelations(p: Record<string, unknown> & { postTags?: { tag: Tag }[] }): PostWithRelations {
-  const tags: Tag[] = (p.postTags ?? []).map((pt: { tag: Tag }) => pt.tag);
-  return {
-    ...p,
-    tags,
-  } as PostWithRelations;
-}
+import { eq } from 'drizzle-orm';
+import { postMetadata } from '@/lib/db/schema';
+import type { Post, PostWithRelations } from '@/lib/db/schema';
+import {
+  getPublishedPosts as fileGetPublishedPosts,
+  getPublishedPostsWithRelations as fileGetPublishedPostsWithRelations,
+  getAllPublishedPostsWithRelations as fileGetAllPublishedPostsWithRelations,
+  getPostBySlug as fileGetPostBySlug,
+  getPublishedPostBySlug as fileGetPublishedPostBySlug,
+  getPostWithRelationsBySlug as fileGetPostWithRelationsBySlug,
+  getPublishedPostWithRelationsBySlug as fileGetPublishedPostWithRelationsBySlug,
+  getPostsByCategorySlug as fileGetPostsByCategorySlug,
+  getPostsBySeries as fileGetPostsBySeries,
+  getFeaturedPosts as fileGetFeaturedPosts,
+  searchPosts as fileSearchPosts,
+  searchPostsWithCategory as fileSearchPostsWithCategory,
+  getScheduledPosts as fileGetScheduledPosts,
+  getAllPostsForOG as fileGetAllPostsForOG,
+  getRelatedPosts as fileGetRelatedPosts,
+  getPublishedPostsForSitemap as fileGetPublishedPostsForSitemap,
+  countPublishedPostsInSeries as fileCountPublishedPostsInSeries,
+  getAnalyticsOverview as fileGetAnalyticsOverview,
+} from '@/lib/articles/loader';
 
 export async function getPublishedPosts(limit = 10): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
-    .orderBy(desc(posts.publishedAt))
-    .limit(limit);
+  return fileGetPublishedPosts(limit);
 }
 
 export async function getPublishedPostsWithRelations(limit = 10): Promise<PostWithRelations[]> {
-  const result = await db.query.posts.findMany({
-    where: and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())),
-    orderBy: desc(posts.publishedAt),
-    limit,
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+  return fileGetPublishedPostsWithRelations(limit);
 }
 
 export async function getAllPublishedPostsWithRelations(): Promise<PostWithRelations[]> {
-  const result = await db.query.posts.findMany({
-    where: and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())),
-    orderBy: desc(posts.publishedAt),
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+  return fileGetAllPublishedPostsWithRelations();
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
-  const result = await db.select().from(posts).where(eq(posts.slug, slug)).limit(1);
-  return result[0];
+  return fileGetPostBySlug(slug);
 }
 
 export async function getPublishedPostBySlug(slug: string): Promise<Post | undefined> {
-  const result = await db.select().from(posts)
-    .where(and(eq(posts.slug, slug), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
-    .limit(1);
-  return result[0];
+  return fileGetPublishedPostBySlug(slug);
 }
 
 export async function getPostWithRelationsBySlug(slug: string): Promise<PostWithRelations | undefined> {
-  const result = await db.query.posts.findFirst({
-    where: eq(posts.slug, slug),
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  if (!result) return undefined;
-  return mapToPostWithRelations(result);
+  return fileGetPostWithRelationsBySlug(slug);
 }
 
 export async function getPublishedPostWithRelationsBySlug(slug: string): Promise<PostWithRelations | undefined> {
-  const result = await db.query.posts.findFirst({
-    where: and(eq(posts.slug, slug), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())),
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  if (!result) return undefined;
-  return mapToPostWithRelations(result);
+  return fileGetPublishedPostWithRelationsBySlug(slug);
 }
 
 export async function getPostsByCategory(categoryId: string, limit = 10): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(and(eq(posts.categoryId, categoryId), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
-    .orderBy(desc(posts.publishedAt))
-    .limit(limit);
+  const { getCategoryById } = await import('@/content/config');
+  const cat = getCategoryById(categoryId);
+  if (!cat) return [];
+  const result = await fileGetPostsByCategorySlug(cat.slug, limit);
+  return result as unknown as Post[];
 }
 
 export async function getPostsByCategorySlug(slug: string, limit = 10): Promise<PostWithRelations[]> {
-  const category = await db.select().from(categories).where(eq(categories.slug, slug)).limit(1);
-  if (!category[0]) return [];
-  const result = await db.query.posts.findMany({
-    where: and(eq(posts.categoryId, category[0].id), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())),
-    orderBy: desc(posts.publishedAt),
-    limit,
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+  return fileGetPostsByCategorySlug(slug, limit);
 }
 
-export async function getPostsBySeries(seriesId: string, limit = 10): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(and(eq(posts.seriesId, seriesId), eq(posts.status, 'published')))
-    .orderBy(asc(posts.seriesOrder))
-    .limit(limit);
+export async function getPostsBySeries(seriesIdOrSlug: string, limit = 10): Promise<Post[]> {
+  const { getSeriesById, getSeriesBySlug } = await import('@/content/config');
+  const sr = getSeriesBySlug(seriesIdOrSlug) ?? getSeriesById(seriesIdOrSlug);
+  if (!sr) return [];
+  return fileGetPostsBySeries(sr.slug, limit);
 }
 
 export async function getFeaturedPosts(limit = 5): Promise<PostWithRelations[]> {
-  const result = await db.query.posts.findMany({
-    where: and(eq(posts.status, 'published'), eq(posts.featured, true), lte(posts.publishedAt, new Date().toISOString())),
-    orderBy: desc(posts.publishedAt),
-    limit,
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+  return fileGetFeaturedPosts(limit);
 }
 
 export async function searchPosts(query: string, limit = 10): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(and(
-      eq(posts.status, 'published'),
-      lte(posts.publishedAt, new Date().toISOString()),
-      or(
-        ilike(posts.title, `%${query}%`),
-        ilike(posts.excerpt, `%${query}%`),
-        ilike(posts.body, `%${query}%`),
-      )
-    ))
-    .orderBy(desc(posts.publishedAt))
-    .limit(limit);
+  return fileSearchPosts(query, limit);
 }
 
 export async function searchPostsWithCategory(query: string, categorySlug?: string, limit = 10): Promise<PostWithRelations[]> {
-  const conditions = [
-    eq(posts.status, 'published'),
-    lte(posts.publishedAt, new Date().toISOString()),
-    or(
-      ilike(posts.title, `%${query}%`),
-      ilike(posts.excerpt, `%${query}%`),
-      ilike(posts.body, `%${query}%`),
-    ),
-  ];
-
-  if (categorySlug && categorySlug !== 'all') {
-    const cat = await db.select().from(categories).where(eq(categories.slug, categorySlug)).limit(1);
-    if (cat[0]) {
-      conditions.push(eq(posts.categoryId, cat[0].id));
-    }
-  }
-
-  const result = await db.query.posts.findMany({
-    where: and(...conditions),
-    orderBy: desc(posts.publishedAt),
-    limit,
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+  return fileSearchPostsWithCategory(query, categorySlug, limit);
 }
 
 export async function getScheduledPosts(): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(eq(posts.status, 'scheduled'))
-    .orderBy(asc(posts.publishedAt));
+  return fileGetScheduledPosts();
 }
 
 export async function updatePostStatus(id: string, status: string): Promise<void> {
-  await db.update(posts).set({ status, updatedAt: new Date().toISOString() }).where(eq(posts.id, id));
+  // No-op: posts are now file-based. Edit frontmatter directly.
+  console.log('[posts] updatePostStatus is deprecated - posts are file-based now');
 }
 
 export async function getAllPostsForOG(): Promise<Post[]> {
-  return db.select().from(posts)
-    .where(and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
-    .orderBy(desc(posts.publishedAt));
+  return fileGetAllPostsForOG();
 }
 
 export async function getPostById(id: string): Promise<Post | undefined> {
-  const result = await db.select().from(posts).where(eq(posts.id, id)).limit(1);
-  return result[0];
+  // Try to find by slug (id may be a slug or "file-{slug}" format)
+  const slug = id.startsWith('file-') ? id.slice(5) : id;
+  return fileGetPostBySlug(slug);
 }
 
-export async function updatePostOGUrls(id: string, urls: { ogCardUrl?: string; ogFeatureUrl?: string; ogImageUrl?: string }): Promise<void> {
-  await db.update(posts).set({ ...urls, updatedAt: new Date().toISOString() }).where(eq(posts.id, id));
+export async function updatePostOGUrls(slug: string, urls: { ogCardUrl?: string; ogFeatureUrl?: string; ogImageUrl?: string }): Promise<void> {
+  await db.insert(postMetadata)
+    .values({
+      slug,
+      ogCardUrl: urls.ogCardUrl ?? null,
+      ogFeatureUrl: urls.ogFeatureUrl ?? null,
+      ogImageUrl: urls.ogImageUrl ?? null,
+      updatedAt: new Date().toISOString(),
+    })
+    .onConflictDoUpdate({
+      target: postMetadata.slug,
+      set: {
+        ogCardUrl: urls.ogCardUrl ?? null,
+        ogFeatureUrl: urls.ogFeatureUrl ?? null,
+        ogImageUrl: urls.ogImageUrl ?? null,
+        updatedAt: new Date().toISOString(),
+      },
+    });
 }
 
-export async function getRelatedPosts(categoryId: string, excludeId: string, limit = 3): Promise<PostWithRelations[]> {
-  const result = await db.query.posts.findMany({
-    where: and(
-      eq(posts.categoryId, categoryId),
-      eq(posts.status, 'published'),
-      lte(posts.publishedAt, new Date().toISOString()),
-      ne(posts.id, excludeId),
-    ),
-    orderBy: desc(posts.publishedAt),
-    limit,
-    with: {
-      category: true,
-      subcategory: true,
-      series: true,
-      author: true,
-      postTags: { with: { tag: true } },
-    },
-  });
-  return result.map(mapToPostWithRelations);
+export async function getRelatedPosts(categoryIdOrSlug: string, excludeIdOrSlug: string, limit = 3): Promise<PostWithRelations[]> {
+  const { getCategoryById, getCategoryBySlug } = await import('@/content/config');
+  const cat = getCategoryBySlug(categoryIdOrSlug) ?? getCategoryById(categoryIdOrSlug);
+  const catSlug = cat?.slug ?? categoryIdOrSlug;
+  const excludeSlug = excludeIdOrSlug.startsWith('file-') ? excludeIdOrSlug.slice(5) : excludeIdOrSlug;
+  return fileGetRelatedPosts(catSlug, excludeSlug, limit);
 }
 
 export async function getPublishedPostsForSitemap(): Promise<{ slug: string; updatedAt: string | null }[]> {
-  return db.select({ slug: posts.slug, updatedAt: posts.updatedAt }).from(posts)
-    .where(and(eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())))
-    .orderBy(desc(posts.publishedAt));
+  return fileGetPublishedPostsForSitemap();
 }
 
-export async function countPublishedPostsInSeries(seriesId: string): Promise<number> {
-  const result = await db.select({ id: posts.id }).from(posts)
-    .where(and(eq(posts.seriesId, seriesId), eq(posts.status, 'published'), lte(posts.publishedAt, new Date().toISOString())));
-  return result.length;
+export async function countPublishedPostsInSeries(seriesIdOrSlug: string): Promise<number> {
+  const { getSeriesById, getSeriesBySlug } = await import('@/content/config');
+  const sr = getSeriesBySlug(seriesIdOrSlug) ?? getSeriesById(seriesIdOrSlug);
+  if (!sr) return 0;
+  return fileCountPublishedPostsInSeries(sr.slug);
 }
 
 export async function getAnalyticsOverview() {
-  const [
-    totalResult,
-    publishedResult,
-    draftResult,
-    postsByCategoryResult,
-    postsByPovTagResult,
-    postsByMonthResult,
-    pipelineStatsResult,
-    topPostsResult,
-    pillarStatsResult,
-  ] = await Promise.all([
-    db.select({ count: sql<number>`count(*)::int` }).from(posts),
-    db.select({ count: sql<number>`count(*)::int` }).from(posts).where(eq(posts.status, 'published')),
-    db.select({ count: sql<number>`count(*)::int` }).from(posts).where(eq(posts.status, 'draft')),
-    db.select({ categoryId: posts.categoryId, title: categories.title, color: categories.color })
-      .from(posts)
-      .leftJoin(categories, eq(posts.categoryId, categories.id))
-      .where(eq(posts.status, 'published')),
-    db.select({ povTag: posts.povTag }).from(posts)
-      .where(and(eq(posts.status, 'published'), sql`${posts.povTag} IS NOT NULL`)),
-    db.select({ publishedAt: posts.publishedAt }).from(posts)
-      .where(and(eq(posts.status, 'published'), sql`${posts.publishedAt} IS NOT NULL`))
-      .orderBy(desc(posts.publishedAt))
-      .limit(100),
-    db.select({ status: contentQueue.status }).from(contentQueue),
-    db.select({ id: posts.id, title: posts.title, slug: posts.slug, publishedAt: posts.publishedAt })
-      .from(posts)
-      .where(eq(posts.status, 'published'))
-      .orderBy(desc(posts.publishedAt))
-      .limit(10),
-    db.select({ subcategoryId: posts.subcategoryId, title: subcategories.title })
-      .from(posts)
-      .leftJoin(subcategories, eq(posts.subcategoryId, subcategories.id))
-      .where(and(eq(posts.status, 'published'), sql`${posts.subcategoryId} IS NOT NULL`)),
-  ]);
-
-  return {
-    totalResult,
-    publishedResult,
-    draftResult,
-    postsByCategoryResult,
-    postsByPovTagResult,
-    postsByMonthResult,
-    pipelineStatsResult,
-    topPostsResult,
-    pillarStatsResult,
-  };
+  return fileGetAnalyticsOverview();
 }

@@ -1,10 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/lib/db';
-import { posts } from '@/lib/db/schema';
-import { eq, lte, inArray, and } from 'drizzle-orm';
 import { getPostWithRelationsBySlug, countPublishedPostsInSeries, updatePostOGUrls } from '@/lib/db/queries/posts';
 import { generateAndUploadOGImages } from '@/lib/cdn/generate';
 import { deleteOldOGImages } from '@/lib/cdn/r2';
+import { getAllArticles, publishArticleFile } from '@/lib/articles/loader';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -19,28 +17,31 @@ export async function GET(request: NextRequest) {
 
   try {
     const now = new Date().toISOString();
+    const allArticles = await getAllArticles();
 
-    const scheduled = await db.select({ id: posts.id, slug: posts.slug, title: posts.title })
-      .from(posts)
-      .where(and(eq(posts.status, 'scheduled'), lte(posts.publishedAt, now)));
+    const scheduled = allArticles.filter(
+      (a) => a.status === 'scheduled' && a.publishedAt <= now
+    );
 
     if (scheduled.length === 0) {
       return NextResponse.json({ published: 0, slugs: [], ogGenerated: 0 });
     }
 
-    const ids = scheduled.map((p) => p.id);
-    await db.update(posts)
-      .set({ status: 'published', updatedAt: now })
-      .where(inArray(posts.id, ids));
-
     const slugs = scheduled.map((p) => p.slug);
-    console.log(`[cron] Published ${scheduled.length} scheduled articles:`, slugs);
+    console.log(`[cron] Found ${scheduled.length} scheduled articles:`, slugs);
 
     let ogGenerated = 0;
     const ogErrors: string[] = [];
 
     for (const post of scheduled) {
       try {
+        const published = await publishArticleFile(post.slug);
+        if (!published) {
+          console.log(`[cron] Could not publish ${post.slug} (already published or file not found)`);
+          continue;
+        }
+        console.log(`[cron] Published: ${post.slug}`);
+
         const fullPost = await getPostWithRelationsBySlug(post.slug);
         if (!fullPost) continue;
 
@@ -51,7 +52,7 @@ export async function GET(request: NextRequest) {
         let seriesCurrent: number | undefined;
         let seriesTotal: number | undefined;
         if (series && fullPost.seriesOrder) {
-          seriesTotal = await countPublishedPostsInSeries(series.id);
+          seriesTotal = await countPublishedPostsInSeries(series.slug);
           seriesCurrent = fullPost.seriesOrder;
         }
 
@@ -74,7 +75,7 @@ export async function GET(request: NextRequest) {
           ogHeadline: fullPost.ogHeadline || undefined,
         });
 
-        await updatePostOGUrls(fullPost.id, {
+        await updatePostOGUrls(post.slug, {
           ogCardUrl: urls.card,
           ogFeatureUrl: urls.feature,
           ogImageUrl: urls.feature,
@@ -97,7 +98,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('[cron] publish-scheduled error:', error);
     return NextResponse.json(
-      { error: 'Failed to publish scheduled articles' },
+      { error: 'Failed to process scheduled articles' },
       { status: 500 }
     );
   }

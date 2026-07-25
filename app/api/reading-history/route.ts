@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, historySchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    await upsertReadingHistory(user.id, parsed.data.post_id, parsed.data.progress);
+    await upsertReadingHistory(user.id, parsed.data.post_slug, parsed.data.progress);
 
     return NextResponse.json({ success: true });
   } catch (error) {

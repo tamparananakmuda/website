@@ -244,7 +244,7 @@ export default function ContentDetailPage() {
               <span className="text-xs text-muted-foreground">10 keyword suggestions</span>
             </button>
             <button
-              onClick={() => callAiTool('repurpose', { post_id: item.id, platforms: form.target_platforms })}
+              onClick={() => callAiTool('repurpose', { post_slug: item.slug, platforms: form.target_platforms })}
               disabled={aiLoading !== null}
               className="flex flex-col items-start gap-2 rounded-lg border border-border bg-card p-4 text-left hover:border-primary transition-colors disabled:opacity-50"
             >

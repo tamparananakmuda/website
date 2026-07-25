@@ -21,7 +21,7 @@ export async function GET() {
   return NextResponse.json({
     profile,
     bookmarks: bookmarks.map((b) => ({
-      post_id: b.postId,
+      post_slug: b.postSlug,
       created_at: b.createdAt,
       posts: b.post ? {
         id: b.post.id,
@@ -32,7 +32,7 @@ export async function GET() {
       } : null,
     })),
     history: history.map((h) => ({
-      post_id: h.postId,
+      post_slug: h.postSlug,
       read_at: h.readAt,
       progress: h.progress,
       posts: h.post ? {

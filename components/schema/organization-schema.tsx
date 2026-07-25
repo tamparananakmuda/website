@@ -9,6 +9,12 @@ export function OrganizationSchema() {
     description:
       'Media digital Indonesia yang membahas mindset, bisnis, keuangan, teknologi, dan pengembangan diri untuk generasi muda.',
     slogan: 'Awakening the youth to reality',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/logo.png`,
+      width: 512,
+      height: 512,
+    },
     sameAs: [
       'https://instagram.com/tamparananakmuda.id',
       'https://tiktok.com/@tamparananakmuda',

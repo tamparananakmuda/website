@@ -5,11 +5,11 @@ import { createClient } from '@/lib/supabase/client';
 import { Lock, Loader2, CheckCircle2 } from 'lucide-react';
 
 interface PremiumGateProps {
-  postId: string;
+  postSlug: string;
   excerpt?: string;
 }
 
-export function PremiumGate({ postId, excerpt }: PremiumGateProps) {
+export function PremiumGate({ postSlug, excerpt }: PremiumGateProps) {
   const [unlocked, setUnlocked] = useState(false);
   const [loading, setLoading] = useState(true);
   const [unlocking, setUnlocking] = useState(false);
@@ -20,7 +20,7 @@ export function PremiumGate({ postId, excerpt }: PremiumGateProps) {
     supabase.auth.getUser().then(({ data: { user } }) => {
       setLoggedIn(!!user);
       if (user) {
-        fetch(`/api/premium?post_id=${postId}`)
+        fetch(`/api/premium?post_slug=${postSlug}`)
           .then((r) => r.json())
           .then((data) => setUnlocked(data.unlocked))
           .catch(() => {})
@@ -29,7 +29,7 @@ export function PremiumGate({ postId, excerpt }: PremiumGateProps) {
         setLoading(false);
       }
     });
-  }, [postId]);
+  }, [postSlug]);
 
   async function handleUnlock() {
     if (!loggedIn) {
@@ -42,7 +42,7 @@ export function PremiumGate({ postId, excerpt }: PremiumGateProps) {
       const res = await fetch('/api/premium', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ post_id: postId }),
+        body: JSON.stringify({ post_slug: postSlug }),
       });
       const data = await res.json();
       if (res.ok && data.unlocked) {

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { getApprovedCommentsByPost, createComment, deleteComment } from '@/lib/db/queries/comments';
 import { getReaderProfile } from '@/lib/db/queries/reader';
-import { getPostById } from '@/lib/db/queries/posts';
+import { getPostBySlug } from '@/lib/db/queries/posts';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { commentSchema } from '@/lib/validations/comment';
 import { commentsQuerySchema } from '@/lib/validations/query-params';
@@ -18,14 +18,14 @@ export async function GET(request: NextRequest) {
     const query = parseQueryParams(request, commentsQuerySchema);
     if (!query.success) return query.errorResponse;
 
-    if (!query.data.post_id) {
+    if (!query.data.post_slug) {
       return NextResponse.json(
-        { error: 'Post ID wajib diisi' },
+        { error: 'Post slug wajib diisi' },
         { status: 400 }
       );
     }
 
-    const comments = await getApprovedCommentsByPost(query.data.post_id);
+    const comments = await getApprovedCommentsByPost(query.data.post_slug);
 
     return NextResponse.json({ comments });
   } catch (error) {
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     const authorEmail = profile?.email || user.email || null;
 
     const comment = await createComment({
-      postId: parsed.data.post_id,
+      postSlug: parsed.data.post_slug,
       parentId: parsed.data.parent_id || null,
       readerId: user.id,
       authorName,
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
 
     // Send notification email to admin
     const adminEmail = process.env.ADMIN_EMAIL || 'admin@tamparananakmuda.com';
-    const post = await getPostById(parsed.data.post_id);
+    const post = await getPostBySlug(parsed.data.post_slug);
     if (post) {
       const { subject, html } = renderCommentNotificationEmail({
         postTitle: post.title,

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Bookmark, BookmarkCheck } from 'lucide-react';
 import { trackEvent } from '@/lib/track';
 
-export function BookmarkButton({ postId }: { postId: string }) {
+export function BookmarkButton({ postSlug }: { postSlug: string }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -16,14 +16,14 @@ export function BookmarkButton({ postId }: { postId: string }) {
         if (res.ok) {
           const data = await res.json();
           setLoggedIn(true);
-          setBookmarked(data.bookmarks?.includes(postId) ?? false);
+          setBookmarked(data.bookmarks?.includes(postSlug) ?? false);
         }
       } catch {
         // not logged in
       }
     }
     checkAuth();
-  }, [postId]);
+  }, [postSlug]);
 
   async function toggleBookmark() {
     if (!loggedIn) {
@@ -35,17 +35,17 @@ export function BookmarkButton({ postId }: { postId: string }) {
 
     try {
       if (bookmarked) {
-        await fetch(`/api/bookmarks?post_id=${postId}`, { method: 'DELETE' });
+        await fetch(`/api/bookmarks?post_slug=${postSlug}`, { method: 'DELETE' });
         setBookmarked(false);
-        trackEvent('bookmark_removed', { post_id: postId });
+        trackEvent('bookmark_removed', { post_slug: postSlug });
       } else {
         await fetch('/api/bookmarks', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ post_id: postId }),
+          body: JSON.stringify({ post_slug: postSlug }),
         });
         setBookmarked(true);
-        trackEvent('bookmark_added', { post_id: postId });
+        trackEvent('bookmark_added', { post_slug: postSlug });
       }
     } catch {
       // silent fail

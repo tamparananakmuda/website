@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
-import { getPostById } from '@/lib/db/queries/posts';
+import { getPostBySlug } from '@/lib/db/queries/posts';
 import { callAI, TAM_SYSTEM_PROMPT, aiErrorResponse } from '@/lib/ai/helper';
 import { aiRepurposeSchema } from '@/lib/validations/ai';
 import { parseRequestBody } from '@/lib/validations/helpers';
@@ -15,9 +15,9 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, aiRepurposeSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    const { post_id, platforms } = parsed.data;
+    const { post_slug, platforms } = parsed.data;
 
-    const post = await getPostById(post_id);
+    const post = await getPostBySlug(post_slug);
 
     if (!post) {
       return NextResponse.json({ error: 'Artikel tidak ditemukan' }, { status: 404 });

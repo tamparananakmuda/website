@@ -32,6 +32,9 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 20 | Mau Menikah Bukan Tidak Mau: Ekonomi yang Menghalangi Gen Z | mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z | Kehidupan | Hubungan Sosial | kontra-narasi | 2026-07-23 (scheduled 08:00 WIB) |
 | 21 | Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z | curhat-ke-ai-ketika-mesin-jadi-ruang-aman-gen-z | Teknologi | Teknologi & AI | kontra-narasi | 2026-07-23 (scheduled 12:00 WIB) |
 | 22 | Overconsumption Core: Gen Z Mulai Kritik Budaya Belanja Berlebihan | overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan | Uang | Keuangan & Uang | refleksi | 2026-07-23 (scheduled 17:00 WIB) |
+| 23 | Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan | detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan | Mindset | Mindset & Realita | kontra-narasi | 2026-07-24 (scheduled 08:00 WIB) |
+| 24 | Skill Not School: Tapi Sistem Tetap Pakai Ijazah | skill-not-school-tapi-sistem-tetap-pakai-ijazah | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-24 (scheduled 12:00 WIB) |
+| 25 | Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses, Tapi Kosong di Kas | omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas | Bisnis | Bisnis | tamparan | 2026-07-24 (scheduled 17:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

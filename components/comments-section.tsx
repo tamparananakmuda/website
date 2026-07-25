@@ -7,7 +7,7 @@ import { Turnstile } from '@/components/turnstile';
 
 interface Comment {
   id: string;
-  postId: string;
+  postSlug: string | null;
   parentId: string | null;
   readerId: string | null;
   authorName: string;
@@ -18,7 +18,7 @@ interface Comment {
 }
 
 interface CommentsSectionProps {
-  postId: string;
+  postSlug: string;
 }
 
 function timeAgo(date: string): string {
@@ -91,7 +91,7 @@ function CommentItem({
   );
 }
 
-export function CommentsSection({ postId }: CommentsSectionProps) {
+export function CommentsSection({ postSlug }: CommentsSectionProps) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
   const [body, setBody] = useState('');
@@ -106,7 +106,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
   const fetchComments = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/comments?post_id=${postId}`);
+      const res = await fetch(`/api/comments?post_slug=${postSlug}`);
       const data = await res.json();
       setComments(data.comments || []);
     } catch {
@@ -114,7 +114,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
     } finally {
       setLoading(false);
     }
-  }, [postId]);
+  }, [postSlug]);
 
   useEffect(() => {
     fetchComments();
@@ -139,7 +139,7 @@ export function CommentsSection({ postId }: CommentsSectionProps) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          post_id: postId,
+          post_slug: postSlug,
           body: body.trim(),
           parent_id: replyTo || undefined,
           turnstile_token: turnstileToken || undefined,

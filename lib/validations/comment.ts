@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const commentSchema = z.object({
-  post_id: z.string().uuid(),
+  post_slug: z.string().trim().min(1, 'Post slug wajib diisi'),
   body: z.string().trim().min(1, 'Komentar tidak boleh kosong').max(2000, 'Komentar maksimal 2000 karakter'),
   parent_id: z.string().uuid().optional(),
   turnstile_token: z.string().optional(),

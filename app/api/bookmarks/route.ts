@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
-import { createBookmark, deleteBookmark, getBookmarkPostIdsByUser } from '@/lib/db/queries/bookmarks';
+import { createBookmark, deleteBookmark, getBookmarkPostSlugsByUser } from '@/lib/db/queries/bookmarks';
 import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { bookmarkSchema } from '@/lib/validations/bookmark';
 import { bookmarksQuerySchema } from '@/lib/validations/query-params';
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const parsed = await parseRequestBody(request, bookmarkSchema);
     if (!parsed.success) return parsed.errorResponse;
 
-    const { error } = await createBookmark(user.id, parsed.data.post_id)
+    const { error } = await createBookmark(user.id, parsed.data.post_slug)
       .then(() => ({ error: null }))
       .catch((e: { code?: string }) => ({ error: e }));
 
@@ -79,14 +79,14 @@ export async function DELETE(request: NextRequest) {
     const query = parseQueryParams(request, bookmarksQuerySchema);
     if (!query.success) return query.errorResponse;
 
-    if (!query.data.post_id) {
+    if (!query.data.post_slug) {
       return NextResponse.json(
-        { error: 'Post ID wajib diisi' },
+        { error: 'Post slug wajib diisi' },
         { status: 400 }
       );
     }
 
-    await deleteBookmark(user.id, query.data.post_id);
+    await deleteBookmark(user.id, query.data.post_slug);
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -108,10 +108,10 @@ export async function GET() {
       return NextResponse.json({ bookmarks: [] });
     }
 
-    const bookmarkIds = await getBookmarkPostIdsByUser(user.id);
+    const bookmarkSlugs = await getBookmarkPostSlugsByUser(user.id);
 
     return NextResponse.json({
-      bookmarks: bookmarkIds,
+      bookmarks: bookmarkSlugs,
     });
   } catch (error) {
     console.error('Bookmark list error:', error);

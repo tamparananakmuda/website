@@ -138,18 +138,20 @@ export const siteSettings = pgTable('site_settings', {
 export const bookmarks = pgTable('bookmarks', {
   id: uuid().defaultRandom().primaryKey().notNull(),
   userId: uuid('user_id').notNull(),
-  postId: uuid('post_id').notNull(),
+  postId: uuid('post_id'),
+  postSlug: text('post_slug'),
   createdAt: timestamp('created_at', { withTimezone: true, mode: 'string' }).defaultNow(),
 }, (table) => [
   index('idx_bookmarks_user').using('btree', table.userId),
-  foreignKey({ columns: [table.postId], foreignColumns: [posts.id], name: 'bookmarks_post_id_fkey' }).onDelete('cascade'),
+  index('idx_bookmarks_post_slug').using('btree', table.postSlug),
   foreignKey({ columns: [table.userId], foreignColumns: [usersInAuth.id], name: 'bookmarks_user_id_fkey' }).onDelete('cascade'),
-  unique('bookmarks_user_id_post_id_key').on(table.userId, table.postId),
+  unique('bookmarks_user_id_post_slug_key').on(table.userId, table.postSlug),
 ]);
 
 export const comments = pgTable('comments', {
   id: uuid().defaultRandom().primaryKey().notNull(),
-  postId: uuid('post_id').notNull(),
+  postId: uuid('post_id'),
+  postSlug: text('post_slug'),
   parentId: uuid('parent_id'),
   authorName: text('author_name').notNull(),
   authorEmail: text('author_email').notNull(),
@@ -163,10 +165,10 @@ export const comments = pgTable('comments', {
   index('idx_comments_created_at').using('btree', table.createdAt.desc()),
   index('idx_comments_parent').using('btree', table.parentId),
   index('idx_comments_post').using('btree', table.postId),
+  index('idx_comments_post_slug').using('btree', table.postSlug),
   index('idx_comments_reader_id').using('btree', table.readerId),
   index('idx_comments_status').using('btree', table.status),
   foreignKey({ columns: [table.parentId], foreignColumns: [table.id], name: 'comments_parent_id_fkey' }).onDelete('cascade'),
-  foreignKey({ columns: [table.postId], foreignColumns: [posts.id], name: 'comments_post_id_fkey' }).onDelete('cascade'),
   foreignKey({ columns: [table.readerId], foreignColumns: [usersInAuth.id], name: 'comments_reader_id_fkey' }).onDelete('set null'),
   check('comments_status_check', sql`status = ANY (ARRAY['pending'::text, 'approved'::text, 'rejected'::text, 'spam'::text, 'deleted'::text])`),
 ]);
@@ -289,14 +291,14 @@ export const donationGoals = pgTable('donation_goals', {
 export const premiumUnlocks = pgTable('premium_unlocks', {
   id: uuid().defaultRandom().primaryKey().notNull(),
   readerId: uuid('reader_id').notNull(),
-  postId: uuid('post_id').notNull(),
+  postId: uuid('post_id'),
+  postSlug: text('post_slug'),
   unlockedAt: timestamp('unlocked_at', { withTimezone: true, mode: 'string' }).defaultNow(),
 }, (table) => [
-  index('idx_premium_unlocks_post').using('btree', table.postId),
+  index('idx_premium_unlocks_post_slug').using('btree', table.postSlug),
   index('idx_premium_unlocks_reader').using('btree', table.readerId),
-  foreignKey({ columns: [table.postId], foreignColumns: [posts.id], name: 'premium_unlocks_post_id_fkey' }).onDelete('cascade'),
   foreignKey({ columns: [table.readerId], foreignColumns: [usersInAuth.id], name: 'premium_unlocks_reader_id_fkey' }).onDelete('cascade'),
-  unique('premium_unlocks_reader_id_post_id_key').on(table.readerId, table.postId),
+  unique('premium_unlocks_reader_id_post_slug_key').on(table.readerId, table.postSlug),
 ]);
 
 export const pushSubscriptions = pgTable('push_subscriptions', {
@@ -404,13 +406,14 @@ export const readerProfiles = pgTable('reader_profiles', {
 export const readingHistory = pgTable('reading_history', {
   id: uuid().defaultRandom().primaryKey().notNull(),
   readerId: uuid('reader_id').notNull(),
-  postId: uuid('post_id').notNull(),
+  postId: uuid('post_id'),
+  postSlug: text('post_slug'),
   readAt: timestamp('read_at', { withTimezone: true, mode: 'string' }).defaultNow(),
   progress: integer().default(0),
 }, (table) => [
+  index('idx_reading_history_post_slug').using('btree', table.postSlug),
   foreignKey({ columns: [table.readerId], foreignColumns: [usersInAuth.id], name: 'reading_history_reader_id_fkey' }).onDelete('cascade'),
-  foreignKey({ columns: [table.postId], foreignColumns: [posts.id], name: 'reading_history_post_id_fkey' }).onDelete('cascade'),
-  unique('reading_history_reader_id_post_id_key').on(table.readerId, table.postId),
+  unique('reading_history_reader_id_post_slug_key').on(table.readerId, table.postSlug),
 ]);
 
 export const socialPosts = pgTable('social_posts', {
@@ -464,14 +467,12 @@ export const subcategoriesRelations = relations(subcategories, ({ one, many }) =
 }));
 
 export const bookmarksRelations = relations(bookmarks, ({ one }) => ({
-  post: one(posts, { fields: [bookmarks.postId], references: [posts.id] }),
   user: one(usersInAuth, { fields: [bookmarks.userId], references: [usersInAuth.id] }),
 }));
 
 export const commentsRelations = relations(comments, ({ one, many }) => ({
   parent: one(comments, { fields: [comments.parentId], references: [comments.id], relationName: 'comments_parent' }),
   replies: many(comments, { relationName: 'comments_parent' }),
-  post: one(posts, { fields: [comments.postId], references: [posts.id] }),
   reader: one(usersInAuth, { fields: [comments.readerId], references: [usersInAuth.id] }),
   commentLikes: many(commentLikes),
 }));
@@ -486,7 +487,6 @@ export const commentLikesRelations = relations(commentLikes, ({ one }) => ({
 }));
 
 export const premiumUnlocksRelations = relations(premiumUnlocks, ({ one }) => ({
-  post: one(posts, { fields: [premiumUnlocks.postId], references: [posts.id] }),
   reader: one(usersInAuth, { fields: [premiumUnlocks.readerId], references: [usersInAuth.id] }),
 }));
 
@@ -509,7 +509,6 @@ export const tagsRelations = relations(tags, ({ many }) => ({ postTags: many(pos
 export const readerProfilesRelations = relations(readerProfiles, ({ one }) => ({ user: one(usersInAuth, { fields: [readerProfiles.userId], references: [usersInAuth.id] }) }));
 export const readingHistoryRelations = relations(readingHistory, ({ one }) => ({
   reader: one(usersInAuth, { fields: [readingHistory.readerId], references: [usersInAuth.id] }),
-  post: one(posts, { fields: [readingHistory.postId], references: [posts.id] }),
 }));
 
 // Inferred types (replaces types/database.ts)
@@ -554,3 +553,13 @@ export type CategoryWithSubcategories = Category & {
 export type ContentQueueWithPillar = ContentQueue & {
   pillar?: Subcategory;
 };
+
+export const postMetadata = pgTable('post_metadata', {
+  slug: text().primaryKey().notNull(),
+  ogCardUrl: text('og_card_url'),
+  ogFeatureUrl: text('og_feature_url'),
+  ogImageUrl: text('og_image_url'),
+  updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+});
+
+export type PostMetadata = typeof postMetadata.$inferSelect;

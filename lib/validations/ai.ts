@@ -26,7 +26,7 @@ export const aiIdeasSchema = z.object({
 export type AIIdeasInput = z.infer<typeof aiIdeasSchema>;
 
 export const aiRepurposeSchema = z.object({
-  post_id: z.string().uuid(),
+  post_slug: z.string().trim().min(1, 'Post slug wajib diisi'),
   platforms: z.array(z.string().trim().max(50)).max(10).optional(),
 });
 

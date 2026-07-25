@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPublishedPostWithRelationsBySlug, getRelatedPosts } from '@/lib/db/queries/posts';
+import { getAllArticles } from '@/lib/articles/loader';
 import { MarkdownContent } from '@/components/markdown-content';
 import { FeatureImage } from '@/components/feature-image';
 import { ArticleSchema } from '@/components/schema/article-schema';
@@ -40,8 +41,14 @@ interface ArticlePageProps {
   params: { slug: string };
 }
 
-export const revalidate = 60;
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const articles = await getAllArticles();
+  return articles
+    .filter((a) => a.status === 'published')
+    .map((a) => ({ slug: a.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -95,7 +102,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       notFound();
     }
 
-    const related = await getRelatedPosts(post.categoryId!, post.id, 3);
+    const related = await getRelatedPosts(post.category?.slug || post.categoryId!, post.slug, 3);
 
     return (
       <article className="container mx-auto px-4 py-12">
@@ -166,7 +173,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   <time dateTime={post.updatedAt} className="ml-2">&middot; Diperbarui: {new Date(post.updatedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
                 )}
               </div>
-              <BookmarkButton postId={post.id} />
+              <BookmarkButton postSlug={post.slug} />
             </div>
           )}
         </header>
@@ -186,7 +193,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {post.isPremium ? (
             <>
               <MarkdownContent body={post.premiumExcerpt || post.excerpt || ''} />
-              <PremiumGate postId={post.id} excerpt={post.premiumExcerpt || post.excerpt || ''} />
+              <PremiumGate postSlug={post.slug} excerpt={post.premiumExcerpt || post.excerpt || ''} />
             </>
           ) : (
             <MarkdownContent body={post.body} />
@@ -212,9 +219,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           }))} />
         )}
 
-        <CommentsSection postId={post.id} />
+        <CommentsSection postSlug={post.slug} />
 
-        <ReadingTracker postId={post.id} />
+        <ReadingTracker postSlug={post.slug} />
       </article>
     );
   } catch (err) {

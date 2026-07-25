@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/lib/db';
-import { posts } from '@/lib/db/schema';
-import { eq, and, gte, lte } from 'drizzle-orm';
 import { getPostWithRelationsBySlug } from '@/lib/db/queries/posts';
 import { getActiveSubscribers } from '@/lib/db/queries/newsletter';
 import { sendEmail } from '@/lib/email/client';
 import { renderDigestEmail, DigestArticle } from '@/lib/email/templates/article-notification';
+import { getPostsPublishedToday } from '@/lib/articles/loader';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -19,18 +17,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const today = new Date();
-    const startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 0, 0, 0).toISOString();
-    const endOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23, 59, 59).toISOString();
-
-    const todayPosts = await db.select({ id: posts.id, slug: posts.slug })
-      .from(posts)
-      .where(and(
-        eq(posts.status, 'published'),
-        gte(posts.publishedAt, startOfDay),
-        lte(posts.publishedAt, endOfDay),
-      ))
-      .orderBy(posts.publishedAt);
+    const todayPosts = await getPostsPublishedToday();
 
     if (todayPosts.length === 0) {
       return NextResponse.json({ sent: false, reason: 'No articles published today' });
@@ -39,10 +26,7 @@ export async function GET(request: NextRequest) {
     console.log(`[digest] Found ${todayPosts.length} articles published today`);
 
     const articles: DigestArticle[] = [];
-    for (const post of todayPosts) {
-      const fullPost = await getPostWithRelationsBySlug(post.slug);
-      if (!fullPost) continue;
-
+    for (const fullPost of todayPosts) {
       const category = fullPost.category ?? null;
       const author = fullPost.author ?? null;
 

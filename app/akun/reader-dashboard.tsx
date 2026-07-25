@@ -15,13 +15,13 @@ interface PostData {
 }
 
 interface BookmarkItem {
-  postId: string;
+  postSlug: string | null;
   createdAt: string | null;
   post?: PostData;
 }
 
 interface HistoryItem {
-  postId: string;
+  postSlug: string | null;
   readAt: string | null;
   progress: number | null;
   post?: PostData;
@@ -145,7 +145,7 @@ export default function ReaderDashboard({
                 if (!post) return null;
                 return (
                 <Link
-                  key={bm.postId}
+                  key={bm.postSlug}
                   href={`/artikel/${post.slug}`}
                   className="block group"
                 >
@@ -180,7 +180,7 @@ export default function ReaderDashboard({
                 if (!post) return null;
                 return (
                 <Link
-                  key={h.postId}
+                  key={h.postSlug}
                   href={`/artikel/${post.slug}`}
                   className="block group"
                 >

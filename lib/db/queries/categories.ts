@@ -1,46 +1,82 @@
-import { db } from '@/lib/db';
-import { categories, subcategories } from '@/lib/db/schema';
-import { eq, asc } from 'drizzle-orm';
+import {
+  categories as categoriesConfig,
+  subcategories as subcategoriesConfig,
+  getCategoryBySlug,
+  getSubcategoriesByCategorySlug,
+  type CategoryConfig,
+  type SubcategoryConfig,
+} from '@/content/config';
 import type { Category, CategoryWithSubcategories, Subcategory } from '@/lib/db/schema';
 
+function configToCategory(c: CategoryConfig): Category {
+  return {
+    id: c.id,
+    title: c.title,
+    slug: c.slug,
+    description: c.description,
+    color: c.color,
+    createdAt: '2026-07-01 12:38:03.617726+00',
+    updatedAt: '2026-07-01 13:49:07.459295+00',
+  };
+}
+
+function configToSubcategory(s: SubcategoryConfig): Subcategory {
+  return {
+    id: s.id,
+    categoryId: s.categoryId,
+    title: s.title,
+    slug: s.slug,
+    description: s.description,
+    sortOrder: s.sortOrder,
+    createdAt: '2026-07-15 01:49:28.306176+00',
+  };
+}
+
 export async function getAllCategories(): Promise<Category[]> {
-  return db.select().from(categories).orderBy(asc(categories.title));
+  return categoriesConfig.map(configToCategory);
 }
 
 export async function getCategoriesWithSubcategories(): Promise<CategoryWithSubcategories[]> {
-  const result = await db.query.categories.findMany({
-    with: { subcategories: true },
-  });
-  return result as CategoryWithSubcategories[];
+  return categoriesConfig.map((c) => ({
+    ...configToCategory(c),
+    subcategories: subcategoriesConfig
+      .filter((s) => s.categoryId === c.id)
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+      .map(configToSubcategory),
+  }));
 }
 
-export async function getCategoryBySlug(slug: string): Promise<Category | undefined> {
-  const result = await db.select().from(categories).where(eq(categories.slug, slug)).limit(1);
-  return result[0];
+export async function getCategoryBySlugAsync(slug: string): Promise<Category | undefined> {
+  const c = getCategoryBySlug(slug);
+  return c ? configToCategory(c) : undefined;
 }
 
 export async function getSubcategoriesByCategory(categoryId: string): Promise<Subcategory[]> {
-  return db.select().from(subcategories)
-    .where(eq(subcategories.categoryId, categoryId))
-    .orderBy(asc(subcategories.sortOrder));
+  return subcategoriesConfig
+    .filter((s) => s.categoryId === categoryId)
+    .sort((a, b) => a.sortOrder - b.sortOrder)
+    .map(configToSubcategory);
 }
 
 export async function getAllSubcategories(): Promise<Subcategory[]> {
-  return db.select().from(subcategories).orderBy(asc(subcategories.title));
+  return subcategoriesConfig.map(configToSubcategory);
 }
 
 export async function getCategoryWithSubcategoriesBySlug(slug: string): Promise<CategoryWithSubcategories | undefined> {
-  const result = await db.query.categories.findFirst({
-    where: eq(categories.slug, slug),
-    with: { subcategories: true },
-  });
-  return result as CategoryWithSubcategories | undefined;
+  const c = getCategoryBySlug(slug);
+  if (!c) return undefined;
+  return {
+    ...configToCategory(c),
+    subcategories: getSubcategoriesByCategorySlug(slug).map(configToSubcategory),
+  };
 }
 
 export async function getCategoriesForSitemap(): Promise<{ slug: string; updatedAt: string | null }[]> {
-  return db.select({ slug: categories.slug, updatedAt: categories.updatedAt }).from(categories);
+  return categoriesConfig.map((c) => ({ slug: c.slug, updatedAt: '2026-07-01 13:49:07.459295+00' }));
 }
 
 export async function getSubcategoriesForSitemap(): Promise<{ slug: string; categoryId: string }[]> {
-  return db.select({ slug: subcategories.slug, categoryId: subcategories.categoryId }).from(subcategories);
+  return subcategoriesConfig.map((s) => ({ slug: s.slug, categoryId: s.categoryId }));
 }
+
+export { getCategoryBySlugAsync as getCategoryBySlug };

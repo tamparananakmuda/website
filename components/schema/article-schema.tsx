@@ -1,6 +1,8 @@
 interface Citation {
   title?: string;
+  label?: string;
   url?: string;
+  type?: string;
 }
 
 interface ArticleSchemaProps {
