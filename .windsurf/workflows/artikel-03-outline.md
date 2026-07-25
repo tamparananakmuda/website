@@ -76,7 +76,7 @@ grep -rl "category:.*KATEGORI" content/articles/ --include="*.md" \
 
 ## SEO Metadata Plan
 
-- Meta Title Formula: `[Keyword Utama] + [Hook] | TAM` (max 70 karakter)
+- Meta Title Formula: `[Keyword Utama] + [Hook] ` (max 60 karakter)
 - Meta Description Formula: `[Konteks] + [Value Prop] + [CTA]` (max 160 karakter)
 - Slug: kebab-case, keyword di awal, max 60 karakter, unique
 

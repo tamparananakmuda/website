@@ -45,6 +45,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 33 | 86% Merasa Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Justru Celah | 86-persen-pede-kenali-scam-35-persen-tetap-kena | Mindset | Mindset & Realita | kontra-narasi | 2026-07-27 (scheduled 12:00 WIB) |
 | 34 | Kelas Menengah Menyusut: Bukan Gagal Naik, Tangganya yang Dicabut | kelas-menengah-menyusut-bukan-gagal-tangga-dicabut | Bisnis | Bisnis | kontra-narasi | 2026-07-27 (scheduled 17:00 WIB) |
 | 35 | Influencer Bukan Profesi, Itu Lotere yang Dikemas Sebagai Karier | influencer-bukan-profesi-itu-lotere-yang-dikemas-karier | Teknologi | Teknologi & AI | tamparan | 2026-07-28 (scheduled 08:00 WIB) |
+| 36 | Pulang ke Rumah Bukan Gagal Terbang, Sistem yang Hancurkan Landasannya | pulang-bukan-gagal-terbang-sistem-hancurkan-landasan | Kehidupan | Hubungan Sosial | kontra-narasi | 2026-07-28 (scheduled 12:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

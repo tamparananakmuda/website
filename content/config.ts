@@ -66,7 +66,9 @@ export const authors: AuthorConfig[] = [
   { id: '30268f32-de51-4080-ba1b-20c20fff3c6b', name: 'Yovie Setiawan', slug: 'yovie-setiawan', bio: 'Founder TAMPARAN ANAK MUDA.', avatarUrl: null, socialInstagram: null, socialTwitter: null, socialLinkedin: null },
 ];
 
-export const series: SeriesConfig[] = [];
+export const series: SeriesConfig[] = [
+  { id: '7505a15c-085b-456e-ab31-0aa21793e581', title: 'Mental Health di Era Digital: Sistem yang Menjual Luka, Bukan Obat', slug: 'kesehatan-mental-era-digital', description: 'Setiap kali kamu mencari bantuan untuk mental health, kamu masuk lebih dalam ke dalam sistem yang membuatmu sakit. 12 part investigasi dari gejala sampai arsitek.' },
+];
 
 export function getCategoryBySlug(slug: string): CategoryConfig | undefined {
   return categories.find((c) => c.slug === slug);
