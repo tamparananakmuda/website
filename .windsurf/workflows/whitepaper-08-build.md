@@ -36,6 +36,31 @@ console.log('SLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG A
 - `readingTime` (integer, default 10), `tags` (array)
 - `status` ('draft' atau 'published'), `publishedAt` (ISO date string)
 
+## E-E-A-T Frontmatter Verification
+
+Pastikan frontmatter mendukung E-E-A-T signals:
+
+| Field | E-E-A-T signal | Required |
+|-------|---------------|----------|
+| `author` | Named author byline | Ya, bukan generic |
+| `publishedAt` | Visible dates | Ya, ISO date |
+| `summary` | Meta description untuk search | Ya, 150-160 char |
+| `tags` | Topic categorization | Ya, 3-5 tags |
+
+## AI SEO/AEO Verification
+
+Sebelum save file, verify AI citation readiness:
+
+| Check | Requirement |
+|-------|-------------|
+| **Semantic headings** | H2 = claim/conclusion, bukan generic ("Analisis") |
+| **Citable passages** | Minimal 1 self-contained extractable claim per section |
+| **Statistical formatting** | "74% (BPS, 2025)" dalam text, bukan hanya di chart |
+| **Front-loaded thesis** | Paragraf pertama = governing thought |
+| **Methodology section** | Ada jika original research (nerd box) |
+| **Limitations section** | Ada dan explicit |
+| **Schema-ready** | Frontmatter fields lengkap untuk schema markup |
+
 ## Insert command (write file Markdown)
 
 ```bash
@@ -90,6 +115,10 @@ console.log('All checks passed.');
 - [ ] Slug uniqueness dicek (file tidak exists)
 - [ ] File `content/whitepaper/SLUG.md` created
 - [ ] Frontmatter lengkap dan valid
+- [ ] E-E-A-T frontmatter: author, publishedAt, summary, tags
+- [ ] AI SEO/AEO: semantic headings, citable passages, statistical formatting, front-loaded thesis
+- [ ] Methodology section ada (jika original research)
+- [ ] Limitations section ada dan explicit
 - [ ] `status` = `published` atau `draft`
 - [ ] `publishedAt` tidak null
 - [ ] `body` tidak kosong

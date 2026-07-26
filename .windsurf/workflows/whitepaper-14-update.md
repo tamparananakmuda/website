@@ -88,11 +88,54 @@ links.forEach(slug => {
 rm content/whitepaper/SLUG.md
 ```
 
+## Action Research Spiral (Kurt Lewin)
+
+Update whitepaper = re-plan phase dari action research cycle:
+
+| Phase | Update application |
+|-------|-------------------|
+| **Observe** | Data dari 13-monitor: metrics, AI citation, reader response |
+| **Reflect** | What worked? What claims perlu update? What data baru? |
+| **Re-plan** | Update whitepaper dengan insights baru |
+| **Act** | Publish update, distribute ulang jika signifikan |
+
+TAM = iterative. Whitepaper bukan one-shot. Update = Bayesian updating: new evidence = updated claims.
+
+## Bayesian Updating untuk Claims
+
+Jika ada data baru yang relevant ke whitepaper claims:
+
+| Step | Action |
+|------|--------|
+| **1. Identify new evidence** | Survei/studi/data baru yang relevant ke claim |
+| **2. Assess evidence strength** | Strong (meta-analysis, RCT)? Moderate? Weak? |
+| **3. Update claim** | Tambah hedging jika evidence menentang. Perkuat jika evidence mendukung. |
+| **4. Update limitations** | Jika evidence baru mengubah scope, update limitations |
+| **5. Version note** | Tambah catatan update di akhir whitepaper: "Update [bulan tahun]: [apa yang berubah]" |
+
+Jangan silent edit. Transparency = TAM credibility (E-E-A-T correction transparency).
+
+## Content Atomization Refresh
+
+Jika whitepaper di-update, derivative assets juga perlu di-check:
+
+| Derivative | Check |
+|-----------|-------|
+| Blog post 1-3 | Data masih akurat? Update jika perlu |
+| Carousel | Data di slide masih relevant? |
+| Thread | Thread masih live dan akurat? |
+| Newsletter | Tidak perlu update (sudah terkirim) |
+| Infographic | Update jika data berubah signifikan |
+
 ## Checklist
 
 - [ ] Data masih relevan (monthly check)
 - [ ] Internal links masih aktif (monthly check)
 - [ ] SEO ranking stabil atau naik (monthly check)
+- [ ] Action research spiral: observe + reflect documented
+- [ ] Bayesian updating: claims tracked, update jika evidence baru
+- [ ] Version note ditambahkan jika ada update signifikan
+- [ ] Content atomization refresh: derivatives di-check
 - [ ] Whitepaper review dilakukan (quarterly)
 
 ## Next

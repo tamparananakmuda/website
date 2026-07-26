@@ -270,6 +270,185 @@ Whitepaper-specific: jelaskan bagaimana data dianalisis.
 | **Limitations** | Apa yang tidak dianalisis? | Tidak menganalisis faktor geografis detail |
 | **Triangulation** | Bagaimana data diverifikasi? | Min 2 source per key claim, cross-check |
 
+## Deep Strategy Framework (20x Depth)
+
+Semua section berikut wajib dipertimbangkan. Pilih minimal 5 yang paling relevan. Epistemology + Pyramid Principle + Cognitive Load wajib semua.
+
+### Epistemology Integration (wajib semua)
+
+**Popper Falsifiability dalam Argument Structure:** Setiap claim + potential falsifier. "Jika [X] benar, maka [Y] harus terjadi. Jika [Y] tidak terjadi, [X] salah." Present falsifier secara explicit. Ini bukan kelemahan, ini integritas.
+
+**Kuhn Paradigm Shift Narrative Strategy:** Anomalies accumulation > crisis > shift. TAM whitepaper: show anomalies dulu (data yang tidak cocok narasi populer), biarkan reader merasa crisis, lalu present new paradigm (thesis). Jangan langsung argue for shift. Biarkan anomalies speak.
+
+**Lakatos Progressive Programme Design:** Thesis = hard core. Evidence = protective belt. Pastikan thesis predicts novel facts (sesuatu yang belum orang pikirkan). Jika hanya explain retroactively = degenerating. TAM "tamparan" = novel prediction yang counter-intuitive.
+
+**Toulmin Argument Layout per Section:** Setiap section: Claim (what) + Ground (evidence) + Warrant (logic bridge, "karena [logic], maka evidence mendukung claim") + Backing (credentials, authority) + Qualifier (degree of certainty, hedging) + Rebuttal (conditions where claim tidak hold). Warrant = yang paling sering missing di whitepaper lemah.
+
+**Aristotle Rhetoric Balance:** Ethos (credibility via TAM tone: jujur, rasional) + Logos (data, argument utama) + Pathos (terbatas, tidak manipulasi emosi). Whitepaper = deliberative rhetoric (rekomendasi masa depan). Enthymeme = argument dengan implicit premise yang reader lengkapi sendiri = lebih persuasif dari explicit syllogism.
+
+### Persuasion Route Design
+
+**ELM Central Route untuk TAM:** Elaboration Likelihood Model. TAM "tamparan" = central route persuasion: logical argument yang membuat reader berpikir ulang (attitude change durable). Bukan peripheral route (heuristic cues, emotional manipulation, attitude change temporary). Design setiap section untuk central route: data kuat, argument logis, reader harus berpikir.
+
+**Cognitive Dissonance yang Sehat:** Present data yang bertentangan dengan keyakinan reader. Dissonance = motivasi untuk resolve. TAM design untuk reader pilih: ubah keyakinan berdasar data, bukan reject data. Jangan spell out conclusion. Biarkan reader menarik sendiri.
+
+**Self-Validation Mechanism:** Reader yang validasi pikiran mereka sendiri tentang argument = lebih persuasif. TAM: present data, biarkan reader menarik conclusion. "Data menunjukkan X" bukan "Jadi kamu harus berpikir Y."
+
+### Writing Structure Frameworks (wajib: Pyramid Principle)
+
+**Pyramid Principle Writing Structure:** Answer-first. Governing thought = front-loaded thesis (page 1). 3-5 MECE supporting arguments. Evidence base per argument. SCQA pembuka: Situation (konteks), Complication (masalah), Question (pertanyaan), Answer (thesis). "Think bottom-up, present top-down."
+
+**Front-Loaded Thesis Paragraph:** 1 paragraph di page 1 = claim + why it matters. AI engines lift this first. Reader yang berhenti di sini harus bisa repeat argument. Format: "[Thesis]. [Kenapa penting]. [Implikasi]."
+
+**Citable Passage Design:** Setiap section punya self-contained extractable claim untuk AI/RAG retrieval. Test: jika AI copy paragraph ini tanpa context, apakah masih make sense? Jika tidak, rewrite.
+
+**Hedging Language Guide:** "menunjukkan", "mengindikasikan", "kemungkinan", "cenderung" untuk claims yang tidak 100% pasti. Over-claiming damages credibility. Bayesian honesty: posterior proportionate to evidence strength.
+
+**Bayesian Hedging Strategy:** Setiap claim: prior (apa yang kita tahu) + likelihood (berapa kuat evidence) = posterior (apa yang kita claim). Hedging language = Bayesian honesty. Sensitivity analysis across plausible priors. Jika prior berubah, apakah conclusion berubah?
+
+**Plain Language Mandate:** "kami merekomendasikan" bukan "direkomendasikan". Define technical terms on first use. Active voice. Short sentences untuk key claims. TAM tone: jujur dan tajam, bukan akademis dan kaku.
+
+### Cognitive & Behavioral Strategy (wajib: Cognitive Load)
+
+**Cognitive Load Design Strategy:** Per-section load management. Intrinsic (complexity) via progressive disclosure: skim > strategic > deep. Extraneous (format noise) via visual hierarchy: pull quotes, callout boxes, chart placement. Germane (schema building) via worked examples: konkret > abstract. Max 5-7 data points per chart.
+
+**Layered Reading Design:** Progressive disclosure untuk 3 reader types:
+- **Skim (5 min):** Executive summary + bolded key findings + conclusion
+- **Strategic (20-30 min):** Section headings + first paragraph per section + charts + recommendations
+- **Deep (1-2 hours):** Full read + methodology + limitations + references
+
+**Information Foraging Optimization:** Section titles as scent markers (conclusion-first headings). Bolded key findings. Pull quotes. Value-per-effort ratio per section. Reward frequency: key insight setiap 200-300 kata.
+
+**Dual Process Persuasion Design:** System 1 entry (cognitive ease, visual cues, social proof signals, familiar anchors) + System 2 engagement (logical argument, data, methodology). Anchoring: first claim = anchor untuk seluruh whitepaper. Framing: cara data presented affects interpretation.
+
+**Prospect Theory Framing Strategy:** Loss framing untuk "tamparan": "apa yang kamu sudah punya dan bisa hilang". Loss aversion: loss ~2x lebih impactful dari gain. Accurate not manipulative. Reference point: outcomes relative to current state.
+
+**Nudge Theory Recommendation Design:** Options + consequences, no mandate. "Kamu bebas pilih, tapi ini kenyataan." Choice architecture: design presentation yang mengarah ke better decision. TAM tidak menggurui = libertarian paternalism.
+
+**Shannon Information Density Strategy:** Signal-to-noise optimization per section. Signal = key insights. Noise = filler, jargon, repetition. Hapus paragraph yang tidak menambah information. Redundancy only untuk emphasis pada key claims.
+
+### Narrative & Semiotic Strategy
+
+**Hero's Journey Narrative Arc (adaptasi):** Reader = hero. Problem = call to adventure. Data = road of trials. Insight = ultimate boon. Recommendation = return with elixir. Adaptasi struktural untuk whitepaper, bukan literal fiction.
+
+**Narrative Transportation Strategy:** Case study sebagai transportation vehicle. Story arc: protagonist, conflict, resolution. Transportation reduces counter-arguing. TAM tetap fact-based: transportation via structure, bukan fabrication.
+
+**Barthes Demystification Strategy:** Decode myth. Show "natural truth" yang sebenarnya cultural construct. Denotation (literal) vs connotation (cultural) vs myth (ideology disguised as natural). TAM "tamparan" = demystification. "Kerja keras = sukses" adalah myth.
+
+**McLuhan Medium-Aware Design:** Digital whitepaper (scrollable, searchable, linkable) = different medium dari PDF (linear). Design untuk digital: scannable headings, searchable keywords, linkable sections. "The medium is the message": format affects comprehension.
+
+**World Change Narrative (opsional):** 5 acts: Old World (status quo), Shift (what changed), Monsters (new challenges), New World (what now), Guide (how TAM helps navigate). Alternative ke Problem-Evidence-Recommendation.
+
+### Case Study Selection Strategy
+
+Mix TAM-related dan external case studies untuk objectivity:
+
+| Tipe | Proporsi | Fungsi | Contoh |
+|------|----------|--------|--------|
+| **TAM-related** | 30-40% | Show TAM perspective dengan real example | Reader story, TAM survey result |
+| **External** | 60-70% | Objectivity, broader context | Industry case, international example |
+| **Counter-example** | 1-2 | Steel-man counter-argument | Case yang tampak mendukung narasi populer |
+
+Kriteria case study: konkret (nama/organisasi atau anonymized), data-backed, relevant ke thesis, reader bisa identify.
+
+### Lead Generation Hook Planning
+
+Plan data point yang menjadi teaser untuk distribution:
+
+| Hook type | Data yang dipakai | Platform target | Format derivative |
+|-----------|-------------------|-----------------|-------------------|
+| **Stat shocking** | [angka paling striking] | Social media, quote card | Visual stat card |
+| **Kontra-narasi** | [claim vs narasi populer] | LinkedIn, thread | Text post + thread |
+| **Question provocation** | [pertanyaan yang tidak bisa dijawab narasi publik] | Newsletter, blog | Opening paragraph |
+
+TAM = ungated. Hook = engagement teaser, bukan email capture. Hook harus self-contained: reader yang lihat hook saja dapat insight, bukan clickbait.
+
+### Executive Summary 1-Page Draft
+
+Finalisasi pre-executive summary dari 01-idea (argument-first, tulis SEBELUM outline):
+
+```markdown
+## Executive Summary (final, 1 page)
+
+**Thesis:** [1-2 kalimat, lolos 7 kriteria quality check]
+**Kenapa penting:** [1 kalimat implikasi untuk reader]
+**Key findings (3-5):**
+1. [finding 1 dengan data]
+2. [finding 2 dengan data]
+3. [finding 3 dengan data]
+**Counter-argument terkuat:** [1 kalimat] > **Rebuttal:** [1 kalimat]
+**Recommendation arah:** [1 kalimat]
+**Limitations:** [1 kalimat acknowledging key limitation]
+```
+
+Test: reader yang baca hanya ini (1 page) harus bisa repeat argument TAM ke orang lain. Jika tidak, rewrite.
+
+### Sociology & Systems Strategy
+
+**Social Construction Deconstruction Plan:** Show how "reality" reader dibentuk oleh institutions. Externalization > objectivation > internalization. Enable re-evaluation, bukan force new reality. TAM: "kenyataan" yang tagline refers to = constructed reality yang perlu di-deconstruct.
+
+**Bourdieu Capital Transparency:** Reveal invisible capital dynamics. Economic (money), cultural (knowledge, skills), social (connections). "Kerja keras saja tidak cukup" bukan karena sistem tidak adil, tapi karena capital conversion punya rules.
+
+**Foucault Discourse Critique:** Who benefits from current discourse? What power structures produce "common sense"? TAM = archaeological/genealogical tool: uncover how current "truths" emerged. Tapi: TAM tidak purely Foucauldian (tidak relativist). TAM punya normative stance.
+
+**Meadows Leverage Point Targeting:** Recommendations target high-leverage points (paradigm > goals > rules > info flows > feedback loops). "Tamparan" = reveal leverage point yang counterintuitive. Low-leverage: parameters, buffers. High-leverage: paradigm shift, goals, self-organization.
+
+**Systems Thinking Recommendation Design:** Feedback loops, system traps, counterintuitive levers. Identify system traps yang reader fall into (limits to growth, shifting burden, tragedy of commons, fixes that fail). Recommendations = target system structure, bukan surface symptoms.
+
+### Advanced Thinking Frameworks (pilih minimal 3)
+
+**TRIZ Contradiction Resolution:** Identify trade-offs dalam recommendations. 40 inventive principles untuk eliminate compromise. Ideal Final Result (IFR) sebagai north star: apa versi ideal tanpa compromise?
+
+**First Principles Argument Construction:** Deconstruct recommendations ke fundamental truths. Reason up dari sana. Challenge common wisdom dengan "Idiot Index" analysis. Cartesian Doubt: stress-test assumptions sampai indubitable.
+
+**Lateral Thinking untuk Narrative:** Six Thinking Hats untuk review: Black (risiko), Yellow (benefit), Green (alternatif angle), Red (feeling), White (fakta), Blue (proses). Provocation untuk reframe. Parallel thinking untuk avoid adversarial bias.
+
+**Cynefin-Based Recommendation Design:** Match recommendation type ke domain. Clear = best practice. Complicated = good practice (expert analysis). Complex = emergent practice (safe-to-fail experiments). Chaotic = novel practice (immediate action). Jangan apply complicated-domain solution ke complex-domain problem.
+
+**Abductive Narrative Arc:** Surprising fact (observation) > hypothesis (thesis) > research questions > data (02-research) > synthesis (03-strategy). Narrative follows inquiry cycle. Reader ikut proses discovery.
+
+**Action Research Iteration Plan:** Publish > observe engagement > reflect > update. Whitepaper = living document, bukan one-shot. Version control untuk track iterations. Update ketika data baru tersedia.
+
+**Qualitative Evidence Presentation:** Match presentation ke method. Grounded theory: categories + themes. Ethnography: rich description. Case study: bounded instance. Phenomenology: essence of lived experience.
+
+**Mixed Methods Synthesis Strategy:** Convergent (compare qual+quant findings), Exploratory (qual informs quant design), Explanatory (quant findings explained by qual). Integration explicit dan justified. Jangan just stack qual dan quant side by side.
+
+**Writing Process Strategy:** Writing = iterative problem-solving (Flower & Hayes). Plan > translate > review > re-plan. Goals evolve during writing. Monitor = metacognitive check: "apakah ini masih aligned dengan TAM tone? Apakah claim masih proportionate to evidence?" Recursive, bukan linear. Expert writers modify goals during writing. Hayes 2012: composing on 3 levels: Resource (attention, working memory), Process (evaluation, reflection, text production), Context (social/collaborative).
+
+**Meta-Analytic Evidence Presentation:** Jika whitepaper reviews multiple studies/sources: present forest-plot-style summary. Effect sizes > p-values: "berapa besar effect" bukan hanya "apakah significant". Acknowledge heterogeneity (I-squared). Check publication bias (funnel plot asymmetry). Sensitivity analysis: "apakah conclusion berubah jika exclude source X?" Trim-and-fill jika bias detected. Cochrane standards: duplicate screening, risk of bias assessment, GRADE certainty.
+
+### Content Strategy & Distribution
+
+**Content Atomization Roadmap:** 15+ derivatives mapped pre-production. Atom extraction plan per section. Platform-specific adaptation: blog (long-form), quote cards (visual), carousel (step-by-step), infographic (data viz), thread (narrative), newsletter (summary), video (explainer), podcast (discussion). Funnel-stage mapping per derivative.
+
+**E-E-A-T Implementation Plan:** Author bio page. Credential verification. Experience markers ("Kami survei 500 responden..."). Primary source policy. Expert quote protocol. Date visibility. Correction transparency.
+
+**Gating & Distribution Strategy:** TAM = ungated (maximize AI visibility, SEO, social). CTA = engagement, bukan email capture. Derivative distribution timeline. Platform-specific rollout plan.
+
+**Pipeline & Automation Integration:** Claim validation gate. Fact-check script. AI SEO check per section. Version control via git. Audit trail. Production timeline dengan owners.
+
+**Data Visualization Master Plan:** Graph selection per data type. 6-stage design process (Stephen Few): understand context, select chart type, eliminate clutter, focus attention, think like a designer, tell a story. Preattentive processing. Conclusion-titled charts (judul = insight, bukan "Chart 1").
+
+**Production Timeline Planning:** 8-12 weeks total. Research 2-4 weeks. Outline + Draft 2-3 weeks. Review 1-2 weeks. Design 1-2 weeks. Publication ongoing. Milestones dengan owners.
+
+### Quality Guardrails
+
+**Anti-Failure-Mode Guardrails:** Anti-sales-pitch check (95/5 rule: 95% education, 5% promotion). Messaging stability check (core message konsisten across sections). Scope creep detection (jika section tidak mendukung thesis, cut).
+
+**Policy-Quality Framework:** 4 standards dengan 16 quality elements:
+- **Purpose:** Clear objective, audience-appropriate, actionable
+- **Analysis:** Evidence-based, transparent method, acknowledged limitations
+- **Recommendation:** Specific, realistic, measurable, data-backed
+- **Presentation:** Plain language, logical structure, visual clarity
+
+**Limits Section Planning:** Explicit limitations section wajib. "Whitepaper tanpa methodology dan limitations = brochure dengan serif font." Acknowledge: data gap, sample bias, temporal limitation, scope limitation, confounders, generalizability.
+
+**95/5 Rule:** TAM: 95% education, 5% promotion. Lebih educational dari standar 90/10. CTA = engagement (share, discuss, reflect), bukan sales.
+
+**Readability Target per Section:** Executive summary: Grade 9-10 (accessible). Technical sections: Grade 11-12 (informed but tidak akademis). Define jargon on first use. Short sentences untuk key claims.
+
+**Data Journalism Methodology Section:** "Nerd box" di whitepaper: jelaskan how data obtained, cleaned, analyzed. Open data practice: publish data sources, code, methods. Enable readers to verify. Reproducibility = TAM credibility (E-E-A-T). Methodology section wajib untuk whitepaper yang pakai original data.
+
 ## Hypothesis vs Conclusion Mapping
 
 Petakan data mana mendukung argumen mana:
@@ -367,6 +546,38 @@ Ini akan dipakai di step 04-outline untuk struktur section.
 - [ ] Semua rekomendasi lolos 5 kriteria quality check
 - [ ] Methodology planning selesai
 - [ ] Hypothesis vs conclusion mapping selesai
+- [ ] Epistemology: Popper falsifiability, Kuhn paradigm shift, Lakatos progressive, Toulmin argument layout, Aristotle rhetoric balance
+- [ ] Persuasion route design: ELM central route, cognitive dissonance yang sehat, self-validation mechanism
+- [ ] Pyramid Principle: SCQA, front-loaded thesis, MECE supporting arguments
+- [ ] Front-loaded thesis paragraph (1 paragraph page 1)
+- [ ] Citable passage design per section (self-contained untuk AI/RAG)
+- [ ] Hedging language + Bayesian hedging strategy
+- [ ] Plain language mandate
+- [ ] Executive summary 1-page final draft (argument-first, tulis SEBELUM outline)
+- [ ] Case study selection strategy (mix TAM-related 30-40% + external 60-70% + counter-example 1-2)
+- [ ] Lead generation hook planning (stat shocking, kontra-narasi, question provocation untuk distribution)
+- [ ] Cognitive load design: per-section load management, layered reading (skim/strategic/deep)
+- [ ] Information foraging optimization (scent markers, value-per-effort, reward frequency)
+- [ ] Dual process persuasion (System 1 + System 2, anchoring, framing)
+- [ ] Prospect theory framing (loss framing, accurate not manipulative)
+- [ ] Nudge theory recommendation design (options + consequences, no mandate)
+- [ ] Shannon information density (signal-to-noise per section)
+- [ ] Narrative: Hero's Journey (opsional), narrative transportation, Barthes demystification, McLuhan medium-aware
+- [ ] Sociology: social construction deconstruction, Bourdieu capital transparency, Foucault discourse critique, Meadows leverage point targeting, systems thinking recommendation
+- [ ] Minimal 3 advanced thinking frameworks (TRIZ/First Principles/Lateral/Cynefin/Abductive/Action Research/Qualitative/Mixed Methods)
+- [ ] Content atomization roadmap (15+ derivatives, platform adaptation, funnel mapping)
+- [ ] E-E-A-T implementation plan
+- [ ] Gating & distribution strategy (ungated, CTA = engagement)
+- [ ] Pipeline & automation integration
+- [ ] Data visualization master plan (graph selection, 6-stage process, conclusion-titled charts)
+- [ ] Production timeline planning (8-12 weeks dengan milestones)
+- [ ] Anti-failure-mode guardrails (95/5 rule, messaging stability, scope creep)
+- [ ] Policy-quality framework (4 standards, 16 elements)
+- [ ] Limits section planning (explicit limitations wajib)
+- [ ] Readability target per section (Grade 9-10 executive, Grade 11-12 technical)
+- [ ] Writing process strategy: iterative, recursive, goal-modifying, monitor check (Flower & Hayes)
+- [ ] Meta-analytic evidence presentation: forest-plot thinking, effect sizes, heterogeneity, publication bias check
+- [ ] Data journalism methodology section: nerd box, open data, reproducibility
 - [ ] Template output strategy diisi lengkap
 
 ## Next

@@ -192,6 +192,70 @@ Whitepaper ideal untuk lead gen:
 | **LinkedIn lead gen** | LinkedIn Article dengan CTA ke whitepaper page |
 | **Follow-up sequence** | 3 email follow-up setelah download (H+1, H+3, H+7) |
 
+## Content Atomization Execution (15+ derivatives)
+
+Eksekusi extraction points dari 04-outline dan visual assets dari 07-design. Target: 15+ derivative assets dari 1 whitepaper.
+
+| # | Derivative | Platform | Source section | Format |
+|---|-----------|----------|---------------|--------|
+| 1 | Quote card 1 | IG, X | Executive Summary | 1080x1080 |
+| 2 | Quote card 2 | IG, X | Analysis Arg 1 | 1080x1080 |
+| 3 | Quote card 3 | IG, X | Analysis Arg 2 | 1080x1080 |
+| 4 | Carousel | IG, LinkedIn | Recommendation | 8-12 slides |
+| 5 | Thread | X/Twitter | Analysis narrative arc | 5-8 tweets |
+| 6 | LinkedIn Article | LinkedIn | Executive Summary + key findings | 400-600 kata |
+| 7 | Newsletter | Email | Summary version | 600-800 kata |
+| 8 | Infographic | IG, Pinterest | Key chart + summary | 1080x1920 |
+| 9 | Blog post 1 | Website | Supporting Arg 1 deep-dive | 800-1200 kata |
+| 10 | Blog post 2 | Website | Supporting Arg 2 deep-dive | 800-1200 kata |
+| 11 | Blog post 3 | Website | Counter-argument deep-dive | 800-1200 kata |
+| 12 | Video script | YouTube/TikTok | Hook + 3 key findings | 60-90 sec |
+| 13 | Podcast outline | Podcast | Discussion format | 20-30 min |
+| 14 | Stat card 1 | IG Story | Data paling striking | 1080x1920 |
+| 15 | Stat card 2 | IG Story | Kontra-narasi data | 1080x1920 |
+
+Setiap atom = self-contained citable unit. Reader yang lihat 1 atom saja dapat insight, bukan clickbait.
+
+## 5-Touch Nurture Sequence
+
+Setelah reader download/engage whitepaper:
+
+| Touch | Timing | Content | Goal |
+|-------|--------|---------|------|
+| **1. Delivery** | Day 0 | Whitepaper link + "terima kasih" | Deliver |
+| **2. Key insight** | Day 5 | 1 insight paling striking + "baca selengkapnya di section X" | Re-engage |
+| **3. Related challenge** | Day 10 | Pertanyaan provokatif dari whitepaper | Deepen |
+| **4. Case study** | Day 21 | Case study dari whitepaper + aplikasi praktis | Apply |
+| **5. Next step** | Day 30 | Artikel terkait / whitepaper lain / webinar | Convert |
+
+TAM = ungated. Nurture sequence = engagement, bukan sales. CTA = baca lebih dalam, bukan beli.
+
+## AI Citation Optimization for Derivatives
+
+Setiap derivative asset harus optimized untuk AI citation:
+
+| Principle | Application |
+|-----------|-------------|
+| **Self-contained** | Setiap atom bisa di-cite tanpa context whitepaper |
+| **Statistical formatting** | "74% (BPS, 2025)" di setiap derivative |
+| **Semantic headings** | Derivative blog post: H2 = claim, bukan generic |
+| **Source attribution** | Setiap data point traceable ke source |
+| **FAQ block** | Derivative blog post dengan FAQ = high AI citation potential |
+| **Comparison table** | Derivative dengan comparison table = AI extractable |
+
+GEO (Generative Engine Optimization) runs on days, SEO runs on years. Speed of derivative publication = lever.
+
+## E-E-A-T Signals in Distribution
+
+| Signal | Distribution application |
+|--------|------------------------|
+| **Author byline** | Setiap derivative mention author TAM |
+| **First-person markers** | LinkedIn Article, Newsletter pakai first-person |
+| **Primary sources** | Setiap derivative cite primary source, bukan secondary |
+| **Expert quotes** | Include expert quote di LinkedIn Article dan Newsletter |
+| **Visible dates** | Setiap derivative punya tanggal publish |
+| **Methodology link** | Derivative link ke whitepaper methodology section |
+
 ## TikTok/Reels
 
 - Tidak direkomendasikan untuk whitepaper (terlalu kompleks)
@@ -208,6 +272,10 @@ Whitepaper ideal untuk lead gen:
 - [ ] Webinar di-host (jika whitepaper signifikan)
 - [ ] Lead gen strategy implemented (email gate/PDF download)
 - [ ] Infographic summary dipost di social
+- [ ] Content atomization: 15+ derivatives dipublikasi (quote cards, carousel, thread, blog posts, stat cards)
+- [ ] 5-touch nurture sequence di-setup (Day 0, 5, 10, 21, 30)
+- [ ] AI citation optimization: setiap derivative self-contained, statistical formatting, semantic headings
+- [ ] E-E-A-T signals di distribution: author byline, first-person, primary sources, expert quotes, visible dates
 
 ## Next
 

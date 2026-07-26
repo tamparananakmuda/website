@@ -34,6 +34,32 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 1. Submit URL ke Google Search Console: `https://tamparananakmuda.com/whitepaper/SLUG`
 2. Ping sitemap
 
+## AI Search Engine Submission (GEO)
+
+Whitepaper = most citable asset. Submit ke AI engines untuk faster citation:
+
+| Platform | Method |
+|----------|--------|
+| **Google AI Overview** | Submit ke Google Search Console (same as SEO) |
+| **Perplexity** | Pastikan whitepaper public dan crawlable (no robots.txt block) |
+| **ChatGPT** | Pastikan whitepaper di sitemap, OpenAI crawler bisa akses |
+| **llms.txt** | Update `public/llms.txt` dengan link whitepaper jika ada |
+
+GEO runs on days, bukan years. Submit cepat = citation cepat.
+
+## E-E-A-T Production Verification
+
+Verify E-E-A-T signals live di production:
+
+| Check | Method |
+|-------|--------|
+| **Author byline** | Cek page render: author visible? |
+| **Published date** | Cek page render: date visible? |
+| **Schema markup** | Cek page source: Article schema ada? |
+| **Meta description** | Cek `<meta name="description">`: summary ada? |
+| **Open Graph** | Cek `<meta property="og:title">`: title ada? |
+| **Canonical URL** | Cek `<link rel="canonical">`: URL correct? |
+
 ## Checklist
 
 - [ ] `status` = `published` di frontmatter file
@@ -42,6 +68,8 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 - [ ] Sitemap includes slug
 - [ ] Whitepaper muncul di `/whitepaper` list page
 - [ ] URL submitted ke Google Search Console
+- [ ] AI search submission: llms.txt updated, sitemap crawlable
+- [ ] E-E-A-T production verification: author, date, schema, meta, OG, canonical
 
 ## Next
 

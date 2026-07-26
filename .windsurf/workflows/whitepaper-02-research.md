@@ -335,6 +335,196 @@ Setiap whitepaper HARUS punya section limitations:
 
 ---
 
+## Deep Research Methodology (20x Depth)
+
+Semua section berikut wajib dipertimbangkan. Pilih minimal 5 yang paling relevan. PRISMA + Evidence Hierarchy + Reproducibility wajib semua.
+
+### Systematic Review Standards (wajib semua)
+
+**PRISMA-Style Systematic Review:** 8-step process: (1) Define question, (2) Protocol, (3) Systematic search (document strategy: databases, keywords, date range, filters), (4) Screening (title/abstract > full-text), (5) Quality appraisal, (6) Data extraction, (7) Synthesis, (8) Write. Document search strategy untuk reproducibility.
+
+**Cochrane Rigor Standards:** Duplicate screening (2 reviewer, ke-3 resolve conflict). Duplicate data extraction. Risk of bias assessment per source. GRADE certainty assessment (High/Moderate/Low/Very Low).
+
+**Grey Literature Search Protocol:** Selain jurnal akademik, cari: working papers (SSRN, NBER), policy briefs (think tanks, LSM), NGO reports, conference proceedings, government white papers, thesis/dissertasi. Grey literature = reduce publication bias. Document sources dan akses tanggal.
+
+**Research Ethics & Bias Acknowledgment:** Acknowledge researcher POV (TAM = kontra-narasi, explicitly stated). Funding bias check (TAM = independent, no funder). Confirmation bias mitigation (null hypothesis wajib, steel-man counter-argument). Sampling bias acknowledgment. Cultural bias awareness (urban, digital-savvy audience TAM). Document di limitations section.
+
+**Evidence Hierarchy:**
+
+| Level | Tipe | Contoh |
+|-------|------|--------|
+| 1 (highest) | Original data primer | Survei TAM, data scraping |
+| 2 | SME interview | Expert interview |
+| 3 | Peer-reviewed | Jurnal akademik |
+| 4 | Standards-based | BPS, OJK, World Bank |
+| 5 | Analyst report | McKinsey, Deloitte |
+| 6 (lowest) | Vendor blog, media sekunder | Katadata, Kompas |
+| Flag | Unsourced claim | Tanpa data primer |
+
+**Reproducibility Standards:** Methodology section wajib. Data sources traceable (URL + akses tanggal). Analysis steps documented. Research log / audit trail template:
+
+```markdown
+### Research Log
+| Tanggal | Aktivitas | Sumber | Hasil | Catatan |
+|---------|-----------|--------|-------|---------|
+| [date] | Search Google Scholar | "keyword" | 20 paper | 5 relevan |
+| [date] | Download BPS data | Sakernas 2024 | Excel | n=70.000 |
+```
+
+### Advanced Research Methods (pilih minimal 3)
+
+**Bayesian Reasoning untuk Evidence:** Setiap claim: Prior (apa yang kita tahu sebelumnya) + Likelihood (berapa kuat evidence baru) = Posterior (apa yang kita percaya sekarang). Bayesian audit: apakah claim proportionate to evidence? Hindari over-claiming. Sensitivity analysis across plausible priors.
+
+**Abductive Reasoning untuk Hypothesis:** Surprising fact (observasi) > generate hypothesis > derive testable consequences > test > verify. Untuk generate insight counter-intuitive yang menjadi "tamparan". Dokumentasi: apa yang surprising, hypothesis apa yang muncul, bagaimana diuji.
+
+**Grounded Theory untuk Topik Baru:** Iterative design. Theoretical sampling. Constant comparison. Theory muncul dari data, bukan diterapkan dari atas. Data saturation assessment: kapan menambah data tidak lagi menghasilkan insight baru?
+
+**Design of Experiments (DOE):** Jika original research: randomization, replication, blocking. Factorial design untuk multiple variables. ANOVA untuk analysis. Document experimental design.
+
+**RAND Delphi Method untuk Expert Consensus:** Anonymous (expert tidak tahu siapa lain). Iterative (2-3 round). Feedback (summary dari round sebelumnya). Statistical group response (median + interquartile range). Cocok untuk topik yang belum ada consensus.
+
+**Mixed Methods Integration:** Quant (statistik, survey) + Qual (interview, case study). Integration saat synthesis. Exploratory sequential: qual explore dulu, quant validate. Explanatory sequential: quant dulu, qual explain findings.
+
+**Action Research Observation Phase:** Document effects (intended + unintended). Constraints yang ditemukan. Reader response (jika iterative). Basis untuk improvement cycle.
+
+### Data Quality & Validation
+
+**Data Validity Framework:**
+
+| Tipe validity | Pertanyaan | Cara cek |
+|---------------|------------|----------|
+| Construct | Apakah mengukur apa yang seharusnya? | Cek definisi operasional |
+| Internal | Apakah causal claim valid? | Cek confounders, design |
+| External | Apakah bisa digeneralisasi? | Cek sample representativeness |
+| Statistical | Apakah analisis statistik benar? | Cek method, sample size, power |
+
+**Source Credibility Scoring Matrix (5-level):**
+
+| Score | Kriteria | Contoh |
+|-------|----------|--------|
+| A+ | Peer-reviewed + data primer + recent | Jurnal 2024 dengan data original |
+| A | Government/official + data primer | BPS, OJK, World Bank |
+| B | Industry report + methodology transparent | McKinsey dengan appendix method |
+| C | Media sekunder + cite primary source | Katadata yang link ke BPS |
+| D | Opini/blog + tidak ada data primer | Blog post tanpa data |
+
+Min 70% source harus A+ atau A.
+
+**Sensitivity Analysis:** Apa yang berubah jika data berubah? Leave-one-out: exclude sumber terkuat, apakah conclusion tetap? Best-case vs worst-case scenario. Document di limitations.
+
+**Meta-Synthesis untuk Qualitative Data:** Untuk qualitative findings dari multiple sources: identify themes across sources. Compare dan contrast. Build integrated interpretation. Acknowledge divergence.
+
+### Data Presentation Standards
+
+**Data Visualization Standards:** Max 5-7 data components per chart. Soft colors + bright emphasis untuk highlight. Preattentive processing design (color, size, position untuk instant recognition). Graph selection matrix:
+
+| Data type | Chart | Contoh |
+|-----------|-------|--------|
+| Time series | Line chart | Tren 2020-2025 |
+| Ranking | Bar chart (horizontal) | Ranking provinsi |
+| Comparison | Grouped bar | Indonesia vs negara lain |
+| Correlation | Scatter plot | Gaji vs kepuasan |
+| Distribution | Histogram/box | Distribusi pendapatan |
+| Composition | Stacked bar/area | Komposisi sektor |
+| Relationship | Bubble chart | 3 variabel sekaligus |
+
+**Cognitive Load Validation (per-section):** Intrinsic (complexity) manageable? Extraneous (format noise) minimized? Germane (schema building) maximized? Worked examples untuk complex concepts. Split-attention avoidance (jangan pakai reader lihat chart + text jauh terpisah).
+
+**Information Scent Optimization (per-section):** Scent markers: bolded key findings, pull quotes, conclusion-first headings. Value-per-effort ratio: apakah effort baca section ini sepadan dengan insight yang didapat? Reward frequency: key insight setiap 200-300 kata.
+
+### AI & E-E-A-T Evidence Collection
+
+**AI Citation Optimization:** Self-contained citable passages per section (AI engines lift paragraph yang bisa stand-alone). Statistical formatting: angka spesifik ("74%" bukan "mayoritas"). Methodology documentation. Information gain density: setiap paragraph menambah info baru, bukan repetisi.
+
+**E-E-A-T Evidence Collection:**
+- Author credentials verification (link ke LinkedIn/publikasi)
+- First-person experience documentation ("Kami survei 500 responden...")
+- Primary source prioritization (link ke BPS, bukan media yang cite BPS)
+- Expert quote attribution tracking (nama, title, organisasi, tanggal)
+- Date visibility (data tahun berapa, bukan "terbaru")
+- Correction transparency (jika data di-update, acknowledge)
+
+### Claim-Source Map
+
+Setiap major argument dari 01-idea harus dipetakan ke evidence:
+
+| Argument (dari 01-idea) | Evidence | Source type | URL | Usage notes | Owner |
+|-------------------------|---------|-------------|-----|-------------|-------|
+| [Arg 1] | [data/study] | [A+/A/B/C/D] | [URL] | [cara pakai] | [siapa verifikasi] |
+| [Arg 2] | [data] | [level] | [URL] | [notes] | [owner] |
+
+### Think Tank Research Pipeline
+
+Formal pipeline (bukan ad-hoc):
+1. **Problem framing:** Ulangi dari 01-idea, pastikan masih relevan setelah riset awal
+2. **Data acquisition:** Systematic search + government data + expert input
+3. **Analysis:** Statistical analysis + qualitative synthesis + triangulation
+4. **Peer review:** Internal review (tim TAM) + external (expert yang diwawancara)
+5. **Publication:** Whitepaper + derivative assets
+
+### Risk Presentation Framework
+
+Untuk setiap key claim dengan uncertainty:
+
+| Claim | Central estimate | Upper bound | Lower bound | Confidence | Unknowns |
+|-------|-----------------|-------------|-------------|------------|----------|
+| [claim] | [best estimate] | [skenario tinggi] | [skenario rendah] | High/Med/Low | [apa yang tidak diketahui] |
+
+Flag uncertainties secara explicit. Acknowledge unknowns. Jangan present single number jika range lebar.
+
+### Epistemology Integration (dari 01-idea)
+
+**Popper Falsifiability Test untuk Evidence:** Untuk setiap evidence, tanya: apa data yang bisa falsify claim ini? Jika evidence tidak punya potential falsifier, lemah.
+
+**Kuhn Anomaly Documentation:** Collect anomalies (data yang tidak cocok narasi populer). Document dengan context. Akumulasi anomalies = basis "tamparan".
+
+**Lakatos Novel Prediction Verification:** Apakah thesis predicts something new? Jika evidence hanya explain retroactively, thesis degenerating. Cari evidence yang confirm novel prediction.
+
+**Toulmin Warrant Verification:** Logic bridge antara evidence dan claim harus eksplisit. Warrant = "karena [logic], maka [evidence] mendukung [claim]". Jika warrant tidak clear, argument lemah.
+
+**Aristotle Logos Evidence Collection:** Enthymeme patterns (argument dengan implicit premise). Topoi (common argumentative patterns untuk topic ini).
+
+### Behavioral & Narrative Evidence
+
+**Narrative Transportation Evidence:** Case studies dengan story arc (protagonist, conflict, resolution). Transportation reduces counter-arguing. Cari case study yang reader bisa identify dengan protagonist.
+
+**Loss Aversion Data Collection:** Apa reader sudah punya dan bisa hilang? Opportunity cost data. "Setiap hari menunda = kehilangan X." Frame sebagai loss, bukan gain.
+
+**Information Entropy Audit:** Information value per source. Noise vs signal. Hapus source yang tidak menambah information. Redundancy check: apakah 3 source mengatakan hal yang sama? Cukup 1 + note "corroborated by 2 others".
+
+### Sociology & Systems Evidence
+
+**Semiotic Deconstruction Research:** Denotation (literal meaning) vs connotation (cultural meaning) dalam topic discourse. Identifikasi myth (ideology disguised as natural). TAM: decode connotations yang generasi muda terima sebagai denotation.
+
+**Social Construction Tracing:** How institutions created "reality" reader operates in. Externalization > objectivation > internalization. Document process: siapa yang menciptakan, kapan, kenapa, bagaimana menyebar.
+
+**Capital Distribution Mapping (Bourdieu):** Economic capital (money), cultural capital (knowledge, skills, education), social capital (connections). Map capital dynamics dalam topic. TAM: reveal invisible advantages.
+
+**Discourse Archaeology (Foucault):** Historical emergence of current "common sense". Genealogy: trace how present practices emerged from contingent historical processes. Who benefits from current discourse?
+
+**Systems Mapping:** Feedback loops (balancing vs reinforcing) dalam topic. Stocks and flows. Leverage points (12 levels, Meadows). System traps: limits to growth, shifting burden, tragedy of commons, fixes that fail.
+
+### Writing Process Documentation
+
+**Research Log sebagai Part of Writing Process:** Writing = iterative problem-solving (Flower & Hayes). Plan > translate > review > re-plan. Document research decisions, evolution of understanding. Goals evolve during research. Monitor: metacognitive check "apakah ini masih aligned dengan TAM tone?"
+
+**Meta-Analysis Data Extraction:** Untuk multiple studies/sources: effect size (Cohen's d, Pearson's r, odds ratio). Confidence interval. Heterogeneity (I-squared). Publication bias check (funnel plot asymmetry). Forest-plot thinking: visualize range across sources. Sensitivity analysis: leave-one-out.
+
+### CAR Data Bulletproofing (ProPublica Standards)
+
+Data journalism standards untuk semua data primer yang dikumpulkan:
+
+- **Consistency-check all fields:** Tipe data konsisten? Format tanggal sama? Kategori tidak typo?
+- **Double-check totals:** Sum manual vs sum program. Sama?
+- **Check for missing data:** Baris kosong? Null values? Kenapa missing?
+- **Know source:** Siapa gather data? Kapan? Untuk apa purpose? Metode collection?
+- **Get similar data from another source:** Cross-check dengan sumber kedua. Beda signifikan?
+- **Maintain work log:** Document setiap step: dari mana, transformasi apa, analisis apa
+- **Duplicate work:** Lakukan analisis dua kali independently. Hasil sama?
+- **Gut check:** Jika sesuatu tidak feel right, probably isn't. Investigate.
+
+"Interviewing the data": treat data sebagai source. Ask: who gathered it? when? for what purpose? how? Reproducibility = key credibility signal untuk E-E-A-T.
+
 ## Keyword Research (tanpa paid tools)
 
 1. **Google Suggest:** Ketik topik di Google, catat autocomplete suggestions
@@ -495,6 +685,29 @@ const urls = [...body.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map(m => m[1]);
 - [ ] Keyword research selesai (10-15 utama + 5-10 long-tail)
 - [ ] Competitor analysis top 3 selesai
 - [ ] AI SEO check selesai
+- [ ] PRISMA-style systematic review: search strategy documented, screening process
+- [ ] Cochrane rigor: duplicate screening, risk of bias assessment, GRADE certainty
+- [ ] Grey literature search: working papers, policy briefs, NGO reports, conference proceedings
+- [ ] Research ethics & bias acknowledgment: POV stated, funding bias check, confirmation bias mitigation, sampling bias, cultural bias
+- [ ] Evidence hierarchy applied: min 70% source level A+ atau A
+- [ ] Reproducibility: research log, data sources traceable, analysis documented
+- [ ] Minimal 3 advanced research methods dipilih (Bayesian/Abductive/Grounded Theory/DOE/Delphi/Mixed Methods/Action Research)
+- [ ] Data validity framework: construct, internal, external, statistical validity cek
+- [ ] Source credibility scoring matrix diisi (A+ sampai D)
+- [ ] Sensitivity analysis: leave-one-out, best/worst case
+- [ ] Data visualization standards: graph selection, max 5-7 components, preattentive design
+- [ ] Cognitive load validation per-section
+- [ ] Information scent optimization per-section
+- [ ] AI citation optimization: citable passages, statistical formatting
+- [ ] E-E-A-T evidence: credentials, first-person markers, primary sources, expert quotes
+- [ ] Claim-source map: setiap argument dipetakan ke evidence + source type + URL
+- [ ] Think tank pipeline: framing > acquisition > analysis > peer review > publication
+- [ ] Risk presentation: central estimate + upper/lower bound + unknowns
+- [ ] Epistemology integration: Popper falsifiability, Kuhn anomaly, Lakatos novel prediction, Toulmin warrant, Aristotle logos
+- [ ] Narrative evidence: case studies dengan story arc, loss aversion data, information entropy audit
+- [ ] Sociology evidence: semiotic deconstruction, social construction tracing, capital mapping, discourse archaeology, systems mapping
+- [ ] Writing process: research log documented, meta-analysis data extraction (effect sizes, CIs, heterogeneity)
+- [ ] CAR data bulletproofing: consistency-check, double-check totals, missing data check, source verification, work log, duplicate work, gut check
 - [ ] Template output research diisi lengkap
 
 ## Next
