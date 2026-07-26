@@ -138,8 +138,54 @@ Update `files/article-inventory.md` per part.
 - [ ] Seri didefinisikan di `content/config.ts`
 - [ ] Slug uniqueness dicek per part
 - [ ] File `content/seri/SERIES-SLUG/SLUG.md` created per part
-- [ ] `series` dan `seriesOrder` valid di frontmatter
+- [ ] `series` dan `seriesOrder` valid di frontmatter per part
 - [ ] Article inventory updated per part
+- [ ] SEO Metadata Validation: 6 fields pass per part
+- [ ] Schema Markup: Article + FAQ (jika ada) per part
+- [ ] OG Image: ogHeadline unique, max 50 chars per part
+- [ ] Internal Link: min 2 + antar part, semua target exists
+- [ ] Series Navigation: prev/next link konsisten antar part
+- [ ] Post-Insert Verification: CLEAN per part
+- [ ] Series Build Quality Score: min 9 (dari 12)
+
+## SEO Metadata Validation per Part
+
+| Field | Rule | Check |
+|-------|------|-------|
+| **seoMetaTitle** | Max 70, keyword utama | Length + keyword |
+| **seoMetaDescription** | Max 160, keyword + hook | Length + keyword |
+| **slug** | Kebab-case, max 60, naming convention | Format + convention |
+| **excerpt** | Max 160, berbeda dari desc | Length + uniqueness |
+| **ogHeadline** | Max 50, berbeda dari title | Length + uniqueness |
+| **seoKeywords** | 3-8, muncul di body | Count + body presence |
+
+## Series Navigation Verification
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **Prev link** | Part 2+ punya link ke part sebelumnya | Ada dan format benar |
+| **Next link** | Part 1-N-1 punya link ke part berikutnya | Ada dan format benar |
+| **Recap link** | Part 2+ punya recap dengan link ke part sebelumnya | Ada dan link aktif |
+| **Teaser link** | Part 1-N-1 punya teaser dengan link ke part berikutnya | Ada dan link aktif |
+| **Series page** | Semua part muncul di series page | Cek di /seri/SERIES-SLUG |
+
+## Series Build Quality Score (0-12)
+
+Target: min 9.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Frontmatter** | 2 | > 3 fields kosong | 1-2 kosong | Semua terisi |
+| **Series fields** | 2 | series/seriesOrder missing | Ada tapi salah | Valid + match config |
+| **SEO metadata** | 1 | > 2 fail | 1 fail | Semua pass |
+| **Navigation** | 2 | No prev/next | Sebagiane | Full prev/next + recap/teaser |
+| **Internal links** | 1 | < 2 atau broken | 2-3 | 3+ + antar part |
+| **OG headline** | 1 | Missing atau = title | Ada | Unique + punchy |
+| **File creation** | 1 | Tidak created | Created tapi path salah | Path benar |
+| **Post-insert** | 1 | Tidak di-run | Run tapi issues | CLEAN |
+| **Inventory** | 1 | Tidak updated | Updated | Updated + format benar |
+
+Jika score < 9: fix sebelum lanjut ke QC.
 
 ## Next
 

@@ -146,6 +146,49 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 }
 ```
 
+## Draft Quality Gates (per part)
+
+| Gate | Check | Pass criteria |
+|------|-------|---------------|
+| **G1: Structure** | Outline match, heading count, section balance | Min 3 h2, section balance OK |
+| **G2: Evidence** | Data attribution, source traceable | 100% angka punya source |
+| **G3: Tone** | TAM voice, human signature, no AI pattern | 5 karakter TAM + min 1 human signature |
+
+Jika 1 gate fail: revisi part tersebut.
+
+## Paragraph Construction Rules
+
+- Max 120 kata per paragraph, min 30 (kecuali emphasis)
+- Kalimat pertama = topic sentence
+- Kalimat kedua = evidence/data
+- Kalimat ketiga = interpretasi TAM
+- Tidak ada orphan paragraph (1 kalimat tanpa konteks)
+
+## Cross-Part Consistency Check
+
+| Check | Pass criteria |
+|-------|---------------|
+| **Tone** | Voice sama di semua part |
+| **Terminology** | Istilah konsisten antar part |
+| **Data** | Tidak ada kontradiksi antar part |
+| **Recap** | Akurat mewakili part sebelumnya |
+| **Teaser** | Dipenuhi di part berikutnya |
+
+## Series Draft Quality Score (0-12)
+
+Target: min 9.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Structure** | 2 | < 3 h2 | 3 h2 | 4+ h2 |
+| **Evidence** | 2 | Angka tanpa source | Sebagiane | 100% traceable |
+| **Tone** | 2 | AI pattern | Sebagiane TAM | Full TAM + human signature |
+| **Cross-part** | 2 | Kontradiksi | Sebagiane konsisten | Fully konsisten |
+| **Word count** | 1 | < 1.000 atau > 2.500 | OK | Optimal 1.500-2.000 |
+| **Internal links** | 1 | < 2 | 2 | 3+ |
+| **Storytelling** | 1 | No hook/cliffhanger | Ada tapi lemah | Strong hook + cliffhanger |
+| **Recap/teaser** | 1 | Tidak ada | Ada tapi mismatch | Accurate |
+
 ## Checklist
 
 - [ ] Semua part ditulis lengkap
@@ -154,6 +197,9 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 - [ ] Internal linking: min 2 link + link antar part
 - [ ] `series` dan `series_order` diisi di JSON
 - [ ] JSON disimpan ke `$ARTICLE_JSON`
+- [ ] Draft Quality Gates: G1, G2, G3 pass per part
+- [ ] Cross-Part Consistency: 5 checks pass
+- [ ] Series Draft Quality Score: min 9 (dari 12)
 
 ## Next
 

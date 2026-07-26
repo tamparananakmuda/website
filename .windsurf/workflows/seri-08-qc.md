@@ -99,6 +99,53 @@ else console.log('\nCLEAN: All checks passed.');
 - [ ] Konsistensi antar part dicek
 - [ ] SEO metadata valid per part
 - [ ] QC audit CLEAN per part
+- [ ] Severity: 0 S1, 0 S2, max 3 S3 per part
+- [ ] Cross-Part QC: no kontradiksi, no repetisi
+- [ ] Series Navigation QC: prev/next/recap/teaser valid
+- [ ] Citation Density: min 2 per 1.000 kata per part
+- [ ] TAM Tone Compliance: min 7 per part
+- [ ] Series QC Quality Score: min 9 (dari 12)
+
+## Severity Level System
+
+| Severity | Definisi | Action | Contoh |
+|----------|----------|--------|--------|
+| **S1: Critical** | Tidak boleh publish | WAJIB fix | Em dash, h1, word count < 1.000, dead link, series/seriesOrder missing |
+| **S2: Major** | Kualitas terganggu | WAJIB fix | AI vocab > 3, internal links < 2, ogHeadline missing, recap/teaser missing |
+| **S3: Minor** | Polish | Fix jika ada waktu | Excessive hedging, hyphenated overuse |
+| **S4: Info** | Catatan untuk humanizer | Lanjut ke 09 | Tone shift, paragraph rhythm |
+
+S1 dan S2 harus 0. S3 max 3. S4 tidak ada limit.
+
+## Cross-Part QC Checks
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **No kontradiksi** | Bandingkan data antar part | Tidak ada angka yang bertentangan |
+| **No repetisi** | Cek paragraf yang sama persis | Tidak ada paragraf duplikat |
+| **Recap accuracy** | Recap part N vs conclusion part N-1 | Match |
+| **Teaser payoff** | Teaser part N vs konten part N+1 | Match |
+| **Navigation links** | Prev/next link antar part | Semua aktif |
+| **Tone consistency** | Voice part 1 vs part N | Konsisten |
+| **SeriesOrder** | Urutan part di frontmatter | 1, 2, 3... tidak ada gap |
+
+## Series QC Quality Score (0-12)
+
+Target: min 9.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Audit CLEAN** | 2 | FAIL | Sebagiane | Fully CLEAN per part |
+| **Cross-part** | 2 | Kontradiksi | Sebagiane | No kontradiksi + no repetisi |
+| **Navigation** | 1 | Missing | Sebagiane | Full prev/next/recap/teaser |
+| **Severity** | 1 | S1/S2 ada | S3 only | S4 atau 0 |
+| **Citation density** | 1 | < 2 per 1.000 | 2-3 | 4+ per 1.000 |
+| **TAM tone** | 2 | < 5 | 5-7 | 8+ per part |
+| **SEO metadata** | 1 | > 2 fail | 1 fail | Semua pass |
+| **SeriesOrder** | 1 | Gap atau salah | Sebagiane | 1, 2, 3... correct |
+| **Re-run efficiency** | 1 | 5 rounds | 3-4 | 1-2 rounds |
+
+Jika score < 9: fix sebelum lanjut ke humanizer.
 
 ## Next
 
