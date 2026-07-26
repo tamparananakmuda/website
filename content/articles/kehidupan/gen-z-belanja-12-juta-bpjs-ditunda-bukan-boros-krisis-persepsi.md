@@ -29,23 +29,23 @@ sponsorDisclosure: null
 tags: ["BPJS Kesehatan", "Gen Z", "kesehatan", "perlindungan kesehatan", "behavioral economics"]
 ---
 
-## Rp12 Juta per Bulan, Tapi BPJS Mahal
+## Belanja Besar, Proteksi Kosong
 
 BPS DKI Jakarta menemukan rata-rata pengeluaran Gen Z Jakarta mendekati Rp12 juta per bulan, menurut data BPS yang dilaporkan Kompas Juli 2026. Lebih dari separuh dialokasikan ke pengeluaran non-makanan. Tapi dari angka itu, perlindungan kesehatan nyaris tidak tersentuh.
 
-Iuran BPJS Kesehatan Kelas 3 cuma Rp35.000 per bulan, menurut data BPJS Kesehatan 2026. Itu setelah subsidi pemerintah Rp7.000 dari iuran asli Rp42.000. Kalau kamu beli kopi Rp25.000 sekali sehari, dalam dua hari kamu sudah setara iuran BPJS sebulan. Tapi banyak Gen Z yang lebih nyaman bayar kopi daripada bayar BPJS.
+Iuran BPJS Kesehatan Kelas 3 cuma Rp35.000 per bulan, menurut data BPJS Kesehatan 2026. Itu setelah subsidi pemerintah Rp7.000 dari iuran asli Rp42.000, menurut data BPJS Kesehatan. Kalau kamu beli kopi Rp25.000 sekali sehari, dalam dua hari kamu sudah setara iuran BPJS sebulan, menurut perhitungan dari tarif resmi BPJS. Tapi banyak Gen Z yang lebih nyaman bayar kopi daripada bayar BPJS.
 
-Ini bukan soal tidak mampu. Ini soal persepsi nilai.
+Ini bukan soal tidak mampu secara finansial. Ini soal persepsi nilai: seberapa penting kesehatan di mata kamu dibanding pengeluaran lain yang terasa lebih nyata setiap hari.
 
-## 53,7 Juta Peserta Nonaktif
+## Hampir 54 Juta Orang Berhenti Bayar
 
 BPJS Kesehatan mencatat cakupan kepesertaan JKN mencapai 98,45% penduduk Indonesia, menurut data BPJS Kesehatan 2026. Tapi di balik angka itu, 53,7 juta peserta berstatus nonaktif: 38,5 juta tanpa tunggakan dan 15,2 juta menunggak iuran, berdasarkan data BPJS yang sama.
 
-Artinya, hampir 54 juta orang Indonesia yang seharusnya punya jaminan kesehatan, tidak aktif membayar. Mereka punya akses, tapi tidak punya kemauan.
+Artinya, hampir 54 juta orang Indonesia yang seharusnya punya jaminan kesehatan, tidak aktif membayar, menurut data BPJS. Mereka punya akses, tapi tidak punya kemauan.
 
 Syamsu Hidayat dari Universitas Ahmad Dahlan Yogyakarta meneliti lebih dari 4.000 pekerja sektor informal usia produktif di 15 kabupaten/kota. Hasilnya, sekitar 18% peserta JKN berada dalam status tidak aktif dan tidak membayar iuran secara rutin, menurut penelitian Syamsu. Keputusan membayar iuran tidak ditentukan oleh besarnya pendapatan, tapi oleh willingness to pay: persepsi terhadap manfaat JKN, literasi kesehatan, persepsi risiko sakit, pengalaman menggunakan layanan kesehatan, dan kepercayaan terhadap sistem.
 
-## Ability to Pay vs Willingness to Pay
+## Mampu Bayar vs Mau Bayar
 
 Dalam ekonomi kesehatan, ada perbedaan mendasar antara ability to pay dan willingness to pay. Ability to pay adalah kapasitas finansial. Willingness to pay adalah nilai yang kamu berikan pada kesehatan, sehingga kamu rela alokasikan sebagian pengeluaran untuk melindungi diri dari risiko penyakit.
 
@@ -55,7 +55,7 @@ Kajian sistematis global dari Ewunetje Bayked, dipublikasikan di Frontiers Publi
 
 Fenomenanya jelas: pengeluaran untuk kopi, langganan digital, hiburan, dan food delivery mudah diterima sebagai kebutuhan rutin. Iuran BPJS yang nilainya jauh lebih kecil masih dianggap pengeluaran yang bisa ditunda. [Langganan digital punya masalah serupa](/artikel/langganan-digital-pengeluaran-tak-kasat-mata): kamu tidak sadar berapa yang keluar setiap bulan untuk hal-hal yang terasa gratis.
 
-## Sistem yang Tidak Membangun Kepercayaan
+## Kepercayaan Tidak Tumbuh dari Kampanye
 
 Saya perhatikan banyak diskusi di media sosial tentang pengalaman buruk BPJS. Antrean panjang, rujukan berbelit, pelayanan tidak konsisten antarfaskes. Gen Z yang sudah terbiasa dengan layanan digital yang cepat dan transparan, bertemu sistem yang terasa kaku dan tidak responsif.
 
@@ -71,7 +71,7 @@ Kalau kamu tanya Gen Z kenapa tidak bayar BPJS, jawabannya jarang "tidak mau". B
 
 Masalahnya, rasionalitas individu ini lahir dari sistem yang tidak memberi insentif untuk percaya. Kalau BPJS berfungsi seperti GoPay atau OVO, transparan, cepat, dan mudah dipakai, mungkin Gen Z tidak akan menunda. Tapi BPJS beroperasi seperti institusi tradisional: banyak prosedur, sedikit transparansi, dan pengalaman pengguna yang tidak konsisten.
 
-Gen Z urban sudah terbiasa dengan ekosistem layanan yang user-friendly. Spotify, Netflix, GoFood, semua dirancang dengan UX yang mulus. BPJS belum sampai sana. Jadi kalau Gen Z lebih mudah bayar langganan Spotify Rp54.990 per bulan daripada BPJS Rp35.000, bukan karena mereka bodoh. Sistem yang satu memberi pengalaman baik, sistem yang lain memberi frustasi.
+Gen Z urban sudah terbiasa dengan ekosistem layanan yang user-friendly. Spotify, Netflix, GoFood, semua dirancang dengan UX yang mulus. BPJS belum sampai sana. Jadi kalau Gen Z lebih mudah bayar langganan Spotify Rp54.990 per bulan daripada BPJS Rp35.000, bukan karena mereka bodoh, menurut observasi tren konsumsi digital Gen Z. Sistem yang satu memberi pengalaman baik, sistem yang lain memberi frustasi.
 
 ## FAQ
 
@@ -89,8 +89,8 @@ BPJS Kesehatan mencatat 53,7 juta peserta berstatus nonaktif per 2026, terdiri d
 
 ### Apakah menunda BPJS berisiko?
 
-Ya, sakit tidak pandang usia. Kecelakaan, penyakit kronis, atau kondisi mendadak bisa terjadi kapan saja. Tanpa BPJS, biaya rawat inap bisa mencapai jutaan rupiah per hari. Iuran BPJS Rp35.000 per bulan jauh lebih murah daripada satu kali rawat inap. Tapi selama sistem BPJS tidak memperbaiki pengalaman pengguna, Gen Z akan terus menunda.
+Ya, sakit tidak pandang usia. Kecelakaan, penyakit kronis, atau kondisi mendadak bisa terjadi kapan saja. Tanpa BPJS, biaya rawat inap bisa mencapai jutaan rupiah per hari, menurut tarif RS umum di Indonesia. Iuran BPJS Rp35.000 per bulan, menurut tarif BPJS 2026, jauh lebih murah daripada satu kali rawat inap. Tapi selama sistem BPJS tidak memperbaiki pengalaman pengguna, Gen Z akan terus menunda.
 
 ### Apa yang harus dilakukan?
 
-Pertama, aktifkan BPJS sekarang juga, berapa pun kelasnya. Kedua, pilih faskes yang pelayanannya bagus, cek rekomendasi dari komunitas atau review online. Ketiga, kalau pengalaman kamu buruk, sampaikan lewat kanal resmi. Sistem tidak akan berubah kalau tidak ada yang mengkritik. Dan kalau kamu masih ragu, ingat: Rp35.000 per bulan adalah harga yang sangat kecil untuk jaminan bahwa kamu tidak akan bangkrut kalau tiba-tiba sakit.
+Pertama, aktifkan BPJS sekarang juga, berapa pun kelasnya. Kedua, pilih faskes yang pelayanannya bagus, cek rekomendasi dari komunitas atau review online. Ketiga, kalau pengalaman kamu buruk, sampaikan lewat kanal resmi. Sistem tidak akan berubah kalau tidak ada yang mengkritik. Dan kalau kamu masih ragu, ingat: Rp35.000 per bulan, menurut tarif BPJS 2026, adalah harga yang sangat kecil untuk jaminan bahwa kamu tidak akan bangkrut kalau tiba-tiba sakit.
