@@ -105,6 +105,65 @@ Jika hapus part di tengah seri, **WAJIB update seriesOrder** part setelahnya.
 - [ ] Update/rewrite dilakukan jika perlu
 - [ ] Series-level iteration decision dibuat (spin-off/sequel/merge/split/archive/refresh)
 - [ ] Roadmap seri diadjust berdasarkan data
+- [ ] Series Iterate Quality Score: min 7 (dari 10)
+
+## Series Iterate Quality Score (0-10)
+
+Target: min 7.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Data analysis** | 2 | Tidak dianalisis | Sebagiane | Full analysis per part + seri |
+| **Iteration decision** | 2 | Tidak ada | Vague | Clear: spin-off/sequel/merge/archive |
+| **Part-level update** | 1 | Tidak ada | Sebagiane | Underperform parts updated |
+| **Internal links** | 1 | Broken | Sebagiane | All fixed |
+| **SEO ranking** | 1 | Drop > 5 | Stabil | Naik atau stabil |
+| **QC re-run** | 1 | Tidak re-run | Re-run tapi FAIL | CLEAN |
+| **Humanizer re-run** | 1 | Tidak re-run | Re-run tapi issues | CLEAN |
+| **Roadmap update** | 1 | Tidak update | Vague | Clear next steps |
+
+Jika score < 7: tambah analisis atau update sebelum close seri.
+
+## Series-Level Iteration Decision Matrix
+
+| Data dari 13-monitor | Decision | Action |
+|----------------------|----------|--------|
+| **Overall completion > 20%, engagement tinggi** | Spin-off atau sequel | Plan seri baru |
+| **Part X drop-off tinggi** | Rewrite part X | Rewrite hook + tighten content |
+| **Overall completion < 10%** | Merge parts atau restructure | Gabung part tipis, perbaiki arc |
+| **Seri tidak ter-index > 50%** | SEO audit + resubmit | Fix technical SEO |
+| **AI citation: 0** | Format ulang untuk AI | Tambah definisi, FAQ, data self-contained |
+| **Part terakhir underperform** | Rewrite ending atau tambah part | Strengthen climax |
+| **Seri overall underperform** | Archive atau refresh all | Set draft atau update semua part |
+| **Data outdated di semua part** | Refresh all | Update + re-run QC + humanizer |
+
+## Series Archive Protocol
+
+Jika seri perlu di-archive:
+
+| Step | Action | Note |
+|------|--------|------|
+| **1. Set status** | `status: "draft"` di frontmatter semua part | Tidak hilang dari file system |
+| **2. Remove from featured** | `featured: false` semua part | Tidak di homepage |
+| **3. Check incoming links** | `grep -rl "SERIES-SLUG" content/` | Fix atau redirect |
+| **4. Keep URL live** | Jangan hapus file, hanya set draft | 404 buruk untuk SEO |
+| **5. Series page** | Series page tetap ada tapi menampilkan "seri tidak lagi aktif" | Preserve link equity |
+| **6. GSC** | Biarkan de-index natural | Jangan submit removal |
+| **7. Note** | Catat kenapa di-archive di learning note | Future reference |
+
+## Spin-off Planning Protocol
+
+Jika data menunjukkan 1 part sangat perform dan punya depth untuk seri baru:
+
+| Step | Action |
+|------|--------|
+| **1. Identify** | Part mana yang perform di atas average? |
+| **2. Depth check** | Apakah topik part itu punya depth untuk 3-5 part baru? |
+| **3. Angle** | Apakah angle spin-off berbeda dari seri original? |
+| **4. Audience** | Apakah audience spin-off sama atau berbeda? |
+| **5. Link** | Plan internal link dari spin-off ke seri original |
+| **6. Schedule** | Kapan spin-off publish? Setelah seri original selesai? |
+| **7. Workflow** | Mulai dari `/seri-01-idea` dengan ide spin-off |
 
 ## Next
 

@@ -171,6 +171,51 @@ Dan promote seri overview carousel di IG dengan CTA: "Binge read semua part di b
 - [ ] TikTok/Reels per part (jika Phase 2)
 - [ ] Binge-read CTA ditambahkan setelah seri selesai
 - [ ] Cross-posting dilakukan sesuai strategy
+- [ ] Content Atomization: min 4 atoms per part
+- [ ] Series Distribution Quality Score: min 7 (dari 10)
+
+## Content Atomization Protocol (seri)
+
+Setiap part di-atomize menjadi minimal 4 derivative content:
+
+| Atom | Platform | Format | Dari part |
+|------|----------|--------|-----------|
+| **Carousel** | Instagram | 5-8 slides | Key data points per part |
+| **Thread** | X/Twitter | 3-5 tweets | Hook + 2-3 insights + CTA |
+| **Newsletter** | Email | 400-600 words | 1 insight + 1 quote per part |
+| **LinkedIn** | LinkedIn | 200-400 words | Professional angle per part |
+| **Stories** | Instagram | 3-5 stories | Polling + takeaways per part |
+| **Seri Overview** | Instagram | 10-12 slides | All parts summary (setelah seri selesai) |
+
+Prioritas: Carousel + Thread + Newsletter wajib. LinkedIn + Stories recommended. Seri Overview wajib setelah seri selesai.
+
+## Series Distribution Quality Score (0-10)
+
+Target: min 7.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Platform coverage** | 2 | < 3 platform | 3-4 platform | 5+ platform |
+| **Per-part consistency** | 2 | Tidak konsisten | Sebagiane | Setiap part didistribusi |
+| **Seri overview** | 1 | Tidak dibuat | Dibuat tapi lemah | Strong overview carousel |
+| **Binge-read CTA** | 1 | Tidak ada | Ada tapi lemah | Strong CTA di setiap part |
+| **Atom quality** | 1 | Copy-paste | Sebagiane original | Unique angle per atom |
+| **Posting time** | 1 | Random | Sebagiane | Best time per platform |
+| **Cross-posting** | 1 | Tidak ada | 1 cross-post | 2+ cross-post |
+| **Hashtag strategy** | 1 | Tidak ada | Sebagiane | 3-5 brand + niche per platform |
+
+Jika score < 7: tambah platform atau perbaiki atom quality.
+
+## Binge-Read Optimization
+
+| Tactic | Cara | Goal |
+|--------|------|------|
+| **End-of-part CTA** | "Baca part selanjutnya" + link | Drive to next part |
+| **Seri overview page** | /seri/SERIES-SLUG dengan semua part | Easy binge access |
+| **Newsletter series** | Setelah part terakhir, kirim "seri lengkap" email | Recap all parts |
+| **IG Stories countdown** | Sebelum part baru publish, stories countdown | Anticipation |
+| **Seri overview carousel** | 10-12 slides, 1 slide per part | Visual binge guide |
+| **Cross-part internal links** | Setiap part link ke semua part lain | SEO + binge path |
 
 ## Next
 

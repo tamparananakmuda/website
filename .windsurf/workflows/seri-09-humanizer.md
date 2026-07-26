@@ -107,6 +107,48 @@ Setelah semua part di-humanize, lakukan tone consistency check:
 - [ ] Command auto-check: CLEAN untuk semua part
 - [ ] `human_signature: true` di JSON per part
 - [ ] Re-run `/seri-08-qc` dan hasil CLEAN
+- [ ] Paragraph Rhythm Audit per part
+- [ ] Cross-Part Tone Calibration: all pass
+- [ ] Series Humanizer Quality Score: min 9 (dari 12)
+
+## Paragraph Rhythm Audit (per part)
+
+Cek variasi panjang paragraph untuk hindari monoton:
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Short-long variation** | Apakah ada paragraph pendek (1-2 kalimat) di antara paragraph panjang? | Min 2 short paragraph per part |
+| **No wall of text** | Apakah tidak ada paragraph > 120 kata berurutan? | Max 1 long paragraph berurutan |
+| **Emphasis placement** | Apakah short paragraph dipakai untuk emphasis? | Ya, di insight atau conclusion |
+| **Rhythm shift** | Apakah rhythm berubah antar section? | Hook = fast, Data = steady, Insight = mixed |
+
+## Cross-Part Tone Calibration
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **Voice consistency** | Baca part 1 dan part N berurutan | Voice sama, tidak ada shift |
+| **Formality level** | Bandingkan gue/saya, kita/kamu ratio | Konsisten di semua part |
+| **Emotional register** | Bandingkan level emosi antar part | Sesuai arc plan (tidak flat) |
+| **Recap/teaser format** | Bandingkan format recap dan teaser | Konsisten di semua part |
+| **Human signature type** | Cek tipe human signature per part | Variasi (tidak semua pengalaman personal) |
+
+## Series Humanizer Quality Score (0-12)
+
+Target: min 9.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **AI pattern removal** | 2 | > 5 pattern | 1-5 | 0 pattern |
+| **Tone consistency** | 2 | Shift antar part | Sebagiane | Fully konsisten |
+| **Human signature** | 1 | 0 per part | 1 per part | 2+ per part |
+| **Paragraph rhythm** | 1 | Monoton | Sebagiane | Good variation |
+| **Recap/teaser format** | 1 | Inkonsisten | Sebagiane | Konsisten |
+| **Cross-part calibration** | 2 | > 2 fail | 1-2 fail | All pass |
+| **Re-run QC** | 1 | Still FAIL | Sebagiane | CLEAN |
+| **Concrete examples** | 1 | Abstrak | Sebagiane | Konkret per part |
+| **Transition quality** | 1 | Robotik | Sebagiane | Natural |
+
+Jika score < 9: revisi sebelum lanjut ke schedule.
 
 ## Next
 

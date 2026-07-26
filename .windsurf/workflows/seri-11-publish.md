@@ -49,6 +49,52 @@ curl -s "https://tamparananakmuda.com/sitemap.xml" | grep "SLUG" && echo "Sitema
 - [ ] HTTP 200 di production per part
 - [ ] Sitemap includes slug per part
 - [ ] URL submitted ke Google Search Console per part
+- [ ] JSON-LD schema present per part (Article + FAQ jika ada)
+- [ ] RSS includes slug per part
+- [ ] OG image di CDN: HTTP 200 per part
+- [ ] Series page: semua part muncul
+- [ ] Prev/next navigation: semua link aktif
+- [ ] Post-Publish Health Check (H+1): all pass
+- [ ] Series Publish Quality Score: min 8 (dari 10)
+
+## Pre-Publish Verification (per part)
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **File exists** | `ls content/seri/SERIES-SLUG/SLUG.md` | Exists |
+| **Frontmatter valid** | Post-insert verification script | CLEAN |
+| **Series config** | Series slug di content/config.ts | Match |
+| **SeriesOrder** | 1, 2, 3... no gap | Correct |
+| **No git conflict** | `git status` clean | Clean |
+
+## Post-Publish Health Check (H+1 per part)
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **HTTP 200** | `curl -s -o /dev/null -w "%{http_code}" URL` | 200 |
+| **Schema** | `curl -s URL \| grep -i "application/ld+json"` | Present |
+| **Sitemap** | `curl -s sitemap.xml \| grep SLUG` | Included |
+| **OG image** | `curl -s -o /dev/null -w "%{http_code}" CDN/og/SLUG-card.webp` | 200 |
+| **Series page** | `curl -s /seri/SERIES-SLUG \| grep SLUG` | All parts listed |
+| **Navigation** | Prev/next link di production | Aktif |
+
+## Series Publish Quality Score (0-10)
+
+Target: min 8.
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Deploy** | 2 | Fail | Partial | All parts deployed |
+| **HTTP status** | 1 | 404 | Sebagiane 200 | All 200 |
+| **Schema** | 1 | Missing | Article only | Article + FAQ |
+| **Sitemap + RSS** | 1 | Missing | 1 ada | Keduanya |
+| **OG image** | 1 | Missing | Generated tapi 404 | All 200 |
+| **Series page** | 1 | Missing | Sebagiane | All parts listed |
+| **Navigation** | 1 | Broken | Sebagiane | All prev/next aktif |
+| **GSC submitted** | 1 | Not submitted | Submitted | Submitted + ping |
+| **Health check** | 1 | Not run | Run tapi issues | All pass |
+
+Jika score < 8: fix production issue sebelum distribution.
 
 ## Next
 
