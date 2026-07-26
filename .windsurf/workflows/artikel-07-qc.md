@@ -183,15 +183,129 @@ else console.log('\nCLEAN: All checks passed.');
 
 Jalankan sampai CLEAN, fix semua FAIL, re-run. Maksimal 5 round.
 
+## Severity Level System
+
+Setiap issue di QC audit dikategorikan berdasarkan severity:
+
+| Severity | Definisi | Action | Contoh |
+|----------|----------|--------|--------|
+| **S1: Critical** | Artikel tidak boleh publish | WAJIB fix sebelum lanjut | Em dash, h1 di body, word count < 1.000, dead link |
+| **S2: Major** | Kualitas artikel terganggu | WAJIB fix, tapi bisa scheduled | AI vocab > 3, internal links < 2, ogHeadline missing |
+| **S3: Minor** | Polish, tidak block publish | Fix jika ada waktu | Excessive hedging, hyphenated overuse, false ranges |
+| **S4: Info** | Catatan untuk humanizer step | Lanjut ke 08-humanizer | Tone shift, paragraph rhythm, transition quality |
+
+Aturan: S1 dan S2 harus 0 untuk pass. S3 max 3. S4 tidak ada limit tapi catat untuk humanizer.
+
+## Source Quality Audit
+
+Verifikasi kualitas setiap source di sourceReferences:
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **URL aktif** | HTTP request | Status 200-399 |
+| **Source label** | Cek format | Tidak kosong, descriptive |
+| **Source type** | Cek enum | "link", "data", "quote" |
+| **Tier label** | Cross-reference dengan 02-research | T1/T2/T3, tidak ada T4 |
+| **Data match** | Cek angka di body vs source | Angka di artikel = angka di source |
+| **Freshness** | Cek tanggal source vs data type max umur | Dalam max umur |
+
+## Readability Metrics
+
+| Metric | Target | Check |
+|--------|--------|-------|
+| **Word count** | 1.000-2.500 | Auto-check di script |
+| **Reading time** | 5-12 menit | word_count / 200 |
+| **Avg paragraph length** | 60-100 kata | Manual check |
+| **Max paragraph length** | 120 kata | Manual check |
+| **Sentence variety** | Mix short + long | Manual check, no staccato |
+| **Section count** | Min 5 (Hook, Konteks, Data, Insight, Conclusion) | Count h2 |
+| **Data density** | 1 data point per 200-300 kata | Count data points / word count |
+
+## Citation Density Check
+
+| Check | Target | Formula |
+|-------|--------|---------|
+| **Source count** | Min 2 | Count sourceReferences |
+| **Citation per 1.000 kata** | Min 2 | (source count / word count) * 1.000 |
+| **Data attribution** | 100% | Semua angka punya source di kalimat |
+| **Source diversity** | Min 2 source berbeda | Count unique URLs |
+
+Jika citation density < 2 per 1.000 kata: artikel kurang credible, tambah source.
+
+## TAM Tone Compliance Score (0-10)
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Jujur** | 1 | Melebih-lebihkan | Sebagiane honest | Fully honest |
+| **Tajam** | 1 | Vague | Sebagiane sharp | Langsung ke inti |
+| **Rasional** | 1 | Opini tanpa dasar | Sebagiane ada data | Data + logika |
+| **Berani** | 1 | Safe/generic | Sebagiane bold | Kontra-narasi atau angle unik |
+| **Tidak menggurui** | 1 | Menggurui | Sebagiane menggurui | "Banyak dari kita" bukan "kamu" |
+| **Human signature** | 1 | 0 | 1 | 2+ |
+| **No AI pattern** | 1 | > 5 pola | 1-4 pola | 0 pola |
+| **Reader address** | 1 | Tidak ada | 1-2 instance | 3+ instance |
+| **No generic conclusion** | 1 | Generic | Sebagiane generic | Anti-generic |
+| **No promotional** | 1 | Promotional | Sebagiane | Netral |
+
+Target: min 7. Jika < 7: artikel perlu humanizer yang lebih intensif.
+
+## AI Citation Readiness Score (0-6)
+
+| Factor | 0 | 1 |
+|--------|---|---|
+| **Definisi jelas** | Tidak ada | 1+ konsep didefinisisi di 1 kalimat |
+| **Data self-contained** | Data perlu konteks | Data bisa di-quote langsung |
+| **FAQ format** | Tidak ada FAQ | 3+ Q&A dengan jawaban langsung |
+| **Heading = answer** | Heading generic | Heading bisa berdiri sebagai jawaban |
+| **Source inline** | Source terpisah | Source di kalimat yang sama dengan data |
+| **Conclusion extractable** | Conclusion vague | Conclusion bisa di-extract sebagai summary |
+
+Target: min 4. Jika < 4: format ulang section untuk AI extractability.
+
+## Re-Run Protocol
+
+| Round | Fokus | Maks issue |
+|-------|-------|------------|
+| **Round 1** | Jalankan full audit, fix semua S1 + S2 | 0 S1, 0 S2 |
+| **Round 2** | Re-run audit, fix S3 | 0 S3 (atau max 3) |
+| **Round 3** | Re-run audit, verify CLEAN | 0 issues |
+| **Round 4-5** | Jika masih FAIL: escalate, mungkin perlu rewrite section | 0 issues |
+
+Jika setelah 5 round masih FAIL: artikel perlu rewrite besar, kembali ke 04-draft.
+
+## QC Quality Score (0-12)
+
+Score QC sebelum lanjut ke 08-humanizer. Target: minimal 9.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Audit CLEAN** | 2 | FAIL | Sebagiane pass | Fully CLEAN |
+| **Severity** | 1 | S1/S2 ada | S3 only | S4 only atau 0 |
+| **Source quality** | 1 | < 2 source atau T4 | 2 source, T2-T3 | 3+ source, T1-T2 |
+| **Readability** | 1 | Di luar range | Sebagiane in range | Semua in range |
+| **Citation density** | 1 | < 2 per 1.000 | 2-3 per 1.000 | 4+ per 1.000 |
+| **TAM Tone** | 2 | < 5 | 5-7 | 8+ |
+| **AI Citation** | 1 | < 3 | 3-4 | 5-6 |
+| **SEO metadata** | 1 | > 2 fail | 1 fail | Semua pass |
+| **Re-run efficiency** | 1 | 5 rounds | 3-4 rounds | 1-2 rounds |
+
+Jika score < 9: fix sebelum lanjut ke 08-humanizer.
+
 ## Checklist
 
 - [ ] Grammar clean
 - [ ] SEO metadata valid (title max 70, desc max 160, slug max 60, keywords 3-8)
 - [ ] Tidak ada broken link
 - [ ] Formatting markdown benar (h2/h3, no h1, min 3 h2)
-- [ ] Readability OK (word count 1.000-2.500)
+- [ ] Readability OK (word count 1.000-2.500, avg paragraph 60-100, max 120)
 - [ ] `readingTime` di-set di frontmatter (bukan 1)
-- [ ] QC audit CLEAN
+- [ ] QC audit CLEAN (0 S1, 0 S2, max 3 S3)
+- [ ] Source Quality Audit: 6 checks passed
+- [ ] Citation Density: min 2 per 1.000 kata, 100% data attribution
+- [ ] TAM Tone Compliance Score: min 7 (dari 10)
+- [ ] AI Citation Readiness Score: min 4 (dari 6)
+- [ ] Re-Run Protocol: max 3 rounds untuk CLEAN
+- [ ] QC Quality Score: min 9 (dari 12)
 
 ## Next
 

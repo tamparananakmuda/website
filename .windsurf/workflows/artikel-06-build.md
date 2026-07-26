@@ -154,6 +154,71 @@ Update `files/article-inventory.md` dengan baris baru:
 | [N] | [Title] | [slug] | [Kategori] | [Pillar] | [POV] | [YYYY-MM-DD] |
 ```
 
+## SEO Metadata Validation Protocol
+
+Sebelum insert, validasi semua SEO metadata:
+
+| Field | Rule | Check |
+|-------|------|-------|
+| **seoMetaTitle** | Max 70 chars, mengandung keyword utama | Length + keyword presence |
+| **seoMetaDescription** | Max 160 chars, mengandung keyword + CTA implicit | Length + keyword + hook |
+| **slug** | Kebab-case, max 60 chars, mengandung keyword | Format + length + keyword |
+| **excerpt** | Max 160 chars, berbeda dari seoMetaDescription | Length + uniqueness |
+| **ogHeadline** | Max 50 chars, berbeda dari title, punchy | Length + uniqueness + hook |
+| **seoKeywords** | 3-8 keywords, semua muncul di body | Count + body presence |
+
+Jika 1 field fail: fix sebelum insert.
+
+## Schema Markup Verification
+
+Setelah insert, verifikasi schema yang akan di-generate:
+
+| Schema type | Trigger | Check |
+|-------------|---------|-------|
+| **Article** | Semua artikel | title, author, datePublished, image, publisher |
+| **FAQPage** | Jika ada FAQ section | min 3 Q&A, question dan answer terisi |
+| **BreadcrumbList** | Otomatis | category > artikel |
+| **Person** | Author page | name, slug, bio |
+
+Cek di `components/schema/` untuk implementation. Pastikan frontmatter fields yang dibutuhkan schema sudah terisi.
+
+## OG Image Verification
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **ogHeadline set** | Cek frontmatter | Tidak null, tidak sama dengan title |
+| **ogHeadline length** | Count chars | Max 50 |
+| **Category color** | Cek category slug di config | Color hex ada di config |
+| **Image URL pattern** | Cek CDN_BASE_URL + pattern | `/og/[slug].png` ada di CDN |
+
+Jika artikel scheduled: OG image auto-generate oleh cron. Jika published langsung: trigger manual generate.
+
+## Internal Link Verification
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **Link count** | Count `](/artikel/` di body | Min 2 |
+| **Target exists** | Cek setiap slug target di content/articles/ | Semua ada |
+| **Anchor text** | Manual review | Descriptive, no generic |
+| **No broken path** | Cek format `/artikel/slug` | Semua format benar |
+
+## Build Quality Score (0-10)
+
+Score build sebelum lanjut ke 07-qc. Target: minimal 8.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Frontmatter completeness** | 2 | > 3 fields kosong | 1-2 fields kosong | Semua fields terisi |
+| **SEO metadata** | 2 | > 2 field fail | 1 field fail | Semua pass |
+| **File creation** | 1 | File tidak created | Created tapi path salah | Created di path benar |
+| **Schema readiness** | 1 | Tidak dicek | Dicek tapi tidak verify | Semua schema fields ready |
+| **OG image** | 1 | ogHeadline null | ogHeadline = title | ogHeadline unique + punchy |
+| **Internal links** | 1 | < 2 atau broken | 2-3, sebagiane valid | 3+, semua valid |
+| **Inventory** | 1 | Tidak updated | Updated tapi format salah | Updated + format benar |
+| **Post-insert verification** | 1 | Tidak di-run | Di-run tapi ada issues | CLEAN |
+
+Jika score < 8: fix sebelum lanjut ke 07-qc.
+
 ## Checklist
 
 - [ ] Slug uniqueness dicek
@@ -164,7 +229,13 @@ Update `files/article-inventory.md` dengan baris baru:
 - [ ] `excerpt` <= 160 chars
 - [ ] `publishedAt` tidak null
 - [ ] `readingTime` di-set (bukan 1)
+- [ ] SEO Metadata Validation: 6 fields pass
+- [ ] Schema Markup Verification: Article + FAQ (jika ada) ready
+- [ ] OG Image Verification: ogHeadline set, unique, max 50 chars
+- [ ] Internal Link Verification: min 2, semua target exists, descriptive anchor
 - [ ] Article inventory updated
+- [ ] Post-Insert Verification: CLEAN
+- [ ] Build Quality Score > 8 (dari 10)
 
 ## Next
 

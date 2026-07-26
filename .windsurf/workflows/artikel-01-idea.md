@@ -103,6 +103,93 @@ Cluster: [artikel baru di cluster / melengkapi artikel X / melawan artikel Y]
 Keyword utama: [1 keyword utama untuk SEO]
 ```
 
+## Idea Quality Score (0-15)
+
+Score ide sebelum lanjut ke 02-research. Target: minimal 10.
+
+| Factor | Weight | 0 (weak) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **TAM fit** | 2 | Bukan tone TAM | Sebagiane TAM | Fully jujur + tajam + rasional |
+| **Angle uniqueness** | 2 | Sudah pernah dibaca di media lain | Ada angle tapi tidak sharp | Kontra-narasi atau angle yang tidak ada di kompetitor |
+| **Data availability** | 1 | Tidak ada data yang bisa dipakai | Data ada tapi tipis | 2+ data sources tersedia |
+| **Search demand** | 1 | Tidak ada orang search ini | Volume rendah | Volume medium + long-tail |
+| **Reader pain** | 2 | Tidak address pain point nyata | Pain point ada tapi vague | Pain point spesifik + urgent |
+| **Cluster potential** | 1 | One-off article | Bisa jadi 2-3 artikel | Bisa jadi seri atau cluster 5+ |
+| **AI citation potential** | 1 | Tidak ada format yang AI bisa cite | Ada definisi/data | Data self-contained + FAQ-ready |
+| **Emotional trigger** | 1 | Tidak ada emotional hook | Ada tapi lemah | Surprise/kontra-narasi/validasi |
+| **Timeliness** | 1 | Evergreen tapi tidak urgent | Sebagiane timely | Hook ke event/trend terkini |
+
+Jika score < 10: revisi angle atau cari ide baru. Jangan invest waktu di ide yang lemah.
+
+## TAM Angle Verification Protocol
+
+3 pertanyaan tambahan selain Angle Test:
+
+| Pertanyaan | Pass criteria | Jika gagal |
+|------------|---------------|-----------|
+| **"Siapa yang akan marah baca ini?"** | Minimal 1 group yang tidak setuju | Jika semua setuju = terlalu safe, tajamkan |
+| **"Apa konsekuensi jika reader tidak baca ini?"** | Reader akan tetap melakukan kesalahan yang sama | Jika tidak ada konsekuensi = tidak urgent |
+| **"Bisakah saya menjelaskan ini ke teman dalam 30 detik?"** | Pitch jelas dan padat | Jika tidak = angle terlalu kompleks, simplify |
+
+## Reader Empathy Map
+
+Sebelum tentukan angle, pahami reader secara mendalam:
+
+| Dimension | Pertanyaan | Output |
+|-----------|------------|--------|
+| **Apa yang reader pikirkan?** | Pre-occupations, worries, hopes | 3-5 pikiran dominan |
+| **Apa yang reader rasakan?** | Emotions tentang topik ini | 3-5 emosi |
+| **Apa yang reader dengar?** | Narasi yang sudah mereka terima dari media/orang lain | Dominant narrative |
+| **Apa yang reader lakukan?** | Behavior saat ini terkait topik | Current behavior |
+| **Apa yang reader takutkan?** | Fear yang block action | 2-3 fears |
+| **Apa yang reader harapkan?** | Desired outcome | 2-3 hopes |
+
+TAM angle = kontra-narasi dari "apa yang reader dengar" + validasi "apa yang reader rasakan" + solusi untuk "apa yang reader takutkan".
+
+## Content Pillar Mapping
+
+Setiap artikel harus map ke 1 content pillar TAM:
+
+| Pillar | Fokus | Artikel dalam pillar |
+|--------|-------|---------------------|
+| **Realita Kerja** | PHK, gig economy, karier, pengangguran | Karier + Uang |
+| **Kesehatan Mental Era Digital** | Burnout, FOMO, comparison, doomscroll | Mindset + Kehidupan |
+| **Literasi Finansial** | Gaji, tabungan, investasi, utang | Uang |
+| **Hubungan Era Modern** | Dating apps, ghosting, friendship, keluarga | Kehidupan |
+| **Ilusi Self-Improvement** | Hustle culture, productivity porn, toxic positivity | Mindset + Bisnis |
+| **Teknologi dan Generasi** | AI, automation, digital dependency | Teknologi |
+
+Artikel harus jelas masuk 1 pillar. Jika ambiguous, pilih pillar yang paling dominan.
+
+## Trend Alignment Check
+
+Cek apakah topik align dengan trend terkini:
+
+| Check | Cara | Output |
+|-------|------|--------|
+| **Google Trends** | Cek keyword di trends.google.com | Naik/stabil/turun |
+| **Social signals** | Cek TikTok/IG/X apakah topik viral | Viral/emerging/niche |
+| **News cycle** | Ada berita terkini yang relevant? | Hook opportunity |
+| **Seasonal** | Apakah topik seasonal? (mudik, tahun baru, graduation) | Timing window |
+| **TAM backlog** | Apakah ada artikel lama yang bisa di-update? | Update opportunity |
+
+Jika topik declining di Google Trends dan tidak ada social signals: pertimbangkan ide lain.
+
+## Idea Source Tracking
+
+Catat dari mana ide berasal untuk future reference:
+
+| Source | Contoh | Frequency target |
+|--------|--------|-----------------|
+| **Observasi pribadi** | "Saya perhatikan teman-teman..." | > 30% |
+| **Data/riset** | "BPS rilis data baru..." | > 25% |
+| **Social listening** | "Banyak diskusi di Twitter tentang..." | > 20% |
+| **Reader feedback** | "Pembaca tanya di komentar..." | > 10% |
+| **Competitor gap** | "Media lain tidak bahas..." | > 10% |
+| **Trend/news** | "Berita terkini tentang..." | < 10% |
+
+TAM lebih original jika ide datang dari observasi pribadi dan data, bukan dari trend chasing.
+
 ## Checklist
 
 - [ ] Topik ditentukan
@@ -110,9 +197,15 @@ Keyword utama: [1 keyword utama untuk SEO]
 - [ ] Search intent dianalisis (informational/navigational/transactional/commercial)
 - [ ] Goal artikel didefinisikan (educate, provoke, convert)
 - [ ] Angle test lolos (kedua pertanyaan)
+- [ ] TAM Angle Verification: 3 pertanyaan tambahan lolos
 - [ ] POV tag dipilih
 - [ ] Category dipilih
 - [ ] Content cluster dicek (artikel existing di kategori/keyword sama)
+- [ ] Content pillar mapping: 1 pillar jelas
+- [ ] Reader Empathy Map: 6 dimension diisi
+- [ ] Trend Alignment Check: minimal 1 signal positif
+- [ ] Idea Source Tracking: sumber ide tercatat
+- [ ] Idea Quality Score: > 10 (dari 15)
 - [ ] Template output ide diisi
 
 ## Next

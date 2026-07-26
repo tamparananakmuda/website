@@ -471,6 +471,112 @@ if (issues.length) {
 2. **WAJIB re-run `/artikel-07-qc`** untuk verifikasi semua pola AI sudah hilang
 3. Jika QC audit masih FAIL, kembali ke step ini, fix, re-run. Maksimal 5 round.
 
+## Paragraph Rhythm Audit
+
+Cek variasi panjang paragraph untuk natural rhythm:
+
+| Pattern | Problem | Fix |
+|---------|---------|-----|
+| **Semua paragraph 80-100 kata** | Monoton, terdengar AI | Variasikan: 30-50, 60-80, 100-120 |
+| **Semua paragraph < 60 kata** | Staccato, choppy | Gabung beberapa jadi 80-100 |
+| **Semua paragraph > 120 kata** | Dense, sulit dibaca | Split jadi 2-3 paragraph |
+| **No short paragraph** | Tidak ada emphasis | Tambah 1-2 paragraph pendek (1-2 kalimat) untuk emphasis |
+
+Ideal rhythm untuk artikel 1.500 kata: 2-3 paragraph pendek (30-50), 5-7 paragraph medium (60-100), 1-2 paragraph long (100-120).
+
+## Concrete-to-Abstract Ratio
+
+Cek rasio kalimat konkret vs abstrak:
+
+| Type | Definisi | Target |
+|------|----------|--------|
+| **Concrete** | Data, angka, contoh spesifik, nama, tempat | 40-60% |
+| **Abstract** | Konsep, opini, generalisasi, interpretasi | 40-60% |
+
+Jika > 70% abstract: artikel terlalu teoretis, tambah contoh konkret.
+Jika > 70% concrete: artikel terlalu data-heavy, tambah interpretasi.
+
+Cara check: highlight kalimat dengan angka/nama/tempat = concrete. Sisanya = abstract.
+
+## Transition Quality Audit
+
+Cek kualitas transisi antar paragraph dan antar section:
+
+| Quality | Contoh | Verdict |
+|---------|--------|---------|
+| **Robotik** | "Selain itu, penting untuk dicatat bahwa..." | Fix: hapus filler, langsung |
+| **Generic** | "Berikutnya, kita akan membahas..." | Fix: hapus signposting |
+| **Natural** | "Tapi angka itu tidak cerita lengkap." | Pass |
+| **Strong** | "Dan itu baru satu masalah." | Pass, creates tension |
+| **Missing** | (tidak ada transisi, paragraph melompat) | Fix: tambah bridge sentence |
+
+Target: 0 robotik, 0 generic, semua transisi natural atau strong.
+
+## Opening Line Quality per Section
+
+Cek kalimat pertama setiap section (h2):
+
+| Quality | Contoh | Verdict |
+|---------|--------|---------|
+| **Conclusion-first** | "Kerja keras tidak menjamin keamanan kerja." | Pass |
+| **Data-led** | "Data BPS 2025: 74% lulusan menganggur." | Pass |
+| **Provokasi** | "Kamu mungkin sudah tahu ini, tapi masih melakukannya." | Pass |
+| **Generic** | "Masalah ini kompleks dan berlapis." | Fix: terlalu vague |
+| **Signposting** | "Mari kita lihat datanya." | Fix: hapus signposting |
+| **Filler** | "Perlu dipahami bahwa fenomena ini..." | Fix: langsung ke inti |
+
+Target: setiap section opening pass. Jika 1 fail: rewrite opening.
+
+## Closing Line Quality per Section
+
+Cek kalimat terakhir setiap section (h2):
+
+| Quality | Contoh | Verdict |
+|---------|--------|---------|
+| **Bridge** | "Dan masalahnya tidak berhenti di situ." | Pass, leads ke section berikutnya |
+| **Punch** | "Yang bertahan bukan yang terkuat, tapi yang paling cepat beradaptasi." | Pass, memorable |
+| **Data callback** | "74% itu bukan sekadar angka, itu 3 dari 4 teman kamu." | Pass, connects data ke reader |
+| **Generic** | "Hal ini menunjukkan bahwa masalah ini perlu perhatian." | Fix: vague |
+| **Summary** | "Jadi, dapat disimpulkan bahwa..." | Fix: terlalu formal |
+| **Flat** | (kalimat terakhir tidak meninggalkan impression) | Fix: tambah punch |
+
+Target: setiap section closing pass. Minimal 3 dari 5 section punya "punch" atau "bridge".
+
+## TAM Voice Calibration
+
+Verifikasi voice TAM konsisten di seluruh artikel:
+
+| Element | TAM voice | AI voice | Check |
+|---------|-----------|----------|-------|
+| **Pronoun** | "kamu", "kita", "saya" | "pembaca", "masyarakat" | Pakai pronoun personal |
+| **Verb** | Aktif, langsung | Pasif, formal | Aktif |
+| **Sentence length** | Mix 8-25 kata | Uniform 15-20 kata | Variasi |
+| **Hedging** | Proportionate | Over-hedged atau no hedge | Match evidence |
+| **Emotion** | Controlled, honest | Flat atau over-dramatic | Controlled |
+| **Opini marker** | "Menurut saya", "Jujur" | Tidak ada atau terlalu formal | Natural marker |
+
+Jika > 2 element match AI voice: kalibrasi ulang.
+
+## Humanizer Quality Score (0-12)
+
+Score humanizer sebelum re-run QC. Target: minimal 9.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **AI pattern removal** | 2 | > 5 pola | 1-4 pola | 0 pola |
+| **Paragraph rhythm** | 1 | Monoton | Sebagiane variasi | Full variasi |
+| **Concrete ratio** | 1 | > 70% atau < 30% | 40-70% | 40-60% |
+| **Transition quality** | 1 | Robotik/generic | Sebagiane natural | Semua natural/strong |
+| **Opening lines** | 1 | > 2 fail | 1 fail | Semua pass |
+| **Closing lines** | 1 | > 2 fail | 1 fail | Semua pass, min 3 punch/bridge |
+| **TAM voice** | 2 | > 2 element AI | 1 element AI | Full TAM |
+| **Human signature** | 1 | 0 | 1 | 2+ |
+| **Jargon translation** | 1 | Jargon tidak diterjemahkan | Sebagiane | Semua jargon diterjemahkan |
+| **Bold usage** | 0.5 | Overuse | OK | Minimal, purposeful |
+| **Flow** | 0.5 | Choppy/dragging | OK | Smooth, engaging |
+
+Jika score < 9: revisi sebelum re-run QC.
+
 ## Checklist
 
 - [ ] No em dash, no en dash, no curly quotes
@@ -496,7 +602,14 @@ if (issues.length) {
 - [ ] Max 1 exclamation mark
 - [ ] Human signature: minimal 1 paragraf pengalaman/observasi/opini spesifik
 - [ ] Tone: jujur, rasional, berani, tidak menggurudi
+- [ ] Paragraph Rhythm Audit: variasi panjang, tidak monoton
+- [ ] Concrete-to-Abstract Ratio: 40-60% concrete
+- [ ] Transition Quality: 0 robotik, 0 generic, semua natural/strong
+- [ ] Opening Line Quality: semua section pass
+- [ ] Closing Line Quality: semua section pass, min 3 punch/bridge
+- [ ] TAM Voice Calibration: 0-1 element match AI voice
 - [ ] `human_signature: true` di JSON
+- [ ] Humanizer Quality Score: min 9 (dari 12)
 - [ ] Re-run `/artikel-07-qc` dan hasil CLEAN
 
 ## Next

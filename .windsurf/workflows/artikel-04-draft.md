@@ -47,7 +47,7 @@ Dari `/artikel-03-outline`
 
 ## Punctuation
 
-- Tidak pakai em dash (—) atau en dash (–)
+- Tidak pakai em dash atau en dash (garis pemisah panjang)
 - Maks 1 exclamation mark per artikel
 - Tidak pakai ellipsis (...) sebagai desain
 
@@ -98,6 +98,109 @@ Setiap angka di body HARUS punya sumber yang bisa ditrace ke `sourceReferences`.
 - Max 3-6 artikel featured di homepage pada satu waktu
 - Artikel featured harus punya OG image yang menarik
 - Jika ragu, set `featured: false`. Bisa di-update nanti.
+
+## Draft Quality Gates (per section sebelum lanjut)
+
+Setiap section harus pass 3 gates sebelum dianggap selesai:
+
+| Gate | Check | Jika gagal |
+|------|-------|-----------|
+| **G1: Structure** | Heading = conclusion-first? Topic sentence = claim? | Rewrite heading dan opening |
+| **G2: Evidence** | Setiap claim punya data atau concrete example? | Tambah evidence atau hapus claim |
+| **G3: Tone** | TAM tone? No AI pattern? Human signature ada? | Re-humanize section |
+
+Jika 1 gate gagal: fix section sebelum lanjut ke section berikutnya.
+
+## Paragraph Construction Rules
+
+Setiap paragraph di artikel mengikuti aturan:
+
+| Rule | Cara | Kenapa |
+|------|------|-------|
+| **1 idea per paragraph** | 1 topic sentence + 2-4 supporting sentences | Cognitive load |
+| **Topic sentence first** | Kalimat pertama = claim/point. Berikutnya = evidence | Pyramid Principle |
+| **Max 120 words** | Jika > 120, split | Cognitive load (artikel lebih pendek dari whitepaper) |
+| **Data in paragraph** | Minimal 1 data point atau concrete example per paragraph di Data section | Credibility |
+| **No orphan paragraphs** | 1-sentence paragraph hanya untuk emphasis, max 1 per 300 kata | Rhythm |
+| **Transition logis** | Paragraph terakhir lead ke paragraph berikutnya | Flow |
+| **No paragraph tanpa purpose** | Setiap paragraph harus advance argument atau add context | Density |
+
+## Data Integration Standards
+
+Cara integrate data ke narasi artikel:
+
+| Standard | Cara | Contoh |
+|----------|------|--------|
+| **Inline attribution** | Source di kalimat yang sama dengan data | "Data BPS 2025 menunjukkan 74% lulusan menganggur." |
+| **Context framing** | Data tidak berdiri sendiri, ada context | "74% lulusan menganggur, naik dari 65% tahun sebelumnya." |
+| **Interpretation** | Data + apa artinya untuk reader | "74% berarti 3 dari 4 lulusan tidak punya kerja." |
+| **Comparison** | Data dibandingkan dengan something | "74% vs 26% yang employed. Gap ini tertinggi dalam 10 tahun." |
+| **Trend direction** | Arah perubahan disebut | "Naik dari 65% ke 74% dalam 2 tahun." |
+| **Sample size** | Jika < 1.000, sebutkan n | "Survei Jakpat (n=500) menemukan..." |
+
+Jangan: data tanpa context, data tanpa source, data tanpa interpretasi.
+
+## Hedging Language Guide
+
+Sesuaikan bahasa dengan kekuatan evidence:
+
+| Evidence strength | Hedging | Contoh |
+|-------------------|---------|--------|
+| **Strong** (data primer, sample besar) | Tidak perlu hedge | "Data BPS menunjukkan 74% menganggur." |
+| **Moderate** (survei, data sekunder) | Light hedge | "Survei ini mengindikasikan bahwa..." |
+| **Weak** (observasi, n kecil) | Clear hedge | "Berdasarkan observasi terbatas, terlihat bahwa..." |
+| **No data** (opini) | Full disclosure | "Dalam pengalaman saya,..." |
+
+TAM tidak menjual opini sebagai fakta. Tapi juga tidak menunduk jika data kuat.
+
+## Human Signature Placement
+
+Human signature = paragraf yang menunjukkan ini ditulis oleh manusia, bukan AI:
+
+| Type | Contoh | Min per artikel |
+|------|--------|-----------------|
+| **Observasi personal** | "Saya perhatikan dari 10 teman saya, hanya 2 yang..." | 1 |
+| **Pengalaman spesifik** | "Saat saya pertama kali freelance di 2019,..." | 0-1 |
+| **Opini berani** | "Jujur, saya tidak setuju dengan narasi bahwa..." | 0-1 |
+| **Anecdote** | "Ada teman saya, sebut saja R, yang..." | 0-1 |
+
+Tempatkan human signature di Insight section atau di tengah Data section untuk maximum impact.
+
+## Self-Review Checklist per Section
+
+Setelah selesai writing setiap section, self-review:
+
+| Question | Jika "tidak" |
+|----------|-------------|
+| Apakah section ini advance thesis/angle? | Hapus atau revisi |
+| Apakah setiap claim punya evidence? | Tambah evidence atau hapus claim |
+| Apakah hedging proportionate? | Adjust hedging language |
+| Apakah ada jargon yang belum diterjemahkan? | Tambah terjemahan |
+| Apakah paragraph > 120 kata? | Split |
+| Apakah ada transisi robotik? | Hapus atau rewrite |
+| Apakah ada AI pattern? | Fix di humanizer step |
+| Apakah ada human signature? | Tambah jika belum |
+| Apakah conclusion-first? | Rewrite opening |
+| Apakah section ini bisa di-skim? | Tambah bold untuk key findings |
+
+## Draft Completion Score (0-12)
+
+Sebelum simpan ke JSON, score draft:
+
+| Factor | Weight | 0 | 1 | 2 |
+|--------|--------|---|---|---|
+| **Word count** | 1 | < 1.000 | 1.000-2.500 | 1.500-2.000 (sweet spot) |
+| **Section completeness** | 2 | < 3 sections | 3-4 sections | 5+ sections |
+| **Evidence density** | 2 | < 3 data points | 3-7 data points | 8+ data points |
+| **Citation count** | 1 | < 2 | 2-4 | 5+ |
+| **Human signature** | 1 | 0 | 1 | 2+ |
+| **Hook strength** | 1 | Weak/generic | OK | Data/provokasi/sharp |
+| **Conclusion** | 1 | Generic | OK | Anti-generic + specific |
+| **Internal links** | 1 | < 2 | 2-3 | 4+ |
+| **FAQ** | 0.5 | No | - | Yes, 3+ Q&A |
+| **OG headline** | 0.5 | Missing | Same as title | Different + punchy |
+
+Target: minimal 8. Jika < 8, revisi sebelum simpan.
 
 ## Simpan draft ke `$ARTICLE_JSON`
 
@@ -161,12 +264,19 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 - [ ] Artikel lengkap ditulis mengikuti outline
 - [ ] Word count: 1.000-2.500 kata
 - [ ] Heading: h2/h3 only, min 3 h2, tidak ada h1
+- [ ] Draft Quality Gates: G1 Structure, G2 Evidence, G3 Tone passed per section
+- [ ] Paragraph Construction: 1 idea, topic sentence first, max 120 words, data per paragraph
+- [ ] Data Integration: inline attribution, context, interpretation, comparison, trend
+- [ ] Hedging Language: proportionate to evidence strength
+- [ ] Human Signature: minimal 1 observasi/pengalaman/opini spesifik
+- [ ] Self-Review per Section: 10 questions answered
 - [ ] Internal linking: min 2 link ke artikel TAM
 - [ ] `sourceReferences`: array `{type, url, label}`
 - [ ] `excerpt`: max 160 karakter
 - [ ] `ogHeadline`: berbeda dari title, max 50 karakter
 - [ ] `reading_time`: di-set di JSON (estimasi: word_count / 200)
 - [ ] `published_at`: format "YYYY-MM-DD HH:MM:SS+00"
+- [ ] Draft Completion Score: > 8 (dari 12)
 - [ ] JSON disimpan ke `$ARTICLE_JSON`
 
 ## Next

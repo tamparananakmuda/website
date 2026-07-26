@@ -114,15 +114,111 @@ Insight unik TAM:
 - [1-2 kalimat insight yang tidak ada di kompetitor]
 ```
 
+## Research Quality Score (0-12)
+
+Score research sebelum lanjut ke 03-outline. Target: minimal 8.
+
+| Factor | Weight | 0 (weak) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Keyword coverage** | 2 | < 3 keyword | 3-5 keyword | 6-8 long-tail keyword |
+| **Competitor depth** | 2 | Hanya baca judul | Baca 3 artikel tapi surface | 3 artikel dianalisis dengan framework |
+| **Data quality** | 2 | 0-1 source, tier 2 | 2 sources, mix tier 1-2 | 3+ sources, mayoritas tier 1 |
+| **Data freshness** | 1 | Data > 3 tahun | Data 2-3 tahun | Data < 2 tahun |
+| **Gap identification** | 1 | Tidak ada gap | Gap ada tapi vague | 2+ gap spesifik yang TAM bisa isi |
+| **AI citation check** | 1 | Tidak dicek | Dicek tapi tidak actionable | AI opportunity teridentifikasi |
+| **Source verification** | 1 | Tidak verify | Sebagiane verify | Semua URL aktif + tier labeled |
+| **Insight uniqueness** | 2 | Tidak ada insight unik | Insight ada tapi lemah | 1-2 insight yang tidak ada di kompetitor |
+
+Jika score < 8: tambah research atau revisi ide di 01-idea.
+
+## Source Hierarchy System
+
+Klasifikasi setiap source berdasarkan kredibilitas:
+
+| Tier | Definisi | Max pemakaian | Contoh |
+|------|----------|---------------|--------|
+| **T1: Primary** | Data asli dari lembaga yang mengumpulkan | Tidak ada limit | BPS, OJK, Kemenaker, World Bank, OECD |
+| **T2: Secondary** | Media yang melaporkan data primer dengan atribusi jelas | < 30% | Katadata, Kompas, Tempo (dengan link ke sumber asli) |
+| **T3: Tertiary** | Blog, opinion piece, media tanpa link ke sumber asli | < 10% | Medium, LinkedIn article, opini |
+| **T4: Unverified** | Social media, forum, word of mouth | 0% | Twitter thread, Reddit, Quora |
+
+Aturan:
+- Minimal 1 source T1 atau T2 per artikel
+- T4 tidak boleh dipakai sebagai data source
+- Jika hanya ada T3: tingkatkan research atau revisi ide
+
+## Data Freshness Protocol
+
+| Data type | Max umur | Exception |
+|-----------|----------|-----------|
+| **Ekonomi/makro** (GDP, inflasi, pengangguran) | 2 tahun | Jika tren historis 5+ tahun |
+| **Demografi** (sensus, populasi) | 5 tahun | Sensus hanya tiap 10 tahun |
+| **Teknologi** (pengguna internet, social media) | 1 tahun | Perubahan cepat |
+| **Survei/opini** (Jakpat, We Are Social) | 2 tahun | Jika konteks belum berubah |
+| **Kebijakan/regulasi** | 1 tahun | Jika regulasi belum berubah |
+
+Jika data > max umur: cari data lebih baru atau tambah caveat "data terbaru yang tersedia adalah [tahun]".
+
+## SERP Feature Analysis
+
+Cek apa yang muncul di SERP untuk keyword target:
+
+| Feature | Ada? | TAM strategy |
+|---------|------|--------------|
+| **Featured snippet** | Ya/tidak | Format section pertama untuk snippet: definisi jelas di 1 kalimat |
+| **People Also Ask** | Ya/tidak | Pertanyaan di PAA = FAQ section material |
+| **Video carousel** | Ya/tidak | Jika ada, pertimbangkan video di artikel |
+| **Image pack** | Ya/tidak | Pastikan alt text dan image SEO |
+| **News box** | Ya/tidak | Jika ada, hook ke berita terkini |
+| **AI Overview** | Ya/tidak | Format data self-contained untuk AI citation |
+
+Jika AI Overview ada: baca apa yang AI rangkum. TAM artikel harus lebih lengkap dari AI Overview.
+
+## Competitor Content Depth Score
+
+Untuk setiap 3 artikel kompetitor di Google, score depth:
+
+| Factor | 0 (shallow) | 1 (medium) | 2 (deep) |
+|--------|-------------|------------|----------|
+| **Word count** | < 500 | 500-1.500 | > 1.500 |
+| **Data sources** | 0-1 | 2-3 | 4+ |
+| **Expert quotes** | 0 | 1 | 2+ |
+| **Original analysis** | Tidak ada | Sebagiane | Full interpretation |
+| **FAQ** | Tidak ada | Ada tapi < 3 | 3+ Q&A |
+| **Visual data** | 0 | 1 chart/tabel | 2+ chart/tabel |
+
+TAM target: beat kompetitor di minimal 4 dari 6 factors. Jika kompetitor sudah deep di semua, TAM harus unggul di angle dan tone.
+
+## AI Citation Opportunity Map
+
+Identifikasi bagian artikel yang AI engines akan cite:
+
+| Opportunity | Format yang AI suka | TAM implementation |
+|-------------|---------------------|-------------------|
+| **Definisi** | "X adalah [definisi]." di awal section | 1 kalimat definisi jelas per konsep |
+| **Statistik** | "74% lulusan menganggur (BPS, 2025)." | Data self-contained dengan source inline |
+| **Q&A** | Pertanyaan + jawaban langsung di bawah | FAQ section dengan jawaban 2-3 kalimat |
+| **Comparison** | "X vs Y: [perbedaan]." | Tabel comparison dengan conclusion |
+| **List** | "3 cara untuk [action]." | Numbered list dengan 1 kalimat per item |
+| **Timeline** | "2020: X. 2023: Y. 2025: Z." | Tabel atau list kronologis |
+
+Tandai di research: bagian mana yang akan di-format untuk AI citation.
+
 ## Checklist
 
 - [ ] Keyword research selesai (3-8 long-tail keyword, via Google Suggest/PAA/Related)
 - [ ] Competitor analysis selesai (3 artikel Google diperiksa, framework di atas)
+- [ ] Competitor Content Depth Score: TAM beat kompetitor di min 4 dari 6 factors
 - [ ] Minimal 1 insight unik teridentifikasi
 - [ ] Data pendukung terkumpul (min 2 sources, tier 1 atau 2)
+- [ ] Source Hierarchy: minimal 1 T1 atau T2, 0 T4
+- [ ] Data Freshness: semua data dalam max umur sesuai tipe
 - [ ] Semua source URL aktif (HTTP 200-399)
 - [ ] Tidak ada dead link
+- [ ] SERP Feature Analysis: 6 features dicek
 - [ ] AI SEO/AEO check: kompetitor cited di AI search?
+- [ ] AI Citation Opportunity Map: 2+ opportunity teridentifikasi
+- [ ] Research Quality Score: > 8 (dari 12)
 - [ ] Template output research diisi
 
 ## Next
