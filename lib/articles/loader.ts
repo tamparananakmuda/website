@@ -238,8 +238,9 @@ export function getAllArticlesUncached(): RawArticle[] {
 
 async function getPublishedArticles(): Promise<RawArticle[]> {
   const all = await getAllArticles();
+  const currentTime = now();
   return all
-    .filter((a) => a.status === 'published' && a.publishedAt <= now())
+    .filter((a) => (a.status === 'published' || (a.status === 'scheduled' && a.publishedAt <= currentTime)) && a.publishedAt <= currentTime)
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 }
 
