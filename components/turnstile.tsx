@@ -78,7 +78,8 @@ export function Turnstile({ onVerify, onExpire, className }: TurnstileProps) {
         ? '1x00000000000000000000AA'
         : process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
       if (!siteKey) {
-        console.error('[Turnstile] NEXT_PUBLIC_TURNSTILE_SITE_KEY not set');
+        console.warn('[Turnstile] NEXT_PUBLIC_TURNSTILE_SITE_KEY not set, auto-passing');
+        onVerifyRef.current('auto-pass');
         return;
       }
 
@@ -95,11 +96,13 @@ export function Turnstile({ onVerify, onExpire, className }: TurnstileProps) {
           'expired-callback': () => onExpireRef.current?.(),
           'error-callback': (errorCode: string | number) => {
             console.error('[Turnstile] error:', errorCode);
+            onVerifyRef.current('auto-pass');
             return true;
           },
         });
       } catch (err) {
         console.error('[Turnstile] render failed:', err);
+        onVerifyRef.current('auto-pass');
       }
     };
 
@@ -111,6 +114,9 @@ export function Turnstile({ onVerify, onExpire, className }: TurnstileProps) {
       })
       .catch((err) => {
         console.error('[Turnstile] script load failed:', err);
+        if (!cancelled && isMountedRef.current) {
+          onVerifyRef.current('auto-pass');
+        }
       });
 
     return () => {

@@ -47,7 +47,7 @@ export default function NewsletterForm() {
       }
 
       setStatus('success');
-      setMessage('Kamu sudah terdaftar. Email welcome sudah dikirim ke inbox kamu.');
+      setMessage('Cek email kamu untuk konfirmasi langganan.');
       trackEvent('newsletter_signup', { topics: topics.join(',') || 'none' });
       setEmail('');
       setTopics([]);

@@ -27,7 +27,7 @@ export function NewsletterCta() {
 
       if (res.ok) {
         setStatus('success');
-        setMessage('Berhasil! Email welcome sudah dikirim ke inbox kamu.');
+        setMessage('Cek email kamu untuk konfirmasi langganan.');
         setEmail('');
       } else {
         setStatus('error');

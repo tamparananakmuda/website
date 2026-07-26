@@ -17,30 +17,63 @@ export async function subscribeNewsletter(email: string, source = 'website'): Pr
   return result[0];
 }
 
-export async function upsertNewsletterSubscriber(email: string, topics: string[] = []): Promise<NewsletterSubscriber> {
+export async function upsertNewsletterSubscriber(email: string, topics: string[] = []): Promise<{ subscriber: NewsletterSubscriber; isNew: boolean; wasActive: boolean }> {
   const existing = await db.select().from(newsletterSubscribers)
     .where(eq(newsletterSubscribers.email, email))
     .limit(1);
 
   if (existing[0]) {
+    if (existing[0].status === 'active') {
+      if (topics.length > 0) {
+        await db.update(newsletterSubscribers)
+          .set({
+            topics,
+            updatedAt: new Date().toISOString(),
+          })
+          .where(eq(newsletterSubscribers.email, email));
+      }
+      return { subscriber: { ...existing[0], topics: topics.length > 0 ? topics : existing[0].topics }, isNew: false, wasActive: true };
+    }
+
+    const newToken = generateUnsubscribeToken();
     await db.update(newsletterSubscribers)
       .set({
-        status: 'active',
+        status: 'pending',
         topics: topics.length > 0 ? topics : existing[0].topics,
+        unsubscribeToken: newToken,
         updatedAt: new Date().toISOString(),
       })
       .where(eq(newsletterSubscribers.email, email));
-    return { ...existing[0], status: 'active', topics: topics.length > 0 ? topics : existing[0].topics };
+    return { subscriber: { ...existing[0], status: 'pending', topics: topics.length > 0 ? topics : existing[0].topics, unsubscribeToken: newToken }, isNew: false, wasActive: false };
   }
 
   const result = await db.insert(newsletterSubscribers).values({
     email,
-    status: 'active',
+    status: 'pending',
     source: 'website',
     topics,
     unsubscribeToken: generateUnsubscribeToken(),
   }).returning();
-  return result[0];
+  return { subscriber: result[0], isNew: true, wasActive: false };
+}
+
+export async function confirmSubscription(token: string): Promise<NewsletterSubscriber | null> {
+  const existing = await db.select().from(newsletterSubscribers)
+    .where(eq(newsletterSubscribers.unsubscribeToken, token))
+    .limit(1);
+
+  if (!existing[0]) return null;
+
+  if (existing[0].status === 'active') return existing[0];
+
+  const result = await db.update(newsletterSubscribers)
+    .set({
+      status: 'active',
+      updatedAt: new Date().toISOString(),
+    })
+    .where(eq(newsletterSubscribers.unsubscribeToken, token))
+    .returning();
+  return result[0] || null;
 }
 
 export async function unsubscribeNewsletter(email: string): Promise<void> {

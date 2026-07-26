@@ -5,7 +5,7 @@ import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 import { parseRequestBody } from '@/lib/validations/helpers';
 import { verifyTurnstileToken } from '@/lib/turnstile';
 import { sendEmail } from '@/lib/email/client';
-import { renderWelcomeEmail } from '@/lib/email/templates/welcome';
+import { renderConfirmationEmail } from '@/lib/email/templates/confirmation';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,27 +34,30 @@ export async function POST(request: NextRequest) {
     const normalizedEmail = parsed.data.email;
     const topics = parsed.data.topics;
 
-    const subscriber = await upsertNewsletterSubscriber(normalizedEmail, topics);
+    const { subscriber, wasActive } = await upsertNewsletterSubscriber(normalizedEmail, topics);
 
-    // Send welcome email if subscriber has unsubscribe token
+    if (wasActive) {
+      return NextResponse.json({ success: true, alreadyActive: true });
+    }
+
     if (subscriber.unsubscribeToken) {
-      const { subject, html } = renderWelcomeEmail({
+      const { subject, html } = renderConfirmationEmail({
         email: normalizedEmail,
-        unsubscribeToken: subscriber.unsubscribeToken,
+        confirmToken: subscriber.unsubscribeToken,
         topics,
       });
       const result = await sendEmail({
         to: normalizedEmail,
         subject,
         htmlContent: html,
-        tags: ['newsletter-welcome'],
+        tags: ['newsletter-confirmation'],
       });
       if (!result.success) {
-        console.error('[newsletter] Welcome email failed:', result.error);
+        console.error('[newsletter] Confirmation email failed:', result.error);
       }
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, requiresConfirmation: true });
   } catch (error) {
     console.error('Newsletter subscription error:', error);
     return NextResponse.json(

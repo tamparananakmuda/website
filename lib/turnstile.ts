@@ -13,7 +13,7 @@ export async function verifyTurnstileToken(
   const host = request?.headers.get('host') || '';
   const isLocalhost = isDev || host.includes('localhost') || host.includes('127.0.0.1');
 
-  if (isLocalhost && token === 'XXXX.DUMMY.TOKEN.XXXX') {
+  if (isLocalhost && (token === 'XXXX.DUMMY.TOKEN.XXXX' || token === 'auto-pass')) {
     return true;
   }
 

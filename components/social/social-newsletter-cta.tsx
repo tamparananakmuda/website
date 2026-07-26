@@ -34,8 +34,8 @@ export function SocialNewsletterCTA() {
     return (
       <div className="rounded-lg border border-border bg-card p-6 text-center mt-8">
         <Mail className="w-8 h-8 mx-auto mb-3 text-primary" />
-        <p className="font-medium text-foreground mb-1">Berhasil!</p>
-        <p className="text-sm text-muted-foreground">Email welcome sudah dikirim ke inbox kamu.</p>
+        <p className="font-medium text-foreground mb-1">Cek email kamu.</p>
+        <p className="text-sm text-muted-foreground">Klik link konfirmasi di email untuk mengaktifkan langganan.</p>
       </div>
     );
   }
