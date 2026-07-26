@@ -113,16 +113,76 @@ curl -s "https://tamparananakmuda.com/rss.xml" | grep "SLUG" && echo "RSS OK" ||
 1. Submit URL ke Google Search Console: `https://tamparananakmuda.com/artikel/SLUG`
 2. Ping sitemap: `curl -s "https://www.google.com/ping?sitemap=https://tamparananakmuda.com/sitemap.xml"`
 
+## Pre-Publish Verification Protocol
+
+Sebelum push, jalankan 5 verifikasi:
+
+| Check | Cara | Pass criteria |
+|-------|------|---------------|
+| **File exists** | `ls content/articles/KATEGORI/SLUG.md` | File ada |
+| **Frontmatter valid** | Post-insert verification script | CLEAN |
+| **Build sukses** | `npm run build` | Exit code 0 |
+| **No git conflict** | `git status` | Clean, no conflict |
+| **Article JSON consistent** | Compare JSON vs frontmatter | Semua field match |
+
+Jika 1 check fail: fix sebelum push.
+
+## Post-Publish Health Check (H+1)
+
+| Check | Cara | Pass criteria | Jika gagal |
+|-------|------|---------------|-----------|
+| **HTTP 200** | `curl -s -o /dev/null -w "%{http_code}" URL` | 200 | Cek Vercel deploy |
+| **Schema present** | `curl -s URL \| grep "Article"` | Ada | Cek schema component |
+| **Sitemap** | `curl -s sitemap.xml \| grep SLUG` | Ada | Cek sitemap generation |
+| **RSS** | `curl -s rss.xml \| grep SLUG` | Ada | Cek RSS generation |
+| **OG image** | `curl -s -o /dev/null -w "%{http_code}" CDN/og/SLUG-card.webp` | 200 | Regenerate OG |
+| **Google indexing** | `site:tamparananakmuda.com/artikel/SLUG` | Indexed | Submit ulang ke GSC |
+
+## Deploy Verification Protocol
+
+| Step | Check | Output |
+|------|-------|--------|
+| **1. Pre-deploy** | Build sukses, no error | Exit 0 |
+| **2. Push** | `git push origin main` sukses | No reject |
+| **3. Vercel deploy** | Cek Vercel dashboard | Deploy success |
+| **4. Production check** | HTTP 200 di artikel URL | 200 |
+| **5. Schema check** | JSON-LD present di page | Ada |
+| **6. Sitemap check** | Slug di sitemap.xml | Ada |
+| **7. RSS check** | Slug di rss.xml | Ada |
+| **8. OG image check** | Image di CDN | 200 |
+
+## Publish Quality Score (0-10)
+
+Score publish sebelum lanjut ke 10-distribution. Target: minimal 8.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Pre-publish verification** | 2 | > 2 fail | 1 fail | Semua pass |
+| **Deploy** | 2 | Fail | Success tapi slow | Success + clean |
+| **Production health** | 2 | > 2 fail | 1 fail | Semua H+1 pass |
+| **OG image** | 1 | Missing | Generated tapi 404 | Generated + 200 |
+| **SEO indexing** | 1 | Not submitted | Submitted | Submitted + ping sitemap |
+| **Schema** | 1 | Missing | Article only | Article + FAQ |
+| **Sitemap + RSS** | 1 | Missing | 1 ada | Keduanya ada |
+
+Jika score < 8: fix production issue sebelum distribution.
+
 ## Checklist
 
 - [ ] `status` = `published` atau `scheduled`
+- [ ] Pre-Publish Verification: 5 checks pass
 - [ ] OG images generated (atau tunggu cron untuk scheduled)
 - [ ] `git push` sukses
 - [ ] Vercel deploy sukses
 - [ ] HTTP 200 di production
-- [ ] JSON-LD schema present
+- [ ] JSON-LD schema present (Article + FAQ jika ada)
 - [ ] Sitemap includes slug
+- [ ] RSS includes slug
+- [ ] OG image di CDN: HTTP 200
 - [ ] URL submitted ke Google Search Console
+- [ ] Sitemap pinged ke Google
+- [ ] Post-Publish Health Check (H+1): 6 checks pass
+- [ ] Publish Quality Score: min 8 (dari 10)
 
 ## Next
 

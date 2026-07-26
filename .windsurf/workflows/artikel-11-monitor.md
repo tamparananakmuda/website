@@ -118,15 +118,76 @@ Tanda artikel perlu di-update (lanjut ke `/artikel-12-update`):
 6. Tambah internal link dari artikel lain yang sudah ter-index
 7. Jika masih belum ter-index H+14: cek Google Search Console Coverage report untuk error
 
+## AI Citation Tracking
+
+Cek apakah artikel sudah di-cite oleh AI search engines:
+
+| Check | Cara | Timing | Target |
+|-------|------|--------|--------|
+| **Perplexity** | Search query terkait di Perplexity, cek apakah TAM di-cite | H+14 | 1+ citation |
+| **ChatGPT** | Search query terkait di ChatGPT (with web), cek source | H+14 | 1+ citation |
+| **Google AI Overview** | Search query terkait di Google, cek AI Overview | H+14 | Muncul di overview |
+| **Bing Copilot** | Search query terkait di Bing Copilot | H+30 | 1+ citation |
+
+Jika belum di-cite H+14: cek format data self-contained, definisi jelas, FAQ format. Mungkin perlu format ulang section.
+
+## Action Research Spiral
+
+Monitoring TAM menggunakan action research spiral (Plan > Act > Observe > Reflect):
+
+| Phase | Activity | Output |
+|-------|----------|--------|
+| **Plan** | Sebelum publish, tentukan hypothesis: "Artikel ini akan perform karena [angle/data/timing]" | Hypothesis |
+| **Act** | Publish + distribute sesuai workflow | Execution log |
+| **Observe** | Collect metrics di H+1, H+3, H+7, H+30 | Data table |
+| **Reflect** | Bandingkan hypothesis vs reality. Kenapa over/under perform? | Learning note |
+
+Setiap artikel menghasilkan 1 learning note. Akumulasi learning notes = content strategy improvement.
+
+## Bayesian Calibration
+
+Update prior belief tentang apa yang work berdasarkan data:
+
+| Metric | Prior belief | Update jika | Posterior |
+|--------|-------------|-------------|-----------|
+| **Best posting time** | 08:00 WIB | Data menunjukkan 12:00 lebih baik | Update schedule |
+| **Best angle** | Kontra-narasi | Data menunjukkan data-led lebih perform | Prioritize data-led |
+| **Best length** | 1.500 kata | Data menunjukkan 2.000+ lebih perform | Expand target |
+| **Best platform** | IG Carousel | Data menunjukkan X/Twitter thread lebih reach | Shift effort |
+
+Catat calibration di learning note. Jangan over-update dari 1 artikel, cari pattern dari 5+ artikel.
+
+## Monitor Quality Score (0-10)
+
+Score monitoring sebelum decision update/biarkan. Target: minimal 7.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Metrics collected** | 2 | < 3 metric | 3-5 metric | 6+ metric |
+| **Timing adherence** | 1 | Tidak sesuai schedule | Sebagiane | H+1, H+3, H+7, H+30 semua |
+| **AI citation check** | 1 | Tidak dicek | Dicek tapi tidak actionable | Citation teridentifikasi |
+| **Action research** | 1 | Tidak ada hypothesis | Hypothesis tapi tidak reflect | Full spiral |
+| **Bayesian calibration** | 1 | Tidak update | Update dari 1 artikel | Pattern dari 5+ |
+| **Decay detection** | 2 | Tidak detect | Detect tapi tidak act | Detect + act |
+| **Decision made** | 1 | Tidak ada decision | Vague decision | Clear: refresh/update/biarkan |
+| **Learning note** | 1 | Tidak ada | Ada tapi thin | Detailed + actionable |
+
+Jika score < 7: monitoring tidak cukup, tambah metric atau timing check.
+
 ## Checklist
 
 - [ ] Artikel ter-index Google (H+1)
 - [ ] Social engagement dicek (H+3)
+- [ ] Social engagement vs target (H+3): min 50 total engagements
 - [ ] Metrics awal vs target (H+7)
 - [ ] Google Search Console: impressions > 10, CTR > 2% (H+7)
 - [ ] Internal links dari artikel lain dicek (H+7)
+- [ ] AI Citation Tracking: Perplexity + ChatGPT + Google AI Overview dicek (H+14)
+- [ ] Action Research Spiral: hypothesis + reflect selesai
+- [ ] Bayesian Calibration: learning note tercatat
 - [ ] Full performance review (H+30)
 - [ ] Decision: refresh, update, atau biarkan (H+30)
+- [ ] Monitor Quality Score: min 7 (dari 10)
 - [ ] Jika ada decay signal: lanjut ke `/artikel-12-update`
 
 ## Next

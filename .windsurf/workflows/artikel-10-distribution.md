@@ -154,6 +154,87 @@ Baca full: tamparananakmuda.com/artikel/SLUG
 - [ ] X/Twitter thread dipost
 - [ ] LinkedIn post dipost
 - [ ] TikTok/Reels (jika Phase 2)
+- [ ] Cross-posting executed (min 2 platform cross-posted)
+- [ ] Best posting times diikuti per platform
+- [ ] Hashtag strategy: 3-5 IG, 1-3 LinkedIn, 1-2 X/Twitter
+- [ ] Template copy per platform diisi dan dipost
+- [ ] Distribution Quality Score: min 7 (dari 10)
+
+## Content Atomization Protocol
+
+Setiap artikel di-atomize menjadi minimal 4 derivative content:
+
+| Atom | Platform | Format | Dari artikel |
+|------|----------|--------|-------------|
+| **Carousel** | Instagram | 5-8 slides visual | Key data points |
+| **Thread** | X/Twitter | 3-5 tweets | Hook + 2-3 insights + CTA |
+| **Newsletter** | Email | 400-600 words | 1 insight + 1 quote |
+| **LinkedIn** | LinkedIn | 200-400 words | Professional angle |
+| **Stories** | Instagram | 3-5 stories | Polling + takeaways + Q&A |
+| **Reels** | TikTok/IG | 30-60 detik | 1 insight (Phase 2) |
+
+Prioritas: Carousel + Thread + Newsletter wajib. LinkedIn + Stories recommended. Reels opsional.
+
+## Distribution Quality Score (0-10)
+
+Score distribution sebelum lanjut ke 11-monitor. Target: minimal 7.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Platform coverage** | 2 | < 3 platform | 3-4 platform | 5+ platform |
+| **Atom quality** | 1 | Copy-paste body | Sebagiane original | Setiap atom punya angle unik |
+| **Posting time** | 1 | Random | Sebagiane optimal | Semua di best time |
+| **Hashtag strategy** | 1 | Tidak ada | Sebagiane | 3-5 brand + topic + trending |
+| **Cross-posting** | 1 | Tidak ada | 1 cross-post | 2+ cross-post |
+| **Template adherence** | 1 | Tidak pakai template | Sebagiane | Setiap platform pakai template |
+| **CTA consistency** | 1 | Tidak ada CTA | Sebagiane | Semua ada CTA ke artikel |
+| **Timeline adherence** | 1 | Tidak sesuai timeline | Sebagiane | Hari 1-3 sesuai timeline |
+| **Visual quality** | 1 | Tidak ada visual | Generic | Brand colors + Syne font |
+
+Jika score < 7: tambah platform atau perbaiki atom quality.
+
+## 5-Touch Nurture Sequence
+
+Setelah publish, reader di-nurture dalam 5 touch:
+
+| Touch | Timing | Platform | Content | Goal |
+|-------|--------|----------|---------|------|
+| **T1** | Hari 1 | Website | Artikel publish | First read |
+| **T2** | Hari 2 | IG + X/Twitter | Carousel + Thread | Re-engage dengan visual |
+| **T3** | Hari 3 | Email | Newsletter | Deep dive 1 insight |
+| **T4** | Hari 4 | LinkedIn | Professional angle | Reach new audience |
+| **T5** | Hari 7 | All | Review + engagement reply | Community building |
+
+Setiap touch harus punya angle berbeda, bukan copy-paste artikel.
+
+## AI Citation Distribution Strategy
+
+Distribusi konten untuk maximize AI citation:
+
+| Action | Cara | Goal |
+|--------|------|------|
+| **llms.txt update** | Pastikan artikel baru ter-refer di llms.txt | AI bots crawl |
+| **Schema markup** | Article + FAQ schema live | AI extract data |
+| **Definisi format** | Pastikan 1 kalimat definisi di artikel | AI cite definisi |
+| **Data self-contained** | Angka + source di kalimat yang sama | AI cite statistik |
+| **Q&A format** | FAQ section dengan 3+ Q&A | AI cite jawaban |
+
+Cek setelah distribusi: apakah artikel sudah bisa di-cite oleh Perplexity/ChatGPT untuk query terkait?
+
+## Social Engagement Tracking
+
+Track engagement per platform di H+3:
+
+| Platform | Metric | Target H+3 | Target H+7 |
+|----------|--------|------------|------------|
+| **IG Carousel** | Likes + saves + shares | > 50 | > 100 |
+| **X/Twitter** | Impressions + replies | > 500 impressions | > 1.000 impressions |
+| **LinkedIn** | Likes + comments | > 20 | > 50 |
+| **Newsletter** | Open rate + CTR | > 25% open, > 3% CTR | > 30% open, > 5% CTR |
+| **IG Stories** | Polling votes + replies | > 30 votes | - |
+| **TikTok/Reels** | Views + shares | > 200 views | > 500 views |
+
+Jika < target H+3: analisis kenapa (hook lemah? timing salah? audience tidak match?).
 
 ## Next
 
