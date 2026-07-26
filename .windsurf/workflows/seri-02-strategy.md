@@ -94,6 +94,64 @@ Rilis strategy:
 - [ ] Part dependency map dibuat
 - [ ] Template output strategy diisi
 - [ ] Rilis strategy ditentukan
+- [ ] Series Arc Integrity Check: all pass
+- [ ] Cross-Part Dependency Audit: all pass
+- [ ] Release Strategy Verification: all pass
+- [ ] Series Strategy Quality Score: min 9 (dari 12)
+
+## Series Arc Integrity Check
+
+Verifikasi alur seri secara keseluruhan sebelum lanjut ke research:
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Arc completeness** | Apakah alur punya awal, tengah, akhir yang jelas? | Act 1, Act 2 (midpoint), Act 3 terdefinisi |
+| **Part balance** | Apakah ada part yang terlalu padat atau terlalu tipis? | Setiap part punya potensi 1.000-2.500 kata |
+| **Progression logic** | Apakah part N membutuhkan part N-1 untuk konteks? | Ya, tapi bisa standalone dengan recap |
+| **Climax placement** | Apakah klimaks/insight terbesar di tempat yang tepat? | Di Act 3, bukan Act 1 |
+| **Engine question** | Apakah 1 pertanyaan drive seluruh seri? | Ya, tidak bisa dijawab dalam 1 part |
+| **Emotional arc** | Apakah emosi reader berubah dari part 1 ke part N? | Ada perubahan sesuai goal seri |
+
+Jika > 2 check fail: restructure seri sebelum lanjut.
+
+## Cross-Part Dependency Audit
+
+| Check | Pertanyaan | Action jika fail |
+|-------|------------|-----------------|
+| **No circular dependency** | Apakah part 3 tidak butuh part 5 untuk dipahami? | Reorder atau hapus forward reference |
+| **Recap sufficiency** | Apakah recap 1-2 kalimat cukup untuk standalone? | Expand recap atau tambah konteks |
+| **Teaser accuracy** | Apakah teaser part N sesuai dengan konten part N+1? | Fix teaser atau fix part N+1 |
+| **No orphan part** | Apakah setiap part punya koneksi ke min 1 part lain? | Tambah internal link atau merge |
+| **Entry point clarity** | Apakah part 1 jelas sebagai entry point? | Strengthen hook part 1 |
+
+## Release Strategy Verification
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Cadence** | Apakah ritme rilis konsisten? | 1 part/hari atau 1 part/slot, tidak random |
+| **Part 1 first** | Apakah part 1 publish/sebelum part lain? | Part 1 selalu first |
+| **Gap tolerance** | Apakah gap antar part tidak terlalu lama? | Max 3 hari antar part |
+| **Binge option** | Apakah reader bisa binge read setelah seri selesai? | Semua part published/scheduled |
+| **SEO compounding** | Apakah setiap part publish akan boost part lain? | Internal links + cluster effect |
+
+## Series Strategy Quality Score (0-12)
+
+Score strategy sebelum lanjut ke 03-research. Target: minimal 9.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Alur choice** | 2 | Tidak match topik | OK tapi tidak optimal | Match topik perfectly |
+| **Part count** | 1 | Terlalu sedikit/banyak | OK | Optimal untuk depth topik |
+| **Dependency map** | 1 | Tidak dibuat | Dibuat tapi tidak clear | Clear + no circular |
+| **Arc integrity** | 2 | > 2 fail | 1-2 fail | All pass |
+| **Release strategy** | 1 | Tidak ada | Ada tapi vague | Clear + consistent |
+| **Config registration** | 1 | Tidak terdaftar | Terdaftar tapi slug salah | Terdaftar + validated |
+| **Naming convention** | 1 | Tidak diikuti | Sebagiane | Semua part mengikuti |
+| **Standalone potential** | 1 | Tidak bisa standalone | Sebagiane | Semua part standalone |
+| **SEO compounding** | 1 | Tidak ada strategi | Internal links only | Internal + cluster + sitemap |
+| **Binge-read design** | 1 | Tidak ada | Ada tapi lemah | Strong binge-read path |
+
+Jika score < 9: revisi strategy sebelum lanjut ke research.
 
 ## Next
 

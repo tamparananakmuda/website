@@ -199,13 +199,76 @@ Midpoint (jika ada): [jenis reversal/shift di part tengah]
 Climax type per part: [revelation/insight/breakthrough/synthesis]
 ```
 
+## Seri Idea Quality Score (0-15)
+
+Score ide seri sebelum lanjut ke 02-strategy. Target: minimal 11.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **TAM angle** | 2 | Generic, bisa media mana saja | Ada angle tapi tipis | Kontra-narasi atau angle unik |
+| **Seri viability** | 2 | Topik tidak butuh seri | Bisa seri tapi forced | Natural multi-part |
+| **Audience clarity** | 1 | Vague | 3 aspek terisi | 5 aspek terisi |
+| **Search intent** | 1 | Tidak dianalisis | Dianalisis tapi tidak match format | Match format seri |
+| **Cluster awareness** | 1 | Tidak cek existing | Cek tapi no action | Cek + positioning jelas |
+| **Storytelling potential** | 2 | Flat, no arc | Ada arc tapi lemah | Strong arc (engine question + emotional arc) |
+| **Data availability** | 1 | Tidak ada data | Min 2 per part | 3+ per part |
+| **Goal clarity** | 1 | Vague | Clear tapi tidak measurable | Clear + measurable |
+| **Part estimate** | 1 | Terlalu sedikit/banyak | OK | Optimal untuk topik |
+| **Keyword potential** | 1 | Tidak dicek | Dicek tapi thin | 3-8 keyword per part |
+
+Jika score < 11: ide perlu diperbaiki atau pilih ide lain.
+
+## TAM Angle Verification Protocol
+
+2 pertanyaan wajib + 2 pertanyaan tambahan untuk seri:
+
+| Pertanyaan | Pass criteria |
+|------------|---------------|
+| "Apakah ada media lain yang akan menulis seri ini dengan cara yang sama?" | Tidak ada yang pakai angle sama |
+| "Kalau saya hapus nama TAM, apakah pembaca tahu ini tulisan TAM?" | Tetap TAM (tone, angle, data) |
+| "Apakah angle ini cukup kuat untuk N part?" | Angle tidak menipis di part 3+ |
+| "Apakah angle ini melawan narasi populer?" | Ya (TAM = kontra-narasi) atau "ya, tapi dengan data yang tidak dibahas orang lain" |
+
+Jika 2 pertanyaan pertama fail: rewrite angle. Jika pertanyaan 3-4 fail: pertimbangkan artikel tunggal.
+
+## Reader Empathy Map
+
+Sebelum lanjut ke strategy, definisikan empathy map untuk target audience seri:
+
+| Dimension | Pertanyaan | Output |
+|-----------|------------|--------|
+| **Thinks** | Apa yang reader pikirkan tentang topik ini? | "Karier itu tentang kerja keras" |
+| **Feels** | Apa emosi reader tentang topik ini? | Cemas, tertekan, merasa tertinggal |
+| **Says** | Apa yang reader katakan ke teman? | "Gue mau resign tapi takut" |
+| **Does** | Apa yang reader lakukan sekarang? | Scroll LinkedIn, compare diri dengan teman |
+| **Pains** | Apa frustrasi terbesar reader? | Tidak tahu langkah selanjutnya |
+| **Gains** | Apa yang reader harapkan setelah baca seri? | Clarity, arah, keberanian bertindak |
+
+Empathy map ini dipakai di semua step berikutnya untuk verifikasi konten tetap reader-centric.
+
+## Series Viability Check
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Depth** | Apakah topik punya cukup depth untuk N part? | Setiap part punya min 1.000 kata potensi konten |
+| **Progression** | Apakah ada alur yang natural antar part? | Part 1 -> Part N punya progression yang jelas |
+| **Standalone** | Apakah setiap part bisa berdiri sendiri? | Setiap part punya value bahkan tanpa baca part lain |
+| **Data sufficiency** | Apakah ada cukup data untuk semua part? | Min 2 data points per part |
+| **Angle sustainability** | Apakah angle tidak menipis di part tengah? | Angle berkembang, tidak repetisi |
+| **Reader commitment** | Apakah reader akan commit baca semua part? | Cliffhanger + progression yang menarik |
+
+Jika > 2 check fail: pertimbangkan artikel tunggal, bukan seri.
+
 ## Checklist
 
 - [ ] Tema utama seri ditentukan
 - [ ] Seri vs artikel tunggal decision dibuat
+- [ ] Series Viability Check: min 4 dari 6 pass
 - [ ] Target audience jelas (min 3 dari 5 aspek)
+- [ ] Reader Empathy Map diisi (6 dimension)
 - [ ] Search intent dianalisis
 - [ ] Goal seri didefinisikan
+- [ ] TAM Angle Verification: 4 pertanyaan pass
 - [ ] Angle test lolos
 - [ ] POV tag dipilih
 - [ ] Category dipilih
@@ -220,6 +283,7 @@ Climax type per part: [revelation/insight/breakthrough/synthesis]
 - [ ] (Jika 5+ part) Seed planting & payoff map dibuat
 - [ ] (Jika 5+ part) Klimaks & cliffhanger per part didefinisikan
 - [ ] (Jika 5+ part) Template output storytelling framework diisi
+- [ ] Seri Idea Quality Score: min 11 (dari 15)
 
 ## Next
 

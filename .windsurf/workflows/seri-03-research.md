@@ -125,6 +125,81 @@ SOURCE REFERENCES:
 - [ ] Data pendukung cukup untuk semua part (min 2 per part)
 - [ ] Semua source URL aktif (HTTP 200)
 - [ ] Template output research diisi
+- [ ] Source Hierarchy: min 1 T1/T2 per part, no T4
+- [ ] Data Freshness Protocol: semua data within max umur
+- [ ] Cross-Part Data Overlap Audit: no kontradiksi
+- [ ] AI Citation Opportunity Map per part
+- [ ] Series Research Quality Score: min 9 (dari 12)
+
+## Source Hierarchy System
+
+Setiap source dikategorikan berdasarkan kredibilitas:
+
+| Tier | Definisi | Contoh | Max umur |
+|------|----------|--------|----------|
+| **T1: Primary** | Data resmi, laporan langsung | BPS, OJK, WHO, Bank Indonesia | 2 tahun (ekonomi), 5 tahun (kesehatan) |
+| **T2: Secondary** | Media kredibel yang cite T1 | Katadata, Kontan, Kompas (data section) | 1 tahun |
+| **T3: Tertiary** | Opini ahli, blog kredibel, buku | LinkedIn article oleh expert, buku terbitan | Tidak ada, tapi label sebagai opini |
+| **T4: Weak** | Reddit, forum, anonim | Tidak boleh dipakai sebagai source utama | - |
+
+Aturan TAM seri: min 1 T1 atau T2 source per part. T4 tidak boleh jadi source utama.
+
+## Data Freshness Protocol
+
+| Data type | Max umur | Check |
+|-----------|----------|-------|
+| **Ekonomi/makro** | 2 tahun | BPS, Bank Indonesia, OJK |
+| **Teknologi** | 1 tahun | Gartner, IDC, vendor report |
+| **Kesehatan** | 5 tahun | WHO, NIH, jurnal peer-reviewed |
+| **Sosial/budaya** | 3 tahun | Survei nasional, lembaga riset |
+| **Demografi** | 5 tahun | Sensus, BPS |
+| **Trend/viral** | 6 bulan | Google Trends, social listening |
+
+Jika data older than max umur: cari update terbaru atau label sebagai "data terakhir tersedia" dengan tanggal.
+
+## Cross-Part Data Overlap Audit
+
+Cek apakah ada data yang muncul di multiple part:
+
+| Check | Pertanyaan | Action |
+|-------|------------|--------|
+| **Same data, different part** | Apakah angka yang sama muncul di part 1 dan part 3? | Pastikan tidak kontradiksi, atau refer part 1 |
+| **Data progression** | Apakah data di part 2 lebih advanced dari part 1? | Ya, ada progression |
+| **No data dump** | Apakah tidak ada part yang hanya "data dump"? | Setiap data punya interpretasi |
+| **Source diversity** | Apakah tidak semua part pakai source yang sama? | Min 2 unique source per part |
+| **Data conflict** | Apakah ada 2 source yang kontradiksi? | Address konflik atau pilih 1 yang lebih kredibel |
+
+## AI Citation Opportunity Map
+
+Identifikasi peluang AI citation per part:
+
+| Part | AI-citable content | Format | Query yang mungkin cite |
+|------|-------------------|--------|-------------------------|
+| Part 1 | Definisi + data utama | Definisi di 1 kalimat + angka | "apa itu [topik]" |
+| Part 2 | Data + interpretasi | Data self-contained | "[topik] data [tahun]" |
+| Part 3 | FAQ | Q&A format | "[pertanyaan spesifik]" |
+| Part N | Conclusion/synthesis | Extractable summary | "[topik] kesimpulan" |
+
+Target: setiap part punya min 1 AI-citable paragraph yang bisa di-quote langsung oleh Perplexity/ChatGPT.
+
+## Series Research Quality Score (0-12)
+
+Score research sebelum lanjut ke 04-outline. Target: minimal 9.
+
+| Factor | Weight | 0 (fail) | 1 (ok) | 2 (strong) |
+|--------|--------|----------|--------|------------|
+| **Keyword mapping** | 2 | Tidak ada | Ada tapi kanibalisme | No kanibalisme, 3-8 per part |
+| **Source tier** | 2 | T4 only | T2-T3 | Min 1 T1/T2 per part |
+| **Data freshness** | 1 | > max umur | Sebagiane fresh | Semua within max umur |
+| **Data per part** | 1 | < 2 per part | 2 per part | 3+ per part |
+| **Competitor analysis** | 1 | Tidak ada | Ada tapi surface | Deep + gap identified |
+| **AI SEO** | 1 | Tidak dicek | Dicek tapi no plan | Plan per part |
+| **Cross-part consistency** | 1 | Kontradiksi | Sebagiane konsisten | Fully konsisten |
+| **Source diversity** | 1 | 1 source untuk semua | 2-3 source | 4+ unique source |
+| **AI citation map** | 1 | Tidak ada | Sebagiane | Setiap part punya AI-citable content |
+| **URL verification** | 1 | Tidak dicek | Sebagiane | Semua 200 |
+
+Jika score < 9: tambah research sebelum lanjut ke outline.
 
 ## Next
 
