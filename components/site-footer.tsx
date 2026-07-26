@@ -63,6 +63,22 @@ export function SiteFooter() {
               <Link href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
                 RSS Feed
               </Link>
+              <div className="mt-2 border-t border-border/40 pt-3">
+                <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground/60">
+                  Legal
+                </p>
+                <div className="flex flex-col gap-3">
+                  <Link href="/kebijakan-privasi" className="text-muted-foreground transition-colors hover:text-foreground">
+                    Kebijakan Privasi
+                  </Link>
+                  <Link href="/syarat-ketentuan" className="text-muted-foreground transition-colors hover:text-foreground">
+                    Syarat Ketentuan
+                  </Link>
+                  <Link href="/disclaimer" className="text-muted-foreground transition-colors hover:text-foreground">
+                    Disclaimer
+                  </Link>
+                </div>
+              </div>
             </nav>
           </div>
 
