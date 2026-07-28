@@ -95,6 +95,71 @@ console.log('Whitepaper written:', wp.slug, '| status:', wp.status || 'published
 "
 ```
 
+## Content Markers (PENTING)
+
+Whitepaper markdown punya dua bagian:
+1. **Published content** - yang tampil di website (antara markers)
+2. **Workflow tracking** - checklist, score, catatan (di luar markers)
+
+Gunakan markers ini di markdown file:
+
+```markdown
+<!-- START WHITEPAPER CONTENT -->
+
+## Executive Summary
+...konten whitepaper...
+
+## FAQ
+...jawaban FAQ...
+
+<!-- END WHITEPAPER CONTENT -->
+
+---
+### Draft Completion Score (0-15)
+...workflow tracking...
+```
+
+`lib/whitepaper/loader.ts` mengambil hanya konten antara markers via `extractPublishedContent()`. Jika markers tidak ada, seluruh body dirender (termasuk workflow tracking, yang salah).
+
+**Aturan:**
+- `<!-- START WHITEPAPER CONTENT -->` ditempatkan sebelum `## Executive Summary`
+- `<!-- END WHITEPAPER CONTENT -->` ditempatkan setelah section terakhir yang public (biasanya FAQ atau Conclusion)
+- Semua workflow tracking (Draft Completion Score, Checklist, dll) harus di LUAR markers
+- Frontmatter tidak terkena markers (selalu di-include)
+
+## Interactive Chart Verification
+
+Jika whitepaper menggunakan `chart:type` code blocks, verify sebelum publish:
+
+```bash
+npx tsx -e "
+const { readFileSync } = require('fs');
+const { join } = require('path');
+const filePath = join(process.cwd(), 'content', 'whitepaper', 'SLUG_WHITEPAPER.md');
+const content = readFileSync(filePath, 'utf8');
+const chartBlocks = content.match(/\`\`\`chart:(bar|line|area|pie|grouped-bar|stacked-bar|scatter|funnel|treemap|radar)\n([\s\S]*?)\`\`\`/g);
+if (!chartBlocks) { console.log('No chart blocks found'); process.exit(0); }
+console.log('Chart blocks found:', chartBlocks.length);
+chartBlocks.forEach((block, i) => {
+  const type = block.match(/chart:(\w+)/)[1];
+  try {
+    const json = block.match(/\n([\s\S]*?)\`\`\`/)[1].trim();
+    const config = JSON.parse(json);
+    console.log('Chart ' + (i+1) + ': type=' + type + ', title=' + config.title + ', data points=' + (config.data?.length || 0));
+  } catch (e) {
+    console.error('Chart ' + (i+1) + ': INVALID JSON');
+  }
+});
+"
+```
+
+**Checklist chart:**
+- [ ] Setiap `chart:type` block punya valid JSON
+- [ ] Setiap chart punya `title`, `subtitle`, `source`
+- [ ] Data di chart juga disebut di narasi sekitarnya
+- [ ] Chart ditempatkan di antara teks, bukan di akhir section
+- [ ] Content markers (`START`/`END`) tidak memotong chart blocks
+
 ## Post-Insert Verification
 
 ```bash
@@ -123,6 +188,10 @@ console.log('All checks passed.');
 - [ ] `publishedAt` tidak null
 - [ ] `body` tidak kosong
 - [ ] `readingTime` > 0
+- [ ] Content markers `<!-- START WHITEPAPER CONTENT -->` dan `<!-- END WHITEPAPER CONTENT -->` ada dan posisi benar
+- [ ] Workflow tracking (Draft Completion Score, Checklist) di LUAR markers
+- [ ] Interactive chart blocks (`chart:type`) punya valid JSON
+- [ ] Chart blocks berada di dalam content markers
 
 ## Next
 

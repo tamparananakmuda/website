@@ -319,6 +319,87 @@ Aturan:
 - Max 1 chart/tabel per 500 kata (jangan over-visual)
 - Data di chart HARUS juga disebut di narasi (untai AI SEO)
 
+## Interactive Chart System (recharts)
+
+Whitepaper TAM mendukung interactive chart yang di-render langsung dari markdown menggunakan custom code block syntax. Chart di-render oleh `WhitepaperContent` component yang mem-parse `chart:type` blocks.
+
+### Syntax
+
+````markdown
+```chart:TYPE
+{"title":"...","subtitle":"...","source":"...","data":[...]}
+```
+````
+
+### Available Chart Types
+
+| Type | Syntax | Use case |
+|------|--------|----------|
+| Bar | `chart:bar` | Perbandingan kategori, ranking |
+| Line | `chart:line` | Trend temporal, before/after |
+| Area | `chart:area` | Trend dengan magnitude (gradient fill) |
+| Pie | `chart:pie` | Proporsi, komposisi (max 5 slice) |
+| Grouped Bar | `chart:grouped-bar` | Before/after multi-kategori |
+| Stacked Bar | `chart:stacked-bar` | Perbandingan multi-series |
+| Scatter | `chart:scatter` | Korelasi 2 variabel |
+| Funnel | `chart:funnel` | Conversion/dropout pipeline |
+| Treemap | `chart:treemap` | Hierarchical proportion |
+| Radar | `chart:radar` | Perbandingan multi-dimension |
+
+### JSON Config Fields
+
+| Field | Required | Type | Description |
+|-------|----------|------|-------------|
+| `title` | Ya | string | Judul chart (conclusion-first) |
+| `subtitle` | Ya | string | Subtitle/konteks |
+| `source` | Ya | string | Sumber data + tahun |
+| `data` | Ya | array | Data points |
+| `height` | Tidak | number | Tinggi chart px (default 300) |
+| `yLabel` | Tidak | string | Label Y-axis |
+| `xLabel` | Tidak | string | Label X-axis |
+
+### Contoh: Bar Chart
+
+````markdown
+```chart:bar
+{"title":"TPT per Jenjang Pendidikan","subtitle":"BPS, 2024","source":"BPS Sakernas, 2024","data":[{"label":"D1-D3","value":2.32,"color":"#22c55e"},{"label":"S1","value":5.25,"color":"#f4a825"},{"label":"SMK","value":9.01,"color":"#ef4444"}],"yLabel":"TPT (%)"}
+```
+````
+
+### Contoh: Pie/Donut Chart
+
+````markdown
+```chart:pie
+{"title":"Komposisi PT Indonesia","subtitle":"Dari 4.303 PT","source":"Kemendikbudristek, 2025","data":[{"name":"PTS","value":91.7,"color":"#f4a825"},{"name":"PTN","value":8.3,"color":"#ef4444"}],"donut":true}
+```
+````
+
+### Contoh: Line Chart
+
+````markdown
+```chart:line
+{"title":"Gaji Awal S1: Trend Menurun","subtitle":"Penurunan Rp610 ribu","source":"BPS, 2025","data":[{"label":"Agu 2024","value":4.96},{"label":"Feb 2025","value":4.35}],"yLabel":"Rp juta"}
+```
+````
+
+### Contoh: Radar Chart
+
+````markdown
+```chart:radar
+{"title":"KKNI vs MQF","subtitle":"Indonesia vs Malaysia","source":"World Bank, 2021","data":[{"metric":"Implementasi","Indonesia":25,"Malaysia":90}],"series":[{"key":"Indonesia","name":"Indonesia","color":"#f4a825"},{"key":"Malaysia","name":"Malaysia","color":"#ef4444"}]}
+```
+````
+
+### Aturan Chart di Markdown
+
+- Chart blocks ditempatkan di antara teks narasi, bukan di akhir section
+- Data di chart HARUS juga disebut di narasi (untuk AI SEO dan accessibility)
+- Setiap chart harus punya title, subtitle, dan source
+- Gunakan TAM color palette: `#f4a825` (amber), `#ef4444` (red), `#3b82f6` (blue), `#22c55e` (green), `#a855f7` (purple)
+- Chart di-render sebagai interactive SVG (recharts), bukan static image
+- Component: `WhitepaperContent` (server) + `WhitepaperChartRenderer` (client)
+- File: `components/charts/whitepaper-content.tsx`, `components/charts/chart-renderer.tsx`
+
 ## Tags Assignment
 
 - Jumlah: 3-7 tags

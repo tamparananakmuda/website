@@ -107,6 +107,31 @@ Jika tidak yakin, set `subcategory: null`. Tidak wajib.
 
 Setiap angka di body HARUS punya sumber yang bisa ditrace ke `sourceReferences`.
 
+## Interactive Chart System (recharts)
+
+Seri TAM mendukung interactive chart yang di-render langsung dari markdown. Sama seperti artikel dan whitepaper, tulis `chart:type` code block di body part.
+
+### Syntax
+
+````markdown
+```chart:TYPE
+{"title":"...","subtitle":"...","source":"...","data":[...]}
+```
+````
+
+Tipe chart: `bar`, `line`, `pie`, `stacked-bar`, `radar`, `area`, `grouped-bar`, `scatter`, `funnel`, `treemap`. Lihat `/artikel-04-draft` atau `/whitepaper-05-draft` untuk contoh lengkap JSON config.
+
+### Aturan Chart di Seri
+
+- **Tidak wajib.** Chart hanya jika data punya 3+ points yang lebih jelas divisualisasi
+- Max 1-2 chart per part (jangan over-visual)
+- Data di chart HARUS juga disebut di narasi
+- Setiap chart harus punya title, subtitle, dan source
+- Gunakan TAM color palette: `#f4a825` (amber), `#ef4444` (red), `#3b82f6` (blue), `#22c55e` (green), `#a855f7` (purple)
+- Chart di-render oleh `MarkdownContent` component (sama untuk artikel dan seri)
+- **Cross-part consistency:** Jika part 1 pakai chart dengan data X, part 3 yang refer data X harus konsisten
+- Component: `components/markdown-content.tsx` + `components/charts/chart-renderer.tsx`
+
 ## Featured Criteria
 
 `featured: true` berarti part muncul di homepage hero. Kriteria:

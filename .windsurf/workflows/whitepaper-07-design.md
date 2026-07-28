@@ -41,6 +41,70 @@ Aturan:
 - Label axis: Jakarta Sans, `#A1A1AA`
 - Source citation di bawah chart: kecil, `#71717A`
 
+## Interactive Chart Component System
+
+Whitepaper TAM punya sistem interactive chart yang di-render langsung dari markdown. Tidak perlu buat image statis, upload ke R2, atau embed manual. Cukup tulis `chart:type` code block di markdown.
+
+### Architecture
+
+| Component | File | Role |
+|-----------|------|------|
+| `WhitepaperContent` | `components/charts/whitepaper-content.tsx` | Server component, parse markdown + chart blocks |
+| `WhitepaperChartRenderer` | `components/charts/chart-renderer.tsx` | Client component, render chart via recharts |
+| `TAMBarChart` | `components/charts/bar-chart.tsx` | Bar chart dengan TAM theme |
+| `TAMLineChart` | `components/charts/line-chart.tsx` | Line chart dengan TAM theme |
+| `TAMPieChart` | `components/charts/pie-chart.tsx` | Pie/donut chart dengan TAM theme |
+| `TAMStackedBarChart` | `components/charts/stacked-bar-chart.tsx` | Stacked bar chart dengan TAM theme |
+| `TAMRadarChart` | `components/charts/radar-chart.tsx` | Radar chart dengan TAM theme |
+| `tam-theme.ts` | `components/charts/tam-theme.ts` | Color palette, fonts, shared config |
+
+### TAM Chart Theme
+
+| Element | Value |
+|---------|-------|
+| Primary (amber) | `#f4a825` |
+| Secondary (red) | `#ef4444` |
+| Tertiary (blue) | `#3b82f6` |
+| Quaternary (green) | `#22c55e` |
+| Quinary (purple) | `#a855f7` |
+| Grid | `#ffffff0d` |
+| Axis | `#ffffff40` |
+| Text | `#ffffff80` |
+| Tooltip bg | `#0A0A0A` |
+| Font | `var(--font-display), system-ui, sans-serif` |
+
+### Chart Block Syntax
+
+Tulis langsung di markdown file:
+
+````markdown
+```chart:bar
+{"title":"...","subtitle":"...","source":"...","data":[...]}
+```
+````
+
+Tipe chart yang tersedia: `bar`, `line`, `area`, `pie`, `grouped-bar`, `stacked-bar`, `scatter`, `funnel`, `treemap`, `radar`.
+
+Lihat `/whitepaper-05-draft` untuk contoh lengkap JSON config per chart type.
+
+### Kapan Pakai Interactive Chart vs Static Image
+
+| Scenario | Use | Kenapa |
+|----------|-----|--------|
+| Data sederhana (3-10 points) | Interactive chart | Cepat, no upload needed, responsive |
+| Data kompleks (heatmap, sankey, treemap) | Static image via R2 | Belum ada component |
+| Chart untuk social media (quote card, infographic) | Static image via Figma/Canva | Format berbeda dari web |
+| Chart untuk PDF download | Static image | PDF tidak render interactive SVG |
+
+### Menambah Chart Type Baru
+
+1. Buat component baru di `components/charts/[type]-chart.tsx`
+2. Gunakan `TAM_CHART_COLORS` dan `TAM_CHART_FONTS` dari `tam-theme.ts`
+3. Export component dengan prefix `TAM` (contoh: `TAMScatterChart`)
+4. Tambahkan ke `chart-renderer.tsx` switch statement
+5. Tambahkan type ke `ChartConfig` interface di `whitepaper-content.tsx`
+6. Update regex di `splitContent()` jika type baru punya nama dengan karakter khusus
+
 ## Cover Page Template (jika PDF download)
 
 ```
