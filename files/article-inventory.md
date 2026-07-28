@@ -60,6 +60,22 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 48 | Mental Health di Era Digital Part 12: Mental Health Industry | kesehatan-mental-era-digital-part-12-industri-mental-health | Mindset | Psikologi | kontra-narasi | 2026-07-25 (published) |
 | 49 | Freelance Bukan Kebebasan, Itu Jebakan Tanpa Jaring Pengaman | freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-07-30 (scheduled 08:00 WIB) |
 | 50 | Langganan Digital Bukan Gaya Hidup, Itu Pengeluaran Tak Kasat Mata | langganan-digital-pengeluaran-tak-kasat-mata | Uang | Uang & Finansial | kontra-narasi | 2026-07-30 (scheduled 12:00 WIB) |
+| 51 | ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi | chatgpt-bukan-curang-sistem-pendidikan-yang-malas-beradaptasi | Teknologi | Teknologi & AI | kontra-narasi | 2026-07-27 (scheduled 08:00 WIB) |
+| 52 | MLM Bukan Bisnis: Itu Eksploitasi Pertemanan yang Dikemas Jadi Entrepreneurship | mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha | Bisnis | Bisnis | kontra-narasi | 2026-07-31 (scheduled 08:00 WIB) |
+| 53 | Kursus Online Rp5 Juta Tidak Bikin Kamu Diterima Kerja | kursus-online-5-juta-tidak-bikin-diterima-kerja | Teknologi | Teknologi & AI | kontra-narasi | 2026-07-31 (scheduled 12:00 WIB) |
+| 54 | Semua Jadi Trauma: Therapy Speak Bukan Sadar Mental Health, Itu Meremehkan Luka Nyata | therapy-speak-bukan-sadar-mental-health-meremehkan-luka | Mindset | Psikologi | kontra-narasi | 2026-07-31 (scheduled 17:00 WIB) |
+| 55 | 6% Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistem yang Tidak Menarik | gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-01 (scheduled 08:00 WIB) |
+| 56 | Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit dari Putus Cinta | friendship-breakup-lebih-sakit-dari-putus-cinta | Kehidupan | Hubungan Sosial | refleksi | 2026-08-01 (scheduled 12:00 WIB) |
+| 57 | Terapi Mahal, Label Gratis: Kenapa Gen Z Pilih Self-Diagnosis | terapi-mahal-label-gratis-gen-z-pilih-self-diagnosis | Mindset | Psikologi | data | 2026-08-01 (scheduled 17:00 WIB) |
+| 58 | Dana Darurat 6x Gaji: Saran Finansial untuk Orang yang Sudah Makan | dana-darurat-6x-gaji-saran-finansial-orang-yang-sudah-makan | Uang | Uang & Finansial | kontra-narasi | 2026-08-02 (scheduled 08:00 WIB) |
+| 59 | Dropshipping Bukan Bisnis, Gen Z Jadi Pekerja Gratis Marketplace | dropshipping-bukan-bisnis-gen-z-pekerja-gratis-marketplace | Bisnis | Bisnis | kontra-narasi | 2026-08-02 (scheduled 12:00 WIB) |
+| 60 | Gojek Grab Bukan Jadi Bos Sendiri, Algoritma yang Jadi Bosmu | gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu | Teknologi | Teknologi & AI | kontra-narasi | 2026-08-02 (scheduled 17:00 WIB) |
+| 61 | NEET Gen Z: 1 dari 5 Anak Muda Indonesia Hilang dari Sistem | neet-gen-z-1-dari-5-anak-muda-indonesia-hilang-dari-sistem | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-03 (scheduled 08:00 WIB) |
+| 62 | Back to Basic Dating: Gen Z Capai Situationship, Bukan Konservatif | back-to-basic-dating-bukan-konservatif-efisiensi-emosional | Kehidupan | Hubungan Sosial | refleksi | 2026-08-03 (scheduled 12:00 WIB) |
+| 63 | Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya | gen-z-doomerism-pesimis-bukan-depresi-mereka-baca-datanya | Mindset | Mindset & Realita | kontra-narasi | 2026-08-03 (scheduled 17:00 WIB) |
+| 64 | Saham Gen Z: Bukan Investasi, Judi dengan Grafik Candle | saham-gen-z-bukan-investasi-judi-dengan-grafik-candle | Uang | Keuangan & Uang | kontra-narasi | 2026-08-04 (scheduled 08:00 WIB) |
+| 65 | Jastip dan Reseller: Bukan Bisnis, Triage Ekonomi | jastip-reseller-bukan-bisnis-triage-ekonomi | Bisnis | Bisnis | kontra-narasi | 2026-08-04 (scheduled 12:00 WIB) |
+| 66 | AI Companion: Bukan Teman, Candu Pengganti Hubungan Manusia | ai-companion-bukan-teman-candu-pengganti-hubungan-manusia | Teknologi | Teknologi & AI | kontra-narasi | 2026-08-04 (scheduled 17:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

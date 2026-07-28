@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Menabung 10 tahun pun tidak cukup uang muka rumah"
-seoMetaTitle: "Menabung Jadi Irasional: Bukan Boros, Matematikanya | TAM"
+seoMetaTitle: "Menabung Jadi Irasional: Bukan Boros, Matematikanya"
 seoMetaDescription: "Gaji Gen Z Rp 2,7 juta, kenaikan upah minus 0,06% vs inflasi 2,72%. Menabung bukan soal niat, tapi matematika yang tidak berpihak."
 seoKeywords:
   - "menabung gen z Indonesia"

@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "81% Gen Z curhat ke AI, bukan ke teman"
-seoMetaTitle: "Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z | TAM"
+seoMetaTitle: "Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z"
 seoMetaDescription: "81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara."
 seoKeywords:
   - "gen z curhat ke ai"

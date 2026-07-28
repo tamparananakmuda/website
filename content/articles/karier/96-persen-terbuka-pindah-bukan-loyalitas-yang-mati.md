@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "47% Gen Z siap resign dalam setahun. Kenapa?"
-seoMetaTitle: "96% Terbuka Pindah: Bukan Loyalitas Mati, Sistem | TAM"
+seoMetaTitle: "96% Terbuka Pindah: Bukan Loyalitas Mati, Sistem"
 seoMetaDescription: "47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi sistem kerja yang tidak memberi alasan untuk tetap setia."
 seoKeywords:
   - "gen z pindah kerja Indonesia"

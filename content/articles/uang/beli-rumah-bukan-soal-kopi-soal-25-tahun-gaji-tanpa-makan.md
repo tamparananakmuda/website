@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "26 tahun gaji tanpa makan untuk beli rumah"
-seoMetaTitle: "Beli Rumah Bukan Soal Kopi, Soal Sistem | TAM"
+seoMetaTitle: "Beli Rumah Bukan Soal Kopi, Soal Sistem"
 seoMetaDescription: "Rasio harga rumah dan gaji di Jakarta butuh 26 tahun tanpa makan. Bukan kopi yang bikin Gen Z sulit beli rumah, tapi sistem properti."
 seoKeywords:
   - "gen z beli rumah Indonesia"

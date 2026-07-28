@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "data"
 tags: []
 ogHeadline: "Menolak kerja tanpa info gaji bukan arogan"
-seoMetaTitle: "85% Gen Z Menolak Kerja Tanpa Info Gaji | TAM"
+seoMetaTitle: "85% Gen Z Menolak Kerja Tanpa Info Gaji"
 seoMetaDescription: "85% Gen Z menolak melamar tanpa info gaji. Bukan arogan, tapi respons rasional terhadap ekonomi yang tidak menjanjikan stabilitas. Baca datanya."
 seoKeywords:
   - "transparansi gaji gen z"

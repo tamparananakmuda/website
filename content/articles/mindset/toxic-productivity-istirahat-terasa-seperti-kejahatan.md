@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "refleksi"
 tags: []
 ogHeadline: "Istirahat terasa seperti kejahatan? Itu toxic"
-seoMetaTitle: "Toxic Productivity: Istirahat Terasa Seperti Kejahatan | TAM"
+seoMetaTitle: "Toxic Productivity: Istirahat Terasa Seperti Kejahatan"
 seoMetaDescription: "Kamu merasa bersalah saat beristirahat. Cemas kalau tidak produktif. Memaksa diri terus bergerak meski sudah lelah. Ini toxic."
 seoKeywords:
   - "toxic productivity gen z"

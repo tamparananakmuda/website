@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Rp9,5 triliun raib. 1 dari 4 kamu kena scam."
-seoMetaTitle: "Rp9,5 Triliun Hilang: Penipuan Online Bukan Soal Bodoh | TAM"
+seoMetaTitle: "Rp9,5 Triliun Hilang: Penipuan Online Bukan Soal Bodoh"
 seoMetaDescription: "Rp9,5 triliun hilang akibat scam, 1 dari 4 WNI jadi korban. Penipuan online bukan soal bodoh, tapi sistem yang tidak melindungi."
 seoKeywords:
   - "penipuan online Indonesia 2026"

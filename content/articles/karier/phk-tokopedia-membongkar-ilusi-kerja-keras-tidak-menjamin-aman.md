@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "tamparan"
 tags: []
 ogHeadline: "Kerja keras tidak menjamin kamu aman dari PHK"
-seoMetaTitle: "PHK Tokopedia: Kerja Keras Tidak Menjamin Aman | TAM"
+seoMetaTitle: "PHK Tokopedia: Kerja Keras Tidak Menjamin Aman"
 seoMetaDescription: "450 karyawan di-PHK 2024, 450 lagi 2025, 2026 rumor 90% dipangkas. Pelajaran untuk anak muda: kerja keras tidak menjamin aman."
 seoKeywords:
   - "PHK Tokopedia"

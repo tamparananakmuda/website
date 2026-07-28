@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "95% mahasiswa pakai AI, sistem yang disalahkan"
-seoMetaTitle: "ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi | TAM"
+seoMetaTitle: "ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi"
 seoMetaDescription: "95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah dapat panduan etikanya. Bukan mahasiswa yang curang, sistem pendidikan yang tertinggal."
 seoKeywords:
   - "chatgpt untuk tugas kuliah Indonesia"

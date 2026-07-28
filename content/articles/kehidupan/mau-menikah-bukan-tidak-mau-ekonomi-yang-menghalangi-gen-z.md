@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Gen Z mau menikah, tapi ekonomi yang tidak mau"
-seoMetaTitle: "Gen Z Mau Menikah, Ekonomi yang Menghalangi | TAM"
+seoMetaTitle: "Gen Z Mau Menikah, Ekonomi yang Menghalangi"
 seoMetaDescription: "Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi."
 seoKeywords:
   - "gen z menikah"

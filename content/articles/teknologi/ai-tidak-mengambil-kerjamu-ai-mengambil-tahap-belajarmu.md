@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "AI ambil tahap belajarmu, bukan kerjamu"
-seoMetaTitle: "AI Ambil Tahap Belajarmu, Bukan Kerjamu | TAM"
+seoMetaTitle: "AI Ambil Tahap Belajarmu, Bukan Kerjamu"
 seoMetaDescription: "AI menggantikan posisi entry-level, bukan sekadar mengambil pekerjaan tapi menghapus jalur belajar praktis bagi Gen Z dan lulusan baru."
 seoKeywords:
   - "AI gantikan pekerjaan entry level"

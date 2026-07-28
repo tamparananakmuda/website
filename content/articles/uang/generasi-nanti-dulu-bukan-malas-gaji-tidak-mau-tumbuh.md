@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "data"
 tags: []
 ogHeadline: "Gaji kamu tidak akan pernah kejar biaya hidup"
-seoMetaTitle: "Generasi Nanti Dulu: Gaji Tidak Kejar Biaya Hidup | TAM"
+seoMetaTitle: "Generasi Nanti Dulu: Gaji Tidak Kejar Biaya Hidup"
 seoMetaDescription: "55% Gen Z menunda nikah dan beli rumah karena alasan finansial. Bukan masalah mindset, tapi gaji yang tumbuh lebih lambat dari biaya hidup."
 seoKeywords:
   - "gen z tunda nikah finansial"

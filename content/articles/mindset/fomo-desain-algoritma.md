@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "FOMO itu desain, bukan kelemahanmu"
-seoMetaTitle: "FOMO Bukan Kelemahanmu, Itu Desain Algoritma | TAM"
+seoMetaTitle: "FOMO Bukan Kelemahanmu, Itu Desain Algoritma"
 seoMetaDescription: "64,6% remaja Indonesia mengalami FOMO. Bukan karena lemah, tapi karena algoritma media sosial sengaja didesain menciptakan kecemasan agar kamu terus scroll."
 seoKeywords:
   - "fomo gen z"

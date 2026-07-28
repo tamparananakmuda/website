@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Karier portofolio bukan kebebasan, tapi terpaksa"
-seoMetaTitle: "Karier Portofolio Bukan Kebebasan Gen Z | TAM"
+seoMetaTitle: "Karier Portofolio Bukan Kebebasan Gen Z"
 seoMetaDescription: "63% Gen Z beralih ke gig economy tanpa BPJS dan jaminan sosial. Fleksibilitas yang dijual sebagai kebebasan sebenarnya keputusan terpaksa. Baca analisisnya."
 seoKeywords:
   - "karier portofolio gen z"

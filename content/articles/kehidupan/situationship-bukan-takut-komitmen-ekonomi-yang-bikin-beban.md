@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "refleksi"
 tags: []
 ogHeadline: "Bukan takut komitmen, ekonomi yang bikin komitmen jadi beban"
-seoMetaTitle: "Situationship Bukan Takut Komitmen, Ekonomi yang Beban | TAM"
+seoMetaTitle: "Situationship Bukan Takut Komitmen, Ekonomi yang Beban"
 seoMetaDescription: "63% Gen Z menunda nikah karena biaya hidup. Situationship bukan ketakutan komitmen, tapi respons rasional terhadap ekonomi yang tidak pasti."
 seoKeywords:
   - "situationship gen z Indonesia"

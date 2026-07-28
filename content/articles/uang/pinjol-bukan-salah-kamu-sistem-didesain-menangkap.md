@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Pinjol didesain untuk menangkap kamu"
-seoMetaTitle: "Pinjol Bukan Salah Kamu, Sistemnya yang Didesain Predator | TAM"
+seoMetaTitle: "Pinjol Bukan Salah Kamu, Sistemnya yang Didesain Predator"
 seoMetaDescription: "60% korban pinjol ilegal adalah Gen Z. Media bilang kurang literasi. Tapi sistemnya yang didesain predator, bukan anak mudanya."
 seoKeywords:
   - "pinjol gen z"

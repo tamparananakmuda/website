@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "data"
 tags: []
 ogHeadline: "81% Indonesia enggan AI. Boom global, kita mundur."
-seoMetaTitle: "81% Enggan AI: Boom Global, Indonesia Mundur | TAM"
+seoMetaTitle: "81% Enggan AI: Boom Global, Indonesia Mundur"
 seoMetaDescription: "81,8% warga Indonesia tidak akses AI pada 2026, naik dari 72,7%. Boom global tapi Indonesia mundur. Penetrasi internet 81% tapi literasi AI rendah."
 seoKeywords:
   - "adopsi AI Indonesia 2026"

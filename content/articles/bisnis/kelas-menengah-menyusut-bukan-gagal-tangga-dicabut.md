@@ -3,7 +3,7 @@ title: "Kelas Menengah Menyusut: Bukan Gagal Naik, Tangganya yang Dicabut"
 slug: "kelas-menengah-menyusut-bukan-gagal-tangga-dicabut"
 excerpt: "Kelas menengah Indonesia turun dari 14,5% (2018) ke 7,1% (2025). Bukan gagal naik, tapi tangga mobilitas sosial yang dicabut perlahan."
 publishedAt: "2026-07-27T10:00:00.000Z"
-status: "scheduled"
+status: "published"
 category: "bisnis"
 subcategory: "bisnis"
 author: "yovie-setiawan"
@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Kelas menengah turun 50% dalam 7 tahun. Kenapa?"
-seoMetaTitle: "Kelas Menengah Menyusut: Bukan Gagal, Tangga Dicabut | TAM"
+seoMetaTitle: "Kelas Menengah Menyusut: Bukan Gagal, Tangga Dicabut"
 seoMetaDescription: "Kelas menengah Indonesia turun dari 14,5% ke 7,1% (2018-2025). Bukan gagal naik, tapi tangga mobilitas sosial yang dicabut perlahan."
 seoKeywords:
   - "kelas menengah Indonesia menyusut"

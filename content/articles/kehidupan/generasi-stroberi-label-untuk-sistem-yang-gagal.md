@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Gen Z stroberi? Bukan buahnya, tanahnya yang rusak"
-seoMetaTitle: "Generasi Stroberi: Label untuk Sistem yang Gagal | TAM"
+seoMetaTitle: "Generasi Stroberi: Label untuk Sistem yang Gagal"
 seoMetaDescription: "Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa masalahnya bukan kelemahan individu, melainkan sistem yang gagal."
 seoKeywords:
   - "generasi stroberi"

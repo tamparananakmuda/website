@@ -1,6 +1,6 @@
 import { marked } from 'marked';
 import { slugify } from '@/lib/utils/slugify';
-import { WhitepaperChartRenderer } from './chart-renderer';
+import { WhitepaperChartRenderer } from '@/components/charts/chart-renderer';
 
 interface ChartConfig {
   type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar' | 'area' | 'grouped-bar' | 'scatter' | 'funnel' | 'treemap';

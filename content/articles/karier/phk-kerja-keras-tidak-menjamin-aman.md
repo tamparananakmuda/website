@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Kerja keras tidak menjamin kamu aman dari PHK"
-seoMetaTitle: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman | TAM"
+seoMetaTitle: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
 seoMetaDescription: "23.470 pekerja kena PHK di 2026, naik 84%. Bukan karena malas. Kerja keras tidak pernah menjamin keamanan. Inilah kenyataan yang perlu kamu lihat."
 seoKeywords:
   - "phk indonesia"

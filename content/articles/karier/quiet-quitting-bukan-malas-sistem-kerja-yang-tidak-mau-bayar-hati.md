@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Quiet quitting bukan malas, sistemnya yang salah"
-seoMetaTitle: "Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Bayar | TAM"
+seoMetaTitle: "Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Bayar"
 seoMetaDescription: "60% Gen Z quiet quitting. Bukan malas, tapi sistem kerja mengeksploitasi tanpa batas. 68% karena work-life balance yang hancur."
 seoKeywords:
   - "quiet quitting gen z Indonesia"

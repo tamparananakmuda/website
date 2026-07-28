@@ -40,22 +40,23 @@ const SIZE_CONFIG = {
     paddingX: 52,
     paddingY: 40,
     rightPaddingX: 36,
-    headlineFont: 40,
+    headlineFont: 44,
     excerptFont: 17,
     episodeNumFont: 72,
     episodeLabelFont: 11,
     seriesTitleFont: 13,
     brandFont: 10,
     metaFont: 10,
-    accentBarWidth: 4,
-    accentBarHeight: 80,
+    accentBarWidth: 3,
+    accentBarHeight: 60,
     progressWidth: 80,
     progressHeight: 2,
-    ruleWidth: 60,
+    ruleWidth: 48,
     ruleHeight: 1,
-    glowOpacity: '06',
+    glowOpacity: '05',
+    dividerOpacity: '15',
     gapBeforeHeadline: 16,
-    gapBeforeExcerpt: 30,
+    gapBeforeExcerpt: 28,
     gapBeforeRule: 24,
   },
   feature: {
@@ -65,22 +66,23 @@ const SIZE_CONFIG = {
     paddingX: 90,
     paddingY: 68,
     rightPaddingX: 60,
-    headlineFont: 72,
+    headlineFont: 80,
     excerptFont: 28,
     episodeNumFont: 140,
     episodeLabelFont: 18,
     seriesTitleFont: 22,
     brandFont: 16,
     metaFont: 14,
-    accentBarWidth: 6,
-    accentBarHeight: 160,
+    accentBarWidth: 4,
+    accentBarHeight: 120,
     progressWidth: 160,
     progressHeight: 3,
-    ruleWidth: 100,
+    ruleWidth: 80,
     ruleHeight: 2,
-    glowOpacity: '04',
+    glowOpacity: '03',
+    dividerOpacity: '10',
     gapBeforeHeadline: 28,
-    gapBeforeExcerpt: 48,
+    gapBeforeExcerpt: 44,
     gapBeforeRule: 40,
   },
 };
@@ -115,14 +117,14 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
 
   return (
     <div style={rootStyle}>
-      {/* Subtle radial glow behind right panel */}
+      {/* Single subtle glow - right panel only */}
       <div style={{
         position: 'absolute',
         top: '0',
         right: '0',
         width: `${cfg.width - cfg.leftWidth}px`,
         height: '100%',
-        backgroundImage: `radial-gradient(ellipse at 50% 45%, ${catColor}${cfg.glowOpacity} 0%, transparent 70%)`,
+        backgroundImage: `radial-gradient(ellipse at 50% 40%, ${catColor}${cfg.glowOpacity} 0%, transparent 65%)`,
         display: 'flex',
         flexShrink: 0,
       }} />
@@ -173,20 +175,20 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           justifyContent: 'center',
           flex: 1,
         }}>
-          {/* Headline - left-aligned, massive, editorial */}
+          {/* Headline - oversized, editorial, dominant */}
           <span style={{
             fontFamily: FONT_DISPLAY,
             fontSize: `${cfg.headlineFont}px`,
-            fontWeight: 700,
+            fontWeight: 800,
             color: COLORS.textPrimary,
-            letterSpacing: '-0.025em',
-            lineHeight: 1.08,
+            letterSpacing: '-0.03em',
+            lineHeight: 1.05,
             textAlign: 'left',
             display: 'flex',
             maxWidth: `${cfg.leftWidth - cfg.paddingX * 2}px`,
             flexShrink: 0,
           }}>
-            {truncate(displayTitle, props.size === 'card' ? 48 : 80)}
+            {truncate(displayTitle, props.size === 'card' ? 44 : 72)}
           </span>
 
           {/* Excerpt - feature only */}
@@ -285,7 +287,7 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           display: 'flex',
         }} />
 
-        {/* Episode number - massive */}
+        {/* Episode number - massive, standalone */}
         <span style={{
           fontFamily: FONT_DISPLAY,
           fontSize: `${cfg.episodeNumFont}px`,
@@ -293,7 +295,7 @@ export function SeriesOgTemplate(props: SeriesTemplateProps): ReactElement {
           color: COLORS.textPrimary,
           lineHeight: 0.9,
           letterSpacing: '-0.05em',
-          marginTop: '20px',
+          marginTop: '24px',
           display: 'flex',
           flexShrink: 0,
         }}>

@@ -33,6 +33,7 @@ export interface ArticleFrontmatter {
   premiumExcerpt: string | null;
   coverImageUrl: string | null;
   coverImageAlt: string | null;
+  updatedAt: string | null;
 }
 
 export interface ParsedArticle {
@@ -77,6 +78,7 @@ export function parseFrontmatter(fileContent: string, fileName: string): ParsedA
       premiumExcerpt: data.premiumExcerpt || null,
       coverImageUrl: data.coverImageUrl || null,
       coverImageAlt: data.coverImageAlt || null,
+      updatedAt: data.updatedAt || null,
     };
 
     return {

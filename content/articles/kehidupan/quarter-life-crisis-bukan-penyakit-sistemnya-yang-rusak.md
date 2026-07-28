@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "tamparan"
 tags: []
 ogHeadline: "Krisis usia 20-an bukan salah kamu"
-seoMetaTitle: "Quarter-Life Crisis Bukan Penyakit, Sistemnya yang Rusak | TAM"
+seoMetaTitle: "Quarter-Life Crisis Bukan Penyakit, Sistemnya yang Rusak"
 seoMetaDescription: "Satu generasi penuh krisis di usia yang sama. Kalau semua orang sakit di tempat yang sama, bukan orangnya yang rusak. Sistemnya yang rusak."
 seoKeywords:
   - "quarter life crisis"

@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "tamparan"
 tags: []
 ogHeadline: "Belanja saat stres bukan self-care, itu gejala menyerah"
-seoMetaTitle: "Doom Spending Bukan Self-Care, Itu Gejala Menyerah | TAM"
+seoMetaTitle: "Doom Spending Bukan Self-Care, Itu Gejala Menyerah"
 seoMetaDescription: "Belanja impulsif bukan self-reward. Itu reaksi rasional terhadap sistem yang terasa tidak rasional. Tapi reaksi yang tidak akan pernah mengubah sistem."
 seoKeywords:
   - "doom spending gen z"

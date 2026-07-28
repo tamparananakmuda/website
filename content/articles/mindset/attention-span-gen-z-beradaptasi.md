@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "data"
 tags: []
 ogHeadline: "Otakmu beradaptasi, bukan rusak"
-seoMetaTitle: "Attention Span Gen Z Bukan Rusak, Otakmu Beradaptasi | TAM"
+seoMetaTitle: "Attention Span Gen Z Bukan Rusak, Otakmu Beradaptasi"
 seoMetaDescription: "68% Gen Z mengalami gangguan fokus. Bukan otak rusak, tapi adaptasi terhadap lingkungan digital yang didesain untuk membuat mereka kecanduan."
 seoKeywords:
   - "attention span gen z"

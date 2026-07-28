@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Mindsetmu bukan masalah, sistemnya"
-seoMetaTitle: "Growth Mindset Dipakai untuk Gaslighting Kamu | TAM"
+seoMetaTitle: "Growth Mindset Dipakai untuk Gaslighting Kamu"
 seoMetaDescription: "Growth mindset dijual sebagai solusi atas segalanya. Tapi ketika dipakai menyalahkan individu atas kegagalan sistem, ia berubah menjadi alat gaslighting."
 seoKeywords:
   - "growth mindset indonesia"

@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "tamparan"
 tags: []
 ogHeadline: "Omzet jutaan tapi kas kosong. Kenapa?"
-seoMetaTitle: "Omzet Bukan Untung: Bisnis Gen Z Kosong di Kas | TAM"
+seoMetaTitle: "Omzet Bukan Untung: Bisnis Gen Z Kosong di Kas"
 seoMetaDescription: "Bisnis Gen Z terlihat sukses di media sosial: omzet jutaan, pesanan bludak. Tapi saat dihitung, sisa laba minus. Omzet bukan untung."
 seoKeywords:
   - "omzet vs laba bisnis gen z"

@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "refleksi"
 tags: []
 ogHeadline: "Bangun pagi tapi tetap kosong? Bukan sekadar capek"
-seoMetaTitle: "Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong | TAM"
+seoMetaTitle: "Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong"
 seoMetaDescription: "Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional exhaustion. Gen Z paling rentan mengalaminya."
 seoKeywords:
   - "emotional exhaustion gen z"

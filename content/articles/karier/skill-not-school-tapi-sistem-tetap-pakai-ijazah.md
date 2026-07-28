@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Skill penting, tapi lowongan tetap minta ijazah"
-seoMetaTitle: "Skill Not School: Tapi Sistem Tetap Pakai Ijazah | TAM"
+seoMetaTitle: "Skill Not School: Tapi Sistem Tetap Pakai Ijazah"
 seoMetaDescription: "Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1. Sistem tetap menuntut ijazah yang kamu ambil hutang untuk dapatkan."
 seoKeywords:
   - "skill not school Indonesia"

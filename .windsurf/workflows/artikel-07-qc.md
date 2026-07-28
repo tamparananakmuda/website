@@ -172,6 +172,35 @@ if (foundDiff.length) issues.push('Diff-anchored: ' + foundDiff.join(', '));
 if (excerpt.length > 160) issues.push('Excerpt: ' + excerpt.length + ' chars (max 160)');
 const seoDesc = a.seo_meta_description || '';
 if (seoDesc.length > 160) issues.push('SEO description: ' + seoDesc.length + ' chars (max 160)');
+// SEO title: no | TAM suffix
+const seoTitle = a.seo_meta_title || '';
+if (/\|\s*TAM\s*$/i.test(seoTitle)) issues.push('SEO title has | TAM suffix: remove it');
+// Duplicate sentence check
+const allSentences = body.split(/[.!?]\s+/).map(s => s.trim().toLowerCase().replace(/[^a-z0-9\s]/g, '')).filter(s => s.length > 20);
+const seen = {};
+const dups = [];
+for (const s of allSentences) { if (seen[s]) dups.push(s.substring(0, 60)); else seen[s] = true; }
+if (dups.length > 0) issues.push('Duplicate sentences: ' + dups.length + ' (e.g. "' + dups[0] + '...")');
+// Math consistency: check ratio claims against raw numbers
+const ratioPatterns = body.match(/(\d+[.,]?\d*)\s*(juta|miliar|triliun|ribu)\s*(?:dari|dari total)\s*(\d+[.,]?\d*)\s*(juta|miliar|triliun|ribu)/gi) || [];
+for (const rp of ratioPatterns) {
+  const nums = rp.match(/\d+[.,]?\d*/g);
+  const units = rp.match(/(juta|miliar|triliun|ribu)/gi);
+  if (nums && nums.length >= 2 && units && units.length >= 2) {
+    const a1 = parseFloat(nums[0].replace(',', '.'));
+    const a2 = parseFloat(nums[1].replace(',', '.'));
+    const u1 = units[0].toLowerCase(); const u2 = units[1].toLowerCase();
+    const mult = { juta: 1e6, miliar: 1e9, triliun: 1e12, ribu: 1e3 };
+    const v1 = a1 * (mult[u1] || 1); const v2 = a2 * (mult[u2] || 1);
+    if (v2 > 0) {
+      const pct = (v1 / v2) * 100;
+      const nearby = body.substring(Math.max(0, body.indexOf(rp) - 200), body.indexOf(rp) + rp.length + 200);
+      if (nearby.match(/dua dari tiga|2 dari 3/i) && pct < 60) issues.push('Math mismatch: "2 dari 3" (~67%) but ' + a1 + ' ' + u1 + '/' + a2 + ' ' + u2 + ' = ' + pct.toFixed(1) + '%');
+      if (nearby.match(/tiga dari lima|3 dari 5/i) && Math.abs(pct - 60) > 15) issues.push('Math mismatch: "3 dari 5" (60%) but actual = ' + pct.toFixed(1) + '%');
+      if (nearby.match(/setengah|half/i) && pct < 45) issues.push('Math mismatch: "setengah" but actual = ' + pct.toFixed(1) + '%');
+    }
+  }
+}
 console.log('=== QC AUDIT ===');
 console.log('Word count:', wc, '| h2:', h2, '| internal links:', il, '| sources:', refs.length);
 if (issues.length) { console.log('\nFAIL (' + issues.length + '):'); issues.forEach(i => console.log('  - ' + i)); process.exit(1); }
@@ -299,6 +328,9 @@ Jika score < 9: fix sebelum lanjut ke 08-humanizer.
 - [ ] Formatting markdown benar (h2/h3, no h1, min 3 h2)
 - [ ] Readability OK (word count 1.000-2.500, avg paragraph 60-100, max 120)
 - [ ] `readingTime` di-set di frontmatter (bukan 1)
+- [ ] SEO title tidak ada suffix "| TAM"
+- [ ] Tidak ada kalimat duplikat (duplicate sentence check)
+- [ ] Math consistency: rasio/fraksi cocok dengan angka raw (e.g. "2 dari 3" = ~67%, bukan 58%)
 - [ ] QC audit CLEAN (0 S1, 0 S2, max 3 S3)
 - [ ] Source Quality Audit: 6 checks passed
 - [ ] Citation Density: min 2 per 1.000 kata, 100% data attribution

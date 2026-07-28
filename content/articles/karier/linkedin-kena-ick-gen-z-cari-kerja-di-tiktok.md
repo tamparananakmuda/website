@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Gen Z cari kerja di TikTok, bukan LinkedIn"
-seoMetaTitle: "LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok | TAM"
+seoMetaTitle: "LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok"
 seoMetaDescription: "Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke TikTok dan Instagram, di mana informasi karier terasa lebih nyata."
 seoKeywords:
   - "gen z cari kerja"

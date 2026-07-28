@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Bukan kurang disiplin, otakmu dibajak algoritma"
-seoMetaTitle: "Detoks Dopamin: Algoritma yang Membuatmu Kecanduan | TAM"
+seoMetaTitle: "Detoks Dopamin: Algoritma yang Membuatmu Kecanduan"
 seoMetaDescription: "41% Gen Z Indonesia batasi notifikasi. Detoks dopamin bukan soal disiplin, algoritma media sosial sengaja didesain membuat kamu kecanduan."
 seoKeywords:
   - "detoks dopamin gen z"

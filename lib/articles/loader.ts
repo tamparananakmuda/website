@@ -117,7 +117,7 @@ function readAllFiles(): RawArticle[] {
       coverImageUrl: fm.coverImageUrl,
       coverImageAlt: fm.coverImageAlt,
       fileName: file,
-      updatedAt: fm.publishedAt,
+      updatedAt: fm.updatedAt || fm.publishedAt,
       fileMtime: statSync(filePath).mtime.toISOString(),
     });
   }
@@ -156,7 +156,7 @@ function rawToPost(raw: RawArticle): Post {
     seoMetaDescription: raw.seoMetaDescription,
     seoOgImageUrl: null,
     createdAt: raw.publishedAt,
-    updatedAt: raw.fileMtime,
+    updatedAt: raw.updatedAt,
     isSponsored: raw.isSponsored,
     sponsorName: raw.sponsorName,
     sponsorUrl: raw.sponsorUrl,
@@ -411,7 +411,7 @@ export async function getAllPostsForOG(): Promise<Post[]> {
 
 export async function getPublishedPostsForSitemap(): Promise<{ slug: string; updatedAt: string | null }[]> {
   const articles = await getPublishedArticles();
-  return articles.map((a) => ({ slug: a.slug, updatedAt: a.fileMtime }));
+  return articles.map((a) => ({ slug: a.slug, updatedAt: a.updatedAt }));
 }
 
 export async function countPublishedPostsInSeries(seriesSlug: string): Promise<number> {

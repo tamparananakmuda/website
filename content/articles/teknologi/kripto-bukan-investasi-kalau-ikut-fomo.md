@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "kontra-narasi"
 tags: []
 ogHeadline: "Beli kripto karena FOMO? Itu spekulasi"
-seoMetaTitle: "Kripto Bukan Investasi Kalau Ikut FOMO | TAM"
+seoMetaTitle: "Kripto Bukan Investasi Kalau Ikut FOMO"
 seoMetaDescription: "60 persen pasar kripto Indonesia diisi Gen Z. Tapi OJK ingatkan: partisipasi tinggi belum berarti literasi tinggi. FOMO bukan strategi investasi."
 seoKeywords:
   - "investasi kripto gen z"

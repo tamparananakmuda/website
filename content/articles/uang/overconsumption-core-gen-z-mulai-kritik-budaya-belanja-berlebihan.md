@@ -12,7 +12,7 @@ seriesOrder: null
 povTag: "refleksi"
 tags: []
 ogHeadline: "Gen Z mulai kritik budaya belanja berlebihan"
-seoMetaTitle: "Overconsumption Core: Gen Z Kritik Belanja Berlebihan | TAM"
+seoMetaTitle: "Overconsumption Core: Gen Z Kritik Belanja Berlebihan"
 seoMetaDescription: "Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z sendiri."
 seoKeywords:
   - "overconsumption core"
