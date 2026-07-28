@@ -4,6 +4,8 @@ import { getCategoriesForSitemap, getSubcategoriesForSitemap } from '@/lib/db/qu
 import { getPublishedWhitepapersForSitemap } from '@/lib/db/queries/whitepapers';
 import { getPublishedSocialPostsForSitemap } from '@/lib/db/queries/social-posts';
 
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
