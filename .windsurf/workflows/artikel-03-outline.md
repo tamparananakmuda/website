@@ -210,6 +210,31 @@ Untuk setiap section di outline, cek:
 
 Jika section tidak pass: tambah definisi, pindah data ke narasi, atau rewrite heading.
 
+## Chart Placement (jika ada chart plan dari research)
+
+Jika `/artikel-02-research` sudah rencanakan chart, tentukan posisi exact di outline.
+
+### Aturan penempatan
+
+- Chart masuk di section **Data/Analysis**, bukan di Hook atau Conclusion
+- Chart ditempatkan **setelah** 1-2 paragraf narasi yang menyebut data yang sama (data di chart HARUS juga di narasi)
+- Max 1-2 chart per artikel
+- Setiap chart di outline tandai dengan: `[CHART: type, judul, section]`
+
+### Contoh di outline
+
+```
+## Data/Analysis
+### TPT per Jenjang Pendidikan
+- Narasi: "BPS 2024 mencatat TPT SMK mencapai 9.01%, tertinggi..."
+- [CHART: bar, "TPT per Jenjang Pendidikan", section ini]
+- Narasi: "Bandingkan dengan S1 yang hanya 5.25%..."
+
+### Trend Gaji Awal S1
+- Narasi: "Gaji awal S1 turun dari Rp4.96 juta ke Rp4.35 juta..."
+- [CHART: line, "Gaji Awal S1: Trend Menurun", section ini]
+```
+
 ## Checklist
 
 - [ ] Struktur H2-H4 lengkap (min 3 h2)
@@ -231,6 +256,7 @@ Jika section tidak pass: tambah definisi, pindah data ke narasi, atau rewrite he
 - [ ] Schema markup direncanakan (Article + FAQ jika ada)
 - [ ] AI SEO/AEO consideration dicek
 - [ ] AI Extractability Check: setiap section pass 4 checks
+- [ ] Chart Placement: jika ada chart plan, posisi chart sudah ditentukan di outline
 - [ ] Outline Quality Score: > 8 (dari 12)
 
 ## Next

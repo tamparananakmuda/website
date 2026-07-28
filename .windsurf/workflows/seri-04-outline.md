@@ -131,6 +131,7 @@ Setiap part otomatis dapat Article schema. Tambahan:
 - [ ] Cross-Part Flow Audit: all pass
 - [ ] Recap-Teaser Accuracy Pre-check: all pass
 - [ ] AI Extractability Check per part
+- [ ] Chart Placement: jika ada chart plan dari research, posisi chart sudah ditentukan per part (lihat `/artikel-03-outline` untuk aturan penempatan)
 - [ ] Series Outline Quality Score: min 9 (dari 12)
 
 ## Section Weight Balance

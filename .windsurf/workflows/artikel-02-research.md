@@ -204,6 +204,41 @@ Identifikasi bagian artikel yang AI engines akan cite:
 
 Tandai di research: bagian mana yang akan di-format untuk AI citation.
 
+## Chart Planning (jika ada data yang bisa divisualisasi)
+
+Saat research, identifikasi data yang punya potensi untuk chart. Tidak semua artikel butuh chart, tapi kalau ada 3+ data points yang lebih jelas divisualisasi, rencanakan dari sini.
+
+### Chart Selection Guide
+
+| Data type | Chart type | Syntax | Contoh TAM |
+|-----------|-----------|--------|------------|
+| Perbandingan kategori | Bar | `chart:bar` | TPT per jenjang |
+| Trend temporal | Line | `chart:line` | Gaji 2020-2025 |
+| Trend dengan magnitude | Area | `chart:area` | Utang konsumer naik |
+| Proporsi/komposisi | Pie | `chart:pie` | Komposisi PT |
+| Before/after multi-kategori | Grouped Bar | `chart:grouped-bar` | TPT 2020 vs 2025 per jenjang |
+| Multi-series stacked | Stacked Bar | `chart:stacked-bar` | Komposisi belanja per kategori |
+| Korelasi 2 variabel | Scatter | `chart:scatter` | Jam kerja vs kepuasan |
+| Conversion/dropout | Funnel | `chart:funnel` | SMA → kuliah → lulus → kerja |
+| Hierarchical proportion | Treemap | `chart:treemap` | Alokasi APBN |
+| Multi-dimension comparison | Radar | `chart:radar` | KKNI vs MQF |
+
+### Aturan
+
+- **Tidak wajib.** Chart hanya jika data 3+ points dan lebih jelas divisualisasi daripada di narasi
+- Max 1-2 chart per artikel
+- Data untuk chart harus dari source yang sudah terverifikasi (T1/T2)
+- Catat di research: data apa, chart type apa, di section mana nanti masuk
+- Lihat `/artikel-04-draft` untuk syntax dan contoh JSON config
+
+### Chart Planning Template
+
+```markdown
+### Chart Plan (jika ada)
+- Chart 1: type=bar, data=TPT per jenjang (BPS 2024), masuk di section "Data/Analysis"
+- Chart 2: type=line, data=gaji trend (BPS 2025), masuk di section "Data/Analysis"
+```
+
 ## Checklist
 
 - [ ] Keyword research selesai (3-8 long-tail keyword, via Google Suggest/PAA/Related)
@@ -218,6 +253,7 @@ Tandai di research: bagian mana yang akan di-format untuk AI citation.
 - [ ] SERP Feature Analysis: 6 features dicek
 - [ ] AI SEO/AEO check: kompetitor cited di AI search?
 - [ ] AI Citation Opportunity Map: 2+ opportunity teridentifikasi
+- [ ] Chart Planning: jika ada data 3+ points, chart type dan section sudah direncanakan
 - [ ] Research Quality Score: > 8 (dari 12)
 - [ ] Template output research diisi
 

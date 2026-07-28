@@ -129,6 +129,7 @@ SOURCE REFERENCES:
 - [ ] Data Freshness Protocol: semua data within max umur
 - [ ] Cross-Part Data Overlap Audit: no kontradiksi
 - [ ] AI Citation Opportunity Map per part
+- [ ] Chart Planning: jika ada data 3+ points per part, chart type dan section sudah direncanakan (lihat `/artikel-02-research` untuk Chart Selection Guide)
 - [ ] Series Research Quality Score: min 9 (dari 12)
 
 ## Source Hierarchy System
