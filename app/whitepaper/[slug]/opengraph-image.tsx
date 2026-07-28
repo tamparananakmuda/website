@@ -47,6 +47,8 @@ export default async function Image({ params }: Props) {
         excerpt={wp.summary || wp.subtitle || undefined}
         publishedAt={wp.publishedAt}
         coverImageUrl={wp.coverImageUrl}
+        ogHeadline={wp.ogHeadline || undefined}
+        reportCode={wp.reportCode || undefined}
         size="og"
       />
     ),

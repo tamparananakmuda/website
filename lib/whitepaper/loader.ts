@@ -21,6 +21,13 @@ export interface WhitepaperPost {
   status: string;
   publishedAt: string;
   updatedAt: string;
+  reportCode: string | null;
+  reportYear: number | null;
+  reportSeries: string | null;
+  isAnnualReport: boolean;
+  keyFindings: string[];
+  dataSources: string[];
+  ogHeadline: string | null;
 }
 
 interface RawWhitepaper {
@@ -38,6 +45,13 @@ interface RawWhitepaper {
   publishedAt: string;
   updatedAt: string;
   fileMtime: string;
+  reportCode: string | null;
+  reportYear: number | null;
+  reportSeries: string | null;
+  isAnnualReport: boolean;
+  keyFindings: string[];
+  dataSources: string[];
+  ogHeadline: string | null;
 }
 
 function readDirRecursive(dir: string): string[] {
@@ -78,6 +92,13 @@ function readAllWhitepapers(): RawWhitepaper[] {
       publishedAt: fm.publishedAt || new Date().toISOString(),
       updatedAt: fm.publishedAt || new Date().toISOString(),
       fileMtime: statSync(filePath).mtime.toISOString(),
+      reportCode: fm.reportCode || null,
+      reportYear: fm.reportYear || null,
+      reportSeries: fm.reportSeries || null,
+      isAnnualReport: fm.isAnnualReport || false,
+      keyFindings: fm.keyFindings || [],
+      dataSources: fm.dataSources || [],
+      ogHeadline: fm.og_headline || null,
     });
   }
 
@@ -111,14 +132,51 @@ async function toPost(raw: RawWhitepaper): Promise<WhitepaperPost> {
     status: raw.status,
     publishedAt: raw.publishedAt,
     updatedAt: raw.updatedAt,
+    reportCode: raw.reportCode,
+    reportYear: raw.reportYear,
+    reportSeries: raw.reportSeries,
+    isAnnualReport: raw.isAnnualReport,
+    keyFindings: raw.keyFindings,
+    dataSources: raw.dataSources,
+    ogHeadline: raw.ogHeadline,
   };
 }
 
 export async function getPublishedWhitepapers(limit = 20): Promise<WhitepaperPost[]> {
   const all = readAllWhitepapers()
     .filter((w) => w.status === 'published')
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .sort((a, b) => {
+      if (a.reportCode && b.reportCode) return a.reportCode.localeCompare(b.reportCode);
+      if (a.reportCode && !b.reportCode) return -1;
+      if (!a.reportCode && b.reportCode) return 1;
+      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    })
     .slice(0, limit);
+
+  return Promise.all(all.map(toPost));
+}
+
+export async function getAnnualReports(year?: number): Promise<WhitepaperPost[]> {
+  const all = readAllWhitepapers()
+    .filter((w) => w.status === 'published' && w.isAnnualReport)
+    .filter((w) => year ? w.reportYear === year : true)
+    .sort((a, b) => (a.reportCode || '').localeCompare(b.reportCode || ''));
+
+  return Promise.all(all.map(toPost));
+}
+
+export async function getStandaloneWhitepapers(): Promise<WhitepaperPost[]> {
+  const all = readAllWhitepapers()
+    .filter((w) => w.status === 'published' && !w.isAnnualReport)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+  return Promise.all(all.map(toPost));
+}
+
+export async function getWhitepapersByYear(year: number): Promise<WhitepaperPost[]> {
+  const all = readAllWhitepapers()
+    .filter((w) => w.status === 'published' && w.reportYear === year)
+    .sort((a, b) => (a.reportCode || '').localeCompare(b.reportCode || ''));
 
   return Promise.all(all.map(toPost));
 }
@@ -137,12 +195,22 @@ export async function getPublishedWhitepaperBySlug(slug: string): Promise<Whitep
 }
 
 export async function getRelatedWhitepapers(excludeSlug: string, limit = 3): Promise<WhitepaperPost[]> {
-  const all = readAllWhitepapers()
-    .filter((w) => w.status === 'published' && w.slug !== excludeSlug)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  const all = readAllWhitepapers().filter((w) => w.status === 'published');
+
+  const current = all.find((w) => w.slug === excludeSlug);
+  const currentYear = current?.reportYear;
+
+  const sorted = all
+    .filter((w) => w.slug !== excludeSlug)
+    .sort((a, b) => {
+      const aSameYear = currentYear && a.reportYear === currentYear ? 0 : 1;
+      const bSameYear = currentYear && b.reportYear === currentYear ? 0 : 1;
+      if (aSameYear !== bSameYear) return aSameYear - bSameYear;
+      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    })
     .slice(0, limit);
 
-  return Promise.all(all.map(toPost));
+  return Promise.all(sorted.map(toPost));
 }
 
 export async function getPublishedWhitepapersForSitemap(): Promise<{ slug: string; updatedAt: string }[]> {

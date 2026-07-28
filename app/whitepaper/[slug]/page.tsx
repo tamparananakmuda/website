@@ -8,6 +8,9 @@ import { ShareButtons } from '@/components/share-buttons';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { ArticleSchema } from '@/components/schema/article-schema';
 import { FileText, Clock, Download, ArrowLeft, ArrowRight, BarChart3 } from 'lucide-react';
+import { ReportBadge } from '@/components/report-badge';
+import { KeyFindings } from '@/components/key-findings';
+import { DataSources } from '@/components/data-sources';
 
 interface WhitepaperPageProps {
   params: { slug: string };
@@ -102,15 +105,19 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
             className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
           >
             <ArrowLeft size={15} />
-            Semua Whitepaper
+            {wp.isAnnualReport ? 'Semua TAM Report' : 'Semua Whitepaper'}
           </Link>
 
           {/* Badges */}
           <div className="mb-6 flex items-center gap-2">
-            <span className="inline-flex items-center rounded-full border border-amber-500/20 bg-amber-500/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400/80">
-              <BarChart3 size={12} className="mr-1" />
-              Whitepaper
-            </span>
+            {wp.isAnnualReport && wp.reportCode ? (
+              <ReportBadge reportCode={wp.reportCode} reportYear={wp.reportYear || undefined} size="md" />
+            ) : (
+              <span className="inline-flex items-center rounded-full border border-amber-500/20 bg-amber-500/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400/80">
+                <BarChart3 size={12} className="mr-1" />
+                Whitepaper
+              </span>
+            )}
             {wp.readingTime && (
               <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-white/40">
                 <Clock size={13} />
@@ -170,19 +177,10 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
         </div>
       </section>
 
-      {/* Summary box */}
-      {wp.summary && (
-        <section className="mx-auto max-w-3xl px-4 pt-12 md:pt-16">
-          <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-500">
-              Ringkasan
-            </p>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {wp.summary}
-            </p>
-          </div>
-        </section>
-      )}
+      {/* Key Findings box */}
+      <section className="mx-auto max-w-3xl px-4 pt-12 md:pt-16">
+        <KeyFindings findings={wp.keyFindings} summary={wp.summary} />
+      </section>
 
       {/* Content */}
       <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
@@ -197,11 +195,16 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
         </div>
       </div>
 
+      {/* Data Sources */}
+      <div className="mx-auto max-w-3xl px-4">
+        <DataSources sources={wp.dataSources} />
+      </div>
+
       {/* Related */}
       {related && related.length > 0 && (
         <section className="mx-auto max-w-5xl px-4 py-16 md:py-20">
           <h2 className="mb-8 font-display text-xl font-bold text-foreground">
-            Whitepaper lainnya
+            {wp.isAnnualReport ? 'TAM Report lainnya' : 'Whitepaper lainnya'}
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {related.map((r) => (
@@ -212,10 +215,14 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
               >
                 <div className="flex flex-1 flex-col p-5">
                   <div className="mb-3 flex items-center gap-2">
-                    <span className="inline-flex items-center rounded-full border border-amber-500/15 bg-amber-500/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-600">
-                      <FileText size={10} className="mr-1" />
-                      Whitepaper
-                    </span>
+                    {r.isAnnualReport && r.reportCode ? (
+                      <ReportBadge reportCode={r.reportCode} reportYear={r.reportYear || undefined} size="sm" />
+                    ) : (
+                      <span className="inline-flex items-center rounded-full border border-amber-500/15 bg-amber-500/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-600">
+                        <FileText size={10} className="mr-1" />
+                        Whitepaper
+                      </span>
+                    )}
                     {r.readingTime && (
                       <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
                         <Clock size={12} />

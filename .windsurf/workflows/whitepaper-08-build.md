@@ -30,11 +30,21 @@ console.log('SLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG A
 
 ## Whitepaper frontmatter fields
 
+**Standard fields:**
 - `title`, `slug`, `subtitle`, `summary`
 - `coverImageUrl` (null jika pakai OG image dynamic)
 - `author` (default: 'TAMPARAN ANAK MUDA'), `downloadUrl`
 - `readingTime` (integer, default 10), `tags` (array)
 - `status` ('draft' atau 'published'), `publishedAt` (ISO date string)
+- `og_headline` (hook pendek untuk OG image, max 50 char, berbeda dari title)
+
+**TAM Report fields (untuk annual reports):**
+- `reportCode` (format: `TAM-{YEAR}-{NUMBER}`, contoh: `TAM-2026-10`)
+- `reportYear` (integer, contoh: 2026)
+- `reportSeries` (string, nama seri, contoh: `State of Indonesian Youth`)
+- `isAnnualReport` (boolean, default: false)
+- `keyFindings` (array string, 3-5 bullet points untuk Key Findings box)
+- `dataSources` (array string, sumber data untuk Data Sources section)
 
 ## E-E-A-T Frontmatter Verification
 
@@ -86,6 +96,13 @@ const frontmatter = [
   'tags: ' + JSON.stringify(wp.tags || []),
   'status: ' + JSON.stringify(wp.status === 'scheduled' ? 'draft' : (wp.status || 'published')),
   'publishedAt: ' + JSON.stringify(wp.published_at),
+  wp.og_headline ? 'og_headline: ' + JSON.stringify(wp.og_headline) : 'og_headline: ""',
+  wp.report_code ? 'reportCode: ' + JSON.stringify(wp.report_code) : 'reportCode: null',
+  wp.report_year ? 'reportYear: ' + wp.report_year : 'reportYear: null',
+  wp.report_series ? 'reportSeries: ' + JSON.stringify(wp.report_series) : 'reportSeries: null',
+  'isAnnualReport: ' + (wp.is_annual_report || false),
+  'keyFindings: ' + JSON.stringify(wp.key_findings || []),
+  'dataSources: ' + JSON.stringify(wp.data_sources || []),
 ].join('\n');
 
 const fileContent = '---\n' + frontmatter + '\n---\n\n' + wp.body + '\n';
@@ -179,8 +196,10 @@ console.log('All checks passed.');
 
 - [ ] Slug uniqueness dicek (file tidak exists)
 - [ ] File `content/whitepaper/SLUG.md` created
-- [ ] Frontmatter lengkap dan valid
+- [ ] Frontmatter lengkap dan valid (standard + TAM Report fields jika annual report)
 - [ ] E-E-A-T frontmatter: author, publishedAt, summary, tags
+- [ ] `og_headline` diisi (hook pendek, berbeda dari title, max 50 char)
+- [ ] TAM Report fields: `reportCode`, `reportYear`, `isAnnualReport`, `keyFindings`, `dataSources` (jika annual report)
 - [ ] AI SEO/AEO: semantic headings, citable passages, statistical formatting, front-loaded thesis
 - [ ] Methodology section ada (jika original research)
 - [ ] Limitations section ada dan explicit

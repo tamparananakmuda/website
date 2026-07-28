@@ -105,6 +105,35 @@ Lihat `/whitepaper-05-draft` untuk contoh lengkap JSON config per chart type.
 5. Tambahkan type ke `ChartConfig` interface di `whitepaper-content.tsx`
 6. Update regex di `splitContent()` jika type baru punya nama dengan karakter khusus
 
+## TAM Report Visual Elements
+
+Untuk whitepaper dengan `isAnnualReport: true`, ada 3 komponen visual tambahan yang otomatis render di detail page:
+
+### Report Badge
+- **Component:** `components/report-badge.tsx`
+- **Display:** `TAM Report {year} . {number}` dengan monospace font, amber accent
+- **Placement:** Hero section (mengganti badge "Whitepaper" generik) + related cards
+- **Source:** `reportCode` field dari frontmatter (format: `TAM-{YEAR}-{NUMBER}`)
+
+### Key Findings Box
+- **Component:** `components/key-findings.tsx`
+- **Display:** Amber-tinted box dengan BarChart3 icon, bullet list findings
+- **Placement:** Antara hero dan content body (mengganti summary box generik)
+- **Source:** `keyFindings` array dari frontmatter (3-5 bullet points)
+- **Fallback:** Jika `keyFindings` kosong, tampilkan `summary` sebagai fallback
+
+### Data Sources Section
+- **Component:** `components/data-sources.tsx`
+- **Display:** Chip-style tags dengan Database icon, muted styling
+- **Placement:** Setelah share buttons, sebelum related section
+- **Source:** `dataSources` array dari frontmatter
+- **Conditional:** Hanya render jika array tidak kosong
+
+### OG Image untuk TAM Report
+- **Eyebrow override:** Jika `reportCode` ada, OG image eyebrow menampilkan report code (monospace, amber) alih-alih "WHITEPAPER"
+- **og_headline:** Pass `og_headline` dari frontmatter ke `OgTemplate` sebagai hook headline
+- **File:** `app/whitepaper/[slug]/opengraph-image.tsx`
+
 ## Cover Page Template (jika PDF download)
 
 ```

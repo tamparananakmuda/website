@@ -328,7 +328,7 @@ Tujuan: pastikan whitepaper baru tidak overlap dengan existing, dan bisa di-link
 ## Template Output Ide
 
 ```markdown
-## Ide Whitepaper
+## Ide Whitepaper / TAM Report
 
 **Judul working:** [Judul sementara]
 **Slug:** slug-whitepaper-kebab-case
@@ -342,6 +342,15 @@ Tujuan: pastikan whitepaper baru tidak overlap dengan existing, dan bisa di-link
 **Angle test 2:** [Jawaban: kalau hapus nama TAM, pembaca tahu ini TAM?]
 **Cluster:** [Whitepaper/artikel existing yang relevan untuk internal linking]
 **Estimasi word count:** [3.000-10.000 kata]
+
+### TAM Report Classification (jika annual report)
+**Report code:** TAM-{YEAR}-{NUMBER} (contoh: TAM-2026-01)
+**Report year:** [tahun]
+**Report series:** [nama seri, contoh: "State of Indonesian Youth"]
+**Is annual report:** true/false
+**Key findings (3-5):** [bullet points untuk Key Findings box]
+**Data sources:** [array sumber data untuk Data Sources section]
+**og_headline:** [hook pendek untuk OG image, max 50 char, berbeda dari title]
 
 ### Problem Framing (5 lapis)
 1. Surface Problem: [gejala]

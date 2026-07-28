@@ -23,6 +23,7 @@ export interface TemplateProps {
   handle?: string;
   editionNumber?: number;
   ogHeadline?: string;
+  reportCode?: string;
 }
 
 type SizeConfig = {
@@ -875,15 +876,22 @@ export function OgTemplate(props: TemplateProps): ReactElement {
               flexShrink: 0,
             }}>
               <span style={{
-                fontFamily: FONT_DISPLAY,
+                fontFamily: props.reportCode ? FONT_MONO : FONT_DISPLAY,
                 fontSize: `${cfg.categoryFont}px`,
                 fontWeight: 700,
-                color: categoryColor,
-                letterSpacing: '0.12em',
+                color: props.reportCode ? COLORS.accent : categoryColor,
+                letterSpacing: props.reportCode ? '0.08em' : '0.12em',
                 textTransform: 'uppercase',
                 display: 'flex',
               }}>
-                {(props.category || 'ARTIKEL')}
+                {props.reportCode
+                  ? (() => {
+                      const parts = props.reportCode!.split('-');
+                      const y = parts.length >= 2 ? parts[1] : '';
+                      const n = parts.length >= 3 ? parts[2] : '';
+                      return `TAM REPORT ${y}${n ? ' · ' + n : ''}`;
+                    })()
+                  : (props.category || 'ARTIKEL')}
               </span>
             </div>
           )}

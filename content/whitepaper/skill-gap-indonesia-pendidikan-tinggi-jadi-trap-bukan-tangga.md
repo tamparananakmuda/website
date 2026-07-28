@@ -11,6 +11,21 @@ tags: ["pendidikan", "skill gap", "tenaga kerja", "karier", "ekonomi"]
 status: "published"
 publishedAt: "2026-07-28T00:00:00+07:00"
 og_headline: "Kuliah mahal, lulus menganggur, siapa untung?"
+reportCode: "TAM-2026-10"
+reportYear: 2026
+reportSeries: "Skill Gap Indonesia"
+isAnnualReport: true
+keyFindings:
+  - "TPT lulusan S1 Indonesia 5.25%, tertinggi di antara semua jenjang pendidikan"
+  - "91.7% perguruan tinggi Indonesia swasta dengan model bisnis berbasis SPP"
+  - "ROI pendidikan tinggi swasta hanya 5.9 tahun, di bawah threshold investasi sehat"
+  - "Mismatch skill: 74% lulusan bekerja di bidang yang tidak relevan dengan jurusan"
+  - "Sistem insentif PT: produksi gelar > produksi kompetensi, karena akreditasi tidak mengukur employability"
+dataSources:
+  - "BPS Sakernas 2020-2025"
+  - "World Bank Education Statistics"
+  - "Kemendikbudristek Dikti 2024"
+  - "OJK Data Pinjaman Pendidikan 2023"
 ---
 
 ## Ide Whitepaper
