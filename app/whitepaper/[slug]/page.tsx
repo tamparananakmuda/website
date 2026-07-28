@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPublishedWhitepaperBySlug, getRelatedWhitepapers } from '@/lib/db/queries/whitepapers';
 import { TableOfContents } from '@/components/table-of-contents';
+import { MarkdownContent } from '@/components/markdown-content';
 import { ShareButtons } from '@/components/share-buttons';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { ArticleSchema } from '@/components/schema/article-schema';
@@ -186,7 +187,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
       {/* Content */}
       <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <TableOfContents body={wp.body} />
-        <div dangerouslySetInnerHTML={{ __html: wp.bodyHtml }} />
+        <MarkdownContent body={wp.body} />
       </div>
 
       {/* Share */}
