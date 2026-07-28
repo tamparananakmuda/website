@@ -1567,6 +1567,10 @@ Mayoritas orang tua Indonesia percaya bahwa kuliah adalah tangga mobilitas sosia
 
 Data kontekstual: Indonesia punya 4.303 perguruan tinggi per 2025 (Kemendikbudristek, 2025), 91.7% adalah swasta. Setiap tahun, jutaan lulusan S1 masuk pasar kerja. Indonesia spending on education sekitar 20% APBN, salah satu tertinggi di ASEAN (World Bank, 2021).
 
+```chart:pie
+{"title":"Komposisi Perguruan Tinggi Indonesia","subtitle":"Dari 4.303 PT per 2025","source":"Kemendikbudristek, 2025","data":[{"name":"PTS Swasta","value":91.7,"color":"#f4a825"},{"name":"PTN","value":8.3,"color":"#ef4444"}],"donut":true}
+```
+
 Tapi outcome tidak match input. TPT S1 konsisten 5 sampai 6% (BPS, 2024), gaji awal turun, dan ROI PTS rendah. Seperti yang kita bahas di artikel [S1 Rebutan Loker SMK: Pendidikan Tinggi Jadi Trap](/artikel/s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap), fenomena lulusan S1 bersaing dengan SMK untuk pekerjaan yang tidak butuh gelar sudah jadi realitas.
 
 > "Kita sedang menjual mimpi dengan harga Rp150 sampai 220 juta per ijazah (biayakuliah.id, 2024)."
@@ -1638,6 +1642,10 @@ Perbandingan ASEAN:
 | Singapore | WSQ | 2005 | Fully implemented, continuous update |
 | Filipina | PQF | 2012 | Partially implemented |
 
+```chart:radar
+{"title":"KKNI vs MQF: Implementasi Skills Framework","subtitle":"Indonesia vs Malaysia (skala 0-100)","source":"World Bank, 2021 & APEC, 2015","data":[{"metric":"Implementasi","Indonesia":25,"Malaysia":90},{"metric":"Packaging","Indonesia":38,"Malaysia":85},{"metric":"Adopsi Industri","Indonesia":20,"Malaysia":80},{"metric":"Akreditasi Output","Indonesia":15,"Malaysia":75},{"metric":"Tracer Study","Indonesia":10,"Malaysia":70}],"series":[{"key":"Indonesia","name":"Indonesia (KKNI)","color":"#f4a825"},{"key":"Malaysia","name":"Malaysia (MQF)","color":"#ef4444"}]}
+```
+
 Indonesia tertinggal 10+ tahun dari Malaysia, 20 tahun dari Singapore. Bukan karena tidak punya kerangka. KKNI ada di kertas. Tapi implementasi lemah, tidak ada forced timeline, tidak ada accountability.
 
 > "Indonesia punya KKNI sejak 2012. Setelah 13 tahun, implementasi masih 'initial stages' (World Bank, 2021). Hanya 38.4% SKKNI yang terpackage. Malaysia MQF sudah 'fully implemented dan at review stage'. Indonesia tertinggal 10+ tahun."
@@ -1649,6 +1657,10 @@ KKNI adalah jembatan antara dunia pendidikan dan dunia kerja. Tanpa KKNI yang be
 Suharti et al. (2020) menghitung ROI perguruan tinggi di Indonesia menggunakan data IFLS-5. Hasil: ROI PTS swasta hanya 5.9% (Suharti et al., 2020). Bandingkan dengan PTN yang ROI-nya 46.2% (Suharti et al., 2020). Gap ini terjadi karena PTN disubsidi pemerintah, sementara PTS menarik SPP penuh dari mahasiswa.
 
 BPS (2025) melaporkan gaji awal lulusan S1 turun dari Rp4.96 juta (Agustus 2024) ke Rp4.35 juta (Februari 2025). Penurunan Rp610 ribu dalam 6 bulan. Tidak ada indikasi trend akan berbalik.
+
+```chart:line
+{"title":"Gaji Awal Lulusan S1: Trend Menurun","subtitle":"Penurunan Rp610 ribu dalam 6 bulan","source":"BPS, 2025","data":[{"label":"Agu 2024","value":4.96},{"label":"Feb 2025","value":4.35}],"series1Label":"Gaji (Rp juta)","yLabel":"Rp juta","height":280}
+```
 
 Biaya kuliah PTS bervariasi, tapi data biayakuliah.id (2024) menunjukkan range Rp150 sampai 220 juta untuk S1 4 tahun di PTS menengah. Dengan gaji awal Rp4.35 juta, payback period = 7 sampai 8 tahun. Itu jika langsung dapat kerja. Jika menganggur 6 sampai 12 bulan, payback makin panjang.
 
@@ -1673,6 +1685,10 @@ Seperti yang kita bahas di [300 lamaran ditolak: bukan pilih-pilih, sistemnya ya
 ### Counter-Argument: "TPT S1 Lebih Rendah dari SMK"
 
 Kritik yang valid: TPT SMK (9.01%) lebih tinggi dari TPT S1 (5.25%) (BPS, 2024). Artinya S1 masih lebih baik dari SMK secara pengangguran. Pendidikan tinggi tidak gagal.
+
+```chart:bar
+{"title":"Tingkat Pengangguran Terbuka per Jenjang Pendidikan","subtitle":"BPS, 2024","source":"BPS Sakernas, 2024","data":[{"label":"D1-D3","value":2.32,"color":"#22c55e"},{"label":"S1","value":5.25,"color":"#f4a825"},{"label":"SMK","value":9.01,"color":"#ef4444"}],"yLabel":"TPT (%)","height":300}
+```
 
 Benar, S1 lebih baik dari SMK secara TPT. Tapi ini bukan bukti sistem berhasil. Ini bukti sistem SMK lebih rusak.
 
