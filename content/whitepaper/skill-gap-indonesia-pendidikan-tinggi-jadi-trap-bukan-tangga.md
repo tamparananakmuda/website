@@ -1883,6 +1883,8 @@ Malaysia MQF (2007) sudah "fully implemented dan at review stage". Indonesia KKN
 
 Reformasi akreditasi fokus output sudah di-pilot di Malaysia. KKNI forced implementation punya benchmark MQF. Industri onboarding 3 bulan sudah praktik di Singapore. Bukan teori, sudah ada test case.
 
+<!-- END WHITEPAPER CONTENT -->
+
 ---
 
 ### Draft Completion Score (0-15)
@@ -1935,8 +1937,6 @@ Reformasi akreditasi fokus output sudah di-pilot di Malaysia. KKNI forced implem
 - [x] Max 1 exclamation mark
 - [x] Human signature: Conclusion paragraph ("saya melihat teman-teman...")
 - [x] TAM tone: jujur, rasional, berani, tidak menggurui
-
-<!-- END WHITEPAPER CONTENT -->
 
 ---
 
