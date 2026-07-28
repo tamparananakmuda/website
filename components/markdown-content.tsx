@@ -3,7 +3,7 @@ import { slugify } from '@/lib/utils/slugify';
 import { WhitepaperChartRenderer } from '@/components/charts/chart-renderer';
 
 interface ChartConfig {
-  type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar';
+  type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar' | 'area' | 'grouped-bar' | 'scatter' | 'funnel' | 'treemap';
   title?: string;
   subtitle?: string;
   source?: string;
@@ -61,7 +61,7 @@ function parseChartBlock(block: string): ChartConfig | null {
 
 function splitContent(body: string): ContentSegment[] {
   const segments: ContentSegment[] = [];
-  const chartBlockRegex = /```chart:(bar|line|pie|stacked-bar|radar)\n([\s\S]*?)```/g;
+  const chartBlockRegex = /```chart:(bar|line|pie|stacked-bar|radar|area|grouped-bar|scatter|funnel|treemap)\n([\s\S]*?)```/g;
   let lastIndex = 0;
   let match;
 
