@@ -84,14 +84,24 @@ function readAllWhitepapers(): RawWhitepaper[] {
   return whitepapers;
 }
 
+function extractPublishedContent(body: string): string {
+  const startMarker = '<!-- START WHITEPAPER CONTENT -->';
+  const endMarker = '<!-- END WHITEPAPER CONTENT -->';
+  const startIdx = body.indexOf(startMarker);
+  const endIdx = body.indexOf(endMarker);
+  if (startIdx === -1 || endIdx === -1) return body;
+  return body.slice(startIdx + startMarker.length, endIdx).trim();
+}
+
 async function toPost(raw: RawWhitepaper): Promise<WhitepaperPost> {
-  const result = await remark().use(html).process(raw.body);
+  const publishedBody = extractPublishedContent(raw.body);
+  const result = await remark().use(html).process(publishedBody);
   return {
     slug: raw.slug,
     title: raw.title,
     subtitle: raw.subtitle,
     summary: raw.summary,
-    body: raw.body,
+    body: publishedBody,
     bodyHtml: result.toString(),
     coverImageUrl: raw.coverImageUrl,
     author: raw.author,

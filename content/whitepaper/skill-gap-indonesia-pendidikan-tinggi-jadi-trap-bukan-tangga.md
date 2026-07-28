@@ -1536,6 +1536,8 @@ Counter-argument ──> Rebuttal (depends on counter)
 
 ---
 
+<!-- START WHITEPAPER CONTENT -->
+
 ## Executive Summary
 
 Pendidikan tinggi Indonesia bukan tangga mobilitas sosial, tapi trap finansial yang dimaintenance oleh struktur insentif yang salah. 91.7% perguruan tinggi swasta hidup dari SPP mahasiswa tanpa accountability terhadap employability lulusan (Kemendikbudristek, 2025). TPT S1 konsisten 5.25% meski GDP growth 5%+ (BPS, 2024). Gaji lulusan S1 turun dari Rp4.96 juta ke Rp4.35 juta dalam 6 bulan (BPS, 2025). ROI PTS mahal hanya 5.9% (Suharti et al., 2020). Bukan lulusan yang perlu upgrade skill, tapi sistem yang perlu dirombak.
@@ -1933,6 +1935,8 @@ Reformasi akreditasi fokus output sudah di-pilot di Malaysia. KKNI forced implem
 - [x] Max 1 exclamation mark
 - [x] Human signature: Conclusion paragraph ("saya melihat teman-teman...")
 - [x] TAM tone: jujur, rasional, berani, tidak menggurui
+
+<!-- END WHITEPAPER CONTENT -->
 
 ---
 
