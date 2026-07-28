@@ -1,13 +1,6 @@
-'use client';
-
-import { useMemo } from 'react';
 import { marked } from 'marked';
 import { slugify } from '@/lib/utils/slugify';
-import { TAMBarChart } from './bar-chart';
-import { TAMLineChart } from './line-chart';
-import { TAMPieChart } from './pie-chart';
-import { TAMStackedBarChart } from './stacked-bar-chart';
-import { TAMRadarChart } from './radar-chart';
+import { WhitepaperChartRenderer } from './chart-renderer';
 
 interface ChartConfig {
   type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar';
@@ -52,7 +45,7 @@ marked.use({ renderer });
 function parseChartBlock(block: string): ChartConfig | null {
   try {
     const json = JSON.parse(block);
-    if (!json.type || !json.data) return null;
+    if (!json.data) return null;
     return json as ChartConfig;
   } catch {
     return null;
@@ -88,83 +81,14 @@ function splitContent(body: string): ContentSegment[] {
   return segments;
 }
 
-function renderChart(config: ChartConfig, key: number) {
-  const common = {
-    title: config.title,
-    subtitle: config.subtitle,
-    source: config.source,
-    height: config.height,
-  };
-
-  switch (config.type) {
-    case 'bar':
-      return (
-        <TAMBarChart
-          key={key}
-          {...common}
-          data={config.data}
-          yLabel={config.yLabel}
-          xLabel={config.xLabel}
-          horizontal={config.horizontal}
-        />
-      );
-    case 'line':
-      return (
-        <TAMLineChart
-          key={key}
-          {...common}
-          data={config.data}
-          yLabel={config.yLabel}
-          xLabel={config.xLabel}
-          series1Label={config.series1Label}
-          series2Label={config.series2Label}
-          unit={config.unit}
-        />
-      );
-    case 'pie':
-      return (
-        <TAMPieChart
-          key={key}
-          {...common}
-          data={config.data}
-          unit={config.unit}
-          donut={config.donut}
-        />
-      );
-    case 'stacked-bar':
-      return (
-        <TAMStackedBarChart
-          key={key}
-          {...common}
-          data={config.data}
-          series={config.series || []}
-          yLabel={config.yLabel}
-          xLabel={config.xLabel}
-          unit={config.unit}
-        />
-      );
-    case 'radar':
-      return (
-        <TAMRadarChart
-          key={key}
-          {...common}
-          data={config.data}
-          series={config.series || []}
-        />
-      );
-    default:
-      return null;
-  }
-}
-
 export function WhitepaperContent({ body }: { body: string }) {
-  const segments = useMemo(() => splitContent(body), [body]);
+  const segments = splitContent(body);
 
   return (
     <div className="prose prose-stone max-w-none dark:prose-invert prose-headings:font-display prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary prose-headings:scroll-mt-20">
       {segments.map((seg, i) => {
         if (seg.type === 'chart') {
-          return renderChart(seg.content as ChartConfig, i);
+          return <WhitepaperChartRenderer key={i} config={seg.content as ChartConfig} />;
         }
         const rawHtml = marked.parse(seg.content as string, { async: false }) as string;
         const cleanHtml = sanitizeHtml(rawHtml);
