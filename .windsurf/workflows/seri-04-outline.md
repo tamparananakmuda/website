@@ -115,6 +115,33 @@ Setiap part otomatis dapat Article schema. Tambahan:
 - Struktur heading yang jelas membantu AI parse konten
 - Definisi istilah di paragraf pertama section terkait
 
+## Chart Placement per Part (jika ada chart plan dari research)
+
+Jika `/seri-03-research` sudah rencanakan chart per part, tentukan posisi exact di outline.
+
+### Aturan penempatan
+
+- Chart masuk di section **Data/Analysis**, bukan di Hook atau Conclusion
+- Chart ditempatkan **setelah** 1-2 paragraf narasi yang menyebut data yang sama (data di chart HARUS juga di narasi)
+- Max 1-2 chart per part
+- Setiap chart di outline tandai dengan: `[CHART: type, judul, section]`
+- **Cross-part consistency:** Jika part 1 pakai chart dengan data X, part 3 yang refer data X harus konsisten
+
+### Contoh di outline per part
+
+```
+## Part 3: [Judul Part]
+### Data/Analysis
+#### TPT per Jenjang Pendidikan
+- Narasi: "BPS 2024 mencatat TPT SMK mencapai 9.01%, tertinggi..."
+- [CHART: bar, "TPT per Jenjang Pendidikan", section ini]
+- Narasi: "Bandingkan dengan S1 yang hanya 5.25%..."
+
+#### Trend Gaji Awal S1
+- Narasi: "Gaji awal S1 turun dari Rp4.96 juta ke Rp4.35 juta..."
+- [CHART: line, "Gaji Awal S1: Trend Menurun", section ini]
+```
+
 ## Checklist
 
 - [ ] Outline per part lengkap (min 3 h2 per part)

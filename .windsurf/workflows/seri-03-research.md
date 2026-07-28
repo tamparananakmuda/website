@@ -116,6 +116,43 @@ SOURCE REFERENCES:
 - [URL] - [label] - [HTTP status]
 ```
 
+## Chart Planning per Part (jika ada data yang bisa divisualisasi)
+
+Saat research, identifikasi data per part yang punya potensi untuk chart. Tidak semua part butuh chart, tapi kalau ada 3+ data points yang lebih jelas divisualisasi, rencanakan dari sini.
+
+### Chart Selection Guide
+
+| Data type | Chart type | Syntax | Contoh TAM |
+|-----------|-----------|--------|------------|
+| Perbandingan kategori | Bar | `chart:bar` | TPT per jenjang |
+| Trend temporal | Line | `chart:line` | Gaji 2020-2025 |
+| Trend dengan magnitude | Area | `chart:area` | Utang konsumer naik |
+| Proporsi/komposisi | Pie | `chart:pie` | Komposisi PT |
+| Before/after multi-kategori | Grouped Bar | `chart:grouped-bar` | TPT 2020 vs 2025 per jenjang |
+| Multi-series stacked | Stacked Bar | `chart:stacked-bar` | Komposisi belanja per kategori |
+| Korelasi 2 variabel | Scatter | `chart:scatter` | Jam kerja vs kepuasan |
+| Conversion/dropout | Funnel | `chart:funnel` | SMA ke kuliah ke lulus ke kerja |
+| Hierarchical proportion | Treemap | `chart:treemap` | Alokasi APBN |
+| Multi-dimension comparison | Radar | `chart:radar` | KKNI vs MQF |
+
+### Aturan
+
+- **Tidak wajib.** Chart hanya jika data 3+ points dan lebih jelas divisualisasi daripada di narasi
+- Max 1-2 chart per part
+- Data untuk chart harus dari source yang sudah terverifikasi (T1/T2)
+- **Cross-part consistency:** Jika part 1 pakai data X di chart, part 3 yang refer data X harus konsisten
+- Catat per part: data apa, chart type apa, di section mana nanti masuk
+- Lihat `/seri-05-draft` untuk syntax dan contoh JSON config
+
+### Chart Planning Template per Part
+
+```markdown
+### Chart Plan per Part
+- Part 1: type=bar, data=TPT per jenjang (BPS 2024), section "Data/Analysis"
+- Part 3: type=line, data=gaji trend 2020-2025 (BPS 2025), section "Data/Analysis"
+- Part 5: type=funnel, data=funnel pendidikan (BPS 2024), section "Data/Analysis"
+```
+
 ## Checklist
 
 - [ ] Keyword research per part selesai (Google Suggest/PAA/Related/Trends)
