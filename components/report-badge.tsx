@@ -15,14 +15,14 @@ export function ReportBadge({ reportCode, reportYear, size = 'md' }: ReportBadge
 
   return (
     <span
-      className={`inline-flex items-center rounded border border-amber-500/30 bg-amber-500/5 font-mono font-medium uppercase tracking-wider text-amber-500 ${sizeClasses}`}
+      className={`inline-flex items-center rounded border border-amber-600/30 bg-amber-600/5 font-mono font-medium uppercase tracking-wider text-amber-600 dark:border-amber-500/30 dark:bg-amber-500/5 dark:text-amber-500 ${sizeClasses}`}
     >
       <span className="font-bold">TAM Report</span>
-      {year && <span className="text-amber-500/70">{year}</span>}
+      {year && <span className="text-amber-600/70 dark:text-amber-500/70">{year}</span>}
       {number && (
         <>
-          <span className="text-amber-500/40">·</span>
-          <span className="text-amber-500/90">{number}</span>
+          <span className="text-amber-600/40 dark:text-amber-500/40">·</span>
+          <span className="text-amber-600/90 dark:text-amber-500/90">{number}</span>
         </>
       )}
     </span>
