@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPublishedPostWithRelationsBySlug, getRelatedPosts } from '@/lib/db/queries/posts';
-import { getAllArticles } from '@/lib/articles/loader';
+import { getAllArticles, getPostBySlug } from '@/lib/articles/loader';
 import { MarkdownContent } from '@/components/markdown-content';
 import { ReadingProgress } from '@/components/whitepaper/reading-progress';
 import { FeatureImage } from '@/components/feature-image';
@@ -14,6 +14,8 @@ import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
 import { RelatedArticles } from '@/components/related-articles';
 import { SeriesNavigation } from '@/components/series-navigation';
+import { CalendarClock, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 import nextDynamic from 'next/dynamic';
 
 function extractFAQFromBody(body: string): { question: string; answer: string }[] {
@@ -77,6 +79,15 @@ export async function generateMetadata({
     const post = await getPublishedPostWithRelationsBySlug(params.slug);
 
     if (!post) {
+      // Check if scheduled for SEO noindex
+      const scheduledPost = await getPostBySlug(params.slug);
+      if (scheduledPost && scheduledPost.status === 'scheduled') {
+        return {
+          title: `${scheduledPost.title} - Segera Hadir`,
+          description: scheduledPost.excerpt || 'Artikel ini belum tersedia.',
+          robots: { index: false, follow: false },
+        };
+      }
       return { title: 'Artikel Tidak Ditemukan' };
     }
 
@@ -119,6 +130,62 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     const post = await getPublishedPostWithRelationsBySlug(params.slug);
 
     if (!post) {
+      // Check if article exists but is scheduled (not yet published)
+      const scheduledPost = await getPostBySlug(params.slug);
+      if (scheduledPost && scheduledPost.status === 'scheduled' && scheduledPost.publishedAt) {
+        const releaseDate = new Date(scheduledPost.publishedAt);
+        const now = new Date();
+        const isFuture = releaseDate > now;
+
+        if (isFuture) {
+          // Find series info if applicable
+          const allArticles = await getAllArticles();
+          const seriesArticle = allArticles.find((a) => a.slug === params.slug);
+          const seriesSlug = seriesArticle?.seriesSlug;
+          const seriesOrder = seriesArticle?.seriesOrder;
+
+          let seriesLink: React.ReactNode = null;
+          if (seriesSlug) {
+            seriesLink = (
+              <Link
+                href={`/seri/${seriesSlug}`}
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
+              >
+                <ArrowLeft size={14} />
+                Kembali ke seri
+              </Link>
+            );
+          }
+
+          return (
+            <div className="container mx-auto px-4 py-20">
+              <div className="mx-auto max-w-2xl text-center">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-dashed border-primary/30 bg-primary/5">
+                  <CalendarClock size={28} className="text-primary/60" />
+                </div>
+                <h1 className="mb-3 font-display text-2xl font-bold md:text-3xl">
+                  {scheduledPost.title}
+                </h1>
+                <p className="mb-2 text-lg text-muted-foreground">
+                  Artikel ini belum tersedia.
+                </p>
+                <p className="mb-8 text-muted-foreground">
+                  Akan rilis pada{' '}
+                  <span className="font-semibold text-foreground">
+                    {releaseDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </span>
+                </p>
+                {scheduledPost.excerpt && (
+                  <p className="mb-8 rounded-xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed text-muted-foreground">
+                    {scheduledPost.excerpt}
+                  </p>
+                )}
+                {seriesLink}
+              </div>
+            </div>
+          );
+        }
+      }
       notFound();
     }
 
