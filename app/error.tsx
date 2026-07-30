@@ -20,6 +20,16 @@ export default function Error({
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
+      <div className="mb-6 flex items-center gap-3">
+        <div className="flex gap-1">
+          <div className="h-8 w-1.5 rounded-full bg-primary" />
+          <div className="h-8 w-1.5 rounded-full bg-primary" />
+        </div>
+        <span className="font-display text-sm font-bold tracking-tight text-foreground">
+          TAMPARAN ANAK MUDA
+        </span>
+      </div>
+
       <AlertTriangle className="mb-4 w-12 h-12 text-muted-foreground" />
       <h1 className="mb-2 text-2xl font-bold text-foreground">
         Ada yang tidak beres

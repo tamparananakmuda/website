@@ -17,7 +17,7 @@ interface TAMPieChartProps extends BaseChartProps {
 
 const DEFAULT_COLORS = [TAM_CHART_COLORS.primary, TAM_CHART_COLORS.secondary, TAM_CHART_COLORS.tertiary, TAM_CHART_COLORS.quaternary, TAM_CHART_COLORS.quinary];
 
-function CustomTooltip({ active, payload }: any) {
+function CustomTooltip({ active, payload, unit = '%' }: any) {
   if (!active || !payload?.length) return null;
   const d = payload[0].payload as PieDatum;
   const total = (payload[0].payload.__total || 0);
@@ -72,7 +72,7 @@ export function TAMPieChart({ data, title, subtitle, source, height = 320, unit 
               <Cell key={i} fill={entry.color || DEFAULT_COLORS[i % DEFAULT_COLORS.length]} />
             ))}
           </Pie>
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip unit={unit} />} />
           <Legend
             verticalAlign="bottom"
             iconType="circle"

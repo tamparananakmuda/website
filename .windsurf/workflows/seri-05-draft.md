@@ -132,6 +132,48 @@ Tipe chart: `bar`, `line`, `pie`, `stacked-bar`, `radar`, `area`, `grouped-bar`,
 - **Cross-part consistency:** Jika part 1 pakai chart dengan data X, part 3 yang refer data X harus konsisten
 - Component: `components/markdown-content.tsx` + `components/charts/chart-renderer.tsx`
 
+## Interactive Components (Calculator, Comparison Table, Nerd Box)
+
+Seri TAM juga mendukung 3 komponen interaktif lain selain chart, di-parse dari markdown code blocks oleh `MarkdownContent`:
+
+### Interactive Calculator
+
+````markdown
+```calc:inflation-impact
+{"title":"...","subtitle":"...","source":"..."}
+```
+````
+
+Tipe: `calc:inflation-impact`, `calc:farmer-share`. Hanya jika ada variabel yang reader bisa input. Max 1 per part.
+
+### Comparison Table
+
+````markdown
+```comparison
+{"title":"...","columns":["A","B","C"],"rows":[{"metric":"...","values":[1,2,3],"lowerIsBetter":false}],"highlightColumn":"B"}
+```
+````
+
+Color-coded otomatis (green=best, red=worst). Max 1 per part.
+
+### Nerd Box (Collapsible)
+
+````markdown
+```nerd
+{"title":"Detail Teknis","content":"Konten markdown...\\n\\nSupport **bold**, *italic*, list."}
+```
+````
+
+Detail teknis yang TIDAK esensial untuk argumen utama. Default collapsed. Max 1 per part.
+
+### Aturan Komponen Interaktif di Seri
+
+- **Tidak wajib.** Hanya jika menambah value untuk reader
+- Max 1-2 komponen interaktif total per part (chart + calculator + comparison + nerd box)
+- Reading Progress Bar otomatis tampil di semua part (component `ReadingProgress` di artikel page layout)
+- Syntax dan JSON config sama persis seperti whitepaper, lihat `/whitepaper-05-draft` untuk detail lengkap
+- **Cross-part consistency:** Jika part 1 pakai calculator/comparison dengan data X, part 3 yang refer data X harus konsisten
+
 ## Featured Criteria
 
 `featured: true` berarti part muncul di homepage hero. Kriteria:

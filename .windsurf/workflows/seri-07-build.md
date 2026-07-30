@@ -144,6 +144,8 @@ Update `files/article-inventory.md` per part.
 - [ ] Schema Markup: Article + FAQ (jika ada) per part
 - [ ] OG Image: ogHeadline unique, max 50 chars per part
 - [ ] Internal Link: min 2 + antar part, semua target exists
+- [ ] Interactive blocks (`chart:type`, `calc:type`, `comparison`, `nerd`) punya valid JSON jika ada
+- [ ] Reading Progress Bar otomatis tampil (component `ReadingProgress` di artikel page layout)
 - [ ] Series Navigation: prev/next link konsisten antar part
 - [ ] Post-Insert Verification: CLEAN per part
 - [ ] Series Build Quality Score: min 9 (dari 12)

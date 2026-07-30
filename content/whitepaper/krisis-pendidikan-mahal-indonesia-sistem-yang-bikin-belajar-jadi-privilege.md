@@ -49,7 +49,7 @@ Rp724 triliun (Kemenkeu, 2025). Itu anggaran pendidikan Indonesia tahun 2025, te
 
 Analisis ini menemukan lima hal yang menjelaskan kenapa pendidikan mahal bukan kebetulan:
 
-1. **Anggaran cukup, tapi misalokasi:** Rp724T (Kemenkeu, 2025), Kemendikbud kelola hanya 15%. 60%+ untuk gaji PNS (Sekjen Kemendikbudristek, 2024). Realisasi 2024 hanya 85,10% (ICW, 2024).
+1. **Anggaran cukup, tapi misalokasi:** Rp724T (Kemenkeu, 2025), Kemendikbud kelola hanya 15%. 60%+ untuk gaji PNS (Sekjen Kemendikbudristek, 2024). Realisasi 2024 hanya 85,10% (ICW, Indonesia Corruption Watch, 2024).
 2. **"Sekolah gratis" ilusi:** BOS SD Rp75k/bulan, SPP swasta Rp150-500k/bulan. Household bayar 19% total biaya pendidikan (UNESCO, 2021).
 3. **Industri swasta untung dari sistem gagal:** PTS 54% mahasiswa (PDDikti, 2024). Bimbel Rp169T (IBISWorld, 2024). Korea warning: US$20,2M/tahun, depresi orang tua (Statistics Korea, 2024).
 4. **Pendidikan jadi privilege:** Gap akses S1 Q1 vs Q5 = 62pp (World Bank, 2024). Learning poverty 53% (World Bank, 2024). Mobilitas sosial via pendidikan mati untuk keluarga miskin.
@@ -75,7 +75,7 @@ Pendidikan mahal bukan masalah orang tua saja. Ini masalah kamu, sekarang.
 
 53% anak Indonesia tidak bisa membaca dengan pemahaman di akhir SD. Itu data World Bank 2024. Artinya: generasi berikutnya tidak siap kerja, tidak siap berpikir kritis, tidak siap bersaing. Mereka akan jadi angkatan kerja yang kualitasnya rendah, yang bersaing dengan kamu atau adik-adik kamu untuk pekerjaan yang sama.
 
-21% pemuda Indonesia usia 15-24 tahun masuk kategori NEET (Not in Education, Employment, or Training), data BPS 2024. 1 dari 5 anak muda hilang dari sistem. Mereka tidak sekolah, tidak kerja, tidak pelatihan. Sistem tidak punya rencana untuk mereka.
+21% pemuda Indonesia usia 15-24 tahun masuk kategori NEET (Not in Education, Employment, or Training), data BPS 2024. Artinya 1 dari 5 anak muda hilang dari sistem. Mereka tidak sekolah, tidak kerja, tidak pelatihan. Sistem tidak punya rencana untuk mereka.
 
 Pendidikan mahal juga berarti beban langsung ke keluarga muda. Kalau kamu sudah atau akan punya anak, kamu akan hadapi realitas yang sama: sekolah negeri "gratis" tapi tidak mencukupi, sekolah swasta mahal, bimbel jadi "kebutuhan" bukan pilihan.
 
@@ -120,7 +120,7 @@ Analisis menggunakan tiga pendekatan:
 2. **Temporal:** PISA 2000-2022, APBN 2009-2025 untuk lihat pola 20 tahun
 3. **Cross-reference:** APBN breakdown vs Susenas household spending untuk verifikasi
 
-Setiap klaim utama diverifikasi dari minimal 3 sumber independen (triangulasi).
+Setiap klaim utama diverifikasi dari minimal 3 sumber independen (triangulasi: cek dari 3 sumber berbeda, pastikan hasilnya konsisten).
 
 ### Scope
 
@@ -180,7 +180,7 @@ Data Susenas MSBP 2024 menunjukkan biaya pendidikan per kelas ekonomi. Keluarga 
 
 Beasiswa ada. PIP (Program Indonesia Pintar) dan KIP (Kartu Indonesia Pintar) ada. Tapi ini hanya cover biaya masuk sekolah. Tidak cover true cost of education: transport, makan, seragam, buku, kegiatan, dan yang tidak kalah penting: waktu anak untuk belajar bukan bekerja.
 
-Sistem mengatakan "gratis" lalu mengandalkan keluarga menutupi sisanya. Kalau keluarga tidak mampu, anaknya ketinggalan. Itu yang terjadi.
+Sistem mengatakan "gratis" lalu mengandalkan keluarga menutupi sisanya, dan kalau keluarga tidak mampu, anaknya ketinggalan.
 
 ### 3. Industri Pendidikan Swasta: Untung dari Sistem yang Gagal
 
@@ -228,7 +228,7 @@ Akses kuliah S1 untuk keluarga termiskin (Q1, 20% bawah, World Bank 2024): **2,5
 {"title":"Gap 62pp: Kuliah S1 Hanya untuk yang Mampu","subtitle":"Gross Enrollment Ratio S1 per quintile pengeluaran","source":"World Bank, BPS Susenas","data":[{"label":"Q1 (Termiskin)","value":2.54,"color":"#ef4444"},{"label":"Q2","value":8.5,"color":"#f4a825"},{"label":"Q3","value":18.2,"color":"#f4a825"},{"label":"Q4","value":35.1,"color":"#3b82f6"},{"label":"Q5 (Terkaya)","value":64.66,"color":"#22c55e"}],"yLabel":"GER S1 (%)"}
 ```
 
-Hanya 2,5% anak miskin yang akses kuliah S1 (World Bank, 2024). Sisanya? World Bank mencatat 97,5% tidak.
+Hanya 2,5% anak miskin yang akses kuliah S1 (World Bank, 2024). Artinya dari 40 anak miskin, cuma 1 yang sampai kuliah. Sisanya? World Bank mencatat 97,5% tidak.
 
 Gap ini makin lebar di jenjang lebih tinggi (data BPS Susenas, 2024). SD: Q1 dan Q5 hampir sama (104,75% vs 99,18%, Q1 lebih tinggi karena banyak anak miskin sekolah terlambat). SMP gap 21pp, SMA gap 44pp, S1 gap 62pp. Makin tinggi jenjang, makin eksklusif. SD untuk semua, S1 untuk yang mampu.
 
@@ -236,7 +236,7 @@ Learning poverty (anak yang tidak bisa membaca dan memahami teks sederhana di ak
 
 World Bank mencatat learning deprivation 49% dan schooling deprivation 7%. Artinya mayoritas masalah bukan anak tidak sekolah, tapi anak sekolah tapi tidak belajar.
 
-LAYS (Learning-Adjusted Years of Schooling, World Bank 2024): Indonesia 12,4 tahun sekolah, tapi hanya 7,8 tahun efektif. **4,6 tahun "terbuang".** Anak duduk di kelas 12 tahun, tapi yang benar-benar efektif belajar hanya 7,8 tahun. Setara dengan lulusan SMP yang belajar dengan baik.
+LAYS (Learning-Adjusted Years of Schooling, World Bank 2024): Indonesia 12,4 tahun sekolah, tapi hanya 7,8 tahun efektif. **4,6 tahun "terbuang".** Anak duduk di kelas 12 tahun, tapi yang benar-benar efektif belajar hanya 7,8 tahun. Setara lulusan SMP yang belajar dengan baik. Sisa 4,6 tahun? Waktu hilang yang tidak akan kembali.
 
 Putus sekolah juga naik (data Kemendikbud, 2023/2024). Kemendikbud melaporkan SD 0,19%, SMP 0,18%, SMK 0,28%. Angka kecil secara persentase, tapi besar secara absolut: ribuan anak per tahun.
 
@@ -332,7 +332,7 @@ Siapa yang rugi? Keluarga miskin yang anaknya tidak akses S1. Keluarga menengah 
 
 Kamu bebas pilih, tapi ini kenyataan: pendidikan mahal bukan takdir, itu kebijakan. Dan kebijakan bisa diubah.
 
-Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang butuh perubahan kebijakan.
+Ada 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang butuh perubahan kebijakan.
 
 ### Untuk Kamu: Individual
 
@@ -340,7 +340,7 @@ Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang 
 
 **Apa:** Hitung semua biaya pendidikan yang kamu atau keluarga tanggung.
 
-**Kenapa:** Data UNESCO menunjukkan household menanggung 19% total biaya pendidikan, dan BOS SD hanya Rp75k/bulan sementara SPP swasta Rp150-500k/bulan. Banyak orang tua tidak sadar berapa yang sebenarnya keluar karena biaya tersebar: SPP, komite, seragam, bimbel, transport, buku, kegiatan.
+**Kenapa:** Data UNESCO menunjukkan household menanggung 19% total biaya pendidikan, dan BOS SD hanya Rp75k/bulan sementara SPP swasta Rp150-500k/bulan. Banyak orang tua tidak sadar total berapa yang keluar karena biaya tersebar: SPP, komite, seragam, bimbel, transport, buku, kegiatan.
 
 **Cara:**
 1. Catat semua pengeluaran pendidikan selama 3 bulan terakhir, termasuk yang kecil (fotokopi, proyek, kado guru)
@@ -358,7 +358,7 @@ Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang 
 **Cara:**
 1. Coba 1 semester tanpa bimbel, lalu catat hasil ujian
 2. Bandingkan dengan semester sebelumnya (dengan bimbel) untuk lihat perbedaannya
-3. Kalau perbedaannya kurang dari 10 poin, Rp500k-2jt per bulan tidak worth it
+3. Kalau perbedaannya kurang dari 10 poin, Rp500k-2jt per bulan (IBISWorld, 2024) tidak worth it
 
 **Trade-off:** Risiko nilai turun sedikit. Tapi kamu hemat jutaan per tahun dan berhenti mensubsidi sistem yang bocor.
 
@@ -368,7 +368,7 @@ Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang 
 
 **Apa:** Rincian SPP, dana komite, dan pengeluaran kampus yang bisa diaudit publik.
 
-**Kenapa:** PTS menampung 54% mahasiswa Indonesia. Biaya PTS lebih mahal dari PTN. Tapi margin dan pengeluaran PTS tidak dipublikasikan transparan. Orang tua berhak tahu ke mana uangnya.
+**Kenapa:** PDDikti mencatat PTS menampung 54% mahasiswa Indonesia. Biaya PTS lebih mahal dari PTN. Tapi margin dan pengeluaran PTS tidak dipublikasikan transparan. Orang tua berhak tahu ke mana uangnya.
 
 **Cara:**
 1. Publikasikan laporan keuangan tahunan di website kampus
@@ -381,7 +381,7 @@ Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang 
 
 **Apa:** Perbaiki kualitas pengajaran dalam jam sekolah sehingga bimbel tidak diperlukan.
 
-**Kenapa:** Finlandia tidak punya bimbel karena sekolah cukup. Indonesia: 70% siswa kota ikut les di luar jam sekolah. Itu admission of failure. Sekolah mengakui pengajaran dalam jam sekolah tidak cukup.
+**Kenapa:** Finlandia tidak punya bimbel karena sekolah cukup. IBISWorld mencatat Indonesia: 70% siswa kota ikut les di luar jam sekolah. Itu admission of failure. Sekolah mengakui pengajaran dalam jam sekolah tidak cukup.
 
 **Cara:**
 1. Identifikasi topik yang paling banyak dicari di bimbel (matematika, bahasa Inggris)
@@ -422,7 +422,7 @@ Berikut 7 rekomendasi konkret, dari yang bisa kamu lakukan hari ini sampai yang 
 
 **Apa:** Skema subsidi untuk PTS berbasis need, bukan berbasis status negeri/swasta.
 
-**Kenapa:** PTS menampung 54% mahasiswa (PDDikti, 2024) tapi tidak mendapat BOPTN setara PTN. Biaya PTS lebih mahal, akses keluarga miskin ke PTS hampir tidak ada. Sistem mengandalkan swasta tapi tidak mensubsidi swasta.
+**Kenapa:** PTS menampung 54% mahasiswa (PDDikti, 2024) tapi tidak mendapat BOPTN (Bantuan Operasional Perguruan Tinggi Negeri) setara PTN. Biaya PTS lebih mahal, akses keluarga miskin ke PTS hampir tidak ada. Sistem mengandalkan swasta tapi tidak mensubsidi swasta.
 
 **Cara:**
 1. Subsidi SPP untuk mahasiswa Q1-Q2 di PTS terakreditasi

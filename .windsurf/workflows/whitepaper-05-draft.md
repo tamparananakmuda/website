@@ -62,20 +62,75 @@ Over-claiming damages credibility. Gunakan hedging proportionate to evidence str
 
 Bayesian honesty: posterior proportionate to evidence strength. Jangan over-claim untuk effect kecil.
 
-## Plain Language Mandate
+## Plain Language Mandate (WAJIB, BAHASA YANG DIMENGERTI PEMBACA MUDA)
 
-Whitepaper TAM = accessible untuk professionals, bukan hanya akademisi.
+Whitepaper TAM = riset selevel think tank, tapi bahasanya bukan bahasa jurnal. Pembaca TAM = generasi muda 18-35 tahun. Mereka smart, tapi nggak mau baca jurnal akademik. Mereka mau tau kenyataan, pakai bahasa yang mereka ngerti.
 
-| Section | Readability target | Rule |
-|---------|-------------------|------|
-| Executive Summary | Grade 9-10 | Accessible, short sentences, define jargon |
-| Background | Grade 10-11 | Context building, familiar references |
-| Analysis | Grade 11-12 | Informed but tidak akademis. Define jargon on first use |
-| Methodology | Grade 11-12 | Technical but clear. "Nerd box" untuk detail |
-| Recommendation | Grade 9-10 | Actionable, numbered, specific |
-| Conclusion | Grade 9-10 | Restate + implication, emotional close |
+### Prinsip Utama: Riset Mendalam, Bahasa Sederhana
 
-Define jargon on first use. Short sentences untuk key claims. Jangan pakai passive voice untuk argument utama.
+| Prinsip | Cara | Contoh |
+|---------|------|--------|
+| **Riset = dapur, bahasa = meja makan** | Semua riset kompleks di "dapur" (Methodology, nerd box). Di "meja makan" (narasi utama), sajikan yang siap makan | Dapur: "OLS regression, β=0.45, p<0.001, R²=0.20". Meja: "Pendidikan cuma jelasin 20% kenapa gaji orang beda." |
+| **Kamu, bukan pembaca** | Pakai "kamu" untuk langsung bicara ke pembaca | "Kamu pasti pernah dengar..." bukan "Pembaca mungkin telah mendengar..." |
+| **Angka = cerita** | Setiap angka dikasih artinya dalam bahasa sehari-hari | "74% = 3 dari 4 lulusan nggak punya kerja" |
+| **Jargon = terjemahin pertama kali** | First use: jargon + terjemahan di kurung. Setelah itu boleh pakai jargon | "Precaritas (kerja yang nggak aman, nggak menentu, nggak berjaminan)" |
+| **Kalimat pendek untuk poin penting** | Max 25 kata untuk claim utama | "74% lulusan nganggur. Itu data BPS 2025." |
+| **Konkret 60%, abstrak 40%** | Mayoritas kalimat harus ada angka, contoh, atau nama spesifik | "74% lulusan menganggur" bukan "tingkat pengangguran memprihatinkan" |
+| **Satu ide per paragraf** | Jangan tumpuk banyak ide | 1 paragraf = 1 poin, max 150 kata |
+| **Tanya sebelum jawab** | Kadang mulai section dengan pertanyaan yang reader mikirin | "Kenapa lulusan kuliah malah nganggur? Datanya mengejutkan." |
+
+### Konversi Riset Akademik → Bahasa TAM (tabel referensi)
+
+| Bahasa akademik (JANGAN pakai di narasi) | Bahasa TAM (PAKAI ini) |
+|------------------------------------------|------------------------|
+| "Terdapat korelasi positif yang signifikan" | "Makin tinggi X, makin tinggi Y. Dan ini bukan kebetulan." |
+| "Variabel X menjelaskan 20% varians Y" | "X cuma nunjukin 20% kenapa Y beda-beda. 80% sisanya faktor lain." |
+| "Hipotesis nol ditolak pada alpha 0.05" | "Kemungkinan ini cuma kebetulan kurang dari 5%." |
+| "Margin of error +/- 4.4% pada CL 95%" | "Angkanya bisa meleset +/- 4%. Tapi polanya tetap jelas." |
+| "Effect size Cohen's d = 0.8 (large)" | "Efeknya besar. Perbedaannya jelas terasa." |
+| "Difference-in-Differences menunjukkan efek kausal" | "Saat kebijakan ini diterapkan, hasilnya berubah. Dan perubahannya bukan kebetulan." |
+| "Sampling stratified random" | "Kami ambil sampel dari berbagai kelompok secara acak" |
+| "Confounder tidak terkontrol" | "Ada faktor lain yang nggak kami ukur, jadi hati-hati menarik kesimpulan" |
+| "Generalizability terbatas" | "Hasil ini mungkin nggak berlaku untuk semua orang di Indonesia" |
+| "Triangulasi data dari multiple sources" | "Kami cek data ini dari 3 sumber berbeda. Hasilnya konsisten." |
+
+### Nerd Box: Tempat Menaruh Detail Teknis
+
+Detail statistik, metodologi, dan rumus buat peneliti taruh di "nerd box" terpisah. Pembaca muda skip ini, peneliti baca ini. Nerd box di-render sebagai collapsible component (default closed).
+
+#### Syntax
+
+````markdown
+```nerd
+{"title":"Konsep Bourdieu: Capital Distribution","content":"Pierre Bourdieu (1930-2002) adalah sosiolog Prancis...\\n\\nDalam konteks petani Indonesia, yang punya **economic capital** adalah tengkulak..."}
+```
+````
+
+**Field:**
+- `title` (string, optional): Judul nerd box, default "Nerd Box"
+- `content` (string, wajib): Konten markdown. Gunakan `\\n` untuk line break.
+
+#### Aturan Nerd Box
+
+- Hanya untuk detail teknis yang TIDAK esensial untuk memahami argumen utama
+- Content support markdown (bold, italic, list, link, code)
+- Default collapsed, reader klik untuk expand
+- Maksimal 1-2 nerd box per section
+- Component: `NerdBox` di `components/whitepaper/nerd-box.tsx`
+
+Narasi utama: "Pendidikan dan pengalaman kerja bersama-sama jelasin 34% kenapa gaji orang beda-beda. Sisanya? Faktor yang nggak kita ukur di sini."
+
+### Readability Target per Section
+
+| Section | Target | Rule |
+|---------|--------|------|
+| Executive Summary | Kelompok 9-10 (SMP-SMA) | Kalimat pendek, jargon minimal, langsung ke inti |
+| Background | Kelompok 10-11 (SMA) | Konteks familiar, bahasa sehari-hari |
+| Analysis | Kelompok 11-12 (SMA-S1) | Boleh lebih detail, tapi jargon wajib terjemahin |
+| Methodology | Kelompok 11-12 (SMA-S1) | Teknis tapi jelas. Nerd box untuk detail berat |
+| Recommendation | Kelompok 9-10 (SMP-SMA) | Actionable, numbered, bahasa sehari-hari |
+| Conclusion | Kelompok 9-10 (SMP-SMA) | Restate + implikasi, closing yang ngena |
+| Limitations | Kelompok 10-11 (SMA) | Jujur tentang kelemahan, bahasa simpel |
 
 ## Whitepaper Struktur Template (per section)
 
@@ -400,6 +455,89 @@ Whitepaper TAM mendukung interactive chart yang di-render langsung dari markdown
 - Component: `WhitepaperContent` (server) + `WhitepaperChartRenderer` (client)
 - File: `components/charts/whitepaper-content.tsx`, `components/charts/chart-renderer.tsx`
 
+## Interactive Calculator System
+
+Whitepaper TAM mendukung interactive calculator yang di-render langsung dari markdown menggunakan `calc:type` code blocks. Calculator memungkinkan reader menggeser slider untuk melihat dampak data pada situasi mereka sendiri.
+
+### Syntax
+
+````markdown
+```calc:TYPE
+{"title":"...","subtitle":"...","source":"..."}
+```
+````
+
+### Tipe Calculator
+
+| Type | Syntax | Use case |
+|------|--------|----------|
+| Inflation Impact | `calc:inflation-impact` | Hitung dampak inflasi pangan pada gaji reader |
+| Farmer Share | `calc:farmer-share` | Hitung porsi petani vs rantai tengah dari harga |
+
+### JSON Config Fields
+
+| Field | Tipe | Wajib | Deskripsi |
+|-------|------|-------|----------|
+| `title` | string | no | Judul calculator |
+| `subtitle` | string | no | Subtitle/instruksi |
+| `source` | string | no | Sumber data |
+
+### Contoh
+
+````markdown
+```calc:inflation-impact
+{"title":"Berapa Uang Kamu Hilang ke Inflasi Pangan?","subtitle":"Geser slider gaji kamu untuk lihat berapa rupiah yang hilang ke inflasi pangan setiap tahun","source":"Susenas 2024 (porsi pangan 41,67%), Bapanas 2024 (inflasi pangan 4,88%)"}
+```
+````
+
+### Aturan Calculator
+
+- Calculator ditempatkan setelah konteks narasi yang menjelaskan kenapa angkanya relevan
+- Hanya gunakan calculator kalau ada variabel yang reader bisa input (gaji, harga, persentase)
+- Maksimal 2 calculator per whitepaper
+- Component: `InteractiveCalculator` di `components/whitepaper/interactive-calculator.tsx`
+
+## Comparison Table System
+
+Whitepaper TAM mendukung comparison table yang di-render dari `comparison` code blocks. Table otomatis color-code nilai terbaik (hijau) dan terburuk (merah).
+
+### Syntax
+
+````markdown
+```comparison
+{"title":"...","subtitle":"...","source":"...","highlightColumn":"Indonesia","columns":["India","Vietnam","Thailand","Indonesia"],"rows":[{"metric":"GFSI Score","values":[58.9,62.1,59.3,54.8],"lowerIsBetter":false},{"metric":"Intervensi Petani","values":["MSP 1.5x cost","Reformasi agraria","Manajemen stok","SPHP"],"isText":true}]}
+```
+````
+
+### JSON Config Fields
+
+| Field | Tipe | Wajib | Deskripsi |
+|-------|------|-------|----------|
+| `title` | string | no | Judul tabel |
+| `subtitle` | string | no | Subtitle |
+| `source` | string | no | Sumber data |
+| `highlightColumn` | string | no | Nama kolom yang di-highlight (amber accent) |
+| `columns` | string[] | ya | Nama kolom |
+| `rows` | array | ya | Array row objects |
+
+### Row Object Fields
+
+| Field | Tipe | Wajib | Deskripsi |
+|-------|------|-------|----------|
+| `metric` | string | ya | Nama baris/metric |
+| `values` | (string\\|number)[] | ya | Nilai per kolom |
+| `lowerIsBetter` | boolean | no | Untuk numeric: apakah nilai rendah = terbaik. Default false |
+| `unit` | string | no | Satuan (e.g. "%", "kg") |
+| `isText` | boolean | no | Jika true, tidak ada color-coding |
+
+### Aturan Comparison Table
+
+- Hanya untuk perbandingan 2+ entitas dengan 3+ metric
+- Numeric rows otomatis color-coded (green = best, red = worst)
+- Text rows tidak di-color-code
+- Maksimal 1 comparison table per whitepaper
+- Component: `ComparisonTable` di `components/whitepaper/comparison-table.tsx`
+
 ## Tags Assignment
 
 - Jumlah: 3-7 tags
@@ -598,7 +736,14 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 - [ ] Citable passage design: minimal 1 self-contained extractable claim per section
 - [ ] Cognitive load management: 1 idea per paragraph, short sentences untuk key claims
 - [ ] Hedging language: proportionate to evidence strength (Bayesian honesty)
-- [ ] Plain language: readability target per section (Grade 9-12)
+- [ ] Plain language: readability target per section (Kelompok 9-12)
+- [ ] Bahasa sederhana: "kamu" bukan "pembaca", kalimat pendek untuk claim utama
+- [ ] Konversi riset akademik ke bahasa TAM: setiap istilah teknis dikasih terjemahan sederhana
+- [ ] Nerd box: detail teknis (regresi, p-value, effect size) di `nerd` code block, bukan di narasi utama
+- [ ] Interactive calculator: gunakan `calc:type` block jika ada variabel yang reader bisa input
+- [ ] Comparison table: gunakan `comparison` block untuk perbandingan multi-entitas
+- [ ] Konkret 60% / abstrak 40%: mayoritas kalimat ada angka, contoh, atau nama spesifik
+- [ ] Angka = cerita: setiap angka dikasih artinya ("74% = 3 dari 4 lulusan nganggur")
 - [ ] Writing process: iterative, recursive, monitor check setiap section (Flower & Hayes)
 - [ ] Data journalism "nerd box" di Methodology (jika ada original data)
 - [ ] Meta-analytic evidence presentation (effect sizes, heterogeneity, sensitivity analysis)

@@ -51,18 +51,32 @@ Jika rasio abstrak > 60%, terlalu akademis. Tambahkan data, contoh, atau kasus k
 
 ### Lapis 3: Jargon Translation Table
 
-Setiap jargon teknis harus diterjemahkan untuk general reader:
+Setiap jargon teknis harus diterjemahkan untuk pembaca muda. Pembaca TAM = 18-35 tahun, smart tapi nggak mau baca jurnal.
 
 | Jargon | Terjemahan TAM | Kapan pakai jargon asli |
 |--------|---------------|----------------------|
-| **Precaritas** | "Kondisi kerja yang tidak aman, tidak menentu, tidak berjaminan" | Hanya jika sudah dijelaskan sebelumnya |
+| **Precaritas** | "Kerja yang nggak aman, nggak menentu, nggak berjaminan" | Hanya jika sudah dijelaskan sebelumnya |
 | **Gig economy** | "Ekonomi platform, kerja lepas berbasis aplikasi" | Boleh jika konteks sudah clear |
-| **Moral hazard** | "Situasi saat seseorang terlindungi dari risiko, jadi mereka ambil risiko lebih besar" | Jelaskan di kurung setelah first use |
-| **Selection bias** | "Bias karena data hanya dari kelompok tertentu, tidak mewakili semua" | Hanya di Methodology section |
-| **Confounding variable** | "Faktor lain yang mempengaruhi hasil tapi tidak diukur" | Hanya di Methodology section |
-| **Effect size** | "Seberapa besar perbedaan yang ditemukan, bukan hanya apakah ada perbedaan" | Boleh dengan konteks |
+| **Moral hazard** | "Situasi saat orang terlindungi dari risiko, jadi mereka ambil risiko lebih besar" | Jelaskan di kurung setelah first use |
+| **Selection bias** | "Data cuma dari kelompok tertentu, nggak mewakili semua orang" | Hanya di Methodology section |
+| **Confounding variable** | "Faktor lain yang pengaruhi hasil tapi nggak diukur" | Hanya di Methodology section |
+| **Effect size** | "Seberapa besar perbedaannya, bukan cuma apakah ada perbedaan" | Boleh dengan konteks |
+| **Korelasi signifikan** | "Hubungan yang bukan kebetulan" | Boleh setelah dijelaskan |
+| **Regresi OLS** | "Cari tahu faktor apa yang paling pengaruhi sesuatu" | Hanya di nerd box |
+| **Difference-in-Differences** | "Bandingkan sebelum dan sesudah, dengan kelompok pembanding" | Hanya di nerd box |
+| **Power analysis** | "Hitung berapa minimal orang yang harus disurvei biar hasil valid" | Hanya di Methodology |
+| **Cohen's d** | "Ukuran seberapa besar perbedaan antara 2 kelompok" | Hanya di nerd box |
+| **p-value** | "Kemungkinan hasil ini cuma kebetulan" | Boleh dengan konteks singkat |
+| **Confidence interval** | "Rentang nilai yang paling mungkin benar" | Boleh dengan konteks |
+| **Bayesian inference** | "Update keyakinan berdasarkan evidence baru" | Hanya jika relevan dan dijelaskan |
+| **Triangulasi** | "Cek dari 3 sumber berbeda, pastikan hasilnya konsisten" | Boleh setelah dijelaskan |
+| **DAG (Directed Acyclic Graph)** | "Diagram yang nunjukin asumsi sebab-akibat" | Hanya di nerd box |
+| **Robustness check** | "Tes ulang hasil pakai cara berbeda, pastikan tetap sama" | Hanya di nerd box |
+| **Pre-registration** | "Daftarin rencana riset sebelum mulai, biar nggak ngakalin hasil" | Hanya di Methodology |
+| **HARKing** | "Pura-pura hipotesis sudah ada dari awal, padahal dibuat setelah lihat hasil" | Jelaskan dengan contoh |
+| **GRADE certainty** | "Tingkat keyakinan kita terhadap evidence (tinggi/sedang/rendah/sangat rendah)" | Boleh dengan konteks |
 
-Aturan: first use = jargon + terjemahan dalam kurung. Use berikutnya = jargon saja.
+Aturan: first use = jargon + terjemahan dalam kurung. Use berikutnya = jargon saja. Nerd box = boleh full jargon. Narasi utama = minimal jargon, maksimal terjemahan.
 
 ### Lapis 4: Transition Quality Audit
 
@@ -280,13 +294,13 @@ Setiap section punya target readability berbeda:
 
 | Section | Target readability | Rationale |
 |---------|-------------------|-----------|
-| **Executive Summary** | Grade 10-12 | Decision maker baca ini dulu. Harang accessible. |
-| **Background** | Grade 10-12 | Set context untuk general reader. |
-| **Analysis** | Grade 12-14 | Lebih teknis, tapi masih accessible. |
-| **Methodology** | Grade 14+ | Boleh teknis. Hanya untuk reader yang peduli. |
-| **Recommendation** | Grade 10-12 | Actionable untuk general reader. |
-| **Conclusion** | Grade 10-12 | Summary harus accessible. |
-| **Limitations** | Grade 12-14 | Boleh teknis. Honest disclosure. |
+| **Executive Summary** | Kelompok 9-10 (SMP-SMA) | Decision maker baca ini dulu. Harus accessible. |
+| **Background** | Kelompok 10-11 (SMA) | Set context untuk pembaca muda. |
+| **Analysis** | Kelompok 11-12 (SMA-S1) | Boleh lebih detail, tapi jargon wajib terjemahin. |
+| **Methodology** | Kelompok 12+ (S1) | Boleh teknis. Nerd box untuk detail berat. |
+| **Recommendation** | Kelompok 9-10 (SMP-SMA) | Actionable, bahasa sehari-hari. |
+| **Conclusion** | Kelompok 9-10 (SMP-SMA) | Summary harus accessible, closing yang ngena. |
+| **Limitations** | Kelompok 10-11 (SMA) | Jujur tentang kelemahan, bahasa simpel. |
 
 Cek readability dengan: kalimat panjang rata-rata, jargon density, abstract vs concrete ratio.
 
@@ -323,7 +337,12 @@ Pertanyaan terbaik TAM: datang dari data, bukan dari moral high ground. "74% lul
 - [ ] Bahasa natural tapi tetap kredibel (formal vs natural balance applied)
 - [ ] Lapis 1: Paragraph rhythm audit (variasi panjang, breathing room, opening variasi)
 - [ ] Lapis 2: Concrete-to-abstract ratio (60% konkret, 40% abstrak)
-- [ ] Lapis 3: Jargon translation (first use = jargon + terjemahan)
+- [ ] Lapis 3: Jargon translation (first use = jargon + terjemahan, narasi utama minimal jargon)
+- [ ] Bahasa sederhana: "kamu" bukan "pembaca", kalimat pendek untuk claim utama (max 25 kata)
+- [ ] Nerd box dipakai untuk detail teknis (regresi, p-value, effect size, DAG, dll)
+- [ ] Narasi utama bebas dari bahasa akademik (cek tabel konversi di 05-draft)
+- [ ] Angka dikasih artinya dalam bahasa sehari-hari ("74% = 3 dari 4 lulusan nganggur")
+- [ ] Konkret 60% / abstrak 40%: mayoritas kalimat ada angka, contoh, atau nama spesifik
 - [ ] Lapis 4: Transition quality (no robotik transisi, connection logis)
 - [ ] Lapis 5: Opening & closing line quality (no filler, no generic conclusion)
 - [ ] Lapis 6: Metaphor & analogy quality (fresh, accurate, max 2-3 per whitepaper)

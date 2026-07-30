@@ -233,6 +233,8 @@ Jika score < 8: fix sebelum lanjut ke 07-qc.
 - [ ] Schema Markup Verification: Article + FAQ (jika ada) ready
 - [ ] OG Image Verification: ogHeadline set, unique, max 50 chars
 - [ ] Internal Link Verification: min 2, semua target exists, descriptive anchor
+- [ ] Interactive blocks (`chart:type`, `calc:type`, `comparison`, `nerd`) punya valid JSON jika ada
+- [ ] Reading Progress Bar otomatis tampil (component `ReadingProgress` di artikel page layout)
 - [ ] Article inventory updated
 - [ ] Post-Insert Verification: CLEAN
 - [ ] Build Quality Score > 8 (dari 10)

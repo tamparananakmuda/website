@@ -121,10 +121,15 @@ Sebelum masuk ke 02-research, petakan landscape topik:
 - Apakah ada perubahan regulasi yang akan impact topik?
 - Siapa regulatornya? (OJK, BI, Kemnaker, Kemenkes, dll.)
 
-### 3. International Benchmark
-- Bagaimana topik ini di negara lain (ASEAN, global)?
-- Apa yang bisa dipelajari dari perbandingan?
-- Data internasional dari: World Bank, ILO, OECD, UN, McKinsey, Deloitte
+### 3. Riset Internasional (wajib mendalam, bukan sekadar perbandingan)
+- Bagaimana topik ini di negara lain (ASEAN, Asia Timur, Eropa, Amerika)?
+- Apa kebijakan yang sudah dicoba negara lain? Berhasil atau gagal?
+- Apa data internasional yang bisa jadi pembanding untuk Indonesia?
+- Apa paper akademik dari luar Indonesia yang relevan?
+- Minimum 3 region dibandingkan: ASEAN (regional), Developed (OECD), Emerging (BRICS/developing)
+- Sumber wajib dicek: World Bank, ILO, OECD, UN, WHO, IMF, BIS, McKinsey Global Institute, Brookings, Peterson Institute, NBER working papers
+- Pertanyaan kunci: "Apa yang Indonesia bisa pelajari dari keberhasilan DAN kegagalan negara lain?"
+- Pertanyaan kunci: "Apakah fenomena ini unik Indonesia atau global? Kalau global, apa yang berbeda di Indonesia?"
 
 ## Deep Analysis Frameworks (20x Depth)
 
@@ -423,7 +428,7 @@ Draft disimpan ke `$ARTICLE_JSON` (`/tmp/tam-article.json`) dari step 05 sampai 
 - [ ] Audience persona segmentation (primary 80% + secondary 20%, psychographic)
 - [ ] Search intent dianalisis
 - [ ] Goal whitepaper didefinisikan (educate, influence, convert)
-- [ ] Landscape mapping selesai (existing research, policy context, international benchmark)
+- [ ] Landscape mapping selesai (existing research, policy context, international benchmark mendalam)
 - [ ] Information gap analysis selesai
 - [ ] Angle test lolos
 - [ ] POV tag dipilih

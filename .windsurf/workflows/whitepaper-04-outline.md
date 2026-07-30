@@ -166,7 +166,44 @@ Setiap section di outline harus ditandai: passage mana yang self-contained extra
 
 "Whitepaper tanpa limitations section = brochure dengan serif font."
 
-## Information Foraging in Outline
+## Bahasa Sederhana untuk Pembaca Muda (WAJIB DI OUTLINE)
+
+Risetnya mendalam, tapi bahasanya sederhana. Outline harus sudah dirancang agar pembaca muda (18-35 tahun) ngerti. Ini bukan jurnal akademik. Ini tamparan yang bikin sadar.
+
+### Aturan Bahasa di Outline
+
+| Aturan | Cara | Contoh |
+|--------|------|--------|
+| **Bahasa sehari-hari** | Pakai kata yang orang muda pakai, bukan kata akademis | "Kamu" bukan "pembaca", "nggak" bukan "tidak" (di narasi non-formal) |
+| **Jargon = terjemahin** | Setiap istilah teknis dikasih terjemahan sederhana di kurung | "Precaritas (kerja yang nggak aman, nggak menentu)" |
+| **Kalimat pendek** | Max 25 kata per kalimat untuk claim utama | "74% lulusan kuliah nganggur. Itu data BPS 2025." |
+| **Konkret > abstrak** | 60% kalimat konkret (ada angka, contoh, nama), 40% abstrak | "74% lulusan menganggur" bukan "tingkat pengangguran tinggi" |
+| **Satu ide per paragraf** | Jangan campur banyak ide di 1 paragraf | 1 paragraf = 1 poin |
+| **Mulai dari hal yang reader tahu** | New info connect ke hal yang familiar dulu | "Kamu pasti pernah dengar 'kerja keras = sukses'. Data bilang lain." |
+| **Hindari kalimat pasif** | Pakai kalimat aktif, langsung | "Sistem mencetak pengangguran" bukan "pengangguran diciptakan oleh sistem" |
+| **Data = cerita, bukan tabel** | Angka dikasih konteks dan artinya | "74% berarti 3 dari 4 lulusan nggak punya kerja" |
+
+### Template Penerjemahan Riset → Bahasa Sederhana
+
+| Riset akademik (input) | Bahasa TAM (output) |
+|------------------------|---------------------|
+| "Terdapat korelasi positif yang signifikan antara tingkat pendidikan dan pendapatan (r=0.45, p<0.001)" | "Makin tinggi sekolahmu, makin besar kemungkinan gajimu makin tinggi. Tapi hubungannya nggak sekuat yang kamu kira." |
+| "Analisis regresi menunjukkan variabel pendidikan menjelaskan 20% varians pendapatan" | "Pendidikan cuma jelasin 20% kenapa gaji orang beda-beda. 80% sisanya? Faktor lain." |
+| "Difference-in-Differences estimation menunjukkan efek kausal policy X terhadap Y" | "Saat kebijakan X diterapkan, Y berubah. Dan perubahannya bukan kebetulan." |
+| "Survei dengan n=500 memiliki margin of error +/- 4.4% pada confidence level 95%" | "Survei ini cuma sampel 500 orang. Jadi angkanya bisa meleset +/- 4%. Tapi polanya tetap jelas." |
+| "Hipotesis nol ditolak pada alpha 0.05" | "Kemungkinan hasil ini cuma kebetulan kurang dari 5%. Cukup kecil buat percaya." |
+
+### Outline Wajib Tandai: Bagian Teknis vs Bagian Pembaca
+
+Di outline, tandai section mana yang:
+
+| Tanda | Artinya | Contoh |
+|-------|---------|--------|
+| `[TEKNIS]` | Detail metodologi, untuk Methodology section atau nerd box | "[TEKNIS] Power analysis: d=0.5, alpha=0.05, power=0.80, n=64/group" |
+| `[PEMBACA]` | Narasi utama yang dibaca pembaca muda | "[PEMBACA] 3 dari 4 lulusan nggak punya kerja. Ini bukan masalah malas." |
+| `[NERD BOX]` | Box terpisah untuk yang mau lihat detail teknis | "[NERD BOX] Regresi OLS: Y = β0 + β1X1 + β2X2 + ε, R²=0.34" |
+
+Prinsip: **pembaca muda baca `[PEMBACA]`, peneliti baca `[TEKNIS]` + `[NERD BOX]`**. Keduanya dapat apa yang mereka butuh.
 
 Section headings = scent markers. Reader decide stay/leave berdasarkan heading.
 
@@ -470,6 +507,9 @@ done
 - [ ] Counter-Argument Placement Strategy: hybrid (embedded minor + dedicated major)
 - [ ] Data Sufficiency: setiap argument punya > 2 data points, > 1 primary source
 - [ ] Cross-Section Flow Audit: 5 transitions logis, no gap
+- [ ] Bahasa sederhana: outline ditandai [PEMBACA] vs [TEKNIS] vs [NERD BOX]
+- [ ] Template penerjemahan riset → bahasa sederhana diisi untuk setiap argument
+- [ ] Heading pakai bahasa yang dimengerti pembaca muda (bukan akademis)
 
 ## Next
 

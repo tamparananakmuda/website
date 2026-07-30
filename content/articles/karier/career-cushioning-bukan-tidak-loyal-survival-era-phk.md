@@ -54,11 +54,11 @@ Data Apindo per Juli 2026 menunjukkan 126,000 pekerja Indonesia terkena PHK hany
 
 Pada saat yang sama, survei Robert Walters Indonesia bulan Agustus 2024 menemukan bahwa 50% profesional di Indonesia sudah mulai mencari pekerjaan baru dalam enam bulan terakhir. Mereka tidak menunggu surat PHK. Mereka tidak menunggu rapat mendadak dengan HR. Mereka sudah bersiap.
 
-Itu bukan ketidakloyalan. Itu survival.
+Itu bukan ketidakloyalan, tapi survival.
 
-## Apa Itu Career Cushioning
+## Apa itu career cushioning
 
-Career cushioning adalah strategi punya cadangan karier saat masih bekerja. Kamu tetap menjalankan pekerjaan saat ini secara optimal, tapi diam-diam mempersiapkan plan B: update profil LinkedIn, ambil kursus online untuk upskill, bangun networking di luar perusahaan, atau mulai side hustle sebagai backup income.
+Istilah ini merujuk pada strategi punya cadangan karier saat masih bekerja. Kamu tetap menjalankan pekerjaan saat ini secara optimal, tapi diam-diam mempersiapkan plan B: update profil LinkedIn, ambil kursus online untuk upskill, bangun networking di luar perusahaan, atau mulai side hustle sebagai backup income.
 
 Istilah ini mulai populer pada 2022 pasca gelombang PHK massal COVID-19, menurut Wikipedia. Forbes pada Juli 2024 menjelaskan bahwa career cushioning diadaptasi dari dunia percintaan, di mana "cushioning" berarti menjaga opsi cadangan sambil tetap dalam hubungan saat ini. Konteks kerjanya mirip: tetap di pekerjaan saat ini, tapi punya jaring pengaman kalau situasi berubah.
 
@@ -66,13 +66,13 @@ Beda dari quiet quitting, yang berarti mengurangi effort kerja ke minimum. Beda 
 
 Kenapa separuh profesional Indonesia merasa perlu punya plan B? Datanya menjawab.
 
-## PHK Tanpa Peringatan dan Double Standard Loyalitas
+## PHK tanpa peringatan dan double standard loyalitas
 
 Angka 126,000 PHK dari Apindo itu lima kali lipat lebih tinggi dari laporan Kemnaker yang hanya mencatat 23,470 pekerja PHK pada periode yang sama menurut Kompas Juni 2026. Kemnaker sendiri merevisi angka mereka menjadi 32,389 untuk semester I 2026 via Kontan Juli 2026. Organisasi Pekerja Seluruh Indonesia menyatakan angka riil kemungkinan jauh lebih tinggi karena banyak perusahaan tidak melaporkan kejadian PHK ke instansi terkait.
 
 Jawa Barat jadi provinsi dengan PHK tertinggi, 20.77% dari total nasional menurut data Kemnaker. Sektor manufaktur penyumbang terbesar. Shinta Kamdani, Ketua Umum Apindo, menyebut tekanan ekonomi global sebagai pemicu utama.
 
-126,000 orang kehilangan pekerjaan dalam lima bulan. Tanpa peringatan. Tanpa negosiasi. Itu disebut keputusan bisnis.
+126,000 orang kehilangan pekerjaan dalam lima bulan, tanpa peringatan, tanpa negosiasi. Itu disebut keputusan bisnis.
 
 Tapi ketika karyawan punya plan B, saat karyawan diam-diam update LinkedIn atau mulai ambil kursus online, itu disebut tidak loyal.
 
@@ -80,29 +80,29 @@ Itu double standard yang tidak bisa lagi ditutupi. Perusahaan bisa memutus hubun
 
 Dan itu baru data PHK. Belum termasuk quiet firing, belum termasuk yang dipaksa resign, belum termasuk yang kontraknya tidak diperpanjang.
 
-## Separuh Profesional Indonesia Sudah Diam-Diam Cari Kerja
+## Separuh profesional Indonesia sudah diam-diam cari kerja
 
-Survei Robert Walters Indonesia pada Agustus 2024 melibatkan profesional dari berbagai sektor. Hasilnya: hampir separuh profesional di Indonesia mengaku telah mulai mencari pekerjaan dalam enam bulan terakhir sebagai bagian dari strategi career cushioning.
+Survei Robert Walters pada Agustus 2024 melibatkan responden dari berbagai sektor. Hasilnya: hampir setengah dari tenaga kerja terdidik di negeri ini mengaku telah mulai mencari pekerjaan dalam enam bulan terakhir sebagai bagian dari strategi career cushioning.
 
-Faktor utama yang mendorong praktik ini menurut Robert Walters: budaya kerja yang tidak sehat (52%), kepuasan kerja yang rendah (25%), dan kurangnya jaminan keamanan kerja (17%). Taktik yang paling populer adalah melamar pekerjaan lain (47%) dan mengikuti pelatihan atau meningkatkan keterampilan (42%).
+Faktor utama yang mendorong praktik ini menurut Robert Walters: budaya kerja yang tidak sehat (52%), kepuasan kerja yang rendah (25%), dan kurangnya jaminan keamanan kerja (17%). Taktik yang paling populer menurut survei tersebut: melamar pekerjaan lain (47%) dan mengikuti pelatihan atau meningkatkan keterampilan (42%).
 
-Menurut survei Robert Walters yang sama, 63% profesional meyakini career cushioning dapat mempercepat pencarian pekerjaan mereka. Menariknya, 47% pengusaha yang disurvei melihat career cushioning sebagai cara bagi staf untuk mengembangkan diri dan membawa ide-ide baru ke perusahaan. Tidak semua perusahaan menganggapnya sebagai ancaman.
+Menurut survei Robert Walters yang sama, 63% profesional meyakini career cushioning dapat mempercepat pencarian pekerjaan mereka. Di sisi lain, 47% pengusaha yang disurvei melihat career cushioning sebagai cara bagi staf untuk mengembangkan diri dan membawa ide-ide baru ke perusahaan. Tidak semua perusahaan menganggapnya sebagai ancaman.
 
-Rika Tantiana, Senior Manager Robert Walters Indonesia, mengatakan bahwa career cushioning menjadi kian penting di tengah ketidakpastian ekonomi. "Pendekatan ini tidak hanya membantu mengurangi risiko kehilangan pekerjaan secara tiba-tiba, tetapi juga memungkinkan para profesional untuk membangun jaringan yang berharga dan meningkatkan keterampilan mereka," katanya.
+Rika Tantiana, Senior Manager Robert Walters Indonesia, mengatakan career cushioning menjadi kian penting di tengah ketidakpastian ekonomi. Pendekatan ini, menurutnya, membantu mengurangi risiko kehilangan pekerjaan secara tiba-tiba sekaligus memungkinkan profesional membangun jaringan dan meningkatkan keterampilan.
 
 Di Amerika, angkanya lebih tinggi. Survei Robert Walters AS pada Juni 2024 terhadap 2,500 white-collar professionals menemukan 68% tenaga kerja melakukan career cushioning. Dari survei AS tersebut, 48% menyebut low job satisfaction sebagai alasan, 28% menyebut lack of job security. Taktik utama menurut data survei: applying for jobs (67%) dan monitoring job market (53%).
 
 Data [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) sudah menunjukkan arah ini. Bukan generasi yang tidak mau setia. Generasi yang tidak diberi alasan untuk setia.
 
-Tapi siapa yang paling ketakutan? Gen Z. Dan ketakutan mereka punya dasar.
+Tapi siapa yang paling ketakutan? Gen Z dan ketakutan mereka punya dasar.
 
-## Gen Z dan Ketakutan yang Terverifikasi Data
+## Gen Z dan ketakutan yang terverifikasi data
 
-Survei Layoff Anxiety 2024 yang dilaporkan CNBC menemukan bahwa 57% pekerja Gen Z melaporkan kecemasan terhadap PHK, bandingkan dengan hanya 16% baby boomers. 88% Gen Z sudah mengambil langkah konkret untuk mempersiapkan diri menghadapi PHK. Bukan sekadar khawatir, tapi sudah bertindak.
+Survei Layoff Anxiety 2024 dilaporkan CNBC menemukan 57% pekerja Gen Z melaporkan kecemasan terhadap PHK, bandingkan dengan hanya 16% baby boomers. Menurut survei tersebut, 88% Gen Z sudah mengambil langkah konkret untuk mempersiapkan diri menghadapi PHK. Bukan sekadar khawatir, tapi sudah bertindak.
 
 Allianz Life pada 2025 melaporkan bahwa 64% Gen Z takut di-PHK dalam tahun ke depan, naik dari 55% beberapa bulan sebelumnya. Angka itu lebih tinggi dari millennials (45%) dan Gen X (41%) menurut Newsweek Juli 2025.
 
-Clarify Capital pada 2025 mensurvei 1,000 orang dewasa AS dan menemukan bahwa 1 dari 3 orang dewasa memiliki layoff anxiety. Gen Z: 40%. Lebih dari dua pertiga pekerja sekarang lebih menghargai job security daripada career growth. Hampir 1 dari 3 bersedia mengambil pemotongan gaji 10-20% untuk menghindari PHK.
+Clarify Capital pada 2025 mensurvei 1,000 orang dewasa AS dan menemukan bahwa 1 dari 3 orang dewasa memiliki layoff anxiety. Gen Z mencapai 40% menurut data Clarify Capital. Lebih dari dua pertiga pekerja sekarang lebih menghargai job security daripada career growth. Hampir 1 dari 3 bersedia mengambil pemotongan gaji 10-20% untuk menghindari PHK menurut survei yang sama.
 
 Ini bukan paranoia. 126,000 PHK dalam lima bulan memvalidasi kecemasan ini. Ketika [work-life balance bukan permintaan tapi syarat bertahan](/artikel/wlb-bukan-permintaan-syarat-bertahan-gen-z), job security juga bukan permintaan. Itu kebutuhan dasar yang sistem tidak jamin.
 
@@ -110,15 +110,15 @@ Career cushioning adalah manifestasi rasional dari ketakutan yang terverifikasi 
 
 Tapi ada yang lebih dalam dari sekadar ketakutan. Ada perubahan makna loyalitas itu sendiri.
 
-## Loyalitas Baru Gen Z: Dari Patuh ke Timbal Balik
+## Loyalitas baru Gen Z: dari patuh ke timbal balik
 
 Jurnal Kurniawan (2025) yang dipublikasikan di Maximal Journal meneliti 15 karyawan Gen Z berusia 20-27 tahun di sebuah perusahaan startup di Makassar. Studi kualitatif ini menemukan bahwa career cushioning didorong oleh dua jenis faktor. Faktor eksternal: instabilitas startup dan tekanan ekonomi. Faktor internal: keinginan untuk pengembangan diri.
 
 Temuan kuncinya: dampak career cushioning pada loyalitas bersifat dinamis. Di perusahaan dengan budaya fleksibel dan terbuka, career cushioning justru memperkuat komitmen karyawan. Mereka merasa dihargai, jadi mereka stay. Tapi di lingkungan kerja yang restriktif, career cushioning menjadi stepping stone menuju pintu keluar.
 
-Studi ini menyimpulkan bahwa loyalitas Gen Z telah bertransformasi. Dari traditional compliance, di mana karyawan patuh karena itu yang diharapkan, menjadi value-based reciprocity, di mana kesetiaan diberikan jika kesetiaan juga diterima. Selama perusahaan memberikan nilai, karyawan memberikan komitmen. Saat perusahaan berhenti memberikan nilai, karyawan bersiap pergi.
+Studi ini menyimpulkan bahwa loyalitas Gen Z telah berubah. Dari traditional compliance, di mana karyawan patuh karena itu yang diharapkan, menjadi value-based reciprocity, di mana kesetiaan diberikan jika kesetiaan juga diterima. Selama perusahaan memberikan nilai, karyawan memberikan komitmen. Saat perusahaan berhenti memberikan nilai, karyawan bersiap pergi.
 
-Jurnal lain tentang studi eksplorasi PHK massal di startup Indonesia meneliti 13 pekerja yang lolos dari PHK massal. Penelitian ini menggunakan teori kontrak psikologis Rousseau: karyawan punya keyakinan subjektif tentang perjanjian pertukaran dengan perusahaan. Ketika PHK terjadi, karyawan menafsirkan itu sebagai pelanggaran kontrak psikologis. Dampaknya: perasaan dikhianati, penurunan motivasi, keretakan hubungan.
+Jurnal lain tentang studi eksplorasi PHK massal di startup Indonesia meneliti 13 pekerja yang lolos dari PHK massal. Penelitian ini menggunakan teori kontrak psikologis Rousseau: karyawan punya pandangan subjektif tentang perjanjian pertukaran dengan perusahaan. Ketika PHK terjadi, karyawan menafsirkan itu sebagai pelanggaran kontrak psikologis. Dampaknya: perasaan dikhianati, penurunan motivasi, keretakan hubungan.
 
 Ini menjelaskan kenapa [quiet firing](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar) terasa begitu menyakitkan. Dan kenapa [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) bukan kemalasan. Keduanya adalah respons terhadap kontrak yang sudah dilanggar lebih dulu oleh perusahaan.
 
@@ -126,31 +126,31 @@ Transparansi dan komunikasi terbuka, menurut jurnal yang sama, bisa menjadi fakt
 
 Jadi bagaimana melakukannya tanpa merasa bersalah?
 
-## Career Cushioning Praktis: Bersiap Tanpa Sabotase
+## Career cushioning praktis: bersiap tanpa sabotase
 
-Career cushioning bukan tentang mengabaikan pekerjaan saat ini. Tetap kerja optimal. Tetap deliver. Yang kamu lakukan adalah menambah lapisan perlindungan di luar jam kerja.
+Praktik ini bukan tentang mengabaikan pekerjaan saat ini. Tetap kerja optimal. Tetap deliver. Yang kamu lakukan adalah menambah lapisan perlindungan di luar jam kerja.
 
 Pertama, update CV dan profil LinkedIn. Tidak perlu announce ke kantor. Cukup pastikan profil kamu menampilkan skill dan pencapaian terkini. Kedua, identifikasi skill yang bisa ditransfer ke industri lain. Kalau kamu kerja di startup tech, skill project management kamu bisa dipakai di fintech, e-commerce, atau bahkan industri kreatif. Ketiga, ambil kursus online. Coursera, Udemy, atau platform gratis seperti Google Skillshop. Upskill yang relevan dengan arah karier yang kamu tuju. Keempat, bangun networking di luar perusahaan saat ini. Hadiri meetup industri, join komunitas profesional, reconnect dengan mantan kolega. Kelima, pertimbangkan [side hustle sebagai backup income](/artikel/overemployment-kerja-2-full-time-bukan-ambisi). Tidak perlu full-time, cukup freelance project atau konsultasi yang bisa jadi jaring pengaman kalau pekerjaan utama hilang.
 
 Pemerintah sebenarnya punya jaring pengaman. BPJS Ketenagakerjaan mengelola Jaminan Kehilangan Pekerjaan (JKP). JKP memberikan uang tunai selama 6 bulan: 45% x upah untuk 3 bulan pertama, lalu 25% x upah untuk 3 bulan berikutnya. Plus akses ke informasi pasar kerja, konseling, dan pelatihan.
 
-Tapi JKP tidak cukup untuk hidup lama. 45% upah untuk 3 bulan, lalu 25% untuk 3 bulan berikutnya. Kalau gajimu Rp5 juta, bulan pertama kamu dapat Rp2,25 juta. Bulan keempat turun jadi Rp1,25 juta. Coba bayar kos, makan, transport, cicilan dengan Rp1,25 juta di kota besar.
+Tapi JKP tidak cukup untuk hidup lama. Itu artinya 45% upah untuk 3 bulan, lalu 25% untuk 3 bulan berikutnya menurut skema BPJS. Kalau gajimu Rp5 juta, bulan pertama kamu dapat Rp2,25 juta dari JKP. Bulan keempat turun jadi Rp1,25 juta dari JKP. Coba bayar kos, makan, transport, cicilan dengan Rp1,25 juta dari JKP di kota besar.
 
 Career cushioning adalah lapisan tambahan di atas JKP. Bukan menggantikan, melengkapi.
 
-## Double Standard yang Tidak Bisa Lagi Ditutupi
+## Double standard yang tidak bisa lagi ditutupi
 
-Saya perhatikan dari teman-teman yang kerja di startup, hampir semua punya LinkedIn yang selalu up-to-date. Bukan karena mereka mau pindah besok. Tapi karena mereka sudah pernah melihat kolega di-PHK tanpa peringatan. Senin masih kerja normal, Jumat sudah dijemput security dengan kotak kardus. Tidak ada rapat perpisahan. Tidak ada ucapan terima kasih. Hanya email dari HR yang isinya "dengan berat hati kami informasikan".
+Saya perhatikan dari teman-teman bekerja di startup, hampir semua punya LinkedIn selalu up-to-date. Bukan karena mereka mau pindah besok. Tapi karena mereka sudah pernah melihat kolega di-PHK tanpa peringatan. Senin masih kerja normal, Jumat sudah dijemput security dengan kotak kardus. Tidak ada rapat perpisahan. Tidak ada ucapan terima kasih. Hanya email dari HR isinya "dengan berat hati kami informasikan".
 
-126,000 orang mengalami itu dalam lima bulan pertama 2026. Dan 50% profesional Indonesia sudah belajar dari pola itu. Mereka tidak mau jadi orang yang dijemput security dengan kotak kardus tanpa persiapan.
+126,000 orang mengalami itu dalam lima bulan pertama 2026. Dan 50% profesional Indonesia menurut Robert Walters sudah belajar dari pola itu. Mereka tidak mau jadi orang yang dijemput security dengan kotak kardus tanpa persiapan.
 
 Double standard loyalitas adalah manipulasi narasi. Perusahaan PHK 126,000 orang tanpa peringatan, itu disebut keputusan bisnis. Karyawan punya plan B, itu disebut tidak loyal. Tapi loyalitas yang hanya menguntungkan satu pihak bukan loyalitas. Itu ketergantungan. Career cushioning adalah cara Gen Z mengubah ketergantungan menjadi otonomi.
 
-## Bukan Kamu yang Tidak Loyal
+## Bukan kamu yang tidak loyal
 
-Bukan kamu yang tidak loyal. Sistem yang tidak pernah loyalmu.
+Sistem tidak pernah loyalmu.
 
-Perusahaan bisa PHK kamu kapan saja. 126,000 orang sudah membuktikan itu dalam lima bulan. 50% profesional Indonesia sudah merespons dengan menyiapkan plan B. Bukan karena mereka tidak menghargai pekerjaan mereka. Justru karena mereka menghargai diri mereka sendiri.
+Perusahaan bisa PHK kamu kapan saja. 126,000 orang sudah membuktikan itu dalam lima bulan. 50% profesional Indonesia menurut Robert Walters sudah merespons dengan menyiapkan plan B. Bukan karena mereka tidak menghargai pekerjaan mereka. Justru karena mereka menghargai diri mereka sendiri.
 
 Career cushioning bukan pengkhianatan. Itu respons rasional terhadap sistem yang tidak menjamin keamanan. Kamu berhak bersiap. Kamu berhak punya cadangan. Loyalitas timbal balik atau tidak sama sekali.
 

@@ -60,34 +60,49 @@ export function NewsletterCta() {
             <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Surat mingguan untuk anak muda yang ingin melihat kenyataan lebih jelas. Tidak ada spam, tidak ada clickbait. Hanya perspektif yang layak kamu baca pelan-pelan.
             </p>
-            <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-3">
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Input
-                  type="email"
-                  placeholder="kamu@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-background"
-                />
-                <Button
-                  type="submit"
-                  disabled={status === 'loading' || !turnstileToken}
-                  size="lg"
-                  className="shrink-0"
-                >
-                  {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
-                </Button>
+            {status === 'success' ? (
+              <div className="mx-auto max-w-md rounded-xl border border-primary/20 bg-primary/5 p-6 text-center">
+                <div className="mb-3 flex justify-center">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                </div>
+                <p className="mb-1 font-medium text-primary">Hampir selesai!</p>
+                <p className="text-sm text-muted-foreground">{message}</p>
+                <p className="mt-2 text-xs text-muted-foreground/70">Tidak menerima email? Cek folder spam.</p>
               </div>
-              <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="flex justify-center" />
-            </form>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Gratis. Berhenti kapan saja.
-            </p>
-            {message && (
-              <p className={`mt-4 text-sm ${status === 'success' ? 'text-primary' : 'text-destructive'}`}>
-                {message}
-              </p>
+            ) : (
+              <>
+                <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-3">
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <Input
+                      type="email"
+                      placeholder="kamu@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="bg-background"
+                    />
+                    <Button
+                      type="submit"
+                      disabled={status === 'loading' || !turnstileToken}
+                      size="lg"
+                      className="shrink-0"
+                    >
+                      {status === 'loading' ? 'Mendaftar...' : 'Berlangganan'}
+                    </Button>
+                  </div>
+                  <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} className="flex justify-center" />
+                </form>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Gratis. Berhenti kapan saja.
+                </p>
+                {status === 'error' && message && (
+                  <p className="mt-3 text-sm text-destructive">{message}</p>
+                )}
+              </>
             )}
           </div>
         </div>

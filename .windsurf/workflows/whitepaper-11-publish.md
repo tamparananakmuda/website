@@ -12,7 +12,39 @@ Dari `/whitepaper-10-humanizer`
 
 ## Whitepaper publish = set status di file Markdown
 
-Set `status: "published"` di frontmatter file `content/whitepaper/SLUG.md`. Commit dan push ke main untuk deploy.
+Whitepaper publish **1 bulan sekali**. Saat build (step 08), whitepaper sudah di-set `status: "scheduled"` dengan `publishedAt` di tanggal 1 bulan kosong berikutnya (08:00 WIB / 01:00 UTC).
+
+### Cara Publish
+
+**Otomatis (recommended):** Cron job GitHub Actions cek setiap 5 menit. Saat `publishedAt <= now()`, cron auto:
+1. Ubah `status` dari `scheduled` ke `published` di file Markdown
+2. Generate OG image (card + feature WebP)
+3. Deploy ke production
+
+**Manual (jika perlu publish langsung):** Set `status: "published"` di frontmatter file `content/whitepaper/SLUG.md`. Commit dan push ke main untuk deploy.
+
+### Verifikasi schedule sebelum publish
+
+Sebelum publish, pastikan tidak ada whitepaper lain di bulan yang sama:
+
+```bash
+npx tsx -e "
+const { readdirSync, readFileSync } = require('fs');
+const { join } = require('path');
+const matter = require('gray-matter');
+const dir = join(process.cwd(), 'content', 'whitepaper');
+const files = readdirSync(dir).filter(f => f.endsWith('.md'));
+const all = files.map(f => {
+  const { data } = matter(readFileSync(join(dir, f), 'utf8'));
+  return { slug: data.slug, status: data.status, month: new Date(data.publishedAt).toISOString().slice(0,7) };
+});
+const byMonth = {};
+all.forEach(w => { byMonth[w.month] = (byMonth[w.month] || 0) + 1; });
+Object.entries(byMonth).sort().forEach(([month, count]) => {
+  console.log(month + ': ' + count + ' whitepaper' + (count > 1 ? ' [WARNING: lebih dari 1]' : ''));
+});
+"
+```
 
 ## OG Image Generation (manual, template berbeda dari artikel)
 
@@ -62,7 +94,9 @@ Verify E-E-A-T signals live di production:
 
 ## Checklist
 
-- [ ] `status` = `published` di frontmatter file
+- [ ] `status` = `scheduled` (auto-publish oleh cron) atau `published` (manual)
+- [ ] `publishedAt` = tanggal 1 bulan kosong, 01:00 UTC (08:00 WIB)
+- [ ] Verifikasi: tidak ada whitepaper lain di bulan yang sama
 - [ ] OG image generated
 - [ ] HTTP 200 di production `/whitepaper/SLUG`
 - [ ] Sitemap includes slug

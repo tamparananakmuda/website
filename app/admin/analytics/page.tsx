@@ -14,6 +14,19 @@ interface AnalyticsData {
   topPosts: { id: string; title: string; slug: string; publishedAt: string | null }[];
 }
 
+interface FunnelStage {
+  stage: string;
+  count: number;
+  description: string;
+  widthPercent: number;
+  conversionRate: number;
+  overallRate: number;
+}
+
+interface FunnelData {
+  funnel: FunnelStage[];
+}
+
 const monthLabels: Record<string, string> = {
   '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr', '05': 'Mei', '06': 'Jun',
   '07': 'Jul', '08': 'Agu', '09': 'Sep', '10': 'Okt', '11': 'Nov', '12': 'Des',
@@ -32,12 +45,22 @@ const statusColors: Record<string, string> = {
 
 export default function AnalyticsDashboard() {
   const [data, setData] = useState<AnalyticsData | null>(null);
+  const [funnelData, setFunnelData] = useState<FunnelData | null>(null);
   const [loading, setLoading] = useState(true);
 
   const fetchData = useCallback(async () => {
-    const res = await fetch('/api/analytics/overview');
-    const json = await res.json();
-    setData(json);
+    const [overviewRes, funnelRes] = await Promise.all([
+      fetch('/api/analytics/overview'),
+      fetch('/api/analytics/funnel'),
+    ]);
+    const overviewJson = await overviewRes.json();
+    setData(overviewJson);
+    try {
+      const funnelJson = await funnelRes.json();
+      setFunnelData(funnelJson);
+    } catch {
+      // Funnel API might fail if DB tables don't exist yet
+    }
     setLoading(false);
   }, []);
 
@@ -218,6 +241,48 @@ export default function AnalyticsDashboard() {
           <p className="text-sm text-muted-foreground">Pipeline kosong.</p>
         )}
       </div>
+
+      {funnelData && funnelData.funnel.length > 0 && (
+        <div className="mb-8 rounded-lg border border-border bg-card p-6">
+          <h2 className="mb-1 text-sm font-semibold">Conversion Funnel</h2>
+          <p className="mb-4 text-xs text-muted-foreground">
+            Dari artikel published sampai donasi settled
+          </p>
+          <div className="space-y-3">
+            {funnelData.funnel.map((stage, i) => (
+              <div key={stage.stage} className="relative">
+                <div className="flex items-center justify-between mb-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-foreground">{stage.stage}</span>
+                    {i > 0 && stage.conversionRate < 100 && (
+                      <span className="text-xs text-muted-foreground">
+                        ({stage.conversionRate}% dari stage sebelumnya)
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-sm font-bold">{stage.count}</span>
+                </div>
+                <div className="h-8 rounded-md bg-secondary overflow-hidden">
+                  <div
+                    className="h-full rounded-md transition-all flex items-center justify-end pr-2"
+                    style={{
+                      width: `${Math.max(stage.widthPercent, 2)}%`,
+                      backgroundColor: i === 0 ? '#e11d48' : i === 1 ? '#f43f5e' : i === 2 ? '#fb7185' : i === 3 ? '#fda4af' : '#fecdd3',
+                    }}
+                  >
+                    {stage.widthPercent > 15 && (
+                      <span className="text-xs font-medium text-white">
+                        {stage.overallRate}%
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <p className="mt-0.5 text-xs text-muted-foreground/60">{stage.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="rounded-lg border border-border bg-card p-6">
         <h2 className="mb-4 text-sm font-semibold">Artikel Terbaru</h2>

@@ -1,5 +1,5 @@
 const CACHE_NAME = 'tam-v1';
-const STATIC_ASSETS = ['/', '/artikel', '/manifest.json'];
+const STATIC_ASSETS = ['/', '/artikel', '/manifest.json', '/offline'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -38,7 +38,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           return response;
         })
-        .catch(() => caches.match(request).then((cached) => cached || caches.match('/')))
+        .catch(() => caches.match(request).then((cached) => cached || caches.match('/offline')))
     );
     return;
   }
