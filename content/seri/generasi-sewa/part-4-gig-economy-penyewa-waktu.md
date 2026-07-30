@@ -84,7 +84,7 @@ Pendapatan kotor harian turun dari Rp168 ribu (2023) ke Rp126 ribu (2025). Turun
 51 persen pengemudi ojol bekerja 9-12 jam per hari. 55,5 persen bekerja 7 hari penuh tanpa libur. Bayangkan: 11 jam di jalan, terkena panas, hujan, macet, resiko kecelakaan. Setiap hari. Tanpa hari libur. Dan bawa pulang Rp1,7 juta per bulan. Itu setara dengan UMR kota kecil di Indonesia. Tapi mereka kerja di kota besar di mana biaya hidupnya 2-3 kali UMR kota kecil.
 
 ```chart:bar
-{"title":"Pendapatan Ojol 2023 vs 2025","subtitle":"Pendapatan bersih turun 41% dalam 2 tahun","source":"IDEAS Survei 2026 (via Intime, Mei 2026)","data":[{"name":"2023","value":2.9,"color":"#3b82f6"},{"name":"2025","value":1.7,"color":"#ef4444"}]}
+{"title":"Pendapatan Ojol 2023 vs 2025","subtitle":"Pendapatan bersih turun 41% dalam 2 tahun","source":"IDEAS Survei 2026 (via Intime, Mei 2026)","data":[{"label":"2023","value":2.9,"color":"#3b82f6"},{"label":"2025","value":1.7,"color":"#ef4444"}]}
 ```
 
 ## Biaya Tersembunyi dari Platform

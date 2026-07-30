@@ -85,7 +85,7 @@ Data OJK yang dilansir Tempo pada April 2025 menunjukkan 48,27 persen pengguna p
 NPF atau Non-Performing Loan paylater multifinance naik dari 2,99 persen pada April 2026 menjadi 3,44 persen pada Mei 2026. NPF bank juga naik dari 3,48 persen ke 3,78 persen. Artinya, semakin banyak pengguna paylater yang tidak mampu membayar. "Kemudahan" ini berubah jadi beban yang tidak bisa ditanggung.
 
 ```chart:bar
-{"title":"Pertumbuhan Paylater vs Kredit Konsumsi","subtitle":"Paylater tumbuh 6x lebih cepat dari kredit konsumsi","source":"OJK (via Katadata & Kontan, Jul 2026)","data":[{"name":"Paylater (Perbankan)","value":37.72,"color":"#ef4444"},{"name":"Paylater (Multifinance)","value":53.78,"color":"#f4a825"},{"name":"Kredit Konsumsi","value":5.89,"color":"#3b82f6"}]}
+{"title":"Pertumbuhan Paylater vs Kredit Konsumsi","subtitle":"Paylater tumbuh 6x lebih cepat dari kredit konsumsi","source":"OJK (via Katadata & Kontan, Jul 2026)","data":[{"label":"Paylater (Perbankan)","value":37.72,"color":"#ef4444"},{"label":"Paylater (Multifinance)","value":53.78,"color":"#f4a825"},{"label":"Kredit Konsumsi","value":5.89,"color":"#3b82f6"}]}
 ```
 
 ## Bunga yang Tidak Terlihat

@@ -103,7 +103,7 @@ Ketua Umum The Housing and Urban Development Institute, Zulfi Syarif Koto, menje
 Dampaknya ke pasar: penjualan rumah tapak kecil turun 46 persen secara tahunan, menurut data BI SHPR kuartal I 2026. Segmen rumah tapak nonsubsidi harga Rp800 juta sampai Rp2,5 miliar diproyeksikan melambat 20-30 persen hingga kuartal IV 2026. Ini segmen yang dihuni pekerja muda yang mengandalkan KPR.
 
 ```chart:bar
-{"title":"Rasio Harga Rumah vs Pendapatan per Negara","subtitle":"Berapa tahun pendapatan tahunan dibutuhkan untuk beli rumah","source":"Numbeo (via Kompas, Nov 2025)","data":[{"name":"Indonesia","value":16.73,"color":"#ef4444"},{"name":"Malaysia","value":9,"color":"#f4a825"},{"name":"Amerika Serikat","value":3,"color":"#3b82f6"}]}
+{"title":"Rasio Harga Rumah vs Pendapatan per Negara","subtitle":"Berapa tahun pendapatan tahunan dibutuhkan untuk beli rumah","source":"Numbeo (via Kompas, Nov 2025)","data":[{"label":"Indonesia","value":16.73,"color":"#ef4444"},{"label":"Malaysia","value":9,"color":"#f4a825"},{"label":"Amerika Serikat","value":3,"color":"#3b82f6"}]}
 ```
 
 ## Pilihan Rasional, Bukan Sikap Malas

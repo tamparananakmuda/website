@@ -90,7 +90,7 @@ Riset C+R Research yang dikutip Navaswara pada Juli 2026 menemukan bahwa konsume
 Di Indonesia, rata-rata pengeluaran streaming video saja sekitar Rp250 ribu per bulan, menurut Populix yang dikutip Navaswara. Kelas menengah-atas bisa mencapai Rp750 ribu per bulan hanya untuk streaming video. Belum termasuk langganan musik, cloud storage, tools produktivitas, AI, dan food delivery subscription.
 
 ```chart:bar
-{"title":"Perkiraan vs Realita Pengeluaran Langganan","subtitle":"Konsumen memperkirakan $86/bulan, realita $219/bulan","source":"C+R Research (via Navaswara, Jul 2026)","data":[{"name":"Perkiraan","value":86,"color":"#3b82f6"},{"name":"Realita","value":219,"color":"#ef4444"}]}
+{"title":"Perkiraan vs Realita Pengeluaran Langganan","subtitle":"Konsumen memperkirakan $86/bulan, realita $219/bulan","source":"C+R Research (via Navaswara, Jul 2026)","data":[{"label":"Perkiraan","value":86,"color":"#3b82f6"},{"label":"Realita","value":219,"color":"#ef4444"}]}
 ```
 
 ## Efek Pecah Belah di Pasar Streaming
