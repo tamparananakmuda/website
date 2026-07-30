@@ -48,17 +48,17 @@ const activities: Activity[] = [
     ],
   },
   {
-    slug: 'kunjungan-panti-asuhan-harapan',
-    title: 'Kunjungan ke Panti Asuhan Harapan',
+    slug: 'kunjungan-chloe-house',
+    title: 'Kunjungan ke Chloe House',
     excerpt:
-      'Berbagi waktu dengan anak-anak panti asuhan. Belajar tentang mimpi, harapan, dan kenyataan tumbuh tanpa orang tua.',
+      'Berbagi waktu dengan anak-anak di Chloe House. Belajar tentang mimpi, harapan, dan kenyataan tumbuh tanpa orang tua.',
     date: '2026-08-30',
-    location: 'Panti Asuhan Harapan, Depok',
+    location: 'Chloe House, Depok',
     participants: '20 relawan',
     status: 'upcoming',
     category: 'Panti Asuhan',
     description:
-      'Kunjungan ke Panti Asuhan Harapan adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami akan bermain, belajar, dan mendengarkan mimpi-mimpi mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak panti asuhan.',
+      'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami akan bermain, belajar, dan mendengarkan mimpi-mimpi mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
     objectives: [
       'Bermain dan berinteraksi dengan anak-anak panti asuhan',
       'Membagikan buku bacaan dan alat tulis',
@@ -67,7 +67,7 @@ const activities: Activity[] = [
     ],
     agenda: [
       { time: '08:30', activity: 'Berangkat dari titik kumpul' },
-      { time: '09:30', activity: 'Perkenalan dengan anak-anak panti' },
+      { time: '09:30', activity: 'Perkenalan dengan anak-anak Chloe House' },
       { time: '10:00', activity: 'Ice breaking dan permainan' },
       { time: '11:00', activity: 'Workshop mini: mimpi dan cita-cita' },
       { time: '12:00', activity: 'Makan siang bersama' },

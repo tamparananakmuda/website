@@ -50,12 +50,12 @@ const activities: Activity[] = [
     category: 'Panti Jompo',
   },
   {
-    slug: 'kunjungan-panti-asuhan-harapan',
-    title: 'Kunjungan ke Panti Asuhan Harapan',
+    slug: 'kunjungan-chloe-house',
+    title: 'Kunjungan ke Chloe House',
     excerpt:
-      'Berbagi waktu dengan anak-anak panti asuhan. Belajar tentang mimpi, harapan, dan kenyataan tumbuh tanpa orang tua.',
+      'Berbagi waktu dengan anak-anak di Chloe House. Belajar tentang mimpi, harapan, dan kenyataan tumbuh tanpa orang tua.',
     date: '2026-08-30',
-    location: 'Panti Asuhan Harapan, Depok',
+    location: 'Chloe House, Depok',
     participants: '20 relawan',
     status: 'upcoming',
     category: 'Panti Asuhan',
