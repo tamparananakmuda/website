@@ -68,7 +68,7 @@ export const revalidate = 3600;
 export async function generateStaticParams() {
   const articles = await getAllArticles();
   return articles
-    .filter((a) => a.status === 'published')
+    .filter((a) => a.status === 'published' || a.status === 'scheduled')
     .map((a) => ({ slug: a.slug }));
 }
 
