@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink, Share2 } from 'lucide-react';
+import { ExternalLink, Share2, Play, Clock } from 'lucide-react';
 import { useState } from 'react';
 import { SocialNewsletterCTA } from '@/components/social/social-newsletter-cta';
 
@@ -13,6 +13,7 @@ interface RelatedPost {
   platform: string;
   title: string | null;
   thumbnailUrl: string | null;
+  duration: number | null;
 }
 
 const platformLabels: Record<string, string> = {
@@ -21,6 +22,20 @@ const platformLabels: Record<string, string> = {
   tiktok: 'TikTok',
   youtube: 'YouTube',
 };
+
+const platformColors: Record<string, string> = {
+  x: 'bg-gray-900',
+  instagram: 'bg-gradient-to-r from-purple-500 to-pink-500',
+  tiktok: 'bg-black',
+  youtube: 'bg-red-600',
+};
+
+function formatDuration(seconds: number | null | undefined): string {
+  if (!seconds) return '';
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
 
 export default function SocialDetail({
   post,
@@ -48,13 +63,26 @@ export default function SocialDetail({
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-4xl mx-auto">
+      {/* Back link */}
+      <div className="mb-4">
+        <Link href="/sosial" className="text-sm text-muted-foreground hover:text-foreground">
+          &larr; Semua konten sosial
+        </Link>
+      </div>
+
       {/* Platform badge + share */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium">
+          <span className={`rounded-full px-3 py-1 text-xs font-medium text-white ${platformColors[post.platform] || 'bg-gray-700'}`}>
             {platformLabels[post.platform] || post.platform}
           </span>
+          {post.duration && (
+            <span className="flex items-center gap-1 text-xs text-muted-foreground">
+              <Clock className="h-3 w-3" />
+              {formatDuration(post.duration)}
+            </span>
+          )}
           {post.publishedAt && (
             <span className="text-xs text-muted-foreground">
               {new Date(post.publishedAt).toLocaleDateString('id-ID', {
@@ -82,9 +110,20 @@ export default function SocialDetail({
       {/* Author */}
       {post.authorName && (
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold">
-            {post.authorName[0]?.toUpperCase()}
-          </div>
+          {post.authorAvatarUrl ? (
+            <Image
+              src={post.authorAvatarUrl}
+              alt={post.authorName}
+              width={40}
+              height={40}
+              className="rounded-full"
+              unoptimized
+            />
+          ) : (
+            <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold">
+              {post.authorName[0]?.toUpperCase()}
+            </div>
+          )}
           <div>
             <p className="font-medium text-foreground">{post.authorName}</p>
             {post.authorHandle && (
@@ -96,7 +135,7 @@ export default function SocialDetail({
 
       {/* Video embed */}
       {post.videoUrl && (post.platform === 'youtube' || post.platform === 'tiktok') && (
-        <div className="rounded-lg overflow-hidden bg-black aspect-video mb-6">
+        <div className="rounded-xl overflow-hidden bg-black aspect-video mb-6">
           <iframe
             src={post.videoUrl}
             className="w-full h-full"
@@ -114,7 +153,7 @@ export default function SocialDetail({
           width={800}
           height={450}
           loading="lazy"
-          className="w-full rounded-lg mb-6"
+          className="w-full rounded-xl mb-6"
           unoptimized
         />
       )}
@@ -186,11 +225,21 @@ export default function SocialDetail({
                 href={`/sosial/${r.id}`}
                 className="group rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-colors"
               >
-                {r.thumbnailUrl ? (
-                  <Image src={r.thumbnailUrl} alt={r.title || 'Thumbnail'} width={200} height={113} loading="lazy" className="w-full aspect-video object-cover" unoptimized />
-                ) : (
-                  <div className="w-full aspect-video bg-secondary" />
-                )}
+                <div className="relative aspect-video bg-black overflow-hidden">
+                  {r.thumbnailUrl ? (
+                    <Image src={r.thumbnailUrl} alt={r.title || 'Thumbnail'} fill loading="lazy" className="object-cover group-hover:scale-105 transition-transform" unoptimized sizes="200px" />
+                  ) : (
+                    <div className="w-full h-full bg-secondary" />
+                  )}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
+                    <Play className="h-6 w-6 text-white fill-white" />
+                  </div>
+                  {r.duration && (
+                    <span className="absolute bottom-1.5 right-1.5 rounded bg-black/80 px-1 py-0.5 text-xs font-medium text-white">
+                      {formatDuration(r.duration)}
+                    </span>
+                  )}
+                </div>
                 <p className="p-2 text-xs text-foreground line-clamp-2 group-hover:text-primary transition-colors">
                   {r.title || 'Tanpa judul'}
                 </p>

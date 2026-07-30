@@ -138,6 +138,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 126 | Creator Burnout Bukan Kelelahan, Algoritma yang Eksploitasi Kamu | creator-burnout-bukan-kelelahan-algoritma-eksploitasi | Teknologi | Teknologi & AI | kontra-narasi | 2026-08-24 (scheduled 08:00 WIB) |
 | 127 | Quiet Firing: Bukan Kamu yang Pergi, Perusahaan yang Paksa Kamu Keluar | quiet-firing-perusahaan-paksa-kamu-keluar | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-25 (scheduled 08:00 WIB) |
 | 128 | Career Cushioning: Bukan Tidak Loyal, Survival di Era PHK Tanpa Peringatan | career-cushioning-bukan-tidak-loyal-survival-era-phk | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-26 (scheduled 08:00 WIB) |
+| 129 | Time Poverty Gen Z: Bukan Jelek Atur Waktu, 8 Jam Kerja yang Makan 14 Jam Hidupmu | time-poverty-gen-z-8-jam-kerja-makan-14-jam-hidupmu | Kehidupan | null | kontra-narasi | 2026-08-27 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

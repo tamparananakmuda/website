@@ -429,6 +429,8 @@ export const socialPosts = pgTable('social_posts', {
   videoUrl: text('video_url'),
   thumbnailUrl: text('thumbnail_url'),
   transcript: text(),
+  duration: integer(), // video duration in seconds
+  contentType: text('content_type').default('video'), // video | carousel | text | image
   publishedAt: timestamp('published_at', { withTimezone: true, mode: 'string' }),
   importedAt: timestamp('imported_at', { withTimezone: true, mode: 'string' }).defaultNow(),
   status: text().default('draft').notNull(),
@@ -441,6 +443,7 @@ export const socialPosts = pgTable('social_posts', {
 }, (table) => [
   check('social_posts_platform_check', sql`platform = ANY (ARRAY['x'::text, 'instagram'::text, 'tiktok'::text, 'youtube'::text])`),
   check('social_posts_status_check', sql`status = ANY (ARRAY['draft'::text, 'published'::text, 'archived'::text])`),
+  check('social_posts_content_type_check', sql`content_type = ANY (ARRAY['video'::text, 'carousel'::text, 'text'::text, 'image'::text])`),
 ]);
 
 // Relations
