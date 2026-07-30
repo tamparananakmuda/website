@@ -9,6 +9,8 @@ const navItems = [
   { name: 'Analytics', href: '/admin/analytics' },
   { name: 'Import Sosial', href: '/admin/import' },
   { name: 'Kelola Posts', href: '/admin/posts' },
+  { name: 'Donasi', href: '/admin/donasi' },
+  { name: 'Tools', href: '/admin/tools' },
 ];
 
 export function AdminNav() {

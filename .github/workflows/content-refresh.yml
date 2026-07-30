@@ -1,0 +1,33 @@
+name: Monthly Content Refresh Check
+
+on:
+  schedule:
+    # Jalan tanggal 1 setiap bulan, jam 08:00 WIB (01:00 UTC)
+    - cron: '0 1 1 * *'
+  workflow_dispatch:
+
+jobs:
+  check-stale-content:
+    name: Identify Stale Articles
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check stale articles
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "https://tamparananakmuda.com/api/cron/content-refresh")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+
+          STALE_COUNT=$(echo "$BODY" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('staleCount', 0))" 2>/dev/null || echo "0")
+          echo "Stale articles found: $STALE_COUNT"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "ERROR: Content refresh check failed with HTTP $HTTP_CODE"
+            exit 1
+          fi

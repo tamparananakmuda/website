@@ -44,13 +44,15 @@ export async function uploadOGImage(slug: string, type: OGImageType, buffer: Buf
 
 export async function deleteOldOGImages(slug: string): Promise<void> {
   const client = getS3Client();
+  // Only delete legacy PNG formats and old single-webp format.
+  // Do NOT delete current -card.webp and -feature.webp files here,
+  // because PutObjectCommand overwrites them on upload. Deleting them
+  // before upload creates a race where the file is missing if upload fails.
   const oldKeys = [
     `og/${slug}-card.png`,
     `og/${slug}-feature.png`,
     `og/${slug}-og.png`,
     `og/${slug}.webp`,
-    `og/${slug}-card.webp`,
-    `og/${slug}-feature.webp`,
   ];
 
   await Promise.all(

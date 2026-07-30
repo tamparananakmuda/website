@@ -69,7 +69,7 @@ Perbedaan ini terdengar teknis. Tapi konsekuensinya nyata. Setiap kali kamu menj
 
 Psikologinya juga berbeda. Trader butuh disiplin besi: harus tahan melihat portofolio merah, harus tahan godaan FOMO, harus tahan keinginan balas dendam setelah rugi. FOMO bukan kelemahanmu, itu [desain algoritma](/artikel/fomo-desain-algoritma) yang sengaja dibuat agar kamu tidak bisa berhenti. Gen Z yang sudah kesulitan mengatur emosi di media sosial tiba-tiba diharuskan mengatur emosi di pasar yang volatil. Hasilnya bisa ditebak.
 
-## Perangkap Saham Gorengan
+## Manipulasi Pasar
 
 Saham gorengan adalah saham berkapitalisasi kecil yang harganya dimanipulasi kelompok tertentu. Polanya selalu sama: harga dinaikkan secara artifisial, lalu dijual massal saat investor ritel sudah masuk. Pelaku untung, ritel rugi.
 

@@ -7,7 +7,7 @@ author: "TAMPARAN ANAK MUDA"
 downloadUrl: null
 readingTime: 25
 tags: ["kelas-menengah", "ekonomi-indonesia", "upah-riil", "ppn-regresif", "keterjangkauan-properti", "mobilitas-sosial", "apbn"]
-status: "published"
+status: "scheduled"
 publishedAt: "2026-08-15T00:00:00+07:00"
 og_headline: "Tangga yang dipanjat dipotong dari bawah"
 reportCode: "TAM-2026-002"

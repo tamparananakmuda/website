@@ -3,6 +3,10 @@ import { getPostWithRelationsBySlug, countPublishedPostsInSeries, updatePostOGUr
 import { generateAndUploadOGImages } from '@/lib/cdn/generate';
 import { deleteOldOGImages } from '@/lib/cdn/r2';
 import { getAllArticles, publishArticleFile } from '@/lib/articles/loader';
+import { getScheduledWhitepapers, publishWhitepaperFile } from '@/lib/whitepaper/loader';
+import { db } from '@/lib/db';
+import { postMetadata } from '@/lib/db/schema';
+import { eq } from 'drizzle-orm';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -41,6 +45,16 @@ export async function GET(request: NextRequest) {
           console.log(`[cron] Published: ${post.slug}`);
         } catch (pubError) {
           console.log(`[cron] File publish skipped for ${post.slug} (read-only FS or already published)`);
+        }
+
+        // Check if OG images already exist in DB. On Vercel, publishArticleFile
+        // fails (read-only FS) so status stays "scheduled" and cron reprocesses
+        // every run. Skip OG generation if URLs already saved to prevent
+        // delete-then-fail race condition that leaves CDN with 404s.
+        const existingMeta = await db.select().from(postMetadata).where(eq(postMetadata.slug, post.slug)).limit(1);
+        if (existingMeta.length > 0 && existingMeta[0].ogFeatureUrl) {
+          console.log(`[cron] OG already exists for ${post.slug}, skipping`);
+          continue;
         }
 
         // OG generation runs regardless of file publish result
@@ -91,11 +105,33 @@ export async function GET(request: NextRequest) {
       }
     }
 
+    // Process scheduled whitepapers
+    const scheduledWhitepapers = getScheduledWhitepapers().filter(
+      (w) => w.publishedAt <= now
+    );
+
+    const wpSlugs = scheduledWhitepapers.map((w) => w.slug);
+    console.log(`[cron] Found ${scheduledWhitepapers.length} scheduled whitepapers:`, wpSlugs);
+
+    for (const wp of scheduledWhitepapers) {
+      try {
+        try {
+          publishWhitepaperFile(wp.slug);
+          console.log(`[cron] Published whitepaper: ${wp.slug}`);
+        } catch (pubError) {
+          console.log(`[cron] Whitepaper file publish skipped for ${wp.slug} (read-only FS or already published)`);
+        }
+      } catch (wpError) {
+        console.error(`[cron] Whitepaper publish failed for ${wp.slug}:`, wpError);
+      }
+    }
+
     return NextResponse.json({
-      published: scheduled.length,
-      slugs,
+      published: scheduled.length + scheduledWhitepapers.length,
+      slugs: [...slugs, ...wpSlugs],
       ogGenerated,
       ogErrors,
+      whitepapersPublished: scheduledWhitepapers.length,
     });
   } catch (error) {
     console.error('[cron] publish-scheduled error:', error);

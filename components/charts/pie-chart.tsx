@@ -36,7 +36,7 @@ function CustomTooltip({ active, payload }: any) {
         {d.name}
       </p>
       <p style={{ fontSize: TAM_CHART_FONTS.sizeTitle, color: TAM_CHART_COLORS.primary, margin: '4px 0 0', fontWeight: 700 }}>
-        {d.value}%{total > 0 ? ` (${pct}%)` : ''}
+        {d.value}{unit}
       </p>
     </div>
   );

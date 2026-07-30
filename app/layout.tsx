@@ -8,6 +8,7 @@ import { SearchSchema } from '@/components/schema/search-schema';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
+import { WebVitals } from '@/components/web-vitals';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -134,6 +135,7 @@ export default function RootLayout({
         )}
         <SpeedInsights />
         <Analytics />
+        <WebVitals />
       </body>
     </html>
   );

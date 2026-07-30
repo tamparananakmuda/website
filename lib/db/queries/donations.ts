@@ -1,6 +1,6 @@
 import { db } from '@/lib/db';
 import { donations, donationGoals } from '@/lib/db/schema';
-import { eq, desc, and } from 'drizzle-orm';
+import { eq, desc, and, sql, gte } from 'drizzle-orm';
 import type { Donation, DonationGoal } from '@/lib/db/schema';
 
 export async function getDonationsByEmail(email: string, limit = 5): Promise<Donation[]> {
@@ -72,4 +72,94 @@ export async function getPublicDonors(limit = 20): Promise<Donation[]> {
     .where(and(eq(donations.status, 'settled'), eq(donations.isAnonymous, false)))
     .orderBy(desc(donations.updatedAt))
     .limit(limit);
+}
+
+export interface DonationAnalytics {
+  totalGross: number;
+  totalNet: number;
+  totalFee: number;
+  totalSettled: number;
+  totalPending: number;
+  totalFailed: number;
+  successRate: number;
+  avgAmount: number;
+  byPaymentType: { paymentType: string; count: number; total: number }[];
+  byMonth: { month: string; count: number; total: number }[];
+  recent: Donation[];
+}
+
+export async function getDonationAnalytics(): Promise<DonationAnalytics> {
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+  const [allSettled, allPending, allFailed, recent] = await Promise.all([
+    db.select({
+      gross: sql<number>`sum(${donations.amount})`,
+      net: sql<number>`sum(${donations.netAmount})`,
+      fee: sql<number>`sum(${donations.fee})`,
+      count: sql<number>`count(*)`,
+    }).from(donations).where(eq(donations.status, 'settled')),
+
+    db.select({ count: sql<number>`count(*)` }).from(donations).where(eq(donations.status, 'pending')),
+
+    db.select({ count: sql<number>`count(*)` }).from(donations).where(eq(donations.status, 'failed')),
+
+    db.select().from(donations)
+      .where(gte(donations.createdAt, thirtyDaysAgo.toISOString()))
+      .orderBy(desc(donations.createdAt))
+      .limit(20),
+  ]);
+
+  const byPaymentTypeRaw = await db
+    .select({
+      paymentType: donations.paymentType,
+      count: sql<number>`count(*)`,
+      total: sql<number>`sum(${donations.amount})`,
+    })
+    .from(donations)
+    .where(eq(donations.status, 'settled'))
+    .groupBy(donations.paymentType)
+    .orderBy(desc(sql`count(*)`));
+
+  const byMonthRaw = await db
+    .select({
+      month: sql<string>`to_char(${donations.createdAt}, 'YYYY-MM')`,
+      count: sql<number>`count(*)`,
+      total: sql<number>`sum(${donations.amount})`,
+    })
+    .from(donations)
+    .where(eq(donations.status, 'settled'))
+    .groupBy(sql`to_char(${donations.createdAt}, 'YYYY-MM')`)
+    .orderBy(sql`to_char(${donations.createdAt}, 'YYYY-MM')`);
+
+  const settled = allSettled[0];
+  const totalSettled = Number(settled?.count ?? 0);
+  const totalPending = Number(allPending[0]?.count ?? 0);
+  const totalFailed = Number(allFailed[0]?.count ?? 0);
+  const totalTransactions = totalSettled + totalPending + totalFailed;
+  const totalGross = Number(settled?.gross ?? 0);
+  const totalNet = Number(settled?.net ?? 0);
+  const totalFee = Number(settled?.fee ?? 0);
+
+  return {
+    totalGross,
+    totalNet,
+    totalFee,
+    totalSettled,
+    totalPending,
+    totalFailed,
+    successRate: totalTransactions > 0 ? (totalSettled / totalTransactions) * 100 : 0,
+    avgAmount: totalSettled > 0 ? totalGross / totalSettled : 0,
+    byPaymentType: byPaymentTypeRaw.map((r) => ({
+      paymentType: r.paymentType,
+      count: Number(r.count),
+      total: Number(r.total),
+    })),
+    byMonth: byMonthRaw.map((r) => ({
+      month: r.month,
+      count: Number(r.count),
+      total: Number(r.total),
+    })),
+    recent,
+  };
 }

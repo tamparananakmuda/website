@@ -6,10 +6,21 @@ import Image from 'next/image';
 interface FeatureImageProps {
   src: string;
   alt: string;
+  fallbackSrc?: string;
 }
 
-export function FeatureImage({ src, alt }: FeatureImageProps) {
+export function FeatureImage({ src, alt, fallbackSrc }: FeatureImageProps) {
   const [loaded, setLoaded] = useState(false);
+  const [imgSrc, setImgSrc] = useState(src);
+  const [usedFallback, setUsedFallback] = useState(false);
+
+  const handleError = () => {
+    if (!usedFallback && fallbackSrc) {
+      setImgSrc(fallbackSrc);
+      setUsedFallback(true);
+      setLoaded(false);
+    }
+  };
 
   return (
     <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
@@ -23,7 +34,7 @@ export function FeatureImage({ src, alt }: FeatureImageProps) {
           </div>
         )}
         <Image
-          src={src}
+          src={imgSrc}
           alt={alt}
           fill
           unoptimized
@@ -35,6 +46,7 @@ export function FeatureImage({ src, alt }: FeatureImageProps) {
           `}
           sizes="(max-width: 1200px) 100vw, 1024px"
           onLoad={() => setLoaded(true)}
+          onError={handleError}
         />
       </div>
     </div>

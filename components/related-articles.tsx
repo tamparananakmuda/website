@@ -54,6 +54,16 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
 
 function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: ReturnType<typeof getCategory> }) {
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgSrc, setImgSrc] = useState(article.ogCardUrl || `/api/og/card?slug=${article.slug}`);
+  const [usedFallback, setUsedFallback] = useState(false);
+
+  const handleError = () => {
+    if (!usedFallback) {
+      setImgSrc(`/api/og/card?slug=${article.slug}`);
+      setUsedFallback(true);
+      setImgLoaded(false);
+    }
+  };
 
   return (
     <article className="group">
@@ -68,7 +78,7 @@ function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: Re
             </div>
           )}
           <Image
-            src={article.ogCardUrl || `/api/og/card?slug=${article.slug}`}
+            src={imgSrc}
             alt={article.title}
             fill
             unoptimized
@@ -80,6 +90,7 @@ function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: Re
             `}
             sizes="(max-width: 768px) 100vw, 33vw"
             onLoad={() => setImgLoaded(true)}
+            onError={handleError}
           />
         </div>
         <div className="mb-3 flex items-center gap-2 text-sm">

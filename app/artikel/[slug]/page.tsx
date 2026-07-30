@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getPublishedPostWithRelationsBySlug, getRelatedPosts } from '@/lib/db/queries/posts';
 import { getAllArticles } from '@/lib/articles/loader';
 import { MarkdownContent } from '@/components/markdown-content';
+import { ReadingProgress } from '@/components/whitepaper/reading-progress';
 import { FeatureImage } from '@/components/feature-image';
 import { ArticleSchema } from '@/components/schema/article-schema';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
@@ -13,6 +14,24 @@ import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
 import { RelatedArticles } from '@/components/related-articles';
 import nextDynamic from 'next/dynamic';
+
+function extractFAQFromBody(body: string): { question: string; answer: string }[] {
+  const faqSection = body.match(/^##\s+FAQ\s*$/m);
+  if (!faqSection) return [];
+  const faqStart = faqSection.index! + faqSection[0].length;
+  const remaining = body.slice(faqStart);
+  const nextH2 = remaining.match(/^##\s+/m);
+  const faqContent = nextH2 ? remaining.slice(0, nextH2.index) : remaining;
+  const faqItems: { question: string; answer: string }[] = [];
+  const blocks = faqContent.split(/^###\s+/m).filter(s => s.trim());
+  for (const block of blocks) {
+    const lines = block.trim().split('\n');
+    const question = lines[0].replace(/\?\s*$/, '').trim() + '?';
+    const answer = lines.slice(1).join('\n').trim().replace(/\n\n+/g, ' ');
+    if (question && answer) faqItems.push({ question, answer });
+  }
+  return faqItems;
+}
 
 const CommentsSection = nextDynamic(() => import('@/components/comments-section').then(m => m.CommentsSection), {
   loading: () => <div className="mx-auto max-w-3xl mt-8 h-48 animate-pulse rounded-xl bg-muted/20" />,
@@ -106,6 +125,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
     return (
       <article className="container mx-auto px-4 py-12">
+        <ReadingProgress />
         <link rel="preload" as="image" href={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
         <ArticleSchema
           title={post.title}
@@ -135,15 +155,22 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             slug={post.author.slug || undefined}
           />
         )}
-        {post.excerpt && (
-          <FAQSchema items={[{ question: `Apa inti dari ${post.title}?`, answer: post.excerpt }]} />
-        )}
+        {(() => {
+          const faqItems = post.body ? extractFAQFromBody(post.body) : [];
+          const items = faqItems.length > 0
+            ? faqItems
+            : post.excerpt
+              ? [{ question: `Apa inti dari ${post.title}?`, answer: post.excerpt }]
+              : [];
+          return items.length > 0 ? <FAQSchema items={items} /> : null;
+        })()}
         <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }, { name: post.title, href: `/artikel/${post.slug}` }]} />
 
         {/* Feature image */}
         <FeatureImage
           src={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`}
           alt={post.coverImageAlt || post.title}
+          fallbackSrc={`/api/og/feature?slug=${post.slug}`}
         />
 
         <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>

@@ -3,6 +3,7 @@ import { getPostsBySeries } from '@/lib/articles/loader';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import { ItemListSchema } from '@/components/schema/item-list-schema';
 import { ArrowRight, ArrowLeft, Clock, Layers } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -24,26 +25,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const posts = await getPostsBySeries(series.slug, 100);
   const title = `${series.title} - Seri - Tamparan Anak Muda`;
   const description = series.description || `Seri ${posts.length} bagian dari TAMPARAN ANAK MUDA.`;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+  const url = `${siteUrl}/seri/${series.slug}`;
+
+  // Use first post's OG feature image as series cover, fallback to homepage OG
+  const firstPost = posts[0];
+  const ogImageUrl =
+    (firstPost as { ogFeatureUrl?: string; ogImageUrl?: string })?.ogFeatureUrl ||
+    (firstPost as { ogFeatureUrl?: string; ogImageUrl?: string })?.ogImageUrl ||
+    'https://cdn.tamparananakmuda.com/og/homepage-feature.webp';
 
   return {
     title,
     description,
     keywords: ['seri', series.title.toLowerCase(), 'tamparan anak muda seri'],
     robots: { index: true, follow: true },
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/seri/${series.slug}`,
-    },
+    alternates: { canonical: url },
     openGraph: {
       type: 'article',
       locale: 'id_ID',
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/seri/${series.slug}`,
+      url,
       title,
       description,
+      siteName: 'TAMPARAN ANAK MUDA',
+      images: [{ url: ogImageUrl, width: 1600, height: 900, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImageUrl],
     },
   };
 }
@@ -76,6 +87,16 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         { name: 'Seri', href: '/seri' },
         { name: series.title, href: `/seri/${series.slug}` },
       ]} />
+      <ItemListSchema
+        name={series.title}
+        description={series.description || undefined}
+        items={posts.map((p, i) => ({
+          position: i + 1,
+          name: p.title,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel/${p.slug}`,
+          description: p.excerpt || undefined,
+        }))}
+      />
 
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden border-b border-border">

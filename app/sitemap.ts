@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { getPublishedPostsForSitemap } from '@/lib/db/queries/posts';
-import { getCategoriesForSitemap, getSubcategoriesForSitemap } from '@/lib/db/queries/categories';
+import { getCategoriesForSitemap } from '@/lib/db/queries/categories';
 import { getPublishedWhitepapersForSitemap } from '@/lib/db/queries/whitepapers';
 import { getPublishedSocialPostsForSitemap } from '@/lib/db/queries/social-posts';
+import { series as seriesConfig } from '@/content/config';
 
 export const revalidate = 3600;
 
@@ -90,11 +91,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const [postsData, categoriesData, whitepapersData, subcategoriesData] = await Promise.all([
+  const [postsData, categoriesData, whitepapersData] = await Promise.all([
     getPublishedPostsForSitemap(),
     getCategoriesForSitemap(),
     getPublishedWhitepapersForSitemap(),
-    getSubcategoriesForSitemap(),
   ]);
 
   let socialPostsData: { id: bigint; updatedAt: string | null }[] = [];
@@ -104,30 +104,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // social_posts table may not exist yet in the Drizzle-connected DB
   }
 
-  const postPages: MetadataRoute.Sitemap = postsData.map((post) => ({
+  const postPages: MetadataRoute.Sitemap = (postsData as { slug: string; updatedAt: string | null }[]).map((post) => ({
     url: `${siteUrl}/artikel/${post.slug}`,
     lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  const categoryPages: MetadataRoute.Sitemap = categoriesData.map((category) => ({
+  const categoryPages: MetadataRoute.Sitemap = (categoriesData as { slug: string; updatedAt: string | null }[]).map((category) => ({
     url: `${siteUrl}/kategori/${category.slug}`,
     lastModified: category.updatedAt ? new Date(category.updatedAt) : new Date(),
     changeFrequency: 'weekly',
     priority: 0.6,
   }));
 
-  const subcategoryPages: MetadataRoute.Sitemap = subcategoriesData.map((sub) => {
-    return {
-      url: `${siteUrl}/kategori/${sub.categoryId}?pillar=${sub.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    };
-  });
+  // NOTE: Subcategory pages use ?pillar= query params — not indexable as separate URLs.
+  // Excluded from sitemap intentionally; category hub pages already cover them.
 
-  const whitepaperPages: MetadataRoute.Sitemap = whitepapersData.map((wp) => ({
+  const seriPages: MetadataRoute.Sitemap = seriesConfig.map((s) => ({
+    url: `${siteUrl}/seri/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  const whitepaperPages: MetadataRoute.Sitemap = (whitepapersData as { slug: string; updatedAt: string | null }[]).map((wp) => ({
     url: `${siteUrl}/whitepaper/${wp.slug}`,
     lastModified: wp.updatedAt ? new Date(wp.updatedAt) : new Date(),
     changeFrequency: 'monthly',
@@ -141,5 +142,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages, ...subcategoryPages, ...whitepaperPages, ...socialPages];
+  return [...staticPages, ...postPages, ...categoryPages, ...seriPages, ...whitepaperPages, ...socialPages];
 }

@@ -9,7 +9,14 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "analyze": "ANALYZE=true next build",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix --max-warnings=0"
+    ]
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1086.0",
@@ -45,6 +52,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.28",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20.16.5",
     "@types/react": "^18.3.8",
@@ -54,7 +62,9 @@
     "drizzle-kit": "^0.31.10",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.28",
+    "husky": "^9.1.7",
     "jsdom": "^29.1.1",
+    "lint-staged": "^17.2.0",
     "pg": "^8.12.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",

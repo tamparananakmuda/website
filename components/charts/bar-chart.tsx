@@ -34,7 +34,7 @@ function CustomTooltip({ active, payload, label }: any) {
         {label}
       </p>
       <p style={{ fontSize: TAM_CHART_FONTS.sizeTitle, color: TAM_CHART_COLORS.primary, margin: '4px 0 0', fontWeight: 700 }}>
-        {d.value}{d.unit || ''}%
+        {d.value}{d.unit || ''}
       </p>
     </div>
   );
@@ -108,7 +108,7 @@ export function TAMBarChart({ data, title, subtitle, source, height = 320, yLabe
             <LabelList
               dataKey="value"
               position="top"
-              formatter={(v: any) => `${v}%`}
+              formatter={(v: any) => `${v}${data[0]?.unit || ''}`}
               style={{ fill: TAM_CHART_COLORS.text, fontSize: TAM_CHART_FONTS.sizeSmall, fontFamily: TAM_CHART_FONTS.family, fontWeight: 600 }}
             />
           </Bar>

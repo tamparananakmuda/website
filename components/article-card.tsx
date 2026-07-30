@@ -11,6 +11,16 @@ interface ArticleCardProps {
 
 export function ArticleCard({ post }: ArticleCardProps) {
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgSrc, setImgSrc] = useState(post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`);
+  const [usedFallback, setUsedFallback] = useState(false);
+
+  const handleError = () => {
+    if (!usedFallback) {
+      setImgSrc(`/api/og/card?slug=${post.slug}`);
+      setUsedFallback(true);
+      setImgLoaded(false);
+    }
+  };
 
   return (
     <article className="group overflow-hidden rounded-xl transition-all duration-200 hover:bg-secondary/50">
@@ -25,7 +35,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
             </div>
           )}
           <Image
-            src={post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`}
+            src={imgSrc}
             alt={post.title}
             fill
             unoptimized
@@ -37,6 +47,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
             `}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             onLoad={() => setImgLoaded(true)}
+            onError={handleError}
           />
         </div>
         <div className="p-4">

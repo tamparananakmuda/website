@@ -1,10 +1,16 @@
-import { readFileSync, readdirSync, existsSync, statSync } from 'fs';
+import { readFileSync, readdirSync, existsSync, statSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
 const WHITEPAPER_DIR = join(process.cwd(), 'content', 'whitepaper');
+
+const now = () => new Date().toISOString();
+
+function isPublished(w: { status: string; publishedAt: string }): boolean {
+  return (w.status === 'published' || (w.status === 'scheduled' && w.publishedAt <= now())) && w.publishedAt <= now();
+}
 
 export interface WhitepaperPost {
   slug: string;
@@ -144,7 +150,7 @@ async function toPost(raw: RawWhitepaper): Promise<WhitepaperPost> {
 
 export async function getPublishedWhitepapers(limit = 20): Promise<WhitepaperPost[]> {
   const all = readAllWhitepapers()
-    .filter((w) => w.status === 'published')
+    .filter((w) => isPublished(w))
     .sort((a, b) => {
       if (a.reportCode && b.reportCode) return a.reportCode.localeCompare(b.reportCode);
       if (a.reportCode && !b.reportCode) return -1;
@@ -158,7 +164,7 @@ export async function getPublishedWhitepapers(limit = 20): Promise<WhitepaperPos
 
 export async function getAnnualReports(year?: number): Promise<WhitepaperPost[]> {
   const all = readAllWhitepapers()
-    .filter((w) => w.status === 'published' && w.isAnnualReport)
+    .filter((w) => isPublished(w) && w.isAnnualReport)
     .filter((w) => year ? w.reportYear === year : true)
     .sort((a, b) => (a.reportCode || '').localeCompare(b.reportCode || ''));
 
@@ -167,7 +173,7 @@ export async function getAnnualReports(year?: number): Promise<WhitepaperPost[]>
 
 export async function getStandaloneWhitepapers(): Promise<WhitepaperPost[]> {
   const all = readAllWhitepapers()
-    .filter((w) => w.status === 'published' && !w.isAnnualReport)
+    .filter((w) => isPublished(w) && !w.isAnnualReport)
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
   return Promise.all(all.map(toPost));
@@ -175,7 +181,7 @@ export async function getStandaloneWhitepapers(): Promise<WhitepaperPost[]> {
 
 export async function getWhitepapersByYear(year: number): Promise<WhitepaperPost[]> {
   const all = readAllWhitepapers()
-    .filter((w) => w.status === 'published' && w.reportYear === year)
+    .filter((w) => isPublished(w) && w.reportYear === year)
     .sort((a, b) => (a.reportCode || '').localeCompare(b.reportCode || ''));
 
   return Promise.all(all.map(toPost));
@@ -190,12 +196,13 @@ export async function getWhitepaperBySlug(slug: string): Promise<WhitepaperPost 
 
 export async function getPublishedWhitepaperBySlug(slug: string): Promise<WhitepaperPost | undefined> {
   const wp = await getWhitepaperBySlug(slug);
-  if (!wp || wp.status !== 'published') return undefined;
+  if (!wp) return undefined;
+  if (!isPublished(wp)) return undefined;
   return wp;
 }
 
 export async function getRelatedWhitepapers(excludeSlug: string, limit = 3): Promise<WhitepaperPost[]> {
-  const all = readAllWhitepapers().filter((w) => w.status === 'published');
+  const all = readAllWhitepapers().filter((w) => isPublished(w));
 
   const current = all.find((w) => w.slug === excludeSlug);
   const currentYear = current?.reportYear;
@@ -215,7 +222,35 @@ export async function getRelatedWhitepapers(excludeSlug: string, limit = 3): Pro
 
 export async function getPublishedWhitepapersForSitemap(): Promise<{ slug: string; updatedAt: string }[]> {
   return readAllWhitepapers()
-    .filter((w) => w.status === 'published')
+    .filter((w) => isPublished(w))
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .map((w) => ({ slug: w.slug, updatedAt: w.fileMtime }));
+}
+
+export function getAllWhitepapersRaw(): RawWhitepaper[] {
+  return readAllWhitepapers();
+}
+
+export function getScheduledWhitepapers(): RawWhitepaper[] {
+  return readAllWhitepapers()
+    .filter((w) => w.status === 'scheduled')
+    .sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime());
+}
+
+export function publishWhitepaperFile(slug: string): boolean {
+  const files = readDirRecursive(WHITEPAPER_DIR);
+  const filePath = files.find((f) => f.endsWith(`${slug}.md`));
+  if (!filePath) return false;
+
+  const fileContent = readFileSync(filePath, 'utf8');
+  const { data: fm, content: body } = matter(fileContent);
+
+  if (fm.status !== 'scheduled') return false;
+
+  fm.status = 'published';
+
+  const newContent = matter.stringify(body, fm);
+  writeFileSync(filePath, newContent, 'utf8');
+
+  return true;
 }

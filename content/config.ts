@@ -68,6 +68,8 @@ export const authors: AuthorConfig[] = [
 
 export const series: SeriesConfig[] = [
   { id: '7505a15c-085b-456e-ab31-0aa21793e581', title: 'Mental Health di Era Digital: Sistem yang Menjual Luka, Bukan Obat', slug: 'kesehatan-mental-era-digital', description: 'Setiap kali kamu mencari bantuan untuk mental health, kamu masuk lebih dalam ke dalam sistem yang membuatmu sakit. 12 part investigasi dari gejala sampai arsitek.' },
+  { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890', title: 'Generasi Sewa: Memiliki Jadi Mewah', slug: 'generasi-sewa', description: 'Generasi pertama yang menyewa hampir semua hal: rumah, hiburan, uang, bahkan pekerjaan. Bukan pilihan gaya hidup, tapi sistem yang membuat memiliki jadi terlalu mahal.' },
+  { id: 'b2c3d4e5-f6a7-8901-bcde-f23456789012', title: 'Hubungan Era Tidak Pasti: Cinta yang Tidak Bisa Dijanjikan', slug: 'hubungan-era-tidak-pasti', description: 'Ekonomi tidak pasti adalah arsitek tak terlihat di balik krisis hubungan Gen Z. Bukan takut komitmen, bukan tidak bisa komunikasi. Kamu tidak bisa menjanjikan besok, jadi bagaimana bisa menjanjikan seseorang selamanya?' },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryConfig | undefined {

@@ -1,6 +1,9 @@
 import { marked } from 'marked';
 import { slugify } from '@/lib/utils/slugify';
 import { WhitepaperChartRenderer } from '@/components/charts/chart-renderer';
+import { InteractiveCalculator } from '@/components/whitepaper/interactive-calculator';
+import { ComparisonTable } from '@/components/whitepaper/comparison-table';
+import { NerdBox } from '@/components/whitepaper/nerd-box';
 
 interface ChartConfig {
   type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar' | 'area' | 'grouped-bar' | 'scatter' | 'funnel' | 'treemap';
@@ -19,9 +22,38 @@ interface ChartConfig {
   donut?: boolean;
 }
 
+interface CalculatorConfig {
+  type: 'inflation-impact' | 'farmer-share';
+  title?: string;
+  subtitle?: string;
+  source?: string;
+}
+
+interface ComparisonRow {
+  metric: string;
+  values: (string | number)[];
+  lowerIsBetter?: boolean;
+  unit?: string;
+  isText?: boolean;
+}
+
+interface ComparisonConfig {
+  title?: string;
+  subtitle?: string;
+  source?: string;
+  highlightColumn?: string;
+  columns: string[];
+  rows: ComparisonRow[];
+}
+
+interface NerdBoxConfig {
+  title?: string;
+  content: string;
+}
+
 interface ContentSegment {
-  type: 'markdown' | 'chart';
-  content: string | ChartConfig;
+  type: 'markdown' | 'chart' | 'calculator' | 'comparison' | 'nerd';
+  content: string | ChartConfig | CalculatorConfig | ComparisonConfig | NerdBoxConfig;
 }
 
 function sanitizeHtml(html: string): string {
@@ -54,23 +86,49 @@ function parseChartBlock(block: string): ChartConfig | null {
 
 function splitContent(body: string): ContentSegment[] {
   const segments: ContentSegment[] = [];
-  const chartBlockRegex = /```chart:(bar|line|pie|stacked-bar|radar|area|grouped-bar|scatter|funnel|treemap)\n([\s\S]*?)```/g;
+  const blockRegex = /```(chart:(?:bar|line|pie|stacked-bar|radar|area|grouped-bar|scatter|funnel|treemap)|calc:(?:inflation-impact|farmer-share)|comparison|nerd)\n([\s\S]*?)```/g;
   let lastIndex = 0;
   let match;
 
-  while ((match = chartBlockRegex.exec(body)) !== null) {
+  while ((match = blockRegex.exec(body)) !== null) {
     if (match.index > lastIndex) {
       const md = body.slice(lastIndex, match.index).trim();
       if (md) segments.push({ type: 'markdown', content: md });
     }
-    const chartType = match[1] as ChartConfig['type'];
+    const blockType = match[1];
     const jsonStr = match[2].trim();
-    const config = parseChartBlock(jsonStr);
-    if (config) {
-      config.type = chartType;
-      segments.push({ type: 'chart', content: config });
+
+    if (blockType.startsWith('chart:')) {
+      const chartType = blockType.split(':')[1] as ChartConfig['type'];
+      const config = parseChartBlock(jsonStr);
+      if (config) {
+        config.type = chartType;
+        segments.push({ type: 'chart', content: config });
+      }
+    } else if (blockType.startsWith('calc:')) {
+      const calcType = blockType.split(':')[1] as CalculatorConfig['type'];
+      try {
+        const config = JSON.parse(jsonStr) as CalculatorConfig;
+        config.type = calcType;
+        segments.push({ type: 'calculator', content: config });
+      } catch { /* skip invalid */ }
+    } else if (blockType === 'comparison') {
+      try {
+        const config = JSON.parse(jsonStr) as ComparisonConfig;
+        if (config.columns && config.rows) {
+          segments.push({ type: 'comparison', content: config });
+        }
+      } catch { /* skip invalid */ }
+    } else if (blockType === 'nerd') {
+      try {
+        const config = JSON.parse(jsonStr) as NerdBoxConfig;
+        if (config.content) {
+          segments.push({ type: 'nerd', content: config });
+        }
+      } catch { /* skip invalid */ }
     }
-    lastIndex = chartBlockRegex.lastIndex;
+
+    lastIndex = blockRegex.lastIndex;
   }
 
   if (lastIndex < body.length) {
@@ -89,6 +147,15 @@ export function WhitepaperContent({ body }: { body: string }) {
       {segments.map((seg, i) => {
         if (seg.type === 'chart') {
           return <WhitepaperChartRenderer key={i} config={seg.content as ChartConfig} />;
+        }
+        if (seg.type === 'calculator') {
+          return <InteractiveCalculator key={i} config={seg.content as CalculatorConfig} />;
+        }
+        if (seg.type === 'comparison') {
+          return <ComparisonTable key={i} config={seg.content as ComparisonConfig} />;
+        }
+        if (seg.type === 'nerd') {
+          return <NerdBox key={i} config={seg.content as NerdBoxConfig} />;
         }
         const rawHtml = marked.parse(seg.content as string, { async: false }) as string;
         const cleanHtml = sanitizeHtml(rawHtml);

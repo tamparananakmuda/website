@@ -11,6 +11,7 @@ import { FileText, Clock, Download, ArrowLeft, ArrowRight, BarChart3 } from 'luc
 import { ReportBadge } from '@/components/report-badge';
 import { KeyFindings } from '@/components/key-findings';
 import { DataSources } from '@/components/data-sources';
+import { ReadingProgress } from '@/components/whitepaper/reading-progress';
 
 interface WhitepaperPageProps {
   params: { slug: string };
@@ -60,6 +61,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
 
   return (
     <article>
+      <ReadingProgress />
       <BreadcrumbSchema
         items={[
           { name: 'Home', href: '/' },

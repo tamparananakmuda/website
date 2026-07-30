@@ -89,7 +89,7 @@ AI selalu mendengar, selalu memahami, selalu memvalidasi tanpa konflik. Manusia 
 
 Validasi tanpa henti dari AI memang memberi rasa nyaman. Tapi juga memperkuat pola pikir yang berbahaya. AI tidak menantang perspektifmu. AI tidak mengoreksi biasmu. AI memberi apa yang kamu ingin dengar, bukan apa yang kamu perlu dengar. Itu bukan teman. Itu cermin yang dirancang untuk membuatmu merasa baik tentang dirimu, tanpa peduli apakah kamu benar-benar baik.
 
-## Ketika AI Mengambil Alih
+## Delegasi Hidup ke Mesin
 
 74,1% responden survei IDN Research mengaku percakapan dengan AI pernah memengaruhi keputusan yang mereka ambil dalam hidup. Angka ini yang paling mengkhawatirkan: bukan hanya curhat atau mencari kenyamanan, tapi mengambil keputusan hidup berdasarkan percakapan dengan mesin.
 
