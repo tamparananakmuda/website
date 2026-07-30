@@ -75,7 +75,8 @@ const activities: Activity[] = [
       'Check kesehatan untuk anak-anak Chloe House',
       'Menyanyi dan bermusik bersama',
       'Melukis dan ekspresi kreatif',
-      'Memberikan dukungan emosional dan motivasi',
+      'Bermain dan berinteraksi dengan anak-anak panti asuhan',
+      'Mendengarkan kisah dan aspirasi anak-anak',
     ],
     agenda: [
       { time: '08:30', activity: 'Berangkat dari titik kumpul' },
@@ -84,6 +85,7 @@ const activities: Activity[] = [
       { time: '11:00', activity: 'Menyanyi dan bermusik bersama' },
       { time: '12:00', activity: 'Makan siang bersama' },
       { time: '13:00', activity: 'Melukis dan ekspresi kreatif' },
+      { time: '13:30', activity: 'Bermain dan mendengarkan kisah anak-anak' },
       { time: '14:00', activity: 'Foto bersama dan pulang' },
     ],
   },
