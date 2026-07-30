@@ -41,13 +41,13 @@ interface Activity {
 
 const activities: Activity[] = [
   {
-    slug: 'kunjungan-panti-jompo-bahagia',
-    title: 'Kunjungan ke Panti Jompo Bahagia',
+    slug: 'kunjungan-panti-jompo-syailendra',
+    title: 'Kunjungan ke Panti Jompo Syailendra',
     excerpt:
       'Mengunjungi panti jompo untuk mendengar cerita hidup para lansia. Pelajaran tentang penuaan, kesepian, dan apa yang sebenarnya berarti di akhir hidup.',
-    date: '2026-08-15',
-    location: 'Panti Jompo Bahagia, Jakarta Selatan',
-    participants: '15 relawan',
+    date: '2026-08-02',
+    location: 'Jimbaran, Kuta Sel., Badung, Bali 80361',
+    participants: 'Mendatang',
     status: 'upcoming',
     category: 'Panti Jompo',
   },
