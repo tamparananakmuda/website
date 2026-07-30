@@ -56,10 +56,10 @@ const activities: Activity[] = [
     title: 'Kunjungan ke Chloe House',
     excerpt:
       'Berbagi waktu dengan anak-anak di Chloe House. Belajar tentang mimpi, harapan, dan kenyataan tumbuh tanpa orang tua.',
-    date: '2026-08-30',
-    location: 'Chloe House, Depok',
+    date: '2025-06-25',
+    location: 'Jl. Pidada, Ubung, Denpasar Utara, Bali 80111',
     participants: '20 relawan',
-    status: 'upcoming',
+    status: 'completed',
     category: 'Panti Asuhan',
     imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
   },
