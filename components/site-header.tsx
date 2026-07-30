@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { name: 'Artikel', href: '/artikel' },
+  { name: 'TAM+', href: '/sosial' },
   { name: 'Story', href: '/story' },
   { name: 'Whitepaper', href: '/whitepaper' },
   { name: 'Tentang', href: '/tentang' },
