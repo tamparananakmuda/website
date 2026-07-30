@@ -10,6 +10,8 @@ interface LatestSeriesProps {
     seriesTitle: string;
     totalParts: number;
     posts: PostWithRelations[];
+    upcomingCount?: number;
+    nextDate?: string | null;
   }>;
   comingSoon?: Array<SeriesConfig & { hasPosts: boolean }>;
 }
@@ -65,6 +67,12 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
                     {s.totalParts} bagian seri lengkap
                   </p>
                 </div>
+                {s.upcomingCount && s.upcomingCount > 0 ? (
+                  <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                    <CalendarClock size={12} />
+                    {s.upcomingCount} part coming soon
+                  </span>
+                ) : null}
               </div>
               <Link
                 href={`/seri/${s.seriesSlug}`}
