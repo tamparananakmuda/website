@@ -5,7 +5,10 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, AlertCircle } from 'lucide-react';
 import { Turnstile } from '@/components/turnstile';
-import { createClient } from '@/lib/supabase/client';
+async function getSupabase() {
+  const { createClient } = await import('@/lib/supabase/client');
+  return createClient();
+}
 
 function LoginForm() {
   const router = useRouter();
@@ -39,7 +42,7 @@ function LoginForm() {
       }
 
       const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
-      const supabase = createClient();
+      const supabase = await getSupabase();
       const { error: otpError } = await supabase.auth.signInWithOtp({
         email,
         options: {

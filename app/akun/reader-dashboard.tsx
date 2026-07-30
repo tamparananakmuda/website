@@ -1,10 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { createClient } from '@/lib/supabase/client';
 import Link from 'next/link';
 import { Bookmark, Clock, Heart, LogOut, User } from 'lucide-react';
 import { PushNotificationToggle } from '@/components/push-toggle';
+async function getSupabase() {
+  const { createClient } = await import('@/lib/supabase/client');
+  return createClient();
+}
 
 interface PostData {
   id: string;
@@ -77,7 +80,7 @@ export default function ReaderDashboard({
   }
 
   async function handleLogout() {
-    const supabase = createClient();
+    const supabase = await getSupabase();
     await supabase.auth.signOut();
     window.location.href = '/';
   }

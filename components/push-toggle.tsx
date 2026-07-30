@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { Bell, BellOff, Loader2 } from 'lucide-react';
-import { createClient } from '@/lib/supabase/client';
+async function getSupabase() {
+  const { createClient } = await import('@/lib/supabase/client');
+  return createClient();
+}
 
 export function PushNotificationToggle() {
   const [supported, setSupported] = useState(false);
@@ -16,9 +19,10 @@ export function PushNotificationToggle() {
       setSupported(true);
       setPermission(Notification.permission);
     }
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setLoggedIn(!!user);
+    getSupabase().then(supabase => {
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        setLoggedIn(!!user);
+      });
     });
   }, []);
 

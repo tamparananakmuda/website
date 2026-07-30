@@ -1,7 +1,14 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { createClient } from '@/lib/supabase/client';
+let createClient: typeof import('@/lib/supabase/client')['createClient'] | null = null;
+async function getSupabase() {
+  if (!createClient) {
+    const mod = await import('@/lib/supabase/client');
+    createClient = mod.createClient;
+  }
+  return createClient();
+}
 import { MessageSquare, Heart, Trash2, Loader2, Send, CornerDownRight } from 'lucide-react';
 import { Turnstile } from '@/components/turnstile';
 
@@ -118,12 +125,13 @@ export function CommentsSection({ postSlug }: CommentsSectionProps) {
 
   useEffect(() => {
     fetchComments();
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setLoggedIn(!!user);
-      if (user) {
-        setCurrentUserId(user.id);
-      }
+    getSupabase().then(supabase => {
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        setLoggedIn(!!user);
+        if (user) {
+          setCurrentUserId(user.id);
+        }
+      });
     });
   }, [fetchComments]);
 

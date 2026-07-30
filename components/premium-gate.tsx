@@ -1,7 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createClient } from '@/lib/supabase/client';
+async function getSupabase() {
+  const { createClient } = await import('@/lib/supabase/client');
+  return createClient();
+}
 import { Lock, Loader2, CheckCircle2 } from 'lucide-react';
 
 interface PremiumGateProps {
@@ -16,18 +19,19 @@ export function PremiumGate({ postSlug, excerpt }: PremiumGateProps) {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setLoggedIn(!!user);
-      if (user) {
-        fetch(`/api/premium?post_slug=${postSlug}`)
-          .then((r) => r.json())
-          .then((data) => setUnlocked(data.unlocked))
-          .catch(() => {})
-          .finally(() => setLoading(false));
-      } else {
-        setLoading(false);
-      }
+    getSupabase().then(supabase => {
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        setLoggedIn(!!user);
+        if (user) {
+          fetch(`/api/premium?post_slug=${postSlug}`)
+            .then((r) => r.json())
+            .then((data) => setUnlocked(data.unlocked))
+            .catch(() => {})
+            .finally(() => setLoading(false));
+        } else {
+          setLoading(false);
+        }
+      });
     });
   }, [postSlug]);
 
