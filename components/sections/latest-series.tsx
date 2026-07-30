@@ -49,7 +49,9 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
           </Link>
         </div>
 
-        {series.map((s) => (
+        {series.map((s) => {
+          const totalParts = s.totalParts + (s.upcomingCount ?? 0);
+          return (
           <div
             key={s.seriesSlug}
             className="rounded-2xl border border-border bg-secondary/30 p-6 md:p-8"
@@ -64,7 +66,7 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
                     {s.seriesTitle}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    {s.totalParts} bagian seri lengkap
+                    {totalParts} bagian seri lengkap
                   </p>
                 </div>
                 {s.upcomingCount && s.upcomingCount > 0 ? (
@@ -126,7 +128,7 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
                         </p>
                       )}
                       <div className="mt-auto flex items-center gap-2 text-xs text-muted-foreground">
-                        <span>Bagian {order} dari {s.totalParts}</span>
+                        <span>Bagian {order} dari {totalParts}</span>
                         <span>&middot;</span>
                         <span>{post.readingTime} menit baca</span>
                       </div>
@@ -134,31 +136,9 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
                   </Link>
                 );
               })}
-            </div>
-          </div>
-        ))}
 
-        {/* Coming Soon series as cards in same style */}
-        {comingSoon && comingSoon.length > 0 && (
-          <div className="mt-6 rounded-2xl border border-dashed border-border bg-secondary/30 p-6 md:p-8">
-            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
-                  <CalendarClock size={20} />
-                </span>
-                <div>
-                  <h3 className="text-xl font-bold tracking-tight md:text-2xl">
-                    Seri Berikutnya
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {comingSoon.length} seri coming soon
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-4 overflow-x-auto pb-4 [scrollbar-width:thin] md:gap-6">
-              {comingSoon.map((item) => (
+              {/* Coming soon cards inline in same scroll */}
+              {comingSoon && comingSoon.length > 0 && comingSoon.map((item) => (
                 <Link
                   key={item.id}
                   href={`/seri/${item.slug}`}
@@ -202,7 +182,8 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
               ))}
             </div>
           </div>
-        )}
+          );
+        })}
 
         <div className="mt-10 text-center sm:hidden">
           <Link

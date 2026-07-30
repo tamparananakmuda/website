@@ -1,5 +1,5 @@
 import { series as seriesConfig, getSeriesBySlug, getAuthorById, getCategoryById } from '@/content/config';
-import { getPostsBySeries } from '@/lib/articles/loader';
+import { getPostsBySeries, getAllArticles } from '@/lib/articles/loader';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
@@ -296,10 +296,19 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   const categoryColor = category?.color || '#D13A3A';
   const totalReadingTime = posts.reduce((sum, p) => sum + estimateReadingTime(p.body), 0);
 
-  // Get coming-soon series (excluding current series)
-  const comingSoonList = seriesConfig.filter(
-    (s) => s.status === 'coming-soon' && s.slug !== series.slug
-  );
+  // Get upcoming (scheduled, not yet published) parts from this series
+  const currentTime = new Date().toISOString();
+  const allArticles = await getAllArticles();
+  const upcomingParts = allArticles
+    .filter((a) => a.seriesSlug === series.slug && a.status === 'scheduled' && a.publishedAt > currentTime)
+    .sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime())
+    .map((a) => ({
+      slug: a.slug,
+      title: a.title,
+      excerpt: a.excerpt,
+      seriesOrder: a.seriesOrder,
+      publishedAt: a.publishedAt,
+    }));
 
   return (
     <main>
@@ -456,52 +465,48 @@ export default async function SeriesDetailPage({ params }: PageProps) {
               );
             })}
 
-            {/* Upcoming parts in same timeline */}
-            {comingSoonList.map((item) => (
-              <Link
-                key={item.id}
-                href={`/seri/${item.slug}`}
-                className="group relative flex items-start gap-4 rounded-xl border border-dashed border-border bg-card/50 p-4 transition-all hover:border-primary/30 md:gap-5 md:p-5"
-              >
-                <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border-2 border-dashed border-primary/40 bg-background md:h-16 md:w-16">
-                  <CalendarClock size={22} className="text-primary/60" />
-                </div>
-
-                <div className="min-w-0 flex-1 pt-1">
-                  <div className="mb-1.5 flex items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
-                      <CalendarClock size={11} />
-                      Coming Soon
+            {/* Upcoming scheduled parts in same timeline */}
+            {upcomingParts.map((part) => {
+              const order = part.seriesOrder || posts.length + 1;
+              return (
+                <div
+                  key={part.slug}
+                  className="group relative flex items-start gap-4 rounded-xl border border-dashed border-border bg-card/50 p-4 md:gap-5 md:p-5"
+                >
+                  <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border-2 border-dashed border-primary/40 bg-background md:h-16 md:w-16">
+                    <span className="font-display text-lg font-bold text-primary/40 md:text-xl">
+                      {String(order).padStart(2, '0')}
                     </span>
-                    {item.expectedParts && (
-                      <span className="text-[11px] text-muted-foreground">
-                        ~{item.expectedParts} bagian
-                      </span>
-                    )}
                   </div>
-                  <h3 className="mb-1.5 font-display text-base font-semibold leading-snug text-foreground/80 md:text-lg">
-                    {item.title}
-                  </h3>
-                  {item.teaser && (
-                    <p className="mb-2 line-clamp-2 text-sm italic text-muted-foreground">
-                      &ldquo;{item.teaser}&rdquo;
-                    </p>
-                  )}
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
-                    {item.expectedDate && (
+
+                  <div className="min-w-0 flex-1 pt-1">
+                    <div className="mb-1.5 flex items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
+                        <CalendarClock size={11} />
+                        Coming Soon
+                      </span>
+                      <span className="text-[11px] text-muted-foreground">
+                        Bagian {order} dari {posts.length + upcomingParts.length}
+                      </span>
+                    </div>
+                    <h3 className="mb-1.5 font-display text-base font-semibold leading-snug text-foreground/80 md:text-lg">
+                      {part.title}
+                    </h3>
+                    {part.excerpt && (
+                      <p className="mb-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                        {part.excerpt}
+                      </p>
+                    )}
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
                       <span className="inline-flex items-center gap-1">
                         <CalendarClock size={12} />
-                        Rilis {formatExpectedDate(item.expectedDate)}
+                        Rilis {formatExpectedDate(part.publishedAt)}
                       </span>
-                    )}
+                    </div>
                   </div>
                 </div>
-
-                <div className="flex-shrink-0 self-center text-muted-foreground/30 transition-all group-hover:translate-x-1 group-hover:text-primary">
-                  <ArrowRight size={18} />
-                </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
 
