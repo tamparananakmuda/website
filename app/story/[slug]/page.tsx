@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, MapPin, Users, ArrowLeft, ArrowRight, Heart, Clock } from 'lucide-react';
+import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 interface Activity {
@@ -13,6 +14,7 @@ interface Activity {
   participants: string;
   status: 'upcoming' | 'completed';
   category: string;
+  imageUrl?: string;
   description: string;
   objectives: string[];
   agenda: { time: string; activity: string }[];
@@ -57,6 +59,7 @@ const activities: Activity[] = [
     participants: '20 relawan',
     status: 'upcoming',
     category: 'Panti Asuhan',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
     description:
       'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami akan bermain, belajar, dan mendengarkan mimpi-mimpi mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
     objectives: [
@@ -209,6 +212,18 @@ export default function StoryDetailPage({
 
         {/* Header */}
         <div className="mb-8">
+          {activity.imageUrl && (
+            <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl">
+              <Image
+                src={activity.imageUrl}
+                alt={activity.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+                priority
+              />
+            </div>
+          )}
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
               {activity.category}

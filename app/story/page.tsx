@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, MapPin, Users, ArrowRight, Heart } from 'lucide-react';
+import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ interface Activity {
   participants: string;
   status: 'upcoming' | 'completed';
   category: string;
+  imageUrl?: string;
 }
 
 const activities: Activity[] = [
@@ -59,6 +61,7 @@ const activities: Activity[] = [
     participants: '20 relawan',
     status: 'upcoming',
     category: 'Panti Asuhan',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
   },
   {
     slug: 'workshop-keuangan-gen-z',
@@ -135,9 +138,19 @@ export default function StoryPage() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted/30">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Heart size={40} className="text-muted-foreground/20" />
-                  </div>
+                  {activity.imageUrl ? (
+                    <Image
+                      src={activity.imageUrl}
+                      alt={activity.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Heart size={40} className="text-muted-foreground/20" />
+                    </div>
+                  )}
                   <div className="absolute left-3 top-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground">
                       {activity.category}
@@ -195,9 +208,19 @@ export default function StoryPage() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted/30">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Heart size={40} className="text-muted-foreground/20" />
-                  </div>
+                  {activity.imageUrl ? (
+                    <Image
+                      src={activity.imageUrl}
+                      alt={activity.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Heart size={40} className="text-muted-foreground/20" />
+                    </div>
+                  )}
                   <div className="absolute left-3 top-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                       {activity.category}
