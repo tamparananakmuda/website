@@ -32,7 +32,7 @@ export function Topics({ categories }: TopicsProps) {
               className="group relative flex flex-col bg-card p-6 transition-colors hover:bg-secondary md:p-8"
             >
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-display text-xs font-bold text-muted-foreground/50">
+                <span className="font-display text-xs font-bold text-muted-foreground/70">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div

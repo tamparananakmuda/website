@@ -81,7 +81,6 @@ function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: Re
             src={imgSrc}
             alt={article.title}
             fill
-            unoptimized
             loading="lazy"
             className={`
               object-cover transition-all duration-500

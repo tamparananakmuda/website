@@ -1,7 +1,6 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { MotionConfig } from 'framer-motion';
 
 type Theme = 'light' | 'dark';
 
@@ -38,9 +37,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <MotionConfig reducedMotion="user">
-        {mounted ? children : <div style={{ visibility: 'hidden' }}>{children}</div>}
-      </MotionConfig>
+      {mounted ? children : <div style={{ visibility: 'hidden' }}>{children}</div>}
     </ThemeContext.Provider>
   );
 }

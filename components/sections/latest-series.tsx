@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { PostWithRelations } from '@/lib/db/schema';
 
 interface LatestSeriesProps {
@@ -45,7 +46,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
           >
             <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-sm font-bold text-primary">
                   {s.posts.length}
                 </span>
                 <div>
@@ -77,11 +78,13 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                   >
                     <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/30">
                       {post.ogCardUrl || post.ogImageUrl ? (
-                        <img
+                        <Image
                           src={post.ogCardUrl || post.ogImageUrl || ''}
                           alt={post.title}
+                          fill
                           loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 280px, 320px"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : null}
                       <div className="absolute left-3 top-3 flex h-8 w-8 items-center justify-center rounded-lg bg-background/90 text-sm font-bold text-primary backdrop-blur-sm">

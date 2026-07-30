@@ -34,12 +34,12 @@ export interface SeriesConfig {
 }
 
 export const categories: CategoryConfig[] = [
-  { id: '53135a88-ce72-408c-9bc1-9fe32eb82548', title: 'Bisnis', slug: 'bisnis', description: 'Bangun dari nol, bukan dari mimpi.', color: '#A040D9' },
-  { id: 'a085b98d-c314-485e-a989-d5fc7078ec04', title: 'Karier', slug: 'karier', description: 'Bukan ikut arus, tapi cari arah.', color: '#4080D9' },
-  { id: '3f5fcde6-2a00-418b-88a6-4b485c122067', title: 'Kehidupan', slug: 'kehidupan', description: 'Hal-hal yang tidak diajarkan sekolah.', color: '#40B880' },
+  { id: '53135a88-ce72-408c-9bc1-9fe32eb82548', title: 'Bisnis', slug: 'bisnis', description: 'Bangun dari nol, bukan dari mimpi.', color: '#7B2DB0' },
+  { id: 'a085b98d-c314-485e-a989-d5fc7078ec04', title: 'Karier', slug: 'karier', description: 'Bukan ikut arus, tapi cari arah.', color: '#2563B5' },
+  { id: '3f5fcde6-2a00-418b-88a6-4b485c122067', title: 'Kehidupan', slug: 'kehidupan', description: 'Hal-hal yang tidak diajarkan sekolah.', color: '#1A8050' },
   { id: '3a71ab8a-526f-4d19-a434-f54814f233dd', title: 'Mindset', slug: 'mindset', description: 'Cara pikir yang menentukan cara hidup.', color: '#D13A3A' },
   { id: '92366694-94ef-419c-bb1a-cfd502b0d028', title: 'Teknologi', slug: 'teknologi', description: 'Tools, bukan hype.', color: '#6040D9' },
-  { id: '62d4cac7-789f-4d35-9cd8-35f25a5bb042', title: 'Uang', slug: 'uang', description: 'Kelola, tumbuhkan, pahami.', color: '#D9A040' },
+  { id: '62d4cac7-789f-4d35-9cd8-35f25a5bb042', title: 'Uang', slug: 'uang', description: 'Kelola, tumbuhkan, pahami.', color: '#A66E15' },
 ];
 
 export const subcategories: SubcategoryConfig[] = [

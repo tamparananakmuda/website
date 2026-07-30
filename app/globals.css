@@ -93,10 +93,32 @@
 }
 
 @layer utilities {
+  .hero-fade-in {
+    animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-btn-hover {
+    transition: transform 0.2s ease;
+  }
+  .hero-btn-hover:hover {
+    transform: scale(1.05);
+  }
+  .hero-btn-hover:active {
+    transform: scale(0.98);
+  }
+  @keyframes heroFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .brush-strike {
     position: relative;
     color: hsl(var(--muted-foreground));
-    opacity: 0.5;
+    opacity: 0.75;
   }
   .brush-strike::after {
     content: '';

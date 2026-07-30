@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { createClient } from '@/lib/supabase/client';
 import { User, Search, Menu, X, ArrowRight } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
@@ -25,10 +24,15 @@ export function SiteHeader() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setLoggedIn(!!user);
+    let cancelled = false;
+    import('@/lib/supabase/client').then(({ createClient }) => {
+      if (cancelled) return;
+      const supabase = createClient();
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        if (!cancelled) setLoggedIn(!!user);
+      });
     });
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {

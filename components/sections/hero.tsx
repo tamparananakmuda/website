@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -30,12 +27,7 @@ export function Hero({ className }: HeroProps) {
 
         {/* Hero Content */}
         <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-4 pb-16 text-center md:px-6 md:pb-[110px]">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center hero-fade-in">
             <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-primary md:mb-8 md:text-sm md:tracking-[0.3em]">
               Awakening the youth to reality
             </p>
@@ -51,7 +43,7 @@ export function Hero({ className }: HeroProps) {
             </p>
 
             <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:w-auto sm:gap-5">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+              <div className="w-full sm:w-auto hero-btn-hover">
                 <Link
                   href="/artikel"
                   className="group flex w-full items-center justify-center gap-1 rounded-full bg-primary px-6 py-3.5 font-semibold text-primary-foreground shadow-xl transition-colors hover:bg-primary/90 sm:px-[26px] sm:py-[14px]"
@@ -59,18 +51,18 @@ export function Hero({ className }: HeroProps) {
                   Mulai Membaca
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1 md:size-5" />
                 </Link>
-              </motion.div>
+              </div>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+              <div className="w-full sm:w-auto hero-btn-hover">
                 <Link
                   href="/tentang"
                   className="flex w-full items-center justify-center gap-1 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white shadow-xl backdrop-blur-sm transition-colors hover:bg-white/20 sm:px-[26px] sm:py-[14px]"
                 >
                   Tentang Kami
                 </Link>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
