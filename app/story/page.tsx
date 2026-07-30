@@ -136,7 +136,7 @@ export default function StoryPage() {
                   </div>
                   <div className="absolute right-3 top-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
-                      Upcoming
+                      Coming Soon
                     </span>
                   </div>
                 </div>
