@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { ItemListSchema } from '@/components/schema/item-list-schema';
-import { ArrowRight, ArrowLeft, Clock, Layers, CalendarClock, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Clock, Layers, CalendarClock } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const revalidate = 60;
@@ -197,7 +197,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                 </span>
               )}
               <span className="inline-flex items-center gap-1.5">
-                <Sparkles size={15} />
+                <CalendarClock size={15} />
                 Seri sedang dalam penulisan
               </span>
             </div>
@@ -263,7 +263,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-white/40">
               <span className="inline-flex items-center gap-1.5">
-                <Sparkles size={15} />
+                <CalendarClock size={15} />
                 Seri sedang dalam penulisan
               </span>
             </div>
@@ -455,6 +455,53 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                 </Link>
               );
             })}
+
+            {/* Upcoming parts in same timeline */}
+            {comingSoonList.map((item) => (
+              <Link
+                key={item.id}
+                href={`/seri/${item.slug}`}
+                className="group relative flex items-start gap-4 rounded-xl border border-dashed border-border bg-card/50 p-4 transition-all hover:border-primary/30 md:gap-5 md:p-5"
+              >
+                <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border-2 border-dashed border-primary/40 bg-background md:h-16 md:w-16">
+                  <CalendarClock size={22} className="text-primary/60" />
+                </div>
+
+                <div className="min-w-0 flex-1 pt-1">
+                  <div className="mb-1.5 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
+                      <CalendarClock size={11} />
+                      Coming Soon
+                    </span>
+                    {item.expectedParts && (
+                      <span className="text-[11px] text-muted-foreground">
+                        ~{item.expectedParts} bagian
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="mb-1.5 font-display text-base font-semibold leading-snug text-foreground/80 md:text-lg">
+                    {item.title}
+                  </h3>
+                  {item.teaser && (
+                    <p className="mb-2 line-clamp-2 text-sm italic text-muted-foreground">
+                      &ldquo;{item.teaser}&rdquo;
+                    </p>
+                  )}
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                    {item.expectedDate && (
+                      <span className="inline-flex items-center gap-1">
+                        <CalendarClock size={12} />
+                        Rilis {formatExpectedDate(item.expectedDate)}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 self-center text-muted-foreground/30 transition-all group-hover:translate-x-1 group-hover:text-primary">
+                  <ArrowRight size={18} />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -472,71 +519,6 @@ export default async function SeriesDetailPage({ params }: PageProps) {
           </Link>
         </div>
       </section>
-
-      {/* Coming Soon Series */}
-      {comingSoonList.length > 0 && (
-        <section className="mx-auto max-w-4xl px-4 pb-16 md:pb-24">
-          <div className="mb-8 flex items-center gap-3">
-            <Sparkles size={20} className="text-primary" />
-            <h2 className="font-display text-xl font-bold text-foreground md:text-2xl">
-              Seri Berikutnya
-            </h2>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {comingSoonList.map((item) => (
-              <Link
-                key={item.id}
-                href={`/seri/${item.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-dashed border-border bg-card/50 p-6 transition-all hover:border-primary/30 md:p-8"
-              >
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
-                    <CalendarClock size={12} />
-                    Coming Soon
-                  </span>
-                  {item.expectedParts && (
-                    <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-                      <Layers size={13} />
-                      ~{item.expectedParts} bagian
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="mb-3 font-display text-xl font-bold leading-snug text-foreground/90 md:text-2xl">
-                  {item.title}
-                </h3>
-
-                {item.description && (
-                  <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                    {item.description}
-                  </p>
-                )}
-
-                {item.teaser && (
-                  <p className="mb-5 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm font-medium italic text-primary/90">
-                    &ldquo;{item.teaser}&rdquo;
-                  </p>
-                )}
-
-                <div className="mt-auto flex items-center justify-between pt-4">
-                  {item.expectedDate && (
-                    <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <CalendarClock size={14} />
-                      Rilis {formatExpectedDate(item.expectedDate)}
-                    </span>
-                  )}
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
-                    Lihat detail
-                    <ArrowRight size={16} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
     </main>
   );
 }
