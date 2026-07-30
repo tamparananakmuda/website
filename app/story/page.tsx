@@ -74,17 +74,6 @@ const activities: Activity[] = [
     status: 'upcoming',
     category: 'Workshop',
   },
-  {
-    slug: 'bakti-sosial-panti-werdha',
-    title: 'Bakti Sosial Panti Werdha',
-    excerpt:
-      'Kegiatan bakti sosial di panti werdha. Memasak, bercengkerama, dan mendengarkan kisah hidup para lansia yang sering terlupakan.',
-    date: '2026-07-20',
-    location: 'Panti Werdha Sejahtera, Bandung',
-    participants: '12 relawan',
-    status: 'completed',
-    category: 'Panti Jompo',
-  },
 ];
 
 function formatDate(dateStr: string): string {

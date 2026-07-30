@@ -106,34 +106,6 @@ const activities: Activity[] = [
       { time: '18:00', activity: 'Q&A dan penutup' },
     ],
   },
-  {
-    slug: 'bakti-sosial-panti-werdha',
-    title: 'Bakti Sosial Panti Werdha',
-    excerpt:
-      'Kegiatan bakti sosial di panti werdha. Memasak, bercengkerama, dan mendengarkan kisah hidup para lansia yang sering terlupakan.',
-    date: '2026-07-20',
-    location: 'Panti Werdha Sejahtera, Bandung',
-    participants: '12 relawan',
-    status: 'completed',
-    category: 'Panti Jompo',
-    description:
-      'Bakti Sosial Panti Werdha adalah kegiatan pertama TAM Story yang sudah selesai. Kami mengunjungi panti werdha di Bandung, memasak makan siang bersama para lansia, dan mendengarkan kisah hidup mereka. Kegiatan ini memberikan pelajaran berharga tentang penuaan, kesepian, dan arti kebersamaan.',
-    objectives: [
-      'Memasak dan menyajikan makan siang untuk para lansia',
-      'Bercengkerama dan mendengarkan kisah hidup',
-      'Membawa sembako dan kebutuhan harian',
-      'Dokumentasi cerita lansia untuk pembelajaran',
-    ],
-    agenda: [
-      { time: '07:00', activity: 'Berangkat dari Jakarta' },
-      { time: '10:00', activity: 'Tiba di panti werdha' },
-      { time: '10:30', activity: 'Persiapan masak bersama' },
-      { time: '12:00', activity: 'Makan siang bersama lansia' },
-      { time: '13:00', activity: 'Bercengkerama dan dokumentasi cerita' },
-      { time: '15:00', activity: 'Penyerahan bantuan' },
-      { time: '16:00', activity: 'Pulang' },
-    ],
-  },
 ];
 
 function getActivityBySlug(slug: string): Activity | undefined {
