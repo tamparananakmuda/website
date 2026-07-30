@@ -1,4 +1,8 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -8,6 +12,20 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+  },
+  webpack: (config, { isServer, webpack }) => {
+    if (!isServer) {
+      const emptyModule = resolve(__dirname, 'scripts/empty-polyfill.js');
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(
+        /build\/polyfills\/polyfill-module/,
+        emptyModule
+      ));
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(
+        /build\/polyfills\/polyfill-nomodule/,
+        emptyModule
+      ));
+    }
+    return config;
   },
   images: {
     minimumCacheTTL: 31536000,
