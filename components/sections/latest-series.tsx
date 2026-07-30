@@ -138,62 +138,65 @@ export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
           </div>
         ))}
 
-        {/* Coming Soon grid */}
+        {/* Coming Soon series as cards in same style */}
         {comingSoon && comingSoon.length > 0 && (
-          <div className="mt-8">
-            <div className="mb-6 flex items-center gap-3">
-              <CalendarClock size={18} className="text-primary" />
-              <h3 className="font-display text-lg font-bold text-foreground">
-                Seri Berikutnya
-              </h3>
-              <div className="h-px flex-1 bg-border" />
+          <div className="mt-6 rounded-2xl border border-dashed border-border bg-secondary/30 p-6 md:p-8">
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <CalendarClock size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold tracking-tight md:text-2xl">
+                    Seri Berikutnya
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {comingSoon.length} seri coming soon
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
+
+            <div className="flex gap-4 overflow-x-auto pb-4 [scrollbar-width:thin] md:gap-6">
               {comingSoon.map((item) => (
                 <Link
                   key={item.id}
                   href={`/seri/${item.slug}`}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-dashed border-border bg-secondary/30 p-6 transition-all hover:border-primary/30 md:p-8"
+                  className="group flex w-[280px] shrink-0 flex-col overflow-hidden rounded-xl border border-dashed border-border bg-background transition-all duration-200 hover:border-primary/30 md:w-[320px]"
                 >
-                  <div className="mb-4 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
-                      <CalendarClock size={12} />
-                      Coming Soon
-                    </span>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/20">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <CalendarClock size={40} className="text-muted-foreground/30" />
+                    </div>
+                    <div className="absolute left-3 top-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                        <CalendarClock size={12} />
+                        Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-4">
                     {item.expectedParts && (
-                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      <span className="mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
                         ~{item.expectedParts} bagian
                       </span>
                     )}
-                  </div>
-
-                  <h4 className="mb-3 font-display text-xl font-bold leading-snug text-foreground/90 md:text-2xl">
-                    {item.title}
-                  </h4>
-
-                  {item.description && (
-                    <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  )}
-
-                  {item.teaser && (
-                    <p className="mb-5 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm font-medium italic text-primary/90">
-                      &ldquo;{item.teaser}&rdquo;
-                    </p>
-                  )}
-
-                  <div className="mt-auto flex items-center justify-between pt-4">
-                    {item.expectedDate && (
-                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <CalendarClock size={14} />
-                        Rilis {formatExpectedDate(item.expectedDate)}
-                      </span>
+                    <h4 className="mb-2 line-clamp-2 text-base font-bold leading-snug transition-colors group-hover:text-primary">
+                      {item.title}
+                    </h4>
+                    {item.teaser && (
+                      <p className="mb-3 line-clamp-2 text-sm italic text-muted-foreground">
+                        &ldquo;{item.teaser}&rdquo;
+                      </p>
                     )}
-                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
-                      Lihat detail
-                      <ArrowRight size={16} />
-                    </span>
+                    <div className="mt-auto flex items-center gap-2 text-xs text-muted-foreground">
+                      {item.expectedDate && (
+                        <span className="inline-flex items-center gap-1">
+                          <CalendarClock size={12} />
+                          Rilis {formatExpectedDate(item.expectedDate)}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </Link>
               ))}
