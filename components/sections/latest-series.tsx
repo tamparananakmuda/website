@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CalendarClock, ArrowRight } from 'lucide-react';
 import type { PostWithRelations } from '@/lib/db/schema';
+import type { SeriesConfig } from '@/content/config';
 
 interface LatestSeriesProps {
   series: Array<{
@@ -11,9 +13,15 @@ interface LatestSeriesProps {
     upcomingCount?: number;
     nextDate?: string | null;
   }>;
+  comingSoon?: Array<SeriesConfig & { hasPosts: boolean }>;
 }
 
-export function LatestSeries({ series }: LatestSeriesProps) {
+function formatExpectedDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
   if (!series || series.length === 0) return null;
 
   return (
@@ -61,6 +69,12 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                     {totalParts} bagian seri lengkap
                   </p>
                 </div>
+                {s.upcomingCount && s.upcomingCount > 0 ? (
+                  <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                    <CalendarClock size={12} />
+                    {s.upcomingCount} part coming soon
+                  </span>
+                ) : null}
               </div>
               <Link
                 href={`/seri/${s.seriesSlug}`}
@@ -123,6 +137,49 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                 );
               })}
 
+              {/* Coming soon cards inline in same scroll */}
+              {comingSoon && comingSoon.length > 0 && comingSoon.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/seri/${item.slug}`}
+                  className="group flex w-[280px] shrink-0 flex-col overflow-hidden rounded-xl border border-dashed border-border bg-background transition-all duration-200 hover:border-primary/30 md:w-[320px]"
+                >
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/20">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <CalendarClock size={40} className="text-muted-foreground/30" />
+                    </div>
+                    <div className="absolute left-3 top-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                        <CalendarClock size={12} />
+                        Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-4">
+                    {item.expectedParts && (
+                      <span className="mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        ~{item.expectedParts} bagian
+                      </span>
+                    )}
+                    <h4 className="mb-2 line-clamp-2 text-base font-bold leading-snug transition-colors group-hover:text-primary">
+                      {item.title}
+                    </h4>
+                    {item.teaser && (
+                      <p className="mb-3 line-clamp-2 text-sm italic text-muted-foreground">
+                        &ldquo;{item.teaser}&rdquo;
+                      </p>
+                    )}
+                    <div className="mt-auto flex items-center gap-2 text-xs text-muted-foreground">
+                      {item.expectedDate && (
+                        <span className="inline-flex items-center gap-1">
+                          <CalendarClock size={12} />
+                          Rilis {formatExpectedDate(item.expectedDate)}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
           );
