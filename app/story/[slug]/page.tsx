@@ -15,6 +15,7 @@ interface Activity {
   status: 'upcoming' | 'completed';
   category: string;
   imageUrl?: string;
+  gallery?: string[];
   description: string;
   objectives: string[];
   agenda: { time: string; activity: string }[];
@@ -60,6 +61,14 @@ const activities: Activity[] = [
     status: 'completed',
     category: 'Panti Asuhan',
     imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
+    gallery: [
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-1.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-2.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-3.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-4.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-5.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-6.jpeg',
+    ],
     description:
       'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami akan bermain, belajar, dan mendengarkan mimpi-mimpi mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
     objectives: [
@@ -259,22 +268,43 @@ export default function StoryDetailPage({
           </div>
         </section>
 
-        {/* Placeholder for photos */}
+        {/* Gallery */}
         <section className="mb-10">
           <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi</h2>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="flex aspect-square items-center justify-center rounded-xl border border-dashed border-border bg-muted/20"
-              >
-                <Heart size={24} className="text-muted-foreground/20" />
-              </div>
-            ))}
-          </div>
-          <p className="mt-3 text-center text-xs text-muted-foreground">
-            Foto akan tersedia setelah kegiatan berlangsung
-          </p>
+          {activity.gallery && activity.gallery.length > 0 ? (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {activity.gallery.map((img, i) => (
+                <div
+                  key={i}
+                  className="relative aspect-square overflow-hidden rounded-xl"
+                >
+                  <Image
+                    src={img}
+                    alt={`${activity.title} - Foto ${i + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div
+                  key={i}
+                  className="flex aspect-square items-center justify-center rounded-xl border border-dashed border-border bg-muted/20"
+                >
+                  <Heart size={24} className="text-muted-foreground/20" />
+                </div>
+              ))}
+            </div>
+          )}
+          {(!activity.gallery || activity.gallery.length === 0) && (
+            <p className="mt-3 text-center text-xs text-muted-foreground">
+              Foto akan tersedia setelah kegiatan berlangsung
+            </p>
+          )}
         </section>
 
         {/* CTA */}
