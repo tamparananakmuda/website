@@ -1,7 +1,6 @@
 import { getAllCategories } from '@/lib/db/queries/categories';
 import { getNonSeriesPublishedPostsWithRelations, getLatestSeriesWithPosts } from '@/lib/db/queries/posts';
-import { series as seriesConfig } from '@/content/config';
-import { getPostsBySeries, getAllArticles } from '@/lib/articles/loader';
+import { getAllArticles } from '@/lib/articles/loader';
 import { Hero } from '@/components/sections/hero';
 import { FeaturedQuote } from '@/components/sections/featured-quote';
 import { Philosophy } from '@/components/sections/philosophy';
@@ -52,15 +51,6 @@ export default async function HomePage() {
     nextDate: upcomingBySeries.get(s.seriesSlug)?.nextDate ?? null,
   }));
 
-  // Get coming-soon series that don't have published articles yet
-  const seriesWithCounts = await Promise.all(
-    seriesConfig.map(async (s) => {
-      const posts = await getPostsBySeries(s.slug, 1);
-      return { ...s, hasPosts: posts.length > 0 };
-    })
-  );
-  const comingSoonSeries = seriesWithCounts.filter((s) => s.status === 'coming-soon' && !s.hasPosts);
-
   return (
     <main>
       <OrganizationSchema />
@@ -72,7 +62,7 @@ export default async function HomePage() {
       <Philosophy />
       <Topics categories={categories || []} />
       <LatestArticles posts={recentPosts || []} />
-      <LatestSeries series={seriesWithUpcoming} comingSoon={comingSoonSeries} />
+      <LatestSeries series={seriesWithUpcoming} />
       <WhyTam />
       <Faq />
       <NewsletterCta />
