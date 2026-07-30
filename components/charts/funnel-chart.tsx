@@ -48,11 +48,12 @@ export function TAMFunnelChart({ data, title, subtitle, source, height = 320, un
         </div>
       )}
       <ResponsiveContainer width="100%" height={height}>
-        <FunnelChart margin={{ top: 16, right: 80, left: 80, bottom: 8 }}>
+        <FunnelChart data={data} margin={{ top: 16, right: 80, left: 80, bottom: 8 }}>
           <Tooltip content={<CustomTooltip />} />
           <Funnel
             dataKey="value"
             nameKey="name"
+            data={data}
             isAnimationActive
           >
             {data.map((entry, i) => (

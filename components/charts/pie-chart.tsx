@@ -55,7 +55,7 @@ export function TAMPieChart({ data, title, subtitle, source, height = 320, unit 
         </div>
       )}
       <ResponsiveContainer width="100%" height={height}>
-        <PieChart>
+        <PieChart data={dataWithTotal}>
           <Pie
             data={dataWithTotal}
             dataKey="value"
