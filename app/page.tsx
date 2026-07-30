@@ -1,7 +1,6 @@
 import { getAllCategories } from '@/lib/db/queries/categories';
 import { getNonSeriesPublishedPostsWithRelations, getLatestSeriesWithPosts } from '@/lib/db/queries/posts';
-import { series as seriesConfig } from '@/content/config';
-import { getPostsBySeries, getAllArticles } from '@/lib/articles/loader';
+import { getAllArticles } from '@/lib/articles/loader';
 import { Hero } from '@/components/sections/hero';
 import { FeaturedQuote } from '@/components/sections/featured-quote';
 import { Philosophy } from '@/components/sections/philosophy';
@@ -28,6 +27,7 @@ export default async function HomePage() {
   // Detect upcoming (scheduled, not yet published) parts per series
   const currentTime = new Date().toISOString();
   const upcomingBySeries = new Map<string, { count: number; nextDate: string }>();
+  const upcomingPartsBySeries = new Map<string, Array<{ slug: string; title: string; excerpt: string; seriesOrder: number | null; publishedAt: string }>>();
   for (const a of allArticles) {
     if (a.seriesSlug && a.status === 'scheduled' && a.publishedAt > currentTime) {
       const existing = upcomingBySeries.get(a.seriesSlug);
@@ -42,24 +42,27 @@ export default async function HomePage() {
           nextDate: existing.nextDate,
         });
       }
+      const parts = upcomingPartsBySeries.get(a.seriesSlug) ?? [];
+      parts.push({
+        slug: a.slug,
+        title: a.title,
+        excerpt: a.excerpt,
+        seriesOrder: a.seriesOrder,
+        publishedAt: a.publishedAt,
+      });
+      upcomingPartsBySeries.set(a.seriesSlug, parts);
     }
   }
 
-  // Add upcoming info to published series
+  // Add upcoming info and upcoming parts to published series
   const seriesWithUpcoming = (latestSeries || []).map((s) => ({
     ...s,
     upcomingCount: upcomingBySeries.get(s.seriesSlug)?.count ?? 0,
     nextDate: upcomingBySeries.get(s.seriesSlug)?.nextDate ?? null,
+    upcomingParts: (upcomingPartsBySeries.get(s.seriesSlug) ?? []).sort(
+      (a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()
+    ),
   }));
-
-  // Get coming-soon series that don't have published articles yet
-  const seriesWithCounts = await Promise.all(
-    seriesConfig.map(async (s) => {
-      const posts = await getPostsBySeries(s.slug, 1);
-      return { ...s, hasPosts: posts.length > 0 };
-    })
-  );
-  const comingSoonSeries = seriesWithCounts.filter((s) => s.status === 'coming-soon' && !s.hasPosts);
 
   return (
     <main>
@@ -72,7 +75,7 @@ export default async function HomePage() {
       <Philosophy />
       <Topics categories={categories || []} />
       <LatestArticles posts={recentPosts || []} />
-      <LatestSeries series={seriesWithUpcoming} comingSoon={comingSoonSeries} />
+      <LatestSeries series={seriesWithUpcoming} />
       <WhyTam />
       <Faq />
       <NewsletterCta />
