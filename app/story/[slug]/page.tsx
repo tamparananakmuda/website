@@ -179,7 +179,7 @@ export default function StoryDetailPage({
                   : 'bg-green-600/15 text-green-600'
               }`}
             >
-              {isUpcoming ? 'Coming Soon' : 'Selesai'}
+              {isUpcoming ? 'Upcoming' : 'Selesai'}
             </span>
           </div>
 
