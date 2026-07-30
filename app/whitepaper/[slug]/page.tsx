@@ -186,7 +186,7 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
 
       {/* Content */}
       <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
-        <TableOfContents body={wp.body} />
+        <TableOfContents body={wp.body} defaultOpen={false} />
         <WhitepaperContent body={wp.body} />
       </div>
 

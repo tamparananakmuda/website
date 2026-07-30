@@ -152,7 +152,7 @@ export async function getPublishedWhitepapers(limit = 20): Promise<WhitepaperPos
   const all = readAllWhitepapers()
     .filter((w) => isPublished(w))
     .sort((a, b) => {
-      if (a.reportCode && b.reportCode) return a.reportCode.localeCompare(b.reportCode);
+      if (a.reportCode && b.reportCode) return b.reportCode.localeCompare(a.reportCode);
       if (a.reportCode && !b.reportCode) return -1;
       if (!a.reportCode && b.reportCode) return 1;
       return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();

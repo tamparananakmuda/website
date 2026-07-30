@@ -11,9 +11,9 @@ tags: ["krisis-pangan", "ketahanan-pangan", "distribusi-pangan", "inflasi-pangan
 status: "published"
 publishedAt: "2026-07-06T01:00:00Z"
 og_headline: "Beras surplus, tapi harga tetap mahal. Kenapa?"
-reportCode: null
-reportYear: null
-reportSeries: null
+reportCode: "TAM-2026-009"
+reportYear: 2026
+reportSeries: "TAM Report"
 isAnnualReport: false
 keyFindings:
   - "Produksi beras naik 13,6% (BPS), surplus 2 juta ton, tapi harga tetap Rp15.572/kg"

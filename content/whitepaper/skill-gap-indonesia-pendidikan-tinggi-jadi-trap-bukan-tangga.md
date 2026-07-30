@@ -11,7 +11,7 @@ tags: ["pendidikan", "skill gap", "tenaga kerja", "karier", "ekonomi"]
 status: "published"
 publishedAt: "2026-07-28T00:00:00+07:00"
 og_headline: "Kuliah mahal, lulus menganggur, siapa untung?"
-reportCode: "TAM-2026-10"
+reportCode: "TAM-2026-012"
 reportYear: 2026
 reportSeries: "Skill Gap Indonesia"
 isAnnualReport: true

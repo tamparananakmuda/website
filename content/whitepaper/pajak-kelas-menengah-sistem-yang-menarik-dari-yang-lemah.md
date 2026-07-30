@@ -11,9 +11,9 @@ tags: ["pajak", "pajak-kelas-menengah", "pph-21", "ppn", "tax-amnesty", "ketidak
 status: "published"
 publishedAt: "2026-07-13T01:00:00Z"
 og_headline: "Bayar pajak jujur, konglomerat pakai tax planner."
-reportCode: null
-reportYear: null
-reportSeries: null
+reportCode: "TAM-2026-010"
+reportYear: 2026
+reportSeries: "TAM Report"
 isAnnualReport: false
 keyFindings: []
 dataSources:

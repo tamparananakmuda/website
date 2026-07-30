@@ -139,6 +139,9 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 127 | Quiet Firing: Bukan Kamu yang Pergi, Perusahaan yang Paksa Kamu Keluar | quiet-firing-perusahaan-paksa-kamu-keluar | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-25 (scheduled 08:00 WIB) |
 | 128 | Career Cushioning: Bukan Tidak Loyal, Survival di Era PHK Tanpa Peringatan | career-cushioning-bukan-tidak-loyal-survival-era-phk | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-26 (scheduled 08:00 WIB) |
 | 129 | Time Poverty Gen Z: Bukan Jelek Atur Waktu, 8 Jam Kerja yang Makan 14 Jam Hidupmu | time-poverty-gen-z-8-jam-kerja-makan-14-jam-hidupmu | Kehidupan | null | kontra-narasi | 2026-08-27 (scheduled 08:00 WIB) |
+| 130 | Secondhand Stress: Bukan Cemas Sendiri, Warisan Stres Orang Tua yang Gen Z Bawa Tanpa Sadar | secondhand-stress-warisan-stres-orang-tua-gen-z | Kehidupan | Psikologi | data | 2026-08-27 (scheduled 12:00 WIB) |
+| 131 | Lifestyle Creep: Gaji Naik Tapi Tetap Broke, Bukan Boros, Otak yang Tidak Update Standar Hidup | lifestyle-creep-gaji-naik-tapi-tetap-broke | Uang | Keuangan & Uang | kontra-narasi | 2026-08-28 (scheduled 08:00 WIB) |
+| 132 | Quiet Hiring: Bukan Kamu yang Kerja 2 Orang, Perusahaan yang Hemat di Atas Punggungmu | quiet-hiring-kerja-2-orang-gaji-1-orang | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-08-29 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

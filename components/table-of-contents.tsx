@@ -11,10 +11,10 @@ interface TocItem {
   level: number;
 }
 
-export function TableOfContents({ body }: { body: string }) {
+export function TableOfContents({ body, defaultOpen = true }: { body: string; defaultOpen?: boolean }) {
   const [headings, setHeadings] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   useEffect(() => {
     const headingRegex = /^(#{2,3})\s+(.+)$/gm;
