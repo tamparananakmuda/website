@@ -55,6 +55,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  // Series with no published posts and not coming-soon (all scheduled): noindex
+  if (posts.length === 0) {
+    return {
+      title,
+      description,
+      keywords: ['seri', series.title.toLowerCase(), 'tamparan anak muda seri'],
+      robots: { index: false, follow: true },
+      alternates: { canonical: url },
+      openGraph: {
+        type: 'website',
+        locale: 'id_ID',
+        url,
+        title,
+        description,
+        siteName: 'TAMPARAN ANAK MUDA',
+        images: [{ url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp', width: 1600, height: 900, alt: title }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
+      },
+    };
+  }
+
   // Published series: indexable, use first post's OG
   const firstPost = posts[0];
   const ogImageUrl =
@@ -179,6 +205,71 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         </section>
 
         {/* Newsletter CTA */}
+        <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
+          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
+            <p className="text-lg font-medium text-foreground">
+              Mau jadi yang pertama tahu saat seri ini rilis?
+            </p>
+            <p className="max-w-md text-sm text-muted-foreground">
+              Subscribe newsletter TAM. Kami kirim notifikasi saat bagian pertama dipublikasikan.
+            </p>
+            <Link
+              href="/newsletter"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Subscribe Newsletter
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
+  // Series with no published posts but not marked coming-soon (all scheduled)
+  if (posts.length === 0) {
+    return (
+      <main>
+        <BreadcrumbSchema items={[
+          { name: 'Home', href: '/' },
+          { name: 'Seri', href: '/seri' },
+          { name: series.title, href: `/seri/${series.slug}` },
+        ]} />
+
+        <section className="relative w-full overflow-hidden border-b border-border">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+            <Link
+              href="/seri"
+              className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+            >
+              <ArrowLeft size={15} />
+              Semua Seri
+            </Link>
+
+            <h1 className="mb-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+              {series.title}
+            </h1>
+
+            {series.description && (
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+                {series.description}
+              </p>
+            )}
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-white/40">
+              <span className="inline-flex items-center gap-1.5">
+                <Sparkles size={15} />
+                Seri sedang dalam penulisan
+              </span>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
           <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
             <p className="text-lg font-medium text-foreground">
