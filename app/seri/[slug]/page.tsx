@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { ItemListSchema } from '@/components/schema/item-list-schema';
-import { ArrowRight, ArrowLeft, Clock, Layers } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Clock, Layers, CalendarClock, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const revalidate = 60;
@@ -14,6 +14,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
+  // Only pre-generate series that have published articles OR are coming-soon
   return seriesConfig.map((s) => ({ slug: s.slug }));
 }
 
@@ -28,7 +29,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
   const url = `${siteUrl}/seri/${series.slug}`;
 
-  // Use first post's OG feature image as series cover, fallback to homepage OG
+  // Coming-soon series with no articles: noindex
+  if (posts.length === 0 && series.status === 'coming-soon') {
+    return {
+      title,
+      description,
+      keywords: ['seri', series.title.toLowerCase(), 'tamparan anak muda seri', 'coming soon'],
+      robots: { index: false, follow: true },
+      alternates: { canonical: url },
+      openGraph: {
+        type: 'website',
+        locale: 'id_ID',
+        url,
+        title,
+        description,
+        siteName: 'TAMPARAN ANAK MUDA',
+        images: [{ url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp', width: 1600, height: 900, alt: title }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
+      },
+    };
+  }
+
+  // Published series: indexable, use first post's OG
   const firstPost = posts[0];
   const ogImageUrl =
     (firstPost as { ogFeatureUrl?: string; ogImageUrl?: string })?.ogFeatureUrl ||
@@ -64,6 +91,11 @@ function estimateReadingTime(body: string): number {
   return Math.max(1, Math.ceil(words / 200));
 }
 
+function formatExpectedDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 export default async function SeriesDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const series = getSeriesBySlug(slug);
@@ -71,8 +103,101 @@ export default async function SeriesDetailPage({ params }: PageProps) {
 
   const posts = await getPostsBySeries(series.slug, 100);
 
-  if (posts.length === 0) {
-    notFound();
+  // Coming-soon series: show teaser page instead of 404
+  if (posts.length === 0 && series.status === 'coming-soon') {
+    return (
+      <main>
+        <BreadcrumbSchema items={[
+          { name: 'Home', href: '/' },
+          { name: 'Seri', href: '/seri' },
+          { name: series.title, href: `/seri/${series.slug}` },
+        ]} />
+
+        <section className="relative w-full overflow-hidden border-b border-border">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
+            <div
+              className="absolute inset-0 opacity-[0.12]"
+              style={{
+                backgroundImage: 'radial-gradient(circle at 25% 15%, hsl(0 63% 52%) 0%, transparent 50%), radial-gradient(circle at 85% 85%, hsl(0 63% 52% / 0.3) 0%, transparent 40%)',
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+            <Link
+              href="/seri"
+              className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+            >
+              <ArrowLeft size={15} />
+              Semua Seri
+            </Link>
+
+            <div className="mb-6 flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                <CalendarClock size={13} />
+                Coming Soon
+              </span>
+              {series.expectedParts && (
+                <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-white/40">
+                  <Layers size={13} />
+                  ~{series.expectedParts} bagian
+                </span>
+              )}
+            </div>
+
+            <h1 className="mb-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+              {series.title}
+            </h1>
+
+            {series.description && (
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+                {series.description}
+              </p>
+            )}
+
+            {series.teaser && (
+              <p className="mb-8 max-w-2xl rounded-xl border border-primary/20 bg-primary/5 px-6 py-4 text-lg font-medium italic text-primary/90">
+                &ldquo;{series.teaser}&rdquo;
+              </p>
+            )}
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/50">
+              {series.expectedDate && (
+                <span className="inline-flex items-center gap-1.5">
+                  <CalendarClock size={15} />
+                  Rilis {formatExpectedDate(series.expectedDate)}
+                </span>
+              )}
+              <span className="inline-flex items-center gap-1.5">
+                <Sparkles size={15} />
+                Seri sedang dalam penulisan
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter CTA */}
+        <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
+          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
+            <p className="text-lg font-medium text-foreground">
+              Mau jadi yang pertama tahu saat seri ini rilis?
+            </p>
+            <p className="max-w-md text-sm text-muted-foreground">
+              Subscribe newsletter TAM. Kami kirim notifikasi saat bagian pertama dipublikasikan.
+            </p>
+            <Link
+              href="/newsletter"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Subscribe Newsletter
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+      </main>
+    );
   }
 
   const author = posts[0].authorId ? getAuthorById(posts[0].authorId) : null;

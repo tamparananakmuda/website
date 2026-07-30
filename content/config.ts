@@ -31,6 +31,10 @@ export interface SeriesConfig {
   title: string;
   slug: string;
   description: string | null;
+  status?: 'published' | 'coming-soon';
+  expectedDate?: string; // ISO date string, e.g. "2026-08-01"
+  expectedParts?: number; // planned total parts
+  teaser?: string; // short hook for coming soon
 }
 
 export const categories: CategoryConfig[] = [
@@ -70,6 +74,9 @@ export const series: SeriesConfig[] = [
   { id: '7505a15c-085b-456e-ab31-0aa21793e581', title: 'Mental Health di Era Digital: Sistem yang Menjual Luka, Bukan Obat', slug: 'kesehatan-mental-era-digital', description: 'Setiap kali kamu mencari bantuan untuk mental health, kamu masuk lebih dalam ke dalam sistem yang membuatmu sakit. 12 part investigasi dari gejala sampai arsitek.' },
   { id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890', title: 'Generasi Sewa: Memiliki Jadi Mewah', slug: 'generasi-sewa', description: 'Generasi pertama yang menyewa hampir semua hal: rumah, hiburan, uang, bahkan pekerjaan. Bukan pilihan gaya hidup, tapi sistem yang membuat memiliki jadi terlalu mahal.' },
   { id: 'b2c3d4e5-f6a7-8901-bcde-f23456789012', title: 'Hubungan Era Tidak Pasti: Cinta yang Tidak Bisa Dijanjikan', slug: 'hubungan-era-tidak-pasti', description: 'Ekonomi tidak pasti adalah arsitek tak terlihat di balik krisis hubungan Gen Z. Bukan takut komitmen, bukan tidak bisa komunikasi. Kamu tidak bisa menjanjikan besok, jadi bagaimana bisa menjanjikan seseorang selamanya?' },
+  // Coming Soon
+  { id: 'c3d4e5f6-a7b8-9012-cdef-345678901234', title: 'Pendidikan Mahal: Sekolah yang Tidak Mengajarkan Hidup', slug: 'pendidikan-mahal', description: 'Sekolah mengajarkan cara lulus ujian, bukan cara lulus hidup. Seri ini membongkar kenapa sistem pendidikan Indonesia membuat lulusan lebih siap jadi karyawan daripada hidup mandiri.', status: 'coming-soon', expectedDate: '2026-08-15', expectedParts: 8, teaser: 'Berapa banyak yang kamu bayar untuk gelar yang tidak menjamin apa-apa?' },
+  { id: 'd4e5f6a7-b8c9-0123-def4-456789012345', title: 'Krisis Demografis Indonesia: Sistem yang Tidak Memberi Alasan Punya Anak', slug: 'krisis-demografis-indonesia', description: 'Gen Z tidak mau punya anak. Bukan egois, bukan hedonis. Mereka hitung dan tidak ada yang masuk akal. Seri ini membongkar kenapa sistem membuat punya anak jadi keputusan irasional.', status: 'coming-soon', expectedDate: '2026-09-01', expectedParts: 10, teaser: 'Kenapa Gen Z lebih punya kucing daripada anak?' },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryConfig | undefined {

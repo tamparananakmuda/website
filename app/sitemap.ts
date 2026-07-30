@@ -4,6 +4,7 @@ import { getCategoriesForSitemap } from '@/lib/db/queries/categories';
 import { getPublishedWhitepapersForSitemap } from '@/lib/db/queries/whitepapers';
 import { getPublishedSocialPostsForSitemap } from '@/lib/db/queries/social-posts';
 import { series as seriesConfig } from '@/content/config';
+import { getPostsBySeries } from '@/lib/articles/loader';
 
 export const revalidate = 3600;
 
@@ -121,12 +122,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // NOTE: Subcategory pages use ?pillar= query params — not indexable as separate URLs.
   // Excluded from sitemap intentionally; category hub pages already cover them.
 
-  const seriPages: MetadataRoute.Sitemap = seriesConfig.map((s) => ({
-    url: `${siteUrl}/seri/${s.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  // Only include series that have at least 1 published article
+  const seriesWithPosts = await Promise.all(
+    seriesConfig.map(async (s) => {
+      const posts = await getPostsBySeries(s.slug, 1);
+      return { slug: s.slug, hasPosts: posts.length > 0 };
+    })
+  );
+  const seriPages: MetadataRoute.Sitemap = seriesWithPosts
+    .filter((s) => s.hasPosts)
+    .map((s) => ({
+      url: `${siteUrl}/seri/${s.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }));
 
   const whitepaperPages: MetadataRoute.Sitemap = (whitepapersData as { slug: string; updatedAt: string | null }[]).map((wp) => ({
     url: `${siteUrl}/whitepaper/${wp.slug}`,
