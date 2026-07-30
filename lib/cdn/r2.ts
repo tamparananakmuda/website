@@ -35,7 +35,7 @@ export async function uploadOGImage(slug: string, type: OGImageType, buffer: Buf
       Key: key,
       Body: buffer,
       ContentType: contentType,
-      CacheControl: 'public, max-age=0, s-maxage=0',
+      CacheControl: 'public, max-age=31536000, immutable',
     })
   );
 
