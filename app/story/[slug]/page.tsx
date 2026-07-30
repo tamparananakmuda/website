@@ -174,6 +174,7 @@ export default function StoryDetailPage({
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 768px"
                 priority
+                unoptimized
               />
             </div>
           )}
@@ -284,6 +285,7 @@ export default function StoryDetailPage({
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"
                     sizes="(max-width: 768px) 50vw, 33vw"
+                    unoptimized
                   />
                 </div>
               ))}
