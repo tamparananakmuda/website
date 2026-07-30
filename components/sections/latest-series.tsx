@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { CalendarClock } from 'lucide-react';
+import { CalendarClock, BookOpen } from 'lucide-react';
 import type { PostWithRelations } from '@/lib/db/schema';
 
 interface UpcomingPart {
@@ -66,8 +66,8 @@ export function LatestSeries({ series }: LatestSeriesProps) {
           >
             <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-sm font-bold text-primary">
-                  {s.posts.length}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                  <BookOpen size={20} />
                 </span>
                 <div>
                   <h3 className="text-xl font-bold tracking-tight md:text-2xl">
