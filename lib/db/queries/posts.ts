@@ -5,6 +5,7 @@ import type { Post, PostWithRelations } from '@/lib/db/schema';
 import {
   getPublishedPosts as fileGetPublishedPosts,
   getPublishedPostsWithRelations as fileGetPublishedPostsWithRelations,
+  getPublishedPostsWithPagination as fileGetPublishedPostsWithPagination,
   getAllPublishedPostsWithRelations as fileGetAllPublishedPostsWithRelations,
   getPostBySlug as fileGetPostBySlug,
   getPublishedPostBySlug as fileGetPublishedPostBySlug,
@@ -31,6 +32,10 @@ export async function getPublishedPosts(limit = 10): Promise<Post[]> {
 
 export async function getPublishedPostsWithRelations(limit = 10): Promise<PostWithRelations[]> {
   return fileGetPublishedPostsWithRelations(limit);
+}
+
+export async function getPublishedPostsWithPagination(page: number, perPage: number): Promise<{ posts: PostWithRelations[]; total: number; totalPages: number }> {
+  return fileGetPublishedPostsWithPagination(page, perPage);
 }
 
 export async function getAllPublishedPostsWithRelations(): Promise<PostWithRelations[]> {

@@ -261,6 +261,17 @@ export async function getPublishedPostsWithRelations(limit = 10): Promise<PostWi
   return sliced.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
 }
 
+export async function getPublishedPostsWithPagination(page: number, perPage: number): Promise<{ posts: PostWithRelations[]; total: number; totalPages: number }> {
+  const articles = await getPublishedArticles();
+  const total = articles.length;
+  const totalPages = Math.ceil(total / perPage);
+  const start = (page - 1) * perPage;
+  const sliced = articles.slice(start, start + perPage);
+  const ogMap = await getOgMetadataMap(sliced.map((a) => a.slug));
+  const posts = sliced.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
+  return { posts, total, totalPages };
+}
+
 export async function getAllPublishedPostsWithRelations(): Promise<PostWithRelations[]> {
   const articles = await getPublishedArticles();
   const ogMap = await getOgMetadataMap(articles.map((a) => a.slug));
