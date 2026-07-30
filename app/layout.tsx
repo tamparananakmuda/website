@@ -114,9 +114,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`scroll-smooth dark ${jakarta.variable} ${syne.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://cdn.tamparananakmuda.com" />
         <link rel="dns-prefetch" href="https://cdn.tamparananakmuda.com" />
-        <link rel="preconnect" href="https://analytics.tamparananakmuda.com" />
         <link rel="dns-prefetch" href="https://analytics.tamparananakmuda.com" />
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('tam-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='light'||(!t&&!d)){document.documentElement.classList.remove('dark')}}catch(e){}})()` }} />
       </head>
