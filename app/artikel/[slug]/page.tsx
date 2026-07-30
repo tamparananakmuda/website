@@ -13,6 +13,7 @@ import { SponsoredBadge } from '@/components/sponsored-badge';
 import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
 import { RelatedArticles } from '@/components/related-articles';
+import { SeriesNavigation } from '@/components/series-navigation';
 import nextDynamic from 'next/dynamic';
 
 function extractFAQFromBody(body: string): { question: string; answer: string }[] {
@@ -122,6 +123,31 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     }
 
     const related = await getRelatedPosts(post.category?.slug || post.categoryId!, post.slug, 3);
+
+    // Fetch series parts for navigation
+    let seriesNav: React.ReactNode = null;
+    if (post.series && post.series.slug && post.seriesOrder) {
+      const allArticles = await getAllArticles();
+      const seriesParts = allArticles
+        .filter((a) => a.seriesSlug === post.series!.slug)
+        .map((a) => ({
+          slug: a.slug,
+          title: a.title,
+          seriesOrder: a.seriesOrder,
+          status: a.status,
+          publishedAt: a.publishedAt,
+        }));
+      const totalParts = seriesParts.length;
+      seriesNav = (
+        <SeriesNavigation
+          seriesSlug={post.series.slug}
+          seriesTitle={post.series.title}
+          currentOrder={post.seriesOrder}
+          totalParts={totalParts}
+          allParts={seriesParts}
+        />
+      );
+    }
 
     return (
       <article className="container mx-auto px-4 py-12">
@@ -247,6 +273,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         )}
 
         <CommentsSection postSlug={post.slug} />
+
+        {seriesNav}
 
         <ReadingTracker postSlug={post.slug} />
       </article>
