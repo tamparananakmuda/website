@@ -27,8 +27,8 @@ keyFindings:
   - 1.443 kasus pasung Q1 2026, tren naik dari 981 (2023) → 1.794 (2024) → 2.442 (2025) (Kemenkes, 2026)
   - Hanya 58% puskesmas (6.000) punya layanan jiwa, hanya 2% (211) punya psikolog klinis (Kemenkes, 2026)
   - Prevalensi depresi tertinggi di usia 15-24 tahun (2%), tapi hanya 10,4% yang berobat (SKI 2023/Kemenkes)
-  - Kerugian ekonomi anxiety & depresi: Rp463,8 triliun/tahun (2,1% PDB), 88,5% dari productivity loss (Frontiers in Public Health, 2025)
-  - Biaya terapi private: Rp300.000-Rp1.500.000/sesi vs gratis via BPJS (tapi butuh rujukan berjenjang)
+  - "Kerugian ekonomi anxiety & depresi: Rp463,8 triliun/tahun (2,1% PDB), 88,5% dari productivity loss (Frontiers in Public Health, 2025)"
+  - "Biaya terapi private: Rp300.000-Rp1.500.000/sesi vs gratis via BPJS (tapi butuh rujukan berjenjang)"
   - 34% Gen Z & 30% milenial merasa cemas/stres sepanjang waktu; 48% Gen Z & 45% milenial burnout (Deloitte 2026)
 dataSources:
   - Kemenkes RI (Ditjennakes SDM data, Dirjen Yankes data anggaran & pasung, 2026)
