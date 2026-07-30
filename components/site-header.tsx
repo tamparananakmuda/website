@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Artikel', href: '/artikel' },
-  { name: 'Kategori', href: '/kategori' },
+  { name: 'Story', href: '/story' },
   { name: 'Whitepaper', href: '/whitepaper' },
   { name: 'Tentang', href: '/tentang' },
   { name: 'Donasi', href: '/donasi' },
