@@ -8,8 +8,8 @@ author: "TAMPARAN ANAK MUDA"
 downloadUrl: null
 readingTime: 25
 tags: ["krisis-pangan", "ketahanan-pangan", "distribusi-pangan", "inflasi-pangan", "farmer-share", "biaya-logistik", "nilai-tukar-petani"]
-status: "scheduled"
-publishedAt: "2026-07-31T01:00:00Z"
+status: "published"
+publishedAt: "2026-07-06T01:00:00Z"
 og_headline: "Beras surplus, tapi harga tetap mahal. Kenapa?"
 reportCode: null
 reportYear: null

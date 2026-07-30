@@ -8,8 +8,8 @@ author: "TAMPARAN ANAK MUDA"
 downloadUrl: null
 readingTime: 25
 tags: ["pajak", "pajak-kelas-menengah", "pph-21", "ppn", "tax-amnesty", "ketidakadilan-pajak", "efektif-rate"]
-status: "scheduled"
-publishedAt: "2026-07-30T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-07-13T01:00:00Z"
 og_headline: "Bayar pajak jujur, konglomerat pakai tax planner."
 reportCode: null
 reportYear: null

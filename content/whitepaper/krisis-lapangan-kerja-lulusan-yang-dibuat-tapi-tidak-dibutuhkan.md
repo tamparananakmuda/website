@@ -14,8 +14,8 @@ tags:
   - fresh-graduate
   - pengangguran-terdidik
   - ekonomi-indonesia
-status: "scheduled"
-publishedAt: "2026-10-01T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-06-08T01:00:00Z"
 og_headline: "300 lamaran ditolak, sistemnya yang salah"
 reportCode: "TAM-2026-004"
 reportYear: 2026

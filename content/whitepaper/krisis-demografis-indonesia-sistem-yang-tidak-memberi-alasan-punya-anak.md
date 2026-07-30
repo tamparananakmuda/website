@@ -14,8 +14,8 @@ tags:
   - cuti-melahirkan
   - gen-z
   - aging-population
-status: "scheduled"
-publishedAt: "2027-02-01T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-07-20T01:00:00Z"
 og_headline: "Gen Z nggak mau anak? Sistem yang salah."
 reportCode: "TAM-2026-011"
 reportYear: 2026

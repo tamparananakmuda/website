@@ -14,8 +14,8 @@ tags:
   - sistem-kesehatan
   - gen-z
   - kebijakan
-status: "scheduled"
-publishedAt: "2026-07-29T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-06-01T01:00:00Z"
 og_headline: "Gen Z bukan lemah mental, sistemnya yang tidak ada"
 reportCode: "TAM-2026-006"
 reportYear: 2026

@@ -14,8 +14,8 @@ tags:
   - bimbel
   - privilege
   - sistem
-status: "scheduled"
-publishedAt: "2027-03-01T01:00:00Z"
+status: "published"
+publishedAt: "2026-08-17T01:00:00Z"
 og_headline: "Rp724T anggaran pendidikan, tapi 53% anak tidak bisa baca"
 reportCode: "TAM-2027-003"
 reportYear: 2027

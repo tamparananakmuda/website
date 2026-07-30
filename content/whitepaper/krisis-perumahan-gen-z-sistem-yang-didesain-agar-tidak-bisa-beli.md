@@ -14,8 +14,8 @@ tags:
   - harga-rumah
   - kepemilikan-rumah
   - kebijakan
-status: "scheduled"
-publishedAt: "2026-08-15T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-07-27T01:00:00Z"
 og_headline: "Gen Z nabung 50% tetap tak bisa beli rumah"
 reportCode: "TAM-2026-007"
 reportYear: 2026

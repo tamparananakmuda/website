@@ -7,8 +7,8 @@ author: "TAMPARAN ANAK MUDA"
 downloadUrl: null
 readingTime: 25
 tags: ["krisis-pensiun", "bpjs-ketenagakerjaan", "unfunded-liability", "reformasi-pensiun", "demografi-indonesia", "payg", "jaminan-pensiun"]
-status: "scheduled"
-publishedAt: "2026-09-01T00:00:00+07:00"
+status: "published"
+publishedAt: "2026-06-15T01:00:00Z"
 og_headline: "Tabungan pensiun kamu? Itu transfer ke boomer"
 reportCode: "TAM-2026-003"
 reportYear: 2026

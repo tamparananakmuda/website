@@ -14,9 +14,9 @@ tags:
   - fintech
   - kejahatan-digital
   - literasi-digital
-status: "scheduled"
+status: "published"
 human_signature: true
-publishedAt: "2026-11-01T00:00:00+07:00"
+publishedAt: "2026-06-22T01:00:00Z"
 og_headline: "Rp9,5 triliun hilang, bukan korban yang bodoh"
 reportCode: "TAM-2026-005"
 reportYear: 2026

@@ -15,9 +15,9 @@ tags:
   - sistem-keuangan
   - investasi
   - gen-z
-status: "scheduled"
+status: "published"
 human_signature: true
-publishedAt: "2027-01-15T00:00:00+07:00"
+publishedAt: "2026-08-10T01:00:00Z"
 og_headline: "Menabung di deposito bikin kamu rugi setiap tahun"
 reportCode: "TAM-2027-001"
 reportYear: 2027

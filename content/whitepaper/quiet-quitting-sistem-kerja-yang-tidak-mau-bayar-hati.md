@@ -15,9 +15,9 @@ tags:
   - uu-cipta-kerja
   - kesehatan-mental
   - ketenagakerjaan
-status: "scheduled"
+status: "published"
 human_signature: true
-publishedAt: "2026-12-15T00:00:00+07:00"
+publishedAt: "2026-06-29T01:00:00Z"
 og_headline: "Quiet quitting bukan malas, sistemnya tak bayar"
 reportCode: "TAM-2026-008"
 reportYear: 2026
