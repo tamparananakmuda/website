@@ -8,7 +8,6 @@ import { Philosophy } from '@/components/sections/philosophy';
 import { Topics } from '@/components/sections/topics';
 import { LatestArticles } from '@/components/sections/latest-articles';
 import { LatestSeries } from '@/components/sections/latest-series';
-import { ComingSoonSeries } from '@/components/sections/coming-soon-series';
 import { WhyTam } from '@/components/sections/why-tam';
 import { Faq, faqItems } from '@/components/sections/faq';
 import { NewsletterCta } from '@/components/sections/newsletter-cta';
@@ -45,8 +44,7 @@ export default async function HomePage() {
       <Philosophy />
       <Topics categories={categories || []} />
       <LatestArticles posts={recentPosts || []} />
-      <LatestSeries series={latestSeries || []} />
-      {comingSoonSeries.length > 0 && <ComingSoonSeries series={comingSoonSeries} />}
+      <LatestSeries series={latestSeries || []} comingSoon={comingSoonSeries} />
       <WhyTam />
       <Faq />
       <NewsletterCta />

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CalendarClock, ArrowRight } from 'lucide-react';
 import type { PostWithRelations } from '@/lib/db/schema';
+import type { SeriesConfig } from '@/content/config';
 
 interface LatestSeriesProps {
   series: Array<{
@@ -9,9 +11,15 @@ interface LatestSeriesProps {
     totalParts: number;
     posts: PostWithRelations[];
   }>;
+  comingSoon?: Array<SeriesConfig & { hasPosts: boolean }>;
 }
 
-export function LatestSeries({ series }: LatestSeriesProps) {
+function formatExpectedDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+export function LatestSeries({ series, comingSoon }: LatestSeriesProps) {
   if (!series || series.length === 0) return null;
 
   return (
@@ -121,6 +129,69 @@ export function LatestSeries({ series }: LatestSeriesProps) {
             </div>
           </div>
         ))}
+
+        {/* Coming Soon grid */}
+        {comingSoon && comingSoon.length > 0 && (
+          <div className="mt-8">
+            <div className="mb-6 flex items-center gap-3">
+              <CalendarClock size={18} className="text-primary" />
+              <h3 className="font-display text-lg font-bold text-foreground">
+                Seri Berikutnya
+              </h3>
+              <div className="h-px flex-1 bg-border" />
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {comingSoon.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/seri/${item.slug}`}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-dashed border-border bg-secondary/30 p-6 transition-all hover:border-primary/30 md:p-8"
+                >
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                      <CalendarClock size={12} />
+                      Coming Soon
+                    </span>
+                    {item.expectedParts && (
+                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        ~{item.expectedParts} bagian
+                      </span>
+                    )}
+                  </div>
+
+                  <h4 className="mb-3 font-display text-xl font-bold leading-snug text-foreground/90 md:text-2xl">
+                    {item.title}
+                  </h4>
+
+                  {item.description && (
+                    <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.description}
+                    </p>
+                  )}
+
+                  {item.teaser && (
+                    <p className="mb-5 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm font-medium italic text-primary/90">
+                      &ldquo;{item.teaser}&rdquo;
+                    </p>
+                  )}
+
+                  <div className="mt-auto flex items-center justify-between pt-4">
+                    {item.expectedDate && (
+                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <CalendarClock size={14} />
+                        Rilis {formatExpectedDate(item.expectedDate)}
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
+                      Lihat detail
+                      <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-10 text-center sm:hidden">
           <Link
