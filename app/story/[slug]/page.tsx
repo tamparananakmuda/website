@@ -78,34 +78,6 @@ const activities: Activity[] = [
       { time: '14:00', activity: 'Foto bersama dan pulang' },
     ],
   },
-  {
-    slug: 'workshop-keuangan-gen-z',
-    title: 'Workshop Keuangan Gen Z',
-    excerpt:
-      'Workshop gratis tentang literasi keuangan untuk generasi muda. Belajar kelola uang, hindari jebakan paylater, dan mulai investasi dari nol.',
-    date: '2026-09-10',
-    location: 'Coworking Space, Jakarta Pusat',
-    participants: '50 peserta',
-    status: 'upcoming',
-    category: 'Workshop',
-    description:
-      'Workshop Keuangan Gen Z adalah sesi belajar gratis tentang literasi keuangan. Kami akan membahas cara mengelola uang, menghindari jebakan paylater, dan memulai investasi dari nol. Workshop ini dirancang khusus untuk generasi muda yang ingin mandiri secara finansial.',
-    objectives: [
-      'Mengajarkan dasar-dasar manajemen keuangan pribadi',
-      'Membahas bahaya paylater dan cara menghindarinya',
-      'Memperkenalkan konsep investasi untuk pemula',
-      'Memberikan template budgeting yang bisa langsung dipakai',
-    ],
-    agenda: [
-      { time: '13:00', activity: 'Registrasi peserta' },
-      { time: '13:30', activity: 'Sesi 1: Mindset keuangan Gen Z' },
-      { time: '14:30', activity: 'Sesi 2: Budgeting dan tracking pengeluaran' },
-      { time: '15:30', activity: 'Coffee break' },
-      { time: '16:00', activity: 'Sesi 3: Bahaya paylater dan cara keluar' },
-      { time: '17:00', activity: 'Sesi 4: Investasi untuk pemula' },
-      { time: '18:00', activity: 'Q&A dan penutup' },
-    ],
-  },
 ];
 
 function getActivityBySlug(slug: string): Activity | undefined {

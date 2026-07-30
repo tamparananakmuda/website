@@ -63,17 +63,6 @@ const activities: Activity[] = [
     category: 'Panti Asuhan',
     imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
   },
-  {
-    slug: 'workshop-keuangan-gen-z',
-    title: 'Workshop Keuangan Gen Z',
-    excerpt:
-      'Workshop gratis tentang literasi keuangan untuk generasi muda. Belajar kelola uang, hindari jebakan paylater, dan mulai investasi dari nol.',
-    date: '2026-09-10',
-    location: 'Coworking Space, Jakarta Pusat',
-    participants: '50 peserta',
-    status: 'upcoming',
-    category: 'Workshop',
-  },
 ];
 
 function formatDate(dateStr: string): string {
