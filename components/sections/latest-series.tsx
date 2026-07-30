@@ -77,12 +77,6 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                     {totalParts} bagian seri lengkap
                   </p>
                 </div>
-                {upcoming.length > 0 ? (
-                  <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
-                    <CalendarClock size={12} />
-                    {upcoming.length} part coming soon
-                  </span>
-                ) : null}
               </div>
               <Link
                 href={`/seri/${s.seriesSlug}`}
