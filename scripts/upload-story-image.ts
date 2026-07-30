@@ -49,7 +49,8 @@ async function main() {
   }
 
   const [localPath, slug] = args;
-  const key = `story/${slug}.jpeg`;
+  const ext = localPath.split('.').pop()?.toLowerCase() || 'jpeg';
+  const key = `story/${slug}.${ext}`;
 
   try {
     const url = await uploadStoryImage(localPath, key);

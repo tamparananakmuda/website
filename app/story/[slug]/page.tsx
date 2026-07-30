@@ -62,12 +62,12 @@ const activities: Activity[] = [
     category: 'Panti Asuhan',
     imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
     gallery: [
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-1.jpeg',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-2.jpeg',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-3.jpeg',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-4.jpeg',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-5.jpeg',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-6.jpeg',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-1.webp',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-2.webp',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-3.webp',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-4.webp',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-5.webp',
+      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-6.webp',
     ],
     description:
       'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami akan bermain, belajar, dan mendengarkan mimpi-mimpi mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
@@ -276,7 +276,7 @@ export default function StoryDetailPage({
               {activity.gallery.map((img, i) => (
                 <div
                   key={i}
-                  className="relative aspect-square overflow-hidden rounded-xl"
+                  className="relative aspect-[3/2] overflow-hidden rounded-xl"
                 >
                   <Image
                     src={img}
@@ -293,7 +293,7 @@ export default function StoryDetailPage({
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div
                   key={i}
-                  className="flex aspect-square items-center justify-center rounded-xl border border-dashed border-border bg-muted/20"
+                  className="flex aspect-[3/2] items-center justify-center rounded-xl border border-dashed border-border bg-muted/20"
                 >
                   <Heart size={24} className="text-muted-foreground/20" />
                 </div>
