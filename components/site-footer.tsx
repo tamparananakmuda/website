@@ -25,8 +25,8 @@ export function SiteFooter() {
               <Link href="/artikel" className="text-muted-foreground transition-colors hover:text-foreground">
                 Artikel
               </Link>
-              <Link href="/kategori" className="text-muted-foreground transition-colors hover:text-foreground">
-                Kategori
+              <Link href="/story" className="text-muted-foreground transition-colors hover:text-foreground">
+                Story
               </Link>
               <Link href="/whitepaper" className="text-muted-foreground transition-colors hover:text-foreground">
                 Whitepaper
@@ -35,7 +35,7 @@ export function SiteFooter() {
                 Seri
               </Link>
               <Link href="/sosial" className="text-muted-foreground transition-colors hover:text-foreground">
-                Konten Sosial
+                TAM+
               </Link>
             </nav>
           </div>
