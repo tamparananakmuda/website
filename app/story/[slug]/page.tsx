@@ -23,7 +23,7 @@ interface Activity {
 }
 
 const syailendraGallery = Array.from(
-  { length: 24 },
+  { length: 23 },
   (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/image-${i + 1}.webp`
 );
 
