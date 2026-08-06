@@ -33,7 +33,9 @@ export default function SlideGrid({ slideSets }: Props) {
   const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
   const [copied, setCopied] = useState<boolean>(false);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
+  const displayedSets = showAll ? slideSets : slideSets.slice(0, 6);
   const selectedSet = selectedSetIndex !== null ? slideSets[selectedSetIndex] : null;
 
   const handleOpenModal = (index: number) => {
@@ -112,7 +114,7 @@ export default function SlideGrid({ slideSets }: Props) {
     <div className="space-y-6">
       {/* Grid Container */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-        {slideSets.map((set, idx) => {
+        {displayedSets.map((set, idx) => {
           const isPinned = idx < 3 || set.isPinned;
           const coverImage = set.slides[0];
           const views = getViewCount(set, idx);
@@ -159,15 +161,32 @@ export default function SlideGrid({ slideSets }: Props) {
                 <Layers className="w-3.5 h-3.5" />
               </div>
 
-              {/* Engagement Stats (Bottom Left) */}
-              <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1 text-white/90 text-xs font-semibold drop-shadow-md">
-                <Play className="w-3 h-3 fill-white text-white" />
-                <span>{views}</span>
+              {/* Bottom Views Info */}
+              <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] text-white/90 font-mono font-medium drop-shadow">
+                <span className="flex items-center gap-1">
+                  <Play className="w-3 h-3 fill-white/80" />
+                  {views}
+                </span>
+                <span className="text-[10px] text-white/70 bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                  {set.slides.length} Slide
+                </span>
               </div>
             </motion.div>
           );
         })}
       </div>
+
+      {/* Show More / Show Less Toggle Button */}
+      {slideSets.length > 6 && (
+        <div className="flex justify-center pt-2">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2 rounded-full border border-border bg-card/80 px-6 py-2.5 text-xs font-bold text-foreground transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-lg"
+          >
+            <span>{showAll ? 'Tampilkan Lebih Sedikit' : `Lihat Semua ${slideSets.length} Slide Set`}</span>
+          </button>
+        </div>
+      )}
 
       {/* Modal Popup Slide Viewer */}
       <AnimatePresence>
