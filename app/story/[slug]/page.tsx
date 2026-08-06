@@ -22,14 +22,10 @@ interface Activity {
   agenda: { time: string; activity: string }[];
 }
 
-const syailendraDuplicates = new Set([3, 5, 9, 14, 17, 18, 20, 22, 23, 27, 28, 30]);
-
-const syailendraGallery = Array.from({ length: 36 }, (_, i) => i + 1)
-  .filter((num) => !syailendraDuplicates.has(num))
-  .map(
-    (num) =>
-      `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/image-${num}.webp`
-  );
+const syailendraGallery = Array.from(
+  { length: 24 },
+  (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/image-${i + 1}.webp`
+);
 
 const syailendraVideos = Array.from(
   { length: 18 },
