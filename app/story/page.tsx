@@ -62,7 +62,7 @@ const activities: Activity[] = [
     participants: '31 relawan',
     status: 'completed',
     category: 'Panti Asuhan',
-    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/cover.jpeg',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/cover.webp',
   },
 ];
 

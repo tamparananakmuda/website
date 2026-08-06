@@ -79,7 +79,7 @@ const activities: Activity[] = [
     participants: '31 relawan',
     status: 'completed',
     category: 'Panti Asuhan',
-    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/cover.jpeg',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/cover.webp',
     gallery: chloeHouseGallery,
     description:
       'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami mengadakan check kesehatan, menyanyi, dan melukis bersama mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
