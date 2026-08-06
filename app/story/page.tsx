@@ -47,9 +47,10 @@ const activities: Activity[] = [
       'Mengunjungi panti jompo untuk mendengar cerita hidup para lansia. Pelajaran tentang penuaan, kesepian, dan apa yang sebenarnya berarti di akhir hidup.',
     date: '2026-08-02',
     location: 'Jimbaran, Kuta Sel., Badung, Bali 80361',
-    participants: 'Mendatang',
-    status: 'upcoming',
+    participants: '25 relawan',
+    status: 'completed',
     category: 'Panti Jompo',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/cover.webp',
   },
   {
     slug: 'kunjungan-chloe-house',

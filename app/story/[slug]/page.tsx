@@ -16,10 +16,21 @@ interface Activity {
   category: string;
   imageUrl?: string;
   gallery?: string[];
+  videos?: string[];
   description: string;
   objectives: string[];
   agenda: { time: string; activity: string }[];
 }
+
+const syailendraGallery = Array.from(
+  { length: 36 },
+  (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/image-${i + 1}.webp`
+);
+
+const syailendraVideos = Array.from(
+  { length: 18 },
+  (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/video-${i + 1}.webm`
+);
 
 const activities: Activity[] = [
   {
@@ -29,11 +40,14 @@ const activities: Activity[] = [
       'Mengunjungi panti jompo untuk mendengar cerita hidup para lansia. Pelajaran tentang penuaan, kesepian, dan apa yang sebenarnya berarti di akhir hidup.',
     date: '2026-08-02',
     location: 'Jimbaran, Kuta Sel., Badung, Bali 80361',
-    participants: 'Mendatang',
-    status: 'upcoming',
+    participants: '25 relawan',
+    status: 'completed',
     category: 'Panti Jompo',
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/cover.webp',
+    gallery: syailendraGallery,
+    videos: syailendraVideos,
     description:
-      'Kunjungan ke Panti Jompo Syailendra adalah kegiatan mendatang TAM Story. Kami akan mengunjungi panti jompo di Jimbaran, Bali untuk mendengar cerita hidup para lansia, bercengkerama, dan belajar dari pengalaman mereka. Kegiatan ini bukan sekadar memberikan bantuan, tapi juga mendengarkan kisah-kisah yang sering terlupakan.',
+      'Kunjungan ke Panti Jompo Syailendra adalah kegiatan TAM Story di Jimbaran, Bali. Tim relawan mengunjungi lansia untuk mendengar cerita hidup mereka, bercengkerama, memberikan bantuan sembako, dan belajar langsung dari pengalaman mereka.',
     objectives: [
       'Mendengarkan dan mendokumentasikan cerita hidup para lansia',
       'Memberikan kebersamaan dan perhatian yang tulus',
@@ -271,9 +285,31 @@ export default function StoryDetailPage({
           </div>
         </section>
 
-        {/* Gallery */}
+        {/* Video Documentation */}
+        {activity.videos && activity.videos.length > 0 && (
+          <section className="mb-10">
+            <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi Video</h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {activity.videos.map((vid, i) => (
+                <div
+                  key={i}
+                  className="relative overflow-hidden rounded-xl border border-border bg-black shadow-sm"
+                >
+                  <video
+                    src={vid}
+                    controls
+                    preload="metadata"
+                    className="h-auto w-full max-h-[480px] object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Photo Gallery */}
         <section className="mb-10">
-          <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi</h2>
+          <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi Foto</h2>
           {activity.gallery && activity.gallery.length > 0 ? (
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
               {activity.gallery.map((img, i) => (
