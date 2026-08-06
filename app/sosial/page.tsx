@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import { getPublishedSocialPosts } from '@/lib/db/queries/social-posts';
 import type { SocialPost } from '@/lib/db/schema';
 import SocialGrid from './social-grid';
-import SlideCarousel from '@/components/slide-carousel';
+import SlideGrid from '@/components/slide-grid';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import slidesData from '@/files/slides-data.json';
 
 export const metadata: Metadata = {
-  title: 'TAM+ - Video, Reels, dan Thread Pilihan',
+  title: 'TAM+ - Video, Reels, dan Slide Pilihan',
   description: 'TAM+ adalah konten sosial pilihan dari YouTube, TikTok, Instagram, dan X. Konten yang membuat kamu berpikir, bukan sekadar scroll.',
-  keywords: ['tam plus', 'tam+ tamparan anak muda', 'video gen z', 'tiktok gen z', 'reels indonesia', 'konten pilihan'],
+  keywords: ['tam plus', 'tam+ tamparan anak muda', 'video gen z', 'tiktok gen z', 'reels indonesia', 'konten pilihan', 'slide gen z'],
   robots: { index: true, follow: true },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/sosial`,
@@ -65,26 +65,36 @@ export default async function SosialPage() {
           TAM+
         </h1>
         <p className="max-w-2xl text-muted-foreground">
-          Video, reels, dan thread pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
+          Video, reels, dan slide pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
         </p>
       </div>
 
-      {/* Slide Carousel */}
+      {/* Slide Grid Section (Social Media Grid Style) */}
       {slidesData.length > 0 && (
-        <div className="mb-10">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="h-px w-8 bg-primary" />
-            <h3 className="font-display text-lg font-bold text-foreground">Slide Pilihan</h3>
+        <div className="mb-12">
+          <div className="mb-6 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="h-6 w-1 rounded-full bg-red-600" />
+              <h2 className="font-display text-xl font-bold text-foreground tracking-tight">
+                Koleksi Slide Konten
+              </h2>
+            </div>
+            <span className="text-xs text-muted-foreground font-mono">
+              {slidesData.length} Konten
+            </span>
           </div>
-          <SlideCarousel slideSets={slidesData} />
+
+          <SlideGrid slideSets={slidesData} />
         </div>
       )}
 
-      <SocialGrid
-        posts={gridPosts || []}
-        heroPost={heroPost || null}
-        spotlightPosts={spotlightPosts}
-      />
+      {posts.length > 0 && (
+        <SocialGrid
+          posts={gridPosts || []}
+          heroPost={heroPost || null}
+          spotlightPosts={spotlightPosts}
+        />
+      )}
     </main>
   );
 }
