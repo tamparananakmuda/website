@@ -32,6 +32,11 @@ const syailendraVideos = Array.from(
   (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-panti-jompo-syailendra/video-${i + 1}.webm`
 );
 
+const chloeHouseGallery = Array.from(
+  { length: 6 },
+  (_, i) => `https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/image-${i + 1}.webp`
+);
+
 const activities: Activity[] = [
   {
     slug: 'kunjungan-panti-jompo-syailendra',
@@ -74,15 +79,8 @@ const activities: Activity[] = [
     participants: '31 relawan',
     status: 'completed',
     category: 'Panti Asuhan',
-    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house.jpeg',
-    gallery: [
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-1.webp',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-2.webp',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-3.webp',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-4.webp',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-5.webp',
-      'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house-6.webp',
-    ],
+    imageUrl: 'https://cdn.tamparananakmuda.com/story/kunjungan-chloe-house/cover.jpeg',
+    gallery: chloeHouseGallery,
     description:
       'Kunjungan ke Chloe House adalah kesempatan untuk berbagi waktu dengan anak-anak yang tumbuh tanpa orang tua. Kami mengadakan check kesehatan, menyanyi, dan melukis bersama mereka. Kegiatan ini bertujuan untuk memberikan dukungan emosional dan inspirasi bagi anak-anak di Chloe House.',
     objectives: [
