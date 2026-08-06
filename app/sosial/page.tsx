@@ -2,7 +2,9 @@ import { Metadata } from 'next';
 import { getPublishedSocialPosts } from '@/lib/db/queries/social-posts';
 import type { SocialPost } from '@/lib/db/schema';
 import SocialGrid from './social-grid';
+import SlideCarousel from '@/components/slide-carousel';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import slidesData from '@/files/slides-data.json';
 
 export const metadata: Metadata = {
   title: 'TAM+ - Video, Reels, dan Thread Pilihan',
@@ -66,6 +68,17 @@ export default async function SosialPage() {
           Video, reels, dan thread pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
         </p>
       </div>
+
+      {/* Slide Carousel */}
+      {slidesData.length > 0 && (
+        <div className="mb-10">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="h-px w-8 bg-primary" />
+            <h3 className="font-display text-lg font-bold text-foreground">Slide Pilihan</h3>
+          </div>
+          <SlideCarousel slideSets={slidesData} />
+        </div>
+      )}
 
       <SocialGrid
         posts={gridPosts || []}
