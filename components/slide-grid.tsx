@@ -16,6 +16,7 @@ export interface SlideSet {
 
 interface Props {
   slideSets: SlideSet[];
+  initialSelectedId?: string;
 }
 
 // Generate realistic synthetic view count based on set ID if not provided
@@ -29,8 +30,16 @@ function getViewCount(set: SlideSet, index: number): string {
   return mockCounts[index % mockCounts.length];
 }
 
-export default function SlideGrid({ slideSets }: Props) {
-  const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(null);
+export default function SlideGrid({ slideSets, initialSelectedId }: Props) {
+  const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(() => {
+    if (initialSelectedId && slideSets) {
+      const foundIdx = slideSets.findIndex(
+        (s) => s.id === initialSelectedId || s.id === `konten-tam-${initialSelectedId}`
+      );
+      if (foundIdx !== -1) return foundIdx;
+    }
+    return null;
+  });
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
   const [copied, setCopied] = useState<boolean>(false);
   const [isCaptionExpanded, setIsCaptionExpanded] = useState<boolean>(false);
@@ -47,12 +56,18 @@ export default function SlideGrid({ slideSets }: Props) {
     setSelectedSetIndex(index);
     setCurrentSlideIndex(0);
     setIsCaptionExpanded(false);
+    if (typeof window !== 'undefined' && slideSets[index]?.id) {
+      window.history.replaceState(null, '', `/sosial/${slideSets[index].id}`);
+    }
   };
 
   const handleCloseModal = () => {
     setSelectedSetIndex(null);
     setCurrentSlideIndex(0);
     setIsCaptionExpanded(false);
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', '/sosial');
+    }
   };
 
   const handleNextSlide = useCallback(() => {
@@ -134,9 +149,72 @@ export default function SlideGrid({ slideSets }: Props) {
     };
   }, [selectedSetIndex]);
 
+  // Check URL hash or path to auto-open modal when accessing direct shared link
+  useEffect(() => {
+    let intervalId: ReturnType<typeof setInterval> | null = null;
+
+    const checkAndOpenFromUrl = () => {
+      if (typeof window === 'undefined' || !slideSets || slideSets.length === 0) return false;
+
+      const rawHash = window.location.hash.replace(/^#/, '');
+      const decodedHash = rawHash ? decodeURIComponent(rawHash) : '';
+      const pathParts = window.location.pathname.split('/').filter(Boolean);
+      const pathId = pathParts[0] === 'sosial' && pathParts[1] ? decodeURIComponent(pathParts[1]) : '';
+
+      const targetId = decodedHash || pathId;
+
+      if (targetId) {
+        const idx = slideSets.findIndex(
+          (s) => s.id === targetId || s.id === `konten-tam-${targetId}` || targetId.includes(s.id)
+        );
+        if (idx !== -1) {
+          setSelectedSetIndex(idx);
+          setCurrentSlideIndex(0);
+          setIsCaptionExpanded(false);
+
+          // Scroll to the card smoothly
+          if (scrollContainerRef.current) {
+            const cardElem = scrollContainerRef.current.children[idx] as HTMLElement;
+            if (cardElem) {
+              cardElem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          }
+          return true;
+        }
+      }
+      return false;
+    };
+
+    // Immediate check
+    const opened = checkAndOpenFromUrl();
+
+    // If not opened yet (due to hydration delay), poll every 100ms up to 2 seconds
+    if (!opened) {
+      let attempts = 0;
+      intervalId = setInterval(() => {
+        attempts += 1;
+        const isSuccess = checkAndOpenFromUrl();
+        if (isSuccess || attempts > 20) {
+          if (intervalId) clearInterval(intervalId);
+        }
+      }, 100);
+    }
+
+    window.addEventListener('hashchange', checkAndOpenFromUrl);
+    window.addEventListener('popstate', checkAndOpenFromUrl);
+    window.addEventListener('load', checkAndOpenFromUrl);
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+      window.removeEventListener('hashchange', checkAndOpenFromUrl);
+      window.removeEventListener('popstate', checkAndOpenFromUrl);
+      window.removeEventListener('load', checkAndOpenFromUrl);
+    };
+  }, [slideSets]);
+
   const copyShareLink = () => {
     if (!selectedSet) return;
-    const url = `${window.location.origin}/sosial#${selectedSet.id}`;
+    const url = `${window.location.origin}/sosial/${selectedSet.id}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -245,7 +323,7 @@ export default function SlideGrid({ slideSets }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 md:bg-black/90 md:backdrop-blur-lg p-0 md:p-6"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 md:bg-black/90 md:backdrop-blur-lg p-0 md:p-2 lg:p-4"
             onClick={handleCloseModal}
           >
             <motion.div
@@ -253,7 +331,7 @@ export default function SlideGrid({ slideSets }: Props) {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.96, opacity: 0, y: 15 }}
               transition={{ type: 'spring', damping: 28, stiffness: 320 }}
-              className="relative w-full h-full md:h-auto md:max-w-5xl md:min-h-[580px] md:max-h-[90vh] bg-black md:bg-zinc-950 md:border md:border-zinc-800 md:rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              className="relative w-full h-full md:h-[95vh] md:max-w-7xl md:min-h-[780px] md:max-h-[98vh] bg-black md:bg-zinc-950 md:border md:border-zinc-800 md:rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button (Desktop Top-Right) */}
@@ -309,7 +387,7 @@ export default function SlideGrid({ slideSets }: Props) {
 
               {/* Media Viewer Area */}
               <div 
-                className="relative flex-1 bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-14 pb-2 md:py-8"
+                className="relative flex-1 md:flex-[1.8] bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-20 pb-4 md:py-2"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -321,7 +399,7 @@ export default function SlideGrid({ slideSets }: Props) {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.18 }}
-                    className="relative w-full h-full min-h-[360px] md:min-h-[500px] flex items-center justify-center px-4"
+                    className="relative w-full h-full min-h-[360px] md:min-h-[700px] flex items-center justify-center px-2 md:px-4 pt-6 md:pt-0"
                   >
                     <Image
                       src={selectedSet.slides[currentSlideIndex]}
@@ -352,12 +430,12 @@ export default function SlideGrid({ slideSets }: Props) {
                 </button>
 
                 {/* Slide Counter Overlay */}
-                <div className="absolute top-16 md:top-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold font-mono text-white/90 border border-white/15 z-20 shadow-md">
+                <div className="absolute top-20 md:top-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold font-mono text-white/90 border border-white/15 z-20 shadow-md">
                   {currentSlideIndex + 1} / {selectedSet.slides.length}
                 </div>
 
                 {/* Mobile Story-style Progress Bars */}
-                <div className="md:hidden absolute top-13 left-3 right-3 flex gap-1 z-20 pointer-events-none">
+                <div className="md:hidden absolute top-16 left-3 right-3 flex gap-1 z-20 pointer-events-none">
                   {selectedSet.slides.map((_, idx) => (
                     <div
                       key={idx}
@@ -378,7 +456,7 @@ export default function SlideGrid({ slideSets }: Props) {
               </div>
 
               {/* Sidebar Info Area */}
-              <div className="w-full md:w-[380px] lg:w-[420px] bg-zinc-950 border-t md:border-t-0 md:border-l border-zinc-800/80 flex flex-col justify-between max-h-[35vh] md:max-h-none overflow-y-auto">
+              <div className="w-full md:w-[400px] lg:w-[460px] bg-zinc-950 border-t md:border-t-0 md:border-l border-zinc-800/80 flex flex-col justify-between max-h-[35vh] md:max-h-none overflow-y-auto">
                 <div className="p-5 md:p-6 space-y-4">
                   {/* Desktop Header */}
                   <div className="hidden md:flex items-center justify-between border-b border-zinc-800/80 pb-4 pr-10">
@@ -417,7 +495,7 @@ export default function SlideGrid({ slideSets }: Props) {
                     <div className={`text-xs md:text-sm text-zinc-200 whitespace-pre-line leading-relaxed transition-all duration-300 ${
                       isCaptionExpanded 
                         ? 'max-h-[50vh] overflow-y-auto pr-1' 
-                        : 'line-clamp-2 md:line-clamp-none md:max-h-[340px] md:overflow-y-auto custom-scrollbar pr-2'
+                        : 'line-clamp-2 md:line-clamp-none md:max-h-[460px] md:overflow-y-auto custom-scrollbar pr-2'
                     }`}>
                       {selectedSet.caption || 'Konten Tamparan Anak Muda - Perspektif Gen Z.'}
                     </div>
