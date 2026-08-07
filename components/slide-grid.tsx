@@ -302,7 +302,7 @@ export default function SlideGrid({ slideSets }: Props) {
 
               {/* Main Media View Area (Native Mobile Swipe + Aspect Ratio Preserved) */}
               <div 
-                className="relative flex-1 bg-black flex items-center justify-center overflow-hidden touch-pan-y"
+                className="relative flex-1 bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-16 pb-2 md:py-0"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -314,13 +314,13 @@ export default function SlideGrid({ slideSets }: Props) {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -30 }}
                     transition={{ duration: 0.2 }}
-                    className="relative w-full h-full flex items-center justify-center py-14 md:py-0"
+                    className="relative w-full h-full flex items-center justify-center"
                   >
                     <Image
                       src={selectedSet.slides[currentSlideIndex]}
                       alt={`Slide ${currentSlideIndex + 1}`}
                       fill
-                      className="object-contain max-h-[72vh] md:max-h-[85vh]"
+                      className="object-contain max-h-full"
                       priority
                       unoptimized
                     />
@@ -345,7 +345,7 @@ export default function SlideGrid({ slideSets }: Props) {
                 </button>
 
                 {/* Top Center Slide Pill (Instagram Style: 1/10) */}
-                <div className="absolute top-16 md:top-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold font-mono text-white/90 border border-white/10 z-20">
+                <div className="absolute top-16 md:top-4 left-1/2 -translate-x-1/2 bg-black/75 backdrop-blur-md px-3 py-0.5 rounded-full text-[11px] font-semibold font-mono text-white/90 border border-white/10 z-20 shadow-md">
                   {currentSlideIndex + 1} / {selectedSet.slides.length}
                 </div>
 
