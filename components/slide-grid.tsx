@@ -52,6 +52,8 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
       if (foundIdx !== -1) {
         setSelectedSetIndex(foundIdx);
       }
+    } else if (!initialSelectedId) {
+      setSelectedSetIndex(null);
     }
   }, [initialSelectedId, slideSets]);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
