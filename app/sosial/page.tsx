@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { getPublishedSocialPosts } from '@/lib/db/queries/social-posts';
 import type { SocialPost } from '@/lib/db/schema';
 import SlideGrid from '@/components/slide-grid';
@@ -99,9 +100,15 @@ export default async function SosialPage() {
                 Koleksi Slide Konten
               </h2>
             </div>
+            <Link
+              href="/sosial/slide"
+              className="text-xs font-medium text-red-500 hover:text-red-400 flex items-center gap-1 transition-colors"
+            >
+              Selengkapnya &rarr;
+            </Link>
           </div>
 
-          <SlideGrid slideSets={slidesData} />
+          <SlideGrid slideSets={slidesData.slice(0, 8)} showMoreUrl="/sosial/slide" />
         </section>
       )}
 

@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import { Copy, Layers, ChevronLeft, ChevronRight, X, Share2, Play, Check, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
+import { Copy, Layers, ChevronLeft, ChevronRight, X, Share2, Play, Check, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export interface SlideSet {
@@ -17,6 +18,7 @@ export interface SlideSet {
 interface Props {
   slideSets: SlideSet[];
   initialSelectedId?: string;
+  showMoreUrl?: string;
 }
 
 // Generate realistic synthetic view count based on set ID if not provided
@@ -30,7 +32,7 @@ function getViewCount(set: SlideSet, index: number): string {
   return mockCounts[index % mockCounts.length];
 }
 
-export default function SlideGrid({ slideSets, initialSelectedId }: Props) {
+export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }: Props) {
   const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(() => {
     if (initialSelectedId && slideSets) {
       const foundIdx = slideSets.findIndex(
@@ -314,6 +316,24 @@ export default function SlideGrid({ slideSets, initialSelectedId }: Props) {
             </motion.div>
           );
         })}
+
+        {/* Selengkapnya Card */}
+        {showMoreUrl && (
+          <Link
+            href={showMoreUrl}
+            className="group/more relative aspect-[4/5] w-[160px] sm:w-[190px] md:w-[210px] shrink-0 snap-start rounded-xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-red-950/40 border border-zinc-800 hover:border-red-500/60 cursor-pointer shadow-md hover:shadow-red-950/30 transition-all flex flex-col items-center justify-center p-4 text-center select-none"
+          >
+            <div className="h-12 w-12 rounded-full bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-500 group-hover/more:scale-110 group-hover/more:bg-red-600 group-hover/more:text-white transition-all duration-300 mb-3 shadow-lg">
+              <ArrowRight className="w-5 h-5" />
+            </div>
+            <span className="font-display font-bold text-sm text-foreground group-hover/more:text-red-400 transition-colors">
+              Lihat Selengkapnya
+            </span>
+            <span className="text-xs text-muted-foreground mt-1">
+              Jelajahi Semua Slide
+            </span>
+          </Link>
+        )}
       </div>
 
       {/* Slide Viewer Modal */}
