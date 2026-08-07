@@ -161,7 +161,10 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
       const rawHash = window.location.hash.replace(/^#/, '');
       const decodedHash = rawHash ? decodeURIComponent(rawHash) : '';
       const pathParts = window.location.pathname.split('/').filter(Boolean);
-      const pathId = pathParts[0] === 'sosial' && pathParts[1] && pathParts[1] !== 'slide' ? decodeURIComponent(pathParts[1]) : '';
+      
+      // Only auto-open if path is explicitly /sosial/[item-id] and item-id is not empty or 'slide'
+      const isSosialItemPath = pathParts[0] === 'sosial' && pathParts[1] && pathParts[1] !== 'slide';
+      const pathId = isSosialItemPath ? decodeURIComponent(pathParts[1]) : '';
 
       const targetId = decodedHash || pathId;
 
@@ -187,30 +190,29 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
       return false;
     };
 
-    // Immediate check
-    const opened = checkAndOpenFromUrl();
+    // Only run URL check if there's a hash or a specific subpath (e.g. /sosial/konten-tam-001)
+    if (window.location.hash || (window.location.pathname.startsWith('/sosial/') && !window.location.pathname.startsWith('/sosial/slide'))) {
+      const opened = checkAndOpenFromUrl();
 
-    // If not opened yet (due to hydration delay), poll every 100ms up to 2 seconds
-    if (!opened) {
-      let attempts = 0;
-      intervalId = setInterval(() => {
-        attempts += 1;
-        const isSuccess = checkAndOpenFromUrl();
-        if (isSuccess || attempts > 20) {
-          if (intervalId) clearInterval(intervalId);
-        }
-      }, 100);
+      if (!opened) {
+        let attempts = 0;
+        intervalId = setInterval(() => {
+          attempts += 1;
+          const isSuccess = checkAndOpenFromUrl();
+          if (isSuccess || attempts > 20) {
+            if (intervalId) clearInterval(intervalId);
+          }
+        }, 100);
+      }
     }
 
     window.addEventListener('hashchange', checkAndOpenFromUrl);
     window.addEventListener('popstate', checkAndOpenFromUrl);
-    window.addEventListener('load', checkAndOpenFromUrl);
 
     return () => {
       if (intervalId) clearInterval(intervalId);
       window.removeEventListener('hashchange', checkAndOpenFromUrl);
       window.removeEventListener('popstate', checkAndOpenFromUrl);
-      window.removeEventListener('load', checkAndOpenFromUrl);
     };
   }, [slideSets]);
 
