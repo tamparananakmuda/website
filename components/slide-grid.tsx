@@ -238,7 +238,7 @@ export default function SlideGrid({ slideSets }: Props) {
         })}
       </div>
 
-      {/* Mobile-First Fullscreen Instagram-Style Modal Viewer */}
+      {/* Slide Viewer Modal */}
       <AnimatePresence>
         {selectedSet && selectedSetIndex !== null && (
           <motion.div
@@ -249,23 +249,32 @@ export default function SlideGrid({ slideSets }: Props) {
             onClick={handleCloseModal}
           >
             <motion.div
-              initial={{ scale: 0.96, opacity: 0, y: 20 }}
+              initial={{ scale: 0.96, opacity: 0, y: 15 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.96, opacity: 0, y: 20 }}
+              exit={{ scale: 0.96, opacity: 0, y: 15 }}
               transition={{ type: 'spring', damping: 28, stiffness: 320 }}
-              className="relative w-full h-full md:h-auto md:max-w-5xl md:max-h-[92vh] bg-black md:bg-zinc-950 md:border md:border-zinc-800 md:rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              className="relative w-full h-full md:h-auto md:max-w-5xl md:min-h-[580px] md:max-h-[90vh] bg-black md:bg-zinc-950 md:border md:border-zinc-800 md:rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Floating Top Header (Mobile Instagram Style) */}
-              <div className="absolute top-0 inset-x-0 z-30 flex items-center justify-between p-3 md:p-4 bg-gradient-to-b from-black/90 via-black/50 to-transparent pointer-events-auto">
-                <div className="flex items-center gap-2.5">
+              {/* Close Button (Desktop Top-Right) */}
+              <button
+                onClick={handleCloseModal}
+                className="hidden md:flex absolute top-4 right-4 z-40 h-9 w-9 items-center justify-center rounded-full bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all border border-zinc-800 shadow-md"
+                aria-label="Tutup"
+              >
+                <X className="h-5 w-5" />
+              </button>
+
+              {/* Floating Top Header (Mobile Only) */}
+              <div className="md:hidden absolute top-0 inset-x-0 z-30 flex items-center justify-between p-3 bg-gradient-to-b from-black/90 via-black/50 to-transparent pointer-events-auto">
+                <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-xs tracking-tighter shadow-md">
                     TAM
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs font-bold text-white tracking-wide">tamparananakmuda</span>
-                      <span className="text-[10px] text-red-500 font-semibold uppercase bg-red-500/10 border border-red-500/20 px-1.5 py-0.2 rounded">
+                      <span className="text-[10px] text-red-500 font-semibold uppercase bg-red-500/10 border border-red-500/20 px-1 rounded">
                         Original
                       </span>
                     </div>
@@ -280,7 +289,6 @@ export default function SlideGrid({ slideSets }: Props) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  {/* Share button in header for mobile quick share */}
                   <button
                     onClick={copyShareLink}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white/80 hover:text-white hover:bg-black/90 transition-all border border-white/10"
@@ -289,7 +297,6 @@ export default function SlideGrid({ slideSets }: Props) {
                     {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Share2 className="h-4 w-4" />}
                   </button>
 
-                  {/* Close Button */}
                   <button
                     onClick={handleCloseModal}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white/80 hover:text-white hover:bg-black/90 transition-all border border-white/10"
@@ -300,9 +307,9 @@ export default function SlideGrid({ slideSets }: Props) {
                 </div>
               </div>
 
-              {/* Main Media View Area (Native Mobile Swipe + Aspect Ratio Preserved) */}
+              {/* Media Viewer Area */}
               <div 
-                className="relative flex-1 bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-16 pb-2 md:py-0"
+                className="relative flex-1 bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-14 pb-2 md:py-8"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -310,11 +317,11 @@ export default function SlideGrid({ slideSets }: Props) {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`${selectedSetIndex}-${currentSlideIndex}`}
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -30 }}
-                    transition={{ duration: 0.2 }}
-                    className="relative w-full h-full flex items-center justify-center"
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.18 }}
+                    className="relative w-full h-full min-h-[360px] md:min-h-[500px] flex items-center justify-center px-4"
                   >
                     <Image
                       src={selectedSet.slides[currentSlideIndex]}
@@ -327,10 +334,10 @@ export default function SlideGrid({ slideSets }: Props) {
                   </motion.div>
                 </AnimatePresence>
 
-                {/* Navigation Arrows (Desktop / Tablet) */}
+                {/* Left/Right Slide Arrows */}
                 <button
                   onClick={handlePrevSlide}
-                  className="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white/90 hover:bg-black/90 hover:scale-110 active:scale-95 transition-all border border-white/10 shadow-lg"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white/90 hover:bg-red-600 hover:text-white hover:scale-110 active:scale-95 transition-all border border-white/10 shadow-xl z-30"
                   aria-label="Slide sebelumnya"
                 >
                   <ChevronLeft className="h-6 w-6" />
@@ -338,19 +345,19 @@ export default function SlideGrid({ slideSets }: Props) {
 
                 <button
                   onClick={handleNextSlide}
-                  className="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white/90 hover:bg-black/90 hover:scale-110 active:scale-95 transition-all border border-white/10 shadow-lg"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white/90 hover:bg-red-600 hover:text-white hover:scale-110 active:scale-95 transition-all border border-white/10 shadow-xl z-30"
                   aria-label="Slide berikutnya"
                 >
                   <ChevronRight className="h-6 w-6" />
                 </button>
 
-                {/* Top Center Slide Pill (Instagram Style: 1/10) */}
-                <div className="absolute top-16 md:top-4 left-1/2 -translate-x-1/2 bg-black/75 backdrop-blur-md px-3 py-0.5 rounded-full text-[11px] font-semibold font-mono text-white/90 border border-white/10 z-20 shadow-md">
+                {/* Slide Counter Overlay */}
+                <div className="absolute top-16 md:top-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold font-mono text-white/90 border border-white/15 z-20 shadow-md">
                   {currentSlideIndex + 1} / {selectedSet.slides.length}
                 </div>
 
-                {/* Bottom Story-style Progress Bars (Top of image overlay) */}
-                <div className="absolute top-14 left-3 right-3 flex gap-1 z-20 pointer-events-none">
+                {/* Mobile Story-style Progress Bars */}
+                <div className="md:hidden absolute top-13 left-3 right-3 flex gap-1 z-20 pointer-events-none">
                   {selectedSet.slides.map((_, idx) => (
                     <div
                       key={idx}
@@ -370,15 +377,34 @@ export default function SlideGrid({ slideSets }: Props) {
                 </div>
               </div>
 
-              {/* Instagram-Style Expandable Caption Sheet (Bottom Docked on Mobile, Right Column on Desktop) */}
-              <div className="w-full md:w-[380px] lg:w-[420px] bg-zinc-950/95 backdrop-blur-md border-t md:border-t-0 md:border-l border-zinc-800/80 flex flex-col justify-between max-h-[35vh] md:max-h-none overflow-y-auto">
-                <div className="p-4 md:p-6 space-y-3">
-                  {/* Caption Title & Instagram "...selengkapnya" Expand Trigger */}
-                  <div className="space-y-1.5">
+              {/* Sidebar Info Area */}
+              <div className="w-full md:w-[380px] lg:w-[420px] bg-zinc-950 border-t md:border-t-0 md:border-l border-zinc-800/80 flex flex-col justify-between max-h-[35vh] md:max-h-none overflow-y-auto">
+                <div className="p-5 md:p-6 space-y-4">
+                  {/* Desktop Header */}
+                  <div className="hidden md:flex items-center justify-between border-b border-zinc-800/80 pb-4 pr-10">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-xs shadow-md">
+                        TAM
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs font-bold text-white tracking-wide">tamparananakmuda</span>
+                        </div>
+                        <span className="text-[11px] text-zinc-400 font-mono">
+                          {new Date(selectedSet.date).toLocaleDateString('id-ID', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                          })}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Caption Section */}
+                  <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-red-500">
-                        Caption & Penjelasan
-                      </span>
+                      <h3 className="text-xs font-bold uppercase tracking-wider text-red-500">Caption & Penjelasan</h3>
                       <button
                         onClick={() => setIsCaptionExpanded(!isCaptionExpanded)}
                         className="md:hidden text-xs text-red-400 font-semibold flex items-center gap-1 hover:text-red-300"
@@ -391,35 +417,35 @@ export default function SlideGrid({ slideSets }: Props) {
                     <div className={`text-xs md:text-sm text-zinc-200 whitespace-pre-line leading-relaxed transition-all duration-300 ${
                       isCaptionExpanded 
                         ? 'max-h-[50vh] overflow-y-auto pr-1' 
-                        : 'line-clamp-2 md:line-clamp-none md:max-h-[320px] md:overflow-y-auto'
+                        : 'line-clamp-2 md:line-clamp-none md:max-h-[340px] md:overflow-y-auto custom-scrollbar pr-2'
                     }`}>
                       {selectedSet.caption || 'Konten Tamparan Anak Muda - Perspektif Gen Z.'}
                     </div>
                   </div>
                 </div>
 
-                {/* Footer Controls (Desktop & Mobile Nav Switcher) */}
-                <div className="p-3 md:p-6 border-t border-zinc-800/80 bg-zinc-950">
+                {/* Footer Controls */}
+                <div className="p-4 md:p-6 border-t border-zinc-800/80 bg-zinc-950 mt-auto">
                   <div className="flex items-center justify-between gap-3">
                     <button
                       onClick={copyShareLink}
-                      className="flex-1 flex items-center justify-center gap-2 py-2 px-3 md:py-2.5 md:px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 text-xs font-semibold border border-zinc-800 transition-all active:scale-95"
+                      className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 text-xs font-semibold border border-zinc-800 transition-all active:scale-95"
                     >
-                      {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                       <span>{copied ? 'Link Tersalin!' : 'Salin Link'}</span>
                     </button>
 
-                    <div className="flex items-center gap-1.5 text-xs text-zinc-400">
+                    <div className="flex items-center gap-2">
                       <button
                         onClick={handlePrevSet}
-                        className="p-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:text-white transition-all border border-zinc-800"
+                        className="p-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:text-white transition-all border border-zinc-800 text-zinc-300"
                         title="Set Sebelumnya"
                       >
                         <ChevronLeft className="w-4 h-4" />
                       </button>
                       <button
                         onClick={handleNextSet}
-                        className="p-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:text-white transition-all border border-zinc-800"
+                        className="p-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:text-white transition-all border border-zinc-800 text-zinc-300"
                         title="Set Selanjutnya"
                       >
                         <ChevronRight className="w-4 h-4" />
