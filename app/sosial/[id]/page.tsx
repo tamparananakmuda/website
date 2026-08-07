@@ -12,6 +12,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.id === 'slide') return {};
   const slideItem = slidesData.find((s) => s.id === params.id || s.id === `konten-tam-${params.id}`);
   if (slideItem) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
@@ -67,6 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export const revalidate = 300;
 
 export default async function SocialPostPage({ params }: Props) {
+  if (params.id === 'slide') notFound();
   // Check slidesData first for instant direct link sharing (Instagram/TikTok style)
   const slideItem = slidesData.find((s) => s.id === params.id || s.id === `konten-tam-${params.id}`);
   if (slideItem) {
