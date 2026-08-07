@@ -139,7 +139,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedSetIndex, handleNextSlide, handlePrevSlide]);
 
-  // Prevent scroll when modal open
+  // Prevent  // Lock body scroll when modal is open
   useEffect(() => {
     if (selectedSetIndex !== null) {
       document.body.style.overflow = 'hidden';
@@ -150,71 +150,6 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
       document.body.style.overflow = '';
     };
   }, [selectedSetIndex]);
-
-  // Check URL hash or path to auto-open modal when accessing direct shared link
-  useEffect(() => {
-    let intervalId: ReturnType<typeof setInterval> | null = null;
-
-    const checkAndOpenFromUrl = () => {
-      if (typeof window === 'undefined' || !slideSets || slideSets.length === 0) return false;
-
-      const rawHash = window.location.hash.replace(/^#/, '');
-      const decodedHash = rawHash ? decodeURIComponent(rawHash) : '';
-      const pathParts = window.location.pathname.split('/').filter(Boolean);
-      
-      // Only auto-open if path is explicitly /sosial/[item-id] and item-id is not empty or 'slide'
-      const isSosialItemPath = pathParts[0] === 'sosial' && pathParts[1] && pathParts[1] !== 'slide';
-      const pathId = isSosialItemPath ? decodeURIComponent(pathParts[1]) : '';
-
-      const targetId = decodedHash || pathId;
-
-      if (targetId) {
-        const idx = slideSets.findIndex(
-          (s) => s.id === targetId || s.id === `konten-tam-${targetId}`
-        );
-        if (idx !== -1) {
-          setSelectedSetIndex(idx);
-          setCurrentSlideIndex(0);
-          setIsCaptionExpanded(false);
-
-          // Scroll to the card smoothly
-          if (scrollContainerRef.current) {
-            const cardElem = scrollContainerRef.current.children[idx] as HTMLElement;
-            if (cardElem) {
-              cardElem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-          }
-          return true;
-        }
-      }
-      return false;
-    };
-
-    // Only run URL check if there's a hash or a specific subpath (e.g. /sosial/konten-tam-001)
-    if (window.location.hash || (window.location.pathname.startsWith('/sosial/') && !window.location.pathname.startsWith('/sosial/slide'))) {
-      const opened = checkAndOpenFromUrl();
-
-      if (!opened) {
-        let attempts = 0;
-        intervalId = setInterval(() => {
-          attempts += 1;
-          const isSuccess = checkAndOpenFromUrl();
-          if (isSuccess || attempts > 20) {
-            if (intervalId) clearInterval(intervalId);
-          }
-        }, 100);
-      }
-    }
-
-    window.addEventListener('hashchange', checkAndOpenFromUrl);
-    window.addEventListener('popstate', checkAndOpenFromUrl);
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-      window.removeEventListener('hashchange', checkAndOpenFromUrl);
-      window.removeEventListener('popstate', checkAndOpenFromUrl);
-    };
-  }, [slideSets]);
 
   const copyShareLink = () => {
     if (!selectedSet) return;
