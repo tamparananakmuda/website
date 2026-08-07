@@ -85,36 +85,33 @@ export default async function SosialPage() {
           TAM+
         </h1>
         <p className="max-w-2xl text-muted-foreground">
-          Video 9:16, reels, slide infografis 4:5, dan seri video pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
+          Video, reels, slide infografis, dan seri video pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
         </p>
       </div>
 
-      {/* SECTION 1: Koleksi Slide Konten (4:5 Ratio Grid) */}
+      {/* SECTION 1: Koleksi Slide Konten */}
       {slidesData.length > 0 && (
         <section className="space-y-6">
           <div className="flex items-center justify-between border-b border-border/60 pb-3">
             <div className="flex items-center gap-3">
               <div className="h-6 w-1 rounded-full bg-red-600" />
               <h2 className="font-display text-xl font-bold text-foreground tracking-tight">
-                Koleksi Slide Konten (4:5)
+                Koleksi Slide Konten
               </h2>
             </div>
-            <span className="text-xs text-muted-foreground font-mono">
-              {slidesData.length} Slide Set
-            </span>
           </div>
 
           <SlideGrid slideSets={slidesData} />
         </section>
       )}
 
-      {/* SECTION 2: Reels & Shorts Vertikal (9:16 Ratio Grid) */}
+      {/* SECTION 2: Reels & Shorts Vertikal */}
       <section className="space-y-6">
         <div className="flex items-center justify-between border-b border-border/60 pb-3">
           <div className="flex items-center gap-3">
             <div className="h-6 w-1 rounded-full bg-pink-600" />
             <h2 className="font-display text-xl font-bold text-foreground tracking-tight">
-              Reels & Shorts Vertikal (9:16)
+              Reels & Shorts Vertikal
             </h2>
           </div>
           <span className="text-xs text-muted-foreground font-mono">
@@ -126,7 +123,7 @@ export default async function SosialPage() {
           <ReelsGrid posts={reelsPosts} />
         ) : (
           <div className="rounded-2xl border border-dashed border-border/70 p-8 text-center bg-card/40">
-            <p className="text-sm text-muted-foreground">Konten Reels & Shorts (9:16) sedang disiapkan.</p>
+            <p className="text-sm text-muted-foreground">Konten Reels & Shorts sedang disiapkan.</p>
           </div>
         )}
       </section>
@@ -137,13 +134,13 @@ export default async function SosialPage() {
         posts={seriesPosts.length > 0 ? seriesPosts : posts}
       />
 
-      {/* SECTION 4: Video Landscape (16:9 Ratio Grid) */}
+      {/* SECTION 4: Video Landscape */}
       <section className="space-y-6">
         <div className="flex items-center justify-between border-b border-border/60 pb-3">
           <div className="flex items-center gap-3">
             <div className="h-6 w-1 rounded-full bg-blue-600" />
             <h2 className="font-display text-xl font-bold text-foreground tracking-tight">
-              Video & Wawancara Landscape (16:9)
+              Video & Wawancara Landscape
             </h2>
           </div>
           <span className="text-xs text-muted-foreground font-mono">
@@ -155,7 +152,7 @@ export default async function SosialPage() {
           <VideoLandscapeGrid posts={videoLandscapePosts} />
         ) : (
           <div className="rounded-2xl border border-dashed border-border/70 p-8 text-center bg-card/40">
-            <p className="text-sm text-muted-foreground">Konten Video Landscape (16:9) sedang disiapkan.</p>
+            <p className="text-sm text-muted-foreground">Konten Video Landscape sedang disiapkan.</p>
           </div>
         )}
       </section>

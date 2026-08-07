@@ -114,7 +114,7 @@ export default async function SocialPostPage({ params }: Props) {
             TAM+
           </h1>
           <p className="max-w-2xl text-muted-foreground">
-            Video 9:16, reels, slide infografis 4:5, dan seri video pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
+            Video, reels, slide infografis, dan seri video pilihan TAM+. Bukan sekadar konten untuk di-scroll, tapi perspektif yang membuat kamu berpikir.
           </p>
         </div>
 
@@ -124,12 +124,9 @@ export default async function SocialPostPage({ params }: Props) {
               <div className="flex items-center gap-3">
                 <div className="h-6 w-1 rounded-full bg-red-600" />
                 <h2 className="font-display text-xl font-bold text-foreground tracking-tight">
-                  Koleksi Slide Konten (4:5)
+                  Koleksi Slide Konten
                 </h2>
               </div>
-              <span className="text-xs text-muted-foreground font-mono">
-                {slidesData.length} Slide Set
-              </span>
             </div>
 
             <SlideGrid slideSets={slidesData} initialSelectedId={slideItem.id} />
