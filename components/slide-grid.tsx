@@ -19,6 +19,7 @@ interface Props {
   slideSets: SlideSet[];
   initialSelectedId?: string;
   showMoreUrl?: string;
+  mode?: 'carousel' | 'modal-only';
 }
 
 // Generate realistic synthetic view count based on set ID if not provided
@@ -32,7 +33,7 @@ function getViewCount(set: SlideSet, index: number): string {
   return mockCounts[index % mockCounts.length];
 }
 
-export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }: Props) {
+export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, mode = 'carousel' }: Props) {
   const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(() => {
     if (initialSelectedId && slideSets) {
       const foundIdx = slideSets.findIndex(
@@ -167,6 +168,197 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
       behavior: 'smooth',
     });
   };
+
+  if (mode === 'modal-only') {
+    return (
+      <AnimatePresence>
+        {selectedSet && selectedSetIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 md:bg-black/90 md:backdrop-blur-lg p-0 md:p-2 lg:p-4"
+            onClick={handleCloseModal}
+          >
+            <motion.div
+              initial={{ scale: 0.96, opacity: 0, y: 15 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.96, opacity: 0, y: 15 }}
+              transition={{ type: 'spring', damping: 28, stiffness: 320 }}
+              className="relative w-full h-full md:h-[95vh] md:max-w-7xl md:min-h-[780px] md:max-h-[98vh] bg-black md:bg-zinc-950 md:border md:border-zinc-800 md:rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button (Desktop Top-Right) */}
+              <button
+                onClick={handleCloseModal}
+                className="hidden md:flex absolute top-4 right-4 z-40 h-9 w-9 items-center justify-center rounded-full bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all border border-zinc-800 shadow-md"
+                aria-label="Tutup"
+              >
+                <X className="h-5 w-5" />
+              </button>
+
+              {/* Mobile Header Bar */}
+              <div className="flex md:hidden items-center justify-between px-4 py-3 bg-zinc-950 border-b border-zinc-800/80 z-30 shrink-0">
+                <div className="flex items-center gap-2">
+                  <span className="font-display font-bold text-sm text-foreground tracking-tight">TAM+</span>
+                  <span className="text-xs text-muted-foreground font-mono">
+                    {currentSlideIndex + 1}/{selectedSet.slides.length}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={copyShareLink}
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-zinc-300 hover:text-white transition-colors border border-zinc-800"
+                    aria-label="Bagikan"
+                  >
+                    {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Share2 className="h-4 w-4" />}
+                  </button>
+
+                  <button
+                    onClick={handleCloseModal}
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white/80 hover:text-white hover:bg-black/90 transition-all border border-white/10"
+                    aria-label="Tutup"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Media Viewer Area */}
+              <div 
+                className="relative flex-1 md:flex-[1.8] bg-black flex items-center justify-center overflow-hidden touch-pan-y pt-20 pb-4 md:py-2"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`${selectedSetIndex}-${currentSlideIndex}`}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.18 }}
+                    className="relative w-full h-full min-h-[360px] md:min-h-[700px] flex items-center justify-center px-2 md:px-4 pt-6 md:pt-0"
+                  >
+                    <Image
+                      src={selectedSet.slides[currentSlideIndex]}
+                      alt={`Slide ${currentSlideIndex + 1}`}
+                      fill
+                      className="object-contain max-h-full"
+                      priority
+                      unoptimized
+                    />
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Left/Right Navigation Controls */}
+                {selectedSet.slides.length > 1 && (
+                  <>
+                    <button
+                      onClick={handlePrevSlide}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/90 hover:scale-105 transition-all border border-white/10 backdrop-blur-xs z-30"
+                      aria-label="Slide sebelumnya"
+                    >
+                      <ChevronLeft className="h-6 w-6" />
+                    </button>
+                    <button
+                      onClick={handleNextSlide}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/90 hover:scale-105 transition-all border border-white/10 backdrop-blur-xs z-30"
+                      aria-label="Slide berikutnya"
+                    >
+                      <ChevronRight className="h-6 w-6" />
+                    </button>
+                  </>
+                )}
+
+                {/* Slide Counter Indicator */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 border border-white/10 backdrop-blur-sm z-30">
+                  {selectedSet.slides.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrentSlideIndex(i)}
+                      className={`h-1.5 rounded-full transition-all ${
+                        i === currentSlideIndex ? 'w-5 bg-red-600' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                      }`}
+                      aria-label={`Go to slide ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Sidebar Info & Caption Area */}
+              <div className="w-full md:w-[380px] lg:w-[420px] bg-zinc-950 border-t md:border-t-0 md:border-l border-zinc-800/80 flex flex-col justify-between p-4 md:p-6 shrink-0 max-h-[45vh] md:max-h-full overflow-y-auto">
+                <div className="space-y-4">
+                  {/* Author / Brand Header */}
+                  <div className="flex items-center justify-between pb-3 border-b border-zinc-800/60">
+                    <div className="flex items-center gap-3">
+                      <div className="h-9 w-9 rounded-full bg-red-600 flex items-center justify-center text-white font-bold font-display text-xs shadow-md">
+                        TAM
+                      </div>
+                      <div>
+                        <h4 className="font-display text-sm font-bold text-foreground">Tamparan Anak Muda</h4>
+                        <p className="text-[11px] text-muted-foreground font-mono">{selectedSet.date}</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded-full">
+                      {currentSlideIndex + 1} / {selectedSet.slides.length} Slide
+                    </span>
+                  </div>
+
+                  {/* Caption & Description */}
+                  <div className="space-y-2">
+                    <h3 className="text-xs font-mono text-red-400 uppercase tracking-wider font-semibold">
+                      Infografis & Insight
+                    </h3>
+                    <div className="text-xs md:text-sm text-zinc-300 leading-relaxed whitespace-pre-line font-sans">
+                      {isCaptionExpanded ? selectedSet.caption : selectedSet.caption.slice(0, 160)}
+                      {selectedSet.caption.length > 160 && (
+                        <button
+                          onClick={() => setIsCaptionExpanded(!isCaptionExpanded)}
+                          className="ml-1 text-red-400 hover:text-red-300 font-semibold inline-flex items-center gap-0.5"
+                        >
+                          {isCaptionExpanded ? ' (Lebih sedikit)' : '... Selengkapnya'}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Action Buttons */}
+                <div className="pt-4 mt-4 border-t border-zinc-800/60 space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <button
+                      onClick={copyShareLink}
+                      className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 text-xs font-medium border border-zinc-800 transition-colors"
+                    >
+                      {copied ? (
+                        <>
+                          <Check className="w-4 h-4 text-emerald-400" />
+                          <span>Link Tersalin!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Share2 className="w-4 h-4 text-zinc-400" />
+                          <span>Bagikan Slide</span>
+                        </>
+                      )}
+                    </button>
+                    <Link
+                      href={`/sosial/${selectedSet.id}`}
+                      className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold transition-colors shadow-lg shadow-red-950/40"
+                    >
+                      <span>Halaman Khusus</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    );
+  }
 
   return (
     <div className="relative group/carousel">

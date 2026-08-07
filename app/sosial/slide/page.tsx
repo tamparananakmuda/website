@@ -177,7 +177,7 @@ function SlideGridCardWrapper({
       </div>
 
       {isOpen && (
-        <SlideGrid slideSets={allSlideSets} initialSelectedId={set.id} />
+        <SlideGrid slideSets={allSlideSets} initialSelectedId={set.id} mode="modal-only" />
       )}
     </>
   );
