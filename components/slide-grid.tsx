@@ -43,19 +43,6 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
     }
     return null;
   });
-
-  useEffect(() => {
-    if (initialSelectedId && slideSets) {
-      const foundIdx = slideSets.findIndex(
-        (s) => s.id === initialSelectedId || s.id === `konten-tam-${initialSelectedId}`
-      );
-      if (foundIdx !== -1) {
-        setSelectedSetIndex(foundIdx);
-      }
-    } else if (!initialSelectedId) {
-      setSelectedSetIndex(null);
-    }
-  }, [initialSelectedId, slideSets]);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
   const [copied, setCopied] = useState<boolean>(false);
   const [isCaptionExpanded, setIsCaptionExpanded] = useState<boolean>(false);
@@ -519,11 +506,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
                       </span>
                     </div>
                     <span className="text-[10px] text-zinc-400 font-mono">
-                      {new Date(selectedSet.date).toLocaleDateString('id-ID', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric'
-                      })}
+                      {selectedSet.date ? (isNaN(Date.parse(selectedSet.date)) ? selectedSet.date : new Date(selectedSet.date).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })) : ''}
                     </span>
                   </div>
                 </div>
@@ -631,11 +614,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
                           <span className="text-xs font-bold text-white tracking-wide">tamparananakmuda</span>
                         </div>
                         <span className="text-[11px] text-zinc-400 font-mono">
-                          {new Date(selectedSet.date).toLocaleDateString('id-ID', {
-                            day: 'numeric',
-                            month: 'short',
-                            year: 'numeric'
-                          })}
+                          {selectedSet.date ? (isNaN(Date.parse(selectedSet.date)) ? selectedSet.date : new Date(selectedSet.date).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })) : ''}
                         </span>
                       </div>
                     </div>
