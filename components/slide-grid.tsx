@@ -161,13 +161,13 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl }:
       const rawHash = window.location.hash.replace(/^#/, '');
       const decodedHash = rawHash ? decodeURIComponent(rawHash) : '';
       const pathParts = window.location.pathname.split('/').filter(Boolean);
-      const pathId = pathParts[0] === 'sosial' && pathParts[1] ? decodeURIComponent(pathParts[1]) : '';
+      const pathId = pathParts[0] === 'sosial' && pathParts[1] && pathParts[1] !== 'slide' ? decodeURIComponent(pathParts[1]) : '';
 
       const targetId = decodedHash || pathId;
 
       if (targetId) {
         const idx = slideSets.findIndex(
-          (s) => s.id === targetId || s.id === `konten-tam-${targetId}` || targetId.includes(s.id)
+          (s) => s.id === targetId || s.id === `konten-tam-${targetId}`
         );
         if (idx !== -1) {
           setSelectedSetIndex(idx);
