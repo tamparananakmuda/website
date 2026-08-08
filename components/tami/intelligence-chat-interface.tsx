@@ -249,18 +249,29 @@ export const IntelligenceChatInterface: React.FC = () => {
 
   return (
     <div className="flex w-full h-full bg-neutral-950 text-white overflow-hidden relative">
+      {/* Mobile Backdrop Overlay when sidebar is open */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-xs z-20 md:hidden transition-opacity"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* ChatGPT / Claude Style Left Sidebar */}
       <aside
         className={`fixed md:relative z-30 h-full bg-neutral-900/95 md:bg-neutral-900/60 border-r border-neutral-800/80 backdrop-blur-xl transition-all duration-300 ease-in-out flex flex-col justify-between overflow-hidden shrink-0 ${
           isSidebarOpen
             ? 'w-64 translate-x-0 opacity-100'
-            : 'w-0 -translate-x-full md:translate-x-0 opacity-0 md:opacity-100 border-r-0'
+            : 'w-0 -translate-x-full opacity-0 md:opacity-100 border-r-0'
         }`}
       >
         <div className="w-64 p-3 space-y-3 flex-1 overflow-y-auto">
           {/* New Chat Button */}
           <button
-            onClick={startNewChat}
+            onClick={() => {
+              startNewChat();
+              if (window.innerWidth < 768) setIsSidebarOpen(false);
+            }}
             className="w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700/80 text-white font-semibold text-xs border border-neutral-700/50 shadow-sm transition-all group"
           >
             <div className="flex items-center gap-2">
@@ -271,8 +282,15 @@ export const IntelligenceChatInterface: React.FC = () => {
           </button>
 
           {/* Sidebar Section Title */}
-          <div className="px-2 pt-2 text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
-            Riwayat Obrolan
+          <div className="px-2 pt-2 text-[10px] font-bold text-neutral-400 uppercase tracking-wider flex items-center justify-between">
+            <span>Riwayat Obrolan</span>
+            <button 
+              onClick={() => setIsSidebarOpen(false)}
+              className="md:hidden p-1 text-neutral-400 hover:text-white"
+              title="Tutup Sidebar"
+            >
+              ✕
+            </button>
           </div>
 
           {/* Chat Sessions List */}
@@ -283,7 +301,10 @@ export const IntelligenceChatInterface: React.FC = () => {
               sessions.map((session) => (
                 <div
                   key={session.id}
-                  onClick={() => switchSession(session)}
+                  onClick={() => {
+                    switchSession(session);
+                    if (window.innerWidth < 768) setIsSidebarOpen(false);
+                  }}
                   className={`group flex items-center justify-between gap-2 px-3 py-2 rounded-xl text-xs cursor-pointer border transition-all ${
                     activeSessionId === session.id
                       ? 'bg-neutral-800 text-white font-semibold border-neutral-700/60 shadow-sm'
