@@ -87,29 +87,50 @@ export async function POST(req: NextRequest) {
           const mistralStream = await streamTamiReply(query, history, cognitiveData);
           const reader = mistralStream.getReader();
           const decoder = new TextDecoder();
+          let sseBuffer = '';
 
           while (true) {
             const { done, value } = await reader.read();
             if (done) break;
 
-            const text = decoder.decode(value, { stream: true });
-            // Parse SSE lines from Mistral and forward content deltas
-            const lines = text.split('\n');
+            sseBuffer += decoder.decode(value, { stream: true });
+            // Split by newlines but keep remainder in buffer
+            const lines = sseBuffer.split('\n');
+            sseBuffer = lines.pop() || ''; // Keep last incomplete line in buffer
+
             for (const line of lines) {
-              if (line.startsWith('data: ')) {
-                const jsonStr = line.slice(6).trim();
-                if (jsonStr === '[DONE]') continue;
-                try {
-                  const parsed = JSON.parse(jsonStr);
-                  const delta = parsed.choices?.[0]?.delta?.content;
-                  if (delta) {
-                    controller.enqueue(
-                      encoder.encode(`data: ${JSON.stringify({ type: 'token', content: delta })}\n\n`)
-                    );
-                  }
-                } catch {
-                  // Skip unparseable lines
+              const trimmed = line.trim();
+              if (!trimmed.startsWith('data: ')) continue;
+              const jsonStr = trimmed.slice(6).trim();
+              if (jsonStr === '[DONE]') continue;
+              try {
+                const parsed = JSON.parse(jsonStr);
+                const delta = parsed.choices?.[0]?.delta?.content;
+                if (delta) {
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify({ type: 'token', content: delta })}\n\n`)
+                  );
                 }
+              } catch {
+                // Skip unparseable lines (likely partial JSON in buffer)
+              }
+            }
+          }
+
+          // Process any remaining buffer content
+          if (sseBuffer.trim().startsWith('data: ')) {
+            const jsonStr = sseBuffer.trim().slice(6).trim();
+            if (jsonStr && jsonStr !== '[DONE]') {
+              try {
+                const parsed = JSON.parse(jsonStr);
+                const delta = parsed.choices?.[0]?.delta?.content;
+                if (delta) {
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify({ type: 'token', content: delta })}\n\n`)
+                  );
+                }
+              } catch {
+                // Ignore unparseable remainder
               }
             }
           }

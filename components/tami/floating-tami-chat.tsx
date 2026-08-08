@@ -463,6 +463,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                       <StreamingMessage
                         content={msg.content}
                         isLatest={msg.id === messages[messages.length - 1]?.id && msg.role === 'assistant'}
+                        isStreaming={sseStreaming && msg.id === assistantIdRef.current}
                       />
                     </div>
 
