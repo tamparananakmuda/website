@@ -133,16 +133,6 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     }
   }, [messages, isLoaded]);
 
-  // Scroll ONLY inside the chat container
-  useEffect(() => {
-    if (chatContainerRef.current && (messages.length > 0 || isLoading)) {
-      chatContainerRef.current.scrollTo({
-        top: chatContainerRef.current.scrollHeight,
-        behavior: 'smooth'
-      });
-    }
-  }, [messages.length, isLoading]);
-
   // Handle escape key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -224,6 +214,17 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
       ]);
     },
   });
+
+  // Auto-scroll: follow streaming text growth
+  const lastMessageContent = messages.length > 0 ? messages[messages.length - 1].content : '';
+  useEffect(() => {
+    if (chatContainerRef.current && (messages.length > 0 || isLoading)) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: sseStreaming ? 'auto' : 'smooth',
+      });
+    }
+  }, [messages.length, isLoading, lastMessageContent, sseStreaming]);
 
   if (!isOpen) return null;
 

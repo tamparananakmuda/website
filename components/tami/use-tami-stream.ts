@@ -30,6 +30,8 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
   const [error, setError] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const fullTextRef = useRef('');
+  const optionsRef = useRef(options);
+  optionsRef.current = options;
 
   const stream = useCallback(async (
     query: string,
@@ -82,14 +84,14 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
 
             if (event.type === 'cognitive') {
               setCognitiveData(event.data);
-              options?.onCognitiveData?.(event.data);
+              optionsRef.current?.onCognitiveData?.(event.data);
             } else if (event.type === 'token') {
               fullTextRef.current += event.content;
               setStreamedText(fullTextRef.current);
-              options?.onToken?.(event.content);
+              optionsRef.current?.onToken?.(event.content);
             } else if (event.type === 'done') {
               const finalText = fullTextRef.current || 'Maaf, TAMI tidak bisa memberikan respons saat ini. Silakan coba lagi.';
-              options?.onComplete?.(finalText);
+              optionsRef.current?.onComplete?.(finalText);
             }
           } catch {
             // Skip unparseable events
@@ -99,17 +101,17 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
     } catch (err: any) {
       if (err.name === 'AbortError') {
         // User aborted, keep partial text
-        options?.onComplete?.(fullTextRef.current);
+        optionsRef.current?.onComplete?.(fullTextRef.current);
       } else {
         const msg = err.message || 'Streaming failed';
         setError(msg);
-        options?.onError?.(msg);
+        optionsRef.current?.onError?.(msg);
       }
     } finally {
       setIsStreaming(false);
       abortRef.current = null;
     }
-  }, [options]);
+  }, []);
 
   const abort = useCallback(() => {
     abortRef.current?.abort();

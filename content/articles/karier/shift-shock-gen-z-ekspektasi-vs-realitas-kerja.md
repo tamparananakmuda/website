@@ -89,7 +89,7 @@ coverImageAlt: null
 
 72% pekerja mengalami shift shock. Itu hasil survei The Muse terhadap 2.500 responden pada 2022. Shift shock: perasaan ketika pekerjaan baru sangat berbeda dari yang dijanjikan saat wawancara. Istilah ini punya 1 miliar views di TikTok dengan tagar #shiftshock.
 
-Di Indonesia, datanya lebih spesifik. BMC Psychology merilis studi 2026 terhadap 751 karyawan Gen Z Indonesia: hingga 60% mempertimbangkan resign dalam dua tahun pertama kerja. Survei Gateway Commercial Finance yang dilaporkan Kompas pada Mei 2026 menemukan Gen Z bertahan rata-rata 1,8 tahun di satu pekerjaan. 47% berencana resign dalam setahun.
+Di Indonesia, datanya lebih spesifik. BMC Psychology merilis studi 2026 terhadap 751 karyawan Gen Z Indonesia: hingga 60% mempertimbangkan resign dalam dua tahun pertama kerja. Survei Gateway Commercial Finance yang dilaporkan Kompas pada Mei 2026 mencatat Gen Z bertahan rata-rata 1,8 tahun di satu pekerjaan. 47% berencana resign dalam setahun.
 
 Angka-angka ini sering dibaca sebagai bukti Gen Z lemah, tidak tahan banting, ekspektasi terlalu tinggi. Tapi coba balik: kalau menurut The Muse 72% pekerja merasa ditipu oleh deskripsi kerja, siapa yang berlebihan ekspektasinya?
 
@@ -101,33 +101,29 @@ Shift shock adalah perasaan kekecewaan ketika realitas pekerjaan berbeda jauh da
 {"title":"Asal-usul Istilah Shift Shock","content":"Istilah shift shock pertama kali dipakai oleh The Muse pada 2022. Kathryn Minshew mendefinisikannya sebagai \"new hire's remorse\" atau penyesalan karyawan baru. Tagar #shiftshock di TikTok mencapai lebih dari 1 miliar views, menjadikannya salah satu workplace trend paling viral di 2022-2023. Fast Company dan IEEE-USA mengkategorikan shift shock sebagai top 10 workplace trend di TikTok 2023."}
 ```
 
-Fenomena ini bukan eksklusif Gen Z. Tapi Gen Z yang paling vokal mengungkapkannya, dan paling cepat bertindak: resign. Survei Robert Walters menemukan 53% profesional yang quit pekerjaan baru menyebut unmet expectations sebagai alasan utama. 52% menyebut masalah manajemen. 75% bilang ekspektasi yang terlalu tinggi sudah jadi pola umum di proses rekrutmen.
+Fenomena ini bukan eksklusif Gen Z. Tapi Gen Z paling vokal mengungkapkannya, dan paling cepat bertindak: resign. Survei Robert Walters melaporkan 53% profesional quit pekerjaan baru menyebut unmet expectations sebagai alasan utama. 52% menyebut masalah manajemen. 75% bilang ekspektasi terlalu tinggi sudah jadi pola umum di proses rekrutmen.
 
 ## Ekspektasi vs Realitas: Yang Dijanjikan vs Yang Didapat
 
-Apa yang Gen Z harapkan dari kerja? Data dari tiga survei Indonesia memberi gambaran jelas.
+Apa yang Gen Z harapkan dari kerja? Data dari tiga survei Indonesia memberi gambaran jelas. Survei IJSM 2026 terhadap 147 Gen Z di Kuningan memetakan ekspektasi kerja mereka: fleksibilitas 87,8%, lingkungan kolaboratif 82,3%, peluang pengembangan karier 79,6%, kompensasi kompetitif 76,2%. Jakpat 2026 mensurvei 1.158 Gen Z usia 17-28 tahun: 71% menempatkan gaji sebagai prioritas utama, 57% lingkungan kerja suportif, 55% peluang karier, 50% work-life balance. JobStreet by SEEK dalam Workplace Happiness Index 2025-2026 mencatat 69% Gen Z menginginkan pekerjaan bermakna, 69% menuntut work-life balance, 68% mengharapkan opsi WFH.
 
-Survei IJSM 2026 terhadap 147 Gen Z di Kuningan menemukan ekspektasi kerja mereka: fleksibilitas 87,8%, lingkungan kolaboratif 82,3%, peluang pengembangan karier 79,6%, kompensasi kompetitif 76,2%. Jakpat 2026 mensurvei 1.158 Gen Z usia 17-28 tahun: 71% menempatkan gaji sebagai prioritas utama, 57% lingkungan kerja suportif, 55% peluang karier, 50% work-life balance.
-
-JobStreet by SEEK dalam Workplace Happiness Index 2025-2026 menemukan 69% Gen Z menginginkan pekerjaan yang bermakna, 69% menuntut work-life balance, 68% mengharapkan opsi WFH.
-
-Sekarang bandingkan dengan realitas yang didapat. JobStreet menemukan Gen Z justru tercatat sebagai generasi paling tidak bahagia di tempat kerja: 78%, tertinggal dari Gen X (85%) dan Milenial (84%). Robert Walters menemukan 52% profesional yang resign menyebut masalah manajemen sebagai alasan. 20% keluar karena toxic workplace culture. 75% merasa perusahaan menetapkan ekspektasi terlalu tinggi pada karyawan baru.
+Sekarang bandingkan dengan realitas. JobStreet mencatat Gen Z justru tercatat sebagai generasi paling tidak bahagia di tempat kerja: 78%, tertinggal dari Gen X (85%) dan Milenial (84%). Robert Walters mencatat 52% profesional resign menyebut masalah manajemen sebagai alasan. 20% keluar karena toxic workplace culture. 75% merasa perusahaan menetapkan ekspektasi terlalu tinggi pada karyawan baru.
 
 ```chart:bar
 {"title":"Ekspektasi vs Realitas Kerja Gen Z Indonesia","subtitle":"Yang diharapkan vs yang dialami","source":"IJSM 2026, Jakpat 2026, JobStreet 2025-2026, Robert Walters","data":[{"label":"Fleksibilitas (diharapkan)","value":87.8,"color":"#3b82f6"},{"label":"WFH (diharapkan)","value":68,"color":"#3b82f6"},{"label":"WLB (diharapkan)","value":69,"color":"#3b82f6"},{"label":"Purpose (diharapkan)","value":69,"color":"#3b82f6"},{"label":"Kebahagiaan kerja (realitas)","value":78,"color":"#ef4444"},{"label":"Resign <1 tahun (realitas)","value":47,"color":"#ef4444"}],"yLabel":"Persen (%)"}
 ```
 
-Gap antara ekspektasi dan realitas inilah yang disebut shift shock. Gen Z masuk kerja dengan harapan dari apa yang dijanjikan kuliah, media sosial, dan proses rekrutmen. Realitasnya: lingkungan kerja kaku, manajemen satu arah, gaji yang tidak sebanding dengan beban kerja, dan tidak ada jalan karier yang jelas.
+Gap antara ekspektasi dan realitas inilah yang disebut shift shock. Gen Z masuk kerja dengan harapan dari apa yang dijanjikan kuliah, media sosial, dan proses rekrutmen. Realitasnya: lingkungan kerja kaku, manajemen satu arah, gaji tidak sebanding dengan beban kerja, dan tidak ada jalan karier jelas.
 
 ## 60% Gen Z Indonesia Mau Resign di 2 Tahun Pertama
 
 Sebuah studi dari BMC Psychology menerbitkan validasi ERG (Existence, Relatedness, Growth) scale untuk karyawan muda Indonesia. Dari 751 responden, penelitian menemukan bahwa enam dari sepuluh mempertimbangkan untuk berhenti sebelum usia kerja mencapai periode ketiga. Tingkat turnover generasi ini termasuk yang tertinggi di dunia.
 
-Studi UGM 2026 yang melibatkan 268 Gen Z memperkuat temuan ini. Menggunakan analisis PLS-SEM, penelitian menemukan kesenjangan ekspektasi kerja berpengaruh positif terhadap intensi job-hopping dan stres kerja. Stres kerja memediasi hubungan tersebut: semakin besar gap antara ekspektasi dan realitas, semakin tinggi stres, semakin kuat keinginan pindah.
+Studi UGM 2026 yang melibatkan 268 Gen Z memperkuat temuan ini. Menggunakan analisis PLS-SEM, penelitian mengukur kesenjangan ekspektasi kerja berpengaruh positif terhadap intensi job-hopping dan stres kerja. Stres kerja memediasi hubungan tersebut: semakin besar gap antara ekspektasi dan realitas, semakin tinggi stres, semakin kuat keinginan pindah.
 
 Penelitian JSSR 2026 di Kabupaten Asahan melibatkan 110 Gen Z yang sudah bekerja. Hasilnya: persepsi kerja berpengaruh kuat terhadap realitas kerja (koefisien 0,954). Keduanya berpengaruh langsung terhadap retensi kerja. Artinya, keselarasan antara harapan awal dan kondisi nyata di tempat kerja menentukan keputusan Gen Z untuk bertahan atau pergi.
 
-Ini bukan cerita generasi yang gampang menyerah. Ini cerita generasi yang merasa dijual janji yang tidak ditepati. Seperti yang kita bahas tentang [Gen Z yang terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), pindah kerja bukan ketidakloyalan. Tapi respons rasional terhadap sistem yang tidak memberi alasan untuk setia.
+Ini bukan cerita generasi gampang menyerah. Ini cerita generasi merasa dijual janji tidak ditepati. Seperti yang kita bahas tentang [Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), pindah kerja bukan ketidakloyalan. Tapi respons rasional terhadap sistem tidak memberi alasan untuk setia.
 
 ## Passion Myth: Kuliah Janji Kerja Sesuai Jurusan, Pasar Tidak Sediakan
 
@@ -137,23 +133,19 @@ Harvard Graduate School of Education, bekerja sama dengan Gallup dan Walton Foun
 
 Kompas.id melaporkan kasus Fito, lulusan jurusan K3 (Keselamatan dan Kesehatan Kerja) November 2024. Sudah punya sertifikasi ahli K3, tapi belum dapat kerja sesuai bidang. Lowongan K3 umumnya minta pengalaman minimal satu tahun. Sebagai fresh graduate, pengalaman magang satu bulan tidak cukup. "Gue kira gampang gitu dapat kerja, ternyata memang balik lagi, agak susah gitu ya," katanya.
 
-Ini bukan kasus sendirian. CELIOS, mengolah data BPS Sakernas Agustus 2025, menemukan Gen Z usia 19-29 tahun menghadapi kesenjangan antara durasi mencari kerja dan biaya bertahan hidup. Di DKI Jakarta, rata-rata durasi cari kerja 8 bulan dengan biaya Rp39,8 juta. Di Papua, 35 bulan dengan biaya Rp155,3 juta. Di Jawa Barat, 13 bulan dengan biaya Rp47,9 juta.
+Ini bukan kasus sendirian. CELIOS, mengolah data BPS Sakernas Agustus 2025, mencatat Gen Z usia 19-29 tahun menghadapi kesenjangan antara durasi mencari kerja dan biaya bertahan hidup. Di DKI Jakarta, rerata durasi cari kerja 8 bulan dengan biaya Rp39,8 juta. Di Papua, 35 bulan dengan biaya Rp155,3 juta. Di Jawa Barat, 13 bulan dengan biaya Rp47,9 juta. Pendidikan menjual janji: lulus kuliah, dapat kerja sesuai jurusan, gaji layak, karier jelas. Pasar kerja tidak deliver. Lowongan entry-level minta pengalaman 1-2 tahun. Gaji awal sarjana turun dari Rp4,96 juta (Agustus 2024) ke Rp4,35 juta (Februari 2025) menurut BPS. Sektor formal menyusut: penyerapan kerja formal turun dari 15,6 juta (2009-2014) ke 2 juta (2019-2024).
 
-Pendidikan menjual janji: lulus kuliah, dapat kerja sesuai jurusan, gaji layak, karier jelas. Pasar kerja tidak deliver. Lowongan entry-level minta pengalaman 1-2 tahun. Gaji awal sarjana turun dari Rp4,96 juta (Agustus 2024) ke Rp4,35 juta (Februari 2025) menurut BPS. Sektor formal menyusut: penyerapan kerja formal turun dari 15,6 juta (2009-2014) ke 2 juta (2019-2024).
+Gen Z yang sudah [kirim 300 lamaran dan ditolak semua](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu) akhirnya ambil kerja apa saja. Banyak kerja di luar jurusan: lulusan komunikasi jadi accounting officer, lulusan K3 jadi admin. Bukan karena tidak mau kerja sesuai passion. Tapi karena pilihan tersedia tidak menyediakan passion.
 
-Gen Z yang sudah [kirim 300 lamaran dan ditolak semua](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu) akhirnya ambil kerja apa saja. Banyak yang kerja di luar jurusan: lulusan komunikasi jadi accounting officer, lulusan K3 jadi admin. Bukan karena tidak mau kerja sesuai passion. Tapi karena pilihan yang tersedia tidak menyediakan passion.
-
-Seperti yang kita bahas tentang [S1 rebutan loker SMK](/artikel/s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap), pendidikan tinggi di Indonesia menjadi trap ketika pasar tidak menyediakan lapangan yang sesuai. Dan seperti [magang gratis yang dikemas sebagai pengalaman](/artikel/magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman), sistem kerja mengeksploitasi ekspektasi tinggi Gen Z untuk mendapat tenaga kerja murah.
+Seperti yang kita bahas tentang [S1 rebutan loker SMK](/artikel/s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap), pendidikan tinggi di Indonesia menjadi trap ketika pasar tidak menyediakan lapangan sesuai. Dan seperti [magang gratis dikemas sebagai pengalaman](/artikel/magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman), sistem kerja mengeksploitasi ekspektasi tinggi Gen Z untuk mendapat tenaga kerja murah.
 
 ## Biaya Shift Shock: Resign = Kembali ke Antrian Mahal
 
 Kekecewaan di tempat kerja punya konsekuensi yang jarang dibahas. Kalau kamu berhenti dari posisi pertama, kamu masuk lagi ke proses pencarian yang panjang dan mahal.
 
-CELIOS menghitung: biaya bertahan hidup saat cari kerja di DKI Jakarta Rp39,8 juta untuk 8 bulan. Itu hampir 8 kali gaji UMP Jakarta. Gen Z yang resign dari kerja pertama harus pakai tabungan, pinjam ke orang tua, atau ambil pinjol untuk bertahan saat cari kerja lagi.
+CELIOS menghitung: biaya bertahan hidup saat cari kerja di DKI Jakarta Rp39,8 juta untuk 8 bulan. Itu hampir 8 kali gaji UMP Jakarta. Gen Z yang resign dari kerja pertama harus pakai tabungan, pinjam ke orang tua, atau ambil pinjol untuk bertahan saat cari kerja lagi. 47% Gen Z berencana resign dalam setahun (Gateway Commercial Finance via Kompas). Kalau setengah dari mereka benar-benar resign, ratusan ribu Gen Z masuk kembali ke pasar kerja setiap tahun. Mereka bersaing dengan lulusan baru baru keluar kuliah. Persaingan makin ketat: Jakpat mencatat 63% Gen Z merasa kompetisi kerja semakin sulit.
 
-47% Gen Z berencana resign dalam setahun (Gateway Commercial Finance via Kompas). Kalau setengah dari mereka benar-benar resign, ratusan ribu Gen Z masuk kembali ke pasar kerja setiap tahun. Mereka bersaing dengan lulusan baru yang baru keluar kuliah. Persaingan makin ketat: Jakpat menemukan 63% Gen Z merasa kompetisi kerja semakin sulit.
-
-World Economic Forum 2025 melaporkan employee engagement global hanya 20%, titik terendah dalam satu dekade. Robert Walters menemukan 57% Gen Z tidak berniat menjadi manajer tingkat menengah, fenomena yang disebut conscious unbossing. Gen Z tidak mengejar kursi bos. Mereka sudah melihat [PHK membongkar ilusi kerja keras](/artikel/phk-kerja-keras-tidak-menjamin-aman): kerja keras tidak menjamin aman, jabatan tidak menjamin stabilitas.
+World Economic Forum 2025 melaporkan employee engagement global hanya 20%, titik terendah dalam satu dekade. Robert Walters mencatat 57% Gen Z tidak berniat menjadi manajer tingkat menengah, fenomena yang disebut conscious unbossing. Gen Z tidak mengejar kursi bos. Mereka sudah melihat [PHK membongkar ilusi kerja keras](/artikel/phk-kerja-keras-tidak-menjamin-aman): kerja keras tidak menjamin aman, jabatan tidak menjamin stabilitas.
 
 Gen Z terjebak di antara dua pilihan, keduanya tidak ideal. Bertahan di kerja yang tidak sesuai, dengan stres yang terus menumpuk. Atau resign dan kembali ke antrian cari kerja yang mahal dan panjang. Pilihan ini bukan pilihan, itu jebakan.
 
@@ -163,15 +155,15 @@ Saya perhatikan pola yang berulang dari cerita teman-teman saya yang Gen Z. Mere
 
 Shift shock bukan soal Gen Z yang ekspektasinya terlalu tinggi. Ini soal sistem yang menjual sesuatu yang tidak ada. Pendidikan menjual janji karier. Perusahaan menjual budaya kerja yang ideal di job posting. Media sosial menjual narasi "do what you love". Tiga penjual, tiga janji, realitasnya satu: kamu masuk kerja dan kaget.
 
-Gen Z yang resign bukan lemah. Mereka respons rasional terhadap bait-and-switch. Kalau kamu beli produk online dan yang datang berbeda dari foto, kamu minta refund. Kenapa kalau yang berbeda adalah pekerjaan, kamu disalahkan? Seperti yang kita bahas tentang [quarter-life crisis](/artikel/quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak), kekecewaan ini bukan penyakit. Itu respons sehat terhadap sistem yang tidak sehat.
+Gen Z resign bukan lemah. Mereka respons rasional terhadap bait-and-switch. Kalau kamu beli produk online dan yang datang berbeda dari foto, kamu minta refund. Kenapa kalau yang berbeda adalah pekerjaan, kamu disalahkan? Seperti yang kita bahas tentang [quarter-life crisis](/artikel/quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak), kekecewaan ini bukan penyakit. Itu respons sehat terhadap sistem tidak sehat.
 
-Tapi resign juga punya biaya. Dan Gen Z yang paling menderita adalah yang tidak punya jaring pengaman finansial. Yang harus bertahan di kerja toxic karena tidak ada pilihan lain. Mereka yang paling keras terkena shift shock adalah yang paling tidak mampu keluar dari situasi.
+Tapi resign juga punya biaya. Dan Gen Z paling menderita adalah tidak punya jaring pengaman finansial. Harus bertahan di kerja toxic karena tidak ada pilihan lain. Mereka paling keras terkena shift shock adalah paling tidak mampu keluar dari situasi.
 
 ## Conclusion
 
 Data dari The Muse dan BMC Psychology: 72% pekerja mengalami shift shock. 60% Gen Z Indonesia pertimbangan resign di dua tahun pertama. Gen Z bertahan 1,8 tahun rata-rata di satu pekerjaan. Angka-angka ini bukan cerita generasi yang manja. Itu cerita sistem yang tidak pernah jujur dari awal.
 
-Pendidikan menjual janji karier yang tidak ada. Perusahaan menjual budaya kerja yang tidak sesuai realitas. Pasar kerja menjual lapangan yang tidak cukup untuk semua lulusan. Gen Z masuk dengan ekspektasi yang dibentuk oleh ketiga penjual itu, lalu disalahkan saat realitasnya berbeda.
+Pendidikan menjual janji karier tidak ada. Perusahaan menjual budaya kerja tidak sesuai realitas. Pasar kerja menjual lapangan tidak cukup untuk semua lulusan. Gen Z masuk dengan ekspektasi dibentuk ketiga penjual itu, lalu disalahkan saat realitasnya berbeda.
 
 Jadi bukan kamu yang ekspektasi terlalu tinggi. Sistem yang tidak pernah jujur dari awal.
 
@@ -183,15 +175,15 @@ Shift shock adalah perasaan kekecewaan ketika realitas pekerjaan baru sangat ber
 
 ### Berapa persen Gen Z mengalami shift shock?
 
-Survei The Muse 2022 menemukan 72% pekerja mengalami shift shock. Di Indonesia, BMC Psychology 2026 menemukan 60% Gen Z mempertimbangan resign dalam dua tahun pertama kerja, yang mengindikasikan tingkat shift shock yang tinggi.
+Survei The Muse 2022 mencatat 72% pekerja mengalami shift shock. Di Indonesia, BMC Psychology 2026 melaporkan 60% Gen Z mempertimbangan resign dalam dua tahun pertama kerja, yang menunjukkan tingkat shift shock tinggi.
 
 ### Apakah shift shock hanya terjadi di Gen Z?
 
-Tidak. Shift shock dialami semua generasi. Tapi Gen Z paling vokal mengungkapkannya dan paling cepat bertindak (resign). Survei Robert Walters menemukan 53% profesional yang quit pekerjaan baru menyebut unmet expectations sebagai alasan utama, tidak peduli generasi.
+Tidak. Shift shock dialami semua generasi. Tapi Gen Z paling vokal mengungkapkannya dan paling cepat bertindak (resign). Survei Robert Walters melaporkan 53% profesional quit pekerjaan baru menyebut unmet expectations sebagai alasan utama, tidak peduli generasi.
 
 ### Apakah Gen Z wajar resign di 6 bulan pertama?
 
-Survei The Muse menemukan 80% responden setuju wajar resign sebelum enam bulan kalau pekerjaan tidak sesuai ekspektasi. Tapi ada konsekuensi finansial: CELIOS mencatat biaya cari kerja di Indonesia bisa mencapai Rp20-155 juta tergantung wilayah. Pertimbangkan biaya sebelum resign.
+Survei The Muse mencatat 80% responden setuju wajar resign sebelum enam bulan kalau pekerjaan tidak sesuai ekspektasi. Tapi ada konsekuensi finansial: CELIOS mencatat biaya cari kerja di Indonesia bisa mencapai Rp20-155 juta tergantung wilayah. Pertimbangkan biaya sebelum resign.
 
 ### Bagaimana cara mengatasi shift shock?
 
