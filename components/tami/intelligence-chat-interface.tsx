@@ -16,8 +16,17 @@ interface Message {
   cognitiveData?: Omit<TamiCognitiveResponse, 'conversationalReply'>;
 }
 
+interface ChatSession {
+  id: string;
+  title: string;
+  timestamp: number;
+  messages: Message[];
+}
+
 export const IntelligenceChatInterface: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [sessions, setSessions] = useState<ChatSession[]>([]);
+  const [activeSessionId, setActiveSessionId] = useState<string>('');
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [progressLog, setProgressLog] = useState<string[]>([]);
@@ -25,47 +34,92 @@ export const IntelligenceChatInterface: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Load conversation history from localStorage on mount
+  // Load all sessions from localStorage on mount
   useEffect(() => {
-    const savedHistory = localStorage.getItem('tami_conversation_history');
-    if (savedHistory) {
+    const savedSessions = localStorage.getItem('tami_chat_sessions');
+    if (savedSessions) {
       try {
-        setMessages(JSON.parse(savedHistory));
+        const parsed: ChatSession[] = JSON.parse(savedSessions);
+        setSessions(parsed);
+        if (parsed.length > 0) {
+          setActiveSessionId(parsed[0].id);
+          setMessages(parsed[0].messages);
+        }
       } catch (e) {
-        console.error('Failed to parse conversation history:', e);
+        console.error('Failed to parse chat sessions:', e);
+      }
+    } else {
+      // Fallback for single history key
+      const legacyHistory = localStorage.getItem('tami_conversation_history');
+      if (legacyHistory) {
+        try {
+          const parsedMsgs: Message[] = JSON.parse(legacyHistory);
+          if (parsedMsgs.length > 0) {
+            const initialSession: ChatSession = {
+              id: `session-${Date.now()}`,
+              title: parsedMsgs.find((m) => m.role === 'user')?.content || 'Sesi Diagnosa Realita',
+              timestamp: Date.now(),
+              messages: parsedMsgs,
+            };
+            setSessions([initialSession]);
+            setActiveSessionId(initialSession.id);
+            setMessages(parsedMsgs);
+            localStorage.setItem('tami_chat_sessions', JSON.stringify([initialSession]));
+          }
+        } catch (err) {
+          console.error('Failed to parse legacy history:', err);
+        }
       }
     }
     setIsLoaded(true);
-
-    const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === 'tami_conversation_history') {
-        try {
-          setMessages(e.newValue ? JSON.parse(e.newValue) : []);
-        } catch (err) {
-          console.error('Failed to sync history from storage event', err);
-        }
-      }
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-    };
   }, []);
 
-  // Save conversation history to localStorage when changed
-  useEffect(() => {
-    if (isLoaded) {
-      localStorage.setItem('tami_conversation_history', JSON.stringify(messages));
+  // Sync current messages to active session and localStorage
+  const updateCurrentSessionMessages = (newMessages: Message[]) => {
+    setMessages(newMessages);
+    if (!isLoaded) return;
+
+    // Also update legacy key for floating widget compatibility
+    localStorage.setItem('tami_conversation_history', JSON.stringify(newMessages));
+
+    if (newMessages.length === 0) return;
+
+    let targetId = activeSessionId;
+    if (!targetId) {
+      targetId = `session-${Date.now()}`;
+      setActiveSessionId(targetId);
     }
-  }, [messages, isLoaded]);
+
+    const firstUserMsg = newMessages.find((m) => m.role === 'user')?.content || 'Percakapan TAMI';
+    const updatedTitle = firstUserMsg.length > 30 ? firstUserMsg.slice(0, 30) + '...' : firstUserMsg;
+
+    setSessions((prevSessions) => {
+      const existingIdx = prevSessions.findIndex((s) => s.id === targetId);
+      let updated: ChatSession[];
+      if (existingIdx >= 0) {
+        updated = prevSessions.map((s, idx) =>
+          idx === existingIdx ? { ...s, messages: newMessages, title: updatedTitle, timestamp: Date.now() } : s
+        );
+      } else {
+        const newSession: ChatSession = {
+          id: targetId,
+          title: updatedTitle,
+          timestamp: Date.now(),
+          messages: newMessages,
+        };
+        updated = [newSession, ...prevSessions];
+      }
+      localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
+      return updated;
+    });
+  };
 
   // Scroll ONLY inside the chat container when user sends or isLoading changes
   useEffect(() => {
     if (chatContainerRef.current && (messages.length > 0 || isLoading)) {
       chatContainerRef.current.scrollTo({
         top: chatContainerRef.current.scrollHeight,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }, [messages.length, isLoading]);
@@ -80,7 +134,9 @@ export const IntelligenceChatInterface: React.FC = () => {
       content: input,
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    const nextMessages = [...messages, userMessage];
+    updateCurrentSessionMessages(nextMessages);
+
     const currentInput = input;
     setInput('');
     setIsLoading(true);
@@ -145,26 +201,50 @@ export const IntelligenceChatInterface: React.FC = () => {
         },
       };
 
-      setMessages((prev) => [...prev, assistantMessage]);
+      updateCurrentSessionMessages([...nextMessages, assistantMessage]);
     } catch (error) {
       console.error(error);
       timers.forEach(clearTimeout);
       addLog('⚠️ Error: Gagal melakukan diagnosa.');
-      
+
       const errorMessage: Message = {
         id: `error-${Date.now()}`,
         role: 'assistant',
         content: 'Maaf, TAMI sedang mengalami kendala jaringan. Silakan coba lagi.',
       };
-      setMessages((prev) => [...prev, errorMessage]);
+      updateCurrentSessionMessages([...nextMessages, errorMessage]);
     } finally {
       setIsLoading(false);
     }
   };
 
   const startNewChat = () => {
+    setActiveSessionId('');
     setMessages([]);
     localStorage.removeItem('tami_conversation_history');
+  };
+
+  const switchSession = (session: ChatSession) => {
+    setActiveSessionId(session.id);
+    setMessages(session.messages);
+    localStorage.setItem('tami_conversation_history', JSON.stringify(session.messages));
+  };
+
+  const deleteSession = (sessionId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const updated = sessions.filter((s) => s.id !== sessionId);
+    setSessions(updated);
+    localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
+
+    if (activeSessionId === sessionId) {
+      if (updated.length > 0) {
+        setActiveSessionId(updated[0].id);
+        setMessages(updated[0].messages);
+        localStorage.setItem('tami_conversation_history', JSON.stringify(updated[0].messages));
+      } else {
+        startNewChat();
+      }
+    }
   };
 
   return (
@@ -192,20 +272,37 @@ export const IntelligenceChatInterface: React.FC = () => {
 
           {/* Sidebar Section Title */}
           <div className="px-2 pt-2 text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
-            Sesi Obrolan Saat Ini
+            Riwayat Obrolan
           </div>
 
-          {/* Current Chat List */}
+          {/* Chat Sessions List */}
           <div className="space-y-1">
-            {messages.length === 0 ? (
-              <div className="px-3 py-2 text-xs text-neutral-400 italic">Belum ada obrolan aktif</div>
+            {sessions.length === 0 ? (
+              <div className="px-3 py-2 text-xs text-neutral-400 italic">Belum ada obrolan tersimpan</div>
             ) : (
-              <div className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-neutral-800/50 text-white text-xs border border-neutral-700/40">
-                <MessageSquare className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                <span className="truncate flex-1 font-medium">
-                  {messages.find((m) => m.role === 'user')?.content || 'Sesi Diagnosa Realita'}
-                </span>
-              </div>
+              sessions.map((session) => (
+                <div
+                  key={session.id}
+                  onClick={() => switchSession(session)}
+                  className={`group flex items-center justify-between gap-2 px-3 py-2 rounded-xl text-xs cursor-pointer border transition-all ${
+                    activeSessionId === session.id
+                      ? 'bg-neutral-800 text-white font-semibold border-neutral-700/60 shadow-sm'
+                      : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40 border-transparent'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                    <MessageSquare className={`w-3.5 h-3.5 flex-shrink-0 ${activeSessionId === session.id ? 'text-primary' : 'text-neutral-400'}`} />
+                    <span className="truncate">{session.title}</span>
+                  </div>
+                  <button
+                    onClick={(e) => deleteSession(session.id, e)}
+                    className="opacity-0 group-hover:opacity-100 p-1 text-neutral-400 hover:text-red-400 transition-opacity"
+                    title="Hapus percakapan ini"
+                  >
+                    <Trash2 className="w-3 h-3" />
+                  </button>
+                </div>
+              ))
             )}
           </div>
         </div>
