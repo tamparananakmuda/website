@@ -37,6 +37,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [proactiveGreeting, setProactiveGreeting] = useState<string | null>(null);
   const [isDegraded, setIsDegraded] = useState(false);
+  const [hasActiveResponse, setHasActiveResponse] = useState(false);
   const sessionIdRef = useRef<string>('');
   const isExternalUpdate = useRef(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
@@ -263,12 +264,16 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
       timers.push(setTimeout(() => addLog('Membedah bias berpikir...'), 850));
     }
 
+    // Clear proactive greeting once user starts chatting
+    setProactiveGreeting(null);
+
     try {
       const historyPayload = messages.slice(-10).map((m) => ({
         role: m.role,
         content: m.content,
       }));
 
+      setHasActiveResponse(true);
       await streamTami(currentInput, historyPayload);
     } catch (err) {
       console.error(err);
@@ -282,6 +287,9 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     } finally {
       timers.forEach(clearTimeout);
       setIsLoading(false);
+      setHasActiveResponse(false);
+      // Reset degraded state after response completes
+      setIsDegraded(false);
     }
   };
 
@@ -445,8 +453,8 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                     <TamiIcon className="w-4 h-4" />
                   </div>
                   <div className="flex-1 space-y-4">
-                    {/* Severity Level Badge */}
-                    {msg.cognitiveData?.severityLevel && (
+                    {/* Severity Level Badge - only after streaming complete */}
+                    {msg.cognitiveData?.severityLevel && !sseStreaming && (
                       <div className="flex items-center gap-1.5">
                         <span className={`text-[8px] font-extrabold uppercase tracking-widest px-1.5 py-0.5 rounded-full border ${
                           msg.cognitiveData.severityLevel === 'berat'
@@ -467,12 +475,12 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                       />
                     </div>
 
-                    {/* Feedback buttons (only for non-empty assistant messages) */}
-                    {msg.content && !sseStreaming && (
+                    {/* Feedback buttons (only after streaming complete and non-empty) */}
+                    {msg.content && !sseStreaming && !hasActiveResponse && (
                       <FeedbackButtons messageId={msg.id} query={messages[messages.indexOf(msg) - 1]?.content || ''} reply={msg.content} />
                     )}
 
-                    {msg.content && !sseStreaming && msg.cognitiveData && (
+                    {msg.content && !sseStreaming && !hasActiveResponse && msg.cognitiveData && (
                       <FollowUpSuggestions
                         cognitiveData={msg.cognitiveData}
                         userQuery={messages[messages.indexOf(msg) - 1]?.content || ''}
@@ -480,8 +488,8 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                       />
                     )}
 
-                    {/* WhatsApp Escalation Button if present */}
-                    {msg.cognitiveData?.escalationUrl && (
+                    {/* WhatsApp Escalation Button - only after streaming complete */}
+                    {msg.cognitiveData?.escalationUrl && !sseStreaming && (
                       <div className="mt-2">
                         <a
                           href={msg.cognitiveData.escalationUrl}
@@ -498,8 +506,8 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                       </div>
                     )}
 
-                    {/* Quick Suggestions buttons */}
-                    {msg.cognitiveData?.suggestions && msg.cognitiveData.suggestions.length > 0 && (
+                    {/* Quick Suggestions buttons - only after streaming complete */}
+                    {msg.cognitiveData?.suggestions && msg.cognitiveData.suggestions.length > 0 && !sseStreaming && (
                       <div className="flex flex-wrap gap-1.5 mt-2">
                         {msg.cognitiveData.suggestions.map((suggestion, sIdx) => (
                           <button
@@ -513,7 +521,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                       </div>
                     )}
 
-                    {msg.cognitiveData && (msg.cognitiveData.actionPlan?.length > 0 || msg.cognitiveData.citations?.length > 0) && (
+                    {msg.cognitiveData && !sseStreaming && (msg.cognitiveData.actionPlan?.length > 0 || msg.cognitiveData.citations?.length > 0) && (
                       <div className="space-y-4 mt-3">
                         <RealityDiagnosisCard diagnosis={msg.cognitiveData.diagnosis} />
                         <ReadingRoadmap citations={msg.cognitiveData.citations} />

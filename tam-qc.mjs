@@ -30,8 +30,9 @@ const aiId = ['signifikan','krusial','esensial','vital','mendalam','memperhatika
 const foundId = aiId.filter(w => body.toLowerCase().includes(w));
 if (foundId.length) issues.push('AI vocab ID: ' + foundId.join(', '));
 
-// Staccato drama
-const sentences = body.split(/[.!?]\s+/);
+// Staccato drama (skip headings)
+const bodyNoHeadings = body.replace(/^#{1,6}\s+.*$/gm, '');
+const sentences = bodyNoHeadings.split(/[.!?]\s+/);
 let currentRun = 0, maxRun = 0;
 for (const s of sentences) {
   if (s.split(/\s+/).length <= 6) { currentRun++; maxRun = Math.max(maxRun, currentRun); }
@@ -102,9 +103,23 @@ else if (og.length > 50) issues.push('og_headline length: ' + og.length + ' (max
 const refs = a.sourceReferences || [];
 if (!Array.isArray(refs)) issues.push('source_references: must be array');
 
-// Unattributed numbers
-const numberSentences = sentences.filter(s => /\d+%|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d+\s*(persen|%)/i.test(s));
-const unattributed = numberSentences.filter(s => !/(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat|Kompas|CELIOS|JobStreet|Robert Walters|Gateway|Harvard|World Economic Forum|BMC|UGM|JSSR|IJSM|The Muse|Jakpat|Fast Company|IEEE|Kathryn Minshew)/i.test(s));
+// Unattributed numbers (check paragraph context)
+const paragraphs = bodyNoHeadings.split('\n\n');
+const numberSentences = [];
+const unattributed = [];
+for (const para of paragraphs) {
+  const paraSentences = para.split(/[.!?]\s+/);
+  const paraHasAttribution = /(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat|Kompas|CELIOS|JobStreet|Robert Walters|Gateway|Harvard|World Economic Forum|BMC|UGM|JSSR|IJSM|The Muse|Jakpat|Fast Company|IEEE|Kathryn Minshew|Kompas\.id|Springer|We Forum|Walton|Gallup)/i.test(para);
+  for (const s of paraSentences) {
+    if (/\d+%|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d+\s*(persen|%)/i.test(s)) {
+      numberSentences.push(s);
+      const sentHasAttribution = /(menurut|berdasarkan|data|catatan|mencatat|riset|survei|studi|OJK|BPS|We Are Social|Kemenkop|Jakpat|Kompas|CELIOS|JobStreet|Robert Walters|Gateway|Harvard|World Economic Forum|BMC|UGM|JSSR|IJSM|The Muse|Jakpat|Fast Company|IEEE|Kathryn Minshew|Kompas\.id|Springer|We Forum|Walton|Gallup)/i.test(s);
+      if (!sentHasAttribution && !paraHasAttribution) {
+        unattributed.push(s);
+      }
+    }
+  }
+}
 if (unattributed.length > 0) {
   issues.push('Unattributed numbers: ' + unattributed.length);
   unattributed.forEach((s, i) => console.log('  [' + (i+1) + '] ' + s.trim().substring(0, 120)));

@@ -23,22 +23,26 @@ export const StreamingMessage: React.FC<StreamingMessageProps> = ({
   isStreaming = false,
   onTypingComplete,
 }) => {
-  // During active SSE streaming, show text directly - no typing effect
-  const useTyping = isLatest && !isStreaming;
+  // Track if this message was ever streamed - if so, skip typing effect entirely
+  const wasStreamedRef = React.useRef(false);
+  if (isStreaming) wasStreamedRef.current = true;
+
+  // Typing effect only for non-streamed, non-historical messages that were never streamed
+  const useTyping = isLatest && !isStreaming && !wasStreamedRef.current;
   const { displayedText, isTyping, skip } = useTypingEffect(content, {
     enabled: useTyping,
     speed: 15,
   });
 
-  // When streaming, show raw text progressively. When done, render full markdown.
+  // When streaming, show raw text. When done (or historical), render full markdown.
   const renderText = isStreaming ? content : (useTyping ? displayedText : content);
 
-  // Notify parent when typing completes
+  // Notify parent when typing completes (only for non-streamed messages)
   React.useEffect(() => {
-    if (isLatest && !isTyping && displayedText === content) {
+    if (isLatest && !isTyping && !isStreaming && displayedText === content) {
       onTypingComplete?.();
     }
-  }, [isTyping, displayedText, content, isLatest, onTypingComplete]);
+  }, [isTyping, displayedText, content, isLatest, isStreaming, onTypingComplete]);
 
   // Show typing cursor while typing or streaming
   const showCursor = isLatest && (isTyping || isStreaming);
