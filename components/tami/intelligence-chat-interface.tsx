@@ -171,11 +171,13 @@ export const IntelligenceChatInterface: React.FC = () => {
     <div className="flex w-full h-full bg-neutral-950 text-white overflow-hidden relative">
       {/* ChatGPT / Claude Style Left Sidebar */}
       <aside
-        className={`fixed md:relative z-30 h-full bg-neutral-900/95 md:bg-neutral-900/60 border-r border-neutral-800/80 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between ${
-          isSidebarOpen ? 'w-64 translate-x-0' : '-translate-x-full md:translate-x-0 md:w-0 border-r-0'
+        className={`fixed md:relative z-30 h-full bg-neutral-900/95 md:bg-neutral-900/60 border-r border-neutral-800/80 backdrop-blur-xl transition-all duration-300 ease-in-out flex flex-col justify-between overflow-hidden shrink-0 ${
+          isSidebarOpen
+            ? 'w-64 translate-x-0 opacity-100'
+            : 'w-0 -translate-x-full md:translate-x-0 opacity-0 md:opacity-100 border-r-0'
         }`}
       >
-        <div className="p-3 space-y-3 flex-1 overflow-y-auto">
+        <div className="w-64 p-3 space-y-3 flex-1 overflow-y-auto">
           {/* New Chat Button */}
           <button
             onClick={startNewChat}
@@ -209,7 +211,7 @@ export const IntelligenceChatInterface: React.FC = () => {
         </div>
 
         {/* Sidebar Footer Info */}
-        <div className="p-3 border-t border-neutral-800/80 bg-neutral-950/40 space-y-2">
+        <div className="w-64 p-3 border-t border-neutral-800/80 bg-neutral-950/40 space-y-2 shrink-0">
           <div className="flex items-center gap-2.5 px-2 py-1.5">
             <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary border border-primary/20">
               <TamiIcon className="w-4 h-4" />
