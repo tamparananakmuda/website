@@ -3,7 +3,7 @@ title: "85% Gen Z Menolak Lamar Kerja Tanpa Info Gaji: Bukan Arogan, Rasional"
 slug: "gen-z-menolak-kerja-tanpa-info-gaji-bukan-arogan-rasional"
 excerpt: "85% Gen Z menolak melamar tanpa info gaji. Bukan arogansi generasi manja, tapi respons rasional terhadap ekonomi yang tidak menjanjikan stabilitas."
 publishedAt: "2026-07-24 05:00:00+00"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

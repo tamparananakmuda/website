@@ -5,7 +5,7 @@ excerpt: >-
   Ghosting bukan kelemahan komunikasi. Penelitian USU: korban ghosting alami
   psychological distress. Pelaku ghosting lakukan sebagai perlindungan diri.
 publishedAt: '2026-08-05T05:00:00.000Z'
-status: scheduled
+status: published
 category: kehidupan
 subcategory: kehidupan-relasi
 author: yovie-setiawan

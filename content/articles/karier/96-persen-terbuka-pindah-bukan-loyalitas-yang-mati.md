@@ -3,7 +3,7 @@ title: "96% Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi
 slug: "96-persen-terbuka-pindah-bukan-loyalitas-yang-mati"
 excerpt: "47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi sistem kerja yang tidak memberi alasan untuk tetap setia."
 publishedAt: "2026-07-26T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

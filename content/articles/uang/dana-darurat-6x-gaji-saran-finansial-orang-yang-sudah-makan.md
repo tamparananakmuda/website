@@ -3,7 +3,7 @@ title: "Dana Darurat 6x Gaji: Saran Finansial untuk Orang yang Sudah Makan"
 slug: "dana-darurat-6x-gaji-saran-finansial-orang-yang-sudah-makan"
 excerpt: "Gaji Rp2,67 juta, target dana darurat 6x pengeluaran Rp18-24 juta. Sisihan 5% per bulan, butuh 11-15 tahun. Rumus ini bukan untuk Gen Z."
 publishedAt: "2026-08-02T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

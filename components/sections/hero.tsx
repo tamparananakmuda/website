@@ -56,7 +56,7 @@ export function Hero({ className }: HeroProps) {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-center px-4 pt-16 pb-12 text-center md:px-6 md:pt-24 md:pb-16">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-4 pt-16 pb-20 text-center md:px-6 md:pt-24 md:pb-28">
           <div className="flex flex-col items-center hero-fade-in">
             {/* Tagline label with lower opacity (65-70%) & reduced bottom margin to raise headline (~20px closer) */}
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-primary/70 md:mb-4 md:text-sm md:tracking-[0.3em]">

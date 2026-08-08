@@ -3,7 +3,7 @@ title: "Perfeksionisme Gen Z Bukan Ambisi, Ketakutan yang Dikemas sebagai Standa
 slug: "perfeksionisme-gen-z-bukan-ambisi-ketakutan-yang-dikemas-sebagai-standar-tinggi"
 excerpt: "Perfeksionisme Gen Z naik 33% dalam 27 tahun. Bukan ambisi, ketakutan dinilai tidak cukup. Link ke prokrastinasi, burnout, dan people pleaser."
 publishedAt: "2026-08-08T10:00:00.000Z"
-status: "scheduled"
+status: scheduled
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"

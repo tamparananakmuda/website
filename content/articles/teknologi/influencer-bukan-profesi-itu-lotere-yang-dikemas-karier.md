@@ -3,7 +3,7 @@ title: "Influencer Bukan Profesi, Itu Lotere yang Dikemas Sebagai Karier"
 slug: "influencer-bukan-profesi-itu-lotere-yang-dikemas-karier"
 excerpt: "66% Gen Z Indonesia mau jadi influencer, tapi hanya 4% yang bisa hidup dari konten. Bukan profesi, itu lotere dengan odds 1:23. AI mulai gantikan kreator murah."
 publishedAt: "2026-07-28 01:00:00+00"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

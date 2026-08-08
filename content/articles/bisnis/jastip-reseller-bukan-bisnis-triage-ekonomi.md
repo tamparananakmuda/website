@@ -3,7 +3,7 @@ title: "Jastip dan Reseller: Bukan Bisnis, Triage Ekonomi"
 slug: "jastip-reseller-bukan-bisnis-triage-ekonomi"
 excerpt: "87 juta orang Indonesia di sektor informal. 1 juta sarjana menganggur. Jastip dan reseller bukan bisnis, itu triage ekonomi saat kerja formal tidak ada."
 publishedAt: "2026-08-04T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "bisnis"
 subcategory: "bisnis"
 author: "yovie-setiawan"

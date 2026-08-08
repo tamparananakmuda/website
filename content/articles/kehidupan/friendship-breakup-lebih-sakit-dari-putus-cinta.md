@@ -3,7 +3,7 @@ title: "Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit dari Putus Cinta
 slug: "friendship-breakup-lebih-sakit-dari-putus-cinta"
 excerpt: "Putus pertemanan di usia dewasa lebih menyakitkan dari putus cinta. Tidak ada closure, tidak ada ritual duka. Luka yang tidak punya nama tidak bisa disembuhkan."
 publishedAt: "2026-08-01 05:00:00+00"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

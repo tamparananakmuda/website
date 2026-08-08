@@ -3,7 +3,7 @@ title: "Semua Jadi Trauma: Therapy Speak Bukan Sadar Mental Health, Itu Meremehk
 slug: "therapy-speak-bukan-sadar-mental-health-meremehkan-luka"
 excerpt: "95% orang dengar istilah terapi setiap hari. 74% Gen Z pakai bahasa klinis di percakapan kasual. Tapi itu bukan awareness, itu senjatisasi penderitaan."
 publishedAt: "2026-07-31T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"

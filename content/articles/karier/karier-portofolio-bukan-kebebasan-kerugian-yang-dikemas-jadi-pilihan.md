@@ -3,7 +3,7 @@ title: "Karier Portofolio Bukan Kebebasan, Itu Kerugian yang Dikemas Jadi Piliha
 slug: "karier-portofolio-bukan-kebebasan-kerugian-yang-dikemas-jadi-pilihan"
 excerpt: "63% Gen Z beralih ke gig economy tanpa BPJS, tanpa jaminan sosial. Fleksibilitas yang dijual sebagai kebebasan sebenarnya adalah keputusan terpaksa."
 publishedAt: "2026-07-24 01:00:00+00"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

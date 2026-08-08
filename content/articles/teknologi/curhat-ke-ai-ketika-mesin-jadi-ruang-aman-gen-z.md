@@ -3,7 +3,7 @@ title: "Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z"
 slug: "curhat-ke-ai-ketika-mesin-jadi-ruang-aman-gen-z"
 excerpt: "81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara."
 publishedAt: "2026-07-23 05:00:00+00"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

@@ -1,0 +1,30 @@
+name: TAMI RAG Auto-Sync
+
+on:
+  schedule:
+    # Every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Trigger TAMI sync endpoint
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 \
+            --retry 2 \
+            --retry-delay 5 \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "https://tamparananakmuda.com/api/cron/tami-sync")
+
+          echo "HTTP status: $response"
+
+          if [ "$response" = "200" ]; then
+            echo "TAMI sync triggered successfully"
+          else
+            echo "TAMI sync failed with status $response"
+            exit 1
+          fi

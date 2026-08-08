@@ -3,7 +3,7 @@ title: "BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros, Gaji Tidak
 slug: "bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup"
 excerpt: "54% Gen Z belum punya asuransi. BPJS Kelas 3 cuma Rp35.000 tapi tetap tidak dibayar. Bukan tidak peduli kesehatan, matematika gaji vs premi yang tidak masuk."
 publishedAt: "2026-08-06T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

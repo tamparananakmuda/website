@@ -3,7 +3,7 @@ title: "Hustle Culture Bukan Ambisi, Itu Burnout yang Dikemas sebagai Dedikasi"
 slug: "hustle-culture-bukan-ambisi-burnout-yang-dikemas-sebagai-dedikasi"
 excerpt: "25,5% pekerja Indonesia kerja >49 jam/minggu. Stanford buktikan produktivitas turun setelah 50 jam. Hustle culture menguntungkan bos, bukan kamu."
 publishedAt: "2026-08-07T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"

@@ -4,7 +4,7 @@ slug: generasi-sewa-part-4-gig-economy-penyewa-waktu
 excerpt: >-
   Pendapatan ojol turun 41% dalam 2 tahun. 75% pekerja digital di bawah Rp3 juta. Gig economy bukan kebebasan, kamu menyewa pekerjaan dari platform.
 publishedAt: '2026-08-01T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

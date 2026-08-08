@@ -5,7 +5,7 @@ excerpt: >-
   Gen Z paling terhubung dalam sejarah, tapi skor kesepian tertinggi. Penelitian
   UGM: self-compassion dan dukungan sosial kunci. Algoritma ganti teman.
 publishedAt: '2026-08-07T05:00:00.000Z'
-status: scheduled
+status: published
 category: kehidupan
 subcategory: kehidupan-relasi
 author: yovie-setiawan

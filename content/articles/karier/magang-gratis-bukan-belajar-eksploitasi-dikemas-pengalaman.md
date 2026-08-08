@@ -3,7 +3,7 @@ title: "Magang Gratis Bukan Belajar, Eksploitasi yang Dikemas sebagai Pengalaman
 slug: "magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman"
 excerpt: "370 ribu orang berebut 100 ribu slot magang. 70% tidak dapat kerja setelahnya. Magang gratis bukan investasi, itu eksploitasi dengan CV sebagai jaminan."
 publishedAt: "2026-08-05T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

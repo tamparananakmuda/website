@@ -1,12 +1,17 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Sparkles, User, Terminal, Loader2, Trash2, PlusCircle, PanelLeft, Bot, MessageSquare, ExternalLink } from 'lucide-react';
+import { Send, Sparkles, User, Terminal, Loader2, Trash2, PlusCircle, PanelLeft, Bot, MessageSquare, ExternalLink, Square } from 'lucide-react';
 import { TamiCognitiveResponse } from '@/lib/tami/cognitive/types';
 import { RealityDiagnosisCard } from './reality-diagnosis-card';
 import { ReadingRoadmap } from './reading-roadmap';
 import { TamiIcon } from './tami-icon';
 import { ChatContentRenderer } from './chat-content-renderer';
+import { StreamingMessage } from './streaming-message';
+import { useTamiStream } from './use-tami-stream';
+import { FeedbackButtons } from './feedback-buttons';
+import { FollowUpSuggestions } from './follow-up-suggestions';
+import { exportConversationAsMarkdown } from './export-conversation';
 import Link from 'next/link';
 
 interface Message {
@@ -27,11 +32,14 @@ export const IntelligenceChatInterface: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [sessions, setSessions] = useState<ChatSession[]>([]);
   const [activeSessionId, setActiveSessionId] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const isExternalUpdate = useRef(false);
+  const timersRef = useRef<NodeJS.Timeout[]>([]);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // Load all sessions from localStorage on mount
@@ -72,6 +80,27 @@ export const IntelligenceChatInterface: React.FC = () => {
       }
     }
     setIsLoaded(true);
+
+    // Listen for updates from floating TAMI chat
+    const handleHistoryUpdate = () => {
+      const latest = localStorage.getItem('tami_conversation_history');
+      if (latest) {
+        try {
+          isExternalUpdate.current = true;
+          setMessages(JSON.parse(latest));
+        } catch (err) {
+          console.error('Failed to sync history from floating chat', err);
+        }
+      } else {
+        isExternalUpdate.current = true;
+        setMessages([]);
+      }
+    };
+
+    window.addEventListener('tami_history_updated', handleHistoryUpdate);
+    return () => {
+      window.removeEventListener('tami_history_updated', handleHistoryUpdate);
+    };
   }, []);
 
   // Sync current messages to active session and localStorage
@@ -81,6 +110,11 @@ export const IntelligenceChatInterface: React.FC = () => {
 
     // Also update legacy key for floating widget compatibility
     localStorage.setItem('tami_conversation_history', JSON.stringify(newMessages));
+    // Dispatch event so floating chat can sync (only if not from external update)
+    if (!isExternalUpdate.current) {
+      window.dispatchEvent(new Event('tami_history_updated'));
+    }
+    isExternalUpdate.current = false;
 
     if (newMessages.length === 0) return;
 
@@ -110,6 +144,14 @@ export const IntelligenceChatInterface: React.FC = () => {
         updated = [newSession, ...prevSessions];
       }
       localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
+      // Limit to 20 sessions to prevent localStorage overflow
+      if (updated.length > 20) {
+        const trimmed = updated.slice(0, 20);
+        setSessions(trimmed);
+        localStorage.setItem('tami_chat_sessions', JSON.stringify(trimmed));
+      } else {
+        setSessions(updated);
+      }
       return updated;
     });
   };
@@ -124,9 +166,93 @@ export const IntelligenceChatInterface: React.FC = () => {
     }
   }, [messages.length, isLoading]);
 
+  // Cleanup timers on unmount
+  useEffect(() => {
+    return () => {
+      timersRef.current.forEach(clearTimeout);
+    };
+  }, []);
+
+  // Keyboard shortcut: Cmd/Ctrl+K for new chat
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        startNewChat();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const assistantIdRef = useRef<string | null>(null);
+  const streamedTextRef = useRef('');
+
+  const { stream: streamTami, isStreaming: sseStreaming, abort: abortStream } = useTamiStream({
+    onCognitiveData: (data) => {
+      timersRef.current.forEach(clearTimeout);
+      setProgressLog([]);
+
+      const id = `assistant-${Date.now()}`;
+      assistantIdRef.current = id;
+      streamedTextRef.current = '';
+      const assistantMessage: Message = {
+        id,
+        role: 'assistant',
+        content: '',
+        cognitiveData: {
+          mindState: data.mindState,
+          diagnosis: data.diagnosis,
+          actionPlan: data.actionPlan,
+          citations: data.citations,
+          escalationUrl: data.escalationUrl,
+          suggestions: data.suggestions,
+          severityLevel: data.severityLevel,
+        },
+      };
+      setMessages((prev) => {
+        const updated = [...prev, assistantMessage];
+        updateCurrentSessionMessages(updated);
+        return updated;
+      });
+    },
+    onToken: (token) => {
+      streamedTextRef.current += token;
+      const currentText = streamedTextRef.current;
+      const id = assistantIdRef.current;
+      if (id) {
+        setMessages((prev) => {
+          const updated = prev.map(m => m.id === id ? { ...m, content: currentText } : m);
+          updateCurrentSessionMessages(updated);
+          return updated;
+        });
+      }
+    },
+    onComplete: (fullText) => {
+      const id = assistantIdRef.current;
+      if (id && fullText) {
+        setMessages((prev) => {
+          const updated = prev.map(m => m.id === id ? { ...m, content: fullText } : m);
+          updateCurrentSessionMessages(updated);
+          return updated;
+        });
+      }
+      assistantIdRef.current = null;
+      streamedTextRef.current = '';
+    },
+    onError: (error) => {
+      timersRef.current.forEach(clearTimeout);
+      setMessages((prev) => {
+        const updated = [...prev, { id: `error-${Date.now()}`, role: 'assistant' as const, content: error }];
+        updateCurrentSessionMessages(updated);
+        return updated;
+      });
+    },
+  });
+
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || isLoading || sseStreaming) return;
 
     const userMessage: Message = {
       id: `user-${Date.now()}`,
@@ -142,78 +268,51 @@ export const IntelligenceChatInterface: React.FC = () => {
     setIsLoading(true);
     setProgressLog([]);
 
-    // Determine complexity: 'low' | 'medium' | 'high'
+    // Determine complexity for progress logs
     const cleanQuery = currentInput.toLowerCase().trim().replace(/[?.!,]/g, '');
     const greetings = ['halo', 'hi', 'hey', 'hei', 'helo', 'hello', 'p', 'ping', 'test', 'halo tami', 'hi tami', 'tami', 'hallo', 'assalamualaikum', 'salam', 'pagi', 'siang', 'sore', 'malam', 'terima kasih', 'thanks', 'makasih', 'thank you', 'ok', 'oke'];
     const isLow = greetings.includes(cleanQuery) || cleanQuery.split(/\s+/).length <= 2;
     const complexity = isLow ? 'low' : cleanQuery.split(/\s+/).length <= 6 ? 'medium' : 'high';
 
     const timers: NodeJS.Timeout[] = [];
+    timersRef.current = timers;
     const addLog = (log: string) => {
       setProgressLog((prev) => [...prev, log]);
     };
 
     if (complexity === 'medium') {
-      timers.push(setTimeout(() => addLog('Initializing TAMI Diagnostic...'), 100));
-      timers.push(setTimeout(() => addLog('Diagnosing state...'), 350));
-      timers.push(setTimeout(() => addLog('Analyzing query...'), 600));
+      timers.push(setTimeout(() => addLog('Memulai diagnosa TAMI...'), 100));
+      timers.push(setTimeout(() => addLog('Membaca kondisi mental...'), 350));
+      timers.push(setTimeout(() => addLog('Menganalisis pertanyaan...'), 600));
     } else if (complexity === 'high') {
-      timers.push(setTimeout(() => addLog('Initializing TAMI Cognitive Diagnostic Pipeline...'), 150));
-      timers.push(setTimeout(() => addLog('Mind-State Analyzer: Membaca frekuensi emosi & mendeteksi sinyal krisis...'), 500));
-      timers.push(setTimeout(() => addLog('Knowledge Graph RAG: Menscan 150+ esai & seri TAM untuk mencari topik relevan...'), 950));
-      timers.push(setTimeout(() => addLog('Adversarial Debate Loop: Memperdebatkan bias berpikir & asumsi logismu...'), 1400));
-      timers.push(setTimeout(() => addLog('Execution Synthesizer: Merumuskan rencana tindakan taktis (action roadmap)...'), 1950));
+      timers.push(setTimeout(() => addLog('Memulai pipeline diagnosa kognitif TAMI...'), 150));
+      timers.push(setTimeout(() => addLog('Analisis Emosi: Membaca frekuensi emosi & mendeteksi sinyal krisis...'), 500));
+      timers.push(setTimeout(() => addLog('Knowledge Graph RAG: Memindai konten TAM untuk topik relevan...'), 950));
+      timers.push(setTimeout(() => addLog('Perdebatan Bias: Membedah asumsi & distorsi berpikirmu...'), 1400));
+      timers.push(setTimeout(() => addLog('Sintesis Eksekusi: Merumuskan rencana tindakan taktis...'), 1950));
     }
 
     try {
-      const historyPayload = messages.map((m) => ({
+      const historyPayload = messages.slice(-10).map((m) => ({
         role: m.role,
         content: m.content,
       }));
 
-      const res = await fetch('/api/tami/intelligence', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: currentInput, history: historyPayload }),
-      });
-
-      if (!res.ok) {
-        throw new Error('Server returned an error');
-      }
-
-      const data: TamiCognitiveResponse = await res.json();
-      timers.forEach(clearTimeout);
-
-      if (complexity !== 'low') {
-        addLog('Cognitive Synthesis Engine: Menyusun tamparan realita akhir...');
-        await new Promise((r) => setTimeout(r, 200));
-      }
-
-      const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
-        role: 'assistant',
-        content: data.conversationalReply,
-        cognitiveData: {
-          mindState: data.mindState,
-          diagnosis: data.diagnosis,
-          actionPlan: data.actionPlan,
-          citations: data.citations,
-        },
-      };
-
-      updateCurrentSessionMessages([...nextMessages, assistantMessage]);
+      await streamTami(currentInput, historyPayload);
     } catch (error) {
       console.error(error);
       timers.forEach(clearTimeout);
       addLog('⚠️ Error: Gagal melakukan diagnosa.');
 
+      const errorMsg = error instanceof Error ? error.message : 'Maaf, TAMI sedang mengalami kendala. Silakan coba lagi.';
       const errorMessage: Message = {
         id: `error-${Date.now()}`,
         role: 'assistant',
-        content: 'Maaf, TAMI sedang mengalami kendala jaringan. Silakan coba lagi.',
+        content: errorMsg,
       };
       updateCurrentSessionMessages([...nextMessages, errorMessage]);
     } finally {
+      timers.forEach(clearTimeout);
       setIsLoading(false);
     }
   };
@@ -222,12 +321,14 @@ export const IntelligenceChatInterface: React.FC = () => {
     setActiveSessionId('');
     setMessages([]);
     localStorage.removeItem('tami_conversation_history');
+    window.dispatchEvent(new Event('tami_history_updated'));
   };
 
   const switchSession = (session: ChatSession) => {
     setActiveSessionId(session.id);
     setMessages(session.messages);
     localStorage.setItem('tami_conversation_history', JSON.stringify(session.messages));
+    window.dispatchEvent(new Event('tami_history_updated'));
   };
 
   const deleteSession = (sessionId: string, e: React.MouseEvent) => {
@@ -245,6 +346,7 @@ export const IntelligenceChatInterface: React.FC = () => {
         startNewChat();
       }
     }
+    window.dispatchEvent(new Event('tami_history_updated'));
   };
 
   return (
@@ -293,12 +395,34 @@ export const IntelligenceChatInterface: React.FC = () => {
             </button>
           </div>
 
+          {/* Search Bar */}
+          {sessions.length > 0 && (
+            <div className="px-2 pb-2">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Cari percakapan..."
+                className="w-full bg-neutral-900 border border-neutral-800 text-white rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:border-neutral-700 transition-colors placeholder:text-neutral-500"
+              />
+            </div>
+          )}
+
           {/* Chat Sessions List */}
           <div className="space-y-1">
             {sessions.length === 0 ? (
               <div className="px-3 py-2 text-xs text-neutral-400 italic">Belum ada obrolan tersimpan</div>
             ) : (
-              sessions.map((session) => (
+              sessions
+                .filter((s) => {
+                  if (!searchQuery.trim()) return true;
+                  const q = searchQuery.toLowerCase();
+                  return (
+                    s.title.toLowerCase().includes(q) ||
+                    s.messages.some((m) => m.content.toLowerCase().includes(q))
+                  );
+                })
+                .map((session) => (
                 <div
                   key={session.id}
                   onClick={() => {
@@ -387,9 +511,29 @@ export const IntelligenceChatInterface: React.FC = () => {
 
             {messages.length > 0 && (
               <button
+                onClick={() => exportConversationAsMarkdown(messages, sessions.find(s => s.id === activeSessionId)?.title || 'Percakapan TAMI')}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold transition-colors"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-primary" />
+                <span className="hidden sm:inline">Export</span>
+              </button>
+            )}
+
+            {messages.length > 0 && (
+              <button
                 onClick={() => {
-                  setMessages([]);
-                  localStorage.removeItem('tami_conversation_history');
+                  if (activeSessionId) {
+                    const updated = sessions.filter((s) => s.id !== activeSessionId);
+                    setSessions(updated);
+                    localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
+                    if (updated.length > 0) {
+                      switchSession(updated[0]);
+                    } else {
+                      startNewChat();
+                    }
+                  } else {
+                    startNewChat();
+                  }
                 }}
                 className="p-2 rounded-lg text-neutral-400 hover:text-red-400 hover:bg-neutral-900 transition-colors"
                 title="Hapus Chat"
@@ -401,7 +545,7 @@ export const IntelligenceChatInterface: React.FC = () => {
         </header>
 
         {/* Scrollable Conversation Stream */}
-        <div ref={chatContainerRef} className="flex-1 overflow-y-auto px-4 py-6 md:px-8 space-y-6">
+        <div ref={chatContainerRef} className="flex-1 overflow-y-auto px-4 py-6 md:px-8 space-y-6" role="log" aria-live="polite" aria-label="Riwayat percakapan TAMI">
           <div className="max-w-3xl mx-auto space-y-6">
             {messages.length === 0 && (
               <div className="min-h-[70vh] flex flex-col items-center justify-center text-center space-y-6 py-8">
@@ -475,9 +619,42 @@ export const IntelligenceChatInterface: React.FC = () => {
                     </div>
 
                     <div className="flex-1 min-w-0 space-y-5">
+                      {/* Severity Level Badge */}
+                      {msg.cognitiveData?.severityLevel && (
+                        <div className="flex items-center gap-2">
+                          <span className={`text-[9px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full border ${
+                            msg.cognitiveData.severityLevel === 'berat'
+                              ? 'bg-red-950/60 border-red-800/60 text-red-300'
+                              : msg.cognitiveData.severityLevel === 'sedang'
+                              ? 'bg-amber-950/60 border-amber-800/60 text-amber-300'
+                              : 'bg-emerald-950/60 border-emerald-800/60 text-emerald-300'
+                          }`}>
+                            {msg.cognitiveData.severityLevel === 'berat' ? '🔴 Level: Berat' : msg.cognitiveData.severityLevel === 'sedang' ? '🟡 Level: Sedang' : '🟢 Level: Ringan'}
+                          </span>
+                          <span className="text-[9px] text-neutral-500">
+                            {msg.cognitiveData.severityLevel === 'berat' ? 'TAMI merespons dengan empati & fokus langkah kecil' : msg.cognitiveData.severityLevel === 'sedang' ? 'TAMI merespons tegas tapi peduli' : 'TAMI merespons dengan tamparan realita'}
+                          </span>
+                        </div>
+                      )}
                       <div className="text-xs md:text-sm text-neutral-200 leading-relaxed bg-neutral-900/60 border border-neutral-800/80 p-4 md:p-5 rounded-2xl rounded-tl-sm shadow-sm">
-                        <ChatContentRenderer content={msg.content} />
+                        <StreamingMessage
+                          content={msg.content}
+                          isLatest={msg.id === messages[messages.length - 1]?.id && msg.role === 'assistant'}
+                        />
                       </div>
+
+                      {/* Feedback buttons */}
+                      {msg.content && !sseStreaming && (
+                        <FeedbackButtons messageId={msg.id} query={messages[messages.indexOf(msg) - 1]?.content || ''} reply={msg.content} />
+                      )}
+
+                      {msg.content && !sseStreaming && msg.cognitiveData && (
+                        <FollowUpSuggestions
+                          cognitiveData={msg.cognitiveData}
+                          userQuery={messages[messages.indexOf(msg) - 1]?.content || ''}
+                          onSuggestionClick={(text) => setInput(text)}
+                        />
+                      )}
 
                       {/* WhatsApp Escalation */}
                       {msg.cognitiveData?.escalationUrl && (
@@ -513,7 +690,7 @@ export const IntelligenceChatInterface: React.FC = () => {
                       )}
 
                       {/* Cognitive Cards Grid */}
-                      {msg.cognitiveData && msg.cognitiveData.diagnosis.cognitiveDistortion !== 'Tidak Ada' && (
+                      {msg.cognitiveData && (msg.cognitiveData.actionPlan?.length > 0 || msg.cognitiveData.citations?.length > 0) && (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                           <RealityDiagnosisCard diagnosis={msg.cognitiveData.diagnosis} />
                           <div className="space-y-4">
@@ -525,8 +702,8 @@ export const IntelligenceChatInterface: React.FC = () => {
                                 Rencana Aksi Konkret
                               </h3>
                               <div className="space-y-3">
-                                {msg.cognitiveData.actionPlan.map((step) => (
-                                  <div key={step.timeframe} className="border-b border-neutral-800/60 pb-2.5 last:border-b-0 last:pb-0">
+                                {msg.cognitiveData.actionPlan.map((step, stepIdx) => (
+                                  <div key={`step-${stepIdx}-${step.timeframe}`} className="border-b border-neutral-800/60 pb-2.5 last:border-b-0 last:pb-0">
                                     <div className="flex justify-between items-center mb-1">
                                       <span className="text-xs font-bold text-white">{step.title}</span>
                                       <span className="text-[9px] font-extrabold uppercase tracking-widest text-neutral-400 bg-neutral-950 border border-neutral-800 px-1.5 py-0.5 rounded">
@@ -534,6 +711,9 @@ export const IntelligenceChatInterface: React.FC = () => {
                                       </span>
                                     </div>
                                     <p className="text-[11px] text-neutral-400 leading-relaxed">{step.description}</p>
+                                    {step.expectedObstacle && (
+                                      <p className="text-[10px] text-amber-500/70 leading-relaxed mt-1 italic">Hambatan: {step.expectedObstacle}</p>
+                                    )}
                                   </div>
                                 ))}
                               </div>
@@ -549,7 +729,7 @@ export const IntelligenceChatInterface: React.FC = () => {
 
             {/* Loading Indicator */}
             {isLoading && (
-              <div className="flex gap-3 items-start">
+              <div className="flex gap-3 items-start" role="status" aria-live="polite" aria-label="TAMI sedang memproses">
                 <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20 flex-shrink-0 mt-0.5">
                   <Loader2 className="w-4 h-4 animate-spin" />
                 </div>
@@ -558,7 +738,7 @@ export const IntelligenceChatInterface: React.FC = () => {
                     <div className="rounded-2xl border border-neutral-800 bg-neutral-900/80 p-4 max-w-md shadow-sm">
                       <div className="flex items-center gap-2 text-neutral-400 text-xs font-bold mb-2">
                         <Terminal className="w-3.5 h-3.5 text-primary" />
-                        <span>Cognitive Pipeline</span>
+                        <span>Pipeline Kognitif</span>
                       </div>
                       <div className="space-y-1 font-mono text-[10px] text-neutral-400">
                         {progressLog.map((log, index) => (
@@ -589,15 +769,28 @@ export const IntelligenceChatInterface: React.FC = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ketik curhat, masalah karir, atau pertanyaan keuanganmu..."
               disabled={isLoading}
+              aria-label="Ketik pertanyaan untuk TAMI"
               className="w-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 focus:border-neutral-600 text-white rounded-2xl py-3.5 pl-5 pr-14 text-xs md:text-sm focus:outline-none transition-colors placeholder:text-neutral-500 shadow-inner"
             />
-            <button
-              type="submit"
-              disabled={isLoading || !input.trim()}
-              className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-xl bg-white text-neutral-950 hover:bg-neutral-200 transition-all disabled:opacity-30 disabled:hover:bg-white shadow-sm"
-            >
-              <Send className="w-4 h-4" />
-            </button>
+            {sseStreaming ? (
+              <button
+                type="button"
+                onClick={abortStream}
+                aria-label="Hentikan respons"
+                className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-white hover:bg-red-700 transition-all shadow-sm"
+              >
+                <Square className="w-4 h-4 fill-current" />
+              </button>
+            ) : (
+              <button
+                type="submit"
+                disabled={isLoading || !input.trim()}
+                aria-label="Kirim pesan"
+                className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-xl bg-white text-neutral-950 hover:bg-neutral-200 transition-all disabled:opacity-30 disabled:hover:bg-white shadow-sm"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            )}
           </form>
           <p className="text-[10px] text-center text-neutral-400 mt-2">
             TAMI AI dapat keliru. Verifikasi diagnosa & rujukan artikel resmi di Tamparan Anak Muda.

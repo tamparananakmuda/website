@@ -3,7 +3,7 @@ title: "Overconsumption Core: Gen Z Mulai Kritik Budaya Belanja Berlebihan"
 slug: "overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan"
 excerpt: "Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z sendiri."
 publishedAt: "2026-07-23 10:00:00+00"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

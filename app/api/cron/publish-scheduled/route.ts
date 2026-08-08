@@ -7,16 +7,18 @@ import { getScheduledWhitepapers, publishWhitepaperFile } from '@/lib/whitepaper
 import { db } from '@/lib/db';
 import { postMetadata } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { knowledgeGraph } from '@/lib/tami/rag/knowledge-graph';
+import { tamiResponseCache } from '@/lib/tami/cache/response-cache';
+
+import { checkCronAuth } from '@/lib/auth/cron-check';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 
 export async function GET(request: NextRequest) {
-  const authHeader = request.headers.get('authorization');
-  const cronSecret = process.env.CRON_SECRET;
-
-  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const cronAuth = checkCronAuth(request);
+  if (!cronAuth.isAuthorized) {
+    return cronAuth.response;
   }
 
   try {
@@ -123,6 +125,17 @@ export async function GET(request: NextRequest) {
         }
       } catch (wpError) {
         console.error(`[cron] Whitepaper publish failed for ${wp.slug}:`, wpError);
+      }
+    }
+
+    // Sync TAMI RAG index with newly published content
+    if (scheduled.length > 0 || scheduledWhitepapers.length > 0) {
+      try {
+        knowledgeGraph.reload();
+        tamiResponseCache.clear();
+        console.log('[cron] TAMI RAG index reloaded and response cache cleared');
+      } catch (ragError) {
+        console.error('[cron] TAMI RAG reload failed:', ragError);
       }
     }
 

@@ -3,7 +3,7 @@ title: "Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi B
 slug: "situationship-bukan-takut-komitmen-ekonomi-yang-membuat-komitmen-jadi-beban"
 excerpt: "Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti membuat setiap komitmen jadi beban tambahan yang tidak terjangkau."
 publishedAt: "2026-07-25 10:00:00+00"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

@@ -3,7 +3,7 @@ title: "Afiliasi TikTok Shop Bukan Bisnis, Kerja Sales untuk Platform"
 slug: "afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform"
 excerpt: "80% afiliator TikTok Shop pemula penghasilan di bawah Rp 2 juta per bulan. Komisi bisa dibekukan kapan saja. Kamu tidak punya produk, brand, atau asset."
 publishedAt: "2026-08-08T05:00:00.000Z"
-status: "scheduled"
+status: scheduled
 category: "bisnis"
 subcategory: null
 author: "yovie-setiawan"

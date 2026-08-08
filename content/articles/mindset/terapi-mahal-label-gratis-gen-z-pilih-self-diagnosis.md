@@ -3,7 +3,7 @@ title: "Terapi Mahal, Label Gratis: Kenapa Gen Z Pilih Self-Diagnosis"
 slug: "terapi-mahal-label-gratis-gen-z-pilih-self-diagnosis"
 excerpt: "Biaya psikolog Rp300-700rb per sesi. BPJS gratis tapi proses berjenjang. TikTok gratis tapi tidak akurat. Gen Z terjebak pilihan sulit."
 publishedAt: "2026-08-01 10:00:00+00"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"

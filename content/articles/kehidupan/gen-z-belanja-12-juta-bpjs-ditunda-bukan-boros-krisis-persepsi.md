@@ -3,7 +3,7 @@ title: "Gen Z Belanja Rp12 Juta, Tapi BPJS Ditunda: Bukan Boros, Krisis Persepsi
 slug: "gen-z-belanja-12-juta-bpjs-ditunda-krisis-persepsi"
 excerpt: "Gen Z Jakarta spend Rp12 juta per bulan, tapi iuran BPJS Rp35.000 dianggap bisa ditunda. Bukan soal boros, tapi krisis persepsi nilai kesehatan."
 publishedAt: "2026-07-27T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "lifestyle"
 author: "yovie-setiawan"

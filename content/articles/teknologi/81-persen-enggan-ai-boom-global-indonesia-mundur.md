@@ -3,7 +3,7 @@ title: "81% Enggan Pakai AI: Boom Global, Tapi Indonesia Malah Mundur"
 slug: "81-persen-enggan-ai-boom-global-indonesia-mundur"
 excerpt: "81,8% warga Indonesia tidak mengakses AI pada 2026, naik dari 72,7% di 2025. Boom global, tapi Indonesia malah bergerak mundur."
 publishedAt: "2026-07-26T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

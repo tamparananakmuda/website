@@ -3,7 +3,7 @@ title: "Skill Not School: Tapi Sistem Tetap Pakai Ijazah"
 slug: "skill-not-school-tapi-sistem-tetap-pakai-ijazah"
 excerpt: "Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1. Sistem tetap minta ijazah yang kamu ambil hutang untuk dapatkan."
 publishedAt: "2026-07-24 05:00:00+00"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

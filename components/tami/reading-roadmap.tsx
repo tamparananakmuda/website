@@ -28,14 +28,17 @@ export const ReadingRoadmap: React.FC<ReadingRoadmapProps> = ({ citations }) => 
       <div className="relative flex flex-col gap-6 pl-4 border-l border-neutral-800">
         {citations.map((cite, index) => {
           const isSeries = cite.type === 'series';
+          const isWhitepaper = cite.type === 'whitepaper';
           const articleUrl = isSeries 
             ? `/seri/${cite.slug}` 
+            : isWhitepaper
+            ? `/whitepaper/${cite.slug}`
             : `/artikel/${cite.slug}`;
 
           return (
-            <div key={cite.slug} className="relative flex flex-col gap-2 group">
+            <div key={`${cite.type}-${cite.slug}`} className="relative flex flex-col gap-2 group">
               {/* Timeline dot */}
-              <div className="absolute -left-[25px] top-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full border border-neutral-800 bg-neutral-950 text-[10px] font-bold text-neutral-400 group-hover:border-primary group-hover:text-primary transition-colors">
+              <div className="absolute -left-[25px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-neutral-800 bg-neutral-950 text-[10px] font-bold text-neutral-400 group-hover:border-primary group-hover:text-primary transition-colors">
                 {index + 1}
               </div>
 
@@ -43,9 +46,11 @@ export const ReadingRoadmap: React.FC<ReadingRoadmapProps> = ({ citations }) => 
                 <span className={`text-[9px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded border ${
                   isSeries 
                     ? 'bg-purple-500/10 text-purple-400 border-purple-500/20' 
+                    : isWhitepaper
+                    ? 'bg-blue-500/10 text-blue-400 border-blue-500/20'
                     : 'bg-primary/10 text-primary border-primary/20'
                 }`}>
-                  {isSeries ? 'Seri Investigasi' : 'Esai Realita'}
+                  {isSeries ? 'Seri Investigasi' : isWhitepaper ? 'Whitepaper' : 'Esai Realita'}
                 </span>
                 
                 {cite.seriesName && cite.seriesOrder && (

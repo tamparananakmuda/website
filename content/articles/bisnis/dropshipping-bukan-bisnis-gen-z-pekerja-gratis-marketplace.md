@@ -3,7 +3,7 @@ title: "Dropshipping Bukan Bisnis, Gen Z Jadi Pekerja Gratis Marketplace"
 slug: "dropshipping-bukan-bisnis-gen-z-pekerja-gratis-marketplace"
 excerpt: "63% dropshipper berhenti dalam 90 hari. Margin bersih Rp12.400 per transaksi. Dropshipping bukan bisnis, kamu pekerja gratis marketplace."
 publishedAt: "2026-08-02T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "bisnis"
 subcategory: "bisnis"
 author: "yovie-setiawan"

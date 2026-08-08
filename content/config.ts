@@ -31,7 +31,7 @@ export interface SeriesConfig {
   title: string;
   slug: string;
   description: string | null;
-  status?: 'published' | 'coming-soon';
+  status?: 'published' | 'coming-soon' | 'scheduled';
   expectedDate?: string; // ISO date string, e.g. "2026-08-01"
   expectedParts?: number; // planned total parts
   teaser?: string; // short hook for coming soon
@@ -77,6 +77,9 @@ export const series: SeriesConfig[] = [
   // Coming Soon
   { id: 'c3d4e5f6-a7b8-9012-cdef-345678901234', title: 'Pendidikan Mahal: Sekolah yang Tidak Mengajarkan Hidup', slug: 'pendidikan-mahal', description: 'Sekolah mengajarkan cara lulus ujian, bukan cara lulus hidup. Seri ini membongkar kenapa sistem pendidikan Indonesia membuat lulusan lebih siap jadi karyawan daripada hidup mandiri.', status: 'coming-soon', expectedDate: '2026-08-15', expectedParts: 8, teaser: 'Berapa banyak yang kamu bayar untuk gelar yang tidak menjamin apa-apa?' },
   { id: 'd4e5f6a7-b8c9-0123-def4-456789012345', title: 'Krisis Demografis Indonesia: Sistem yang Tidak Memberi Alasan Punya Anak', slug: 'krisis-demografis-indonesia', description: 'Gen Z tidak mau punya anak. Bukan egois, bukan hedonis. Mereka hitung dan tidak ada yang masuk akal. Seri ini membongkar kenapa sistem membuat punya anak jadi keputusan irasional.', status: 'coming-soon', expectedDate: '2026-09-01', expectedParts: 10, teaser: 'Kenapa Gen Z lebih punya kucing daripada anak?' },
+  { id: 'e5f6a7b8-c9d0-1234-efab-567890123456', title: 'Sistem Finansial Indonesia: Didesain Menang dari Kamu', slug: 'sistem-finansial-indonesia', description: 'Setiap produk finansial yang dijual ke gen Z Indonesia, dari bank sampai kripto, didesain agar sistem selalu menang. Bukan teori konspirasi, tapi mekanisme yang bisa dibuktikan dengan data OJK, BI, dan BEI.', status: 'coming-soon', expectedDate: '2026-08-01', expectedParts: 6, teaser: 'Bank, kredit, saham, kripto, asuransi, pensiun. Setiap lapis mengambil. Berapa total yang sistem ambil dari gajimu?' },
+  { id: 'f6a7b8c9-d0e1-2345-fabc-678901234567', title: 'Sistem Hukum Indonesia: Keadilan yang Didesain untuk yang Punya', slug: 'sistem-hukum-indonesia', description: 'Setiap kali Gen Z berhadapan dengan sistem hukum Indonesia, dari UU ITE sampai kasus korupsi, sistem dirancang agar yang punya sumber daya selalu menang. Bukan teori konspirasi, tapi mekanisme yang bisa dibuktikan dengan data MA, KPK, dan LBH.', status: 'scheduled', expectedDate: '2026-09-15', expectedParts: 8, teaser: 'Miskin di penjara, kaya di rumah. Koruptor 2 tahun, pencuri 5 tahun. Keadilan untuk siapa?' },
+  { id: 'a7b8c9d0-e1f2-3456-abcd-789012345678', title: 'Sistem Birokrasi Indonesia: Pelayanan yang Didesain untuk Membuatmu Menyerah', slug: 'sistem-birokrasi-indonesia', description: 'Setiap urusan dengan negara di Indonesia adalah test kesabaran yang dirancang untuk membuatmu menyerah. Bukan sistem yang melayani, tapi sistem yang memperlambat. Seri ini membongkar kenapa birokrasi Indonesia tidak gagal, tapi berfungsi seperti yang dirancang.', status: 'coming-soon', expectedDate: '2026-10-01', expectedParts: 7, teaser: 'Urus KTP butuh hari libur. Paspor antri 6 jam. Izin usaha butuh 20 dokumen. Kenapa sistem dirancang untuk membuatmu menyerah?' },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryConfig | undefined {

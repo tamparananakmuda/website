@@ -3,7 +3,7 @@ title: "AI Companion: Bukan Teman, Candu Pengganti Hubungan Manusia"
 slug: "ai-companion-bukan-teman-candu-pengganti-hubungan-manusia"
 excerpt: "81% Gen Z Indonesia curhat ke AI. Indonesia #2 dunia pakai Character.AI. 74% bilang AI pengaruhi keputusan hidup. AI companion bukan teman, itu candu."
 publishedAt: "2026-08-04T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

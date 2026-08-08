@@ -5,7 +5,7 @@ excerpt: >-
   Remaja tanpa teman dekat naik 150% dalam 16 tahun. Friendship breakup bukan
   drama, tapi konsekuensi ekonomi yang membuat pertemanan jadi kemewahan.
 publishedAt: '2026-08-06T05:00:00.000Z'
-status: scheduled
+status: published
 category: kehidupan
 subcategory: kehidupan-relasi
 author: yovie-setiawan

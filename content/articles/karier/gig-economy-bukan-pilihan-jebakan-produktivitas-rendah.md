@@ -3,7 +3,7 @@ title: "Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah"
 slug: "gig-economy-bukan-pilihan-jebakan-produktivitas-rendah"
 excerpt: "2,41 juta pekerja digital, 75% di bawah Rp3 juta per bulan. Gen Z bukan pilih gig economy, sektor formal yang tidak mau serap."
 publishedAt: "2026-07-29T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-tren"
 author: "yovie-setiawan"

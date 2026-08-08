@@ -3,7 +3,7 @@ title: "86% Merasa Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Justru Celah
 slug: "86-persen-pede-bisa-kenali-scam-35-persen-tetap-kena"
 excerpt: "86% orang Indonesia pede bisa kenali scam, tapi 35% tetap jadi korban. Bukan bodoh, tapi overconfidence justru celah terbesar."
 publishedAt: "2026-07-28T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "mindset-psikologi"
 author: "yovie-setiawan"

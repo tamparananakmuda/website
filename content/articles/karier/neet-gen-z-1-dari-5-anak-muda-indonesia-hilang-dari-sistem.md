@@ -3,7 +3,7 @@ title: "NEET Gen Z: 1 dari 5 Anak Muda Indonesia Hilang dari Sistem"
 slug: "neet-gen-z-1-dari-5-anak-muda-indonesia-hilang-dari-sistem"
 excerpt: "20,31% anak muda Indonesia berstatus NEET, tidak sekolah tidak kerja tidak pelatihan. Bukan malas, sistem yang tidak punya jalur untuk mereka."
 publishedAt: "2026-08-03T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

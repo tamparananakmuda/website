@@ -5,7 +5,7 @@ excerpt: >-
   Gen Z punya 8-15 langganan digital aktif. Total pengeluaran 2,5x perkiraan.
   Kamu membayar sewa untuk hiburan, penyimpanan, makan, tanpa memiliki apa pun.
 publishedAt: '2026-07-30T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

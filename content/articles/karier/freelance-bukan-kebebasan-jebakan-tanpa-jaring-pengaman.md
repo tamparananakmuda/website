@@ -3,7 +3,7 @@ title: "Freelance Bukan Kebebasan, Itu Jebakan Tanpa Jaring Pengaman"
 slug: "freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman"
 excerpt: "84% Gen Z Indonesia condong ke freelance. Tapi 75% pekerja platform penghasilannya di bawah Rp3 juta. Freelance bukan kebebasan, jebakan tanpa jaminan sosial."
 publishedAt: "2026-07-30 01:00:00+00"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-freelance"
 author: "yovie-setiawan"

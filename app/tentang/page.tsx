@@ -4,6 +4,8 @@ import { OrganizationSchema } from '@/components/schema/organization-schema';
 import { AboutPageSchema } from '@/components/schema/about-page-schema';
 import { ArrowUpRight, Sparkles, Shield, Compass, Layers, CheckCircle } from 'lucide-react';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+
 export const metadata: Metadata = {
   title: 'Tentang Kami — TAMPARAN ANAK MUDA',
   description:
@@ -11,7 +13,31 @@ export const metadata: Metadata = {
   keywords: ['tentang tamparan anak muda', 'editorial media indonesia', 'prinsip editorial', 'jurnalisme independen'],
   robots: { index: true, follow: true },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/tentang`,
+    canonical: `${siteUrl}/tentang`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: `${siteUrl}/tentang`,
+    siteName: 'TAMPARAN ANAK MUDA',
+    title: 'Tentang Kami — TAMPARAN ANAK MUDA',
+    description:
+      'Manifesto editorial, visi, dan komitmen riset independen TAMPARAN ANAK MUDA. Media digital modern yang menyajikan analisis tajam, jujur, dan bertahan lama.',
+    images: [
+      {
+        url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp',
+        width: 1600,
+        height: 900,
+        alt: 'Tentang TAMPARAN ANAK MUDA',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tentang Kami — TAMPARAN ANAK MUDA',
+    description:
+      'Manifesto editorial, visi, dan komitmen riset independen TAMPARAN ANAK MUDA. Media digital modern yang menyajikan analisis tajam, jujur, dan bertahan lama.',
+    images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
   },
 };
 

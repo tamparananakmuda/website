@@ -3,7 +3,7 @@ title: "Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya"
 slug: "gen-z-doomerism-pesimis-bukan-depresi-mereka-baca-datanya"
 excerpt: "Gen Z disebut sakit mental karena pesimis. Tapi data BPS, YouGov, dan Jakpat mendukung pesimisme itu. Mungkin yang perlu periksa mata adalah yang masih optimis."
 publishedAt: "2026-08-03T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "mindset-realita"
 author: "yovie-setiawan"

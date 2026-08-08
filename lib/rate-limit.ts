@@ -30,6 +30,12 @@ interface RateLimitOptions {
   window: number;
   /** Unique identifier for the rate limit rule (e.g., 'donasi', 'newsletter') */
   identifier: string;
+  /** Higher limit for authenticated users (optional) */
+  authenticatedLimit?: number;
+  /** Burst limit: max requests in a short burst window (optional) */
+  burstLimit?: number;
+  /** Burst window in seconds (default: 10) */
+  burstWindow?: number;
 }
 
 interface RateLimitResult {
@@ -79,13 +85,45 @@ export async function rateLimit(
   options: RateLimitOptions
 ): Promise<RateLimitResult> {
   const ip = getClientIP(request);
-  const key = `ratelimit:${options.identifier}:${ip}`;
+  const userId = request.headers.get('x-user-id') || '';
+  const userKey = userId ? `user:${userId}` : `ip:${ip}`;
+  const key = `ratelimit:${options.identifier}:${userKey}`;
   const windowMs = options.window * 1000;
+
+  // Determine effective limit: authenticated users get higher limit if configured
+  const effectiveLimit = (userId && options.authenticatedLimit) ? options.authenticatedLimit : options.limit;
+
+  // Check burst limit first (if configured)
+  if (options.burstLimit) {
+    const burstWindowMs = (options.burstWindow || 10) * 1000;
+    const burstKey = `${key}:burst`;
+    const r = getRedis();
+
+    if (!r) {
+      const burstResult = memoryRateLimit(burstKey, options.burstLimit, burstWindowMs);
+      if (!burstResult.success) {
+        return { success: false, remaining: 0, reset: Date.now() + burstWindowMs };
+      }
+    } else {
+      const now = Date.now();
+      const burstStart = now - burstWindowMs;
+      const burstPipeline = r.pipeline();
+      burstPipeline.zremrangebyscore(burstKey, 0, burstStart);
+      burstPipeline.zadd(burstKey, { score: now, member: now.toString() });
+      burstPipeline.zcard(burstKey);
+      burstPipeline.expire(burstKey, options.burstWindow || 10);
+      const burstResults = await burstPipeline.exec();
+      const burstCount = burstResults[2] as number;
+      if (burstCount > options.burstLimit) {
+        return { success: false, remaining: 0, reset: now + burstWindowMs };
+      }
+    }
+  }
 
   const r = getRedis();
 
   if (!r) {
-    return memoryRateLimit(key, options.limit, windowMs);
+    return memoryRateLimit(key, effectiveLimit, windowMs);
   }
 
   const now = Date.now();
@@ -100,9 +138,9 @@ export async function rateLimit(
   const results = await pipeline.exec();
   const count = results[2] as number;
 
-  const remaining = Math.max(0, options.limit - count);
+  const remaining = Math.max(0, effectiveLimit - count);
   const reset = now + windowMs;
-  const success = count <= options.limit;
+  const success = count <= effectiveLimit;
 
   return { success, remaining, reset };
 }

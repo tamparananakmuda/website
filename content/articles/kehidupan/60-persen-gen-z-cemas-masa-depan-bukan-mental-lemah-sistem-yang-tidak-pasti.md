@@ -3,7 +3,7 @@ title: "60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti"
 slug: "60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti"
 excerpt: "Survei Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial. Bukan mental lemah, tapi sistem yang tidak memberi kepastian."
 publishedAt: "2026-07-30T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "kehidupan-sosial"
 author: "yovie-setiawan"

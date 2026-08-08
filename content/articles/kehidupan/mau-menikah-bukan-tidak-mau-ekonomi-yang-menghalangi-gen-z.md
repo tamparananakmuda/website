@@ -3,7 +3,7 @@ title: "Mau Menikah Bukan Tidak Mau: Ekonomi yang Menghalangi Gen Z"
 slug: "mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z"
 excerpt: "Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi."
 publishedAt: "2026-07-23 01:00:00+00"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

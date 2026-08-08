@@ -5,7 +5,7 @@ excerpt: >-
   Rumah sewa, hiburan sewa, uang sewa, kerja sewa, barang sewa. Synthesis peta
   lengkap ekonomi sewa Indonesia. Siapa arsitek di balik sistem ini?
 publishedAt: '2026-08-03T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

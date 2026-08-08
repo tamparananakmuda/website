@@ -47,6 +47,8 @@ export interface CitationRef {
   relevanceExplanation: string;
 }
 
+export type SeverityLevel = 'ringan' | 'sedang' | 'berat';
+
 export interface TamiCognitiveResponse {
   mindState: MindState;
   diagnosis: DiagnosisResult;
@@ -55,5 +57,7 @@ export interface TamiCognitiveResponse {
   conversationalReply: string; // The streamable response
   suggestions?: string[]; // Quick suggestion prompts for user follow-up
   escalationUrl?: string; // WhatsApp or consultation escalation link
+  severityLevel?: SeverityLevel; // Level severity untuk tone calibration
+  isDegraded?: boolean; // T7-6: True when running in fallback mode (Mistral down)
 }
 

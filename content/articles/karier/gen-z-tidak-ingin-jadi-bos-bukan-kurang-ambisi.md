@@ -3,7 +3,7 @@ title: "6% Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistem yang Tidak Menarik"
 slug: "gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi"
 excerpt: "Hanya 6% Gen Z mau jadi bos. Tapi 70% develop skill tiap minggu. Bukan kurang ambisi, sistem kerja yang tidak sepadan dengan harga yang harus dibayar."
 publishedAt: "2026-08-01 01:00:00+00"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

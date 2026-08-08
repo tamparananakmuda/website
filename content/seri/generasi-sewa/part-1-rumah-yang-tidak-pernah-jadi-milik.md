@@ -5,7 +5,7 @@ excerpt: >-
   Rasio harga rumah vs pendapatan Indonesia 16,73. Butuh 17 tahun gaji untuk
   beli rumah. KPR bukan kepemilikan, kamu menyewa dari bank 25 tahun.
 publishedAt: '2026-07-29T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

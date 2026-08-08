@@ -3,7 +3,7 @@ title: "Back to Basic Dating: Gen Z Capai Situationship, Bukan Konservatif"
 slug: "back-to-basic-dating-bukan-konservatif-efisiensi-emosional"
 excerpt: "Tagar #HubunganSehat miliaran views. Gen Z bukan tiba-tiba konservatif. Mereka capai dengan situationship, ghosting, dan hubungan ambigu yang menguras energi."
 publishedAt: "2026-08-03T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

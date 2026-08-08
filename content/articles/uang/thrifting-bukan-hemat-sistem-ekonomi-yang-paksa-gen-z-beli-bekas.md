@@ -3,7 +3,7 @@ title: "Thrifting Bukan Hemat, Sistem Ekonomi yang Paksa Gen Z Beli Bekas"
 slug: "thrifting-bukan-hemat-sistem-paksa-gen-z-beli-bekas"
 excerpt: "63% pelanggan thrift Gen Z, 67% beli untuk hemat. Bukan tren, tapi sistem yang tidak mampu sediakan barang baru terjangkau."
 publishedAt: "2026-07-29T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "uang-finansial"
 author: "yovie-setiawan"

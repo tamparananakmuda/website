@@ -3,7 +3,7 @@ title: "Langganan Digital Bukan Gaya Hidup, Itu Pengeluaran Tak Kasat Mata"
 slug: "langganan-digital-pengeluaran-tak-kasat-mata"
 excerpt: "48% Gen Z Indonesia tidak berlangganan digital bukan karena bijak, tapi tidak mampu. Yang berlangganan meremehkan pengeluaran hingga 2,5x lipat. Cek sekarang."
 publishedAt: "2026-07-30 05:00:00+00"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "uang-finansial"
 author: "yovie-setiawan"

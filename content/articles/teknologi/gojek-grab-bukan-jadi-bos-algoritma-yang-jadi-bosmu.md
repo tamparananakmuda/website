@@ -3,7 +3,7 @@ title: "Gojek Grab Bukan Jadi Bos Sendiri, Algoritma yang Jadi Bosmu"
 slug: "gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu"
 excerpt: "Perpres 27/2026 potongan turun ke 8%, BPJS wajib. Tapi algoritma tetap atur tarif, jam, rute. Mitra ojol bukan entrepreneur, pekerja tanpa kendali."
 publishedAt: "2026-08-02T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "analisis-fenomena"
 author: "yovie-setiawan"

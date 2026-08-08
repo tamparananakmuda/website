@@ -3,7 +3,7 @@ title: "Generasi Stroberi: Label untuk Sistem yang Gagal"
 slug: "generasi-stroberi-label-untuk-sistem-yang-gagal"
 excerpt: "Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa masalahnya bukan kelemahan individu, melainkan sistem yang gagal."
 publishedAt: "2026-07-22 10:00:00+00"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

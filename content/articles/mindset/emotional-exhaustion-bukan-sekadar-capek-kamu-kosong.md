@@ -3,7 +3,7 @@ title: "Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong"
 slug: "emotional-exhaustion-bukan-sekadar-capek-kamu-kosong"
 excerpt: "Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional exhaustion. Gen Z paling rentan mengalaminya."
 publishedAt: "2026-07-22 05:00:00+00"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "mindset-realita"
 author: "yovie-setiawan"

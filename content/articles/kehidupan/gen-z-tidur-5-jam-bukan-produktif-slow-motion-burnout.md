@@ -3,7 +3,7 @@ title: "Gen Z Tidur 5 Jam: Bukan Produktif, Itu Slow-Motion Burnout"
 slug: "gen-z-tidur-5-jam-bukan-produktif-slow-motion-burnout"
 excerpt: "Indonesia #7 negara paling kurang tidur dunia. 46% dewasa tidur 4-6 jam. Bukan disiplin, itu sistem sita waktu dan hustle culture jual sleep deprivation."
 publishedAt: "2026-08-05T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "lifestyle"
 author: "yovie-setiawan"

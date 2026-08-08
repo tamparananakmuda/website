@@ -3,7 +3,7 @@ title: "Dana Pensiun Gen Z: Nabung 40 Tahun untuk Uang yang Belum Pasti Ada"
 slug: "dana-pensiun-gen-z-nabung-40-tahun-untuk-uang-yang-belum-pasti-ada"
 excerpt: "Replacement ratio pensiun Indonesia hanya 15-20% vs standar ILO 40%. Gen Z nabung 40 tahun, hasilnya di bawah UMP. Bukan kamu yang salah, sistemnya."
 publishedAt: "2026-08-08T01:00:00.000Z"
-status: "scheduled"
+status: scheduled
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

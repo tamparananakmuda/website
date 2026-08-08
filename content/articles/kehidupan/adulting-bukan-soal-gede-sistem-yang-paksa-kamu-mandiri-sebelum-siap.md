@@ -3,7 +3,7 @@ title: "Adulting Bukan Soal Gede: Sistem yang Paksa Kamu Mandiri Sebelum Siap"
 slug: "adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap"
 excerpt: "64% Gen Z masih andalkan ortu. Gaji Rp4 juta, biaya hidup Jakarta Rp7 juta. Bukan telat dewasa, sistem tidak kasih ruang transisi untuk dewasa dengan layak."
 publishedAt: "2026-08-06T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "lifestyle"
 author: "yovie-setiawan"

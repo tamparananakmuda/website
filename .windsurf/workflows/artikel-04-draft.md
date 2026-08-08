@@ -125,10 +125,12 @@ Artikel TAM mendukung interactive chart yang di-render langsung dari markdown. T
 | `title` | Ya | string | Judul chart (conclusion-first) |
 | `subtitle` | Ya | string | Subtitle/konteks |
 | `source` | Ya | string | Sumber data + tahun |
-| `data` | Ya | array | Data points |
+| `data` | Ya | array | Data points (setiap item berisi `label` atau `name`, `value`, dan opsional `color`) |
 | `height` | Tidak | number | Tinggi chart px (default 300) |
 | `yLabel` | Tidak | string | Label Y-axis |
 | `xLabel` | Tidak | string | Label X-axis |
+
+> **Catatan Data Key**: Frontend renderer (`WhitepaperChartRenderer`) secara otomatis mendukung penggunaan properti `label` maupun `name` pada item `data`. Menggunakan `label` disarankan untuk Bar/Line chart dan `name` untuk Pie/Donut chart, namun keduanya diproses secara interchangeable.
 
 ### Contoh: Bar Chart
 
@@ -161,8 +163,9 @@ Artikel TAM mendukung interactive chart yang di-render langsung dari markdown. T
 - Data di chart HARUS juga disebut di narasi (untuk AI SEO dan accessibility)
 - Setiap chart harus punya title, subtitle, dan source
 - Gunakan TAM color palette: `#f4a825` (amber), `#ef4444` (red), `#3b82f6` (blue), `#22c55e` (green), `#a855f7` (purple)
+- `label` dan `name` di dalam array `data` sama-sama didukung oleh renderer `WhitepaperChartRenderer`
 - Chart di-render oleh `MarkdownContent` component (sama untuk artikel dan seri)
-- Component: `components/markdown-content.tsx` + `components/charts/chart-renderer.tsx`
+- Component: [components/markdown-content.tsx](file:///Users/yoviesetiawan/TAMPARAN%20ANAK%20MUDA/TAM%20-%20WEBSITE/components/markdown-content.tsx) + [components/charts/chart-renderer.tsx](file:///Users/yoviesetiawan/TAMPARAN%20ANAK%20MUDA/TAM%20-%20WEBSITE/components/charts/chart-renderer.tsx)
 - Lihat `/whitepaper-05-draft` untuk contoh lengkap semua chart type
 
 ## Interactive Components (Calculator, Comparison Table, Nerd Box)

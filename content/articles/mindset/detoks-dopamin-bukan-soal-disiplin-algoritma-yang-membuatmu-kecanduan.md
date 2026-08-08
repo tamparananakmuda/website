@@ -3,7 +3,7 @@ title: "Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan"
 slug: "detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan"
 excerpt: "41% Gen Z Indonesia batasi notifikasi. Bukan soal disiplin, algoritma media sosial sengaja didesain mengeksploitasi sistem reward otakmu."
 publishedAt: "2026-07-24 01:00:00+00"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "mindset-realita"
 author: "yovie-setiawan"

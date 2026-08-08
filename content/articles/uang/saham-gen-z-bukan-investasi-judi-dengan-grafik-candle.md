@@ -3,7 +3,7 @@ title: "Saham Gen Z: Bukan Investasi, Judi dengan Grafik Candle"
 slug: "saham-gen-z-bukan-investasi-judi-dengan-grafik-candle"
 excerpt: "50% transaksi saham ritel, 70% Gen Z. 620 ribu orang trading harian, 72% rugi. Saham Gen Z bukan investasi, itu judi dengan grafik candle."
 publishedAt: "2026-08-04T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

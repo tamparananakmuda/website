@@ -5,7 +5,7 @@ excerpt: >-
   63% Gen Z menunda pernikahan karena ekonomi. Situationship bukan ketakutan,
   tapi respons rasional terhadap gaji yang tidak pasti. Baca datanya.
 publishedAt: '2026-08-04T05:00:00.000Z'
-status: scheduled
+status: published
 category: kehidupan
 subcategory: kehidupan-relasi
 author: yovie-setiawan

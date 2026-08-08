@@ -3,7 +3,7 @@ title: "Rp9,5 Triliun Hilang: Penipuan Online Bukan Soal Bodoh, Soal Sistem"
 slug: "rp-9-5-triliun-penipuan-online-bukan-soal-bodoh"
 excerpt: "Rp9,5 triliun hilang akibat scam, 1 dari 4 WNI jadi korban. Penipuan online bukan soal bodoh, tapi sistem yang tidak melindungi."
 publishedAt: "2026-07-27T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "uang"
 subcategory: "keuangan-uang"
 author: "yovie-setiawan"

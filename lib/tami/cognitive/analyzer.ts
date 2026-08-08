@@ -1,15 +1,70 @@
 import { mistral } from '../mistral/client';
 import { MindState, DiagnosisResult } from './types';
+import { cognitiveAnalysisSchema } from '../validation/schemas';
+import { parseAndValidate } from '../validation/parse';
 
 // Crisis keywords/patterns for quick regex detection (as a fail-safe layer before LLM)
 const CRISIS_KEYWORDS = [
-  'bunuh diri', 'akhiri hidup', 'pengen mati', 'suicide', 'self harm', 
-  'potong nadi', 'gantung diri', 'lompat dari gedung'
+  // Direct
+  'bunuh diri', 'akhiri hidup', 'pengen mati', 'suicide', 'self harm',
+  'potong nadi', 'gantung diri', 'lompat dari gedung',
+  // Indonesian euphemisms & slang
+  'capek hidup', 'capai hidup', 'lelah hidup', 'lelah sama hidup',
+  'nggak kuat lagi', 'nggak sanggup lagi', 'ga kuat lagi', 'gak kuat',
+  'nyawa udah habis', 'udah cukup', 'udah nyerah', 'mau pergi',
+  'pengen hilang', 'pengen nyembunyi', 'pengen lenyap',
+  'ngilang dari dunia', 'pergi selamanya', 'tidak mau ada',
+  'mau end', 'udah mau end', 'fix mau end', 'pengen end',
+  'nabrak', 'tabrakan', 'lompat', 'junub',
+  'tidak berguna', 'nggak berguna', 'ga berguna', 'beban keluarga',
+  'beban orang', 'sampah masyarakat', 'layak mati',
+  'tidak ada gunanya', 'nggak ada gunanya', 'ga ada gunanya hidup',
+  // English
+  'end it all', 'give up on life', 'tired of living', 'want to disappear',
+  'no reason to live', 'better off dead',
+  // Additional patterns - self-harm methods
+  'minum racun', 'minum obat banyak', 'overdosis', 'overdose',
+  'nabrak mobil', 'nabrak motor', 'lompat jembatan', 'lompat genteng',
+  'nyilet', 'melukai diri', 'menyakiti diri', 'melukai diri sendiri',
+  // Hopelessness indicators
+  'tidak ada harapan', 'nggak ada harapan', 'ga ada harapan',
+  'putus asa', 'udah habis', 'tidak ada jalan keluar', 'nggak ada jalan keluar',
+  'mau bunuh', 'rencana mati', 'sudah persiapan', 'menulis surat perpisahan',
 ];
+
+/**
+ * Determine crisis escalation level based on keyword severity.
+ * - 'immediate': direct self-harm intent or method mentioned
+ * - 'warning': hopelessness/passive ideation
+ * - 'monitor': euphemisms that warrant attention
+ */
+export function getCrisisEscalationLevel(query: string): 'immediate' | 'warning' | 'monitor' | 'none' {
+  const q = query.toLowerCase();
+  
+  const immediatePatterns = [
+    'bunuh diri', 'akhiri hidup', 'suicide', 'self harm', 'potong nadi',
+    'gantung diri', 'lompat dari', 'minum racun', 'overdosis', 'overdose',
+    'nyilet', 'melukai diri', 'menyakiti diri', 'mau bunuh', 'rencana mati',
+    'menulis surat perpisahan', 'sudah persiapan',
+  ];
+  
+  const warningPatterns = [
+    'pengen mati', 'pengen hilang', 'pengen lenyap', 'mau end', 'pengen end',
+    'pergi selamanya', 'ngilang dari dunia', 'layak mati', 'putus asa',
+    'tidak ada harapan', 'tidak ada jalan keluar', 'udah cukup', 'udah nyerah',
+    'tired of living', 'no reason to live', 'better off dead', 'end it all',
+  ];
+  
+  if (immediatePatterns.some(p => q.includes(p))) return 'immediate';
+  if (warningPatterns.some(p => q.includes(p))) return 'warning';
+  if (CRISIS_KEYWORDS.some(p => q.includes(p))) return 'monitor';
+  return 'none';
+}
 
 export async function analyzeCognitiveState(
   query: string,
-  history: { role: 'user' | 'assistant'; content: string }[] = []
+  history: { role: 'user' | 'assistant'; content: string }[] = [],
+  model?: string
 ): Promise<{
   mindState: MindState;
   diagnosis: DiagnosisResult;
@@ -20,10 +75,10 @@ export async function analyzeCognitiveState(
   if (hasCrisisKeyword) {
     return {
       mindState: {
-        primaryEmotion: 'Despair',
+        primaryEmotion: 'Putus Asa',
         resilienceScore: 1,
         crisisDetected: true,
-        coreDilemma: 'Severe mental crisis / self-harm risk detected.',
+        coreDilemma: 'Krisis mental berat / indikasi menyakiti diri terdeteksi dari input pengguna.',
       },
       diagnosis: {
         metrics: {
@@ -42,7 +97,7 @@ export async function analyzeCognitiveState(
   }
 
   const historyText = history.length > 0
-    ? history.map(h => `${h.role === 'user' ? 'User' : 'TAMI'}: ${h.content}`).join('\n')
+    ? history.map(h => `${h.role === 'user' ? 'User' : 'TAMI'}: ${h.content.slice(0, 1000)}`).join('\n').slice(0, 8000)
     : 'Tidak ada riwayat percakapan sebelumnya.';
 
   const prompt = `Anda adalah TAMI (Tamparan Anak Muda Intelligence) Cognitive Diagnosis Engine.
@@ -77,23 +132,43 @@ Analisislah input di atas secara kontekstual dengan mempertimbangkan perkembanga
 }`;
 
   try {
-    const response = await mistral.chat({
-      messages: [
-        { role: 'system', content: 'Anda wajib merespons dalam format JSON yang valid.' },
-        { role: 'user', content: prompt }
-      ],
-      responseFormat: { type: 'json_object' }
+    const buildMessages = (errorFeedback?: string) => [
+      { role: 'system' as const, content: 'Anda wajib merespons dalam format JSON yang valid.' },
+      { role: 'user' as const, content: errorFeedback ? `${prompt}\n\n${errorFeedback}` : prompt },
+    ];
+
+    let response = await mistral.chat({
+      model,
+      temperature: 0.3,
+      messages: buildMessages(),
+      responseFormat: { type: 'json_object' },
+      promptCacheKey: 'tami-cognitive',
+      maxTokens: 1000
     });
 
-    const content = response.choices[0].message.content;
-    const parsed = JSON.parse(content);
+    let content = response.choices[0].message.content;
+    let result = parseAndValidate(content, cognitiveAnalysisSchema);
 
-    // Double check crisis detected from LLM output
-    if (parsed.mindState?.crisisDetected) {
-      parsed.mindState.crisisDetected = true;
+    // Retry once with error feedback if validation fails
+    if (!result.success) {
+      const feedback = `Output JSON sebelumnya tidak valid. Error: ${result.error}. Perbaiki dan hasilkan JSON yang valid sesuai schema yang diminta.`;
+      response = await mistral.chat({
+        model,
+        temperature: 0.2,
+        messages: buildMessages(feedback),
+        responseFormat: { type: 'json_object' },
+        promptCacheKey: 'tami-cognitive',
+        maxTokens: 1000
+      });
+      content = response.choices[0].message.content;
+      result = parseAndValidate(content, cognitiveAnalysisSchema);
     }
 
-    return parsed;
+    if (result.success) {
+      return result.data;
+    }
+
+    throw new Error(`Cognitive analysis validation failed after retry: ${result.error}`);
   } catch (error) {
     console.error('Failed to perform cognitive diagnosis:', error);
     // Fallback safe diagnosis in case of API failure

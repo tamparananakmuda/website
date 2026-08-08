@@ -3,7 +3,7 @@ title: "Menabung Jadi Irasional: Bukan Gen Z Boros, Matematikanya yang Tidak Mas
 slug: "menabung-irasional-bukan-boros-matematika-tidak-masuk-akal"
 excerpt: "Gaji Gen Z Rp 2,7-3,2 juta, kenaikan upah minus 0,06% sementara inflasi 2,72%. Menabung bukan soal niat, tapi matematika yang tidak berpihak."
 publishedAt: "2026-07-26T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "mindset-realita"
 author: "yovie-setiawan"

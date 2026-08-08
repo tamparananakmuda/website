@@ -3,7 +3,7 @@ title: "Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses, Tapi Kosong di Kas"
 slug: "omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas"
 excerpt: "Bisnis Gen Z terlihat sukses di Instagram: omzet jutaan, FYP, pesanan bludak. Tapi saat dihitung, sisa laba minus. Omzet bukan untung."
 publishedAt: "2026-07-24 10:00:00+00"
-status: "scheduled"
+status: published
 category: "bisnis"
 subcategory: "bisnis"
 author: "yovie-setiawan"

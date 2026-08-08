@@ -3,7 +3,7 @@ title: "Ghosting Bukan Tidak Bisa Komunikasi, Hubungan yang Dijual Terlalu Murah
 slug: "ghosting-bukan-tidak-bisa-komunikasi-hubungan-yang-dijual-terlalu-murah"
 excerpt: "63% anak muda Indonesia pakai dating apps. Ghosting nyumbang 8,4% perceraian. Bukan kelemahan komunikasi, tapi respons rasional ke sistem tanpa konsekuensi."
 publishedAt: "2026-08-07T10:00:00.000Z"
-status: "scheduled"
+status: published
 category: "kehidupan"
 subcategory: "hubungan-sosial"
 author: "yovie-setiawan"

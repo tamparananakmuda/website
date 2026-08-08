@@ -3,7 +3,7 @@ title: "Personal Branding Bukan Karier, Itu Kerja Gratis untuk Platform"
 slug: "personal-branding-bukan-karier-kerja-gratis-untuk-platform"
 excerpt: "72% recruiter pakai LinkedIn, tapi 842 ribu sarjana menganggur. Personal branding bikin LinkedIn dapat content gratis, kamu dapat visibility tanpa jaminan."
 publishedAt: "2026-08-07T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"

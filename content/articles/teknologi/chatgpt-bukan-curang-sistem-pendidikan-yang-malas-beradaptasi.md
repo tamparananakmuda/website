@@ -3,7 +3,7 @@ title: "ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi"
 slug: "chatgpt-bukan-curang-sistem-pendidikan-yang-malas-beradaptasi"
 excerpt: "95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah diajarkan etikanya. Dosen juga pakai, tapi mahasiswa yang disalahkan."
 publishedAt: "2026-07-27 01:00:00+00"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

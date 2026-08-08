@@ -8,12 +8,12 @@ import { getPostsPublishedThisWeek } from '@/lib/articles/loader';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 
-export async function GET(request: NextRequest) {
-  const authHeader = request.headers.get('authorization');
-  const cronSecret = process.env.CRON_SECRET;
+import { checkCronAuth } from '@/lib/auth/cron-check';
 
-  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+export async function GET(request: NextRequest) {
+  const cronAuth = checkCronAuth(request);
+  if (!cronAuth.isAuthorized) {
+    return cronAuth.response;
   }
 
   try {

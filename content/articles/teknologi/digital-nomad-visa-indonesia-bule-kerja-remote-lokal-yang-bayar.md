@@ -3,7 +3,7 @@ title: "Digital Nomad Visa Indonesia: Bule Kerja Remote di Bali, Lokal yang Baya
 slug: "digital-nomad-visa-indonesia-bule-kerja-remote-lokal-yang-bayar"
 excerpt: "E33G visa $60,000/tahun. Harga sewa Canggu naik 11-41%. 342 deportasi 2026. Indonesia jual visa digital nomad, warga lokal yang bayar harga naik."
 publishedAt: "2026-08-06T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "analisis-fenomena"
 author: "yovie-setiawan"

@@ -6,7 +6,7 @@ excerpt: >-
   Thrifting dan rental bukan pilihan gaya hidup, tapi adaptasi dari
   ketidakmampuan.
 publishedAt: '2026-08-02T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

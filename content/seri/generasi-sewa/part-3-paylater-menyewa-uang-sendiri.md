@@ -5,7 +5,7 @@ excerpt: >-
   Utang paylater Indonesia Rp 43,28 triliun per Mei 2026. 88% pengguna Milenial
   dan Gen Z. Paylater bukan kemudahan, kamu menyewa uang sendiri dengan bunga.
 publishedAt: '2026-07-31T07:00:00.000Z'
-status: scheduled
+status: published
 category: uang
 subcategory: keuangan-uang
 author: yovie-setiawan

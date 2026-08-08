@@ -32,13 +32,13 @@ export const RealityDiagnosisCard: React.FC<RealityDiagnosisCardProps> = ({ diag
   const getMetricLabel = (key: string) => {
     switch (key) {
       case 'financialStress':
-        return 'Financial Stress';
+        return 'Tekanan Finansial';
       case 'careerBurnout':
-        return 'Career Burnout';
+        return 'Burnout Karir';
       case 'socialPressure':
-        return 'Social Pressure';
+        return 'Tekanan Sosial';
       case 'futureAnxiety':
-        return 'Future Anxiety';
+        return 'Kecemasan Masa Depan';
       default:
         return key;
     }
@@ -67,10 +67,10 @@ export const RealityDiagnosisCard: React.FC<RealityDiagnosisCardProps> = ({ diag
   };
 
   const chartData = [
-    { metric: 'Financial', skor: scoreMapping[diagnosis.metrics.financialStress] ?? 0 },
-    { metric: 'Career', skor: scoreMapping[diagnosis.metrics.careerBurnout] ?? 0 },
-    { metric: 'Social', skor: scoreMapping[diagnosis.metrics.socialPressure] ?? 0 },
-    { metric: 'Future', skor: scoreMapping[diagnosis.metrics.futureAnxiety] ?? 0 },
+    { metric: 'Finansial', skor: scoreMapping[diagnosis.metrics.financialStress] ?? 0 },
+    { metric: 'Karir', skor: scoreMapping[diagnosis.metrics.careerBurnout] ?? 0 },
+    { metric: 'Sosial', skor: scoreMapping[diagnosis.metrics.socialPressure] ?? 0 },
+    { metric: 'Masa Depan', skor: scoreMapping[diagnosis.metrics.futureAnxiety] ?? 0 },
   ];
 
   const series = [
@@ -86,7 +86,7 @@ export const RealityDiagnosisCard: React.FC<RealityDiagnosisCardProps> = ({ diag
           <TamiIcon className="w-5 h-5" />
         </div>
         <div>
-          <h3 className="font-bold text-white text-base">Reality Diagnosis</h3>
+          <h3 className="font-bold text-white text-base">Diagnosa Realita</h3>
           <p className="text-xs text-neutral-400">Analisis kondisi mental & realita hidupmu saat ini.</p>
         </div>
       </div>

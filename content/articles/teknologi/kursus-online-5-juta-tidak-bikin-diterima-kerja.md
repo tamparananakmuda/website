@@ -3,7 +3,7 @@ title: "Kursus Online Rp5 Juta Tidak Bikin Kamu Diterima Kerja"
 slug: "kursus-online-5-juta-tidak-bikin-diterima-kerja"
 excerpt: "1,1 juta sarjana menganggur. EdTech Indonesia tumbuh 20% per tahun. Kursus online tidak ciptakan lapangan kerja. Masalahnya job gap, bukan skill gap."
 publishedAt: "2026-07-31T05:00:00.000Z"
-status: "scheduled"
+status: published
 category: "teknologi"
 subcategory: "teknologi-ai"
 author: "yovie-setiawan"

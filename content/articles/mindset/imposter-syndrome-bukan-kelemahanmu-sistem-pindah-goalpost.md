@@ -3,7 +3,7 @@ title: "Imposter Syndrome Bukan Kelemahanmu, Sistem yang Terus Pindah Goalpost"
 slug: "imposter-syndrome-bukan-kelemahanmu-sistem-pindah-goalpost"
 excerpt: "78% Gen Z alami imposter syndrome. Bukan kelemahan mental, tapi respons rasional terhadap sistem yang terus naikkan standar tanpa naikkan gaji."
 publishedAt: "2026-08-05T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "mindset"
 subcategory: "psikologi"
 author: "yovie-setiawan"

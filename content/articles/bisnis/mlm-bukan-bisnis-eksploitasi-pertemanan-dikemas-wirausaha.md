@@ -3,7 +3,7 @@ title: "MLM Bukan Bisnis: Itu Eksploitasi Pertemanan yang Dikemas Jadi Entrepren
 slug: "mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha"
 excerpt: "FTC bongkar 99% peserta MLM rugi. Omzet industri Rp16,3 triliun, tapi mayoritas peserta dapat <Rp84/bulan. MLM bukan bisnis, itu eksploitasi relasi sosial."
 publishedAt: "2026-07-31T01:00:00.000Z"
-status: "scheduled"
+status: published
 category: "bisnis"
 subcategory: "bisnis"
 author: "yovie-setiawan"

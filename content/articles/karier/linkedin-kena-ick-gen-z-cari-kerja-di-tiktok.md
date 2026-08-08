@@ -3,7 +3,7 @@ title: "LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok, Bukan di Platform Profesi
 slug: "linkedin-kena-ick-gen-z-cari-kerja-di-tiktok"
 excerpt: "Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke TikTok dan Instagram, di mana informasi karier terasa lebih nyata."
 publishedAt: "2026-07-22 01:00:00+00"
-status: "scheduled"
+status: published
 category: "karier"
 subcategory: "karier-dunia-kerja"
 author: "yovie-setiawan"
