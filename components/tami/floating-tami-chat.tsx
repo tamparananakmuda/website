@@ -179,38 +179,38 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 pointer-events-none">
-      {/* Backdrop overlay for focus */}
+    <div className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 z-50 flex items-end justify-end pointer-events-none p-0 sm:p-0">
+      {/* Backdrop overlay for focus on mobile screens */}
       <div 
-        className="fixed inset-0 bg-black/60 backdrop-blur-md pointer-events-auto"
+        className="fixed inset-0 bg-black/50 backdrop-blur-xs pointer-events-auto sm:hidden"
         onClick={onClose}
       />
 
-      {/* Main Panel */}
+      {/* Main Panel - Sleek Bottom Right Floating Card */}
       <div 
         ref={containerRef}
-        className="relative w-full max-w-2xl h-[650px] max-h-[88vh] flex flex-col border border-neutral-800 bg-neutral-950/95 rounded-3xl overflow-hidden shadow-2xl shadow-primary/25 backdrop-blur-2xl pointer-events-auto animate-in zoom-in-95 duration-200"
+        className="relative w-full sm:w-[420px] h-full sm:h-[580px] max-h-[100vh] sm:max-h-[85vh] flex flex-col border-t sm:border border-neutral-800 bg-neutral-950/95 sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/80 backdrop-blur-2xl pointer-events-auto animate-in slide-in-from-bottom-5 duration-300"
       >
         {/* Glow effect at top border */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80" />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-90" />
 
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-neutral-900 bg-neutral-950/80 px-5 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
-              <TamiIcon className="w-4 h-4" />
+        <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/50 px-4 py-3.5 backdrop-blur-md">
+          <div className="flex items-center gap-2.5">
+            <div className="flex h-7 w-7 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm">
+              <TamiIcon className="w-3.5 h-3.5" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-white text-xs tracking-wide">KONSULTASI TAMI AI</span>
-                <span className="bg-primary/10 text-primary border border-primary/20 text-[8px] font-extrabold px-1 py-0.5 rounded tracking-widest">
+                <span className="bg-primary/10 text-primary border border-primary/20 text-[8px] font-extrabold px-1.5 py-0.5 rounded tracking-wider">
                   PORTAL
                 </span>
               </div>
             </div>
           </div>
           
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             {/* New Chat Button */}
             {messages.length > 0 && (
               <button
@@ -220,7 +220,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                   window.dispatchEvent(new Event('tami_history_updated'));
                 }}
                 title="Sesi Chat Baru"
-                className="flex items-center gap-1 px-2 py-1 rounded-lg border border-neutral-800 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-[10px] font-bold"
+                className="flex items-center gap-1 px-2 py-1 rounded-lg border border-neutral-800 bg-neutral-900 text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all text-[10px] font-bold"
               >
                 <PlusCircle className="w-3 h-3 text-primary" />
                 <span>Baru</span>
@@ -236,7 +236,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                   window.dispatchEvent(new Event('tami_history_updated'));
                 }}
                 title="Hapus Obrolan"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-900 text-neutral-400 hover:text-red-500 hover:bg-neutral-900 transition-colors"
+                className="flex h-7 w-7 items-center justify-center rounded-lg text-neutral-400 hover:text-red-400 hover:bg-neutral-900 transition-colors"
               >
                 <Trash2 className="w-3.5 h-3.5" />
               </button>
@@ -247,7 +247,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
               href="/tami"
               onClick={onClose}
               title="Buka Halaman Penuh"
-              className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-900 text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
+              className="flex h-7 w-7 items-center justify-center rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
             >
               <Maximize2 className="w-3.5 h-3.5" />
             </Link>
@@ -255,7 +255,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
             {/* Close button */}
             <button
               onClick={onClose}
-              className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-900 text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
+              className="flex h-7 w-7 items-center justify-center rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
