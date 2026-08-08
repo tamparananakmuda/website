@@ -20,3 +20,6 @@ next-env.d.ts
 # Supabase
 supabase/.branches
 supabase/.temp
+
+# TAMI
+lib/tami/rag/content-hashes.json

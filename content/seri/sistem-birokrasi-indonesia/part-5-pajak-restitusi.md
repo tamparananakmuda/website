@@ -21,10 +21,10 @@ tags:
   - gen-z
   - sistem-indonesia
 ogHeadline: 'Pajak ambil cepat, kembali lambat'
-seoMetaTitle: 'Pajak Dipotong Otomatis Tapi Restitusi Bulanan: Sistem Cepat Ambil | TAM'
+seoMetaTitle: 'Pajak Dipotong Otomatis Tapi Restitusi Bulanan: Sistem Cepat Ambil'
 seoMetaDescription: >-
-  Gen Z pertama kenal pajak dari slip gaji yang dipotong. Restitusi dari 12 bulan
-  jadi 15 hari, tapi Coretax transisi tidak mulus. Sistem cepat ambil, lambat kembali.
+  Gen Z kenal pajak dari slip gaji yang dipotong. Restitusi dari 12 bulan jadi 15
+  hari, tapi Coretax tidak mulus. Sistem cepat ambil, lambat kembali.
 seoKeywords:
   - pajak Indonesia Gen Z
   - PPh 21 dipotong
@@ -100,6 +100,8 @@ Gue ingat pertama kali lihat slip gaji full-time. Potongan PPh 21 ada di sana, a
 ## Pajak yang Tidak Transparan untuk Gen Z
 
 PPh 21 dipotong otomatis, tapi SPT Tahunan adalah tugas individu. Banyak Gen Z tidak lapor SPT karena merasa "sudah selesai" saat dipotong. Mereka tidak tahu bahwa kewajiban administratif masih ada. Konsekuensinya: denda, tidak bisa urus dokumen, blocked dari layanan tertentu.
+
+[Gen Z sudah tahu pajak makan gaji mereka](/artikel/pajak-gen-z-bukan-pph-21-ppn-11-persen-yang-makan-gaji). PPh 21 dipotong, PPN 11% dibayar setiap belanja. Tapi restitusi? Itu kata yang asing. Dan dengan [47% Gen Z hidup gaji ke gaji tanpa sisa](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa), setiap rupiah yang tertahan di sistem adalah rupiah yang tidak bisa dipakai untuk makan. Sistem tidak peduli. Sistem ambil dulu, kembalikan nanti. Kalau kamu tidak ajukan, sistem simpan.
 
 Sistem pajak Indonesia mengambil duluan, menjelaskan belakangan. Potongan ada di slip gaji tanpa penjelasan. SPT Tahunan wajib tapi tidak diajarkan di sekolah. Restitusi berhak diajukan tapi tidak diinformasikan. Coretax janji lebih mudah tapi transisi tidak mulus.
 

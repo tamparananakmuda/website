@@ -95,6 +95,8 @@ Calo SIM bukan penyakit terpisah dari sistem. Calo SIM adalah produk sampingan d
 
 Hapus calo tanpa perbaiki sistem ujian = buang sampah tanpa tutup tempatnya. Calo berikutnya akan muncul karena permintaan tidak hilang. Selama ujian resmi dianggap sulit, tidak konsisten, dan memakan waktu, orang akan cari jalan lain. Dan jalan lain itu punya harga yang lebih murah dari biaya waktu yang dihabiskan untuk jalur resmi.
 
+Gen Z sudah terbiasan [naik ojol karena transportasi publik tidak ada](/artikel/gen-z-naik-ojol-bukan-manja-transportasi-publik-tidak-ada). Sekarang mereka juga harus terbiasa bayar calo karena jalur resmi tidak ada yang berfungsi. Pola yang sama: sistem tidak menyediakan alternatif yang masuk akal, jadi Gen Z cari jalan sendiri. Dan [adulting bukan soal gede, tapi sistem yang paksa kamu mandiri sebelum siap](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap). Urus SIM adalah salah satu ujian pertama yang membuktikan: sistem tidak dirancang untuk memudahkan, tapi untuk membuatmu menyerah.
+
 IDN Research Institute menulis dalam laporannya bahwa praktik jalur alternatif ini bukan sekadar pelanggaran aturan, tapi bentuk adaptasi terhadap sistem yang tidak responsif. "Persoalan yang muncul bukan karena rendahnya moralitas individu, melainkan karena adanya ketidaksesuaian antara nilai yang diyakini dengan mekanisme yang tersedia dalam sistem."
 
 Artinya: orang tahu pakai calo itu salah. Tapi sistem tidak memberi alternatif yang masuk akal. Jadi mereka pilih yang masuk akal, bukan yang benar. Dan siapa yang salah? Orang yang pilih yang masuk akal, atau sistem yang tidak menyediakan yang benar?

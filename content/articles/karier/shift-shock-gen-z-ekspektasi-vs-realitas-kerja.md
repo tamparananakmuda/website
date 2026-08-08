@@ -1,7 +1,7 @@
 ---
 title: "Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai"
 slug: "shift-shock-gen-z-ekspektasi-vs-realitas-kerja"
-excerpt: "72% pekerja mengalami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi terlalu tinggi, tapi sistem kerja yang tidak sesuai janji."
+excerpt: "72% pekerja alami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi tinggi, tapi sistem kerja yang tidak sesuai janji."
 publishedAt: "2026-09-04T01:00:00+07:00"
 status: "scheduled"
 category: "karier"
@@ -19,14 +19,14 @@ tags:
   - "realitas-kerja"
 ogHeadline: "Kerja pertama bikin kamu kecewa? Kamu tidak salah"
 seoMetaTitle: "Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja"
-seoMetaDescription: "72% pekerja mengalami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi terlalu tinggi, tapi sistem kerja yang tidak sesuai janji."
+seoMetaDescription: "72% pekerja alami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi tinggi, tapi sistem kerja yang tidak sesuai janji."
 seoKeywords:
-  - "shift shock gen z Indonesia"
-  - "ekspektasi kerja gen z"
-  - "gen z resign kerja pertama"
-  - "realitas dunia kerja gen z"
-  - "kesenjangan ekspektasi kerja"
-  - "gen z fresh graduate kecewa kerja"
+  - "shift shock"
+  - "ekspektasi kerja"
+  - "resign"
+  - "realitas kerja"
+  - "kesenjangan ekspektasi"
+  - "fresh graduate"
 sourceReferences:
   - type: "link"
     url: "https://www.themuse.com/advice/shift-shock-muse-survey-2022"
@@ -91,7 +91,7 @@ coverImageAlt: null
 
 Di Indonesia, datanya lebih spesifik. BMC Psychology merilis studi 2026 terhadap 751 karyawan Gen Z Indonesia: hingga 60% mempertimbangkan resign dalam dua tahun pertama kerja. Survei Gateway Commercial Finance yang dilaporkan Kompas pada Mei 2026 menemukan Gen Z bertahan rata-rata 1,8 tahun di satu pekerjaan. 47% berencana resign dalam setahun.
 
-Angka-angka ini sering dibaca sebagai bukti Gen Z lemah, tidak tahan banting, ekspektasi terlalu tinggi. Tapi coba balik: kalau 72% pekerja merasa ditipu oleh deskripsi kerja, siapa yang sebenarnya berlebihan ekspektasinya?
+Angka-angka ini sering dibaca sebagai bukti Gen Z lemah, tidak tahan banting, ekspektasi terlalu tinggi. Tapi coba balik: kalau 72% pekerja merasa ditipu oleh deskripsi kerja, siapa yang berlebihan ekspektasinya?
 
 ## Apa Itu Shift Shock?
 
@@ -121,17 +121,17 @@ Gap antara ekspektasi dan realitas inilah yang disebut shift shock. Gen Z masuk 
 
 ## 60% Gen Z Indonesia Mau Resign di 2 Tahun Pertama
 
-BMC Psychology menerbitkan studi 2026 yang memvalidasi ERG (Existence, Relatedness, Growth) scale untuk karyawan Gen Z Indonesia. Dari 751 responden, penelitian menemukan hingga 60% mempertimbangkan resign dalam dua tahun pertama kerja. Tingkat turnover Gen Z di Indonesia termasuk yang tertinggi di dunia.
+Sebuah studi dari BMC Psychology menerbitkan validasi ERG (Existence, Relatedness, Growth) scale untuk karyawan Gen Z Indonesia. Dari 751 responden, penelitian menemukan hingga 60% mempertimbangkan resign dalam dua tahun pertama kerja. Tingkat turnover Gen Z di Indonesia termasuk yang tertinggi di dunia.
 
 Studi UGM 2026 yang melibatkan 268 Gen Z memperkuat temuan ini. Menggunakan analisis PLS-SEM, penelitian menemukan kesenjangan ekspektasi kerja berpengaruh positif terhadap intensi job-hopping dan stres kerja. Stres kerja memediasi hubungan tersebut: semakin besar gap antara ekspektasi dan realitas, semakin tinggi stres, semakin kuat keinginan pindah.
 
-Penelitian JSSR 2026 di Kabupaten Asahan melibatkan 110 Gen Z yang sudah bekerja. Hasilnya: persepsi kerja berpengaruh signifikan terhadap realitas kerja (koefisien 0,954). Keduanya berpengaruh langsung terhadap retensi kerja. Artinya, keselarasan antara harapan awal dan kondisi nyata di tempat kerja menentukan keputusan Gen Z untuk bertahan atau pergi.
+Penelitian JSSR 2026 di Kabupaten Asahan melibatkan 110 Gen Z yang sudah bekerja. Hasilnya: persepsi kerja berpengaruh kuat terhadap realitas kerja (koefisien 0,954). Keduanya berpengaruh langsung terhadap retensi kerja. Artinya, keselarasan antara harapan awal dan kondisi nyata di tempat kerja menentukan keputusan Gen Z untuk bertahan atau pergi.
 
 Ini bukan cerita generasi yang gampang menyerah. Ini cerita generasi yang merasa dijual janji yang tidak ditepati. Seperti yang kita bahas tentang [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), pindah kerja bukan ketidakloyalan. Tapi respons rasional terhadap sistem yang tidak memberi alasan untuk setia.
 
 ## Passion Myth: Kuliah Janji Kerja Sesuai Jurusan, Pasar Tidak Sediakan
 
-Salah satu sumber shift shock terbesar adalah passion myth. Dari bangku kuliah, Gen Z didoktrin: "Cari kerja sesuai passion." Media sosial memperkuat dengan konten motivasi: "Do what you love, you'll never work a day in your life." Tapi realitasnya?
+Salah satu sumber shift shock terbesar adalah passion myth. Dari bangku kuliah, Gen Z didoktrin: "Cari kerja sesuai passion." Media sosial memperkuat dengan konten motivasi: "Do what you love, you'll never work a day in your life." Tapi realitasnya berbeda jauh.
 
 Harvard Graduate School of Education, bekerja sama dengan Gallup dan Walton Foundation, mensurvei 2.436 Gen Z. Hasilnya: 90% ingin pekerjaan yang bermakna dan berdampak positif. Tapi hanya sekitar 50% yang menemukannya. Saat diberi pilihan antara kerja bermakna atau kerja dengan gaji dua kali lipat tapi kurang bermakna, 46% memilih gaji lebih tinggi.
 
@@ -155,7 +155,7 @@ CELIOS menghitung: biaya bertahan hidup saat cari kerja di DKI Jakarta Rp39,8 ju
 
 World Economic Forum 2025 melaporkan employee engagement global hanya 20%, titik terendah dalam satu dekade. Robert Walters menemukan 57% Gen Z tidak berniat menjadi manajer tingkat menengah, fenomena yang disebut conscious unbossing. Gen Z tidak mengejar kursi bos. Mereka sudah melihat [PHK membongkar ilusi kerja keras](/artikel/phk-kerja-keras-tidak-menjamin-aman): kerja keras tidak menjamin aman, jabatan tidak menjamin stabilitas.
 
-Gen Z terjebak di antara dua pilihan, keduanya tidak ideal. Bertahan di kerja yang tidak sesuai, dengan stres yang terus menumpuk. Atau resign dan kembali ke antrian cari kerja yang mahal dan panjang. Pilihan ini bukan pilihan. Itu jebakan.
+Gen Z terjebak di antara dua pilihan, keduanya tidak ideal. Bertahan di kerja yang tidak sesuai, dengan stres yang terus menumpuk. Atau resign dan kembali ke antrian cari kerja yang mahal dan panjang. Pilihan ini bukan pilihan, itu jebakan.
 
 ## Insight
 

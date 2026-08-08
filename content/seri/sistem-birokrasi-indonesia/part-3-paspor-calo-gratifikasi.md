@@ -96,6 +96,8 @@ Gen Z hitung: 6 jam kerja = gaji harian. Kalau gaji harian lebih dari Rp500 ribu
 
 Ini bukan pilihan. Ini ilusi pilihan. Sistem membuat jalur resmi begitu mahal (dalam waktu) sehingga calo menjadi rasional. Dan kemudian sistem menyalahkan orang yang memilih calo. Padahal calo tidak akan ada kalau jalur resmi berfungsi seperti yang dijanjikan: cepat, transparan, dan tidak bisa ditahan oleh oknum.
 
+Ironisnya, Indonesia punya [visa digital nomad untuk bule yang mau kerja remote](/artikel/digital-nomad-visa-indonesia-bule-kerja-remote-lokal-yang-bayar). Tapi warga sendiri yang mau urus paspor harus antri 6 jam atau bayar calo. Sistem yang ramah untuk turis, sulit untuk warga. Dan ini bagian dari pola yang lebih besar: [Gen Z beli emas bukan karena tradisi, tapi karena tidak percaya sistem finansial](/artikel/gen-z-beli-emas-bukan-tradisi-tidak-percaya-sistem-finansial). Kalau sistem finansial tidak dipercaya, sistem birokrasi juga tidak dipercaya. Logika yang sama: kalau sistem tidak melayani, cari jalan sendiri.
+
 ## Imigrasi yang Didesain untuk Disederhanakan, Tapi Dipersulit
 
 Sistem online ada. Imigrasi.go.id punya layanan pendaftaran paspor online. Tapi sering error, maintenance, atau kuota habis. Calo yang punya akses ke slot menjadi pemenang dalam sistem yang seharusnya setara.

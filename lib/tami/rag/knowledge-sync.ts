@@ -120,6 +120,9 @@ export function detectContentChanges(
   };
 }
 
+// In-memory hash cache (persists across warm serverless invocations)
+let inMemoryHashCache: ContentFileHash[] | null = null;
+
 /**
  * Check if RAG embeddings cache needs rebuild.
  */
@@ -130,13 +133,16 @@ export function checkRagSyncNeeded(basePath: string): {
 } {
   const currentFiles = scanContentFiles(basePath);
   
-  let cachedFiles: ContentFileHash[] | null = null;
-  const hashCachePath = join(basePath, 'lib/tami/rag/content-hashes.json');
-  if (existsSync(hashCachePath)) {
-    try {
-      cachedFiles = JSON.parse(readFileSync(hashCachePath, 'utf-8'));
-    } catch {
-      cachedFiles = null;
+  // Use in-memory cache first (warm invocations), then try file (cold start from build)
+  let cachedFiles: ContentFileHash[] | null = inMemoryHashCache;
+  if (!cachedFiles) {
+    const hashCachePath = join(basePath, 'lib/tami/rag/content-hashes.json');
+    if (existsSync(hashCachePath)) {
+      try {
+        cachedFiles = JSON.parse(readFileSync(hashCachePath, 'utf-8'));
+      } catch {
+        cachedFiles = null;
+      }
     }
   }
   
@@ -155,6 +161,15 @@ export function checkRagSyncNeeded(basePath: string): {
       removed: changes.removed,
     },
   };
+}
+
+/**
+ * Persist current file hashes to in-memory cache.
+ * Called after a successful RAG rebuild so subsequent sync checks can detect actual changes.
+ * On Vercel serverless, this persists across warm invocations only.
+ */
+export function saveHashCache(basePath: string): void {
+  inMemoryHashCache = scanContentFiles(basePath);
 }
 
 /**

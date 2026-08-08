@@ -88,7 +88,8 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
               setStreamedText(fullTextRef.current);
               options?.onToken?.(event.content);
             } else if (event.type === 'done') {
-              options?.onComplete?.(fullTextRef.current);
+              const finalText = fullTextRef.current || 'Maaf, TAMI tidak bisa memberikan respons saat ini. Silakan coba lagi.';
+              options?.onComplete?.(finalText);
             }
           } catch {
             // Skip unparseable events

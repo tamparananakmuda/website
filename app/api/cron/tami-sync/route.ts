@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkCronAuth } from '@/lib/auth/cron-check';
-import { checkRagSyncNeeded } from '@/lib/tami/rag/knowledge-sync';
+import { checkRagSyncNeeded, saveHashCache } from '@/lib/tami/rag/knowledge-sync';
 import { knowledgeGraph } from '@/lib/tami/rag/knowledge-graph';
 import { tamiResponseCache } from '@/lib/tami/cache/response-cache';
 
@@ -36,6 +36,9 @@ export async function GET(request: NextRequest) {
     knowledgeGraph.reload();
     const newCount = knowledgeGraph.chunkCount;
     tamiResponseCache.clear();
+
+    // Persist hash cache so next cron run can detect actual changes
+    saveHashCache(contentPath);
 
     console.log('[cron] TAMI RAG auto-sync triggered', {
       changes: syncCheck.changes,

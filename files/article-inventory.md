@@ -161,6 +161,14 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 149 | Gen Z Childfree Bukan Egois: Gaji Tidak Cukup untuk Anak | gen-z-childfree-bukan-egois-gaji-tidak-cukup-untuk-anak | Kehidupan | Siklus Ekonomi Generasi | kontra-narasi | 2026-09-01 (scheduled 08:00 WIB) |
 | 150 | Gen Z Naik Ojol ke Kantor: Bukan Manja, Transportasi Publik yang Tidak Ada | gen-z-naik-ojol-bukan-manja-transportasi-publik-tidak-ada | Uang | Literasi Finansial | kontra-narasi | 2026-09-02 (scheduled 08:00 WIB) |
 | 151 | Pajak Gen Z Bukan PPh 21, PPN 11% yang Makan Gaji Mereka | pajak-gen-z-bukan-pph-21-ppn-11-persen-yang-makan-gaji | Uang | Keuangan & Uang | kontra-narasi | 2026-09-03 (scheduled 08:00 WIB) |
+| 152 | KTP Butuh Hari Libur: Birokrasi yang Paksa Kamu Cuti Kerja (Seri Birokrasi P1) | sistem-birokrasi-indonesia-part-1-ktp-butuh-hari-libur | Kehidupan | Sistem Birokrasi | data | 2026-10-01 (scheduled 08:00 WIB) |
+| 153 | SIM Lebih Sulit dari Ujian Masuk Universitas: Gen Z Pakai Calo (Seri Birokrasi P2) | sistem-birokrasi-indonesia-part-2-sim-sulit-calo | Kehidupan | Sistem Birokrasi | data | 2026-10-02 (scheduled 08:00 WIB) |
+| 154 | Paspor Antri 6 Jam atau Bayar Calo: KPK Sebut Titik Rawan Gratifikasi (Seri Birokrasi P3) | sistem-birokrasi-indonesia-part-3-paspor-calo-gratifikasi | Kehidupan | Sistem Birokrasi | data | 2026-10-03 (scheduled 08:00 WIB) |
+| 155 | 40 Juta UMKM Belum NIB: OSS Error, Gen Z Setengah Mati Urus Izin (Seri Birokrasi P4) | sistem-birokrasi-indonesia-part-4-izin-usaha-nib-oss | Kehidupan | Sistem Birokrasi | data | 2026-10-04 (scheduled 08:00 WIB) |
+| 156 | Pajak Dipotong Otomatis Tapi Restitusi Bulanan: Sistem Cepat Ambil, Lambat Kembali (Seri Birokrasi P5) | sistem-birokrasi-indonesia-part-5-pajak-restitusi | Kehidupan | Sistem Birokrasi | data | 2026-10-05 (scheduled 08:00 WIB) |
+| 157 | Pungli Indonesia: Tarif Resmi Rp50rb Jadi Rp10 Juta, Sistem yang Tidak Dibiayai (Seri Birokrasi P6) | sistem-birokrasi-indonesia-part-6-pungli-biaya-tidak-resmi | Kehidupan | Sistem Birokrasi | data | 2026-10-06 (scheduled 08:00 WIB) |
+| 158 | E-Government Indonesia: Solusi Digital yang Crash, Birokrasi yang Tidak Berubah (Seri Birokrasi P7) | sistem-birokrasi-indonesia-part-7-e-government-crash | Kehidupan | Sistem Birokrasi | data | 2026-10-07 (scheduled 08:00 WIB) |
+| 159 | Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai | shift-shock-gen-z-ekspektasi-vs-realitas-kerja | Karier | Karier & Dunia Kerja | data | 2026-09-04 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

@@ -106,6 +106,8 @@ Gen Z yang pertama kali urus dokumen: kaget saat diminta "uang lancar". Lalu ter
 
 Gue pernah urus balik nama motor. Di kantor, petugas bilang prosesnya 2 minggu. Di luar kantor, seseorang bilang "Rp300 ribu, selesai 2 hari." Gue ambil yang 2 hari. Bukan karena gue mau korupsi. Karena gue butuh motor untuk kerja, dan 2 minggu tanpa motor = 2 minggu tidak bisa kerja. Sistem tidak memberi pilihan yang masuk akal, jadi gue ambil pilihan yang masuk akal. Dan gue rasa jutaan orang lain membuat pilihan yang sama setiap hari, dengan alasan yang sama: sistem tidak memberi alternatif yang masuk akal.
 
+Pola ini sama dengan [asuransi swasta yang didesain menang dari kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu): sistem yang ambil dulu, bayar nanti, dan kalau kamu tidak ajukan, sistem simpan. Dan sama dengan [Gen Z yang beli emas karena tidak percaya sistem finansial](/artikel/gen-z-beli-emas-bukan-tradisi-tidak-percaya-sistem-finansial): selama sistem tidak dipercaya, warga cari jalan sendiri. Pungli adalah jalan sendiri yang lahir dari sistem yang tidak dipercaya.
+
 ## Insight
 
 Pungli bukan penyimpangan dari sistem. Pungli ADALAH sistem. Sistem yang tidak dibiayai dengan benar akan mencari cara lain untuk biayai dirinya sendiri. Dan cara itu dibebankan ke kamu.

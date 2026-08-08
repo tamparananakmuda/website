@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generateProactiveSuggestions, generatePersonalizedGreeting, shouldOfferEscalation } from '@/lib/tami/cognitive/proactive-engine';
 import { checkAdminAuth } from '@/lib/auth/admin-check';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 export const maxDuration = 10;
 
@@ -11,6 +12,15 @@ export const maxDuration = 10;
  */
 export async function POST(req: NextRequest) {
   try {
+    const rlResult = await rateLimit(req, {
+      limit: 20,
+      window: 60,
+      identifier: 'tami-proactive',
+    });
+    if (!rlResult.success) {
+      return rateLimitResponse(rlResult);
+    }
+
     const body = await req.json();
     const { sessionId } = body;
 

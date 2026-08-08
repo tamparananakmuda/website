@@ -98,6 +98,8 @@ Dan ini bukan keluhan dari orang yang tidak paham teknologi. SmartLegal melapork
 
 Bisnis.com melaporkan bahwa Permendag 19/2026 mewajibkan seluruh pedagang yang berjualan di platform digital memiliki NIB. Pemerintah memberikan masa transisi 18 bulan untuk seller lama, dan 6 bulan untuk seller baru. Tapi kalau urus NIB butuh berbulan-bulan karena OSS error, masa transisi 18 bulan tidak cukup. Dan kalau seller tidak punya NIB setelah masa transisi berakhir, akun mereka bisa diblokir oleh marketplace. Jualan yang sudah jadi sumber penghasilan bisa hilang karena sistem perizinan yang tidak berfungsi.
 
+Gen Z yang mulai [bisnis viral di TikTok](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati) atau [dropshipping yang sebenarnya kerja gratis untuk marketplace](/artikel/dropshipping-bukan-bisnis-gen-z-pekerja-gratis-marketplace) paling terdampak. Mereka mulai bisnis tanpa modal besar, tanpa tim legal, tanpa pengetahuan tentang KBLI atau RDTR. Tapi sistem mengharuskan mereka melewati proses yang sama dengan perusahaan besar. Hasilnya: bisnis yang belum sempat untung sudah harus setengah mati urus izin.
+
 ## PP 28/2025: Regulasi yang Memperumit, Bukan Mempermudah
 
 PP 28/2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko mengubah aturan main. Pelaku usaha tidak bisa lagi mengambil NIB tanpa memvalidasi titik lokasi usaha. Ketentuan ini menjadi hambatan utama.
