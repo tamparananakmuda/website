@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans, Syne } from 'next/font/google';
+import { Plus_Jakarta_Sans, Manrope } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
@@ -10,13 +10,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 import { WebVitals } from '@/components/web-vitals';
 
-const jakarta = Plus_Jakarta_Sans({
+const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
 });
 
-const syne = Syne({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
@@ -112,7 +112,7 @@ export default function RootLayout({
   const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
 
   return (
-    <html lang="id" className={`scroll-smooth dark ${jakarta.variable} ${syne.variable}`} suppressHydrationWarning>
+    <html lang="id" className={`scroll-smooth dark ${manrope.variable} ${jakarta.variable}`} suppressHydrationWarning>
       <head>
         <link rel="dns-prefetch" href="https://cdn.tamparananakmuda.com" />
         <link rel="dns-prefetch" href="https://analytics.tamparananakmuda.com" />

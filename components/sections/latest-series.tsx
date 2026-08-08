@@ -37,13 +37,13 @@ export function LatestSeries({ series }: LatestSeriesProps) {
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
             <div className="mb-6 flex items-center gap-4">
-              <span className="font-display text-sm font-bold text-primary">04</span>
+              <span className="font-display text-sm font-medium text-primary">04</span>
               <div className="h-px w-24 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Seri
               </span>
             </div>
-            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            <h2 className="font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
               Seri Terbaru
             </h2>
           </div>

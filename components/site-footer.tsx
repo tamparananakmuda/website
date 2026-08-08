@@ -57,9 +57,6 @@ export function SiteFooter() {
               <Link href="/newsletter-arsip" className="text-muted-foreground transition-colors hover:text-foreground">
                 Arsip Newsletter
               </Link>
-              <Link href="/masuk" className="text-muted-foreground transition-colors hover:text-foreground">
-                Akun
-              </Link>
               <Link href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
                 RSS Feed
               </Link>

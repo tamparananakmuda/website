@@ -51,9 +51,9 @@ export function NewsletterCta() {
               </span>
               <div className="h-px w-12 bg-primary" />
             </div>
-            <h2 className="mb-4 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            <h2 className="mb-4 font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
               Satu Email.
-              <span className="block text-muted-foreground">
+              <span className="block text-muted-foreground font-normal italic">
                 Bukan Konten. Tapi Sudut Pandang.
               </span>
             </h2>

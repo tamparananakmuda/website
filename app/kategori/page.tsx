@@ -61,7 +61,7 @@ export default async function CategoriesPage() {
             <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground dark:text-white/60">Topik &amp; Pillar</span>
           </div>
 
-          <h1 className="mb-8 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground dark:text-white md:text-5xl lg:text-6xl lg:leading-[1.02]">
+          <h1 className="mb-8 max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-foreground dark:text-white md:text-5xl lg:text-6xl lg:leading-[1.02]">
             Kategori
           </h1>
 
@@ -74,7 +74,7 @@ export default async function CategoriesPage() {
               <div className="flex items-center gap-3">
                 <Layers size={18} className="text-muted-foreground dark:text-white/40" />
                 <div>
-                  <div className="font-display text-2xl font-bold text-foreground dark:text-white">{categories.length}</div>
+                  <div className="font-display text-2xl font-semibold text-foreground dark:text-white">{categories.length}</div>
                   <div className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground/70 dark:text-white/30">Kategori</div>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default async function CategoriesPage() {
               <div className="flex items-center gap-3">
                 <ArrowRight size={18} className="text-muted-foreground dark:text-white/40" />
                 <div>
-                  <div className="font-display text-2xl font-bold text-foreground dark:text-white">{totalSubcategories}</div>
+                  <div className="font-display text-2xl font-semibold text-foreground dark:text-white">{totalSubcategories}</div>
                   <div className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground/70 dark:text-white/30">Sub-topik</div>
                 </div>
               </div>

@@ -175,7 +175,7 @@ const COLORS = {
   border: 'rgba(229,229,229,0.06)',
 };
 
-const FONT_DISPLAY = 'Syne';
+const FONT_DISPLAY = 'Plus Jakarta Sans';
 const FONT_BODY = 'Plus Jakarta Sans';
 const FONT_MONO = 'JetBrains Mono';
 

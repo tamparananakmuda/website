@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { Calendar, MapPin, Users, ArrowLeft, ArrowRight, Heart, Clock } from 'lucide-react';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import { VideoSlider } from '@/components/story/video-slider';
+import { PhotoGallery } from '@/components/story/photo-gallery';
 
 interface Activity {
   slug: string;
@@ -285,65 +287,11 @@ export default function StoryDetailPage({
 
         {/* Video Documentation */}
         {activity.videos && activity.videos.length > 0 && (
-          <section className="mb-10">
-            <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi Video</h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {activity.videos.map((vid, i) => (
-                <div
-                  key={i}
-                  className="relative overflow-hidden rounded-xl border border-border bg-black shadow-sm"
-                >
-                  <video
-                    src={vid}
-                    controls
-                    preload="metadata"
-                    className="h-auto w-full max-h-[480px] object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
+          <VideoSlider videos={activity.videos} />
         )}
 
         {/* Photo Gallery */}
-        <section className="mb-10">
-          <h2 className="mb-4 font-display text-xl font-bold">Dokumentasi Foto</h2>
-          {activity.gallery && activity.gallery.length > 0 ? (
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              {activity.gallery.map((img, i) => (
-                <div
-                  key={i}
-                  className="relative aspect-[3/2] overflow-hidden rounded-xl"
-                >
-                  <Image
-                    src={img}
-                    alt={`${activity.title} - Foto ${i + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    unoptimized
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div
-                  key={i}
-                  className="flex aspect-[3/2] items-center justify-center rounded-xl border border-dashed border-border bg-muted/20"
-                >
-                  <Heart size={24} className="text-muted-foreground/20" />
-                </div>
-              ))}
-            </div>
-          )}
-          {(!activity.gallery || activity.gallery.length === 0) && (
-            <p className="mt-3 text-center text-xs text-muted-foreground">
-              Foto akan tersedia setelah kegiatan berlangsung
-            </p>
-          )}
-        </section>
+        <PhotoGallery gallery={activity.gallery} title={activity.title} />
 
         {/* CTA */}
         {isUpcoming && (

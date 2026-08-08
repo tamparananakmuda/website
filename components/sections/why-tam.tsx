@@ -33,13 +33,13 @@ export function WhyTam() {
     <section className="bg-card py-24 md:py-40">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-12 flex items-center gap-4">
-          <span className="font-display text-sm font-bold text-primary">04</span>
+          <span className="font-display text-sm font-medium text-primary">04</span>
           <div className="h-px flex-1 bg-border" />
           <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
             Posisi
           </span>
         </div>
-        <h2 className="mb-16 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+        <h2 className="mb-16 font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
           Kami berbeda karena
         </h2>
         <div className="space-y-8 md:space-y-10">
@@ -51,7 +51,7 @@ export function WhyTam() {
               <p className="brush-strike text-base md:text-lg">
                 {item.negative}
               </p>
-              <p className="font-display text-xl font-bold text-primary md:text-2xl">
+              <p className="font-display text-xl font-medium text-primary md:text-2xl">
                 {item.positive}
               </p>
             </div>

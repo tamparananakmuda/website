@@ -12,13 +12,13 @@ export function Topics({ categories }: TopicsProps) {
     <section className="bg-card py-24 md:py-40">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-8 flex items-center gap-4">
-          <span className="font-display text-sm font-bold text-primary">02</span>
+          <span className="font-display text-sm font-medium text-primary">02</span>
           <div className="h-px flex-1 bg-border" />
           <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
             Topik
           </span>
         </div>
-        <h2 className="mb-4 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+        <h2 className="mb-4 font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
           Enam topik. Satu sudut pandang: kenapa, bukan cuma apa.
         </h2>
         <p className="mb-12 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -32,7 +32,7 @@ export function Topics({ categories }: TopicsProps) {
               className="group relative flex flex-col bg-card p-6 transition-colors hover:bg-secondary md:p-8"
             >
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-display text-xs font-bold text-muted-foreground/70">
+                <span className="font-display text-xs font-medium text-muted-foreground/70">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div
@@ -40,7 +40,7 @@ export function Topics({ categories }: TopicsProps) {
                   style={{ backgroundColor: category.color }}
                 />
               </div>
-              <h3 className="mb-2 font-display text-xl font-bold tracking-tight transition-colors group-hover:text-primary md:text-2xl">
+              <h3 className="mb-2 font-display text-xl font-medium tracking-tight transition-colors group-hover:text-primary md:text-2xl">
                 {category.title}
               </h3>
               {category.description && (

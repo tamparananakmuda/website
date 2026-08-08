@@ -32,23 +32,23 @@ export function Faq() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 flex items-center gap-4">
-            <span className="font-display text-sm font-bold text-primary">05</span>
+            <span className="font-display text-sm font-medium text-primary">05</span>
             <div className="h-px flex-1 bg-border" />
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
               FAQ
             </span>
           </div>
-          <h2 className="mb-12 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+          <h2 className="mb-12 font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
             Pertanyaan yang sering muncul
           </h2>
           <div className="divide-y divide-border">
             {faqItems.map((item, index) => (
               <div key={index} className="py-6 md:py-8">
                 <div className="mb-3 flex items-start gap-4">
-                  <span className="mt-1 shrink-0 font-display text-xs font-bold text-primary">
+                  <span className="mt-1 shrink-0 font-display text-xs font-medium text-primary">
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="font-display text-base font-bold leading-snug md:text-lg">
+                  <h3 className="font-display text-base font-medium leading-snug md:text-lg">
                     {item.question}
                   </h3>
                 </div>

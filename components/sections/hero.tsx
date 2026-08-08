@@ -14,31 +14,61 @@ export function Hero({ className }: HeroProps) {
 
         {/* Background */}
         <div className="absolute inset-0 z-0 overflow-hidden md:rounded-[48px]">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
-          <div
-            className="absolute inset-0 opacity-[0.15]"
+          {/* Base 4-layer gradient with soft burgundy tail: Red (#A51E2D) -> Burgundy (#5C2118) -> Deep Brown (#231514) -> Soft Burgundy Dusk (#140B0B) */}
+          <div 
+            className="absolute inset-0"
             style={{
-              backgroundImage:
-                'radial-gradient(circle at 30% 20%, hsl(0 63% 52%) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(0 63% 52% / 0.3) 0%, transparent 40%)',
+              background: 'linear-gradient(135deg, #A51E2D 0%, #5C2118 20%, #231514 45%, #140B0B 75%, #0A0606 100%)'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
+          
+          {/* Focused, tight organic light mesh (stops BEFORE reaching right side, strong right/top darkness) */}
+          <div
+            className="absolute inset-0 opacity-55 mix-blend-screen pointer-events-none"
+            style={{
+              backgroundImage: `
+                radial-gradient(ellipse at 8% 12%, rgba(165, 30, 45, 0.4) 0%, transparent 35%),
+                radial-gradient(circle at 20% 30%, rgba(92, 33, 24, 0.4) 0%, transparent 42%),
+                radial-gradient(circle at 35% 55%, rgba(35, 21, 20, 0.45) 0%, transparent 45%)
+              `,
+            }}
+          />
+
+          {/* Heavy Vignette & Dark Edge Masking: Kiri-atas fokus, kanan dan pinggir gelap pekat */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse at 35% 35%, transparent 20%, rgba(5, 5, 5, 0.65) 60%, rgba(0, 0, 0, 0.95) 100%)'
+            }}
+          />
+
+          {/* Smooth bottom transition preserving subtle #140B0B burgundy tone */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#140B0B]/30 to-[#0A0606]/90 pointer-events-none" />
+
+          {/* Ultra-subtle Micro Noise / Grain overlay (3% opacity) */}
+          <div 
+            className="absolute inset-0 opacity-[0.035] pointer-events-none mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+              backgroundRepeat: 'repeat'
+            }}
+          />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-end px-4 pb-16 text-center md:px-6 md:pb-[110px]">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-1 flex-col items-center justify-center px-4 pt-16 pb-12 text-center md:px-6 md:pt-24 md:pb-16">
           <div className="flex flex-col items-center hero-fade-in">
-            <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-primary md:mb-8 md:text-sm md:tracking-[0.3em]">
+            {/* Tagline label with lower opacity (65-70%) & reduced bottom margin to raise headline (~20px closer) */}
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-primary/70 md:mb-4 md:text-sm md:tracking-[0.3em]">
               Awakening the youth to reality
             </p>
 
-            <h1 className="mb-6 max-w-[1100px] font-display text-[34px] font-bold leading-[1.08] tracking-tight text-white md:mb-8 md:text-[4.5rem] md:leading-[1.05]">
-              Melawan Ilusi.
-              <br className="hidden md:block" />
-              Membangun Realita.
+            <h1 className="mb-6 max-w-[980px] font-display text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:mb-8 md:text-[4.5rem] md:leading-[1.05]">
+              <span className="block">Melawan Ilusi.</span>
+              <span className="block text-white/90">Membangun Realita.</span>
             </h1>
 
-            <p className="mb-8 max-w-3xl text-base leading-relaxed text-white/70 md:mb-12 md:text-xl">
+            <p className="mb-8 max-w-2xl text-[1.125rem] leading-[1.75] text-white/75 md:mb-12 md:text-[1.125rem] md:leading-[1.75]">
               Editorial media untuk anak muda Indonesia. Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan, bukan untuk membuatmu merasa nyaman, tapi agar kamu melihat kenyataan lebih jelas.
             </p>
 

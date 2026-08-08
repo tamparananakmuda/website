@@ -34,7 +34,8 @@ export default async function SeriesPage() {
     seriesConfig.map(async (s) => {
       const posts = await getPostsBySeries(s.slug, 100);
       const category = posts[0]?.categoryId ? getCategoryById(posts[0].categoryId) : null;
-      const totalReadingMinutes = posts.reduce((acc, p) => acc + (p.readingTimeMinutes || 5), 0);
+      const totalReadingMinutes = posts.reduce((acc, p) => acc + (p.readingTime || 5), 0);
+
       return { 
         ...s, 
         postCount: posts.length, 
@@ -82,8 +83,8 @@ export default async function SeriesPage() {
             </div>
 
             {/* Main Title */}
-            <h1 className="mb-6 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:leading-[1.08]">
-              Seri Konten <span className="bg-gradient-to-r from-red-500 via-rose-400 to-amber-300 bg-clip-text text-transparent">&amp; Dokumen</span>
+            <h1 className="mb-6 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:leading-[1.08]">
+              Seri Konten <span className="bg-gradient-to-r from-red-500 via-rose-400 to-amber-300 bg-clip-text text-transparent font-semibold">&amp; Dokumen</span>
             </h1>
 
             <p className="mb-8 text-base text-zinc-400 md:text-lg leading-relaxed max-w-2xl">

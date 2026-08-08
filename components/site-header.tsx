@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { User, Search, Menu, X, ArrowRight } from 'lucide-react';
+import { Search, Menu, X, Sparkles } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
+import { TamiIcon } from '@/components/tami/tami-icon';
+import { FloatingTamiChat } from '@/components/tami/floating-tami-chat';
 
 const navLinks = [
   { name: 'TAM+', href: '/sosial' },
@@ -19,21 +21,9 @@ export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === '/';
   const [isOpen, setIsOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    import('@/lib/supabase/client').then(({ createClient }) => {
-      if (cancelled) return;
-      const supabase = createClient();
-      supabase.auth.getUser().then(({ data: { user } }) => {
-        if (!cancelled) setLoggedIn(!!user);
-      });
-    });
-    return () => { cancelled = true; };
-  }, []);
+  const [isTamiOpen, setIsTamiOpen] = useState(false);
 
   useEffect(() => {
     if (!isHome) return;
@@ -46,15 +36,32 @@ export function SiteHeader() {
 
   const isCompact = isScrolled && !isHovered;
 
+  const TamiButton = () => (
+    <button
+      onClick={() => {
+        setIsTamiOpen(true);
+        setIsOpen(false); // Close mobile menu if open
+      }}
+      className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] transition-all focus:outline-none"
+    >
+      <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,#ef4444_0%,#18181b_25%,#ef4444_50%,#18181b_75%,#ef4444_100%)]" />
+      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-neutral-950 px-5 py-2 text-sm font-bold text-white backdrop-blur-3xl transition-colors hover:bg-neutral-900">
+        <TamiIcon className="h-4 w-4 text-primary" />
+        <span>TAMI AI</span>
+      </span>
+    </button>
+  );
+
   if (isHome) {
     return (
+      <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-12 md:pt-6 pointer-events-none">
         <div
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
-            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-5 pr-3 shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out',
-            isCompact ? 'max-w-2xl py-2' : 'max-w-7xl py-3.5'
+            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-6 pr-3.5 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out',
+            isCompact ? 'max-w-2xl py-3' : 'max-w-7xl py-4.5 md:py-5'
           )}
         >
           <Link
@@ -76,14 +83,14 @@ export function SiteHeader() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-2 md:flex">
+          <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/cari"
               className="flex items-center justify-center w-9 h-9 rounded-full text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
@@ -92,23 +99,7 @@ export function SiteHeader() {
               <Search className="w-4 h-4" />
             </Link>
             <ThemeToggle />
-            <Link
-              href={loggedIn ? '/akun' : '/masuk'}
-              className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <User className="w-4 h-4" />
-              {loggedIn ? 'Akun' : 'Masuk'}
-            </Link>
-            <Link
-              href="/newsletter"
-              className={cn(
-                'group flex items-center justify-center gap-1 rounded-full bg-primary font-semibold text-primary-foreground transition-all duration-300 ease-in-out hover:bg-primary/90 active:scale-95',
-                isCompact ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'
-              )}
-            >
-              Newsletter
-              <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            <TamiButton />
           </div>
 
           <button
@@ -122,7 +113,7 @@ export function SiteHeader() {
         </div>
 
         {isOpen && (
-          <div className="pointer-events-auto absolute left-4 right-4 top-[72px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden">
+          <div className="pointer-events-auto absolute left-4 right-4 top-[80px] z-30 rounded-3xl border border-border bg-card p-6 shadow-2xl md:hidden">
             <nav className="flex flex-col gap-1" aria-label="Navigasi mobile">
               {navLinks.map((link) => (
                 <Link
@@ -134,41 +125,31 @@ export function SiteHeader() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/cari"
-                className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
-                onClick={() => setIsOpen(false)}
-              >
-                <Search className="w-4 h-4" />
-                Cari
-              </Link>
-              <Link
-                href={loggedIn ? '/akun' : '/masuk'}
-                className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
-                onClick={() => setIsOpen(false)}
-              >
-                <User className="w-4 h-4" />
-                {loggedIn ? 'Akun Saya' : 'Masuk'}
-              </Link>
-              <Link
-                href="/newsletter"
-                className="mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3 font-bold text-primary-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Newsletter
-                <ArrowRight size={18} />
-              </Link>
+              <div className="mt-2 pt-2 border-t border-border flex items-center justify-between">
+                <TamiButton />
+                <Link
+                  href="/cari"
+                  className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Search className="w-4 h-4" />
+                  Cari
+                </Link>
+              </div>
             </nav>
           </div>
         )}
       </header>
+      <FloatingTamiChat isOpen={isTamiOpen} onClose={() => setIsTamiOpen(false)} />
+      </>
     );
   }
 
   return (
+    <>
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <Link
             href="/"
             className="font-display text-base font-bold tracking-tight text-foreground"
@@ -198,19 +179,7 @@ export function SiteHeader() {
               <Search className="w-4 h-4" />
             </Link>
             <ThemeToggle />
-            <Link
-              href={loggedIn ? '/akun' : '/masuk'}
-              className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <User className="w-4 h-4" />
-              {loggedIn ? 'Akun' : 'Masuk'}
-            </Link>
-            <Link
-              href="/newsletter"
-              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Newsletter
-            </Link>
+            <TamiButton />
           </div>
 
           <button
@@ -237,32 +206,24 @@ export function SiteHeader() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/cari"
-              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
-              onClick={() => setIsOpen(false)}
-            >
-              <Search className="w-4 h-4" />
-              Cari
-            </Link>
-            <Link
-              href={loggedIn ? '/akun' : '/masuk'}
-              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
-              onClick={() => setIsOpen(false)}
-            >
-              <User className="w-4 h-4" />
-              {loggedIn ? 'Akun Saya' : 'Masuk'}
-            </Link>
-            <Link
-              href="/newsletter"
-              className="mt-2 flex items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
-              onClick={() => setIsOpen(false)}
-            >
-              Newsletter
-            </Link>
+            <div className="mt-2 pt-2 border-t border-border flex items-center justify-between">
+              <TamiButton />
+              <Link
+                href="/cari"
+                className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
+                onClick={() => setIsOpen(false)}
+              >
+                <Search className="w-4 h-4" />
+                Cari
+              </Link>
+            </div>
           </nav>
         </div>
       )}
     </header>
+
+    {/* Global Floating Chatbot TAMI */}
+    <FloatingTamiChat isOpen={isTamiOpen} onClose={() => setIsTamiOpen(false)} />
+    </>
   );
 }

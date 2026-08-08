@@ -28,7 +28,7 @@ const COLORS = {
   rule: '#1C1C1C',
 };
 
-const FONT_DISPLAY = 'Syne';
+const FONT_DISPLAY = 'Plus Jakarta Sans';
 const FONT_BODY = 'Plus Jakarta Sans';
 const FONT_MONO = 'JetBrains Mono';
 

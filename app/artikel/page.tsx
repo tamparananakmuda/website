@@ -41,7 +41,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
     <main className="container mx-auto px-4 py-20 md:py-32">
       <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }]} />
       <header className="mb-12 max-w-2xl">
-        <h1 className="mb-4 text-3xl font-bold md:text-4xl">
+        <h1 className="mb-4 font-display text-3xl font-semibold md:text-4xl">
           Semua Artikel
         </h1>
         <p className="text-lg text-muted-foreground">

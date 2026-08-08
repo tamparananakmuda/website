@@ -13,13 +13,13 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-2xl">
             <div className="mb-8 flex items-center gap-4">
-              <span className="font-display text-sm font-bold text-primary">03</span>
+              <span className="font-display text-sm font-medium text-primary">03</span>
               <div className="h-px flex-1 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Artikel
               </span>
             </div>
-            <h2 className="mb-4 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            <h2 className="mb-4 font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
               Artikel Terbaru
             </h2>
             <p className="mb-8 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -44,13 +44,13 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
         <div className="mb-12 flex items-end justify-between gap-4">
           <div>
             <div className="mb-6 flex items-center gap-4">
-              <span className="font-display text-sm font-bold text-primary">03</span>
+              <span className="font-display text-sm font-medium text-primary">03</span>
               <div className="h-px w-24 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Artikel
               </span>
             </div>
-            <h2 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
+            <h2 className="font-display text-3xl font-medium leading-tight tracking-tight md:text-4xl">
               Artikel Terbaru
             </h2>
           </div>

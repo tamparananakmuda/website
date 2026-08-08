@@ -171,18 +171,20 @@ export default function DonasiForm() {
 
   return (
     <main className="min-h-screen bg-background pt-20 md:pt-28">
-      <div className="container mx-auto max-w-2xl px-4 md:px-8 pb-24">
+      <div className="container mx-auto max-w-3xl px-4 md:px-8 pb-24">
         {/* Header */}
-        <div className="mb-12">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-primary">
-            Dukung TAM
-          </p>
-          <h1 className="mb-4 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
-            Dukung jurnalisme independen
+        <div className="mb-12 text-center md:text-left">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">
+            <Heart size={14} className="fill-primary/20" />
+            <span>Dukung Jurnalisme Independen</span>
+          </div>
+          <h1 className="mb-6 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            Jaga TAM Tetap <br className="hidden sm:block" />
+            <span className="font-semibold italic text-primary">Bebas &amp; Independen.</span>
           </h1>
-          <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            TAM gratis untuk semua. Tidak ada paywall, tidak ada iklan yang mengganggu.
-            Donasi kamu membantu kami tetap independen dan terus menulis tanpa kompromi.
+          <p className="mx-auto md:mx-0 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            TAM tidak memiliki paywall, sponsor tersembunyi, atau iklan pop-up yang mengganggu. 
+            Dukungan sukarela dari kamu memastikan tulisan mendalam kami tetap tajam, bebas kepentingan, dan terbuka untuk siapa saja.
           </p>
         </div>
 
@@ -314,9 +316,9 @@ export default function DonasiForm() {
             className="space-y-8"
           >
             {/* Amount Selection */}
-            <div>
-              <label className="mb-4 block text-sm font-semibold text-foreground">
-                Pilih nominal
+            <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm">
+              <label className="mb-4 block font-display text-lg font-semibold text-foreground">
+                Pilih Nominal Dukungan
               </label>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
                 {presetAmounts.map((preset) => (
@@ -328,8 +330,8 @@ export default function DonasiForm() {
                     }}
                     className={`rounded-xl border py-4 text-sm font-semibold transition-all ${
                       !customAmount && amount === preset.value
-                        ? 'border-primary bg-primary/10 text-primary'
-                        : 'border-border bg-card text-foreground hover:border-primary/50'
+                        ? 'border-primary bg-primary/10 text-primary shadow-sm'
+                        : 'border-border bg-background text-foreground hover:border-primary/50'
                     }`}
                   >
                     {preset.label}
@@ -337,37 +339,37 @@ export default function DonasiForm() {
                 ))}
               </div>
 
-              <div className="mt-3">
+              <div className="mt-4">
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-medium text-muted-foreground">
                     Rp
                   </span>
                   <input
                     type="number"
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
-                    placeholder="Nominal lain"
+                    placeholder="Nominal kustom (misal: 150000)"
                     min={1000}
-                    className="w-full rounded-xl border border-border bg-card py-4 pl-10 pr-4 text-sm font-medium outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-xl border border-border bg-background py-4 pl-10 pr-4 text-sm font-medium outline-none transition-colors focus:border-primary"
                   />
                 </div>
               </div>
             </div>
 
             {/* Payment Method */}
-            <div>
-              <label className="mb-4 block text-sm font-semibold text-foreground">
-                Metode pembayaran
+            <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm">
+              <label className="mb-4 block font-display text-lg font-semibold text-foreground">
+                Metode Pembayaran
               </label>
-              <div className="space-y-2">
+              <div className="space-y-2.5">
                 {paymentMethods.map((method) => (
                   <button
                     key={method.id}
                     onClick={() => setPaymentType(method.id)}
                     className={`flex w-full items-center gap-4 rounded-xl border p-4 text-left transition-all ${
                       paymentType === method.id
-                        ? 'border-primary bg-primary/5'
-                        : 'border-border bg-card hover:border-primary/50'
+                        ? 'border-primary bg-primary/5 shadow-sm'
+                        : 'border-border bg-background hover:border-primary/50'
                     }`}
                   >
                     <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
@@ -404,44 +406,47 @@ export default function DonasiForm() {
             </div>
 
             {/* Optional Info */}
-            <div className="space-y-3">
+            <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm space-y-4">
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                Informasi Pendukung <span className="text-xs font-normal text-muted-foreground">(Opsional)</span>
+              </h3>
               <div>
-                <label className="mb-2 block text-sm font-medium text-muted-foreground">
-                  Nama (opsional)
+                <label className="mb-2 block text-sm font-medium text-foreground/80">
+                  Nama atau Inisial
                 </label>
                 <input
                   type="text"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
-                  placeholder="Nama kamu"
-                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
+                  placeholder="Nama kamu (atau biarkan kosong)"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                 />
               </div>
               <div>
-                <label className="mb-2 block text-sm font-medium text-muted-foreground">
-                  Email (opsional)
+                <label className="mb-2 block text-sm font-medium text-foreground/80">
+                  Email
                 </label>
                 <input
                   type="email"
                   value={customerEmail}
                   onChange={(e) => setCustomerEmail(e.target.value)}
-                  placeholder="email@kamu.com"
-                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
+                  placeholder="email@kamu.com (untuk resi digital)"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                 />
               </div>
               <div>
-                <label className="mb-2 block text-sm font-medium text-muted-foreground">
-                  Pesan untuk TAM (opsional)
+                <label className="mb-2 block text-sm font-medium text-foreground/80">
+                  Pesan atau Catatan
                 </label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Kata-kata dukungan, saran, atau apa saja"
+                  placeholder="Kirimkan kata-kata dukungan, ide artikel, atau harapan kamu untuk TAM..."
                   maxLength={280}
-                  rows={2}
-                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm outline-none transition-colors focus:border-primary resize-none"
+                  rows={3}
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary resize-none"
                 />
-                <p className="mt-1 text-xs text-muted-foreground">{message.length}/280 karakter</p>
+                <p className="mt-1 text-xs text-muted-foreground text-right">{message.length}/280</p>
               </div>
               <div className="flex items-center gap-3">
                 <button

@@ -21,7 +21,7 @@ export async function getFonts() {
 
   try {
     const [display, body, bodySemiBold, mono] = await Promise.all([
-      loadLocalFont('syne-bold.ttf'),
+      loadLocalFont('jakarta-semibold.ttf'),
       loadLocalFont('jakarta-regular.ttf'),
       loadLocalFont('jakarta-semibold.ttf'),
       loadLocalFont('jetbrains-mono-regular.ttf'),

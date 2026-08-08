@@ -74,7 +74,7 @@ export async function GET(request: Request) {
       width: 1600,
       height: 900,
       fonts: [
-        { name: 'Syne', data: fonts.display, weight: 700, style: 'normal' },
+        { name: 'Plus Jakarta Sans', data: fonts.display, weight: 700, style: 'normal' },
         { name: 'Plus Jakarta Sans', data: fonts.body, weight: 400, style: 'normal' },
         { name: 'Plus Jakarta Sans', data: fonts.bodySemiBold, weight: 600, style: 'normal' },
         { name: 'JetBrains Mono', data: fonts.mono, weight: 400, style: 'normal' },
