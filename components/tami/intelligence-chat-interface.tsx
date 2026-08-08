@@ -454,7 +454,7 @@ export const IntelligenceChatInterface: React.FC = () => {
                     </div>
 
                     <div className="flex-1 min-w-0 space-y-5">
-                      <div className="text-xs md:text-sm text-neutral-200 leading-relaxed">
+                      <div className="text-xs md:text-sm text-neutral-200 leading-relaxed bg-neutral-900/60 border border-neutral-800/80 p-4 md:p-5 rounded-2xl rounded-tl-sm shadow-sm">
                         <ChatContentRenderer content={msg.content} />
                       </div>
 

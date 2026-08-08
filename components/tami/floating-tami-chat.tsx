@@ -308,7 +308,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                     <TamiIcon className="w-4 h-4" />
                   </div>
                   <div className="flex-1 space-y-4">
-                    <div className="inline-block max-w-[90%] bg-neutral-900/50 border border-neutral-900 text-neutral-300 text-xs px-4 py-3 rounded-2xl rounded-tl-none leading-relaxed">
+                    <div className="bg-neutral-900/60 border border-neutral-800/80 text-neutral-200 text-xs px-4 py-3 rounded-2xl rounded-tl-sm leading-relaxed shadow-sm">
                       <ChatContentRenderer content={msg.content} />
                     </div>
 
