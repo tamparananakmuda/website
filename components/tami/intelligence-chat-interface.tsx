@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Sparkles, User, Terminal, Loader2, Trash2 } from 'lucide-react';
+import { Send, Sparkles, User, Terminal, Loader2, Trash2, PlusCircle } from 'lucide-react';
 import { TamiCognitiveResponse, ActionStep, CitationRef } from '@/lib/tami/cognitive/types';
 import { RealityDiagnosisCard } from './reality-diagnosis-card';
 import { ReadingRoadmap } from './reading-roadmap';
@@ -194,19 +194,36 @@ export const IntelligenceChatInterface: React.FC = () => {
         </div>
 
         {/* Action Panel */}
-        {messages.length > 0 && (
-          <button
-            onClick={() => {
-              setMessages([]);
-              localStorage.removeItem('tami_conversation_history');
-            }}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-neutral-900 bg-neutral-950 text-neutral-400 hover:text-red-500 hover:bg-neutral-900 transition-colors text-xs font-bold"
-            title="Hapus riwayat obrolan"
-          >
-            <Trash2 className="w-3.5 h-3.5" />
-            <span>Hapus Chat</span>
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {messages.length > 0 && (
+            <button
+              onClick={() => {
+                setMessages([]);
+                localStorage.removeItem('tami_conversation_history');
+                window.dispatchEvent(new Event('tami_history_updated'));
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-neutral-800 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-xs font-bold shadow-sm"
+              title="Mulai sesi obrolan baru"
+            >
+              <PlusCircle className="w-3.5 h-3.5 text-primary" />
+              <span>Chat Baru</span>
+            </button>
+          )}
+
+          {messages.length > 0 && (
+            <button
+              onClick={() => {
+                setMessages([]);
+                localStorage.removeItem('tami_conversation_history');
+              }}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-neutral-900 bg-neutral-950 text-neutral-400 hover:text-red-500 hover:bg-neutral-900 transition-colors text-xs font-bold"
+              title="Hapus riwayat obrolan"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+              <span>Hapus Chat</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Chat Area */}

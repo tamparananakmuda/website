@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, X, Maximize2, Loader2, Terminal, User, Trash2 } from 'lucide-react';
+import { Send, X, Maximize2, Loader2, Terminal, User, Trash2, PlusCircle } from 'lucide-react';
 import { TamiIcon } from './tami-icon';
 import { TamiCognitiveResponse } from '@/lib/tami/cognitive/types';
 import { RealityDiagnosisCard } from './reality-diagnosis-card';
@@ -221,12 +221,29 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
           </div>
           
           <div className="flex items-center gap-2">
+            {/* New Chat Button */}
+            {messages.length > 0 && (
+              <button
+                onClick={() => {
+                  setMessages([]);
+                  localStorage.removeItem('tami_conversation_history');
+                  window.dispatchEvent(new Event('tami_history_updated'));
+                }}
+                title="Sesi Chat Baru"
+                className="flex items-center gap-1 px-2 py-1 rounded-lg border border-neutral-800 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-[10px] font-bold"
+              >
+                <PlusCircle className="w-3 h-3 text-primary" />
+                <span>Baru</span>
+              </button>
+            )}
+
             {/* Clear Chat Button */}
             {messages.length > 0 && (
               <button
                 onClick={() => {
                   setMessages([]);
                   localStorage.removeItem('tami_conversation_history');
+                  window.dispatchEvent(new Event('tami_history_updated'));
                 }}
                 title="Hapus Obrolan"
                 className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-900 text-neutral-400 hover:text-red-500 hover:bg-neutral-900 transition-colors"
