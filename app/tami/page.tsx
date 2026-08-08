@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TamiPage() {
   return (
-    <main className="w-full h-[calc(100vh-65px)] bg-neutral-950 overflow-hidden flex flex-col">
+    <main className="w-full h-screen bg-neutral-950 overflow-hidden flex flex-col">
       <IntelligenceChatInterface />
     </main>
   );

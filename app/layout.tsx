@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Manrope } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
-import { SiteFooter } from '@/components/site-footer';
+import { ConditionalFooter } from '@/components/conditional-footer';
 import { SearchSchema } from '@/components/schema/search-schema';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -126,7 +126,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ConditionalHeader />
           <div className="flex-1" id="main-content">{children}</div>
-          <SiteFooter />
+          <ConditionalFooter />
         </ThemeProvider>
         {umamiUrl && umamiWebsiteId && (
           <Script
