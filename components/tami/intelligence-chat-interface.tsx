@@ -175,7 +175,10 @@ export const IntelligenceChatInterface: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-120px)] max-w-6xl mx-auto border border-neutral-900 bg-neutral-950/40 rounded-3xl overflow-hidden backdrop-blur-2xl">
+    <div className="relative flex flex-col h-[700px] max-w-6xl mx-auto border border-neutral-800/80 bg-neutral-950/70 rounded-3xl overflow-hidden backdrop-blur-2xl shadow-2xl shadow-primary/10">
+      {/* Top glowing accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary/80 to-transparent" />
+
       {/* Header Info */}
       <div className="flex items-center justify-between border-b border-neutral-900 bg-neutral-950/80 px-6 py-4">
         <div className="flex items-center gap-3">
