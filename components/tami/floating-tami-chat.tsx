@@ -189,7 +189,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
       {/* Main Panel */}
       <div 
         ref={containerRef}
-        className="relative w-full max-w-lg h-[600px] flex flex-col border border-neutral-800 bg-neutral-950/90 rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 backdrop-blur-2xl pointer-events-auto animate-in slide-in-from-bottom-5 duration-300"
+        className="relative w-full max-w-lg h-[520px] max-h-[82vh] flex flex-col border border-neutral-800 bg-neutral-950/90 rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 backdrop-blur-2xl pointer-events-auto animate-in slide-in-from-bottom-5 duration-300"
       >
         {/* Glow effect at top border */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80" />
