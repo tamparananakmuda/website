@@ -28,10 +28,10 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   
-  const chatEndRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Load conversation on mount & register storage change events
+  // Load conversation history from localStorage on mount
   useEffect(() => {
     const saved = localStorage.getItem('tami_conversation_history');
     if (saved) {
@@ -43,50 +43,38 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     }
     setIsLoaded(true);
 
-    // Sync with other open tabs/windows
     const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === 'tami_conversation_history' && e.newValue) {
+      if (e.key === 'tami_conversation_history') {
         try {
-          setMessages(JSON.parse(e.newValue));
+          setMessages(e.newValue ? JSON.parse(e.newValue) : []);
         } catch (err) {
           console.error('Failed to sync history from storage event', err);
         }
       }
     };
 
-    // Sync within the same window across different component instances
-    const handleLocalChange = () => {
-      const updated = localStorage.getItem('tami_conversation_history');
-      if (updated) {
-        try {
-          setMessages(JSON.parse(updated));
-        } catch (err) {
-          console.error('Failed to sync history locally', err);
-        }
-      }
-    };
-
     window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('tami_history_updated', handleLocalChange);
     return () => {
       window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('tami_history_updated', handleLocalChange);
     };
   }, []);
 
-  // Save conversation when changed and trigger custom event for same-page sync
+  // Save conversation when changed
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem('tami_conversation_history', JSON.stringify(messages));
-      window.dispatchEvent(new Event('tami_history_updated'));
     }
   }, [messages, isLoaded]);
 
+  // Scroll ONLY inside the chat container
   useEffect(() => {
-    if (messages.length > 0 || isLoading) {
-      chatEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (chatContainerRef.current && (messages.length > 0 || isLoading)) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
     }
-  }, [messages, progressLog, isLoading]);
+  }, [messages.length, isLoading]);
 
   // Handle escape key to close
   useEffect(() => {
@@ -275,7 +263,7 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-5 space-y-6">
+        <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-5 space-y-6">
           {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-center max-w-sm mx-auto space-y-4 py-8">
               <div className="relative">
@@ -405,7 +393,6 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
               </div>
             </div>
           )}
-          <div ref={chatEndRef} />
         </div>
 
         {/* Input */}

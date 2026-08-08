@@ -21,64 +21,52 @@ export const IntelligenceChatInterface: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Load conversation history from localStorage
+  // Load conversation history from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('tami_conversation_history');
-    if (saved) {
+    const savedHistory = localStorage.getItem('tami_conversation_history');
+    if (savedHistory) {
       try {
-        setMessages(JSON.parse(saved));
+        setMessages(JSON.parse(savedHistory));
       } catch (e) {
-        console.error('Failed to load conversation history', e);
+        console.error('Failed to parse conversation history:', e);
       }
     }
     setIsLoaded(true);
 
-    // Sync with other open tabs/windows
     const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === 'tami_conversation_history' && e.newValue) {
+      if (e.key === 'tami_conversation_history') {
         try {
-          setMessages(JSON.parse(e.newValue));
+          setMessages(e.newValue ? JSON.parse(e.newValue) : []);
         } catch (err) {
           console.error('Failed to sync history from storage event', err);
         }
       }
     };
 
-    // Sync within the same window across different component instances
-    const handleLocalChange = () => {
-      const updated = localStorage.getItem('tami_conversation_history');
-      if (updated) {
-        try {
-          setMessages(JSON.parse(updated));
-        } catch (err) {
-          console.error('Failed to sync history locally', err);
-        }
-      }
-    };
-
     window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('tami_history_updated', handleLocalChange);
     return () => {
       window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('tami_history_updated', handleLocalChange);
     };
   }, []);
 
-  // Save conversation history to localStorage when changed and dispatch same-page sync event
+  // Save conversation history to localStorage when changed
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem('tami_conversation_history', JSON.stringify(messages));
-      window.dispatchEvent(new Event('tami_history_updated'));
     }
   }, [messages, isLoaded]);
 
+  // Scroll ONLY inside the chat container when user sends or isLoading changes
   useEffect(() => {
-    if (messages.length > 0 || isLoading) {
-      chatEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (chatContainerRef.current && (messages.length > 0 || isLoading)) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
     }
-  }, [messages, progressLog, isLoading]);
+  }, [messages.length, isLoading]);
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -232,7 +220,7 @@ export const IntelligenceChatInterface: React.FC = () => {
       </div>
 
       {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-8">
+      <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-6 space-y-8">
         {messages.length === 0 && (
           <div className="h-full flex flex-col items-center justify-center text-center max-w-md mx-auto space-y-4">
             <div className="relative">
@@ -396,7 +384,6 @@ export const IntelligenceChatInterface: React.FC = () => {
             </div>
           </div>
         )}
-        <div ref={chatEndRef} />
       </div>
 
       {/* Input Panel */}
