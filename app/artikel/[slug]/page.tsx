@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPublishedPostWithRelationsBySlug, getRelatedPosts } from '@/lib/db/queries/posts';
-import { getAllArticles, getPostBySlug } from '@/lib/articles/loader';
+import { getAllArticles, getAllArticlesUncached, getPostBySlug } from '@/lib/articles/loader';
 import { MarkdownContent } from '@/components/markdown-content';
 import { ReadingProgress } from '@/components/whitepaper/reading-progress';
 import { FeatureImage } from '@/components/feature-image';
@@ -66,7 +66,7 @@ interface ArticlePageProps {
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  const articles = await getAllArticles();
+  const articles = getAllArticlesUncached();
   return articles
     .filter((a) => a.status === 'published' || a.status === 'scheduled')
     .map((a) => ({ slug: a.slug }));
