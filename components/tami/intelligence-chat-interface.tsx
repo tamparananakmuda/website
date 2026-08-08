@@ -75,7 +75,9 @@ export const IntelligenceChatInterface: React.FC = () => {
   }, [messages, isLoaded]);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messages.length > 0 || isLoading) {
+      chatEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }, [messages, progressLog, isLoading]);
 
   const handleSend = async (e: React.FormEvent) => {

@@ -83,7 +83,9 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   }, [messages, isLoaded]);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messages.length > 0 || isLoading) {
+      chatEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }, [messages, progressLog, isLoading]);
 
   // Handle escape key to close
