@@ -36,12 +36,19 @@ export function WhitepaperChartRenderer({ config }: { config: ChartConfig }) {
     height: config.height,
   };
 
+  // Normalize data items so both `name` and `label` work seamlessly
+  const normalizedData = (config.data || []).map((item: any) => ({
+    ...item,
+    label: item.label || item.name || '',
+    name: item.name || item.label || '',
+  }));
+
   switch (config.type) {
     case 'bar':
       return (
         <TAMBarChart
           {...common}
-          data={config.data}
+          data={normalizedData}
           yLabel={config.yLabel}
           xLabel={config.xLabel}
           horizontal={config.horizontal}
@@ -51,7 +58,7 @@ export function WhitepaperChartRenderer({ config }: { config: ChartConfig }) {
       return (
         <TAMLineChart
           {...common}
-          data={config.data}
+          data={normalizedData}
           yLabel={config.yLabel}
           xLabel={config.xLabel}
           series1Label={config.series1Label}
