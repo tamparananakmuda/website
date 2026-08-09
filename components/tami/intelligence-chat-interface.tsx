@@ -259,10 +259,14 @@ export const IntelligenceChatInterface: React.FC = () => {
     }
   }, [messages.length, isLoading]);
 
-  // Cleanup timers on unmount
+  // Cleanup timers on unmount + save messages to localStorage for floating chat restoration
   useEffect(() => {
     return () => {
       timersRef.current.forEach(clearTimeout);
+      // Save current messages on unmount so floating chat can restore them
+      if (messagesRef.current.length > 0) {
+        localStorage.setItem('tami_conversation_history', JSON.stringify(messagesRef.current));
+      }
     };
   }, []);
 
@@ -315,13 +319,15 @@ export const IntelligenceChatInterface: React.FC = () => {
     },
     onComplete: (fullText) => {
       const id = assistantIdRef.current;
+      let finalMessages = messagesRef.current;
       if (id && fullText) {
-        setMessages((prev) => prev.map(m => m.id === id ? { ...m, content: fullText } : m));
+        finalMessages = messagesRef.current.map(m => m.id === id ? { ...m, content: fullText } : m);
+        setMessages(finalMessages);
       }
       assistantIdRef.current = null;
       streamedTextRef.current = '';
-      // Sync to storage after streaming completes (not inside setMessages updater)
-      setTimeout(() => syncToStorage(messagesRef.current), 0);
+      // Sync to storage after streaming completes
+      syncToStorage(finalMessages);
     },
     onError: (error) => {
       timersRef.current.forEach(clearTimeout);
@@ -335,8 +341,9 @@ export const IntelligenceChatInterface: React.FC = () => {
       } else {
         friendlyMsg = 'Maaf, TAMI lagi ada kendala teknis. Coba lagi ya.';
       }
-      setMessages((prev) => [...prev, { id: `error-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, role: 'assistant' as const, content: friendlyMsg }]);
-      setTimeout(() => syncToStorage(messagesRef.current), 0);
+      const errorMessages = [...messagesRef.current, { id: `error-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, role: 'assistant' as const, content: friendlyMsg }];
+      setMessages(errorMessages);
+      syncToStorage(errorMessages);
     },
   });
 
