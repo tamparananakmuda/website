@@ -51,7 +51,7 @@ PTN-BH seperti UI, UGM, ITB, dan Unair punya otonomi mengatur biaya kuliah. Bant
 
 Kelas menengah yang paling terjebak. BPS mencatat jumlah kelas menengah Indonesia menyusut dari 57 juta jiwa pada 2019 menjadi 47.85 juta pada 2024, hanya 17 persen dari total penduduk. Biaya pendidikan tinggi rata-rata Rp 19 juta per tahun pada 2024, menurut BPS, melampaui laju inflasi. Guru Besar UIN Syarif Hidayatullah Jakarta, Prof. Achmad Tjachja Nugraha, menilai kelompok kelas menengah dan bawah mengalami penyempitan ruang fiskal. Pendapatan tidak naik, tapi beban cicilan, kesehatan, transportasi, kebutuhan lain terus meningkat.
 
-Sistem golongan UKT juga tidak akurat. Anak PNS golongan 3A yang masih ngontrak dapat UKT golongan 6 karena dianggap mampu. Padahal gaji PNS golongan 3A tidak cukup untuk biayai dua anak kuliah di PTN, seperti diungkapkan anggota DPR Komisi X dalam laporan Info Indonesia, Juli 2026. Sistem menilai kemampuan dari jabatan orang tua, bukan dari kondisi finansial nyata. Kelas menengah yang [tangga ekonominya dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-tangga-dicabut) terjebak: tidak dapat KIP Kuliah, tidak mampu bayar UKT golongan tinggi.
+Sistem golongan UKT juga tidak akurat. Anak PNS golongan 3A yang masih ngontrak dapat UKT golongan 6 karena dianggap mampu. Padahal gaji PNS golongan 3A tidak cukup untuk biayai dua anak kuliah di PTN, seperti diungkapkan anggota DPR Komisi X dalam laporan Info Indonesia, Juli 2026. Sistem menilai kemampuan dari jabatan orang tua, bukan dari kondisi finansial nyata. Kelas menengah yang [tangga ekonominya dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut) terjebak: tidak dapat KIP Kuliah, tidak mampu bayar UKT golongan tinggi.
 
 ## Beasiswa Pemerintah: Pendaftar Banyak, Penerima Sedikit
 
@@ -75,7 +75,7 @@ Berdasarkan simulasi Bisnis.com, Januari 2024, untuk UKT Rp 7 juta dengan tenor 
 
 Kampus yang seharusnya menjangkau mahasiswa justru menawarkan utang. BEM beberapa kampus protes. Dilansir dari Kompasiana, Juli 2026, BEM menyebut pendidikan investasi bangsa, bukan transaksi bisnis. Tapi struktur saat ini membuat kampus beroperasi seperti bisnis: naikkan harga, tawarkan cicilan, pungut pembayaran.
 
-The Conversation, dalam artikel 2024, memperingatkan risiko pinjol untuk UKT. PTN-BH naikkan UKT karena otonomi, lalu solusinya pinjol. Mahasiswa yang gagal bayar menghadapi tekanan mental. Kampus terkesan berbisnis dengan mahasiswa. Pinjol jadi solusi jangka pendek yang menciptakan masalah jangka panjang. Sistem [pinjol yang didesain menangkap](/artikel/pinjol-bukan-salah-kamu-sistem-didesain-menangkap) kini bekerjasama dengan institusi pendidikan.
+The Conversation, dalam artikel 2024, memperingatkan risiko pinjol untuk UKT. PTN-BH naikkan UKT karena otonomi, lalu solusinya pinjol. Mahasiswa yang gagal bayar menghadapi tekanan mental. Kampus terkesan berbisnis dengan mahasiswa. Pinjol jadi solusi jangka pendek yang menciptakan masalah jangka panjang. Sistem [pinjol yang didesain menangkap](/artikel/pinjol-bukan-salah-kamu-itu-sistem-yang-didesain-untuk-menangkap) kini bekerjasama dengan institusi pendidikan.
 
 ## Dampak Nyata: Mundur Sebelum Mulai
 
@@ -91,7 +91,7 @@ Saya pernah ngobrol dengan mahasiswa semester akhir di salah satu PTN-BH Jakarta
 
 Narasi "pendidikan investasi" bermasalah ketika investasi itu harus dicicil dengan bunga 36 persen per tahun menurut data Bisnis.com. Investasi yang pakai utang bukan investasi, itu utang berbunga. Bedanya: investasi punya ekspektasi return positif. Utang berbunga punya risiko gagal bayar. Mahasiswa belum dapat gaji pertama, sudah punya utang. Dan kamu yang baca ini mungkin salah satu dari mereka.
 
-ROI pendidikan tinggi juga turun. Data menunjukkan lulusan S1 bersaing dengan lulusan SMK untuk lowongan yang sama, [kursus online 5 juta tidak bikin diterima kerja](/artikel/kursus-online-5-juta-tidak-bikin-diterima-kerja), dan gelar S1 60 juta juga tidak menjamin. Sistem tetap pakai ijazah sebagai syarat, tapi tidak sediakan akses untuk mendapatkannya tanpa berutang. Pendidikan bergeser dari hak warga negara ke komoditas yang dicicil. Kampus jadi penjual, pinjol jadi bank, mahasiswa jadi debitur.
+ROI pendidikan tinggi juga turun. Data menunjukkan lulusan S1 bersaing dengan lulusan SMK untuk lowongan yang sama, [kursus online 5 juta tidak bikin diterima kerja](/artikel/kursus-online-rp5-juta-nggak-bikin-kamu-diterima-kerja), dan gelar S1 60 juta juga tidak menjamin. Sistem tetap pakai ijazah sebagai syarat, tapi tidak sediakan akses untuk mendapatkannya tanpa berutang. Pendidikan bergeser dari hak warga negara ke komoditas yang dicicil. Kampus jadi penjual, pinjol jadi bank, mahasiswa jadi debitur.
 
 Gen Z yang [dibilang boros padahal motor ekonomi](/artikel/gen-z-boros-atau-penyelamat-ekonomi) sekarang juga dibilang berutang untuk sesuatu yang seharusnya jadi hak. Ekonomi tumbuh karena konsumsi mereka, tapi akses pendidikan menyempit. Kamu dibebani utang sebelum sempat berkontribusi.
 

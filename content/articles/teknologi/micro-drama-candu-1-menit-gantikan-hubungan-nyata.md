@@ -84,7 +84,7 @@ IDN Research Institute mencatat 108 juta pengguna TikTok Indonesia berusia 18 ta
 
 Micro drama adalah produk alami dari ekosistem ini. Kalau seseorang sudah menghabiskan hampir 2 jam di TikTok setiap hari, attention span mereka terbentuk untuk konten 15-60 detik. Drama 1 menit terasa "cukup panjang" untuk mendapat cerita, tapi "cukup pendek" untuk tidak bosan. Formatnya vertikal, seperti TikTok. Interfacenya scroll, seperti TikTok. Micro drama bukan revolusi, tapi evolusi dari kebiasaan yang sudah terbentuk.
 
-[Attention span Gen Z](/artikel/attention-span-gen-z-beradaptasi) sudah membahas bagaimana generasi ini beradaptasi dengan dunia yang serba cepat. Tapi adaptasi punya batas. Kalau attention span terus mengecil, konten yang dibutuhkan juga semakin pendek. Micro drama 1 menit hari ini bisa jadi micro drama 30 detik besok.
+[Attention span Gen Z](/artikel/attention-span-gen-z-nggak-rusak-otakmu-beradaptasi) sudah membahas bagaimana generasi ini beradaptasi dengan dunia yang serba cepat. Tapi adaptasi punya batas. Kalau attention span terus mengecil, konten yang dibutuhkan juga semakin pendek. Micro drama 1 menit hari ini bisa jadi micro drama 30 detik besok.
 
 ## Ilusi Koneksi: Kenapa Drama 1 Menit Gantikan Hubungan 1 Tahun
 

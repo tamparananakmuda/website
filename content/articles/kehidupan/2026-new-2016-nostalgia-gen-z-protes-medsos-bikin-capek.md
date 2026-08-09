@@ -97,7 +97,7 @@ Data Jakpat Februari 2026 menunjukkan 41 persen Gen Z Indonesia sudah aktif mene
 
 Riset Bimala Universitas Negeri Jakarta pada 2025 yang meneliti warga Rawamangun menemukan detoks digital berjalan lewat tiga jalur utama: pembatasan notifikasi, pembatasan waktu layar, dan seleksi konten. Bukan penghapusan teknologi total. Nostalgia 2016 masuk kategori seleksi konten: memilih estetika yang tidak menuntut kesempurnaan, memilih format yang tidak dioptimasi untuk engagement.
 
-Tapi ini [detoks dopamin yang bukan soal disiplin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan). Kamu bisa batasi notifikasi, kamu bisa pakai filter jadul, tapi algoritma yang menilai kontenmu tetap algoritma 2026. Kamu bisa memilih konten yang lebih "jujur", tapi platform tempat kamu mengunggah tetap platform yang profit dari kelelahanmu.
+Tapi ini [detoks dopamin yang bukan soal disiplin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan). Kamu bisa batasi notifikasi, kamu bisa pakai filter jadul, tapi algoritma yang menilai kontenmu tetap algoritma 2026. Kamu bisa memilih konten yang lebih "jujur", tapi platform tempat kamu mengunggah tetap platform yang profit dari kelelahanmu.
 
 ## Siapa yang Untung dari Kerinduanmu
 

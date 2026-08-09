@@ -106,7 +106,7 @@ Teori Cognitive Load yang dikemukakan Sweller pada 1988 menjelaskan mekanismenya
 
 K-PIN Bulletin pada Juli 2025 menambahkan daftar dampak: hyper fixation, dopamin addiction, penurunan literasi, perilaku impulsif, dan kecemasan sosial. Setiap scroll memberi "reward" kecil berupa dopamin. Otak terbiasa dengan stimulasi cepat, akibatnya otak menjadi lebih sulit bertahan pada sesuatu yang membutuhkan fokus dan pemikiran panjang.
 
-Ini bukan kelemahan individu, ini [detoks dopamin yang bukan soal disiplin tapi algoritma](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan). Kamu tidak bisa "disiplin" keluar dari sistem yang dirancang untuk membuatmu tetap di dalam.
+Ini bukan kelemahan individu, ini [detoks dopamin yang bukan soal disiplin tapi algoritma](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan). Kamu tidak bisa "disiplin" keluar dari sistem yang dirancang untuk membuatmu tetap di dalam.
 
 ## Resigned Acceptance, Bukan Kecanduan Pasif
 
@@ -116,9 +116,9 @@ Itu bukan denial, itu resigned acceptance. Penerimaan dengan kesadaran penuh. Me
 
 Kompetitor menulis seolah Gen Z tidak tahu. "Tips kurangi TikTok", "pola asuh digital", "batasi screen time". Semua mengasumsikan masalahnya adalah individu yang tidak disiplin. Tapi 81,8 persen pakar sepakat algoritma dan banjir konten bermutu rendah adalah faktor utama menurut Litbang Kompas. Masalahnya struktural, bukan individual.
 
-[Attention span Gen Z yang beradaptasi](/artikel/attention-span-gen-z-beradaptasi) bukan tentang otak yang rusak permanen. Otak beradaptasi dengan stimulasi yang diterimanya. Tapi adaptasi ke arah yang tidak menguntungkan: lebih cepat memproses, tapi lebih dangkal. Lebih reaktif, tapi kurang reflektif.
+[Attention span Gen Z yang beradaptasi](/artikel/attention-span-gen-z-nggak-rusak-otakmu-beradaptasi) bukan tentang otak yang rusak permanen. Otak beradaptasi dengan stimulasi yang diterimanya. Tapi adaptasi ke arah yang tidak menguntungkan: lebih cepat memproses, tapi lebih dangkal. Lebih reaktif, tapi kurang reflektif.
 
-Ini juga bukan [FOMO yang didesain algoritma](/artikel/fomo-desain-algoritma). FOMO adalah ketakutan ketinggalan. Brain rot adalah penerimaan bahwa apa yang kamu tonton tidak berguna, tapi kamu tetap tonton. Beda motivasi, sama hasilnya: kamu tetap scroll.
+Ini juga bukan [FOMO yang didesain algoritma](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma). FOMO adalah ketakutan ketinggalan. Brain rot adalah penerimaan bahwa apa yang kamu tonton tidak berguna, tapi kamu tetap tonton. Beda motivasi, sama hasilnya: kamu tetap scroll.
 
 ## Struktur Menang, Individu Tidak Kalah
 

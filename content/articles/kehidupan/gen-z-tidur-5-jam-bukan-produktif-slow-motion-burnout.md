@@ -123,7 +123,7 @@ Penelitian Kroese et al. (2014) yang dikutip UGM nemuin bahwa semakin rendah kon
 
 Program Studi Psikologi BINUS University, Juni 2026, nambahin data yang lebih spesifik. Berdasarkan Chegg Global Student Survey 2025, kurang tidur merupakan salah satu faktor utama pemicu gangguan kesehatan mental mahasiswa secara global. Riset Yonatan (2025) nunjukin korelasi kuat antara tingkat stres dan penundaan tidur. Siklus ini, menurut riset Yonatan, berdampak pada penurunan performa mahasiswa hingga 60%, yang ujungnya bikin burnout.
 
-RBP bukan kelemahan disiplin. Itu mekanisme koping atas hilangnya kontrol waktu. Kamu scroll sampai jam 2 pagi bukan karena kamu lemah. Tapi karena malam adalah satu-satunya waktu yang terasa milik kamu. Seperti yang kami bahas di [Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan), algoritma media sosial dirancang untuk eksploitasi kelelahan kontrol diri ini. Bukan kebetulan kamu susah berhenti scroll. Itu desain.
+RBP bukan kelemahan disiplin. Itu mekanisme koping atas hilangnya kontrol waktu. Kamu scroll sampai jam 2 pagi bukan karena kamu lemah. Tapi karena malam adalah satu-satunya waktu yang terasa milik kamu. Seperti yang kami bahas di [Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan), algoritma media sosial dirancang untuk eksploitasi kelelahan kontrol diri ini. Bukan kebetulan kamu susah berhenti scroll. Itu desain.
 
 ## Bangga Tidak Tidur
 

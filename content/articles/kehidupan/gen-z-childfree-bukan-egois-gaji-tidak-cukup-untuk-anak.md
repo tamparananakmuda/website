@@ -123,7 +123,7 @@ Gen Z yang jadi [sandwich generation](/artikel/sandwich-generation-gen-z-gaji-di
 
 Sisa Rp 1 juta dikurangi biaya anak minimum Rp 3,3 juta menurut data Bisadipercaya sama dengan defisit Rp 2,3 juta per bulan. Tidak ada pekerjaan sampingan yang menutup defisit itu tanpa mengorbankan kesehatan dan waktu tidur. Gen Z yang sudah menanggung orang tua tidak punya sisa untuk anak. Childfree bukan pilihan egois di sini. Hasil alami dari sistem yang menempatkan mereka sebagai jaring pengaman keluarga sebelum mereka siap.
 
-Siklusnya berbahaya. Orang tua tidak punya pensiun, jadi beban jatuh ke anak. Anak tidak bisa nabung atau punya anak karena harus menafkahi orang tua. Ketika anak ini nanti pensiun, mereka juga tidak punya dana. Beban jatuh ke cucu. Saya punya teman yang sudah mulai nyicil biaya pengobatan orang tuanya sejak umur 26. Gajinya Rp 3 juta, Rp 1,2 juta langsung ke kampung. Dia bilang ke saya, "Punya anak? Gaji saya aja buat orang tua belum cukup." Dan [mau menikah pun sudah jadi masalah ekonomi](/artikel/mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z), apalagi punya anak. [Beli rumah bukan soal kopi](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan), tapi soal 25 tahun gaji yang tidak cukup. Punya anak di atas semua itu bukan kodrat, tapi kemewahan yang tidak terjangkau.
+Siklusnya berbahaya. Orang tua tidak punya pensiun, jadi beban jatuh ke anak. Anak tidak bisa nabung atau punya anak karena harus menafkahi orang tua. Ketika anak ini nanti pensiun, mereka juga tidak punya dana. Beban jatuh ke cucu. Saya punya teman yang sudah mulai nyicil biaya pengobatan orang tuanya sejak umur 26. Gajinya Rp 3 juta, Rp 1,2 juta langsung ke kampung. Dia bilang ke saya, "Punya anak? Gaji saya aja buat orang tua belum cukup." Dan [mau menikah pun sudah jadi masalah ekonomi](/artikel/mau-menikah-bukan-nggak-mau-ekonomi-yang-menghalangi-gen-z), apalagi punya anak. [Beli rumah bukan soal kopi](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji), tapi soal 25 tahun gaji yang tidak cukup. Punya anak di atas semua itu bukan kodrat, tapi kemewahan yang tidak terjangkau.
 
 ## Daycare Bukan Menyelesaikan Akar Masalah
 
@@ -131,7 +131,7 @@ Kemendukbangga merespons childfree dengan Program Taman Asuh Sayang Anak (Tamasy
 
 Tamasya menyelesaikan satu masalah: pengasuhan. Tapi Tamasya tidak menyelesaikan masalah yang lebih besar: daya beli. Daycare di kota besar berkisar Rp 2 juta hingga Rp 4 juta per bulan menurut data Bisadipercaya. Tamasya mungkin memberi subsidi sebagian. Tapi gaji Gen Z Rp 2,4 juta menurut BPS. Subsidi daycare tidak menaikkan gaji. Subsidi daycare tidak membuat sisa Rp 1,6 juta tiba-tiba cukup untuk popok, susu, dokter anak.
 
-Selama [gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) sementara biaya hidup terus naik, program penitipan anak hanya menambal lubang tanpa menutup kebocoran. Negara fokus pada "cara membuat orang tua bisa bekerja sambil punya anak", bukan "cara membuat orang mampu menafkahi anak." Itu dua hal yang berbeda.
+Selama [gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) sementara biaya hidup terus naik, program penitipan anak hanya menambal lubang tanpa menutup kebocoran. Negara fokus pada "cara membuat orang tua bisa bekerja sambil punya anak", bukan "cara membuat orang mampu menafkahi anak." Itu dua hal yang berbeda.
 
 ## Bukan Egois, Rasional
 

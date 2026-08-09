@@ -108,7 +108,7 @@ Trust Barometer Edelman 2026 menunjukkan employer dipercaya 92% oleh karyawan, d
 
 Kementerian Ketenagakerjaan mencatat 80.000 orang terkena PHK sepanjang 2025. Gelombang PHK merambah media besar seperti Kompas TV, CNN Indonesia, dan Republika di awal 2025. Dewan Pers mencatat sekitar 1.200 jurnalis dan pekerja media di-PHK pada 2023-2024. Gen Z melihat ini dan belajar satu hal: perusahaan tidak punya loyalitas, jadi kenapa harus balas loyal?
 
-Artikel TAM sebelumnya sudah membahas fenomena ini. [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) menunjukkan data 60% Gen Z quiet quitting, 68% karena lack of work-life balance. [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) menunjukkan data 96% karyawan terbuka pindah kerja, 54% Gen Z ingin resign. Bukan Gen Z yang tidak loyal. Sistem kerja yang tidak memberi alasan untuk setia.
+Artikel TAM sebelumnya sudah membahas fenomena ini. [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati) menunjukkan data 60% Gen Z quiet quitting, 68% karena lack of work-life balance. [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya) menunjukkan data 96% karyawan terbuka pindah kerja, 54% Gen Z ingin resign. Bukan Gen Z yang tidak loyal. Sistem kerja yang tidak memberi alasan untuk setia.
 
 ## Sistem Kepercayaan Alternatif
 

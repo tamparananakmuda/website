@@ -1,6 +1,6 @@
 ---
 title: '60% Gen Z Cemas: Bukan Mental Lemah, Sistem Nggak Pasti'
-slug: 60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti
+slug: 60-persen-gen-z-cemas-bukan-mental-lemah-sistem-nggak-pasti
 excerpt: >-
   Survei Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial. Bukan mental
   lemah, tapi sistem yang tidak memberi kepastian.
@@ -54,7 +54,7 @@ CNN Indonesia, Juli 2026, melaporkan bahwa gig economy menjadi katup pengaman ke
 
 IMGR 2027 dari IDN Research Institute menemukan kelas menengah Indonesia menyusut 1,2 juta orang pada 2025, menurut data IDN. Aspiring middle class bertambah 4,5 juta, sebagian dibiayai dengan menggerus tabungan untuk kebutuhan dasar. Mandiri Institute mencatat real net income per pekerja turun dari Rp1,8 juta (2019) menjadi Rp1,5 juta (2024), berdasarkan olahan data BPS.
 
-Gen Z melihat semua ini. Mereka tahu lulus kuliah tidak menjamin kerja, kerja tidak menjamin stabil, dan stabil tidak menjamin aman dari PHK. [Generasi "nanti dulu" bukan malas, gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh). Kecemasan ini rasional, bukan irasional.
+Gen Z melihat semua ini. Mereka tahu lulus kuliah tidak menjamin kerja, kerja tidak menjamin stabil, dan stabil tidak menjamin aman dari PHK. [Generasi "nanti dulu" bukan malas, gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh). Kecemasan ini rasional, bukan irasional.
 
 ## Paradoks: Paling Rentang, Paling Tangguh
 
@@ -62,13 +62,13 @@ Survei Jakpat menemukan sisi positif dari temuan ini. Gen Z dinilai lebih terbuk
 
 Fenomena ini menunjukkan paradoks. Gen Z disebut generasi paling rentan dalam sistem ekonomi formal, tapi sekaligus dinilai paling tangguh secara emosional karena keberanian mengenali dan mencari solusi atas masalah mentalnya.
 
-Generasi sebelumnya menutup rapat masalah mental karena stigma. Gen Z membuka, mencari bantuan, dan berbagi pengalaman. [Tapi berbagi di media sosial punya risiko sendiri](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental). Self-diagnosis kesehatan mental di TikTok bisa menggantikan diagnosa profesional dengan label yang tidak akurat.
+Generasi sebelumnya menutup rapat masalah mental karena stigma. Gen Z membuka, mencari bantuan, dan berbagi pengalaman. [Tapi berbagi di media sosial punya risiko sendiri](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata). Self-diagnosis kesehatan mental di TikTok bisa menggantikan diagnosa profesional dengan label yang tidak akurat.
 
 Yang dibutuhkan bukan hanya keberanian bicara, tapi akses ke layanan yang terjangkau. Halodoc, Juli 2026, melaporkan bahwa biaya terapi mental tidak murah dan butuh sesi berkelanjutan. Banyak perusahaan belum mau cover biaya kesehatan mental dalam asuransi karyawan. Klaim asuransi untuk kesehatan mental masih sangat minim, meski permintaan konsultasi terus tumbuh.
 
 ## Ekspektasi Sosial yang Menumpuk
 
-42% Gen Z merasa terbebani ekspektasi sosial, menurut data Jakpat. Orang tua minta lulus cepat, kerja cepat, menikah cepat, punya rumah cepat. Tapi [beli rumah butuh 25 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan). [Menikah bukan tidak mau, ekonomi yang menghalangi](/artikel/mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z). [Quarter-life crisis bukan penyakit, sistemnya yang rusak](/artikel/quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak).
+42% Gen Z merasa terbebani ekspektasi sosial, menurut data Jakpat. Orang tua minta lulus cepat, kerja cepat, menikah cepat, punya rumah cepat. Tapi [beli rumah butuh 25 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji). [Menikah bukan tidak mau, ekonomi yang menghalangi](/artikel/mau-menikah-bukan-nggak-mau-ekonomi-yang-menghalangi-gen-z). [Quarter-life crisis bukan penyakit, sistemnya yang rusak](/artikel/quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak).
 
 Ekspektasi sosial dibentuk oleh generasi yang tumbuh di era ekonomi yang berbeda. Orang tua Gen Z mungkin mulai karier di tahun 1990-an, ketika lulus kuliah = kerja, kerja = stabil, stabil = rumah. Tapi ekonomi 2026 tidak bekerja seperti itu. Lulus kuliah = nganggur atau gig economy. Kerja = kontrak pendek. Stabil = ilusi yang bisa pecah kapan saja.
 
@@ -80,7 +80,7 @@ Data Jakpat mencatat 60% Gen Z cemas masa depan, 57% tertekan finansial, 42% ter
 
 Kalau kamu tahu lulus kuliah belum tentu kerja, kamu cemas. Itu rasional. Kalau kamu tahu kerja belum tentu stabil, kamu cemas. Itu rasional. Kalau kamu tahu stabil belum tentu aman dari PHK, kamu cemas. Itu rasional. Data Jakpat, BPS, dan IDN semua mendukung kecemasan ini sebagai respons yang logis.
 
-Yang tidak rasional adalah menyalahkan Gen Z karena cemas, sambil tidak melakukan apa-apa terhadap sistem yang menciptakan kecemasan itu. [Quiet quitting bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati). Kecemasan massal bukan tanda generasi rapuh, tapi tanda sistem yang rapuh.
+Yang tidak rasional adalah menyalahkan Gen Z karena cemas, sambil tidak melakukan apa-apa terhadap sistem yang menciptakan kecemasan itu. [Quiet quitting bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati). Kecemasan massal bukan tanda generasi rapuh, tapi tanda sistem yang rapuh.
 
 Gen Z adalah 27% dari total penduduk Indonesia, menurut data BPS. Mereka adalah masa depan demografis negara ini. Tanpa upaya serius mengatasi ketidakpastian karier, tekanan finansial, dan akses kesehatan mental, kondisi ini bisa mengancam bonus demografi dan prospek ekonomi Indonesia. Membuat kita sulit keluar dari status negara berpendapatan menengah.
 

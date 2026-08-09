@@ -108,7 +108,7 @@ Penelitian di Pekanbaru terhadap 400 Gen Z menemukan korelasi positif kuat: r=0,
 
 Studi terhadap 490 mahasiswa menemukan laki-laki punya tingkat doomscrolling lebih tinggi. Kelompok usia 21-24 tahun paling rentan. Dan makin lama durasi harian media sosial, makin tinggi kecenderungan doomscrolling.
 
-Dampaknya tidak cuma mental. BMC Psychology meneliti 663 dewasa dan menemukan doomscrolling berhubungan dengan kualitas tidur buruk, dimediasi oleh nomophobia (ketakutan tanpa ponsel) dan [FOMO](/artikel/fomo-desain-algoritma). Siklusnya mirip dengan [revenge bedtime procrastination](/artikel/revenge-bedtime-procrastination-siang-yang-dirampas): kamu scroll karena tidak bisa melepaskan ponsel, lalu tidur lebih buruk, lalu keesokan harinya butuh lebih banyak scroll untuk menambal kecemasan.
+Dampaknya tidak cuma mental. BMC Psychology meneliti 663 dewasa dan menemukan doomscrolling berhubungan dengan kualitas tidur buruk, dimediasi oleh nomophobia (ketakutan tanpa ponsel) dan [FOMO](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma). Siklusnya mirip dengan [revenge bedtime procrastination](/artikel/revenge-bedtime-procrastination-siang-yang-dirampas): kamu scroll karena tidak bisa melepaskan ponsel, lalu tidur lebih buruk, lalu keesokan harinya butuh lebih banyak scroll untuk menambal kecemasan.
 
 Shabahang et al. meneliti 800 mahasiswa di Iran dan Amerika Serikat. Hasilnya: doomscrolling memicu existential anxiety dan pesimisme tentang sifat manusia. Paparan berita negatif yang berkepanjangan mengubah cara kamu melihat dunia. Bukan karena dunia makin buruk. Karena feed kamu makin buruk.
 
@@ -120,7 +120,7 @@ Kamu mungkin pikir ini masalah kontrol diri. Tapi infinite scroll dirancang tanp
 
 Nick Srnicek, ekonom digital, menyebut ini platform capitalism. Setiap menit kamu di dalam aplikasi dikonversi untuk tujuan komersial. Perhatian bukan aspek psikologis, tapi komoditas ekonomi. Zizi Papacharissi menyebut affective stickiness: konten yang bikin kamu tetap scroll bukan yang relevan, tapi yang memancing emosi paling kuat. Rasa penasaran, cemas dan marah serta takut. Emosi negatif lebih sticky daripada positif, sehingga kamu tidak scroll untuk informasi.
 
-Kamu scroll karena algoritma tahu cara membuat kamu tidak bisa berhenti. Sama seperti [detoks dopamin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan) yang bukan soal disiplin, doomscrolling bukan soal kebiasaan. Ini soal desain.
+Kamu scroll karena algoritma tahu cara membuat kamu tidak bisa berhenti. Sama seperti [detoks dopamin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan) yang bukan soal disiplin, doomscrolling bukan soal kebiasaan. Ini soal desain.
 
 Dan sementara kamu scroll berita buruk sampai jam 2 pagi, platform dapat uang dari iklan. Media yang publish berita negatif dapat lebih banyak klik. Pengiklan bayar untuk attention. Attention paling mudah didapat dari ketakutan. Lingkarannya sempurna: kamu takut, kamu scroll, platform untung, kamu tetap takut.
 

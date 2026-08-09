@@ -51,7 +51,7 @@ Perfeksionisme dihargai sebagai standar tinggi. "Kamu perfeksionis, bagus, berar
 
 Gen Z tumbuh di era media sosial dimana setiap post adalah kurasi citra diri yang sempurna. Curran dan Hill menemukan social media intensifies body image concerns dan social alienation. Platform seperti Instagram dan TikTok menjadi tempat membandingkan pencapaian dan gaya hidup 24 jam. Di Indonesia, tiga jurnal terbaru tahun 2025 dan 2026 menghubungkan perfeksionisme dengan prokrastinasi akademik dan burnout.
 
-Gen Z perfeksionis bukan karena ingin sempurna, tapi karena takut dinilai tidak cukup. Di era dimana perbandingan tersedia setiap saat di genggaman, standar "cukup" terus naik. Seperti yang kami bahas di [FOMO: Desain Algoritma](/artikel/fomo-desain-algoritma), media sosial dirancang untuk membuat kamu merasa kurang. Perfeksionisme adalah respons rasional terhadap sistem yang terus menaikkan standar tanpa henti.
+Gen Z perfeksionis bukan karena ingin sempurna, tapi karena takut dinilai tidak cukup. Di era dimana perbandingan tersedia setiap saat di genggaman, standar "cukup" terus naik. Seperti yang kami bahas di [FOMO: Desain Algoritma](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma), media sosial dirancang untuk membuat kamu merasa kurang. Perfeksionisme adalah respons rasional terhadap sistem yang terus menaikkan standar tanpa henti.
 
 ## Perfeksionisme Naik 33% dalam 27 Tahun
 
@@ -85,7 +85,7 @@ Burnout akademik dari perfeksionisme sosial ditandai tiga hal: kelelahan emosion
 
 Jurnal SABANA tahun 2025 meneliti fenomena people pleaser di kalangan Gen Z dan menemukan perfeksionisme sebagai penyebab utama. Mekanismenya: takut dinilai, ikuti ekspektasi orang lain, hilang batas diri, kelelahan emosional. Perfeksionisme sosial berubah menjadi people pleasing ketika standar tinggi tidak lagi datang dari ambisi pribadi, tapi dari ketakutan ditolak.
 
-People pleaser adalah bentuk perfeksionisme sosial yang ekstrem. "Saya harus sempurna supaya diterima" bukan "saya ingin sempurna". Bedanya: ambisi datang dari dalam, people pleasing dari luar. Ambisi memberi energi, people pleasing menghabiskan energi. Seperti yang kami bahas di [Imposter Syndrome Bukan Kelemahanmu, Sistem yang Terus Pindah Goalpost](/artikel/imposter-syndrome-bukan-kelemahanmu-sistem-pindah-goalpost), perasaan tidak cukup bukan kelemahan mental, tapi respons rasional terhadap sistem yang terus menaikkan standar.
+People pleaser adalah bentuk perfeksionisme sosial yang ekstrem. "Saya harus sempurna supaya diterima" bukan "saya ingin sempurna". Bedanya: ambisi datang dari dalam, people pleasing dari luar. Ambisi memberi energi, people pleasing menghabiskan energi. Seperti yang kami bahas di [Imposter Syndrome Bukan Kelemahanmu, Sistem yang Terus Pindah Goalpost](/artikel/imposter-syndrome-bukan-kelemahanmu-sistem-yang-terus-pindah-goalpost), perasaan tidak cukup bukan kelemahan mental, tapi respons rasional terhadap sistem yang terus menaikkan standar.
 
 Self boundaries adalah kunci untuk melawan people pleaser, kata jurnal SABANA. Tapi Gen Z sulit menetapkan batas karena media sosial menormalisasi over-sharing dan ketersediaan 24 jam. Menetapkan batas terasa seperti kehilangan koneksi sosial, padahal koneksi yang sehat membutuhkan batas.
 
@@ -95,7 +95,7 @@ Perfeksionisme Gen Z adalah ketakutan yang dikemas sebagai standar tinggi. Ketik
 
 Saya pernah sadar sendiri menghabiskan 3 jam menulis satu email profesional. Bukan karena emailnya sulit, tapi karena saya takut terdengar tidak profesional. Setiap kata diperiksa, setiap kalimat ditimbang, setiap kemungkinan misinterpretasi dipertimbangkan. Setelah kirim, saya sadar: email itu cuma 4 paragraf. 3 jam untuk 4 paragraf bukan standar tinggi. Itu ketakutan. Ketakutan dinilai tidak kompeten, ketakutan terdengar bodoh, ketakutan tidak cukup. Dan saya tahu saya tidak sendiri. Banyak teman saya Gen Z mengalami hal sama: nunda tugas bukan karena malas, tapi karena takut hasilnya tidak sempurna. Revise berkali-kali bukan karena peduli kualitas, tapi karena takut dinilai tidak cukup.
 
-Siklus ini berputar: perfeksionisme, prokrastinasi, burnout, perfeksionisme lagi. Dijual sebagai ambisi, tapi sebenarnya ketakutan. Seperti yang kami bahas di [Hustle Culture Bukan Ambisi, Burnout yang Dikemas sebagai Dedikasi](/artikel/hustle-culture-bukan-ambisi-burnout-yang-dikemas-sebagai-dedikasi), standar yang tidak realistis dibungkus sebagai dedikasi. Perfeksionisme adalah versi personal dari hustle culture: kamu mengeksploitasi diri sendiri atas nama standar tinggi.
+Siklus ini berputar: perfeksionisme, prokrastinasi, burnout, perfeksionisme lagi. Dijual sebagai ambisi, tapi sebenarnya ketakutan. Seperti yang kami bahas di [Hustle Culture Bukan Ambisi, Burnout yang Dikemas sebagai Dedikasi](/artikel/hustle-culture-bukan-ambisi-itu-burnout-yang-dikemas-sebagai-dedikasi), standar yang tidak realistis dibungkus sebagai dedikasi. Perfeksionisme adalah versi personal dari hustle culture: kamu mengeksploitasi diri sendiri atas nama standar tinggi.
 
 ## Conclusion
 

@@ -105,7 +105,7 @@ Coach etis merujuk keluar untuk trauma, psikosis, atau pikiran bunuh diri. Coach
 
 Gen Z Indonesia mencari panduan di sistem yang tidak memberi struktur. Karir tidak jelas, mental health mahal, hubungan rumit. Coaching muncul sebagai jalan pintas yang terlihat lebih accessible daripada terapi. Tapi "accessible" tidak sama dengan "aman."
 
-POLRES Pangandaran mendokumentasikan modus penipuan berkedok coaching: testimoni palsu, janji hasil instan, materi minim, dan skema ponzi yang dibungkus sebagai "program perubahan hidup." Modusnya mirip dengan yang kami bahas di [kursus online 5 juta tidak bikin diterima kerja](/artikel/kursus-online-5-juta-tidak-bikin-diterima-kerja): bayar mahal untuk janji yang tidak terbukti.
+POLRES Pangandaran mendokumentasikan modus penipuan berkedok coaching: testimoni palsu, janji hasil instan, materi minim, dan skema ponzi yang dibungkus sebagai "program perubahan hidup." Modusnya mirip dengan yang kami bahas di [kursus online 5 juta tidak bikin diterima kerja](/artikel/kursus-online-rp5-juta-nggak-bikin-kamu-diterima-kerja): bayar mahal untuk janji yang tidak terbukti.
 
 Teknik pressure selling juga umum. "Hanya 3 tempat tersisa." "Promo berakhir malam ini." "Kamu tidak serius investasi diri kalau tidak ambil paket ini." Teknik ini memanfaatkan keputusasaan, bukan keputusan rasional. Seperti yang kami tulis di [MLM: bukan bisnis, eksploitasi pertemanan dikemas wirausaha](/artikel/mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha), eksploitasi relasi untuk profit selalu pakai bahasa perubahan hidup.
 
@@ -113,7 +113,7 @@ Dan seperti [passive income: bukan tentang malas kerja](/artikel/passive-income-
 
 Saya perhatikan iklan coaching di Instagram saya. Feed penuh janji "hidup berubah" dengan harga jutaan. Testimoni yang terlalu rapi. Before-after yang terlalu dramatis. Dari 10 iklan yang muncul, 8 tidak menyebutkan sertifikasi apa pun. Yang dijual bukan kompetensi. Yang dijual adalah versi diri kamu yang lebih baik, yang ternyata hanya bisa dicapai kalau kamu bayar paket premium.
 
-Seperti yang kami bahas di [terapi mahal, label gratis: Gen Z pilih self-diagnosis](/artikel/terapi-mahal-label-gratis-gen-z-pilih-self-diagnosis), ketika akses ke profesional yang terjangkau terbatas, orang mencari alternatif. Coaching jadi pengganti terapi yang mahal dan sulit diakses. Tapi pengganti tanpa regulasi bukan solusi. Ini eksploitasi yang dikemas sebagai self-improvement.
+Seperti yang kami bahas di [terapi mahal, label gratis: Gen Z pilih self-diagnosis](/artikel/terapi-mahal-label-gratis-kenapa-gen-z-pilih-self-diagnosis), ketika akses ke profesional yang terjangkau terbatas, orang mencari alternatif. Coaching jadi pengganti terapi yang mahal dan sulit diakses. Tapi pengganti tanpa regulasi bukan solusi. Ini eksploitasi yang dikemas sebagai self-improvement.
 
 ## Kamu Tidak Butuh Coach, Kamu Butuh Sistem yang Memberi Struktur
 

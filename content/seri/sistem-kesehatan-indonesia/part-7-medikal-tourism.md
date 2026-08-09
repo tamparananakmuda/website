@@ -19,9 +19,9 @@ tags:
   - sistem-kesehatan
   - indonesia
 ogHeadline: 'Warga Indonesia keluar saat sakit, kenapa?'
-seoMetaTitle: '970 Ribu Warga Indonesia Berobat ke Malaysia, $11,5 Miliar Hilang | TAM'
+seoMetaTitle: '970 Ribu Warga Indonesia Berobat ke Malaysia, $11,5 Miliar Hilang'
 seoMetaDescription: >-
-  970 ribu warga Indonesia berobat ke Malaysia pada 2025, 750 ribu ke Singapura. Total $10-11,5 miliar hilang. Medikal tourism: yang mampu keluar, yang tidak menetap dan bayar.
+  970 ribu warga Indonesia berobat ke Malaysia 2025, 750 ribu ke Singapura. Total $11,5 miliar hilang. Yang mampu keluar, yang tidak menetap dan bayar.
 seoKeywords:
   - medikal tourism Indonesia
   - warga Indonesia berobat ke luar negeri

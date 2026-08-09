@@ -1,6 +1,6 @@
 ---
 title: 'Pekerja Indonesia Paling Bahagia di Asia, Tapi 43% Burnout'
-slug: pekerja-indonesia-bahagia-tapi-43-persen-burnout
+slug: pekerja-indonesia-paling-bahagia-di-asia-tapi-43-persen-burnout
 excerpt: >-
   Jobstreet: 82% pekerja Indonesia paling bahagia di Asia-Pasifik. Tapi 43%
   burnout dan wellbeing score cuma 50,98%. Bahagia dan kosong barengan.

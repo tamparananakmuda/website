@@ -66,7 +66,7 @@ Algorithmic personalization punya pengaruh nyata tapi lebih kecil: beta 0,069, p
 
 Riset Priviet Lab 2025 terhadap 250 Gen Z di Bali menemukan bahwa personalisasi algoritma TikTok positively memengaruhi conversion rate. Periode promosi seperti Payday Sale, yang berlangsung tanggal 25 sampai 31 setiap bulan, memperkuat efek ini. Saat promo besar seperti 11.11 dan 12.12, pengguna TikTok Indonesia belanja 1,6 kali lebih banyak dari hari biasa, dengan rata-rata pengeluaran Rp2,3 juta per pengguna menurut Kontan.co.id yang dikutip dalam studi Priviet Lab tersebut.
 
-Algoritma tidak netral. Algoritma didesain untuk konversi. Sama seperti [algoritma Gojek dan Grab yang jadi bosmu](/artikel/gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu), algoritma TikTok Shop bekerja untuk platform, bukan untuk kamu. Personalisasi bukan layanan. Itu strategi ekstraksi. Algoritma tahu apa yang membuat kamu klik, apa yang membuat kamu tonton sampai habis, apa yang membuat kamu checkout. Dan kamu tidak tahu apa yang algoritma tahu tentang kamu.
+Algoritma tidak netral. Algoritma didesain untuk konversi. Sama seperti [algoritma Gojek dan Grab yang jadi bosmu](/artikel/gojek-grab-bukan-jadi-bos-sendiri-algoritma-yang-jadi-bosmu), algoritma TikTok Shop bekerja untuk platform, bukan untuk kamu. Personalisasi bukan layanan. Itu strategi ekstraksi. Algoritma tahu apa yang membuat kamu klik, apa yang membuat kamu tonton sampai habis, apa yang membuat kamu checkout. Dan kamu tidak tahu apa yang algoritma tahu tentang kamu.
 
 ## Live Shopping: Hiburan yang Menjual
 
@@ -98,7 +98,7 @@ Di Indonesia, Momentum Works mencatat 150 juta pengguna TikTok menjadi basis kon
 
 [Afiliasi TikTok Shop bukan bisnis, itu kerja sales untuk platform](/artikel/afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform). Affiliate content creator menjadi sales force gratis untuk platform. Mereka membuat konten, menarik engagement, mendorong konversi, dan platform mengambil potongan dari setiap transaksi yang mereka hasilkan. Influencer marketing yang dikombinasikan dengan flash sale menciptakan kombinasi promosi dan hiburan yang sangat efektif bagi konsumen muda.
 
-Studi dari Surabaya menemukan bahwa hedonic shopping motivation memperkuat efek influencer marketing dan flash sale pada impulsive buying behavior. Gen Z tidak sadar bahwa mereka menjadi bagian dari mesin konversi platform. Mereka bukan konsumen yang memilih. Mereka target yang dikonversi. Dan [influencer bukan profesi, itu lotere yang dikemas sebagai karier](/artikel/influencer-bukan-profesi-itu-lotere-yang-dikemas-karier). Hanya segelintir yang menang, sisanya menjadi sales force gratis.
+Studi dari Surabaya menemukan bahwa hedonic shopping motivation memperkuat efek influencer marketing dan flash sale pada impulsive buying behavior. Gen Z tidak sadar bahwa mereka menjadi bagian dari mesin konversi platform. Mereka bukan konsumen yang memilih. Mereka target yang dikonversi. Dan [influencer bukan profesi, itu lotere yang dikemas sebagai karier](/artikel/influencer-bukan-profesi-itu-lotere-yang-dikemas-sebagai-karier). Hanya segelintir yang menang, sisanya menjadi sales force gratis.
 
 ## Insight
 

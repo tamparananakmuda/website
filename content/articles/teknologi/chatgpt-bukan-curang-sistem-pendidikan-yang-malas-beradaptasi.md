@@ -160,9 +160,9 @@ Ini mirip dengan sejarah kalkulator. Dulu kalkulator dilarang di kelas matematik
 
 AI di kampus akan mengalami hal yang sama. Pertanyaannya bukan apakah AI akan diterima, tapi berapa banyak mahasiswa yang akan disalahkan sebelum sistem akhirnya beradaptasi?
 
-Mahasiswa sekarang berada di posisi yang tidak adil. Mereka pakai teknologi yang tidak diajarkan, mengikuti aturan yang belum dibuat, dan dinilai oleh sistem yang lebih lambat beradaptasi dari mereka. Yang lebih prihatikan, [AI mengambil tahap belajarmu di dunia kerja](/artikel/ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), dan juga di dunia pendidikan. Mahasiswa yang tidak belajar ethical AI use sekarang akan kesulitan saat lulus dan masuk industri yang sudah jauh lebih cepat beradaptasi.
+Mahasiswa sekarang berada di posisi yang tidak adil. Mereka pakai teknologi yang tidak diajarkan, mengikuti aturan yang belum dibuat, dan dinilai oleh sistem yang lebih lambat beradaptasi dari mereka. Yang lebih prihatikan, [AI mengambil tahap belajarmu di dunia kerja](/artikel/ai-nggak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), dan juga di dunia pendidikan. Mahasiswa yang tidak belajar ethical AI use sekarang akan kesulitan saat lulus dan masuk industri yang sudah jauh lebih cepat beradaptasi.
 
-Ironisnya, [survei GoodStats melaporkan 81% warga Indonesia enggan pakai AI](/artikel/81-persen-enggan-ai-boom-global-indonesia-mundur) pada 2026, tapi data Chegg menunjukkan 95% mahasiswa sudah pakai. Mahasiswa justru lebih adaptif dari populasi umum. Tapi yang disalahkan tetap mereka.
+Ironisnya, [survei GoodStats melaporkan 81% warga Indonesia enggan pakai AI](/artikel/81-persen-enggan-pakai-ai-boom-global-tapi-indonesia-malah-mundur) pada 2026, tapi data Chegg menunjukkan 95% mahasiswa sudah pakai. Mahasiswa justru lebih adaptif dari populasi umum. Tapi yang disalahkan tetap mereka.
 
 Dan ketika mahasiswa butuh ruang aman untuk bertanya tanpa takut dihakimi, sebagian dari mereka malah [curhat ke AI](/artikel/curhat-ke-ai-ketika-mesin-jadi-ruang-aman-gen-z) karena mesin tidak akan menghakimi mereka. Itu sinyal bahwa sistem pendidikan gagal menjadi ruang yang aman untuk belajar, termasuk belajar dari kesalahan.
 

@@ -78,7 +78,7 @@ Kompas, 25 Juli 2026, menulis bahwa janji Presiden Prabowo menurunkan potongan a
 
 ## Freelance Bukan Kebebasan
 
-Banyak yang bilang gig economy memberi kebebasan. Kamu atur waktu sendiri, kamu pilih proyek sendiri, kamu bos bagi dirimu sendiri. Tapi [freelance bukan kebebasan, jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman). Tanpa kontrak formal, tanpa jaminan sosial, tanpa perlindungan hukum, "kebebasan" itu sebenarnya adalah pengalihan risiko dari perusahaan ke pekerja.
+Banyak yang bilang gig economy memberi kebebasan. Kamu atur waktu sendiri, kamu pilih proyek sendiri, kamu bos bagi dirimu sendiri. Tapi [freelance bukan kebebasan, jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-itu-jebakan-tanpa-jaring-pengaman). Tanpa kontrak formal, tanpa jaminan sosial, tanpa perlindungan hukum, "kebebasan" itu sebenarnya adalah pengalihan risiko dari perusahaan ke pekerja.
 
 Perusahaan tidak perlu membayar BPJS, tidak perlu menyediakan ruang kantor, tidak perlu tanggung jawab jika pekerja sakit atau kecelakaan. Semua risiko ditanggung pekerja sendiri. Sementara keuntungan dari skala besar tetap mengalir ke perusahaan platform.
 
@@ -92,7 +92,7 @@ Syafruddin Karimi mendesak pemerintah agar tidak sekadar memberi label UMKM kepa
 
 Ronny P Sasmita menambahkan: jika tren ini tidak dikelola, Indonesia berpotensi menghadapi generasi pekerja yang besar secara jumlah, tetapi rapuh secara ekonomi. Erosi basis pajak dan kerentanan sosial menjadi ancaman serius karena mayoritas pekerja tidak terlindungi oleh jaminan sosial formal.
 
-[Quiet quitting bukan malas](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati), sistem kerja yang tidak mau bayar layak. Gig economy pun cerita yang sama: sistem tidak mau serap formal, lalu menyalahkan pekerja yang "pilih" informal.
+[Quiet quitting bukan malas](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati), sistem kerja yang tidak mau bayar layak. Gig economy pun cerita yang sama: sistem tidak mau serap formal, lalu menyalahkan pekerja yang "pilih" informal.
 
 ## FAQ
 

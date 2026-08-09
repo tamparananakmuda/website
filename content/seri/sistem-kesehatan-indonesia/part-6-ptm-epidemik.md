@@ -22,7 +22,7 @@ tags:
 ogHeadline: 'Diabetes dan jantung: epidemik yang diabaikan'
 seoMetaTitle: 'PTM 85% Kematian Indonesia, Epidemik yang Tidak Dibiayai Sistem | TAM'
 seoMetaDescription: >-
-  PTM: 85,19% kematian Indonesia pada 2025. Diabetes, jantung, kanker. Biaya pengobatan makan 26,28% klaim BPJS. Epidemik yang tidak dibiayai sistem kesehatan Indonesia.
+  PTM: 85,19% kematian Indonesia 2025. Jantung, gagal ginjal, kanker makan 26,28% klaim BPJS. Epidemik yang tidak dibiayai sistem kesehatan Indonesia.
 seoKeywords:
   - penyakit tidak menular Indonesia
   - PTM kematian
@@ -107,7 +107,7 @@ Yang dipertaruhkan bukan biaya pengobatan. Yang dipertaruhkan adalah hidupmu.
 
 ## Insight
 
-PTM adalah engine yang menghubungkan semua part seri ini. BPJS defisit (P1) karena klaim PTM naik 12% per tahun. Farmasi untung (P3) karena PTM butuh obat seumur hidup. RS untung (P5) karena PTm butuh rawat inap berulang. Dokter kurang (P4) karena PTM butuh spesialis yang tidak ada. Dan yang mampu keluar negeri (P7) karena sistem dalam negeri tidak siap.
+PTM adalah engine yang menghubungkan semua part seri ini. BPJS defisit (P1) karena klaim PTM naik 12% per tahun. Farmasi untung (P3) karena PTM butuh obat seumur hidup. RS untung (P5) karena PTM butuh rawat inap berulang. Dokter kurang (P4) karena PTM butuh spesialis yang tidak ada. Dan yang mampu keluar negeri (P7) karena sistem dalam negeri tidak siap.
 
 Gue punya keluarga yang diabetes. Setiap bulan, beli obat. Setiap 3 bulan, kontrol ke dokter. Setiap tahun, cek laboratorium. Biaya total: sekitar Rp500 ribu per bulan, Rp6 juta per tahun, selama bertahun-tahun. Dan itu kalau tidak ada komplikasi. Kalau ada komplikasi, biayanya melonjak. Cuci darah: Rp500 ribu per sesi, 2x seminggu, Rp4 juta per bulan. Itu kalau pakai BPJS. Kalau tidak, lebih.
 

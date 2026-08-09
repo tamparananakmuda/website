@@ -94,7 +94,7 @@ Investasi mengejar pertumbuhan nilai aset selama bertahun-tahun. Seorang investo
 
 Perbedaan ini terdengar teknis. Tapi konsekuensinya nyata. Setiap kali kamu menjual saham, sekuritas memungut komisi. Setiap penjualan kena PPh final 0,1% dari nilai bruto. Trader yang bertransaksi 100 kali dalam sebulan membayar fee dan pajak berkali-kali lipat dibanding investor yang membeli sekali lalu menahan setahun. Biaya kecil yang terlihat sepele menjadi besar saat dikalikan ratusan transaksi.
 
-Psikologinya juga berbeda. Trader butuh disiplin besi: harus tahan melihat portofolio merah, harus tahan godaan FOMO, harus tahan keinginan balas dendam setelah rugi. FOMO bukan kelemahanmu, itu [desain algoritma](/artikel/fomo-desain-algoritma) yang sengaja dibuat agar kamu tidak bisa berhenti. Gen Z yang sudah kesulitan mengatur emosi di media sosial tiba-tiba diharuskan mengatur emosi di pasar yang volatil. Hasilnya bisa ditebak.
+Psikologinya juga berbeda. Trader butuh disiplin besi: harus tahan melihat portofolio merah, harus tahan godaan FOMO, harus tahan keinginan balas dendam setelah rugi. FOMO bukan kelemahanmu, itu [desain algoritma](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma) yang sengaja dibuat agar kamu tidak bisa berhenti. Gen Z yang sudah kesulitan mengatur emosi di media sosial tiba-tiba diharuskan mengatur emosi di pasar yang volatil. Hasilnya bisa ditebak.
 
 ## Manipulasi Pasar
 

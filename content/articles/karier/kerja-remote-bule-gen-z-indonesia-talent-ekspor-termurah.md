@@ -83,7 +83,7 @@ BPJS Ketenagakerjaan membuka program untuk Pekerja Bukan Penerima Upah (BPU). Fr
 
 PP 6/2025 memperbarui Jaminan Kehilangan Pekerjaan: manfaat naik jadi 60% upah selama maksimal 6 bulan. Tapi JKP hanya berlaku untuk pekerja terdaftar BPJS dengan masa iuran minimal 12 bulan. Remote worker kontraktor luar negeri? Tidak masuk kategori. Kamu di-PHK, tidak dapat apa-apa.
 
-Sama seperti yang kami bahas di [Freelance Bukan Kebebasan: Jebakan Tanpa Jaring Pengaman](/artikel/freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman), kerja tanpa jaminan sosial bukan kebebasan. Itu risiko yang ditanggung sendiri.
+Sama seperti yang kami bahas di [Freelance Bukan Kebebasan: Jebakan Tanpa Jaring Pengaman](/artikel/freelance-bukan-kebebasan-itu-jebakan-tanpa-jaring-pengaman), kerja tanpa jaminan sosial bukan kebebasan. Itu risiko yang ditanggung sendiri.
 
 ## Pajak 20-25% Sendiri, Tidak Ada Tax Treaty
 
@@ -101,7 +101,7 @@ Indonesia dan Amerika Serikat tidak punya comprehensive income tax treaty. Berbe
 
 Indonesia meluncurkan Golden Visa dan digital nomad visa untuk menarik talent global kerja remote dari Indonesia. Tapi visa ini dirancang untuk bule, bukan untuk lokal. Bule masuk dengan visa kerja remote, tinggal di Bali, bayar pajak di negara asal. Lokal yang kerja remote untuk company luar negeri? Tidak ada visa yang membantu. Tidak ada perlindungan yang diperluas.
 
-Seperti yang kami bahas di [Digital Nomad Visa Indonesia: Bule Kerja Remote, Lokal yang Bayar](/artikel/digital-nomad-visa-indonesia-bule-kerja-remote-lokal-yang-bayar), visa ini bukan bikin lokal untung. Visa ini bikin lokal jadi talent murah yang kebetulan tinggal di negara yang sama dengan tempat bule berlibur.
+Seperti yang kami bahas di [Digital Nomad Visa Indonesia: Bule Kerja Remote, Lokal yang Bayar](/artikel/digital-nomad-visa-bule-kerja-remote-lokal-yang-bayar), visa ini bukan bikin lokal untung. Visa ini bikin lokal jadi talent murah yang kebetulan tinggal di negara yang sama dengan tempat bule berlibur.
 
 ## Insight
 
@@ -109,7 +109,7 @@ Saya punya tiga teman yang kerja remote untuk company US. Dua sebagai software e
 
 Kerja remote bukan salah. Untuk banyak orang, gaji USD memang mengubah hidup. Tapi kamu harus tahu posisimu: kontraktor tanpa jaring pengaman. Gaji USD 5-10x lokal kelihatan besar, tapi setelah dipotong pajak 20-25%, BPJS mandiri, tidak ada THR, tidak ada pesangon, dan risiko PHK kapan saja tanpa kompensasi, gap-nya lebih kecil dari kelihatan.
 
-Seperti yang kami bahas di [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), Gen Z tidak loyal ke perusahaan. Tapi perusahaan luar negeri juga tidak loyal ke kamu. Kontrak kontraktor bisa diputus kapan saja, tanpa alasan, tanpa pesangon.
+Seperti yang kami bahas di [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya), Gen Z tidak loyal ke perusahaan. Tapi perusahaan luar negeri juga tidak loyal ke kamu. Kontrak kontraktor bisa diputus kapan saja, tanpa alasan, tanpa pesangon.
 
 ## Conclusion
 

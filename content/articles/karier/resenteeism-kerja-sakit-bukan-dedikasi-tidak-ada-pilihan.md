@@ -115,7 +115,7 @@ Saya punya teman yang kerja di startup. Dia demam 38 derajat tapi tetap masuk ka
 
 Masuk kerja sakit bukan tanda kuat, itu tanda tidak ada jaring pengaman. Dedikasi adalah pilihan. Kalau kamu tidak punya pilihan, itu bukan dedikasi. Itu ketiadaan pilihan yang dikemas sebagai dedikasi.
 
-Perusahaan sebenarnya profit dari presenteeism dalam jangka pendek: karyawan hadir, absensi terlihat sempurna, target tercapai. Tapi dalam jangka panjang, perusahaan rugi. Produktivitas turun 50 persen lebih, kesehatan karyawan memburuk, biaya kesehatan naik, turnover meningkat. Dan seperti yang kami bahas di [quiet quitting: bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati), karyawan yang dipaksa hadir tanpa dukungan sistem lama-kelamaan akan berhenti mencoba.
+Perusahaan sebenarnya profit dari presenteeism dalam jangka pendek: karyawan hadir, absensi terlihat sempurna, target tercapai. Tapi dalam jangka panjang, perusahaan rugi. Produktivitas turun 50 persen lebih, kesehatan karyawan memburuk, biaya kesehatan naik, turnover meningkat. Dan seperti yang kami bahas di [quiet quitting: bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati), karyawan yang dipaksa hadir tanpa dukungan sistem lama-kelamaan akan berhenti mencoba.
 
 Yang rugi paling besar adalah karyawan. Kesehatan memburuk, pemulihan makin lama, risiko burnout meningkat. Dan kalau sampai harus berobat, biayanya sendiri yang tanggung. Perusahaan tidak membayar tagihan RS kamu karena kamu masuk kerja saat sakit.
 
@@ -151,4 +151,4 @@ Kalau kamu punya paid sick leave tapi memilih masuk, itu bisa jadi dedikasi. Tap
 
 ### Bagaimana cara mengatasi presenteeism?
 
-Kenali batas tubuh dan gunakan cuti sakit saat perlu. Tapi solusi sebenarnya adalah sistem: paid sick leave, budaya kerja yang tidak menghukum istirahat, dan evaluasi kinerja dari hasil bukan dari kehadiran. Seperti yang kami bahas di [freelance bukan kebebasan, jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman), ketiadaan jaring pengaman bukan masalah individu, tapi masalah sistem.
+Kenali batas tubuh dan gunakan cuti sakit saat perlu. Tapi solusi sebenarnya adalah sistem: paid sick leave, budaya kerja yang tidak menghukum istirahat, dan evaluasi kinerja dari hasil bukan dari kehadiran. Seperti yang kami bahas di [freelance bukan kebebasan, jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-itu-jebakan-tanpa-jaring-pengaman), ketiadaan jaring pengaman bukan masalah individu, tapi masalah sistem.

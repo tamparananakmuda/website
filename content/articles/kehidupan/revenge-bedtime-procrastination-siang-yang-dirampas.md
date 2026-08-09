@@ -115,7 +115,7 @@ Data pola tidur Indonesia 2025 melaporkan 57% orang Indonesia mengalami kualitas
 
 Dampak kognitifnya nyata. Kurang tidur memperlambat berpikir, menurunkan perhatian, mengganggu memori, dan merusak pengambilan keputusan. Survei Chegg Global Student Survey 2025 yang dikutip penelitian Binus menemukan penurunan performa akademik hingga 60% pada mahasiswa yang tidur kurang dari 6 jam. Seperti yang kami bahas di [gen-z tidur 5 jam bukan produktif: slow motion burnout](/artikel/gen-z-tidur-5-jam-bukan-produktif-slow-motion-burnout), kurang tidur bukan investasi produktivitas. Ini burnout yang berjalan dengan kaki yang dipaksakan.
 
-Dan seperti yang kami tulis di [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan), algoritma media sosial dirancang untuk membuat kamu tetap scroll. Bukan karena kamu lemah. Tapi karena platform menghabiskan miliaran dolar untuk memastikan kamu tidak bisa berhenti.
+Dan seperti yang kami tulis di [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan), algoritma media sosial dirancang untuk membuat kamu tetap scroll. Bukan karena kamu lemah. Tapi karena platform menghabiskan miliaran dolar untuk memastikan kamu tidak bisa berhenti.
 
 ## Solusi Tidur yang Gagal Sebelum Dimulai
 
@@ -125,7 +125,7 @@ Masalahnya tidak ada di malam hari. Masalahnya ada di siang yang tidak memberi k
 
 Kalau siang hari kamu bekerja 10 jam, commute 2 jam, dan sisa waktu hanya cukup untuk makan dan mandi, tidak ada alarm tidur yang bisa menyelamatkan kamu. Tidak ada ritual malam yang bisa menggantikan kebutuhan dasar manusia untuk punya waktu yang bukan untuk orang lain.
 
-Revenge bedtime procrastination bukan masalah individu yang butuh tips tidur. Ini masalah struktur kerja dan jadwal yang tidak memberi jeda. Solusi sejati bukan mengelola malam, tapi merebut kembali siang. Jadwalkan waktu pribadi di siang hari, bahkan jika hanya 30 menit. Negosiasikan jam kerja. Berhenti memperlakukan lelah sebagai badge of honor. Dan kalau kamu butuh bantuan untuk mengelola kecemasan yang bikin kamu tidak bisa tidur, [hustle culture: bukan ambisi, burnout yang dikemas sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-burnout-yang-dikemas-sebagai-dedikasi) menjelaskan kenapa budaya kerja kita merancang kelelahan sebagai standar.
+Revenge bedtime procrastination bukan masalah individu yang butuh tips tidur. Ini masalah struktur kerja dan jadwal yang tidak memberi jeda. Solusi sejati bukan mengelola malam, tapi merebut kembali siang. Jadwalkan waktu pribadi di siang hari, bahkan jika hanya 30 menit. Negosiasikan jam kerja. Berhenti memperlakukan lelah sebagai badge of honor. Dan kalau kamu butuh bantuan untuk mengelola kecemasan yang bikin kamu tidak bisa tidur, [hustle culture: bukan ambisi, burnout yang dikemas sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-itu-burnout-yang-dikemas-sebagai-dedikasi) menjelaskan kenapa budaya kerja kita merancang kelelahan sebagai standar.
 
 ## Sistem yang Rampok Waktumu
 

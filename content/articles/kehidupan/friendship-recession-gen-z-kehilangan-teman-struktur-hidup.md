@@ -153,7 +153,7 @@ Tren "loud budgeting" yang muncul di kalangan Gen Z Indonesia pada 2026 mengkonf
 
 BRIN melalui Pusat Riset Kependudukan pada 2025 menemukan bahwa 40% pemuda Indonesia pernah bermigrasi setidaknya sekali seumur hidup. Rata-rata pemuda mengalami 0,86 migrasi antar kabupaten/kota. Mereka yang berpendidikan tinggi lebih sering berpindah, dengan rata-rata 2,14 kali bermigrasi.
 
-Setiap pindah kota berarti memutus akar sosial. Teman sekolah, tetangga, komunitas lokal, semua tertinggal. Dan membangun pertemanan baru di kota yang asing butuh waktu dan ruang yang tidak selalu tersedia. Ini menjelaskan mengapa [adulting terasa seperti sistem yang memaksa kamu mandiri sebelum siap](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap). Kamu tidak cuma pindah kerja. Kamu pindah seluruh jaringan sosialmu.
+Setiap pindah kota berarti memutus akar sosial. Teman sekolah, tetangga, komunitas lokal, semua tertinggal. Dan membangun pertemanan baru di kota yang asing butuh waktu dan ruang yang tidak selalu tersedia. Ini menjelaskan mengapa [adulting terasa seperti sistem yang memaksa kamu mandiri sebelum siap](/artikel/adulting-bukan-soal-gede-sistem-paksa-kamu-mandiri-sebelum-siap). Kamu tidak cuma pindah kerja. Kamu pindah seluruh jaringan sosialmu.
 
 ### Remote Work: Proximity yang Hilang
 
@@ -175,7 +175,7 @@ Kesepian Gen Z tidak akan teratasi dengan nasihat "kurangi main HP" atau "join k
 
 Friendship recession bukan cerita tentang generasi yang malas berteman. Ini cerita tentang sistem ekonomi yang tidak dirancang untuk menyisakan ruang bagi pertemanan. Ketika data Harvard menunjukkan 77% pekerja bekerja lebih dari 40 jam per minggu, ketika data BPS mencatat 7,7 juta orang menghabiskan 3 jam per hari untuk komuter, ketika nongkrong sekali habis Rp50 ribu menurut Universitas Surabaya, pertemanan menjadi barang mewah yang hanya bisa diakses oleh mereka yang punya waktu dan uang berlebih.
 
-Data The Harris Poll menunjukkan 49% Gen Z tidak punya cukup teman untuk diajak nongkrong. Bukan karena mereka tidak mau. Karena sistem tidak memberi mereka kesempatan untuk mempertahankan pertemanan. Dan ketika [kehilangan teman terasa lebih sakit dari putus cinta](/artikel/friendship-breakup-lebih-sakit-dari-putus-cinta), kerugian itu ditanggung sendirian, dalam kamar, di depan layar.
+Data The Harris Poll menunjukkan 49% Gen Z tidak punya cukup teman untuk diajak nongkrong. Bukan karena mereka tidak mau. Karena sistem tidak memberi mereka kesempatan untuk mempertahankan pertemanan. Dan ketika [kehilangan teman terasa lebih sakit dari putus cinta](/artikel/friendship-breakup-kenapa-kehilangan-teman-lebih-sakit-dari-putus), kerugian itu ditanggung sendirian, dalam kamar, di depan layar.
 
 Pertanyaannya bukan apakah Gen Z bisa punya teman. Pertanyaannya: apakah sistem memberi mereka waktu dan ruang untuk itu?
 

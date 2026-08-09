@@ -1,6 +1,6 @@
 ---
 title: 'Gen Z Belanja Rp12 Juta, BPJS Ditunda: Krisis Persepsi'
-slug: gen-z-belanja-12-juta-bpjs-ditunda-krisis-persepsi
+slug: gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi
 excerpt: >-
   Gen Z Jakarta spend Rp12 juta per bulan, tapi iuran BPJS Rp35.000 dianggap
   bisa ditunda. Bukan soal boros, tapi krisis persepsi nilai kesehatan.
@@ -72,7 +72,7 @@ Gen Z Jakarta punya ability to pay. Pengeluaran Rp12 juta per bulan, menurut dat
 
 Kajian global dari Ewunetje Bayked, dipublikasikan di Frontiers Public Health 2024, menemukan bahwa kelompok usia muda secara konsisten punya willingness to pay lebih rendah. Mereka merasa masih sehat dan menganggap penyakit sebagai risiko yang jauh di masa depan.
 
-Polanya visible banget: kopi, langganan digital, hiburan, dan food delivery mudah diterima sebagai kebutuhan rutin. Iuran BPJS yang nilainya jauh lebih kecil masih dianggap pengeluaran yang bisa ditunda. [Langganan digital punya masalah serupa](/artikel/langganan-digital-pengeluaran-tak-kasat-mata): kamu tidak sadar berapa yang keluar setiap bulan untuk hal-hal yang terasa gratis.
+Polanya visible banget: kopi, langganan digital, hiburan, dan food delivery mudah diterima sebagai kebutuhan rutin. Iuran BPJS yang nilainya jauh lebih kecil masih dianggap pengeluaran yang bisa ditunda. [Langganan digital punya masalah serupa](/artikel/langganan-digital-bukan-gaya-hidup-itu-pengeluaran-tak-kasat-mata): kamu tidak sadar berapa yang keluar setiap bulan untuk hal-hal yang terasa gratis.
 
 ## Kepercayaan Tidak Tumbuh dari Kampanye
 

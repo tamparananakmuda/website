@@ -94,7 +94,7 @@ Daripada mengejar "passive income" sebagai mimpi bebas kerja, lebih baik berpiki
 
 Mulai dari yang realistis. Investasi rutin di reksa dana atau saham blue chip, walau Rp100 ribu per bulan. Bangun skill yang bisa dijual sebagai freelance. Simpan dulu, investasi, biarkan compounding bekerja. Konsistensi selama 10-20 tahun akan menghasilkan hasil yang tidak bisa kamu dapat dari kursus "passive income" seharga Rp89 ribu.
 
-Kalau kamu mau belajar tentang keuangan yang realistis, baca juga [bagaimana paylater mengatur gajimu](/artikel/paylater-bukan-kemudahan-penjaga-gaji-kamu) dan [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh).
+Kalau kamu mau belajar tentang keuangan yang realistis, baca juga [bagaimana paylater mengatur gajimu](/artikel/paylater-bukan-kemudahan-penjaga-gaji-kamu) dan [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh).
 
 Passive income bukan tentang malas kerja. Passive income adalah hasil dari kerja keras yang sudah selesai. Kalau kamu belum selesai bekerja keras, kamu belum punya passive income. Yang kamu punya adalah harapan yang dijual orang lain.
 

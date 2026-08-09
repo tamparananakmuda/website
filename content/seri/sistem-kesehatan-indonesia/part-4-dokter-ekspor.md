@@ -21,7 +21,7 @@ tags:
 ogHeadline: 'Dokter Indonesia pergi, siapa yang sisa?'
 seoMetaTitle: 'Dokter Indonesia Keluar Negeri, Kekurangan 27.000 Spesialis | TAM'
 seoMetaDescription: >-
-  Indonesia kekurangan 27.000 dokter spesialis pada 2025, proyeksi 65.000 di 2032. Produksi 2.700/tahun, butuh 15.000. Kenapa dokter ekspor SDM, impor kekosongan.
+  Indonesia kekurangan 27.000 dokter spesialis, produksi 2.700/tahun. 423 perawat dikirim ke Jerman. Kenapa dokter ekspor SDM dan impor kekosongan?
 seoKeywords:
   - dokter Indonesia keluar negeri
   - kekurangan dokter spesialis
@@ -77,15 +77,9 @@ Sementara produksi dokter spesialis hanya 2.700 per tahun, pemerintah justru akt
 
 ## Kekurangan yang Tidak Pernah Tertutup
 
-Kemenkes, dilansir Kompas.id Juli 2025, menyebut kekurangan 27.000 dokter spesialis pada 2025. Proyeksi 2032: 65.000 sampai 70.000, dari kebutuhan total sekitar 140.000. Produksi 2.700 per tahun, kebutuhan 15.000 sampai 16.000 per tahun.
+Di [Part 2](/artikel/sistem-kesehatan-indonesia-part-2-akses-kode-pos) kita sudah bahas: Indonesia kekurangan 27.000 dokter spesialis pada 2025, produksi hanya 2.700 per tahun, sementara kebutuhan 15.000 sampai 16.000. Menkes Budi Gunadi Sadikin, dalam Kompas.id Juli 2025, mengatakan: "Sampai merdeka ke-100 pun gap belum terpenuhi."
 
-```chart:bar
-{"title":"Produksi vs Kebutuhan Dokter Spesialis per Tahun","subtitle":"Gap 12.300 per tahun, tidak mungkin tertutup","source":"Kemenkes 2025, via Kompas.id","data":[{"label":"Produksi/tahun","value":2700,"color":"#ef4444"},{"label":"Kebutuhan/tahun","value":15500,"color":"#3b82f6"}]}
-```
-
-Menkes Budi Gunadi Sadikin, dalam Kompas.id Juli 2025, mengatakan: "Sampai merdeka ke-100 pun gap belum terpenuhi." Pada ritme 2.700 per tahun, butuh 24 tahun untuk menutup gap 27.000. Tapi gap terus tumbuh karena kebutuhan juga naik setiap tahun.
-
-Lebih spesifik: 375 kab/kota kekurangan spesialis jantung. 383 kab/kota kekurangan spesialis stroke. 407 kab/kota kekurangan spesialis kanker. Hanya 3 wilayah yang memenuhi rasio spesialis jantung. Untuk 514 kab/kota pada 2027, dibutuhkan 1.165 spesialis tambahan untuk jantung, stroke, dan kanker.
+Tapi ada hal yang lebih paradoks: sementara dalam negeri kekurangan, pemerintah justru aktif mengekspor tenaga kesehatan. Produksi 2.700 per tahun tidak cukup untuk dalam negeri, tapi perawat dikirim ke luar negeri. Ekspor SDM kesehatan, impor kekosongan.
 
 ## Ekspor Tenaga Kesehatan
 
@@ -95,17 +89,13 @@ Negara tujuan: Jerman, Jepang, Amerika Serikat, Kanada, Austria. Alasan mereka p
 
 Kompas.id Agustus 2025 melaporkan sistem matrikulasi diaspora: waktu adaptasi untuk dokter Indonesia yang pulang dari luar negeri diturunkan dari bertahun-tahun menjadi 1 tahun. Pemerintah berusaha menarik dokter diaspora kembali. Tapi kenapa mereka keluar lebih cepat dari mereka kembali?
 
-## Distribusi yang Timpang
+## Mengapa Sistem Gagal Menahan
 
-Kekurangan tidak merata. 375 kab/kota tanpa spesialis jantung. 383 kab/kota tanpa spesialis stroke. 407 kab/kota tanpa spesialis kanker. Artinya, kalau kamu serangan jantung di 375 kabupaten di Indonesia, kamu tidak akan ditemui oleh spesialis jantung. Kamu harus rujuk ke kota besar, kalau sempat.
+Indonesia tidak hanya kekurangan dokter, tapi juga kehilangan yang sudah ada. Sistem tidak memberi insentif yang cukup: gaji rendah, karier tidak jelas, beban kerja tinggi, fasilitas tidak memadai. Sementara negara lain menawarkan paket lengkap: gaji tinggi, karier jelas, profesi dihargai.
 
-Rasio spesialis target Indonesia 2032: 0,46 per 1.000 penduduk. Bandingkan: AS 3,30, UK 2,53, Australia 1,47, Singapura 1,12, Malaysia 0,42. Indonesia akan mencapai 0,46 pada 2032. AS sudah di 3,30 sekarang. Selisih 7 kali. Bahkan Malaysia, dengan ekonomi sebanding, punya target lebih tinggi.
+WHO, dalam laporan Maret 2026, menyebut Indonesia perlu memperkuat perencanaan tenaga kesehatan melalui analisis pasar kerja. Data ada, rencana ada. Tapi implementasi tertinggal. Produksi 2.700/tahun vs kebutuhan 15.000/tahun bukan masalah perencanaan. Itu masalah kapasitas produksi yang tidak diperbesar. Dan sementara kapasitas tidak diperbesar, yang ada dikirim ke luar negeri.
 
-## Rasio vs Negara Lain
-
-Rasio dokter umum target 2032: 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang dengan GDP per kapita lebih rendah.
-
-WHO, dalam laporan Maret 2026, menyebut Indonesia perlu memperkuat perencanaan tenaga kesehatan melalui analisis pasar kerja. Data ada, rencana ada. Tapi implementasi tertinggal. Produksi 2.700/tahun vs kebutuhan 15.000/tahun bukan masalah perencanaan. Itu masalah kapasitas produksi yang tidak diperbesar.
+Rasio dokter umum target 2032: 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang dengan GDP per kapita lebih rendah. Dan sementara di bawah Vietnam, perawat Indonesia dikirim ke Jerman.
 
 Memahami dokter keluar adalah langkah pertama. Langkah kedua lebih sulit.
 

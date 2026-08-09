@@ -60,7 +60,7 @@ Kerjaan numpuk, gaji stagnan. Rekan kerja keluar, posisinya tidak diisi. Tapi ke
 
 ## Konsep yang Mengubah Posisimu Diam-Diam
 
-Kamu mungkin sudah dengar [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati), fenomena karyawan yang berhenti peduli dan kerja sesuai jobdesk saja. Kamu mungkin juga tahu [quiet firing](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar), praktik perusahaan yang sengaja bikin kamu tidak nyaman sampai resign sendiri. Tapi ada satu lagi yang jarang dibahas: quiet hiring. Perusahaan menambah kerjaan tanpa menambah orang, tanpa menambah gaji, tanpa pengumuman formal.
+Kamu mungkin sudah dengar [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati), fenomena karyawan yang berhenti peduli dan kerja sesuai jobdesk saja. Kamu mungkin juga tahu [quiet firing](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar), praktik perusahaan yang sengaja bikin kamu tidak nyaman sampai resign sendiri. Tapi ada satu lagi yang jarang dibahas: quiet hiring. Perusahaan menambah kerjaan tanpa menambah orang, tanpa menambah gaji, tanpa pengumuman formal.
 
 Istilah ini pertama dipopulerkan Gartner pada 2023 sebagai salah satu dari sembilan prediksi workplace teratas. Emily Rose McRae, Senior Director of Research di Gartner, mendefinisikannya sebagai praktik organisasi mendapatkan skill baru tanpa merekrut karyawan full-time baru. Di versi idealnya, quiet hiring dilakukan dengan kompensasi yang sesuai dan transparansi. Di versi realita 2026, kompensasi itu sering hilang. Yang tersisa hanya kerjaan tambahan di atas meja kamu.
 
@@ -104,7 +104,7 @@ Yang lebih mengkhawatirkan: burnout yang diatribusikan ke role expansion naik da
 
 ### Engagement Drop 18-23 Points
 
-Fizzty 2026 melaporkan bahwa karyawan yang menyerap tambahan scope tanpa negosiasi mengalami penurunan engagement score 18-23 poin di bawah rata-rata. Artinya, quiet hiring tanpa kompensasi bikin lelah sekaligus bikin tidak peduli. Dan karyawan yang tidak peduli adalah bibit [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati).
+Fizzty 2026 melaporkan bahwa karyawan yang menyerap tambahan scope tanpa negosiasi mengalami penurunan engagement score 18-23 poin di bawah rata-rata. Artinya, quiet hiring tanpa kompensasi bikin lelah sekaligus bikin tidak peduli. Dan karyawan yang tidak peduli adalah bibit [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati).
 
 Siklusnya berputar: perusahaan tambah kerjaan tanpa tambah gaji, karyawan burnout dan berhenti peduli, posisi kosong tidak diisi, kerjaan ditumpuk ke karyawan lain. Quiet hiring menciptakan quiet quitting, yang menciptakan lebih banyak quiet hiring.
 

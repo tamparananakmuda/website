@@ -75,7 +75,7 @@ Jurnal Bekasi 2026 dengan 400 responden menemukan WLB berpengaruh negatif sebesa
 
 Michael Page 2024 mencatat 96 persen karyawan Indonesia terbuka untuk menerima kesempatan kerja di tempat lain. Kurang dari satu dari sepuluh karyawan yang diperkirakan akan tetap bertahan di perusahaan tempat mereka bekerja saat ini. Gallup 2025 mencatat 54 persen pekerja Gen Z memiliki niat untuk resign. Deloitte 2022 menemukan 46 persen Gen Z berencana meninggalkan pekerjaan dalam dua tahun ke depan.
 
-Tapi data Periskop.id menunjukkan Gen Z bukan tidak loyal. 31 persen memang pernah berpindah perusahaan, tapi 59 persen bertahan karena lingkungan kerja yang nyaman, dan 49 persen karena fleksibilitas waktu. Mereka tidak pindah karena bosan. Mereka menghitung dan memilih. [96 persen terbuka pindah bukan karena loyalitas yang mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), tapi karena perusahaan yang tidak memberikan alasan untuk bertahan.
+Tapi data Periskop.id menunjukkan Gen Z bukan tidak loyal. 31 persen memang pernah berpindah perusahaan, tapi 59 persen bertahan karena lingkungan kerja yang nyaman, dan 49 persen karena fleksibilitas waktu. Mereka tidak pindah karena bosan. Mereka menghitung dan memilih. [96 persen terbuka pindah bukan karena loyalitas yang mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya), tapi karena perusahaan yang tidak memberikan alasan untuk bertahan.
 
 ## Fleksibilitas yang Masih Sulit
 
@@ -89,7 +89,7 @@ Periskop.id melaporkan 92 persen Gen Z menyebut WLB penting, 74 persen sadar kes
 
 Penelitian Safitri dan Musoli (2025) di Yogyakarta menemukan WLB berpengaruh negatif kuat terhadap turnover intention. Stres kerja menjadi variabel mediator: WLB yang buruk memicu stres, stres yang tidak tertangani mendorong niat resign. Said dan Adinna (2025) mengonfirmasi WLB berpengaruh positif kuat terhadap retensi karyawan dengan kepuasan kerja sebagai mediator.
 
-[Quiet quitting bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati). Begitu juga WLB. Bukan permintaan khusus, tapi syarat bertahan. Perusahaan yang tidak memenuhinya tidak kehilangan karyawan "lemah". Mereka kehilangan karyawan yang sudah menghitung dan memilih tempat yang tidak menghancurkan mereka.
+[Quiet quitting bukan malas, sistem kerja yang tidak mau bayar hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati). Begitu juga WLB. Bukan permintaan khusus, tapi syarat bertahan. Perusahaan yang tidak memenuhinya tidak kehilangan karyawan "lemah". Mereka kehilangan karyawan yang sudah menghitung dan memilih tempat yang tidak menghancurkan mereka.
 
 ## Insight
 

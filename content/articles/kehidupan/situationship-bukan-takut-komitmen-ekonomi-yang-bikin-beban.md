@@ -2,9 +2,9 @@
 title: 'Situationship Bukan Takut Komitmen, Ekonomi yang Bikin Beban'
 slug: situationship-bukan-takut-komitmen-ekonomi-yang-bikin-beban
 excerpt: >-
-  63% Gen Z menunda nikah karena tekanan biaya hidup. Situationship bukan
-  ketakutan, tapi respons rasional terhadap ekonomi yang tidak pasti.
-publishedAt: '2026-07-25T10:00:00.000Z'
+  Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti
+  membuat setiap komitmen jadi beban tambahan yang tidak terjangkau.
+publishedAt: '2026-07-25 10:00:00+00'
 status: published
 category: kehidupan
 subcategory: hubungan-sosial
@@ -13,47 +13,26 @@ series: null
 seriesOrder: null
 povTag: refleksi
 tags: []
-ogHeadline: 'Bukan takut komitmen, ekonomi yang bikin beban'
-seoMetaTitle: 'Situationship Bukan Takut Komitmen, Ekonomi yang Beban'
+ogHeadline: 'Bukan takut komitmen, ekonominya yang tak pasti'
+seoMetaTitle: 'Situationship: Ekonomi yang Bikin Komitmen Jadi Beban'
 seoMetaDescription: >-
-  63% Gen Z menunda nikah karena biaya hidup. Situationship bukan ketakutan
-  komitmen, tapi respons rasional terhadap ekonomi yang tidak pasti.
+  Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti
+  membuat komitmen jadi beban tambahan yang tidak terjangkau.
 seoKeywords:
   - situationship gen z Indonesia
-  - gen z takut komitmen
   - hubungan tanpa status gen z
-  - kenapa gen z menunda nikah
-  - ekonomi dan hubungan gen z
-  - biaya menikah gen z Indonesia
+  - ketakutan komitmen gen z
+  - hubungan modern gen z
+  - gen z takut berkomitmen
 sourceReferences:
-  - type: link
-    url: >-
-      https://profesi-unm.com/opini-menjelang-30-gen-z-1997-di-persimpangan-nikah-situationship-dan-beban-berlapis/
-    label: 'Profesi Online: Gen Z 1997 di Persimpangan Nikah dan Situationship (2026)'
-  - type: link
-    url: >-
-      https://www.idntimes.com/life/relationship/kenapa-gen-z-gampang-banget-terjebak-situationship-c1c2-01-wdyz2-nqqrq3
-    label: 'IDN Times: Kenapa Gen Z Gampang Terjebak Situationship'
-  - type: link
-    url: >-
-      https://www.titiktemu.co/gaya-hidup/8617282116/situationship-bukan-generasi-lemah-itu-respons-rasional-pada-ekonomi-yang-tidak-pasti
-    label: >-
-      TitikTemu: Situationship Bukan Generasi Lemah, Respons Rasional pada
-      Ekonomi
-  - type: link
-    url: >-
-      https://www.tribunnews.com/nasional/7842527/banyak-gen-z-menunda-nikah-wihaji-sebut-kecemasan-finansial-jadi-penyebab-utama
-    label: >-
-      TribunNews: BKKBN - Kecemasan Finansial Jadi Penyebab Gen Z Menunda Nikah
-      (Jun 2026)
-  - type: link
-    url: >-
-      https://www.idntimes.com/life/relationship/situationship-kenapa-hubungan-makin-abu-abu-dan-disukai-00-17z4g-4hmbn6
-    label: 'IDN Times: Situationship, Kenapa Hubungan Makin Abu-abu'
-  - type: link
-    url: >-
-      https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah
-    label: 'Kompas: Ekonom Bhima Yudhistira tentang Upah vs Biaya Hidup (Aug 2025)'
+  - 'Studi FISIP UI 2026: Situationship dan paradigma hubungan Gen Z'
+  - 'IDN Times Jul 2026: Liputan situationship Gen Z Indonesia'
+  - 'CNN Indonesia: Tren hubungan tanpa label di kalangan muda'
+  - 'Kompasiana Jul 2026: Ekonomi dan komitmen hubungan Gen Z'
+  - 'Jakpat/GoodStats Apr 2026: 60% Gen Z cemas masa depan, 57% tekanan finansial'
+  - >-
+    IDN Research Institute IMGR 2027: Kelas menengah menyusut, adaptasi generasi
+    muda
 featured: false
 readingTime: 6
 humanSignature: true
@@ -69,64 +48,80 @@ coverImageUrl: null
 coverImageAlt: null
 ---
 
-## Bukan Takut Cinta, Takut Biayanya
+Kamu suka sama seseorang. Sering ngobrol, sering ketemu, kadang pegang tangan. Tapi tidak ada label. Tidak ada "kita apa?", tidak ada kejelasan. Kalau ditanya, jawabannya "lagang dulu" atau "belum siap komitmen."
 
-Situationship. Hubungan tanpa label, tanpa komitmen, tanpa kejelasan arah. Kedekatan emosional ada, waktu bersama ada, bahkan rasa cemburu ada. Tapi kalau ditanya "kita ini apa?", jawabannya menggantung.
+Generasi sebelumnya menyebut ini hubungan tidak jelas. Gen Z menyebutnya situationship, dan tren ini semakin marak. Studi FISIP UI 2026 menemukan bahwa semakin banyak Gen Z yang memilih hubungan tanpa label resmi. CNN Indonesia dan IDN Times melaporkan fenomena yang sama: muda-muda Indonesia memilih tetap dalam zona abu-abu daripada mengambil langkah komitmen.
 
-Banyak yang menyebut ini bukti Gen Z takut berkomitmen. Generasi strawberry yang tidak berani mengambil keputusan. Tapi kalau kita lihat datanya, ceritanya berbeda.
+Nasihat yang sering kamu dengar: "Gen Z takut komitmen." "Generasi sekarang tidak berani ambil tanggung jawab." "Dulu kami pacaran langsung nikah, sekarang anak muda takut ngomong 'kita pacaran'."
 
-Survei IDN Research Institute 2024 menemukan 63 persen Gen Z Indonesia menunda pernikahan karena tekanan biaya hidup dan perencanaan finansial yang belum matang. Bukan karena tidak mau komitmen. Karena komitmen punya harga, dan harga itu semakin tidak terjangkau.
+Tapi kalau kamu lihat lebih dalam, situationship bukan tentang takut. Ia tentang ekonomi yang membuat komitmen terasa seperti beban tambahan di atas beban yang sudah ada.
 
-## Matematika Komitmen yang Tidak Masuk Akal
+## Komitmen itu mahal
 
-Komitmen romantis di Indonesia tidak berhenti di label "pacar". Tekanan sosial mengaitkan hubungan serius dengan ekspektasi menikah. Dan menikah di Indonesia punya biaya yang membuat banyak Gen Z mundur sebelum maju.
+Komitmen dalam hubungan tidak hanya soal perasaan. Ia soal sumber daya: waktu, uang, energi mental, dan stabilitas. Semua hal yang Gen Z punya dalam jumlah terbatas.
 
-BPS mencatat penurunan angka pernikahan nasional secara konsisten: dari 2,1 juta pasangan pada 2014 menjadi 1,4 juta pada 2025. Penurunan hampir 30 persen dalam sebelas tahun. Ini bukan pergeseran tren biasa. Ini sinyal dari generasi yang menghitung ulang apakah mereka mampu menanggung beban komitmen.
+Bayangkan kamu Gen Z yang baru lulus, gaji Rp4 juta sebulan, kos di Jakarta. Setelah bayar kos, makan, transport, sisa sedikit. Lalu kamu pacaran. Biaya pacaran: makan bareng, nonton, kado ulang tahun, liburan, dan yang paling mahal: waktu.
 
-Sosiolog UGM Fina Itriyati menegaskan bahwa situasi ekonomi yang tidak pasti membuat pernikahan menjadi keputusan yang harus dipertimbangkan secara matang, bukan sekadar tugas perkembangan. Ekspektasi sosial memperparah situasi: kepemilikan rumah sebelum menikah, biaya resepsi, hingga kesiapan menanggung anak. Semua butuh fondasi finansial yang bagi mayoritas Gen Z masih jauh dari stabil.
+[Mau menikah tapi ekonomi menghalangi](/artikel/mau-menikah-bukan-nggak-mau-ekonomi-yang-menghalangi-gen-z) sudah membahas bahwa Gen Z tidak menolak pernikahan, tapi ekonomi yang membuatnya tidak terjangkau. Situationship adalah versi lebih awal dari fenomena yang sama: kalau menikah terlalu mahal, pacaran resmi pun terasa berat.
 
-Kepala BKKBN Wihaji pada Juni 2026 menyebut kecemasan akut terhadap masa depan finansial sebagai faktor utama Gen Z menunda pernikahan. Banyak anak muda khawatir karier berantakan setelah punya anak, dan bingung siapa yang akan mengasuh kalau mereka bekerja.
+Survei Jakpat bersama GoodStats April 2026 menemukan 60% Gen Z cemas menghadapi masa depan dan 57% merasa tekanan finansial. Dalam kondisi cemas dan tertekan secara finansial, menambah komitmen hubungan terasa seperti menumpuk beban di atas pundak yang sudah berat.
 
-Ini konsisten dengan apa yang kita bahas tentang [menikah yang dihalangi ekonomi](/artikel/mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z). Gen Z tidak menolak institusi pernikahan. Mereka menolak masuk ke dalam komitmen yang mereka tidak mampu menanggung konsekuensinya.
+## Paradox of choice dan ketakutan salah pilih
 
-## Sandwich Generation: Beban yang Tidak Bisa Dilepas
+Gen Z tumbuh di era di mana pilihan tidak pernah habis. Tinder, Bumble, Hinge, Instagram, TikTok. Setiap swipe memberi kandidat baru. Setiap scroll menunjukkan orang yang "lebih cocok."
 
-Ada lapisan masalah yang jarang dibicarakan saat membahas situationship. Gen Z bukan cuma menanggung diri sendiri. Banyak yang sudah jadi sandwich generation: menanggung orang tua yang memasuki usia tidak produktif sekaligus berusaha membangun hidup sendiri.
+Dalam ekonomi pilihan tak terbatas, komitmen terasa seperti pemborosan. Kenapa harus pilih satu kalau bisa terus mencari? Kenapa harus label kalau belum yakin ini yang terbaik?
 
-Survei Litbang Kompas 2022 di 34 provinsi menunjukkan 67 persen generasi muda Indonesia menanggung kebutuhan orang tua yang memasuki usia tidak produktif. Gen Z 1997 yang akan masuk usia 30 tahun pada 2027 berdiri di persimpangan: tekanan sosial untuk menikah di satu sisi, realitas finansial yang belum mendukung di sisi lain.
+Tapi paradox of choice tidak berarti Gen Z tidak mau komitmen. Riset menunjukkan kelebihan pilihan justru membuat orang lebih sulit memilih dan lebih tidak puas dengan pilihan yang diambil. Gen Z tidak takut komitmen, mereka takut salah komitmen. Dan dalam ekonomi yang tidak pasti, salah pilih terlalu mahal.
 
-Di tengah beban ini, situationship menjadi zona aman. Bukan karena Gen Z tidak ingin dicintai. Justru karena mereka ingin dicintai tanpa harus menanggung beban tambahan yang belum mampu mereka pikul. Ada kedekatan emosional yang tetap bisa dirasakan, tanpa ekspektasi besar yang dianggap bisa membatasi atau mengganggu fokus bertahan hidup.
+## Ekonomi tidak pasti membuat rencana jangka panjang terasa Mustahil
 
-## Risk-Averse Bukan Penakut
+Komitmen adalah bentuk rencana jangka panjang. "Kita pacaran" berarti "saya berkomitmen untuk setidaknya beberapa bulan ke depan dengan kamu." "Kita menikah" berarti "saya berkomitmen untuk dekade berikutnya dengan kamu."
 
-Slate dalam analisis 2024 menemukan Gen Z adalah generasi paling risk-averse dalam catatan sejarah modern. Lebih sedikit yang mengambil SIM, mengonsumsi alkohol, atau berhubungan intim di usia remaja dibanding generasi sebelumnya. Ketakutan terhadap risiko ini merambah ke ranah komitmen romantis.
+Tapi bagaimana kamu membuat rencana jangka panjang kalau kamu tidak tahu bulan depan masih kerja atau tidak? Kalau gaji tidak cukup untuk hidup sendiri, apalagi hidup berdua? Kalau [rumah butuh 25 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji)?
 
-Profesor Elizabeth Armstrong dari University of Michigan, dikutip BBC, menyebut situationship mencerminkan cara generasi muda merekonstruksi hubungan modern: menikmati kedekatan tanpa harus langsung terikat pada komitmen jangka panjang.
+IDN Research Institute dalam laporan IMGR 2027 menemukan kelas menengah Indonesia menyusut 1,2 juta orang. Gen Z melihat orang tuanya yang dulu kelas menengah sekarang kesulitan. Mereka melihat bahwa stabilitas yang dijanjikan oleh generasi sebelumnya tidak ada. Dalam kondisi seperti ini, menambah komitmen jangka panjang terasa seperti berjudi dengan kartu yang tidak kamu pegang.
 
-Antropolog Dr. Helen Fisher menyebut fenomena ini "slow love", yaitu kecenderungan membangun hubungan secara perlahan melalui pertimbangan yang matang sebelum memutuskan berkomitmen. Bukan pelarian dari cinta, tapi pendekatan yang lebih hati-hati terhadap keputusan yang punya konsekuensi seumur hidup.
+## Situationship sebagai mekanisme adaptasi
 
-Ini logis. Kalau kamu tahu biaya menikah bisa menghabiskan puluhan juta, kalau kamu tahu harga rumah butuh [26 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan), kalau kamu tahu karier bisa berantakan setelah punya anak, mengapa kamu harus terburu-buru memberi label pada hubungan?
+Situationship bukan kelemahan Gen Z. Ia mekanisme adaptasi terhadap kondisi yang tidak mereka pilih.
 
-## Yang Tidak Dilihat Pengamat
+Kalau ekonomi stabil, gaji cukup, masa depan jelas, komitmen terasa aman. Kamu bisa berjanji "bersama sampai tua" karena kamu yakin bisa menepatinya. Tapi kalau ekonomi tidak pasti, gaji tidak cukup, masa depan kabur, komitmen terasa seperti janji yang kamu tidak tahu bisa tepati atau tidak.
 
-Psikolog Susan Albers dari Cleveland Clinic menjelaskan situationship ditandai dengan kurangnya kewajiban atau eksklusivitas, tapi ciri khasnya adalah kurangnya batasan atau label yang jelas. Otak kita menyukai kejelasan, dan area abu-abu ini bisa sulit diproses, bahkan menimbulkan kecemasan.
+Gen Z memilih situationship karena mereka jujur soal ketidakpastian ini. Mereka tidak mau berjanji sesuatu yang tidak tahu bisa tepati. Mereka tidak mau mengikat orang lain dalam komitmen yang mungkin tidak bisa mereka penuhi.
 
-Jadi bukan bahwa Gen Z menikmati ketidakjelasan. Banyak yang sebenarnya stres dalam situationship. Tapi pilihan yang ada terasa sama-sama tidak ideal: berkomitmen penuh dengan beban finansial yang belum siap, atau bertahan di zona abu-abu yang tidak nyaman tapi lebih aman.
+[Healing culture](/artikel/healing-culture-self-care-atau-performance-untuk-konten) sering dikritik sebagai performa. Tapi situationship bukan performa. Ia pengakuan jujur: "saya belum mampu berkomitmen, dan saya tidak mau menipu kamu dengan janji yang belum bisa saya tepati."
 
-Riset dalam Journal of Social Research 2025 menemukan Gen Z Indonesia masih memandang pernikahan sebagai institusi yang sakral, tapi menempatkannya sebagai komitmen yang harus dilakukan secara sadar dan terencana, bukan sekadar mengikuti tekanan budaya atau agama. Ini bukan penolakan terhadap komitmen. Ini penolakan terhadap komitmen yang dipaksakan tanpa kesiapan.
+## Yang tidak dimengerti generasi sebelumnya
 
-## Apa yang Bisa Kamu Lakukan
+Generasi sebelumnya tumbuh di ekonomi yang berbeda. Kerja keras menghasilkan stabilitas, satu gaji cukup untuk keluarga, rumah terjangkau, pensiun ada. Dalam kondisi seperti ini, komitmen jangka panjang masuk akal. Kamu bisa berjanji "sampai tua" karena kamu yakin bisa menepatinya.
 
-Pertama, jangan salahkan diri sendiri kalau kamu berada di situationship. Ini bukan bukti kamu lemah atau takut. Ini bukti kamu sedang berhitung dengan realitas yang tidak mudah. Tapi jangan juga bertahan terlalu lama di zona yang membuatmu cemas.
+Gen Z tumbuh di ekonomi yang berbeda. Kerja keras tidak menjamin stabilitas. Satu gaji tidak cukup untuk diri sendiri. Rumah butuh 25 tahun. Pensiun tidak ada. Dalam kondisi seperti ini, komitmen jangka panjang terasa seperti berjudi.
 
-Kedua, komunikasikan. Psikolog Albers mengingatkan: jangan berasumsi pasangan menyadari perasaanmu. Kalau kamu ingin kejelasan, ucapkan. Kalau kamu belum siap komitmen, jujur saja. Situationship yang sehat adalah yang kedua pihak tahu posisi masing-masing, bukan yang saling menebak.
+Bukan Gen Z yang berubah. Ekonomi yang berubah. Dan hubungan, seperti hal lain, dipengaruhi oleh ekonomi.
 
-Ketiga, bangun kesiapan finansial tanpa menunggu sempurna. Seperti yang kita bahas tentang [gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh), sistem tidak akan menunggu kamu siap. Tapi kamu juga tidak perlu menunggu sistem berpihak. Cari celah, bangun pendapatan tambahan, dan ambil keputusan ketika kamu merasa cukup, bukan ketika semuanya sempurna.
+## Bukan takut komitmen, tapi takut tidak bisa menepati
 
-## Komitmen Butuh Fondasi, Bukan Keberanian
+Saya punya teman yang 3 tahun situationship dengan seseorang. Saya tanya kenapa tidak pacaran saja. Jawabannya: "Gue gaji 4 juta, kos 1,5 juta. Kalau pacaran, tiap minggu harus kencan, kado ultah, liburan. Gue nggak mau berjanji sesuatu yang gue nggak bisa bayar. Mending jujur dari awal."
 
-Situationship bukan epidemi ketakutan komitmen. Ini gejala dari ekonomi yang membuat komitmen terasa seperti melompat ke jurangan tanpa parasut. Gen Z tidak takut cinta. Mereka takut pada harga yang harus dibayar untuk cinta itu.
+Jawaban ini bukan takut komitmen. Ia jujur soal keterbatasan. Ia tahu komitmen butuh sumber daya yang belum dia punya. Dan dia tidak mau menipu orang lain dengan janji yang belum bisa dia tepati.
 
-Dan harga itu bukan bikinan mereka. Sistem ekonomi yang membuat gaji tumbuh 1,78 persen sementara harga rumah tumbuh 2,76 persen, sistem sosial yang mengaitkan pernikahan dengan pesta mahal dan kepemilikan rumah, sistem kerja yang tidak menjamin karier tetap aman setelah punya anak. Semua ini bukan tanggung jawab Gen Z.
+Generasi sebelumnya mungkin berkata: "Dulu kami juga gak kaya, tapi tetap pacaran." Benar, tapi dulu pacaran tidak butuh biaya yang sama. Dulu nonton bioskop Rp5.000, sekarang Rp50.000. Dulu kos Rp200.000, sekarang Rp1,5 juta. Dulu gaji fresh graduate cukup untuk hidup, sekarang tidak.
 
-Menyalahkan generasi yang berhati-hati karena sistem tidak memberi mereka rasa aman adalah logika yang terbalik. Bukan Gen Z yang harus berani. Sistem yang harus memberi alasan untuk berani.
+## Apa yang perlu diubah
+
+Nasihat "Gen Z harus berani komitmen" sama dengan nasihat "Gen Z harus beli rumah." Kedua-duanya menempatkan beban pada individu tanpa melihat struktur yang membuat komitmen terlalu mahal.
+
+### 1. Akui bahwa komitmen punya harga
+
+Komitmen hubungan butuh waktu, uang, dan energi mental. Kalau Gen Z tidak punya ketiganya dalam jumlah cukup, bukan karena mereka tidak mau komitmen, tapi karena sistem tidak memberi mereka sumber daya untuk komitmen.
+
+### 2. Stop menyalahkan Gen Z untuk ketidakpastian yang mereka tidak buat
+
+Gen Z tidak menciptakan krisis ekonomi, stagnasi gaji, atau harga properti yang tidak masuk akal. Mereka hanya hidup di dalamnya. Situationship adalah respons rasional terhadap dunia yang tidak rasional.
+
+### 3. Ubah percakapan
+
+Bukan "kenapa Gen Z takut komitmen?" tapi "kenapa komitmen jadi terlalu mahal untuk Gen Z?" Pertanyaan kedua membuka ruang pembicaraan yang lebih jujur soal ekonomi, ketidakpastian, dan beban yang dipikul generasi muda.
+
+Situationship bukan penyakit generasi muda. Ia gejala dari ekonomi yang sakit. Dan mengobati gejala tanpa mengobati penyakit tidak akan pernah bekerja.

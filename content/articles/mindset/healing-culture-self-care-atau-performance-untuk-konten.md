@@ -84,6 +84,6 @@ Yang juga perlu dipahami adalah dampak komparasi yang konstan. Setiap kali kamu 
 
 Riset dari University of Melbourne 2024 yang disebut sebelumnya juga menemukan satu temuan tambahan yang penting: partisipan yang melakukan digital detox selama 72 jam melaporkan penurunan tingkat kecemasan sebesar 31% dan peningkatan kualitas tidur 22%. Peneliti menyimpulkan bahwa putus sementara dari media sosial memberi efek yang lebih besar pada kesejahteraan mental dibandingkan aktivitas "self-care" berbayar manapun. Healing yang paling efektif ternyata gratis: matikan HP, tidur, dan keluar dari loop perbandingan.
 
-Kalau kamu tertarik membongkar fenomena serupa, baca juga [kesepian yang dibungkus estetik di TikTok](/artikel/kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma) dan [bahaya self-diagnosis kesehatan mental dari TikTok](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental).
+Kalau kamu tertarik membongkar fenomena serupa, baca juga [kesepian yang dibungkus estetik di TikTok](/artikel/kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma) dan [bahaya self-diagnosis kesehatan mental dari TikTok](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata).
 
 Healing bukan konten. Healing bukan estetika. Healing adalah waktu kamu untuk diri kamu sendiri, tanpa audiens, tanpa filter, tanpa notifikasi. Kalau healing kamu butuh kamera, mungkin yang kamu butuh bukan healing, tapi validasi.

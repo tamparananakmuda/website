@@ -93,7 +93,7 @@ Inflasi medis 10-19% per tahun berarti biaya rumah sakit naik tajam. Tapi premi 
 
 ### BPJS Kesehatan: Rp35-150K/Bulan, Cakupan Medis Sama
 
-BPJS Kesehatan memotong iuran Rp35.000 (Kelas 3), Rp100.000 (Kelas 2), atau Rp150.000 (Kelas 1) per bulan. Cakupan medis: tindakan medis, obat, dan pengobatan sama untuk semua kelas. Yang membedakan hanya fasilitas kamar rawat inap. Seperti yang kami bahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup), BPJS sudah memotong gaji kamu untuk perlindungan dasar.
+BPJS Kesehatan memotong iuran Rp35.000 (Kelas 3), Rp100.000 (Kelas 2), atau Rp150.000 (Kelas 1) per bulan. Cakupan medis: tindakan medis, obat, dan pengobatan sama untuk semua kelas. Yang membedakan hanya fasilitas kamar rawat inap. Seperti yang kami bahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), BPJS sudah memotong gaji kamu untuk perlindungan dasar.
 
 Asuransi swasta menawarkan kamar lebih baik, antrian lebih cepat, akses ke RS swasta tanpa rujukan. Tapi pengobatan dan obat yang kamu dapat intinya sama. Bedanya fasilitas, bukan medis. Apakah kamu mau bayar Rp400.000-1.000.000 per bulan tambahan untuk kamar yang lebih bagus?
 

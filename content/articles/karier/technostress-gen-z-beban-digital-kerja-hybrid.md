@@ -104,7 +104,7 @@ Tapi di balik angka itu, CNBC Indonesia melaporkan: Gen Z Indonesia menyoroti ab
 
 Digital fatigue menyerang lebih dari separuh Gen Z global. Deloitte mencatat 58% Gen Z mengalami kelelahan digital dari constant alerts, tool switching, dan multiple platforms. Survei yang sama mencatat 34% responden merasa anxious atau stressed most or all of the time. Tekanan finansial dan faktor kerja seperti jam kerja panjang jadi pemicu utama.
 
-Konsekuensinya pada karier: menurut Deloitte 2026, hanya 3% Gen Z Indonesia menargetkan posisi kepemimpinan puncak. Riset yang sama mencatat 50% menyebut stres dan burnout sebagai barrier utama mengambil jabatan. Deloitte juga mencatat hanya 6% Gen Z yang menjadikan kursi pemimpin sebagai tujuan karier utama. Ini bukan kurang ambisi. Ini kalkulasi rasional menurut data artikel: [Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistem yang Tidak Menarik](/artikel/gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi).
+Konsekuensinya pada karier: menurut Deloitte 2026, hanya 3% Gen Z Indonesia menargetkan posisi kepemimpinan puncak. Riset yang sama mencatat 50% menyebut stres dan burnout sebagai barrier utama mengambil jabatan. Deloitte juga mencatat hanya 6% Gen Z yang menjadikan kursi pemimpin sebagai tujuan karier utama. Ini bukan kurang ambisi. Ini kalkulasi rasional menurut data artikel: [Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistem yang Tidak Menarik](/artikel/6-persen-ingin-jadi-bos-bukan-gen-z-kurang-ambisi-sistemnya).
 
 ## Indonesia Tidak Punya Right to Disconnect
 
@@ -124,13 +124,13 @@ Always-on culture bukan pilihan individu, tapi buatan organisasi. Ketika perusah
 
 Indonesia butuh right to disconnect, bukan tips "kelola stres". Tips individu tidak menyelesaikan masalah struktural. Menurut Deloitte 2026, 58% Gen Z global mengalami digital fatigue. Di Indonesia, tidak ada perlindungan hukum untuk right to disconnect. Solusinya bukan "turn off notification". Solusinya adalah kebijakan yang mengakui: beban digital adalah risiko kerja yang perlu diatur.
 
-Ini sejalan dengan pola yang sudah kita lihat di [Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai](/artikel/shift-shock-gen-z-ekspektasi-vs-realitas-kerja) dan [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati). Gen Z tidak lemah. Mereka paling cepat merespons ketika sistem tidak bekerja untuk mereka.
+Ini sejalan dengan pola yang sudah kita lihat di [Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai](/artikel/shift-shock-gen-z-ekspektasi-vs-realitas-kerja) dan [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati). Gen Z tidak lemah. Mereka paling cepat merespons ketika sistem tidak bekerja untuk mereka.
 
 ## Kesimpulan
 
 Jadi bukan kamu yang lemah. Sistem hybrid yang kamu pakai setiap hari tidak dirancang untuk melindungi kamu. Riset 2026 terhadap 235 Gen Z Indonesia sudah membuktikan: technostress memprediksi resign, burnout menjembatani jalurnya, dan fleksibilitas tanpa boundary jadi beban. Yang belum ada adalah kebijakan yang mengakui hal itu. Right to disconnect bukan kemewahan, di era kerja hybrid itu jadi syarat dasar.
 
-Baca artikel terkait: [Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi Alasan Setia](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati).
+Baca artikel terkait: [Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi Alasan Setia](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya).
 
 ## FAQ
 

@@ -119,7 +119,7 @@ Program Magang Nasional 2026 target 150.000 peserta, naik dari 102.697 di 2025. 
 
 Ini konsisten dengan yang kami tulis di [S1 Rebutan Loker SMK: Pendidikan Tinggi Jadi Trap](/artikel/s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap). Sistem pendidikan tinggi menghasilkan lulusan yang tidak siap kerja, lalu menyalahkan lulusan karena tidak punya "pengalaman." Magang gratis menjadi solusi yang justru memformalkan eksploitasi.
 
-Seperti yang kami bahas di [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu), sistem kerja Indonesia menuntut pengalaman tapi tidak mau membayar untuk pengalaman itu. Magang gratis adalah bentuk paling kasat mata dari ketidakadilan ini.
+Seperti yang kami bahas di [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu), sistem kerja Indonesia menuntut pengalaman tapi tidak mau membayar untuk pengalaman itu. Magang gratis adalah bentuk paling kasat mata dari ketidakadilan ini.
 
 ## Sistem yang Paksa, Pasar yang Manfaatkan
 

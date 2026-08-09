@@ -80,10 +80,10 @@ Kedua, kalau kamu sudah mengambil S1, jangan andalkan gelar saja. Bangun portofo
 
 Ketiga, pertimbangkan skill digital yang bisa dipelajari tanpa gelar 4 tahun. UI/UX, data analysis, digital marketing, programming. Banyak yang bisa dikuasai dalam 6-12 bulan dengan biaya jauh lebih murah dari S1. Bootcamp coding seperti Hacktiv8 dan Purwadhika melaporkan tingkat employment 70-80% dalam 3 bulan setelah lulus, angka yang tidak bisa dikatakan oleh sebagian besar fakultas universitas tradisional.
 
-Kalau kamu sedang di posisi S1 yang menganggur, jangan tunggu lowongan yang sesuai gelar. Ambil kerjaan yang ada, bangun pengalaman, sambil terus tambah skill. [Pengalaman kerja tetap lebih bernilai dari gelar tanpa pengalaman](/artikel/phk-tokopedia-membongkar-ilusi-kerja-keras-tidak-menjamin-aman).
+Kalau kamu sedang di posisi S1 yang menganggur, jangan tunggu lowongan yang sesuai gelar. Ambil kerjaan yang ada, bangun pengalaman, sambil terus tambah skill. [Pengalaman kerja tetap lebih bernilai dari gelar tanpa pengalaman](/artikel/phk-tokopedia-kerja-keras-nggak-menjamin-aman).
 
 Pendidikan tinggi bukan jaminan. Pendidikan tinggi adalah salah satu jalur, bukan satu-satunya jalur. Kalau jalur itu macet, bukan berarti kamu macet. Cari rute alternatif yang lebih sesuai dengan kebutuhan pasar dan kondisi finansial kamu. Yang penting bukan gelar di belakang nama kamu, tapi skill di tangan kamu dan kemampuan untuk terus belajar.
 
-Kalau kamu tertarik membongkar ilusi lain tentang dunia kerja, baca juga [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh).
+Kalau kamu tertarik membongkar ilusi lain tentang dunia kerja, baca juga [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh).
 
 Ada satu hal yang perlu kamu ingat: menyalahkan diri sendiri karena menganggur padahal punya gelar S1 tidak akan mengubah apa-apa. Masalahnya bersifat struktural, bukan personal. Tapi yang bisa kamu lakukan adalah beradaptasi dengan realitas pasar kerja yang ada. Realitas yang menuntut skill, bukan sekadar gelar. Realitas di mana portofolio sering kali lebih berbicara daripada transkrip nilai. Dan realitas di mana kemampuan untuk terus belajar hal baru jauh lebih berharga daripada ilmu yang kamu dapat 4 tahun lalu di ruang kelas.

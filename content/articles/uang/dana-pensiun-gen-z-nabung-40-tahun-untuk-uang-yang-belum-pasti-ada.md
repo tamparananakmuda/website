@@ -88,7 +88,7 @@ Data BPJS Ketenagakerjaan per Juni 2025 menunjukkan jumlah peserta program Jamin
 
 Total dana kelolaan BPJS Ketenagakerjaan mencapai Rp 837,26 triliun per Juni 2025, naik 12,2% year-on-year. Khusus program JP, dana kelolaan Rp 207,09 triliun. BPJS Ketenagakerjaan memproyeksikan aset JP dengan iuran saat ini dapat membiayai program hingga akhir 2074. Tapi BPJS tetap mendesak kenaikan iuran dari 3% ke 8% untuk menjaga keberlanjutan dan mencapai replacement ratio 40%.
 
-Cakupan pensiun juga masih rendah. Berdasarkan data BPJS Ketenagakerjaan per 2025, 44,05% peserta adalah pekerja formal dan hanya 10,36% pekerja informal. Sisanya, mayoritas pekerja Indonesia, tidak terlindungi program pensiun sama sekali. Seperti yang kami bahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros, Gaji Tidak Cukup](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup), masalah akses perlindungan sosial untuk pekerja bergaji rendah bukan masalah baru.
+Cakupan pensiun juga masih rendah. Berdasarkan data BPJS Ketenagakerjaan per 2025, 44,05% peserta adalah pekerja formal dan hanya 10,36% pekerja informal. Sisanya, mayoritas pekerja Indonesia, tidak terlindungi program pensiun sama sekali. Seperti yang kami bahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros, Gaji Tidak Cukup](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), masalah akses perlindungan sosial untuk pekerja bergaji rendah bukan masalah baru.
 
 ## Insight
 
@@ -96,7 +96,7 @@ Dana pensiun adalah privilese orang yang sudah makan. Ketika gaji tidak cukup un
 
 Sistem pensiun Indonesia tidak dirancang untuk pekerja bergaji rendah. Replacement ratio 15 sampai 20% berarti pensiun tidak menggantikan pendapatan, hanya menambah sedikit. Gen Z yang ikut BPJS otomatis tidak salah. Tapi perlu tahu: ini bukan jaring pengaman yang akan menangkap kamu di masa tua. Ini tambahan kecil yang mungkin cukup untuk belanja sembako, tidak cukup untuk hidup.
 
-Seperti yang kami tulis di [Generasi Nanti Dulu: Bukan Malas, Gaji Tidak Mau Tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh), gaji Gen Z stagnan sementara biaya hidup terus naik. Nabung pensiun 40 tahun dengan gaji yang tidak tumbuh, hasilnya tidak akan tumbuh juga. Dan seperti [FIRE Movement: Matematika yang Nggak Cocok untuk Indonesia](/artikel/fire-movement-matematika-nggak-cocok-indonesia), rumus pensiun dari negara dengan struktur upah berbeda tidak bisa langsung dipakai di Indonesia.
+Seperti yang kami tulis di [Generasi Nanti Dulu: Bukan Malas, Gaji Tidak Mau Tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh), gaji Gen Z stagnan sementara biaya hidup terus naik. Nabung pensiun 40 tahun dengan gaji yang tidak tumbuh, hasilnya tidak akan tumbuh juga. Dan seperti [FIRE Movement: Matematika yang Nggak Cocok untuk Indonesia](/artikel/fire-movement-matematika-yang-nggak-cocok-untuk-indonesia), rumus pensiun dari negara dengan struktur upah berbeda tidak bisa langsung dipakai di Indonesia.
 
 ## Conclusion
 

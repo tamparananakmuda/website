@@ -93,7 +93,7 @@ Lima taktik quiet firing yang paling umum. Yang membuatnya efektif: setiap takti
 
 Setiap taktik, jika diambil secara individual, terlihat seperti manajemen normal. "Mungkin memang sedang reorganisasi." "Mungkin atasan memang sibuk." Tapi jika lima taktik ini terjadi bersamaan dalam beberapa bulan, itu bukan kebetulan. Itu strategi.
 
-Ini berbeda dari [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) yang dilakukan karyawan. Quiet quitting bersifat pasif dan bisa dipulihkan. Quiet firing bersifat aktif, targeted, dan dirancang untuk membuat kamu pergi.
+Ini berbeda dari [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati) yang dilakukan karyawan. Quiet quitting bersifat pasif dan bisa dipulihkan. Quiet firing bersifat aktif, targeted, dan dirancang untuk membuat kamu pergi.
 
 ## Hitungan Finansial yang Dihindari
 
@@ -105,9 +105,9 @@ Tapi jika kamu resign "atas kemauan sendiri", perusahaan tidak wajib bayar pesan
 
 Tapi hukum Indonesia punya perlindungan. Menurut DNT Lawyers, dalam berbagai putusan Mahkamah Agung, tindakan perusahaan yang menciptakan kondisi kerja tidak kondusif atau melakukan tekanan mental agar karyawan tidak betah dikategorikan sebagai constructive dismissal atau PHK sepihak oleh pengusaha. Pasal 1321 KUH Perdata menyatakan bahwa suatu kesepakatan tidak sah jika diberikan karena paksaan. Surat pengunduran diri yang lahir dari intimidasi secara hukum dianggap cacat formil dan dapat dibatalkan.
 
-Jadi kalau kamu bisa membuktikan bahwa resign kamu bukan kemauan sendiri melainkan hasil tekanan sistematis, Pengadilan Hubungan Industrial dapat memerintahkan perusahaan membayar hak-hak kamu seolah-olah terjadi PHK biasa. Masalahnya, seperti yang dijelaskan dalam [PHK yang membongkar ilusi kerja keras](/artikel/phk-kerja-keras-tidak-menjamin-aman), proses hukum memakan waktu dan tenaga. Dan bukti adalah kendala utama.
+Jadi kalau kamu bisa membuktikan bahwa resign kamu bukan kemauan sendiri melainkan hasil tekanan sistematis, Pengadilan Hubungan Industrial dapat memerintahkan perusahaan membayar hak-hak kamu seolah-olah terjadi PHK biasa. Masalahnya, seperti yang dijelaskan dalam [PHK yang membongkar ilusi kerja keras](/artikel/phk-membongkar-ilusi-kerja-keras-nggak-menjamin-aman), proses hukum memakan waktu dan tenaga. Dan bukti adalah kendala utama.
 
-Ini pola yang sama dengan [freelance yang transfer risiko](/artikel/freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman): perusahaan menggeser beban finansial dari diri mereka ke pekerja. PHK formal = perusahaan bayar. Resign "sukarela" = kamu yang tanggung.
+Ini pola yang sama dengan [freelance yang transfer risiko](/artikel/freelance-bukan-kebebasan-itu-jebakan-tanpa-jaring-pengaman): perusahaan menggeser beban finansial dari diri mereka ke pekerja. PHK formal = perusahaan bayar. Resign "sukarela" = kamu yang tanggung.
 
 ## Bayangan Gelap di Luar Statistik
 
@@ -119,7 +119,7 @@ Tapi ini hanya angka PHK formal. Quiet firing tidak masuk data mana pun. Resign 
 
 Provinsi dengan PHK tertinggi adalah Jawa Barat (5,044 pekerja per data Kompas), Banten (2,596), dan Jawa Timur (2,332). Sektor manufaktur padat karya seperti tekstil, garmen, dan alas kaki menjadi penyumbang terbesar. Tapi quiet firing tidak terbatas pada sektor manufaktur. Ini terjadi di startup, di korporasi, di industri kreatif. Di mana saja ada pesangon yang harus dibayar.
 
-Data dari [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) menunjukkan bahwa Gen Z sudah tidak loyal ke perusahaan. Tapi yang tidak diceritakan adalah: berapa dari mereka yang "pindah" sebenarnya dipaksa pergi? Dan [work-life balance yang Gen Z tuntut](/artikel/wlb-bukan-permintaan-syarat-bertahan-gen-z) bukan sekadar permintaan, tapi respons terhadap kondisi kerja yang sudah tidak tertahankan.
+Data dari [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya) menunjukkan bahwa Gen Z sudah tidak loyal ke perusahaan. Tapi yang tidak diceritakan adalah: berapa dari mereka yang "pindah" sebenarnya dipaksa pergi? Dan [work-life balance yang Gen Z tuntut](/artikel/wlb-bukan-permintaan-syarat-bertahan-gen-z) bukan sekadar permintaan, tapi respons terhadap kondisi kerja yang sudah tidak tertahankan.
 
 ## Menolak Lingkungan Kerja Beracun
 
@@ -143,7 +143,7 @@ Self-care tidak cukup untuk masalah struktural. Tapi ada tiga langkah konkret ya
 
 **Ketiga, buka parallel track.** Kesalahan paling umum adalah menghabiskan setahun auditioning untuk verdict yang sudah diambil. Network, kirim lamaran, bangun skill dengan exit velocity. Jalankan paralel dengan upaya perbaikan, bukan setelah upaya perbaikan gagal. Optionality adalah anxiety treatment terbaik yang tersedia. Dan jika bukti cukup, konsultasikan dengan pengacara untuk gugatan constructive dismissal ke Pengadilan Hubungan Industrial. Seperti yang dijelaskan DNT Lawyers, PHI dapat memerintahkan perusahaan membayar hak-hak kamu seolah-olah terjadi PHK biasa.
 
-Jangan menyalahkan diri sendiri, seperti [imposter syndrome yang dipindah goalpost-nya sistem](/artikel/imposter-syndrome-bukan-kelemahanmu-sistem-pindah-goalpost). Sistem dirancang untuk membuat kamu merasa bahwa kamu yang kurang. Tapi kamu tidak kurang. Kamu sedang di-target.
+Jangan menyalahkan diri sendiri, seperti [imposter syndrome yang dipindah goalpost-nya sistem](/artikel/imposter-syndrome-bukan-kelemahanmu-sistem-yang-terus-pindah-goalpost). Sistem dirancang untuk membuat kamu merasa bahwa kamu yang kurang. Tapi kamu tidak kurang. Kamu sedang di-target.
 
 ## Conclusion
 

@@ -94,7 +94,7 @@ Selisih pengeluaran dan gaji mencapai Rp 8.77 juta per bulan, bukan margin belan
 
 Tingkat Pengangguran Terbuka kelompok usia 15-24 tahun mencapai 16.36 persen menurut BPS Februari 2026. Di Jakarta, TPT usia 15-29 tahun mencapai 13.65 persen. Sebanyak 21.47 persen pekerja muda berada di sektor informal tanpa jaminan sosial.
 
-Untuk yang sudah kerja, kondisinya tidak lebih baik: upah stagnan, biaya hidup naik. Fenomena [working poor yang saya bahas di artikel sebelumnya](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) bukan teori. Itu realitas harian.
+Untuk yang sudah kerja, kondisinya tidak lebih baik: upah stagnan, biaya hidup naik. Fenomena [working poor yang saya bahas di artikel sebelumnya](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) bukan teori. Itu realitas harian.
 
 ## Paylater Bukan Boros, Tapi Band-Aid
 

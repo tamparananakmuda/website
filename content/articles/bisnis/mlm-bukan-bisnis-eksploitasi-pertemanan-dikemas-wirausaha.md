@@ -101,11 +101,11 @@ MLM mengubah pertemanan menjadi transaksi. Setiap chat bukan lagi untuk bertegur
 
 ## Ilusi "Bisnis Sendiri" di Tengah Sistem Tanpa Alternatif
 
-Gen Z butuh income tambahan karena sistem tidak menyediakan cukup lapangan kerja. [Kelas menengah menyusut, tangga mobilitas dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-tangga-dicabut). Gaji utama tidak cukup, [side hustle jadi kebutuhan, bukan ambisi](/artikel/side-hustle-bukan-ambisi-kebutuhan-ekonomi). Di tengah kekosongan ini, MLM menawarkan ilusi kontrol.
+Gen Z butuh income tambahan karena sistem tidak menyediakan cukup lapangan kerja. [Kelas menengah menyusut, tangga mobilitas dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut). Gaji utama tidak cukup, [side hustle jadi kebutuhan, bukan ambisi](/artikel/side-hustle-bukan-ambisi-kebutuhan-ekonomi). Di tengah kekosongan ini, MLM menawarkan ilusi kontrol.
 
 Label "entrepreneurship" membuat MLM terlihat sah, kamu bukan karyawan, kamu "mitra bisnis". Kamu bukan menjual, kamu "sharing peluang". Kamu bukan merekrut, kamu "membantu orang sukses". Bahasa ini didesain untuk mengaburkan struktur piramida di baliknya.
 
-Tapi [viral bukan bisnis](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati), dan MLM bukan entrepreneurship. Entrepreneurship menciptakan nilai dari produk atau jasa yang dijual ke pasar. MLM menciptakan nilai dari perekrutan orang ke dalam struktur. Bedanya fundamental: entrepreneurship bisa bertahan tanpa perekrutan, MLM tidak.
+Tapi [viral bukan bisnis](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-mati), dan MLM bukan entrepreneurship. Entrepreneurship menciptakan nilai dari produk atau jasa yang dijual ke pasar. MLM menciptakan nilai dari perekrutan orang ke dalam struktur. Bedanya fundamental: entrepreneurship bisa bertahan tanpa perekrutan, MLM tidak.
 
 ## Bukan Kamu yang Gagal, Sistemnya yang Dirancang untuk Itu
 

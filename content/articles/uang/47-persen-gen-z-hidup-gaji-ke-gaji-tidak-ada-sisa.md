@@ -76,7 +76,7 @@ Sementara itu, BPS DKI Jakarta melaporkan pengeluaran Gen Z di Jakarta mencapai 
 
 UMP Jakarta 2026 ditetapkan Rp 5.729.876, naik 6,17% dari 2025. Antara News melaporkan biaya hidup lajang di Jakarta berkisar Rp 5-8 juta per bulan dengan pola hidup hemat. Kos Rp 1-2,5 juta, makan Rp 1,5-3 juta, transportasi Rp 300 ribu-Rp 1 juta, kebutuhan lain Rp 500 ribu-Rp 1,5 juta.
 
-[Gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) sudah membahas bagaimana Gen Z menunda keputusan besar karena gaji tidak kejar biaya hidup. Tapi data BPS DKI menunjukkan masalah lebih dalam dari sekadar "tidak kejar." Pengeluaran Gen Z Jakarta (Rp 11,96 juta) hampir 2 kali UMP (Rp 5,7 juta) dan hampir 4 kali upah Gen Z (Rp 3 juta). Ini bukan gap. Ini jurang.
+[Gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) sudah membahas bagaimana Gen Z menunda keputusan besar karena gaji tidak kejar biaya hidup. Tapi data BPS DKI menunjukkan masalah lebih dalam dari sekadar "tidak kejar." Pengeluaran Gen Z Jakarta (Rp 11,96 juta) hampir 2 kali UMP (Rp 5,7 juta) dan hampir 4 kali upah Gen Z (Rp 3 juta). Ini bukan gap. Ini jurang.
 
 ```chart:bar
 {"title":"Upah Gen Z vs Biaya Hidup Jakarta 2026","subtitle":"Jurang Rp 8-9 juta antara pendapatan dan pengeluaran","source":"BPS Nov 2025, BPS DKI Jul 2026, UMP DKI 2026","data":[{"label":"Upah Gen Z (20-29 thn)","value":3.0,"color":"#ef4444"},{"label":"UMP Jakarta 2026","value":5.7,"color":"#f4a825"},{"label":"Biaya Hidup Minimum","value":6.5,"color":"#3b82f6"},{"label":"Pengeluaran Gen Z Jakarta","value":11.96,"color":"#a855f7"}],"yLabel":"Rp juta/bulan"}
@@ -106,7 +106,7 @@ Artinya, akses ke produk keuangan tumbuh lebih cepat daripada kemampuan mengguna
 
 Kelompok usia 18-25 tahun menunjukkan pola yang lebih ekstrem. Inklusi keuangan mencapai 89,96%, tapi literasi hanya 73,22%. Gen Z punya akses tertinggi ke produk keuangan, tapi kemampuan mengelolanya paling rendah relatif terhadap aksesnya.
 
-Nasihat "belajar nabung" mengasumsikan Gen Z punya uang untuk dikelola. Tapi data BPS menunjukkan upah Gen Z Rp 2,7-3,2 juta, sementara biaya hidup minimum Rp 5-8 juta. [Menabung jadi irasional](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal) ketika pengeluaran melebihi pendapatan. Tidak ada aplikasi budgeting yang bisa menyelesaikan defisit struktural.
+Nasihat "belajar nabung" mengasumsikan Gen Z punya uang untuk dikelola. Tapi data BPS menunjukkan upah Gen Z Rp 2,7-3,2 juta, sementara biaya hidup minimum Rp 5-8 juta. [Menabung jadi irasional](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak) ketika pengeluaran melebihi pendapatan. Tidak ada aplikasi budgeting yang bisa menyelesaikan defisit struktural.
 
 Yang terjadi justru sebaliknya. [Paylater](/artikel/paylater-bukan-kemudahan-penjaga-gaji-kamu) menjadi jembatan arus kas. Bukan karena Gen Z boros, tapi karena gaji tidak cukup untuk sampai akhir bulan. Gap literasi-inklusi yang melebar berarti Gen Z punya akses ke utang lebih cepat daripada pengetahuan untuk mengelolanya.
 

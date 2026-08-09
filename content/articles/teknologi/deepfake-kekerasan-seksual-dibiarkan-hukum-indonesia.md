@@ -88,7 +88,7 @@ Uni Eropa melalui EU AI Act 2024 mewajibkan platform digital melakukan takedown 
 
 Indonesia? Tidak ada kewajiban takedown. Tidak ada batas waktu. Tidak ada sanksi untuk platform yang gagal menghapus konten. Wamenkomdigi Nezar Patria September 2025 mengimbau platform seperti Meta dan Google untuk menambah fitur deteksi AI. Imbau, bukan aturan. Platform tidak wajib patuh.
 
-Seperti yang kami bahas di [Rp 9,5 Triliun Penipuan Online: Bukan Soal Bodoh](/artikel/rp-9-5-triliun-penipuan-online-bukan-soal-bodoh), platform digital punya kekuasaan mutlak atas konten yang beredar. Tapi tanggung jawab mereka atas kerugian korban? Tidak ada. Korban dilaporkan harus menghubungi platform satu per satu, mengisi form laporan, menunggu verifikasi. Sementara konten terus beredar, terus diunduh, terus disebar.
+Seperti yang kami bahas di [Rp 9,5 Triliun Penipuan Online: Bukan Soal Bodoh](/artikel/rp95-triliun-hilang-penipuan-online-bukan-soal-bodoh-soal-sistem), platform digital punya kekuasaan mutlak atas konten yang beredar. Tapi tanggung jawab mereka atas kerugian korban? Tidak ada. Korban dilaporkan harus menghubungi platform satu per satu, mengisi form laporan, menunggu verifikasi. Sementara konten terus beredar, terus diunduh, terus disebar.
 
 ## Insight
 
@@ -96,7 +96,7 @@ Saya perhatikan pola yang sama setiap kali kasus deepfake viral. Media bahas tek
 
 Padahal masalahnya bukan teknologi. Masalahnya adalah sistem hukum yang tidak mengikuti kecepatan teknologi. Deepfake mulai marak di Indonesia 2023. Tiga tahun kemudian, belum ada satu pasal pun yang mendefinisikan deepfake. Sensity AI catat 96% deepfake di internet adalah non-consensual pornography. Mayoritas korban perempuan. Ini bukan masalah teknologi. Ini kekerasan seksual berbasis digital yang dipermudah AI.
 
-Seperti yang kami bahas di [81% Enggan AI: Boom Global, Indonesia Mundur](/artikel/81-persen-enggan-ai-boom-global-indonesia-mundur) dan [AI Tidak Mengambil Kerjamu, AI Mengambil Tahap Belajarmu](/artikel/ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), Indonesia tertinggal dalam adaptasi AI. Tapi tertinggal dalam regulasi AI jauh lebih berbahaya dari tertinggal dalam adopsi AI. Teknologi bisa dikejar. Kerugian korban tidak bisa di-undo.
+Seperti yang kami bahas di [81% Enggan AI: Boom Global, Indonesia Mundur](/artikel/81-persen-enggan-pakai-ai-boom-global-tapi-indonesia-malah-mundur) dan [AI Tidak Mengambil Kerjamu, AI Mengambil Tahap Belajarmu](/artikel/ai-nggak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), Indonesia tertinggal dalam adaptasi AI. Tapi tertinggal dalam regulasi AI jauh lebih berbahaya dari tertinggal dalam adopsi AI. Teknologi bisa dikejar. Kerugian korban tidak bisa di-undo.
 
 ## Conclusion
 

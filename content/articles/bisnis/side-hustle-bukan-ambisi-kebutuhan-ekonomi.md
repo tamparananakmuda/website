@@ -80,7 +80,7 @@ Kedua, batasi waktu side hustle. Maksimal 3 jam per hari, 15 jam per minggu. Leb
 
 Ketiga, jangan mengambil side hustle yang butuh modal besar di awal. Dropshipping yang butuh iklan Rp1 juta per bulan, atau reseller yang butuh stok Rp2 juta, sering kali tidak menghasilkan profit setelah dikurangi biaya, berdasarkan pengalaman banyak reseller yang dibagikan di forum komunitas bisnis online. Mulai dari yang butuh waktu, bukan uang. Freelance desain, tulisan, atau video editing butuh skill yang sudah kamu punya, tanpa modal tambahan. Jualan produk digital seperti template atau preset butuh kerja sekali di awal, lalu bisa dijual berulang tanpa biaya produksi tambahan.
 
-Kalau kamu mau baca lebih lanjut tentang keuangan Gen Z yang realistis, baca juga [passive income yang dijual kreator TikTok](/artikel/passive-income-bukan-tentang-malas-kerja) dan [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh).
+Kalau kamu mau baca lebih lanjut tentang keuangan Gen Z yang realistis, baca juga [passive income yang dijual kreator TikTok](/artikel/passive-income-bukan-tentang-malas-kerja) dan [kenapa gaji tidak mau tumbuh di generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh).
 
 Side hustle bukan bukti kamu rajin. Side hustle bukan bukti kamu ambisius. Side hustle adalah bukti bahwa gaji utama kamu tidak cukup. Dan itu bukan salah kamu, itu salah sistem yang tidak membayar pekerja dengan adil.
 

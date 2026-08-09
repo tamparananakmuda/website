@@ -85,7 +85,7 @@ Struktur gig economy dirancang agar platform untung tanpa tanggung jawab ketenag
 
 Platform mengkategorikan pekerja sebagai "mitra" bukan "karyawan". Konsekuensi hukumnya: platform tidak wajib membayar BPJS, tidak wajib memberikan THR, tidak wajib memberikan pesangon. Pemerintah baru saja menetapkan standar BHR (Bonus Hari Raya) untuk pengemudi ojek online minimal 25 persen dari pendapatan bersih bulanan 12 bulan terakhir. Tapi ini baru sektor transportasi, dan baru BHR, bukan paket perlindungan lengkap.
 
-Yang untung dari struktur ini jelas. Platform mendapat skalabilitas tanpa biaya tetap pekerja. Perusahaan yang hire freelancer tidak perlu tanggung BPJS, tidak perlu ruang kantor, tidak perlu pesangon. [Freelance memang bukan kebebasan, tapi jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-jebakan-tanpa-jaring-pengaman). Dan [gig economy bukan pilihan, tapi jebakan produktivitas rendah](/artikel/gig-economy-bukan-pilihan-jebakan-produktivitas-rendah).
+Yang untung dari struktur ini jelas. Platform mendapat skalabilitas tanpa biaya tetap pekerja. Perusahaan yang hire freelancer tidak perlu tanggung BPJS, tidak perlu ruang kantor, tidak perlu pesangon. [Freelance memang bukan kebebasan, tapi jebakan tanpa jaring pengaman](/artikel/freelance-bukan-kebebasan-itu-jebakan-tanpa-jaring-pengaman). Dan [gig economy bukan pilihan, tapi jebakan produktivitas rendah](/artikel/gig-economy-bukan-pilihan-jebakan-produktivitas-rendah).
 
 ## Low Productivity Trap: Jebakan Jangka Panjang
 

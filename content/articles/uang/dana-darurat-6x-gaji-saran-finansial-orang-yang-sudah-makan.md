@@ -99,7 +99,7 @@ Di Indonesia, rumus ini diadopsi tanpa penyesuaian. Padahal struktur biaya hidup
 
 Gen Z Indonesia menghadapi kombinasi yang tidak ada di rumus asli: gaji awal yang rendah, biaya hidup di kota yang tinggi, dan tanggungan keluarga yang dimulai lebih awal. Data BPS Sakernas November 2025 menunjukkan upah rata-rata nasional Rp3.329.095, naik hanya 1,88% dari tahun sebelumnya. Sementara inflasi headline BPS periode yang sama mencapai 2,72% (BPS, November 2025). Kenaikan upah lebih rendah dari inflasi. Daya beli turun.
 
-Untuk Gen Z yang [gajinya tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh), menabung 6 kali pengeluaran bukan soal niat. Ini soal matematika yang tidak berpihak.
+Untuk Gen Z yang [gajinya tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh), menabung 6 kali pengeluaran bukan soal niat. Ini soal matematika yang tidak berpihak.
 
 ## Matematika yang Tidak Masuk Akal
 
@@ -115,7 +115,7 @@ AIA Financial memberikan simulasi untuk lajang dengan pengeluaran Rp4 juta per b
 
 Data Kontan mencatat rata-rata upah buruh November 2025 adalah Rp3.329.095, naik tipis 1,88% secara tahunan. Sementara itu, inflasi periode yang sama 2,72%. Artinya, gaji naik lebih lambat dari harga barang. Setiap tahun, daya beli gaji berkurang 0,84%.
 
-Dalam kondisi ini, menabung untuk dana darurat bukan soal konsistensi. Ini soal mengejar target yang terus menjauh. [Menabung jadi irasional](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal) bukan karena Gen Z boros, tapi karena matematikanya tidak masuk akal.
+Dalam kondisi ini, menabung untuk dana darurat bukan soal konsistensi. Ini soal mengejar target yang terus menjauh. [Menabung jadi irasional](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak) bukan karena Gen Z boros, tapi karena matematikanya tidak masuk akal.
 
 ## Bukan Boros, Sistem yang Tidak Berpihak
 
@@ -139,7 +139,7 @@ Beberapa beralih ke [doom spending](/artikel/doom-spending-bukan-self-care-itu-g
 
 Daripada mengejar 6 kali pengeluaran yang terasa mustahil, mulai dari yang bisa dicapai. Dana darurat 1 kali pengeluaran bulanan = Rp3 juta. Itu memberi buffer 1 bulan jika kehilangan kerja. Dengan tabungan Rp500.000 per bulan, butuh 6 bulan. Bisa dicapai dalam waktu yang masuk akal.
 
-Setelah capai 1x, targetkan 2x, lalu 3x bertahap. [FIRE Movement yang tidak cocok untuk Indonesia](/artikel/fire-movement-matematika-nggak-cocok-indonesia) mengajarkan pelajaran yang sama: rumus dari negara lain tidak bisa diterapkan mentah-mentah. Sesuaikan dengan realitas gaji dan biaya hidup Indonesia.
+Setelah capai 1x, targetkan 2x, lalu 3x bertahap. [FIRE Movement yang tidak cocok untuk Indonesia](/artikel/fire-movement-matematika-yang-nggak-cocok-untuk-indonesia) mengajarkan pelajaran yang sama: rumus dari negara lain tidak bisa diterapkan mentah-mentah. Sesuaikan dengan realitas gaji dan biaya hidup Indonesia.
 
 ### Mulai dari Rp500 ribu, bukan Rp18 juta
 

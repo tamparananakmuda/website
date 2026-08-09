@@ -86,7 +86,7 @@ Psikolog Brittany Woolford, pendiri Authentic Connections Therapy and Wellness, 
 
 Survei Tawkify Juni 2025 yang dilansir Kompas memperkuat temuan ini. Dari 1.000 responden, 46% Gen Z memilih stabilitas finansial dibandingkan cinta. Hampir satu dari tiga responden Gen Z mengaku bersedia kembali dengan mantan jika mantan tersebut menjadi kaya. Chief Client Officer Tawkify, Brie Temple, menjelaskan: "Mengambil kembali mantan karena mereka menjadi kaya bukan hanya tentang rekening bank. Ini tentang apa yang dilambangkan oleh kekayaan itu: keamanan, ambisi, dan mungkin perasaan bahwa mereka telah naik level sejak putus."
 
-Data ini menjelaskan kenapa [situationship](/artikel/situationship-bukan-takut-komitmen-ekonomi-yang-membuat-komitmen-jadi-beban) marak. Gen Z tidak menolak hubungan. Mereka menolak biaya hubungan. Hubungan baru butuh investasi awal: kenalan, buka diri, bangun kepercayaan, hadapi risiko penolakan. Investasi yang ekonomi dan energi emosional Gen Z tidak bisa berikan. Mantan tidak butuh semua itu. Mantan sudah known quantity.
+Data ini menjelaskan kenapa [situationship](/artikel/situationship-bukan-takut-komitmen-ekonomi-yang-bikin-beban) marak. Gen Z tidak menolak hubungan. Mereka menolak biaya hubungan. Hubungan baru butuh investasi awal: kenalan, buka diri, bangun kepercayaan, hadapi risiko penolakan. Investasi yang ekonomi dan energi emosional Gen Z tidak bisa berikan. Mantan tidak butuh semua itu. Mantan sudah known quantity.
 
 ## August Theory: Bukan Cinta, Triage Kesepian
 
@@ -100,7 +100,7 @@ Mantan adalah comfort food. Tidak sehat, tapi familiar. Dan familiar adalah satu
 
 Ini yang membedakan August Theory dari romansa. Romansa butuh kerentanan, butuh keberanian untuk tidak tahu hasilnya. August Theory butuh kepastian. Gen Z tidak balik ke mantan karena berani. Mereka balik karena takut. Takut sendiri, takut harus mulai dari nol, takut investasi emosional yang mereka tidak punya akan terbuang.
 
-[Back to basic dating](/artikel/back-to-basic-dating-bukan-konservatif-efisiensi-emosional) sudah membahas bagaimana Gen Z memilih efisiensi emosional. August Theory adalah versi paling ekstrem dari efisiensi ini: tidak perlu mulai sama sekali. Tinggal kembali ke yang sudah ada.
+[Back to basic dating](/artikel/back-to-basic-dating-gen-z-capai-situationship-bukan-konservatif) sudah membahas bagaimana Gen Z memilih efisiensi emosional. August Theory adalah versi paling ekstrem dari efisiensi ini: tidak perlu mulai sama sekali. Tinggal kembali ke yang sudah ada.
 
 ## Insight
 

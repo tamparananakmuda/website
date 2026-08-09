@@ -69,7 +69,7 @@ Komdigi bicara adopsi digital. Media bicara semangat entrepreneur Gen Z. Tidak a
 
 New York Fed mencatat pengangguran lulusan kuliah usia 22-27 tahun mencapai 5,6 persen pada 2026. Survei Monster terhadap wisudawan 2026 menemukan 9 dari 10 lulusan khawatir AI akan menggantikan posisi pemula, naik dari 64 persen di 2025. Andrew McAfee dari MIT menyebut memotong posisi pemula sama dengan memutus mata rantai kaderisasi. Tanpa posisi pemula, tidak ada tempat belajar, dan tanpa tempat belajar, tidak ada tangga.
 
-Tangga karir sudah dirobohkan, lalu Gen Z dipuji karena berani lompat tanpa tangga. [300 lamaran ditolak](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu) bukan cerita tentang Gen Z yang pilih-pilih. Itu cerita tentang sistem yang tidak punya tempat untuk mereka. Jadi founder bukan lompatan berani, itu satu-satunya gerakan yang tersisa.
+Tangga karir sudah dirobohkan, lalu Gen Z dipuji karena berani lompat tanpa tangga. [300 lamaran ditolak](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu) bukan cerita tentang Gen Z yang pilih-pilih. Itu cerita tentang sistem yang tidak punya tempat untuk mereka. Jadi founder bukan lompatan berani, itu satu-satunya gerakan yang tersisa.
 
 ## Ambisi Tinggi, Modal Kosong
 
@@ -87,7 +87,7 @@ Masalah keuangan menjadi pembunuh utama. Data Kemenkop UKM mencatat 77,5 persen 
 
 Biro Statistik Tenaga Kerja AS mencatat sekitar 50 persen bisnis gagal dalam 5 tahun pertama. Angka ini mirip dengan Indonesia. Tapi di AS, kegagalan bisnis dianggap bagian dari proses belajar. Di Indonesia, kegagalan bisnis sering berarti kebangkrutan personal karena modal berasal dari tabungan pribadi, bukan investor atau pinjaman formal.
 
-Media memuji "semangat entrepreneur Gen Z" tapi tidak menyebut: setengah dari mereka akan gagal sebelum tahun pertama berakhir menurut data Kemenkop UKM. 80 persen akan gagal dalam 5 tahun menurut data yang sama. [Viral bukan bisnis](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati) sudah kami bahas: bisnis Gen Z yang meledak di media sosial lalu cepat mati karena tidak ada fondasi. Dipuji karena berani, tapi tidak diberi alat untuk bertahan.
+Media memuji "semangat entrepreneur Gen Z" tapi tidak menyebut: setengah dari mereka akan gagal sebelum tahun pertama berakhir menurut data Kemenkop UKM. 80 persen akan gagal dalam 5 tahun menurut data yang sama. [Viral bukan bisnis](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-mati) sudah kami bahas: bisnis Gen Z yang meledak di media sosial lalu cepat mati karena tidak ada fondasi. Dipuji karena berani, tapi tidak diberi alat untuk bertahan.
 
 ## Mulai Murah, Bertahan Mahal
 
@@ -95,7 +95,7 @@ AI menurunkan biaya memulai bisnis. Rencana bisnis bisa dibuat ChatGPT dalam hit
 
 AI bisa bikin logo dan tulis rencana bisnis dalam hitungan menit, tapi tidak bisa mengelola arus kas ketika pelanggan tidak bayar atau menentukan harga jual yang menutup biaya operasional. Biaya mulai bisnis turun, tapi biaya bertahan tetap sama. Modal habis di bulan ketiga karena tidak ada pembukuan. Stok menumpuk karena tidak ada perhitungan demand. Harga jual terlalu rendah karena tidak memperhitungkan biaya tersembunyi.
 
-Hanya 5,8 persen UMKM Indonesia yang memiliki Nomor Induk Berusaha per data Kemenkop UKM hingga 2023. Tanpa izin resmi, mereka sulit mendapat kontrak, bantuan pemerintah, atau masuk ke marketplace besar. [Omzet bukan untung](/artikel/omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas) sudah kami bahas: bisnis Gen Z terlihat sukses di media sosial tapi kosong di kas. AI memperparah ini karena membuat ilusi bahwa memulai bisnis sama dengan menjalankan bisnis. Mulai murah, bertahan mahal.
+Hanya 5,8 persen UMKM Indonesia yang memiliki Nomor Induk Berusaha per data Kemenkop UKM hingga 2023. Tanpa izin resmi, mereka sulit mendapat kontrak, bantuan pemerintah, atau masuk ke marketplace besar. [Omzet bukan untung](/artikel/omzet-bukan-untung-bisnis-gen-z-sukses-tapi-kosong) sudah kami bahas: bisnis Gen Z terlihat sukses di media sosial tapi kosong di kas. AI memperparah ini karena membuat ilusi bahwa memulai bisnis sama dengan menjalankan bisnis. Mulai murah, bertahan mahal.
 
 ## Founder Economy Bukan Prestasi
 

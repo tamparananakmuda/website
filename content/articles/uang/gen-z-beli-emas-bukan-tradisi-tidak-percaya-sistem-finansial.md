@@ -93,7 +93,7 @@ Survei Smytten PulseAI 2026, dilansir Pluang, menemukan 60 persen pembelian emas
 
 Media menyebut ini "strategi Dollar Cost Averaging yang cerdas". Tapi coba hitung realistis menurut data Smytten: gaji 5 juta, sisa after kos dan makan 1,5 juta. Beli emas 1 gram per bulan di harga Rp2,6 juta menurut data Antam? Tidak bisa. Beli 0,5 gram saja masih ketat. Beli Rp50.000 per minggu via aplikasi digital menurut data Pegadaian? Itu yang masuk akal.
 
-Ini bukan strategi investasi yang dirancang. Ini [menabung yang irasional bukan karena boros, tapi matematisnya tidak masuk akal](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal). Gen Z tidak beli emas 10 gram sekaligus karena mereka paham DCA. Mereka beli 0,5 gram karena itu yang bisa dibeli.
+Ini bukan strategi investasi yang dirancang. Ini [menabung yang irasional bukan karena boros, tapi matematisnya tidak masuk akal](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak). Gen Z tidak beli emas 10 gram sekaligus karena mereka paham DCA. Mereka beli 0,5 gram karena itu yang bisa dibeli.
 
 Tapi bukan hanya soal uang, tapi soal rasa aman.
 
@@ -105,7 +105,7 @@ Untuk Gen Z, 28 persen menghubungkan emas dengan keamanan finansial sejak dini m
 
 Harga emas naik 56,22 persen sejak Februari 2025 menurut data BSI. Itu return yang tidak bisa ditandingi saham, kripto, atau bank dalam periode yang sama. IHSG naik-turun tergantung sentimen global. Bitcoin pernah anjlok lebih dari 20 persen dalam hitungan hari di 2025 menurut data CoinGecko. Emas konsisten naik, bukan karena emas sempurna, tapi karena emas tidak bergantung pada CEO, tidak ada laporan keuangan triwulanan, tidak ada manajer investasi yang memotong fee tiap tahun.
 
-Gen Z muda yang [FIRE movement yang matematisnya tidak cocok Indonesia](/artikel/fire-movement-matematika-nggak-cocok-indonesia) sudah tahu: investasi jangka panjang butuh kestabilan yang tidak dimiliki saham atau kripto. Emas memberikan kestabilan itu, bukan karena emas tidak pernah turun, tapi karena emas tidak pernah nol.
+Gen Z muda yang [FIRE movement yang matematisnya tidak cocok Indonesia](/artikel/fire-movement-matematika-yang-nggak-cocok-untuk-indonesia) sudah tahu: investasi jangka panjang butuh kestabilan yang tidak dimiliki saham atau kripto. Emas memberikan kestabilan itu, bukan karena emas tidak pernah turun, tapi karena emas tidak pernah nol.
 
 Tapi aman dari apa? Dari sistem yang mereka anggap dirancang untuk orang yang sudah punya uang.
 

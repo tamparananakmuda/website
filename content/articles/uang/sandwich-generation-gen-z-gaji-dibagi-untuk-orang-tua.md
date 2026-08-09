@@ -109,7 +109,7 @@ Misbah menerima gaji sekitar Rp5 juta per bulan. Setelah mengirim 30-50% ke oran
 
 Cerita serupa dari Larasati (33). Penghasilannya Rp6 juta per bulan, harus dibagi untuk membantu keluarga. "Sangat sulit, bagi kita yang termasuk generasi sandwich, pendapatan kerja tidak hanya digunakan untuk diri sendiri, tetapi juga harus dibagi dengan keluarga atau orang tua," kata Larasati. Untuk membeli rumah, katanya, mereka harus melakukan upaya yang jauh lebih besar daripada orang yang gajinya bisa dinikmati sendiri.
 
-Inilah kenapa [beli rumah bukan soal kopi, tapi soal 25 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan). Gen Z sandwich generation tidak punya sisa untuk DP. Bukan karena boros, tapi karena gaji sudah dibagi sebelum sempat menyentuh tabungan.
+Inilah kenapa [beli rumah bukan soal kopi, tapi soal 25 tahun gaji tanpa makan](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji). Gen Z sandwich generation tidak punya sisa untuk DP. Bukan karena boros, tapi karena gaji sudah dibagi sebelum sempat menyentuh tabungan.
 
 ## Siklus Sandwich: Orang Tua Tanpa Pensiun, Anak Tanpa Tabungan
 
@@ -125,7 +125,7 @@ Survei Sun Life 2026 menemukan 77% pekerja Indonesia memperkirakan tetap bekerja
 
 Ketika gaji tidak cukup dan tidak ada tabungan, pinjaman online jadi jalan keluar. Data OJK per Maret 2024 menunjukkan 9,18 juta rekening pinjol dari kelompok usia 19-34 tahun, dengan nilai pinjaman mencapai Rp28,8 triliun. Naik hampir Rp2 triliun dalam setahun.
 
-Gen Z yang sudah [hidup gaji ke gaji](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa) dan harus menafkahi orang tua, terpaksa berutang untuk menutup kekurangan. Tapi pinjol bukan solusi. [Pinjol bukan salah kamu, itu sistem yang didesain untuk menangkap](/artikel/pinjol-bukan-salah-kamu-sistem-didesain-menangkap). Bunga tinggi membuat siklus utang semakin dalam. Alih-alih keluar dari sandwich generation, mereka justru terjebak lebih lama.
+Gen Z yang sudah [hidup gaji ke gaji](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa) dan harus menafkahi orang tua, terpaksa berutang untuk menutup kekurangan. Tapi pinjol bukan solusi. [Pinjol bukan salah kamu, itu sistem yang didesain untuk menangkap](/artikel/pinjol-bukan-salah-kamu-itu-sistem-yang-didesain-untuk-menangkap). Bunga tinggi membuat siklus utang semakin dalam. Alih-alih keluar dari sandwich generation, mereka justru terjebak lebih lama.
 
 ## Indonesia Masuk Aging Population: Beban Makin Berat
 
@@ -141,7 +141,7 @@ BPS mencatat rasio ketergantungan penduduk Indonesia mencapai 47,3% pada 2025. A
 
 Data UN ESCAP 2023 mencatat penduduk usia 60 tahun ke atas mencapai 30,9 juta orang atau 11,1% populasi. Angka ini diproyeksikan naik menjadi 64,9 juta orang atau 20,5% pada 2050. Sandwich generation belum mencapai puncak. IDN Research Institute memperkirakan tekanan tertinggi akan terjadi antara 2030 dan 2045.
 
-Ketika [gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) sementara tanggungan bertambah, matematikanya jelas. Beban per pekerja makin berat setiap tahun. Dan tanpa perubahan pada sistem jaminan sosial, Gen Z yang sekarang menanggung orang tua akan menjadi lansia yang ditanggung cucu mereka nanti.
+Ketika [gaji tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) sementara tanggungan bertambah, matematikanya jelas. Beban per pekerja makin berat setiap tahun. Dan tanpa perubahan pada sistem jaminan sosial, Gen Z yang sekarang menanggung orang tua akan menjadi lansia yang ditanggung cucu mereka nanti.
 
 ## Pengamatan dari Lapangan
 

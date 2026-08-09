@@ -70,7 +70,7 @@ Angka-angka ini bukan sekadar "Gen Z cengeng". Ini indikator klinis. Mood swing 
 
 ## Memetakan Teori ke Realita
 
-Tiga komponen learned helplessness Seligman bisa dipetakan langsung ke pengalaman Gen Z Indonesia. Motivasi: kirim 300 lamaran ditolak, berhenti melamar. BPS mencatat TPT (Tingkat Pengangguran Terbuka) usia 15 sampai 24 tahun sebesar 16,16 persen, dan 52,64 persen pengangguran total berasal dari usia muda. Ketika [300 lamaran ditolak bukan karena kamu pilih-pilih, tapi sistemnya yang tidak mau kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu), berhenti mencoba bukan keputusan irasional.
+Tiga komponen learned helplessness Seligman bisa dipetakan langsung ke pengalaman Gen Z Indonesia. Motivasi: kirim 300 lamaran ditolak, berhenti melamar. BPS mencatat TPT (Tingkat Pengangguran Terbuka) usia 15 sampai 24 tahun sebesar 16,16 persen, dan 52,64 persen pengangguran total berasal dari usia muda. Ketika [300 lamaran ditolak bukan karena kamu pilih-pilih, tapi sistemnya yang tidak mau kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu), berhenti mencoba bukan keputusan irasional.
 
 Kognisi: kerja keras tapi gaji tidak cukup. 71 persen Gen Z dalam survei Jakpat menyebut gaji sebagai faktor utama, 63 persen merasa kompetisi kerja terlalu ketat. Usaha dilakukan, hasil tidak sesuai harapan, berulang kali. Otak belajar: usaha tidak berkorelasi dengan hasil.
 

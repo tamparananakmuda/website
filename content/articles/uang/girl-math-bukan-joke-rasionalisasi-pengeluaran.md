@@ -121,7 +121,7 @@ Saya perhatikan sendiri, setiap kali scroll TikTok malam hari, minimal tiga kont
 
 Humor boleh. Kalau kamu sesekali girl math untuk beli kopi Rp25 ribu dan bilang "ini investasi mental health," tidak masalah. Tapi ketika humor menjadi cara untuk menormalisasi pola yang menumpuk utang dan mengosongkan tabungan, itu bukan humor lagi. Itu alasan untuk tidak berhenti.
 
-Menabung memang sulit di sistem yang tidak mendukung. Gaji stagnan, biaya hidup naik, BNPL gampang diakses. Tapi girl math bukan solusi. Girl math adalah alasan untuk tidak mencoba. Dan seperti yang kami bahas di [menabung irasional: bukan boros, matematika yang tidak masuk akal](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal), ketika menabung terasa tidak masuk akal, masalahnya bukan selalu pada kamu. Tapi girl math memastikan kamu tidak pernah mencoba menemukan solusi yang nyata.
+Menabung memang sulit di sistem yang tidak mendukung. Gaji stagnan, biaya hidup naik, BNPL gampang diakses. Tapi girl math bukan solusi. Girl math adalah alasan untuk tidak mencoba. Dan seperti yang kami bahas di [menabung irasional: bukan boros, matematika yang tidak masuk akal](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak), ketika menabung terasa tidak masuk akal, masalahnya bukan selalu pada kamu. Tapi girl math memastikan kamu tidak pernah mencoba menemukan solusi yang nyata.
 
 ## Pertanyaan yang Sering Diajukan
 
@@ -143,4 +143,4 @@ Tidak. Meski dinamai "girl math," pola rasionalisasi pengeluaran dilakukan semua
 
 ### Bagaimana cara keluar dari pola girl math?
 
-Sadari bahwa uang tunai, saldo e-wallet, dan BNPL semua adalah sumber daya yang sama. Buat anggaran bulanan, tetapkan batas belanja, dan evaluasi pengeluaran secara rutin. Jangan belanja saat emosional. Beri jeda 48 jam sebelum checkout barang nonpenting. Dan seperti yang kami bahas di [langganan digital: pengeluaran tak kasat mata](/artikel/langganan-digital-pengeluaran-tak-kasat-mata), waspadai juga pengeluaran kecil yang terakumulasi tanpa kamu sadari.
+Sadari bahwa uang tunai, saldo e-wallet, dan BNPL semua adalah sumber daya yang sama. Buat anggaran bulanan, tetapkan batas belanja, dan evaluasi pengeluaran secara rutin. Jangan belanja saat emosional. Beri jeda 48 jam sebelum checkout barang nonpenting. Dan seperti yang kami bahas di [langganan digital: pengeluaran tak kasat mata](/artikel/langganan-digital-bukan-gaya-hidup-itu-pengeluaran-tak-kasat-mata), waspadai juga pengeluaran kecil yang terakumulasi tanpa kamu sadari.

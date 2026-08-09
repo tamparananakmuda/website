@@ -82,7 +82,7 @@ Data GoodStats menunjukkan hampir separuh Gen Z yang mengalami gangguan kesehata
 
 Tapi ironisnya, keterbukaan ini justru dipakai sebagai senjata untuk menstigma mereka. "Kamu cerita masalah mental di medsos, ya itu namanya cari perhatian." Padahal yang terjadi adalah sebaliknya: mereka berani mengakui masalah yang generasi sebelumnya sembunyikan selama puluhan tahun.
 
-Seperti yang kami tulis di artikel [TikTok bukan terapis bahaya self-diagnosis kesehatan mental](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental), keterbukaan soal kesehatan mental punya risiko sendiri, terutama ketika self-diagnosis menyebar tanpa verifikasi profesional. Tapi risiko ini bukan alasan untuk kembali membungkam percakapan.
+Seperti yang kami tulis di artikel [TikTok bukan terapis bahaya self-diagnosis kesehatan mental](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata), keterbukaan soal kesehatan mental punya risiko sendiri, terutama ketika self-diagnosis menyebar tanpa verifikasi profesional. Tapi risiko ini bukan alasan untuk kembali membungkam percakapan.
 
 ## Label Tidak Menyelesaikan Masalah
 

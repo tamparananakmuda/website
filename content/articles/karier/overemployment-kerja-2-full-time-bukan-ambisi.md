@@ -120,7 +120,7 @@ Itu bukan cerita ambisi, itu cerita triage. Dalam medis, triage adalah sistem pe
 
 Media menyebut ini [side hustle yang bukan ambisi tapi kebutuhan ekonomi](/artikel/side-hustle-bukan-ambisi-kebutuhan-ekonomi). Tapi overemployment lebih ekstrem dari side hustle, karena side hustle masih punya batas sementara overemployment tidak. Kamu bekerja untuk dua perusahaan yang masing-masing mengira kamu 100 persen milik mereka menurut laporan BBC. Keduanya salah, tapi keduanya juga tidak memberi alasan untuk jujur.
 
-Data Deloitte menunjukkan 47 persen Gen Z hidup paycheck to paycheck dan 34 persen kesulitan bayar kebutuhan bulanan. Ini bukan angka generasi yang sedang [hustle culture yang dibungkus sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-burnout-yang-dikemas-sebagai-dedikasi). Ini angka generasi yang sedang menghitung apakah gaji bulan ini cukup sampai tanggal 25.
+Data Deloitte menunjukkan 47 persen Gen Z hidup paycheck to paycheck dan 34 persen kesulitan bayar kebutuhan bulanan. Ini bukan angka generasi yang sedang [hustle culture yang dibungkus sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-itu-burnout-yang-dikemas-sebagai-dedikasi). Ini angka generasi yang sedang menghitung apakah gaji bulan ini cukup sampai tanggal 25.
 
 Overemployment bukan pilihan antara satu atau dua pekerjaan, itu pilihan antara bertahan atau tenggelam.
 
@@ -128,7 +128,7 @@ Overemployment bukan pilihan antara satu atau dua pekerjaan, itu pilihan antara 
 
 Jadi bukan Gen Z yang rakus, sistemnya yang tidak memberi alasan untuk setia pada satu pekerjaan.
 
-96 persen Gen Z terbuka untuk pindah kerja, menurut survei yang kami bahas di [96% Gen Z terbuka pindah kerja, bukan loyalitas yang mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati). Itu bukan karena tidak loyal, tapi karena sistem tidak memberi alasan untuk setia. Gaji stagnan, status kontrak, PHK tanpa peringatan. Loyalitas butuh dasar, dasar itu tidak ada.
+96 persen Gen Z terbuka untuk pindah kerja, menurut survei yang kami bahas di [96% Gen Z terbuka pindah kerja, bukan loyalitas yang mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya). Itu bukan karena tidak loyal, tapi karena sistem tidak memberi alasan untuk setia. Gaji stagnan, status kontrak, PHK tanpa peringatan. Loyalitas butuh dasar, dasar itu tidak ada.
 
 Overemployment adalah logika yang sama, diterapkan lebih ekstrem. Kalau satu pekerjaan tidak cukup dan tidak ada jaminan tetap, kenapa tidak dua? Kalau perusahaan tidak tahu, itu masalah perusahaan. Gen Z sudah belajar dari [gig economy yang jebakan produktivitas rendah](/artikel/gig-economy-bukan-pilihan-jebakan-produktivitas-rendah): sistem tidak akan melindungimu. Kamu yang harus melindungi diri sendiri.
 

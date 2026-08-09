@@ -110,7 +110,7 @@ Istilah "doomer" muncul di forum internet sekitar 2018-2019, menggambarkan orang
 
 BPS Agustus 2024 mencatat 7,47 juta pengangguran di Indonesia. Data BPS mencatat Tingkat Pengangguran Terbuka (TPT) kelompok umur muda (15-24 tahun) mencapai 16,42%, hampir enam kali lipat TPT dewasa, dengan rasio TPT muda terhadap TPT dewasa sebesar 5,84. Artinya, dari 100 orang penduduk berumur 15-24 tahun yang termasuk angkatan kerja, terdapat sekitar 16 orang yang menganggur.
 
-Ini bukan data lama. Ini data BPS 2024 yang dirilis Desember 2024, dan angkanya tidak menunjukkan perbaikan besar. [Kelas menengah menyusut](/artikel/kelas-menengah-menyusut-bukan-gagal-tangga-dicabut), bukan gagal naik, tangganya yang dicabut.
+Ini bukan data lama. Ini data BPS 2024 yang dirilis Desember 2024, dan angkanya tidak menunjukkan perbaikan besar. [Kelas menengah menyusut](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut), bukan gagal naik, tangganya yang dicabut.
 
 ### 75% Pekerja Digital di Bawah Rp3 Juta
 
@@ -120,7 +120,7 @@ Ketika kerja formal tidak menyerap, gig economy jadi katup pengaman. Tapi katup 
 
 ### 64% Gen Z Stres Finansial, Harga Rumah Tak Terjangkau
 
-Survei BTN 2026 menunjukkan 64% Gen Z mengalami stres finansial. Harga rumah di kota besar sudah setara 25 tahun gaji tanpa makan, sebuah matematika yang [sudah kita hitung sebelumnya](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan). Hasilnya: doom spending. Gen Z yang menyerah menabung memilih belanja impulsif sebagai pelarian. Ini bukan [self-care](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah), itu gejala menyerah. Lipstick effect modern: kalau kamu tidak bisa beli rumah, beli kopi premium. Setidaknya ada sesuatu yang bisa kamu kontrol.
+Survei BTN 2026 menunjukkan 64% Gen Z mengalami stres finansial. Harga rumah di kota besar sudah setara 25 tahun gaji tanpa makan, sebuah matematika yang [sudah kita hitung sebelumnya](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji). Hasilnya: doom spending. Gen Z yang menyerah menabung memilih belanja impulsif sebagai pelarian. Ini bukan [self-care](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah), itu gejala menyerah. Lipstick effect modern: kalau kamu tidak bisa beli rumah, beli kopi premium. Setidaknya ada sesuatu yang bisa kamu kontrol.
 
 ### Iklim: Warisan yang Tidak Diundang
 
@@ -136,11 +136,11 @@ Jakpat mencatat 60% Gen Z cemas masa depan, 57% merasakan tekanan finansial, 62%
 
 YouGov Februari 2025 menemukan 41% Gen Z mempertimbangkan pindah ke luar negeri. Tagar #KaburAjaDulu viral di media sosial. Studi akademik yang dipublikasi di Open Access International Journal of Social Sciences (OAIJSS) menganalisis fenomena ini dengan wawancara intensif terhadap 30 profesional muda di Jakarta. Temuan mereka: "Working Dead Syndrome" (detachment emosional dari pekerjaan), "Digital Solidarity" (tagar sebagai ruang bertahan kolektif), dan "Green Pasture Mirage" (migrasi sebagai pencarian martabat sistemik).
 
-Studi ini juga memvalidasi secara kuantitatif dengan Structural Equation Modeling dari 1.000 entri digital. Hasilnya: Workplace Toxicity dan Digital Peer Support secara kuat memprediksi Aspirasi Migrasi. Gen Z tidak kabur karena malas. Mereka kabur karena data survei menunjukkan [96% terbuka pindah](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), sistem yang tidak memberi alasan untuk setia.
+Studi ini juga memvalidasi secara kuantitatif dengan Structural Equation Modeling dari 1.000 entri digital. Hasilnya: Workplace Toxicity dan Digital Peer Support secara kuat memprediksi Aspirasi Migrasi. Gen Z tidak kabur karena malas. Mereka kabur karena data survei menunjukkan [96% terbuka pindah](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya), sistem yang tidak memberi alasan untuk setia.
 
 ### 2026: Fase Doom Spending
 
-Kompas melaporkan Juni 2026 bahwa belanja impulsif Gen Z meningkat seiring kehilangan harapan punya rumah. "Mau menabung juga buat apa kalau gak akan cukup beli rumah," begitu pola pikir yang muncul. BNPL (Buy Now Pay Later) jadi enabler. Bukan karena Gen Z tidak tahu matematika, tapi karena [menabung jadi irasional](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal) ketika targetnya mustahil dicapai dengan gaji sekarang.
+Kompas melaporkan Juni 2026 bahwa belanja impulsif Gen Z meningkat seiring kehilangan harapan punya rumah. "Mau menabung juga buat apa kalau gak akan cukup beli rumah," begitu pola pikir yang muncul. BNPL (Buy Now Pay Later) jadi enabler. Bukan karena Gen Z tidak tahu matematika, tapi karena [menabung jadi irasional](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak) ketika targetnya mustahil dicapai dengan gaji sekarang.
 
 ## Kenapa Menyebut Ini "Sakit Mental" Adalah Gaslighting
 

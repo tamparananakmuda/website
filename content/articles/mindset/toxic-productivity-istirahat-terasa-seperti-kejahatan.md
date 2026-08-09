@@ -64,7 +64,7 @@ Media sosial dipenuhi unggahan tentang pencapaian, sertifikat, proyek baru, hing
 
 Fenomena ini berkaitan erat dengan Fear of Missing Out (FOMO). Ketika melihat teman sebaya sudah magang di perusahaan besar, memiliki bisnis sendiri, atau meraih beasiswa luar negeri, muncul dorongan untuk ikut mengejar hal serupa. Tanpa disadari, perbandingan sosial yang terus-menerus ini memicu tekanan internal.
 
-Seperti yang kami bahas di artikel [perbandingan diri di era media sosial](/artikel/perbandingan-diri-era-media-sosial), media sosial menciptakan ilusi bahwa semua orang lebih sukses dari kamu. Padahal yang kamu lihat hanya highlight reel mereka, bukan prosesnya.
+Seperti yang kami bahas di artikel [perbandingan diri di era media sosial](/artikel/perbandingan-diri-era-media-sosial-kenapa-kamu-merasa-nggak-cukup), media sosial menciptakan ilusi bahwa semua orang lebih sukses dari kamu. Padahal yang kamu lihat hanya highlight reel mereka, bukan prosesnya.
 
 Toxic productivity lahir dari perbandingan ini. Kamu tidak bekerja karena punya tujuan yang jelas. Kamu bekerja karena takut tertinggal. Dan ketakutan ini tidak pernah habis, karena akan selalu ada orang yang terlihat lebih maju dari kamu.
 

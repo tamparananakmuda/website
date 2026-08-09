@@ -83,7 +83,7 @@ Bank Dunia dalam Indonesia Economic Prospects Juni 2025 memperingatkan bahwa man
 
 Kelas menengah punya posisi strategis. Mereka membeli rumah, kendaraan, elektronik, menggunakan jasa pendidikan dan kesehatan, berlangganan layanan digital. Data BPS mencatat pada 2024, kelas menengah menyumbang 81,5% dari total konsumsi rumah tangga. Kalau mereka menyusut, mesin konsumsi domestik terancam. Dan kalau mesin konsumsi melemah, efeknya merembet ke ritel, manufaktur, properti, transportasi, pariwisata, pendidikan, hingga jasa keuangan.
 
-Kalau kamu ingin memahami lebih dalam kenapa tangga kelas menengah dicabut, baca [kelas menengah menyusut: bukan gagal naik, tangganya yang dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-tangga-dicabut).
+Kalau kamu ingin memahami lebih dalam kenapa tangga kelas menengah dicabut, baca [kelas menengah menyusut: bukan gagal naik, tangganya yang dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut).
 
 ## Bukan tangguh, terpaksa
 
@@ -109,7 +109,7 @@ Diversifikasi pendapatan menjadi strategi hidup. Survei IDN Research Institute m
 
 Tapi yang lebih menarik adalah bentuk ekonomi yang tumbuh. IMGR 2027 mencatat pasar yang tumbuh dari komunitas tanpa investor maupun platform resmi. Gen Z membangun ekonomi sendiri lewat fan economy, creator economy, jual tiket event komunitas, merchandise, fan art, hingga jasa berbasis komunitas. Perempuan muda jadi motor utama pertumbuhan ekonomi komunitas ini. Data IMGR mencatat dari 194 juta Millennial dan Gen Z yang membentuk 68% populasi nasional, ekonomi komunitas tumbuh di luar radar institusi formal.
 
-Ini bukan [side hustle sebagai ambisi](/artikel/side-hustle-bukan-ambisi-kebutuhan-ekonomi). Side hustle sudah TAM bahas sebelumnya. Ini lebih luas: Gen Z membangun infrastruktur ekonomi paralel karena infrastruktur formal tidak menyerap mereka. [Jastip dan reseller](/artikel/jastip-reseller-bukan-bisnis-triage-ekonomi) yang TAM bahas sebagai triage ekonomi adalah bagian dari pola yang sama.
+Ini bukan [side hustle sebagai ambisi](/artikel/side-hustle-bukan-ambisi-kebutuhan-ekonomi). Side hustle sudah TAM bahas sebelumnya. Ini lebih luas: Gen Z membangun infrastruktur ekonomi paralel karena infrastruktur formal tidak menyerap mereka. [Jastip dan reseller](/artikel/jastip-dan-reseller-bukan-bisnis-triage-ekonomi) yang TAM bahas sebagai triage ekonomi adalah bagian dari pola yang sama.
 
 ## Rentan eksploitasi: ekonomi tanpa perlindungan
 
@@ -117,7 +117,7 @@ Ronny Sasmita menggarisbawahi risiko jangka panjang dominasi sektor gig. "Dalam 
 
 Selain risiko low productivity trap, erosi basis pajak dan kerentanan sosial menjadi ancaman serius. Mayoritas pekerja gig tidak terlindungi oleh jaminan sosial formal. "Jika tren ini tidak dikelola, maka kita berpotensi menghadapi generasi pekerja yang besar secara jumlah, tetapi rapuh secara ekonomi," tegas Ronny.
 
-Ekonomi komunitas yang tumbuh tanpa regulasi punya masalah serupa. Platform yang memfasilitasi ekonomi ini ambil potongan, tapi pekerja tanggung risiko. [Afiliasi TikTok Shop](/artikel/afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform) yang TAM bahas sebelumnya adalah contoh konkret: kerja sales untuk platform, bukan bisnis sendiri. [Omzet bukan untung](/artikel/omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas) juga relevan: bisnis terlihat sukses di luar tapi kosong di kas.
+Ekonomi komunitas yang tumbuh tanpa regulasi punya masalah serupa. Platform yang memfasilitasi ekonomi ini ambil potongan, tapi pekerja tanggung risiko. [Afiliasi TikTok Shop](/artikel/afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform) yang TAM bahas sebelumnya adalah contoh konkret: kerja sales untuk platform, bukan bisnis sendiri. [Omzet bukan untung](/artikel/omzet-bukan-untung-bisnis-gen-z-sukses-tapi-kosong) juga relevan: bisnis terlihat sukses di luar tapi kosong di kas.
 
 Katadata dalam opini Zainul Abidin memberi konteks yang lebih tajam. BPS menghitung seseorang sebagai pekerja jika ia aktif bekerja minimal satu jam dalam seminggu. Dengan definisi ini, seorang pengemudi ojek yang membuka aplikasi tiga jam sehari selama dua hari lalu berhenti karena sakit, tetap tercatat sebagai pekerja. Angka pengangguran terlihat terkendali, bahkan turun, sementara di bawahnya jutaan orang hidup tanpa kepastian penghasilan, tanpa akses jaminan kecelakaan kerja, dan tanpa tabungan pensiun.
 

@@ -90,7 +90,7 @@ Echo chamber terjadi saat algoritma terus menampilkan konten yang sejalan dengan
 
 Penelitian Journal of Psychology Today tahun 2025 menjelaskan bahwa filter bubble menyebabkan cognitive offloading, di mana otak melimpahkan proses kognitif ke algoritma. Kemampuan berpikir kritis tergerus karena otak tidak lagi dilatih untuk mengevaluasi informasi yang bertentangan. Semakin lama kamu di dalam echo chamber, semakin sulit membedakan apa yang kamu tahu dari apa yang algoritma pilihkan untuk kamu tahu.
 
-Seperti yang kami bahas di [FOMO: desain algoritma](/artikel/fomo-desain-algoritma), ketakutan melewatkan sesuatu bukan kelemahan psikologis. Ini desain. Algoritma menciptakan rasa bahwa di luar sana ada sesuatu yang kamu lewatkan, dan satu-satunya cara untuk tidak ketinggalan adalah terus scroll.
+Seperti yang kami bahas di [FOMO: desain algoritma](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma), ketakutan melewatkan sesuatu bukan kelemahan psikologis. Ini desain. Algoritma menciptakan rasa bahwa di luar sana ada sesuatu yang kamu lewatkan, dan satu-satunya cara untuk tidak ketinggalan adalah terus scroll.
 
 ### Doomscrolling: Algoritma Makan Ketakutan
 
@@ -98,7 +98,7 @@ Doomscrolling adalah konsumsi konten negatif secara kompulsif meski kamu tahu it
 
 Penelitian Tuturan Journal 2026 menunjukkan dampaknya pada Gen Z Indonesia: paparan konten negatif berkorelasi 0,62 dengan kecemasan, 0,70 dengan depresi, dan 0,65 dengan stres. Infinite scroll menghilangkan batas alami untuk berhenti. Tidak ada halaman terakhir. Tidak ada "selesai." Hanya konten yang terus mengalir, dipilih oleh mesin yang tidak peduli kamu sehat atau hancur.
 
-Seperti yang kami tulis di [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan), algoritma platform dirancang untuk menciptakan dopamine loop. Notifikasi, konten yang sesuai preferensi, dan infinite scroll bekerja sama untuk membuat berhenti terasa seperti kehilangan, bukan kebebasan.
+Seperti yang kami tulis di [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan), algoritma platform dirancang untuk menciptakan dopamine loop. Notifikasi, konten yang sesuai preferensi, dan infinite scroll bekerja sama untuk membuat berhenti terasa seperti kehilangan, bukan kebebasan.
 
 ### Yang Kamu Lihat Bukan Yang Ada
 
@@ -110,7 +110,7 @@ Saya perhatikan sesuatu yang mengganggu. Dua teman saya dengan opini politik ber
 
 Seperti yang kami bahas di [data privasi Gen Z: bukan tidak peduli, tidak diberi pilihan](/artikel/data-privasi-gen-z-bukan-tidak-peduli-tidak-diberi-pilihan), algoritma butuh data untuk bekerja. Setiap scroll, setiap like, setiap detik kamu menonton adalah data yang dipakai untuk merancang realitas kamu. Dan kamu tidak pernah diminta izin.
 
-Dan seperti yang kami tulis di [Gojek-Grab: bukan jadi bos, algoritma yang jadi bosmu](/artikel/gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu), algoritma tidak hanya mengatur apa yang kamu lihat. Algoritma mengatur hidup kamu, dari harga ojek online yang kamu bayar sampai berita yang kamu baca sebelum tidur.
+Dan seperti yang kami tulis di [Gojek-Grab: bukan jadi bos, algoritma yang jadi bosmu](/artikel/gojek-grab-bukan-jadi-bos-sendiri-algoritma-yang-jadi-bosmu), algoritma tidak hanya mengatur apa yang kamu lihat. Algoritma mengatur hidup kamu, dari harga ojek online yang kamu bayar sampai berita yang kamu baca sebelum tidur.
 
 ## Pahami Mesinnya, Bukan Salahkan Dirimu
 

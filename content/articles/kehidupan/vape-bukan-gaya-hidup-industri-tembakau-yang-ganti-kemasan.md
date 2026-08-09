@@ -92,7 +92,7 @@ Studi TPackSS 2025 membeli 825 produk vape di tiga kota besar. Hasilnya: 58% kem
 
 Sebanyak 96% kemasan mencantumkan keterangan rasa. Yang paling dominan: buah-buahan (58%) dan pencuci mulut (22%). Penelitian di PubMed 2024 yang mensurvei 1.600 siswa menemukan 76% pengguna vape memilih rasa buah. Rasa buah dan menthol menarik remaja, memperluas pasar, dan cocok buat mereka yang cari sensasi baru.
 
-Industri rokok konvensional pakai strategi yang sama: rasa, kemasan menarik, target anak muda. Bedanya, rokok konvensional akhirnya kena regulasi ketat setelah puluhan tahun, sementara vape baru kena regulasi setelah 8 tahun bebas pasar. Sama seperti [detoks dopamin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan) yang kamu pikir pilihan, nikotin dari vape bekerja di sistem reward otak yang sama. Bukan keputusan sadar, tapi conditioning.
+Industri rokok konvensional pakai strategi yang sama: rasa, kemasan menarik, target anak muda. Bedanya, rokok konvensional akhirnya kena regulasi ketat setelah puluhan tahun, sementara vape baru kena regulasi setelah 8 tahun bebas pasar. Sama seperti [detoks dopamin](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan) yang kamu pikir pilihan, nikotin dari vape bekerja di sistem reward otak yang sama. Bukan keputusan sadar, tapi conditioning.
 
 ## Medsos: Tempat Industri Hook Gen Z
 
@@ -106,7 +106,7 @@ Data BMC Public Health 2025 dari 1.600 remaja usia 15-24 tahun menemukan paparan
 
 Kasus YouTuber Bigmo pada Agustus 2026 menunjukkan celah regulasi. Bigmo diduga melibatkan anak-anak dalam siaran langsung promosi vape. Yayasan Lentera Anak melaporkan kasus ini ke polisi, menyebutnya sebagai alarm bahwa ruang digital belum aman bagi anak. PP 28/2024 Pasal 446 sebenarnya melarang segala bentuk promosi produk tembakau, termasuk vape, di media sosial, tapi penegakan masih lemah.
 
-Sama seperti [doomscrolling](/artikel/doomscrolling-bukan-kebiasaan-ketakutan-yang-algoritma-jual) di mana algoritma menjual ketakutan, algoritma media sosial juga menjual vape. Dan sama seperti [FOMO](/artikel/fomo-desain-algoritma) yang bukan bug tapi core business model, pemasaran vape di media sosial bukan kebetulan tapi strategi.
+Sama seperti [doomscrolling](/artikel/doomscrolling-bukan-kebiasaan-ketakutan-yang-algoritma-jual) di mana algoritma menjual ketakutan, algoritma media sosial juga menjual vape. Dan sama seperti [FOMO](/artikel/fomo-bukan-kelemahanmu-itu-desain-algoritma) yang bukan bug tapi core business model, pemasaran vape di media sosial bukan kebetulan tapi strategi.
 
 Kamu pikir vape masalah kesehatan. Sebenarnya vape gejala dari sistem yang mengizinkan industri mengakses anak muda tanpa batas selama 8 tahun.
 

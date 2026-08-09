@@ -58,7 +58,7 @@ Indonesia punya 3,5 juta creator aktif pada 2026 menurut data Stateglobe, dengan
 
 Sisanya? Creator dengan 1.000 sampai 10.000 followers rata-rata dapat Rp500 ribu hingga Rp5 juta per bulan. Yang punya 10.000 sampai 50.000 followers, Rp5 juta hingga Rp20 juta. Angka-angka ini setara dengan gaji pekerja kantoran entry-level, tapi tanpa BPJS, tanpa cuti, tanpa kepastian. Pendapatan creator bisa berubah 30 sampai 50 persen dari bulan ke bulan.
 
-Di level global, 55 persen creator berpenghasilan di bawah US$18.000 atau sekitar Rp320 juta per tahun menurut data Influencer Marketing Hub 2025-2026. Hanya 10 sampai 12 persen yang mampu lebih dari US$100.000 per tahun. Ini bukan profesi yang menguntungkan mayoritas praktisinya. Ini lotere yang dikemas sebagai karier, seperti yang sudah [dibongkar TAM sebelumnya](/artikel/influencer-bukan-profesi-itu-lotere-yang-dikemas-karier).
+Di level global, 55 persen creator berpenghasilan di bawah US$18.000 atau sekitar Rp320 juta per tahun menurut data Influencer Marketing Hub 2025-2026. Hanya 10 sampai 12 persen yang mampu lebih dari US$100.000 per tahun. Ini bukan profesi yang menguntungkan mayoritas praktisinya. Ini lotere yang dikemas sebagai karier, seperti yang sudah [dibongkar TAM sebelumnya](/artikel/influencer-bukan-profesi-itu-lotere-yang-dikemas-sebagai-karier).
 
 ## Mesin Performa Tanpa Empati
 

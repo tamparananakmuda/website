@@ -76,7 +76,7 @@ Jawa Barat jadi provinsi dengan PHK tertinggi, 20.77% dari total nasional menuru
 
 Tapi ketika karyawan punya plan B, saat karyawan diam-diam update LinkedIn atau mulai ambil kursus online, itu dibilang tidak loyal.
 
-Itu double standard yang tidak bisa lagi ditutupi. Perusahaan bisa memutus hubungan kerja kapan saja tanpa peringatan, dan itu dianggap keputusan rasional. Karyawan yang bersiap-siap menghadapi kemungkinan itu, dianggap pengkhianat. [PHK yang membongkar ilusi kerja keras](/artikel/phk-tokopedia-membongkar-ilusi-kerja-keras-tidak-menjamin-aman) sudah menunjukkan bahwa tidak ada pekerjaan yang aman, tidak peduli seberapa keras kamu bekerja.
+Itu double standard yang tidak bisa lagi ditutupi. Perusahaan bisa memutus hubungan kerja kapan saja tanpa peringatan, dan itu dianggap keputusan rasional. Karyawan yang bersiap-siap menghadapi kemungkinan itu, dianggap pengkhianat. [PHK yang membongkar ilusi kerja keras](/artikel/phk-tokopedia-kerja-keras-nggak-menjamin-aman) sudah menunjukkan bahwa tidak ada pekerjaan yang aman, tidak peduli seberapa keras kamu bekerja.
 
 Dan itu baru data PHK. Belum termasuk quiet firing, belum termasuk yang dipaksa resign, belum termasuk yang kontraknya tidak diperpanjang.
 
@@ -92,7 +92,7 @@ Rika Tantiana, Senior Manager Robert Walters Indonesia, mengatakan career cushio
 
 Di Amerika, angkanya lebih tinggi. Survei Robert Walters AS pada Juni 2024 terhadap 2,500 white-collar professionals menemukan 68% tenaga kerja melakukan career cushioning. Dari survei AS tersebut, 48% menyebut low job satisfaction sebagai alasan, 28% menyebut lack of job security. Taktik utama menurut data survei: applying for jobs (67%) dan monitoring job market (53%).
 
-Data [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) sudah menunjukkan arah ini. Bukan generasi yang tidak mau setia. Generasi yang tidak diberi alasan untuk setia.
+Data [96% Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya) sudah menunjukkan arah ini. Bukan generasi yang tidak mau setia. Generasi yang tidak diberi alasan untuk setia.
 
 Tapi siapa yang paling ketakutan? Gen Z dan ketakutan mereka punya dasar.
 
@@ -120,7 +120,7 @@ Studi ini menemukan loyalitas Gen Z sudah berubah. Dari traditional compliance, 
 
 Jurnal lain tentang studi eksplorasi PHK massal di startup Indonesia meneliti 13 pekerja yang lolos dari PHK massal. Penelitian ini menggunakan teori kontrak psikologis Rousseau: karyawan punya pandangan subjektif tentang perjanjian pertukaran dengan perusahaan. Ketika PHK terjadi, karyawan menafsirkan itu sebagai pelanggaran kontrak psikologis. Dampaknya: perasaan dikhianati, penurunan motivasi, keretakan hubungan.
 
-Ini menjelaskan kenapa [quiet firing](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar) terasa begitu menyakitkan. Dan kenapa [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) bukan kemalasan. Keduanya adalah respons terhadap kontrak yang sudah dilanggar lebih dulu oleh perusahaan.
+Ini menjelaskan kenapa [quiet firing](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar) terasa begitu menyakitkan. Dan kenapa [quiet quitting](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati) bukan kemalasan. Keduanya adalah respons terhadap kontrak yang sudah dilanggar lebih dulu oleh perusahaan.
 
 Transparansi dan komunikasi terbuka, menurut jurnal yang sama, bisa meredam efeknya. Tapi berapa banyak perusahaan di Indonesia yang transparan soal kondisi keuangan dan rencana restrukturisasi?
 

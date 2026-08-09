@@ -51,7 +51,7 @@ TikTok Indonesia klaim 8 juta kreator sudah monetisasi di platform mereka. 63% p
 
 Affiliate marketing di TikTok Shop dijual sebagai "bisnis online tanpa modal". Bikin konten, tempel link, komisi masuk. Kelas-kelas online menjual mimpi "penghasilan puluhan juta dari TikTok Shop tanpa modal stok". Tapi model ini punya masalah struktural yang tidak dibahas oleh mereka yang menjual kelas affiliate.
 
-Kamu tidak punya produk, tidak punya customer data, tidak punya brand equity, tidak punya pricing power, tidak punya control atas algoritma. Yang kamu punya: kemampuan bikin konten dan audiens yang bisa dihilangkan kapan saja oleh platform. Ini bukan bisnis, ini kerja sales dengan komisi tanpa kontrak. Seperti yang kami bahas di [Dropshipping Bukan Bisnis: Gen Z Pekerja Gratis Marketplace](/artikel/dropshipping-bukan-bisnis-gen-z-pekerja-gratis-marketplace), model "bisnis tanpa modal" di platform selalu punya satu pemenang: platformnya.
+Kamu tidak punya produk, tidak punya customer data, tidak punya brand equity, tidak punya pricing power, tidak punya control atas algoritma. Yang kamu punya: kemampuan bikin konten dan audiens yang bisa dihilangkan kapan saja oleh platform. Ini bukan bisnis, ini kerja sales dengan komisi tanpa kontrak. Seperti yang kami bahas di [Dropshipping Bukan Bisnis: Gen Z Pekerja Gratis Marketplace](/artikel/dropshipping-bukan-bisnis-gen-z-jadi-pekerja-gratis-marketplace), model "bisnis tanpa modal" di platform selalu punya satu pemenang: platformnya.
 
 ## Komisi 5 sampai 15%: Berapa yang Masuk Kantong
 
@@ -79,7 +79,7 @@ Affiliate marketing tidak mengakumulasi asset. Bisnis punya produk yang bisa dij
 
 Model bisnis platform sangat sederhana. Kamu bikin content gratis, platform dapat engagement dari content kamu, platform jual iklan berdasarkan attention yang kamu produksi. Kamu dapat komisi yang tidak dijamin konversi ke penghasilan stabil, platform dapat inventory iklan yang bisa dijual. Seperti yang kami bahas di [MLM Bukan Bisnis: Eksploitasi Pertemanan Dikemas Wirausaha](/artikel/mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha), struktur yang menguntungkan satu pihak atas nama "kesempatan" bukan bisnis, itu eksploitasi.
 
-Arutala Coffee, brand kopi yang dibangun via TikTok Shop, punya ribuan affiliate aktif. Lebih dari 90% penjualan mereka berasal dari konten TikTok. Tapi brand Arutala yang untung, bukan afiliator. Arutala punya produk, customer data, dan brand yang bertahan. Afiliator hanya jadi perantara yang dapat komisi sekali jalan. Seperti yang kami tulis di [Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses Tapi Kosong di Kas](/artikel/omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas), angka besar di atas kertas tidak sama dengan uang di kantong.
+Arutala Coffee, brand kopi yang dibangun via TikTok Shop, punya ribuan affiliate aktif. Lebih dari 90% penjualan mereka berasal dari konten TikTok. Tapi brand Arutala yang untung, bukan afiliator. Arutala punya produk, customer data, dan brand yang bertahan. Afiliator hanya jadi perantara yang dapat komisi sekali jalan. Seperti yang kami tulis di [Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses Tapi Kosong di Kas](/artikel/omzet-bukan-untung-bisnis-gen-z-sukses-tapi-kosong), angka besar di atas kertas tidak sama dengan uang di kantong.
 
 ## Outlier vs Mayoritas: Survivorship Bias yang Berbahaya
 
@@ -87,7 +87,7 @@ Bella Salim mulai affiliate TikTok Shop sejak 2023. Tiga tahun konsisten, kini o
 
 GMV TikTok Shop Indonesia mencapai $6,198 miliar pada 2024 menurut data industri. Angka yang terdengar massive. Tapi GMV adalah nilai transaksi seller, bukan income afiliator. Dari $6,198 miliar, afiliator dapat komisi 5 sampai 15% dari produk yang mereka jual. Sisanya ke seller dan platform. 157,6 juta pengguna TikTok Indonesia adalah audience huge, tapi conversion rate tergantung algoritma yang tidak kamu kontrol.
 
-Seperti yang kami bahas di [Viral Bukan Bisnis: Kenapa Bisnis Gen Z Cepat Meledak Lalu Cepat Mati](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati), 10 juta views TikTok hanya hasilkan 150 transaksi. Viral di TikTok bukan jaminan bisnis bertahan. Dan affiliate marketing adalah bentuk paling ekstrem dari ketergantungan viral: tidak ada asset yang terakumulasi saat kamu tidak viral.
+Seperti yang kami bahas di [Viral Bukan Bisnis: Kenapa Bisnis Gen Z Cepat Meledak Lalu Cepat Mati](/artikel/viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-mati), 10 juta views TikTok hanya hasilkan 150 transaksi. Viral di TikTok bukan jaminan bisnis bertahan. Dan affiliate marketing adalah bentuk paling ekstrem dari ketergantungan viral: tidak ada asset yang terakumulasi saat kamu tidak viral.
 
 ## Insight
 

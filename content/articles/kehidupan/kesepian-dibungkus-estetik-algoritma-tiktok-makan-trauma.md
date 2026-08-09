@@ -100,6 +100,6 @@ Kalau kamu merasa kesepian adalah estetika yang kamu pilih, coba tanya diri send
 
 Kesepian bukan estetika. Kesepian adalah sinyal bahwa kamu butuh koneksi sosial. Jangan biarkan algoritma membungkus sinyal itu dengan filter cantik.
 
-Kalau kamu tertarik bagaimana media sosial membentuk persepsi, baca juga [bahaya self-diagnosis kesehatan mental dari TikTok](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental).
+Kalau kamu tertarik bagaimana media sosial membentuk persepsi, baca juga [bahaya self-diagnosis kesehatan mental dari TikTok](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata).
 
-Kalau kamu merasa kesepian memengaruhi kesehatan mental, baca juga [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti).
+Kalau kamu merasa kesepian memengaruhi kesehatan mental, baca juga [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-lemah-sistem-nggak-pasti).

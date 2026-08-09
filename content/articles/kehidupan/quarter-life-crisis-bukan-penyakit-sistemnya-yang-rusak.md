@@ -89,7 +89,7 @@ Masalahnya, kalau kamu sudah merasa tertinggal di dunia nyata, media sosial ngas
 
 Kalau quarter-life crisis bukan penyakit, maka solusinya bukan terapi. Solusinya adalah menghentikan ekspektasi yang salah dan mulai main dengan aturan yang benar.
 
-**Berhenti bandingkan diri dengan timeline orang lain.** Teman kamu menikah umur 24, beli rumah umur 26, punya anak umur 28. Itu timeline dia, bukan timeline kamu. Dan kamu nggak tahu berapa harga yang dia bayar untuk timeline itu. Mungkin dia menikah karena tekanan keluarga. Mungkin beli rumah karena bantuan orang tua. Mungkin dia juga krisis tapi nggak posting. Jalan hidup kamu nggak harus cocok dengan jalan orang lain. Baca [PHK Tokopedia: kerja keras tidak menjamin aman](/artikel/phk-tokopedia-membongkar-ilusi-kerja-keras-tidak-menjamin-aman) kalau kamu butuh pengingat bahwa rencana hidup bisa berubah seketika.
+**Berhenti bandingkan diri dengan timeline orang lain.** Teman kamu menikah umur 24, beli rumah umur 26, punya anak umur 28. Itu timeline dia, bukan timeline kamu. Dan kamu nggak tahu berapa harga yang dia bayar untuk timeline itu. Mungkin dia menikah karena tekanan keluarga. Mungkin beli rumah karena bantuan orang tua. Mungkin dia juga krisis tapi nggak posting. Jalan hidup kamu nggak harus cocok dengan jalan orang lain. Baca [PHK Tokopedia: kerja keras tidak menjamin aman](/artikel/phk-tokopedia-kerja-keras-nggak-menjamin-aman) kalau kamu butuh pengingat bahwa rencana hidup bisa berubah seketika.
 
 **Kenali beda kebutuhan dan keinginan.** Kamu butuh makan, bayar kos, dan punya dana darurat. Kamu kepingin beli iPhone baru, kopi 30 ribu tiap hari, dan liburan ke Bali. Quarter-life crisis sering berasal dari kebingungan antara dua hal ini. Kamu ngerasa miskin padahal sebenarnya kamu cuma konsumtif. Catat pengeluaran kamu satu bulan. Lihat berapa yang kamu habiskan untuk kebutuhan vs keinginan. Hasilnya mungkin mengejutkan. Untuk panduan lebih lanjut, lihat [kategori kehidupan](/kategori/kehidupan) untuk artikel-artikel seputar manajemen ekspektasi.
 
@@ -109,5 +109,5 @@ Kamu nggak rusak. Kamu baru sadar. Dan kesadaran itu, meski menyakitkan, adalah 
 
 ## Baca Juga
 
-- [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti)
-- [Adulting Bukan Soal Gede: Sistem yang Paksa Kamu Mandiri Sebelum Siap](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap)
+- [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-lemah-sistem-nggak-pasti)
+- [Adulting Bukan Soal Gede: Sistem yang Paksa Kamu Mandiri Sebelum Siap](/artikel/adulting-bukan-soal-gede-sistem-paksa-kamu-mandiri-sebelum-siap)

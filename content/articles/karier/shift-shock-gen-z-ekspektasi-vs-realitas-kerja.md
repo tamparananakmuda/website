@@ -123,7 +123,7 @@ Studi UGM 2026 yang melibatkan 268 Gen Z memperkuat temuan ini. Menggunakan anal
 
 Penelitian JSSR 2026 di Kabupaten Asahan melibatkan 110 Gen Z yang sudah bekerja. Hasilnya: persepsi kerja berpengaruh kuat terhadap realitas kerja (koefisien 0,954). Keduanya berpengaruh langsung terhadap retensi kerja. Artinya, keselarasan antara harapan awal dan kondisi nyata di tempat kerja menentukan keputusan Gen Z untuk bertahan atau pergi.
 
-Ini bukan cerita generasi gampang menyerah. Ini cerita generasi merasa dijual janji tidak ditepati. Seperti yang kita bahas tentang [Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), pindah kerja bukan ketidakloyalan. Tapi respons rasional terhadap sistem tidak memberi alasan untuk setia.
+Ini bukan cerita generasi gampang menyerah. Ini cerita generasi merasa dijual janji tidak ditepati. Seperti yang kita bahas tentang [Gen Z terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya), pindah kerja bukan ketidakloyalan. Tapi respons rasional terhadap sistem tidak memberi alasan untuk setia.
 
 ## Passion Myth: Kuliah Janji Kerja Sesuai Jurusan, Pasar Tidak Sediakan
 
@@ -135,7 +135,7 @@ Kompas.id melaporkan kasus Fito, lulusan jurusan K3 (Keselamatan dan Kesehatan K
 
 Ini bukan kasus sendirian. CELIOS, mengolah data BPS Sakernas Agustus 2025, mencatat Gen Z usia 19-29 tahun menghadapi kesenjangan antara durasi mencari kerja dan biaya bertahan hidup. Di DKI Jakarta, rerata durasi cari kerja 8 bulan dengan biaya Rp39,8 juta. Di Papua, 35 bulan dengan biaya Rp155,3 juta. Di Jawa Barat, 13 bulan dengan biaya Rp47,9 juta. Pendidikan menjual janji: lulus kuliah, dapat kerja sesuai jurusan, gaji layak, karier jelas. Pasar kerja tidak deliver. Lowongan entry-level minta pengalaman 1-2 tahun. Gaji awal sarjana turun dari Rp4,96 juta (Agustus 2024) ke Rp4,35 juta (Februari 2025) menurut BPS. Sektor formal menyusut: penyerapan kerja formal turun dari 15,6 juta (2009-2014) ke 2 juta (2019-2024).
 
-Gen Z yang sudah [kirim 300 lamaran dan ditolak semua](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu) akhirnya ambil kerja apa saja. Banyak kerja di luar jurusan: lulusan komunikasi jadi accounting officer, lulusan K3 jadi admin. Bukan karena tidak mau kerja sesuai passion. Tapi karena pilihan tersedia tidak menyediakan passion.
+Gen Z yang sudah [kirim 300 lamaran dan ditolak semua](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu) akhirnya ambil kerja apa saja. Banyak kerja di luar jurusan: lulusan komunikasi jadi accounting officer, lulusan K3 jadi admin. Bukan karena tidak mau kerja sesuai passion. Tapi karena pilihan tersedia tidak menyediakan passion.
 
 Seperti yang kita bahas tentang [S1 rebutan loker SMK](/artikel/s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap), pendidikan tinggi di Indonesia menjadi trap ketika pasar tidak menyediakan lapangan sesuai. Dan seperti [magang gratis dikemas sebagai pengalaman](/artikel/magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman), sistem kerja mengeksploitasi ekspektasi tinggi Gen Z untuk mendapat tenaga kerja murah.
 
@@ -145,7 +145,7 @@ Kekecewaan di tempat kerja punya konsekuensi yang jarang dibahas. Kalau kamu ber
 
 CELIOS menghitung: biaya bertahan hidup saat cari kerja di DKI Jakarta Rp39,8 juta untuk 8 bulan. Itu hampir 8 kali gaji UMP Jakarta. Gen Z yang resign dari kerja pertama harus pakai tabungan, pinjam ke orang tua, atau ambil pinjol untuk bertahan saat cari kerja lagi. 47% Gen Z berencana resign dalam setahun (Gateway Commercial Finance via Kompas). Kalau setengah dari mereka benar-benar resign, ratusan ribu Gen Z masuk kembali ke pasar kerja setiap tahun. Mereka bersaing dengan lulusan baru baru keluar kuliah. Persaingan makin ketat: Jakpat mencatat 63% Gen Z merasa kompetisi kerja semakin sulit.
 
-World Economic Forum 2025 melaporkan employee engagement global hanya 20%, titik terendah dalam satu dekade. Robert Walters mencatat 57% Gen Z tidak berniat menjadi manajer tingkat menengah, fenomena yang disebut conscious unbossing. Gen Z tidak mengejar kursi bos. Mereka sudah melihat [PHK membongkar ilusi kerja keras](/artikel/phk-kerja-keras-tidak-menjamin-aman): kerja keras tidak menjamin aman, jabatan tidak menjamin stabilitas.
+World Economic Forum 2025 melaporkan employee engagement global hanya 20%, titik terendah dalam satu dekade. Robert Walters mencatat 57% Gen Z tidak berniat menjadi manajer tingkat menengah, fenomena yang disebut conscious unbossing. Gen Z tidak mengejar kursi bos. Mereka sudah melihat [PHK membongkar ilusi kerja keras](/artikel/phk-membongkar-ilusi-kerja-keras-nggak-menjamin-aman): kerja keras tidak menjamin aman, jabatan tidak menjamin stabilitas.
 
 Gen Z terjebak di antara dua pilihan, keduanya tidak ideal. Bertahan di kerja yang tidak sesuai, dengan stres yang terus menumpuk. Atau resign dan kembali ke antrian cari kerja yang mahal dan panjang. Pilihan ini bukan pilihan, itu jebakan.
 

@@ -96,7 +96,7 @@ Hitung biaya ojol per bulan untuk pekerja. Dua trip per hari, 22 hari kerja. Tot
 
 Sekarang hitung sisa gaji. Kos termurah di Jakarta Rp500.000 hingga Rp800.000 berdasarkan data Rukita dan sewa-kos.com 2025. Asumsi kos Rp500.000. Makan Rp50.000 per hari, 30 hari, Rp1.500.000. Gaji Rp2.400.000 dikurangi kos Rp500.000 dikurangi makan Rp1.500.000 sama dengan Rp400.000. Ojol Hemat Rp396.000. Sisa Rp4.000. Untuk pulsa, sabun, pasta gigi, segala kebutuhan pribadi. Nol sisa.
 
-Gen Z yang [hidup gaji ke gaji tanpa sisa](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa) tidak punya ruang untuk biaya transportasi Rp396.000. Apalagi Rp594.000. Apalagi Rp1.188.000 saat hujan dan surge pricing. [Gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) sementara biaya transportasi terus naik setiap kali BBM naik.
+Gen Z yang [hidup gaji ke gaji tanpa sisa](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa) tidak punya ruang untuk biaya transportasi Rp396.000. Apalagi Rp594.000. Apalagi Rp1.188.000 saat hujan dan surge pricing. [Gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) sementara biaya transportasi terus naik setiap kali BBM naik.
 
 ## Transportasi Publik Ada, Tapi untuk Siapa?
 
@@ -130,7 +130,7 @@ Gen Z sebagai penumpang tidak dapat penghematan dari Perpres 27/2026. Regulasi y
 
 Gen Z tidak memilih ojol karena malas naik bus. Mereka naik ojol karena bus tidak ada. Atau bus ada tapi rutenya tidak sampai ke kantor. Atau bus ada tapi jam 10 malam sudah tidak beroperasi. Atau halte terdekat 2 km dari kos. Atau mereka tinggal di kota yang tidak punya bus sama sekali.
 
-Negara tidak sediakan transportasi publik yang layak, lalu menyalahkan Gen Z yang "boros" naik ojol. Sama seperti menyalahkan Gen Z yang "boros" beli air mineral padahal air PAM tidak bisa diminum. Sama seperti menyalahkan Gen Z yang [tidak cukup uang untuk anak](/artikel/gen-z-childfree-bukan-egois-gaji-tidak-cukup-untuk-anak) padahal gajinya stagnan. Sama seperti menyalahkan Gen Z yang [tidak bisa beli rumah](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan) padahal harga rumah naik 3 kali gaji.
+Negara tidak sediakan transportasi publik yang layak, lalu menyalahkan Gen Z yang "boros" naik ojol. Sama seperti menyalahkan Gen Z yang "boros" beli air mineral padahal air PAM tidak bisa diminum. Sama seperti menyalahkan Gen Z yang [tidak cukup uang untuk anak](/artikel/gen-z-childfree-bukan-egois-gaji-tidak-cukup-untuk-anak) padahal gajinya stagnan. Sama seperti menyalahkan Gen Z yang [tidak bisa beli rumah](/artikel/beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji) padahal harga rumah naik 3 kali gaji.
 
 Transportasi publik bukan charity. Investasi publik yang seharusnya membuat mobilitas tenaga kerja murah. Tanpa itu, gaji Gen Z habis untuk transportasi, bukan untuk tabungan atau masa depan. Setiap Rp396.000 yang keluar untuk ojol adalah Rp396.000 yang seharusnya bisa masuk ke tabungan. Setiap surge pricing adalah uang yang seharusnya bisa masuk ke dana darurat. Tapi tidak, karena negara tidak sediakan alternatif.
 

@@ -21,7 +21,7 @@ tags:
 ogHeadline: 'Rumah sakit bukan tempat sembuh, tempat bisnis'
 seoMetaTitle: 'Rumah Sakit Bisnis Bukan Layanan, Siloam Laba Rp1,1 Triliun | TAM'
 seoMetaDescription: >-
-  Siloam Hospitals pendapatan Rp12,84 triliun, laba Rp1,11 triliun pada 2025. Margin EBITDA 29,1%. Rumah sakit Indonesia bisnis bukan layanan. Data menunjukkan desain, bukan kegagalan.
+  Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun, margin 29,1%. Rumah sakit Indonesia bisnis bukan layanan. Data menunjukkan desain, bukan kegagalan.
 seoKeywords:
   - rumah sakit swasta Indonesia
   - bisnis rumah sakit

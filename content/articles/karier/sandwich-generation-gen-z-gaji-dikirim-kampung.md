@@ -74,7 +74,7 @@ coverImageUrl: null
 coverImageAlt: null
 ---
 
-Gen Z disebut tidak ambisius, cuma [data survei: 6% yang mau jadi bos](/artikel/gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi). [96% terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati), data survei yang sama. Tapi survei Sun Life yang dirilis Februari 2026 menemukan 90% pekerja Indonesia menanggung beban finansial dua generasi sekaligus. Gaji pertama mereka belum sampai rekening, sudah ada yang menunggu di kampung.
+Gen Z disebut tidak ambisius, cuma [data survei: 6% yang mau jadi bos](/artikel/6-persen-ingin-jadi-bos-bukan-gen-z-kurang-ambisi-sistemnya). [96% terbuka pindah kerja](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya), data survei yang sama. Tapi survei Sun Life yang dirilis Februari 2026 menemukan 90% pekerja Indonesia menanggung beban finansial dua generasi sekaligus. Gaji pertama mereka belum sampai rekening, sudah ada yang menunggu di kampung.
 
 Istilah sandwich generation pertama kali dipakai oleh Dorothy A. Miller pada 1981. Awalnya merujuk pada orang dewasa usia 45-65 tahun yang merawat orang tua sekaligus membesarkan anak. Tapi di Indonesia, fenomena ini turun usia. Gen Z yang baru lulus kuliah, baru dapat gaji pertama, sudah menanggung orang tua dan adik di rumah.
 
@@ -114,7 +114,7 @@ BPS mencatat pada Februari 2025, 59,40% pekerja Indonesia berada di sektor infor
 
 ### Gaji langsung dikirim, tidak ada ruang untuk ambisi
 
-Survei Sun Life 2026 menemukan 90% pekerja Indonesia menanggung dua generasi. Survei YouGov 2025 menambahkan: 46% generasi sandwich di Indonesia mengaku pendapatan mereka tidak naik, sementara biaya hidup terus meroket. Data YouGov mencatat dua faktor utama yang mengancam stabilitas keuangan mereka: inflasi (47%) dan penurunan penghasilan (31%). Ketika gaji langsung dibagi untuk orang tua, adik, dan kebutuhan rumah, tidak ada sisa untuk ambisi. Tidak ada sisa untuk [menabung yang matematikanya sudah tidak masuk akal](/artikel/menabung-irasional-bukan-boros-matematika-tidak-masuk-akal).
+Survei Sun Life 2026 menemukan 90% pekerja Indonesia menanggung dua generasi. Survei YouGov 2025 menambahkan: 46% generasi sandwich di Indonesia mengaku pendapatan mereka tidak naik, sementara biaya hidup terus meroket. Data YouGov mencatat dua faktor utama yang mengancam stabilitas keuangan mereka: inflasi (47%) dan penurunan penghasilan (31%). Ketika gaji langsung dibagi untuk orang tua, adik, dan kebutuhan rumah, tidak ada sisa untuk ambisi. Tidak ada sisa untuk [menabung yang matematikanya sudah tidak masuk akal](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak).
 
 ### 62% terpaksa pinjam untuk tutup kebutuhan
 
@@ -122,7 +122,7 @@ YouGov 2025 juga mencatat 62% generasi sandwich di Indonesia terpaksa mengambil 
 
 ### Pilihan karier dibentuk oleh tanggung jawab, bukan passion
 
-Gen Z disebut pindah-pindah kerja karena tidak loyal. Tapi [gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh) membuat mereka harus cari yang bayar lebih. Mereka tidak bisa ambil risiko startup, freelance, atau pindah ke kota lain untuk kesempatan better. Orang tua menunggu kiriman tiap bulan, adik butuh uang sekolah. Pilihan karier dibentuk oleh tanggung jawab keluarga, bukan passion atau ambisi personal. Inilah yang tidak dilihat generasi sebelumnya: [kelas menengah menyusut](/artikel/kelas-menengah-menyusut-gen-z-bangun-ekonomi-tanpa-investor), biaya hidup naik, tapi ekspektasi "balas budi" tetap sama.
+Gen Z disebut pindah-pindah kerja karena tidak loyal. Tapi [gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh) membuat mereka harus cari yang bayar lebih. Mereka tidak bisa ambil risiko startup, freelance, atau pindah ke kota lain untuk kesempatan better. Orang tua menunggu kiriman tiap bulan, adik butuh uang sekolah. Pilihan karier dibentuk oleh tanggung jawab keluarga, bukan passion atau ambisi personal. Inilah yang tidak dilihat generasi sebelumnya: [kelas menengah menyusut](/artikel/kelas-menengah-menyusut-gen-z-bangun-ekonomi-tanpa-investor), biaya hidup naik, tapi ekspektasi "balas budi" tetap sama.
 
 ## Budaya "Balas Budi" Jadi Gaslighting Sistemik
 
@@ -142,7 +142,7 @@ Ihda Muktiyanto, Direktur Pengembangan Dana Pensiun dan Asuransi Kemenkeu, menye
 
 Saya punya teman, sebut saja Rizki. Berdasarkan cerita dia: lulus S1 di Yogyakarta, dapat kerja di Jakarta dengan gaji Rp 4,5 juta, tiap bulan kirim Rp 1,5 juta ke rumah di Banyumas. Ayahnya pensiunan honorer tanpa jaminan pensiun, ibunya jualan gorengan, adiknya masih SMA. Berdasarkan cerita yang sama, Rizki pernah ditawarin pindah ke startup dengan gaji Rp 6 juta tapi kontrak 6 bulan. Dia tolak. "Kalau gagal, yang kena bukan cuma saya," katanya. Rizki bukan tidak ambisius. Dia cuma tidak punya luxuri untuk ambil risiko.
 
-Ini yang tidak dipahami generasi sebelumnya. Data BPS mencatat mereka masuk dunia kerja di era ekonomi masih tumbuh 6-7% per tahun, rumah masih terjangkau, sistem pensiun masih jangkau pekerja formal. Gen Z masuk dunia kerja di era [adulting yang dipaksa sebelum siap](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap), gaji stagnan, biaya hidup meroket, dan data BPJS mencatat sistem pensiun cuma jangkau 10% pekerja. Sandwich generation Gen Z bukan fenomena individual. Ini akibat struktural dari sistem yang gagal menyiapkan hari tua generasi sebelumnya.
+Ini yang tidak dipahami generasi sebelumnya. Data BPS mencatat mereka masuk dunia kerja di era ekonomi masih tumbuh 6-7% per tahun, rumah masih terjangkau, sistem pensiun masih jangkau pekerja formal. Gen Z masuk dunia kerja di era [adulting yang dipaksa sebelum siap](/artikel/adulting-bukan-soal-gede-sistem-paksa-kamu-mandiri-sebelum-siap), gaji stagnan, biaya hidup meroket, dan data BPJS mencatat sistem pensiun cuma jangkau 10% pekerja. Sandwich generation Gen Z bukan fenomena individual. Ini akibat struktural dari sistem yang gagal menyiapkan hari tua generasi sebelumnya.
 
 ## Conclusion
 

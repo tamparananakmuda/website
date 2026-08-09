@@ -100,7 +100,7 @@ Ketiga, alokasikan persentase gaji untuk "fun money" yang memang boleh dihabiska
 
 Seperti yang kami bahas di artikel [paylater bukan kemudahan tapi penjaga gaji kamu](/artikel/paylater-bukan-kemudahan-penjaga-gaji-kamu), sistem memang didesain untuk membuat kamu menghabiskan uang. Iklan, algoritma, dan kemudahan pembayaran semuanya bekerja sama. Kamu yang harus sadar.
 
-Dan seperti yang kami tulis di [generasi nanti dulu: bukan malas, gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh), menunda keputusan besar bukan berarti menyerah. Tapi menunda sambil menghabiskan uang untuk dopamin sementara, itu bukan menunda. Itu menggali lubang yang lebih dalam.
+Dan seperti yang kami tulis di [generasi nanti dulu: bukan malas, gaji yang tidak mau tumbuh](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh), menunda keputusan besar bukan berarti menyerah. Tapi menunda sambil menghabiskan uang untuk dopamin sementara, itu bukan menunda. Itu menggali lubang yang lebih dalam.
 
 ## Menyerah Tidak Mengubah Sistem
 

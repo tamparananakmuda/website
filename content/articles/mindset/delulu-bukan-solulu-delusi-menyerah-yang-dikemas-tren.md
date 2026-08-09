@@ -67,7 +67,7 @@ Pada Maret 2025, Perdana Menteri Australia Anthony Albanese memakai frasa "delul
 
 Dalam dunia medis, delusion adalah kondisi serius. Dr. Rachel Hoffman, chief clinical officer di Zeera, menjelaskan kepada Verywell Mind bahwa Diagnostic and Statistical Manual of Mental Disorders mendefinisikan delusi sebagai keyakinan palsu berdasarkan inferensi salah tentang realita eksternal, yang dipertahankan meskipun ada bukti yang menyangkal. Untuk diagnosis delusional disorder, seseorang harus memiliki pikiran delusional lebih dari sebulan.
 
-Tapi di TikTok, delulu kehilangan makna klinisnya. Istilah ini dipakai untuk menggambarkan seseorang yang terlalu berharap, terlalu percaya diri, atau membayangkan sesuatu yang peluang terjadinya kecil. Penggunaan ini tidak dimaksudkan sebagai diagnosis, melainkan candaan atau gurauan. Yang mencolok, candaan ini perlahan menjadi sumber mental health advice. [TikTok bukan terapis](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental), tapi jutaan Gen Z memperlakukannya seperti terapis.
+Tapi di TikTok, delulu kehilangan makna klinisnya. Istilah ini dipakai untuk menggambarkan seseorang yang terlalu berharap, terlalu percaya diri, atau membayangkan sesuatu yang peluang terjadinya kecil. Penggunaan ini tidak dimaksudkan sebagai diagnosis, melainkan candaan atau gurauan. Yang mencolok, candaan ini perlahan menjadi sumber mental health advice. [TikTok bukan terapis](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata), tapi jutaan Gen Z memperlakukannya seperti terapis.
 
 ## Sains di Balik Delulu: Apa yang Bekerja, Apa yang Tidak
 
@@ -109,7 +109,7 @@ Saya punya teman yang setiap pagu menulis di jurnal: "Saya adalah CEO startup se
 
 Ini yang tidak dibahas kompetitor: delulu bukan strategi yang gagal. Delulu adalah menyerah yang dikemas sebagai mindset. Ketika [60 persen Gen Z cemas masa depan menurut Jakpat](/artikel/60-persen-gen-z-cemas-masa-depan-bukan-mental-lemah-sistem-yang-tidak-pasti) dan sistem tidak memberi solusi nyata, berhalusinasi terasa lebih masuk akal daripada bertindak. Ketika [toxic productivity membuat istirahat terasa seperti kejahatan](/artikel/toxic-productivity-istirahat-terasa-seperti-kejahatan), delusi menjadi cara untuk merasa produktif tanpa harus benar-benar produktif.
 
-Tapi delusi yang menggantikan action bukan kekuatan. Itu penyerahan. Sama seperti [hustle culture yang ternyata burnout dikemas sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-burnout-yang-dikemas-sebagai-dedikasi), delulu adalah eksploitasi diri sendiri yang dikemas sebagai pemberdayaan diri. Kamu mengeksploitasi kapasitas berhalusinasi sendiri untuk menghindari realita yang terlalu sulit diterima.
+Tapi delusi yang menggantikan action bukan kekuatan. Itu penyerahan. Sama seperti [hustle culture yang ternyata burnout dikemas sebagai dedikasi](/artikel/hustle-culture-bukan-ambisi-itu-burnout-yang-dikemas-sebagai-dedikasi), delulu adalah eksploitasi diri sendiri yang dikemas sebagai pemberdayaan diri. Kamu mengeksploitasi kapasitas berhalusinasi sendiri untuk menghindari realita yang terlalu sulit diterima.
 
 ## Conclusion
 

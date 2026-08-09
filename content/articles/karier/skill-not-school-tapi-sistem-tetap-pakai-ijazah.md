@@ -86,7 +86,7 @@ Bayangkan: kamu menghabiskan 4 tahun dan ratusan juta rupiah untuk gelar yang Me
 
 Ini bukan sekadar kontradiksi. Ini jebakan. Kamu disuruh berhutang untuk sesuatu, lalu dikatakan sesuatu itu tidak penting, tapi saat kamu butuh kerja, sesuatu itu tetap jadi syarat. Kamu tidak bisa menang.
 
-[300 lamaran ditolak](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu) bukan karena kamu tidak punya skill. Sering kali karena kamu tidak lolos filter pertama: ijazah.
+[300 lamaran ditolak](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu) bukan karena kamu tidak punya skill. Sering kali karena kamu tidak lolos filter pertama: ijazah.
 
 ## Apa yang perlu diubah
 
@@ -94,7 +94,7 @@ Pesan "skill not school" baru akan berarti kalau sistemnya ikut berubah. Bukan c
 
 Beberapa perusahaan memang sudah mulai berubah. Mereka buka lowongan tanpa syarat ijazah, fokus ke tes skill dan portofolio. Tapi ini masih minoritas. Data Kemenaker mencatat 12 juta pencari kerja pada 2026, sementara lowongan yang tersedia hanya 9 juta. Dalam pasar yang surplus tenaga kerja, perusahaan tidak punya insentif untuk mengubah cara rekrutmen. Mereka bisa pilih-pilih, dan ijazah jadi alat filter termurah.
 
-[Gen Z yang menolak kerja tanpa info gaji](/artikel/gen-z-menolak-kerja-tanpa-info-gaji-bukan-arogan-rasional) dibilang arogan. Gen Z yang fokus skill tapi tidak punya ijazah dibilang kurang kualifikasi. Gen Z yang ambil ijazah tapi tidak punya pengalaman dibilang overqualified atau underqualified, tergantung posisi. Tidak ada posisi di mana Gen Z tidak disalahkan.
+[Gen Z yang menolak kerja tanpa info gaji](/artikel/85-persen-gen-z-menolak-kerja-tanpa-info-gaji-bukan-arogan) dibilang arogan. Gen Z yang fokus skill tapi tidak punya ijazah dibilang kurang kualifikasi. Gen Z yang ambil ijazah tapi tidak punya pengalaman dibilang overqualified atau underqualified, tergantung posisi. Tidak ada posisi di mana Gen Z tidak disalahkan.
 
 ## Yang bisa kamu lakukan di sistem yang belum berubah
 

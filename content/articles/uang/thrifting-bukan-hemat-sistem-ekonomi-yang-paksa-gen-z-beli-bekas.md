@@ -55,7 +55,7 @@ Bank Indonesia, dalam Consumer Survey Agustus 2025, mencatat average propensity 
 
 BPS memperkuat gambaran ini dari sisi GDP. Pertumbuhan konsumsi rumah tangga tahunan berada di bawah 5% sejak Q3 2024, dan menyentuh 4,89% di Q3 2025, menurut data BPS. Angka itu level terendah dalam 14 tahun. Alvara Research Center mencatat 49% belanja rumah tangga Indonesia untuk kebutuhan dasar. Katadata Insight Center (KIMCI) mencatat 40,5% pendapatan kelas menengah dialokasikan ke konsumsi harian, indikasi tekanan finansial.
 
-[Kelas menengah Indonesia susut dari 47,9 juta orang (2024) menjadi 46,7 juta orang (2025)](/artikel/kelas-menengah-menyusut-bukan-gagal-tangga-dicabut), penurunan terdalam sejak metode ini dipakai, menurut data IDN. Tapi belanja non-makanan tetap tumbuh 6,4%, didorong lonjakan pembelian ponsel (+31,2%) dan elektronik (+26,2%), berdasarkan data BPS. Konsumsi pangan nyaris stagnan di 0,9%, berdasarkan data BPS.
+[Kelas menengah Indonesia susut dari 47,9 juta orang (2024) menjadi 46,7 juta orang (2025)](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut), penurunan terdalam sejak metode ini dipakai, menurut data IDN. Tapi belanja non-makanan tetap tumbuh 6,4%, didorong lonjakan pembelian ponsel (+31,2%) dan elektronik (+26,2%), berdasarkan data BPS. Konsumsi pangan nyaris stagnan di 0,9%, berdasarkan data BPS.
 
 Pola ini jelas: orang tetap belanja gawai dan transportasi, sambil mengerem belanja makanan dan barang gaya hidup yang dianggap kurang penting. Dan untuk barang yang dianggap penting tapi tidak terjangkau baru, thrifting jadi solusi.
 

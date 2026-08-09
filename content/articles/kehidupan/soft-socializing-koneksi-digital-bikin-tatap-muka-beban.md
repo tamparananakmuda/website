@@ -135,7 +135,7 @@ Saya perhatikan pola ini di teman-teman saya. Mereka yang paling sering "soft so
 
 Jurnal Diagnosa Widyakarya mensintesis 15 studi tentang dampak media sosial terhadap kesehatan mental Gen Z Indonesia. Hasilnya: social comparison dan FOMO konsisten berkorelasi dengan penurunan kepuasan diri. Digital detox menunjukkan potensi, tapi efektivitasnya masih terbatas di Indonesia. Artinya, membatasi tatap muka bukan solusi untuk kelelahan digital. Keduanya masalah berbeda yang butuh jalan keluar berbeda.
 
-Kalau kamu tertarik bagaimana algoritma membentuk kelelahan digital ini, baca juga [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan). Dan kalau kamu merasa kesepian meski punya banyak kontak digital, [kesepian dibungkus estetik algoritma TikTok makan trauma](/artikel/kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma) membongkar fenomena itu.
+Kalau kamu tertarik bagaimana algoritma membentuk kelelahan digital ini, baca juga [detoks dopamin: bukan soal disiplin, algoritma yang membuatmu kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-bikin-kecanduan). Dan kalau kamu merasa kesepian meski punya banyak kontak digital, [kesepian dibungkus estetik algoritma TikTok makan trauma](/artikel/kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma) membongkar fenomena itu.
 
 ## Desain digital yang membuat tatap muka jadi beban
 
@@ -143,7 +143,7 @@ Ini bukan kelemahan generasi. Algoritma dan desain aplikasi sengaja menciptakan 
 
 Soft socializing ini gejala, bukan solusi. Solusi sebenarnya bukan menghindari tatap muka, tapi mengurangi kelelahan digital di hulu. Kalau kamu tidak scroll 7 jam sehari, mungkin nongkrong tatap muka tidak akan terasa seperti lembur. Kalau kamu tidak merasa harus responsif 24/7, mungkin jeda keheningan di pertemuan fisik tidak akan terasa canggung. Masalahnya bukan nongkrongnya. Masalahnya adalah semua yang datang sebelum nongkrong.
 
-Kalau kamu merasa kelelahan yang tidak terlihat tapi terus menumpuk, [emotional exhaustion: bukan sekadar capek, kamu kosong](/artikel/emotional-exhaustion-bukan-sekadar-capek-kamu-kosong) membahas kondisi itu lebih dalam. Dan kalau kamu pernah kehilangan teman karena hubungan yang dangkal, [friendship breakup lebih sakit dari putus cinta](/artikel/friendship-breakup-lebih-sakit-dari-putus-cinta) mungkin relate.
+Kalau kamu merasa kelelahan yang tidak terlihat tapi terus menumpuk, [emotional exhaustion: bukan sekadar capek, kamu kosong](/artikel/emotional-exhaustion-bukan-sekadar-capek-kamu-kosong) membahas kondisi itu lebih dalam. Dan kalau kamu pernah kehilangan teman karena hubungan yang dangkal, [friendship breakup lebih sakit dari putus cinta](/artikel/friendship-breakup-kenapa-kehilangan-teman-lebih-sakit-dari-putus) mungkin relate.
 
 Soft socializing bukan bukti Gen Z benci bertemu. Tapi kalau kamu terus menghindari tatap muka karena "capek", coba tanya: capek karena nongkrong, atau capek karena 7 jam scroll sebelumnya?
 

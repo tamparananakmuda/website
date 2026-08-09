@@ -75,7 +75,7 @@ APJII 2026 mencatat Gen Z (usia 13-28 tahun) sebagai kelompok pengguna AI terbes
 
 Yang mengejutkan: penetrasi internet Gen Z mencapai 89,02 persen menurut APJII. Mereka punya akses internet, tapi tidak mengakses AI. Punya koneksi, tapi tidak terhubung dengan teknologi yang katanya akan mengubah masa depan. Ini bukan masalah infrastruktur internet, ini masalah hambatan yang lebih spesifik.
 
-[81% enggan pakai AI](/artikel/81-persen-enggan-ai-boom-global-indonesia-mundur) sudah kami bahas sebelumnya. Tapi artikel itu membahas sikap. Data terbaru APJII 2026 menunjukkan masalahnya lebih fundamental dari sekadar sikap: banyak Gen Z tidak tahu AI ada, dan yang tahu, banyak yang tidak mampu mengaksesnya.
+[81% enggan pakai AI](/artikel/81-persen-enggan-pakai-ai-boom-global-tapi-indonesia-malah-mundur) sudah kami bahas sebelumnya. Tapi artikel itu membahas sikap. Data terbaru APJII 2026 menunjukkan masalahnya lebih fundamental dari sekadar sikap: banyak Gen Z tidak tahu AI ada, dan yang tahu, banyak yang tidak mampu mengaksesnya.
 
 ## Alasan Utama Non-adopsi
 
@@ -85,7 +85,7 @@ Tapi ada lapisan masalah yang lebih dalam. APJII juga mencatat 18,28 persen pend
 
 Hybrid.co.id yang melaporkan data APJII menemukan ketimpangan yang lebih spesifik. Gen Z yang tidak terkoneksi internet menyebut kendala daya beli sebagai hambatan utama: 52,5 persen tidak punya perangkat keras. Pulau Jawa mencatat penetrasi internet 85,95 persen, sementara Maluku dan Papua hanya 69,74 persen. Rumah tangga dengan pendapatan di atas Rp15 juta mencatat penetrasi 92,69 persen, jauh di atas rumah tangga berpendapatan rendah.
 
-AI divide di Indonesia bukan satu lapis menurut data APJII. 35,5 persen tidak tahu AI ada. 2 persen dari pengguna internet tidak punya perangkat, dan 34 persen dari yang tidak internet sama sekali juga tidak punya perangkat. 17,2 persen punya perangkat tapi kuota mahal. 8,1 persen punya semua tapi tidak tahu cara pakai. [AI tidak mengambil kerjamu](/artikel/ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), tapi AI juga tidak menjangkau kamu kalau kamu tidak punya akses.
+AI divide di Indonesia bukan satu lapis menurut data APJII. 35,5 persen tidak tahu AI ada. 2 persen dari pengguna internet tidak punya perangkat, dan 34 persen dari yang tidak internet sama sekali juga tidak punya perangkat. 17,2 persen punya perangkat tapi kuota mahal. 8,1 persen punya semua tapi tidak tahu cara pakai. [AI tidak mengambil kerjamu](/artikel/ai-nggak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu), tapi AI juga tidak menjangkau kamu kalau kamu tidak punya akses.
 
 ## Pakai untuk Hiburan, Bukan Produktivitas
 

@@ -194,9 +194,9 @@ Mungkin bukan kamu yang perlu berlari lebih cepat. Mungkin lintasannya yang perl
 
 ## Baca Juga
 
-- [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu)
+- [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu)
 - [Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah](/artikel/gig-economy-bukan-pilihan-jebakan-produktivitas-rendah)
-- [Quiet Quitting: Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati)
+- [Quiet Quitting: Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati)
 
 1. WHO (2019). *Burn-out an Occupational Phenomenon: ICD-11*.
 2. McKinsey Health Institute (2023). *Reframing Employee Health: Moving Beyond Burnout to Holistic Health*. Survey 30.000 karyawan di 30 negara.

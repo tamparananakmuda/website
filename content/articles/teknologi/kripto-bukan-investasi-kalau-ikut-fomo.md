@@ -104,7 +104,7 @@ Ketiga, diversifikasi. Jangan taruh semua modal di satu aset. Kalau kamu punya R
 
 Seperti yang kami bahas di artikel [passive income bukan tentang malas kerja](/artikel/passive-income-bukan-tentang-malas-kerja), membangun kekayaan butuh waktu dan kesabaran. Tidak ada jalan pintas yang tanpa risiko. Kripto mungkin terlihat seperti jalan pintas, tapi jalan pintas yang salah arah akan membawa kamu lebih jauh dari tujuan.
 
-Dan seperti yang kami tulis di [FIRE movement: matematika yang nggak cocok untuk Indonesia](/artikel/fire-movement-matematika-nggak-cocok-indonesia), strategi keuangan yang diimpor dari negara lain tidak selalu cocok dengan kondisi kita. Begitu juga dengan strategi kripto yang kamu lihat dari influencer luar negeri. Konteks ekonomi mereka berbeda, regulasi mereka berbeda, dan yang paling penting: kapasitas finansial mereka berbeda.
+Dan seperti yang kami tulis di [FIRE movement: matematika yang nggak cocok untuk Indonesia](/artikel/fire-movement-matematika-yang-nggak-cocok-untuk-indonesia), strategi keuangan yang diimpor dari negara lain tidak selalu cocok dengan kondisi kita. Begitu juga dengan strategi kripto yang kamu lihat dari influencer luar negeri. Konteks ekonomi mereka berbeda, regulasi mereka berbeda, dan yang paling penting: kapasitas finansial mereka berbeda.
 
 ## Investasi Dimulai dari Literasi, Bukan dari Deposit
 

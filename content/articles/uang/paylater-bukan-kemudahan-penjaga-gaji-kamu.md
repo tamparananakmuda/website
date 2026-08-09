@@ -125,6 +125,6 @@ Paylater bukan kemudahan. Paylater adalah sistem yang dirancang agar kamu terus 
 
 Kalau kamu tidak mengontrol paylater, paylater yang mengontrol gajimu.
 
-Untuk memahami lebih dalam soal keuangan generasi muda, baca juga artikel kami tentang [kenapa gaji tidak mau tumbuh untuk generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh).
+Untuk memahami lebih dalam soal keuangan generasi muda, baca juga artikel kami tentang [kenapa gaji tidak mau tumbuh untuk generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-nggak-mau-tumbuh).
 
 Kalau kamu tertarik dengan masalah utang gen z, baca juga [Doom Spending Bukan Self-Care, Itu Gejala Menyerah](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah).

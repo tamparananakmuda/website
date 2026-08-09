@@ -66,7 +66,7 @@ Topik yang paling banyak dibahas Gen Z dengan AI mencerminkan beban hidup yang n
 
 Yang lebih mengejutkan: 74,1 persen responden mengaku percakapan dengan AI pernah memengaruhi keputusan yang mereka ambil dalam hidup. Ini bukan tempat curhat biasa. Ini sudah jadi semacam konsultan hidup, meskipun tanpa kualifikasi profesional.
 
-Seperti yang kami bahas di artikel [TikTok bukan terapis bahaya self-diagnosis kesehatan mental](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental), ada risiko ketika kita mencari solusi masalah mental di tempat yang tidak dirancang untuk itu. AI chatbot tidak dilatih sebagai terapis. Respon yang diberikan bisa terdengar empatik, tapi tidak selalu akurat atau aman.
+Seperti yang kami bahas di artikel [TikTok bukan terapis bahaya self-diagnosis kesehatan mental](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata), ada risiko ketika kita mencari solusi masalah mental di tempat yang tidak dirancang untuk itu. AI chatbot tidak dilatih sebagai terapis. Respon yang diberikan bisa terdengar empatik, tapi tidak selalu akurat atau aman.
 
 ## Pasar yang Tumbuh Cepat
 
