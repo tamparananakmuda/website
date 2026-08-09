@@ -225,6 +225,17 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     },
   });
 
+  // Abort SSE stream on unmount to prevent server waste
+  const sseStreamingRef = useRef(false);
+  useEffect(() => { sseStreamingRef.current = sseStreaming; }, [sseStreaming]);
+  useEffect(() => {
+    return () => {
+      if (sseStreamingRef.current) {
+        abortStream();
+      }
+    };
+  }, [abortStream]);
+
   // Auto-scroll: follow streaming text growth
   const lastMessageContent = messages.length > 0 ? messages[messages.length - 1].content : '';
   useEffect(() => {
@@ -352,6 +363,10 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                 onClick={() => {
                   setMessages([]);
                   localStorage.removeItem('tami_conversation_history');
+                  // Generate new session ID for proactive engine
+                  const newSid = `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+                  localStorage.setItem('tami_session_id', newSid);
+                  sessionIdRef.current = newSid;
                   window.dispatchEvent(new Event('tami_history_updated'));
                 }}
                 title="Sesi Chat Baru"
@@ -368,6 +383,10 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                 onClick={() => {
                   setMessages([]);
                   localStorage.removeItem('tami_conversation_history');
+                  // Generate new session ID for proactive engine
+                  const newSid = `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+                  localStorage.setItem('tami_session_id', newSid);
+                  sessionIdRef.current = newSid;
                   window.dispatchEvent(new Event('tami_history_updated'));
                 }}
                 title="Hapus Obrolan"

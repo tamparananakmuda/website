@@ -41,6 +41,8 @@ export const IntelligenceChatInterface: React.FC = () => {
   const isExternalUpdate = useRef(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const messagesRef = useRef<Message[]>([]);
+  const activeSessionIdRef = useRef<string>('');
 
   // Load all sessions from localStorage on mount
   useEffect(() => {
@@ -148,8 +150,24 @@ export const IntelligenceChatInterface: React.FC = () => {
       const latest = localStorage.getItem('tami_conversation_history');
       if (latest) {
         try {
+          const parsedMsgs: Message[] = JSON.parse(latest);
           isExternalUpdate.current = true;
-          setMessages(JSON.parse(latest));
+          setMessages(parsedMsgs);
+          // Also update the active session's messages in sessions list
+          const currentSessionId = activeSessionIdRef.current;
+          if (currentSessionId) {
+            const savedSessions = localStorage.getItem('tami_chat_sessions');
+            if (savedSessions) {
+              const parsedSessions: ChatSession[] = JSON.parse(savedSessions);
+              const updated = parsedSessions.map(s =>
+                s.id === currentSessionId
+                  ? { ...s, messages: parsedMsgs.map(m => ({ id: m.id, role: m.role, content: m.content })), timestamp: Date.now() }
+                  : s
+              );
+              setSessions(updated);
+              localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
+            }
+          }
         } catch (err) {
           console.error('Failed to sync history from floating chat', err);
         }
@@ -172,14 +190,25 @@ export const IntelligenceChatInterface: React.FC = () => {
     }
   }, []);
 
+  // Keep refs in sync with state for use in callbacks
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
+  useEffect(() => { activeSessionIdRef.current = activeSessionId; }, [activeSessionId]);
+
+  // Strip cognitiveData from messages before saving to localStorage to prevent quota overflow
+  const stripCognitiveData = (msgs: Message[]): Message[] =>
+    msgs.map(m => ({ id: m.id, role: m.role, content: m.content }));
+
   // Sync current messages to active session and localStorage
-  const updateCurrentSessionMessages = (newMessages: Message[]) => {
-    setMessages(newMessages);
+  // NOTE: This function must NOT be called inside a setMessages updater.
+  // It should be called AFTER setMessages, as a separate effect or explicit call.
+  const syncToStorage = (newMessages: Message[]) => {
     if (!isLoaded) return;
 
-    // Also update legacy key for floating widget compatibility
+    // Save full messages (with cognitiveData) to conversation_history for floating chat
+    // But strip cognitiveData from sessions to prevent localStorage overflow
+    const strippedMessages = stripCognitiveData(newMessages);
+
     localStorage.setItem('tami_conversation_history', JSON.stringify(newMessages));
-    // Dispatch event so floating chat can sync (only if not from external update)
     if (!isExternalUpdate.current) {
       window.dispatchEvent(new Event('tami_history_updated'));
     }
@@ -187,10 +216,11 @@ export const IntelligenceChatInterface: React.FC = () => {
 
     if (newMessages.length === 0) return;
 
-    let targetId = activeSessionId;
+    let targetId = activeSessionIdRef.current;
     if (!targetId) {
       targetId = `session-${Date.now()}`;
       setActiveSessionId(targetId);
+      activeSessionIdRef.current = targetId;
     }
 
     const firstUserMsg = newMessages.find((m) => m.role === 'user')?.content || 'Percakapan TAMI';
@@ -201,27 +231,21 @@ export const IntelligenceChatInterface: React.FC = () => {
       let updated: ChatSession[];
       if (existingIdx >= 0) {
         updated = prevSessions.map((s, idx) =>
-          idx === existingIdx ? { ...s, messages: newMessages, title: updatedTitle, timestamp: Date.now() } : s
+          idx === existingIdx ? { ...s, messages: strippedMessages, title: updatedTitle, timestamp: Date.now() } : s
         );
       } else {
         const newSession: ChatSession = {
           id: targetId,
           title: updatedTitle,
           timestamp: Date.now(),
-          messages: newMessages,
+          messages: strippedMessages,
         };
         updated = [newSession, ...prevSessions];
       }
-      localStorage.setItem('tami_chat_sessions', JSON.stringify(updated));
-      // Limit to 20 sessions to prevent localStorage overflow
-      if (updated.length > 20) {
-        const trimmed = updated.slice(0, 20);
-        setSessions(trimmed);
-        localStorage.setItem('tami_chat_sessions', JSON.stringify(trimmed));
-      } else {
-        setSessions(updated);
-      }
-      return updated;
+      // Limit to 15 sessions to prevent localStorage overflow
+      const finalSessions = updated.length > 15 ? updated.slice(0, 15) : updated;
+      localStorage.setItem('tami_chat_sessions', JSON.stringify(finalSessions));
+      return finalSessions;
     });
   };
 
@@ -262,7 +286,7 @@ export const IntelligenceChatInterface: React.FC = () => {
       timersRef.current.forEach(clearTimeout);
       setProgressLog([]);
 
-      const id = `assistant-${Date.now()}`;
+      const id = `assistant-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
       assistantIdRef.current = id;
       streamedTextRef.current = '';
       const assistantMessage: Message = {
@@ -279,35 +303,25 @@ export const IntelligenceChatInterface: React.FC = () => {
           severityLevel: data.severityLevel,
         },
       };
-      setMessages((prev) => {
-        const updated = [...prev, assistantMessage];
-        updateCurrentSessionMessages(updated);
-        return updated;
-      });
+      setMessages((prev) => [...prev, assistantMessage]);
     },
     onToken: (token) => {
       streamedTextRef.current += token;
       const currentText = streamedTextRef.current;
       const id = assistantIdRef.current;
       if (id) {
-        setMessages((prev) => {
-          const updated = prev.map(m => m.id === id ? { ...m, content: currentText } : m);
-          updateCurrentSessionMessages(updated);
-          return updated;
-        });
+        setMessages((prev) => prev.map(m => m.id === id ? { ...m, content: currentText } : m));
       }
     },
     onComplete: (fullText) => {
       const id = assistantIdRef.current;
       if (id && fullText) {
-        setMessages((prev) => {
-          const updated = prev.map(m => m.id === id ? { ...m, content: fullText } : m);
-          updateCurrentSessionMessages(updated);
-          return updated;
-        });
+        setMessages((prev) => prev.map(m => m.id === id ? { ...m, content: fullText } : m));
       }
       assistantIdRef.current = null;
       streamedTextRef.current = '';
+      // Sync to storage after streaming completes (not inside setMessages updater)
+      setTimeout(() => syncToStorage(messagesRef.current), 0);
     },
     onError: (error) => {
       timersRef.current.forEach(clearTimeout);
@@ -321,11 +335,8 @@ export const IntelligenceChatInterface: React.FC = () => {
       } else {
         friendlyMsg = 'Maaf, TAMI lagi ada kendala teknis. Coba lagi ya.';
       }
-      setMessages((prev) => {
-        const updated = [...prev, { id: `error-${Date.now()}`, role: 'assistant' as const, content: friendlyMsg }];
-        updateCurrentSessionMessages(updated);
-        return updated;
-      });
+      setMessages((prev) => [...prev, { id: `error-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, role: 'assistant' as const, content: friendlyMsg }]);
+      setTimeout(() => syncToStorage(messagesRef.current), 0);
     },
   });
 
@@ -334,13 +345,14 @@ export const IntelligenceChatInterface: React.FC = () => {
     if (!input.trim() || isLoading || sseStreaming) return;
 
     const userMessage: Message = {
-      id: `user-${Date.now()}`,
+      id: `user-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
       role: 'user',
       content: input,
     };
 
     const nextMessages = [...messages, userMessage];
-    updateCurrentSessionMessages(nextMessages);
+    setMessages(nextMessages);
+    syncToStorage(nextMessages);
 
     const currentInput = input;
     setInput('');
@@ -385,11 +397,13 @@ export const IntelligenceChatInterface: React.FC = () => {
 
       const errorMsg = error instanceof Error ? error.message : 'Maaf, TAMI sedang mengalami kendala. Silakan coba lagi.';
       const errorMessage: Message = {
-        id: `error-${Date.now()}`,
+        id: `error-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
         role: 'assistant',
         content: errorMsg,
       };
-      updateCurrentSessionMessages([...nextMessages, errorMessage]);
+      const errorMessages = [...nextMessages, errorMessage];
+      setMessages(errorMessages);
+      syncToStorage(errorMessages);
     } finally {
       timers.forEach(clearTimeout);
       setIsLoading(false);
@@ -398,15 +412,24 @@ export const IntelligenceChatInterface: React.FC = () => {
 
   const startNewChat = () => {
     setActiveSessionId('');
+    activeSessionIdRef.current = '';
     setMessages([]);
+    messagesRef.current = [];
     localStorage.removeItem('tami_conversation_history');
+    // Generate new session ID for proactive engine
+    const newSid = `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    localStorage.setItem('tami_session_id', newSid);
     window.dispatchEvent(new Event('tami_history_updated'));
   };
 
   const switchSession = (session: ChatSession) => {
     setActiveSessionId(session.id);
+    activeSessionIdRef.current = session.id;
     setMessages(session.messages);
+    messagesRef.current = session.messages;
     localStorage.setItem('tami_conversation_history', JSON.stringify(session.messages));
+    // Sync tami_session_id for proactive engine
+    localStorage.setItem('tami_session_id', session.id);
     window.dispatchEvent(new Event('tami_history_updated'));
   };
 
