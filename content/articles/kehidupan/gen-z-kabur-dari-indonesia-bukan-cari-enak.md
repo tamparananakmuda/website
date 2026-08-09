@@ -7,8 +7,8 @@ author: "yovie-setiawan"
 status: "scheduled"
 publish_date: "2026-09-20T01:00:00.000Z"
 excerpt: "150.875 WNI pindah tiap tahun. 41% Gen Z pertimbangkan kabur. Gaji Rp3,3 juta vs Korea Rp23 juta. Bukan cari enak, sistem yang nggak beri alasan tinggal."
-seo_meta_title: "Gen Z Kabur dari Indonesia, Bukan Cari Enak"
-seo_meta_description: "150.875 WNI pindah tiap tahun. 41% Gen Z pertimbangkan kabur. Gaji Rp3,3 juta vs Korea Rp23 juta. Bukan cari enak, sistem yang nggak beri alasan tinggal."
+seo_meta_title: "41% Gen Z Ingin Kabur dari Indonesia, Bukan Cari Enak"
+seo_meta_description: "150.875 WNI pindah tiap tahun. Gaji Rp3,3 juta vs Korea Rp23 juta. Gen Z bukan kabur cari enak, sistem yang nggak beri alasan tinggal."
 seo_keywords: ["brain drain indonesia","gen z kerja luar negeri","kaburaja dulu","migrasi tenaga kerja indonesia","gaji indonesia vs luar negeri","talent diaspora indonesia","pekerja migran skilled"]
 og_headline: "41% Gen Z Ingin Kabur dari Indonesia"
 tags: ["brain drain","migrasi gen z","kerja luar negeri","talent diaspora","ekonomi indonesia"]
