@@ -37,7 +37,6 @@ export function FeatureImage({ src, alt, fallbackSrc }: FeatureImageProps) {
           src={imgSrc}
           alt={alt}
           fill
-          unoptimized
           priority
           loading="eager"
           className={`

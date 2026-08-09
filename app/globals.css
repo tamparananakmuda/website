@@ -152,7 +152,7 @@
   .brush-strike {
     position: relative;
     color: hsl(var(--muted-foreground));
-    opacity: 0.75;
+    opacity: 1;
   }
   .brush-strike::after {
     content: '';
