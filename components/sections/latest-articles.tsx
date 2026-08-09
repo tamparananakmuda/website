@@ -27,6 +27,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
             </p>
             <Link
               href="/tentang"
+              prefetch={false}
               className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
             >
               Kenali TAMPARAN ANAK MUDA
@@ -56,6 +57,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
           </div>
           <Link
             href="/artikel"
+            prefetch={false}
             className="hidden shrink-0 text-sm font-medium text-primary transition-opacity hover:opacity-70 sm:inline-flex sm:items-center sm:gap-2"
           >
             Lihat semua
@@ -70,6 +72,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
         <div className="mt-10 text-center sm:hidden">
           <Link
             href="/artikel"
+            prefetch={false}
             className="inline-flex items-center gap-2 text-sm font-medium text-primary"
           >
             Lihat semua

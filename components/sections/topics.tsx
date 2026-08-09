@@ -29,6 +29,7 @@ export function Topics({ categories }: TopicsProps) {
             <Link
               key={category.id}
               href={`/kategori/${category.slug}`}
+              prefetch={false}
               className="group relative flex flex-col bg-card p-6 transition-colors hover:bg-secondary md:p-8"
             >
               <div className="mb-6 flex items-center justify-between">

@@ -49,6 +49,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
           </div>
           <Link
             href="/seri"
+            prefetch={false}
             className="hidden shrink-0 text-sm font-medium text-primary transition-opacity hover:opacity-70 sm:inline-flex sm:items-center sm:gap-2"
           >
             Lihat semua
@@ -80,6 +81,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
               </div>
               <Link
                 href={`/seri/${s.seriesSlug}`}
+                prefetch={false}
                 className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
               >
                 Baca seri lengkap
@@ -94,6 +96,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                   <Link
                     key={post.id}
                     href={`/artikel/${post.slug}`}
+                    prefetch={false}
                     className="group flex w-[280px] shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-background transition-all duration-200 hover:border-primary/30 md:w-[320px]"
                   >
                     <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/30">
@@ -102,7 +105,6 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                           src={post.ogCardUrl || post.ogImageUrl || ''}
                           alt={post.title}
                           fill
-                          unoptimized
                           loading="lazy"
                           sizes="(max-width: 768px) 280px, 320px"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -191,6 +193,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
         <div className="mt-10 text-center sm:hidden">
           <Link
             href="/seri"
+            prefetch={false}
             className="inline-flex items-center gap-2 text-sm font-medium text-primary"
           >
             Lihat semua
