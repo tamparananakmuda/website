@@ -70,35 +70,35 @@ Deloitte 2026 menyurvei 22.500 Gen Z di 44 negara. Menurut survei tersebut, 58% 
 
 ## Kerja Hybrid Janji Manis yang Berbalik
 
-Kamu mungkin kenal scene ini. Jam 23:00, WA group kerja menyala. Atasan tag nama kamu. Slack notifikasi masuk beruntun. Zoom meeting dijadwalkan jam 07:30 besok. Notifikasi email masuk satu per satu. Kamu di rumah, tapi otakmu di kantor.
+Kamu mungkin kenal scene ini. Jam 23:00, WA group kerja menyala dan atasan tag nama kamu. Slack notifikasi masuk beruntun, Zoom meeting dijadwalkan jam 07:30 besok. Notifikasi email masuk satu per satu. Kamu di rumah, tapi otakmu di kantor.
 
 Hybrid work dijanjikan sebagai freedom. Bekerja dari mana saja, fleksibel, hemat waktu komuter. Realitasnya: rumah berubah jadi "kantor cabang" yang tutup jam never. Studi kualitatif Widyastuti et al. (2026) terhadap 20 Gen Z di Yogyakarta mencatat: digital work pressure sudah jadi "normalized strain", tekanan yang dianggap biasa karena semua orang mengalaminya. Constant connectivity mengaburkan batas kerja dan kehidupan pribadi sampai tidak ada lagi garis pemisah.
 
-Gen Z paling terpapar. Mereka generasi paling intensif digital di dunia kerja Indonesia. Tapi pertanyaannya: apakah ini cuma masalah adaptasi individu? Apakah Gen Z cuma "tidak kuat"?
+Gen Z paling terpapar karena mereka generasi paling intensif digital di dunia kerja Indonesia. Tapi pertanyaannya: apakah ini cuma masalah adaptasi individu? Apakah Gen Z cuma "tidak kuat"?
 
-## Technostress Bukan Kata Baru, Tapi Riset Baru Membuktikannya
+## Bukti Riset: Tekanan Digital Bukan Sekadar Mitos
 
-Technostress adalah tekanan psikologis yang muncul dari tuntutan teknologi terus-menerus dalam pekerjaan. Istilah ini bukan baru. Tapi riset 2026 baru membuktikan secara empiris: technostress langsung memprediksi keinginan resign pada Gen Z Indonesia.
+Tekanan psikologis dari tuntutan teknologi terus-menerus di pekerjaan punya nama: technostress. Konsep ini sudah lama dikenal, tapi penelitian 2026 baru mengukuhkan dampaknya secara empiris pada Gen Z Indonesia.
 
 Wijaya et al. (2026) dalam Journal of Economics and Management Vol 48 mensurvei 235 Gen Z karyawan hybrid work di Indonesia. Menggunakan PLS-SEM, penelitian ini mencatat: technostress berkorelasi positif dengan turnover intention. Semakin tinggi beban digital, semakin kuat keinginan pindah. Perceived disadvantages of flexible work arrangements, yaitu ketidakpuasan terhadap fleksibilitas yang justru jadi beban, juga positif berkorelasi dengan keinginan resign.
 
-Penelitian lain dari Semarang memperkuat. JMBE UNIKA meng survei 151 pekerja dan mencatat 66% perusahaan sedang switching ke digital transformation. Technostress memoderasi pengaruh technology mastery terhadap employee turnover. Artinya: meskipun kamu mahir teknologi, technostress tetap mendorong kamu untuk keluar.
+Penelitian lain dari Semarang memperkuat. JMBE UNIKA meng survei 151 pekerja dan mencatat 66% perusahaan sedang switching ke digitalisasi. Technostress memoderasi pengaruh technology mastery terhadap employee turnover. Artinya: meskipun kamu mahir teknologi, technostress tetap mendorong kamu untuk keluar.
 
 Lima dimensi technostress yang diidentifikasi dalam literatur: techno-overload (tuntutan kerja lebih cepat dan lebih banyak karena teknologi), techno-invasion (konektivitas konstan mengaburkan batas kerja-pribadi), techno-complexity (kompleksitas sistem yang sulit dipelajari), techno-insecurity (ketakutan digantikan teknologi), dan techno-uncertainty (perubahan teknologi terus-menerus). Di kerja hybrid, techno-overload dan techno-invasion paling dominan.
 
 ## Jalur Technostress ke Resign: Lewat Burnout
 
-Kandita et al. (2026) mensurvei Gen Z di Surabaya dan menemukan jalur yang lebih spesifik. Technostress tidak langsung bikin kamu resign. Technostress memicu burnout. Burnout mendorong turnover intention. Full mediation: burnout sepenuhnya menjelaskan bagaimana technostress berubah jadi keinginan keluar.
+Kandita et al. (2026) mensurvei Gen Z di Surabaya dan menemukan pola yang lebih spesifik. Beban digital tidak langsung bikin kamu keluar, tapi memicu kelelahan kronis yang kemudian mendorong turnover intention. Full mediation: burnout menjelaskan utuh bagaimana tekanan digital berubah jadi keinginan pindah.
 
-Artinya, ketika kamu merasa lelah setelah seharian pindah-pindah aplikasi, merespons pesan instan, ikut rapat virtual bertubi-tubi, itu bukan kelelahan biasa. Itu jalur menuju burnout. Dan burnout adalah jalur menuju resign.
+Artinya, ketika kamu merasa lelah setelah seharian pindah-pindah aplikasi, merespons pesan instan, ikut rapat virtual bertubi-tubi, itu bukan kelelahan biasa. Itu jalur menuju burnout, dan burnout adalah jalur menuju resign.
 
 Sinaga & Putri (2026) mengukur fenomena serupa terhadap 150 Gen Z di Indonesia. Hasilnya: jam kerja fleksibel dan WFH berpengaruh positif terhadap work-life balance, tapi kelelahan kerja memediasi pengaruh negatif. Fleksibilitas meningkatkan keseimbangan hidup hanya jika kelelahan dikelola dengan baik. Tanpa manajemen kelelahan, fleksibilitas justru memperparah kondisi.
 
-Systematic review Pooroe & Hasanati (2026) mensintesis 11 studi 2022-2026 dan menemukan pola konsisten: tekanan kerja digital memicu stres, burnout, dan kecemasan yang berkaitan dengan intensitas kerja dan ketidakpastian karier. Pekerja muda merespons melalui strategi koping multidimensional: problem-focused coping, emotion-focused coping, dukungan sosial, dan penguatan kompetensi digital. Tapi temuan kuncinya: kepemimpinan suportif, lingkungan kerja aman, dan nilai kolektivis terbukti memperkuat resiliensi. Ini bukan masalah individu. Ini masalah ekosistem.
+Systematic review Pooroe & Hasanati (2026) mensintesis 11 studi 2022-2026 dan menemukan pola konsisten: tekanan kerja digital memicu stres, burnout, dan kecemasan yang berkaitan dengan intensitas kerja dan ketidakpastian karier. Pekerja muda merespons melalui strategi koping multidimensional: problem-focused coping, emotion-focused coping, dukungan sosial, dan penguatan kompetensi digital. Tapi temuan kuncinya: kepemimpinan suportif, lingkungan kerja aman, dan nilai kolektivis terbukti memperkuat resiliensi. Ini bukan masalah individu, tapi masalah ekosistem.
 
-## Gen Z Indonesia Paling Intensif Digital di Dunia, Tanpa Pelatihan
+## Pakai AI Terbanyak, Dilatih Paling Sedikit
 
-Deloitte 2026 mencatat data yang mengejutkan: 87% Gen Z Indonesia memakai AI dalam pekerjaan sehari-hari, jauh di atas rata-rata global 74%. Menurut laporan yang sama, milenial Indonesia mencapai 88%. Tingkat adopsi digital pekerja muda Indonesia termasuk tertinggi di dunia.
+Data Deloitte 2026 mengejutkan: 87% pekerja muda Indonesia memakai AI untuk pekerjaan harian, jauh melebihi rata-rata global 74%. Menurut laporan yang sama, milenial Indonesia mencapai 88%. Tingkat adopsi digital pekerja muda Indonesia termasuk tertinggi di dunia.
 
 Tapi di balik angka itu, CNBC Indonesia melaporkan: Gen Z Indonesia menyoroti absennya pelatihan efektif dari perusahaan. Minimnya kesempatan pelatihan jadi hambatan utama penggunaan AI di tempat kerja. Aturan kepatuhan perusahaan juga membatasi penggunaan. Gen Z diberi teknologi baru tanpa dibekali kemampuan untuk mengelolanya.
 
@@ -108,19 +108,19 @@ Konsekuensinya pada karier: menurut Deloitte 2026, hanya 3% Gen Z Indonesia mena
 
 ## Indonesia Tidak Punya Right to Disconnect
 
-Berikut faktanya: Indonesia tidak punya right to disconnect. UU No. 13 Tahun 2003 tentang Ketenagakerjaan, sebagaimana diubah UU Cipta Kerja, tidak mengatur hak pekerja untuk tidak terhubung secara digital di luar jam kerja. Tidak ada pasal yang melindungi kamu dari konsekuensi memilih tidak membalas email, chat, atau panggilan rapat di luar jam operasional.
+Faktanya, UU No. 13 Tahun 2003 tentang Ketenagakerjaan, sebagaimana diubah UU Cipta Kerja, tidak mengatur hak pekerja untuk memutus koneksi digital di luar jam kerja. Tidak ada pasal yang melindungi kamu dari konsekuensi memilih tidak membalas email, chat, atau panggilan rapat di luar jam operasional.
 
 Penelitian Lex Renaissance dari UII menganalisis urgensi right to disconnect di Indonesia. Secara filosofis, gagasan ini sejalan dengan Pancasila dan UUD 1945 yang melindungi hak pekerja. Secara sosiologis, fenomena fleksibilitas kerja tanpa batas jam menyebabkan masalah kesehatan dan psikologis. Secara yuridis, ketentuan jam kerja untuk pekerja di era digital belum diatur komprehensif. Penelitian ini merekomendasikan revisi UU Ketenagakerjaan dengan menambahkan ketentuan right to disconnect.
 
 Studi Kompartemen UNIKA menggali pengalaman Gen Z karyawan startup Indonesia dan menemukan tension yang khas: Digital Autonomy vs Digital Gotong Royong. Gen Z ingin otonomi mengatur batas digital, tapi budaya kolektif Indonesia menormalkan ketersediaan terus-menerus. "Gotong royong" digital berarti kamu harus selalu responsif, selalu terhubung, selalu siap. Right to Disconnect dianggap egois. Padahal, tanpa boundary digital, fleksibilitas kerja berubah jadi eksploitasi yang dikemas sebagai budaya.
 
-Kerja hybrid tanpa right to disconnect menciptakan kondisi kerja tanpa batas. Lihat data: [Gen Z Lembur, 37% Resign: Work-Life Balance Bukan Permintaan, Syarat Bertahan](/artikel/wlb-bukan-permintaan-syarat-bertahan-gen-z). Bukan permintaan Gen Z yang berlebihan. Sistem yang tidak memberi batas.
+Kerja hybrid tanpa right to disconnect menciptakan kondisi kerja tanpa batas. Data artikel TAM mencatat: [Gen Z Lembur, 37% Resign: Work-Life Balance Bukan Permintaan, Syarat Bertahan](/artikel/wlb-bukan-permintaan-syarat-bertahan-gen-z). Bukan permintaan Gen Z yang berlebihan, tapi sistem yang tidak memberi batas.
 
-## Bukan Gen Z Lemah, Sistem Hybrid yang Didesain Tanpa Boundary
+## Salah Target: Menyalahkan Generasi Muda, Bukan Cara Kerjanya
 
-Inilah point yang perlu ditegaskan. Gen Z sering disalahkan "tidak kuat kerja", "gampang menyerah", "tidak bisa adaptasi". Tapi data dari 235 responden hybrid work Indonesia membuktikan: technostress langsung memprediksi keinginan resign. Ini bukan kelemahan mental. Ini reaksi rasional terhadap sistem yang tidak dirancang dengan boundary.
+Saya perhatikan di kantor saya, anak muda yang resign bukan yang paling malas. Justru yang paling aktif di Slack, paling cepat respons chat, paling sering ikut meeting di luar jam. Mereka yang paling terhubung, paling cepat habis. Gen Z sering disalahkan "tidak kuat kerja", "gampang menyerah", "tidak bisa adaptasi". Tapi data dari 235 responden hybrid work Indonesia membuktikan: technostress langsung memprediksi keinginan resign. Itu bukan kelemahan mental, tapi reaksi rasional terhadap sistem yang tidak dirancang dengan boundary.
 
-Always-on culture bukan pilihan individu. Itu buatan organisasi. Ketika perusahaan mengadopsi hybrid work tanpa kebijakan right to disconnect, tanpa batas komunikasi digital, tanpa pelatihan manajemen beban digital, mereka menciptakan lingkungan yang merusak. Lalu menyalahkan karyawan yang tidak tahan.
+Always-on culture bukan pilihan individu, tapi buatan organisasi. Ketika perusahaan mengadopsi hybrid work tanpa kebijakan right to disconnect, tanpa batas komunikasi digital, tanpa pelatihan manajemen beban digital, mereka menciptakan lingkungan yang merusak. Lalu menyalahkan karyawan yang tidak tahan.
 
 Indonesia butuh right to disconnect, bukan tips "kelola stres". Tips individu tidak menyelesaikan masalah struktural. Menurut Deloitte 2026, 58% Gen Z global mengalami digital fatigue. Di Indonesia, tidak ada perlindungan hukum untuk right to disconnect. Solusinya bukan "turn off notification". Solusinya adalah kebijakan yang mengakui: beban digital adalah risiko kerja yang perlu diatur.
 
@@ -128,7 +128,7 @@ Ini sejalan dengan pola yang sudah kita lihat di [Shift Shock Gen Z: Bukan Ekspe
 
 ## Kesimpulan
 
-Jadi bukan kamu yang lemah. Sistem hybrid yang kamu pakai setiap hari tidak dirancang untuk melindungi kamu. Riset 2026 terhadap 235 Gen Z Indonesia sudah membuktikan: technostress memprediksi resign, burnout menjembatani jalurnya, dan fleksibilitas tanpa boundary jadi beban. Yang belum ada adalah kebijakan yang mengakui hal itu. Right to disconnect bukan kemewahan. Di era kerja hybrid, itu jadi syarat dasar.
+Jadi bukan kamu yang lemah. Sistem hybrid yang kamu pakai setiap hari tidak dirancang untuk melindungi kamu. Riset 2026 terhadap 235 Gen Z Indonesia sudah membuktikan: technostress memprediksi resign, burnout menjembatani jalurnya, dan fleksibilitas tanpa boundary jadi beban. Yang belum ada adalah kebijakan yang mengakui hal itu. Right to disconnect bukan kemewahan, di era kerja hybrid itu jadi syarat dasar.
 
 Baca artikel terkait: [Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi Alasan Setia](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati).
 

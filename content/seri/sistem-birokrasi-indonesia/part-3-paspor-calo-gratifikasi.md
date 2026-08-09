@@ -78,7 +78,7 @@ KPK mengungkap bahwa titik rawan gratifikasi di layanan keimigrasian mencakup pe
 
 ## "Uang Klik": Tarif Tidak Resmi yang Punya Nama
 
-KPK membongkar sindikat di Kanim Ngurah Rai dan Kanim Denpasar. Juru Bicara KPK Budi Prasetyo menjelaskan: biro jasa yang menolak menyetor uang tambahan, proses pengajuannya "tidak diklik". Artinya dokumen mereka diam di sistem, tidak diproses, tanpa alasan yang jelas.
+Sindikat di Kanim Ngurah Rai dan Kanim Denpasar dibongkar KPK. Juru Bicara KPK Budi Prasetyo menjelaskan: biro jasa yang menolak menyetor uang tambahan, proses pengajuannya "tidak diklik". Artinya dokumen mereka diam di sistem, tidak diproses, tanpa alasan yang jelas.
 
 "Kalau biro jasa tidak membayarkan sejumlah setoran yang diminta tersebut, maka proses pengajuannya tidak diklik. Artinya ada tindakan-tindakan mempersulit yang dilakukan oleh oknum di keimigrasian," kata Budi, dikutip Antara News.
 
@@ -88,7 +88,7 @@ Tapi tangkap 8 orang, dan sistem tetap menghasilkan 8 orang berikutnya. Karena "
 
 ## Antri 6 Jam vs Bayar Calo: Pilihan yang Bukan Pilihan
 
-Paspor resmi: datang pagi, antri, tunggu. Kuota online terbatas, jadi banyak yang datang langsung dan antri dari pagi. 6 jam adalah estimasi conservatif. Bisa lebih kalau sistem error atau ada penambahan dokumen.
+Jalur resmi paspor: datang pagi, antri, tunggu. Kuota online terbatas, jadi banyak yang datang langsung dan antri dari pagi. 6 jam adalah estimasi conservatif. Bisa lebih kalau sistem error atau ada penambahan dokumen.
 
 Calo paspor: Rp500 ribu sampai Rp1 juta "biaya jasa". Selesai dalam 1-2 jam. Calo punya akses ke slot online yang sulit didapat oleh warga biasa. Calo punya relasi dengan petugas yang bisa mempercepat proses.
 
@@ -100,7 +100,7 @@ Ironisnya, Indonesia punya [visa digital nomad untuk bule yang mau kerja remote]
 
 ## Imigrasi yang Didesain untuk Disederhanakan, Tapi Dipersulit
 
-Sistem online ada. Imigrasi.go.id punya layanan pendaftaran paspor online. Tapi sering error, maintenance, atau kuota habis. Calo yang punya akses ke slot menjadi pemenang dalam sistem yang seharusnya setara.
+Layanan pendaftaran paspor online ada di Imigrasi.go.id. Tapi sering error, maintenance, atau kuota habis. Calo yang punya akses ke slot menjadi pemenang dalam sistem yang seharusnya setara.
 
 KPK menyebut titik rawan juga mencakup pos pemeriksaan di perbatasan dan praktik percepatan proses layanan. Artinya, bukan hanya di kantor imigrasi. Seluruh rantai layanan keimigrasian punya celah. Dan celah itu tidak tertutup dengan digitalisasi, karena digitalisasi yang error justru menciptakan celah baru.
 

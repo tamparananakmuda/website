@@ -68,15 +68,15 @@ Dia bercerita tentang pengalamannya saat menjabat Menteri ATR/BPN. Pelayanan pen
 
 ## Konteks
 
-Pungutan Liar (pungli) adalah biaya tidak resmi yang tidak ada di tarif resmi, tapi ada di setiap urusan. "Uang lancar" supaya proses cepat. "Uang klik" supaya dokumen diproses. "Uang nonteknis" supaya sertifikat terbit. Nama berbeda, mekanisme sama: bayar di luar tarif resmi supaya sistem berjalan.
+Pungutan Liar (pungli) adalah biaya tidak resmi yang tidak ada di tarif resmi, tapi ada di setiap urusan. "Uang lancar" supaya proses cepat, "uang klik" supaya dokumen diproses, "uang nonteknis" supaya sertifikat terbit. Nama berbeda, mekanisme sama: bayar di luar tarif resmi supaya sistem berjalan.
 
-Dan yang jarang dibahas: pungli tidak merata. Pungli paling parah di layanan yang sifatnya unik atau monopoli negara. SHM hanya bisa urus di BPN. Sertifikat kerja hanya bisa urus di Kemenaker. Paspor hanya bisa urus di Imigrasi. Tidak ada kompetisi. Tidak ada alternatif. Dan ketika tidak ada alternatif, petugas punya power yang tidak terbatas untuk memperlambat atau mempercepat. Power itu yang dimonetisasi.
+Dan yang jarang dibahas: pungli tidak merata. Pungli paling parah di layanan yang sifatnya unik atau monopoli negara. SHM hanya bisa urus di BPN, sertifikat kerja hanya bisa urus di Kemenaker, paspor hanya bisa urus di Imigrasi. Tidak ada kompetisi, tidak ada alternatif. Dan ketika tidak ada alternatif, petugas punya power yang tidak terbatas untuk memperlambat atau mempercepat. Power itu yang dimonetisasi.
 
-Satgas Saber Pungli ada. KPK ada. Tapi pungli tetap jalan. Karena pungli bukan penyimpangan dari sistem. Pungli adalah sistem yang tidak dibiayai dengan benar, mencari cara lain untuk biayai dirinya sendiri. Dan cara itu dibebankan ke kamu. Setiap kali kamu urus SHM, sertifikat kerja, paspor, atau dokumen apa pun yang hanya negara bisa terbitkan, kamu berpotensi menghadapi pungli. Bukan karena kamu memilihnya. Tapi karena sistem tidak memberi alternatif yang bersih.
+Satgas Saber Pungli ada, KPK ada, tapi pungli tetap jalan. Karena pungli bukan penyimpangan dari sistem, tapi sistem yang tidak dibiayai dengan benar, mencari cara lain untuk biayai dirinya sendiri. Dan cara itu dibebankan ke kamu. Setiap kali kamu urus SHM, sertifikat kerja, paspor, atau dokumen apa pun yang hanya negara bisa terbitkan, kamu berpotensi menghadapi pungli. Bukan karena kamu memilihnya, tapi karena sistem tidak memberi alternatif yang bersih.
 
 ## Tarif Resmi vs Tarif Nyata: Selisih 200x
 
-Kompas melaporkan cerita Menko Polhukam Hadi Tjahjanto: SHM tarif resmi Rp50 ribu, kenyataan di lapangan Rp1 juta sampai Rp10 juta. "Sesuai dengan aturan, hanya 50.000 rupiah. Namun apa yang terjadi di lapangan karena sudah melalui aturan tadi dan ada juga yang menggunakan kesempatan itu, ada yang 3 juta, ada yang 10 juta, ada yang mungkin paling rendah 1 juta."
+Menko Polhukam Hadi Tjahjanto bercerita ke Kompas: SHM tarif resmi Rp50 ribu, kenyataan di lapangan Rp1 juta sampai Rp10 juta. "Sesuai dengan aturan, hanya 50.000 rupiah. Namun apa yang terjadi di lapangan karena sudah melalui aturan tadi dan ada juga yang menggunakan kesempatan itu, ada yang 3 juta, ada yang 10 juta, ada yang mungkin paling rendah 1 juta."
 
 KPK membongkar pemerasan di imigrasi Bali: Rp100 ribu sampai Rp2,5 juta per dokumen. "Uang klik" yang harus dibayar biro jasa supaya petugas mau memproses.
 
@@ -100,7 +100,7 @@ Yang lebih mencengangkan: uang yang dipungut tidak semuanya masuk ke saku pribad
 
 Adi Wijaya, saksi yang menjabat Kepala Seksi Pengawasan periode 2019-2021, mengaku menerima Rp70 juta sampai Rp100 juta. Menurutnya, pihak PJK3 menganggap setoran tersebut sebagai "kewajiban" tidak tertulis. "Bahasa pihak PJK3 kepada saya, (pemberian) ini sudah biasa," kata Adi di sidang.
 
-IDN Times melaporkan data IMGR 2027: 41% responden merasa netral saat menggunakan jalur alternatif. Hanya 2% yang menyatakan penyesalan. Pungli tidak dianggap korupsi oleh masyarakat. Dianggap "biaya administrasi tidak resmi". Bagian dari realitas.
+IDN Times melaporkan data IMGR 2027: 41% responden merasa netral saat menggunakan jalur alternatif, hanya 2% yang menyatakan penyesalan. Pungli tidak dianggap korupsi oleh masyarakat, dianggap "biaya administrasi tidak resmi", bagian dari realitas.
 
 Gen Z yang pertama kali urus dokumen: kaget saat diminta "uang lancar". Lalu terbiasa. Lalu ikut sistem. Karena selama semua orang di sekitar mereka melakukan hal yang sama, menolak terasa lebih aneh daripada ikut.
 
@@ -112,7 +112,7 @@ Pola ini sama dengan [asuransi swasta yang didesain menang dari kamu](/artikel/a
 
 Pungli bukan penyimpangan dari sistem. Pungli ADALAH sistem. Sistem yang tidak dibiayai dengan benar akan mencari cara lain untuk biayai dirinya sendiri. Dan cara itu dibebankan ke kamu.
 
-KPK tangkap oknum. Satgas Saber Pungli razia. Tapi selama anggaran operasional kantor tidak cukup untuk beli tinta printer, pungli akan tetap ada. Tangkap oknumnya, sistem tetap menghasilkan oknum berikutnya. Karena masalahnya bukan oknum. Masalahnya adalah sistem yang tidak dibiayai, tidak transparan, dan tidak akuntabel.
+KPK tangkap oknum, Satgas Saber Pungli razia, tapi selama anggaran operasional kantor tidak cukup untuk beli tinta printer, pungli akan tetap ada. Tangkap oknumnya, sistem tetap menghasilkan oknum berikutnya. Karena masalahnya bukan oknum. Masalahnya adalah sistem yang tidak dibiayai, tidak transparan, dan tidak akuntabel.
 
 Dan ada pertanyaan yang tidak nyaman: kalau pungli sebagian dipakai untuk biaya operasional kantor (blangko, tinta, honorer), berarti pungli sebagian adalah subsidi untuk anggaran yang tidak cukup. Berarti pemerintah tahu anggaran tidak cukup, tapi tidak menambah. Berarti pungli bukan kebocoran, tapi kompensasi yang tidak diakui. Dan kompensasi itu dibebankan ke warga, bukan ke negara.
 

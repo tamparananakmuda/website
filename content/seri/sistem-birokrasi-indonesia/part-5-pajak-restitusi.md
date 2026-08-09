@@ -79,7 +79,7 @@ Coretax, sistem pajak baru yang diluncurkan 2025, janji lebih cepat. Tapi transi
 
 ## PPh 21: Dipotong Duluan, Dipahami Belakangan
 
-Gen Z kenal pajak dari slip gaji yang sudah dipotong, bukan dari edukasi. Honor panitia kampus dipotong PPh 21. Freelance dipotong PPh 21. Part-time dipotong PPh 21. Tapi tidak ada yang menjelaskan: ini potongan untuk apa, berapa tarifnya, dan apakah kamu bisa klaim balik.
+Gen Z kenal pajak dari slip gaji yang sudah dipotong, bukan dari edukasi. Honor panitia kampus, freelance, part-time, semua dipotong PPh 21. Tapi tidak ada yang menjelaskan: ini potongan untuk apa, berapa tarifnya, dan apakah kamu bisa klaim balik.
 
 DJP menjelaskan bahwa sejak Januari 2024, TER dikenakan bagi pegawai tetap. TER dihitung berdasarkan penghasilan bruto setiap bulan. Tapi saat ada THR atau bonus, penghasilan bulanan naik, dan potongan TER juga naik. Hasilnya: bisa terjadi "lebih potong" di bulan tertentu.
 
@@ -91,7 +91,7 @@ DJP mengumumkan kebijakan baru Mei 2023: percepatan pengembalian kelebihan pajak
 
 Sebelumnya, proses restitusi bisa mencapai 12 bulan melalui pemeriksaan. 12 bulan. Setahun untuk mengembalikan uang yang seharusnya milik kamu. Dan selama setahun itu, sistem pakai uangmu tanpa bunga.
 
-Coretax, sistem baru 2025, mendukung pengajuan restitusi secara online. Tapi Coretax juga punya masalah transisi. DJP sendiri menyediakan panduan panjang untuk pengembalian kelebihan pembayaran pajak via Coretax. 6 jenis permohonan berbeda. Bukan proses 1 klik. Bukan proses otomatis seperti pemotongan.
+Coretax, sistem baru 2025, mendukung pengajuan restitusi secara online. Tapi Coretax juga punya masalah transisi. DJP sendiri menyediakan panduan panjang untuk pengembalian kelebihan pembayaran pajak via Coretax. 6 jenis permohonan berbeda, bukan proses 1 klik, dan tidak otomatis seperti pemotongan.
 
 Dan ada syarat yang tidak semua Gen Z tahu: restitusi cepat 15 hari hanya berlaku untuk lebih bayar maksimal Rp100 juta. Kalau lebih bayar di atas Rp100 juta, prosesnya tetap melalui pemeriksaan yang bisa berbulan-bulan. Jadi percepatan ini hanya untuk kasus "kecil". Untuk kasus besar, sistem tetap lambat.
 
@@ -99,9 +99,9 @@ Gue ingat pertama kali lihat slip gaji full-time. Potongan PPh 21 ada di sana, a
 
 ## Pajak yang Tidak Transparan untuk Gen Z
 
-PPh 21 dipotong otomatis, tapi SPT Tahunan adalah tugas individu. Banyak Gen Z tidak lapor SPT karena merasa "sudah selesai" saat dipotong. Mereka tidak tahu bahwa kewajiban administratif masih ada. Konsekuensinya: denda, tidak bisa urus dokumen, blocked dari layanan tertentu.
+Potongan PPh 21 terjadi otomatis, tapi SPT Tahunan adalah tugas individu. Banyak Gen Z tidak lapor SPT karena merasa "sudah selesai" saat dipotong. Mereka tidak tahu bahwa kewajiban administratif masih ada. Konsekuensinya: denda, tidak bisa urus dokumen, blocked dari layanan tertentu.
 
-[Gen Z sudah tahu pajak makan gaji mereka](/artikel/pajak-gen-z-bukan-pph-21-ppn-11-persen-yang-makan-gaji). PPh 21 dipotong, PPN 11% dibayar setiap belanja. Tapi restitusi? Itu kata yang asing. Dan dengan [47% Gen Z hidup gaji ke gaji tanpa sisa](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa), setiap rupiah yang tertahan di sistem adalah rupiah yang tidak bisa dipakai untuk makan. Sistem tidak peduli. Sistem ambil dulu, kembalikan nanti. Kalau kamu tidak ajukan, sistem simpan.
+[Gen Z sudah tahu pajak makan gaji mereka](/artikel/pajak-gen-z-bukan-pph-21-ppn-11-persen-yang-makan-gaji). PPh 21 dipotong, PPN 11% dibayar setiap belanja. Tapi restitusi? Itu kata yang asing. Dan dengan [47% Gen Z hidup gaji ke gaji tanpa sisa](/artikel/47-persen-gen-z-hidup-gaji-ke-gaji-tidak-ada-sisa), setiap rupiah yang tertahan di sistem adalah rupiah yang tidak bisa dipakai untuk makan. Sistem tidak peduli, sistem ambil dulu dan kembalikan nanti. Kalau kamu tidak ajukan, sistem simpan.
 
 Sistem pajak Indonesia mengambil duluan, menjelaskan belakangan. Potongan ada di slip gaji tanpa penjelasan. SPT Tahunan wajib tapi tidak diajarkan di sekolah. Restitusi berhak diajukan tapi tidak diinformasikan. Coretax janji lebih mudah tapi transisi tidak mulus.
 

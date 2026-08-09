@@ -66,8 +66,8 @@ export function SiteHeader() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
-            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-6 pr-3.5 shadow-xl backdrop-blur-md translate-z-0 transition-[max-width,padding] duration-300 ease-out',
-            isCompact ? 'max-w-2xl py-3' : 'max-w-7xl py-4.5 md:py-5'
+            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-6 pr-3.5 shadow-xl backdrop-blur-md translate-z-0 transition-[padding] duration-300 ease-out',
+            isCompact ? 'py-3' : 'max-w-7xl py-4.5 md:py-5'
           )}
         >
           <Link
