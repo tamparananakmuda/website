@@ -16,7 +16,7 @@
   color: var(--tw-prose-body);
   font-size: 1.0625rem;
   line-height: 1.75;
-  max-width: 65ch;
+  max-width: 72ch;
 }
 .prose p { margin-top: 1.25em; margin-bottom: 1.25em; }
 .prose h1 { font-size: 2em; font-weight: 700; margin-top: 0; margin-bottom: 0.8em; line-height: 1.15; color: var(--tw-prose-headings); font-family: var(--font-display); }
