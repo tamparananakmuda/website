@@ -23,8 +23,8 @@ tags:
 ogHeadline: 'Jadi influencer bukan bebas, itu jebakan baru'
 seoMetaTitle: 'Creator Economy Indonesia $1.2B: Ilusi Kemerdekaan | TAM'
 seoMetaDescription: >-
-  Creator economy Indonesia $1.2 miliar, 3.5 juta influencer. MCN ambil 30-50%
-  fee. Nano influencer dibayar Rp200K. Kamu bisa jadi creator, tapi tidak bebas.
+  Creator economy Indonesia $1. Sistem yang nggak beri alasan, bukan kamu yang
+  salah.
 seoKeywords:
   - creator economy Indonesia
   - influencer pricing Indonesia
@@ -34,19 +34,20 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://stateglobe.com/indonesia-creator-economy-2026/'
-    label: 'Stateglobe - Indonesia creator economy 2026'
+    label: Stateglobe - Indonesia creator economy 2026
   - type: link
-    url: 'https://www.anymindgroup.com/press-releases/2026/01/indonesia-influencer-marketing-benchmark-report/'
-    label: 'AnyMind Group - Indonesia influencer marketing benchmark 2026'
+    url: >-
+      https://www.anymindgroup.com/press-releases/2026/01/indonesia-influencer-marketing-benchmark-report/
+    label: AnyMind Group - Indonesia influencer marketing benchmark 2026
   - type: link
     url: 'https://contentgrip.com/en/indonesia-influencer-marketing/'
-    label: 'ContentGrip - Indonesia influencer marketing 2026'
+    label: ContentGrip - Indonesia influencer marketing 2026
   - type: link
     url: 'https://restofworld.org/2026/indonesia-creators-facebook/'
-    label: 'Rest of World - Indonesia Facebook monetization 2026'
+    label: Rest of World - Indonesia Facebook monetization 2026
   - type: link
     url: 'https://indopremier.com/mcn-indonesia/'
-    label: 'IndoPremier - MCN Indonesia business model'
+    label: IndoPremier - MCN Indonesia business model
 featured: false
 humanSignature: true
 factCheckStatus: verified

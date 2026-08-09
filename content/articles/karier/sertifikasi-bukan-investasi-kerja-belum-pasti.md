@@ -1,88 +1,110 @@
 ---
-title: "Sertifikasi Bukan Investasi, Bayar Jutaan untuk Kerja Belum Pasti"
-slug: "sertifikasi-bukan-investasi-kerja-belum-pasti"
-excerpt: "Gen Z bayar jutaan untuk sertifikasi PMP, AWS, Google, IELTS. Tapi perusahaan tetap cari pengalaman, bukan sertifikat."
-publishedAt: "2026-09-14 01:00:00+00"
-status: "scheduled"
-category: "karier"
+title: 'Sertifikasi Bukan Investasi, Bayar Jutaan untuk Kerja Belum Pasti'
+slug: sertifikasi-bukan-investasi-kerja-belum-pasti
+excerpt: >-
+  Gen Z bayar jutaan untuk sertifikasi PMP, AWS, Google, IELTS. Tapi perusahaan
+  tetap cari pengalaman, bukan sertifikat.
+publishedAt: '2026-09-14 01:00:00+00'
+status: scheduled
+category: karier
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags:
-  - "sertifikasi"
-  - "pengangguran"
-  - "karier"
-  - "credential-inflation"
-  - "gen-z"
-  - "upskill"
-  - "bnsp"
-ogHeadline: "Sertifikat jutaan nggak jamin kamu diterima kerja"
-seoMetaTitle: "Sertifikasi Bukan Investasi, Bayar Jutaan untuk Kerja Belum Pasti"
-seoMetaDescription: "Gen Z bayar jutaan untuk sertifikasi PMP, AWS, Google, IELTS. Tapi 1,03 juta sarjana menganggur. Perusahaan tetap cari pengalaman, bukan sertifikat."
+  - sertifikasi
+  - pengangguran
+  - karier
+  - credential-inflation
+  - gen-z
+  - upskill
+  - bnsp
+ogHeadline: Sertifikat jutaan nggak jamin kamu diterima kerja
+seoMetaTitle: Sertifikat jutaan nggak jamin kamu diterima kerja | TAM
+seoMetaDescription: >-
+  Gen Z bayar jutaan untuk sertifikasi PMP, AWS, Google, IELTS. Tapi 1,03 juta
+  sarjana menganggur. Perusahaan tetap cari pengalaman, bukan sertifikat.
 seoKeywords:
-  - "sertifikasi profesi"
-  - "biaya sertifikasi BNSP"
-  - "sertifikasi vs pengalaman kerja"
-  - "sertifikasi PMP biaya"
-  - "sertifikasi AWS harga"
-  - "IELTS biaya Indonesia"
-  - "sertifikat tidak menjamin kerja"
-  - "upskill gen z"
-  - "credential inflation Indonesia"
-  - "industri sertifikasi"
+  - sertifikasi profesi
+  - biaya sertifikasi BNSP
+  - sertifikasi vs pengalaman kerja
+  - sertifikasi PMP biaya
+  - sertifikasi AWS harga
+  - IELTS biaya Indonesia
+  - sertifikat tidak menjamin kerja
+  - upskill gen z
+  - credential inflation Indonesia
+  - industri sertifikasi
 sourceReferences:
   - type: link
-    url: "https://www.kompas.id/artikel/kaum-muda-sarjana-merana-tak-bekerja"
-    label: "Kompas: Kaum muda sarjana merana tak bekerja"
+    url: 'https://www.kompas.id/artikel/kaum-muda-sarjana-merana-tak-bekerja'
+    label: 'Kompas: Kaum muda sarjana merana tak bekerja'
   - type: link
-    url: "https://www.kompas.id/artikel/mengapa-ada-lebih-dari-sejuta-sarjana-yang-menganggur"
-    label: "Kompas: Mengapa ada lebih dari sejuta sarjana menganggur"
+    url: >-
+      https://www.kompas.id/artikel/mengapa-ada-lebih-dari-sejuta-sarjana-yang-menganggur
+    label: 'Kompas: Mengapa ada lebih dari sejuta sarjana menganggur'
   - type: link
-    url: "https://www.cnbcindonesia.com/opini/20260609092248-14-741271/ketika-sarjana-menjadi-syarat-untuk-pekerjaan-lulusan-sma"
-    label: "CNBC Indonesia: Ketika sarjana menjadi syarat untuk pekerjaan lulusan SMA"
+    url: >-
+      https://www.cnbcindonesia.com/opini/20260609092248-14-741271/ketika-sarjana-menjadi-syarat-untuk-pekerjaan-lulusan-sma
+    label: 'CNBC Indonesia: Ketika sarjana menjadi syarat untuk pekerjaan lulusan SMA'
   - type: link
-    url: "https://www.akses.co.id/lulusan-baru-kesulitan-syarat-pengalaman"
-    label: "Akses.co.id: Lulusan baru kesulitan syarat pengalaman"
+    url: 'https://www.akses.co.id/lulusan-baru-kesulitan-syarat-pengalaman'
+    label: 'Akses.co.id: Lulusan baru kesulitan syarat pengalaman'
   - type: link
-    url: "https://infopendidikan.bic.id/pengangguran-terdidik-2025-jebakan-pengalaman-skill-mismatch/"
-    label: "BIC: Pengangguran terdidik 2025 - jebakan pengalaman & skill mismatch"
+    url: >-
+      https://infopendidikan.bic.id/pengangguran-terdidik-2025-jebakan-pengalaman-skill-mismatch/
+    label: 'BIC: Pengangguran terdidik 2025 - jebakan pengalaman & skill mismatch'
   - type: link
-    url: "https://lifestyle.kompas.com/read/2026/06/19/130100720/jangan-asal-ambil-sertifikasi-fresh-graduate-perlu-tentukan-tujuan-karier"
-    label: "Kompas Lifestyle: Jangan asal ambil sertifikasi, fresh graduate perlu tentukan tujuan karier"
+    url: >-
+      https://lifestyle.kompas.com/read/2026/06/19/130100720/jangan-asal-ambil-sertifikasi-fresh-graduate-perlu-tentukan-tujuan-karier
+    label: >-
+      Kompas Lifestyle: Jangan asal ambil sertifikasi, fresh graduate perlu
+      tentukan tujuan karier
   - type: link
-    url: "https://www.bitvonline.com/nasional/37453/sarjana-kian-sulit-dapat-kerja-sertifikasi-keahlian-jadi-kunci-baru-di-dunia-profesional/"
-    label: "Bitvonline: Sarjana kian sulit dapat kerja, sertifikasi keahlian jadi kunci baru"
+    url: >-
+      https://www.bitvonline.com/nasional/37453/sarjana-kian-sulit-dapat-kerja-sertifikasi-keahlian-jadi-kunci-baru-di-dunia-profesional/
+    label: >-
+      Bitvonline: Sarjana kian sulit dapat kerja, sertifikasi keahlian jadi
+      kunci baru
   - type: link
-    url: "https://aws.amazon.com/id/certification/faqs/"
-    label: "AWS: Certification FAQ - biaya resmi"
+    url: 'https://aws.amazon.com/id/certification/faqs/'
+    label: 'AWS: Certification FAQ - biaya resmi'
   - type: link
-    url: "https://adikristanto.net/analisis-biaya-sertifikasi-pmp/"
-    label: "Adikristanto: Analisis biaya sertifikasi PMP"
+    url: 'https://adikristanto.net/analisis-biaya-sertifikasi-pmp/'
+    label: 'Adikristanto: Analisis biaya sertifikasi PMP'
   - type: link
-    url: "https://dibimbing.id/business/blog/detail/biaya-sertifikasi-bnsp"
-    label: "Dibimbing: Biaya sertifikasi BNSP"
+    url: 'https://dibimbing.id/business/blog/detail/biaya-sertifikasi-bnsp'
+    label: 'Dibimbing: Biaya sertifikasi BNSP'
   - type: link
-    url: "https://www.fortuneidn.com/business/standar-global-kian-ketat-industri-sertifikasi-kian-prospektif-00-4vfn9-jczl68"
-    label: "FortuneIDN: Standar global kian ketat, industri sertifikasi kian prospektif"
+    url: >-
+      https://www.fortuneidn.com/business/standar-global-kian-ketat-industri-sertifikasi-kian-prospektif-00-4vfn9-jczl68
+    label: >-
+      FortuneIDN: Standar global kian ketat, industri sertifikasi kian
+      prospektif
   - type: link
-    url: "https://www.icanenglish.net/news/biaya-tes-ielts/"
-    label: "IcanEnglish: Biaya tes IELTS 2026"
+    url: 'https://www.icanenglish.net/news/biaya-tes-ielts/'
+    label: 'IcanEnglish: Biaya tes IELTS 2026'
   - type: link
-    url: "https://money.kompas.com/read/2026/08/08/124000826/paradoks-sarjana--mengapa-grafik-pengangguran-terdidik-terus-naik-"
-    label: "Kompas Money: Paradoks sarjana - mengapa grafik pengangguran terdidik terus naik"
+    url: >-
+      https://money.kompas.com/read/2026/08/08/124000826/paradoks-sarjana--mengapa-grafik-pengangguran-terdidik-terus-naik-
+    label: >-
+      Kompas Money: Paradoks sarjana - mengapa grafik pengangguran terdidik
+      terus naik
   - type: link
-    url: "https://www.cnbcindonesia.com/news/20260806141512-4-757138/pengangguran-ri-terbanyak-lulusan-sma-tapi-porsi-sarjana-terus-naik"
-    label: "CNBC Indonesia: Pengangguran RI terbanyak lulusan SMA, tapi porsi sarjana terus naik"
+    url: >-
+      https://www.cnbcindonesia.com/news/20260806141512-4-757138/pengangguran-ri-terbanyak-lulusan-sma-tapi-porsi-sarjana-terus-naik
+    label: >-
+      CNBC Indonesia: Pengangguran RI terbanyak lulusan SMA, tapi porsi sarjana
+      terus naik
   - type: link
-    url: "https://talentap.id/google-data-analytics-certificate-apakah-worth-it/"
-    label: "Talentap: Google Data Analytics Certificate - apakah worth it?"
+    url: 'https://talentap.id/google-data-analytics-certificate-apakah-worth-it/'
+    label: 'Talentap: Google Data Analytics Certificate - apakah worth it?'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

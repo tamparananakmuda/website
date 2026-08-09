@@ -19,8 +19,8 @@ tags:
   - media-sosial
   - tiktok-indonesia
   - misinformasi
-ogHeadline: 'Algoritma TikTok jadi editor utama beritamu'
-seoMetaTitle: 'Algoritma TikTok Jadi Editor Utama Berita Indonesia | TAM'
+ogHeadline: Algoritma TikTok jadi editor utama beritamu
+seoMetaTitle: Algoritma TikTok Jadi Editor Utama Berita Indonesia | TAM
 seoMetaDescription: >-
   TikTok 112 juta pengguna Indonesia. Algoritma pilih apa yang kamu lihat, bukan
   editor. Filter bubble, echo chamber, platform asing kontrol informasi publik.
@@ -34,18 +34,20 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-52'
-    label: 'ISEAS Perspective 2025/52 - TikTok Heating in Indonesia'
+    label: ISEAS Perspective 2025/52 - TikTok Heating in Indonesia
   - type: link
     url: 'https://www.voanews.com/a/tiktok-political-content-indonesia/7898901.html'
-    label: 'VOA News - TikTok Political Content Indonesia 2024'
+    label: VOA News - TikTok Political Content Indonesia 2024
   - type: link
     url: 'https://link.springer.com/article/10.1007/s44189-025-00045-6'
-    label: 'Springer Nature 2025 - TikTok Algorithm and Political Content Indonesia'
+    label: Springer Nature 2025 - TikTok Algorithm and Political Content Indonesia
   - type: link
-    url: 'https://www.kompas.id/artikel/bagaimana-cara-mengenali-buzzer-di-era-informasi-yang-makin-blur'
-    label: 'Kompas - Bagaimana Mengenali Buzzer di Era AI 2025'
+    url: >-
+      https://www.kompas.id/artikel/bagaimana-cara-mengenali-buzzer-di-era-informasi-yang-makin-blur
+    label: Kompas - Bagaimana Mengenali Buzzer di Era AI 2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** Media adopsi clickbait karena marah = engagement = iklan. 80% iklan ke Google/Meta, 1,200 jurnalis PHK. Baca [part 2: Ekonomi Klik](/artikel/sistem-media-indonesia-part-2-ekonomi-klik-marah-engagement-iklan)

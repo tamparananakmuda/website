@@ -33,19 +33,24 @@ seoKeywords:
   - AJI Indonesia
 sourceReferences:
   - type: link
-    url: 'https://kumparan.com/kumparannews/dewan-pers-kerja-pers-beda-dengan-influencer-dan-youtuber-pers-ada-kode-etik-23r13xD1a6y'
+    url: >-
+      https://kumparan.com/kumparannews/dewan-pers-kerja-pers-beda-dengan-influencer-dan-youtuber-pers-ada-kode-etik-23r13xD1a6y
     label: 'Kumparan - Dewan Pers: Kerja Pers Beda dengan Influencer 2024'
   - type: link
-    url: 'https://www.beritasatu.com/nasional/2888252/stop-bayar-influencer-aji-desak-pemerintah-selamatkan-media'
+    url: >-
+      https://www.beritasatu.com/nasional/2888252/stop-bayar-influencer-aji-desak-pemerintah-selamatkan-media
     label: 'Beritasatu - AJI: Stop Bayar Influencer 2025'
   - type: link
-    url: 'https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia'
-    label: 'Kompas - Makna Kenaikan Kepercayaan Publik terhadap Media 2025'
+    url: >-
+      https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia
+    label: Kompas - Makna Kenaikan Kepercayaan Publik terhadap Media 2025
   - type: link
-    url: 'https://www.bbc.co.uk/mediaaction/documents/fighting-misinformation-a-critical-look-at-disinformation-in-indonesia-final.pdf'
-    label: 'BBC Media Action - Disinformation in Indonesia 2024-2025'
+    url: >-
+      https://www.bbc.co.uk/mediaaction/documents/fighting-misinformation-a-critical-look-at-disinformation-in-indonesia-final.pdf
+    label: BBC Media Action - Disinformation in Indonesia 2024-2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** Hoax bukan kesalahan, industri. Buzzer: 70,000 akun, SMM Panel, phone farming. AI bikin buzzer makin sulit dibedakan. Baca [part 4: Ekosistem Hoax](/artikel/sistem-media-indonesia-part-4-ekosistem-hoax-industri-yang-untung)

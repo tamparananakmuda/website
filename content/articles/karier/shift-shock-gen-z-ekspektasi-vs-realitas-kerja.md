@@ -1,80 +1,103 @@
 ---
-title: "Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai"
-slug: "shift-shock-gen-z-ekspektasi-vs-realitas-kerja"
-excerpt: "72% pekerja alami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi tinggi, tapi sistem kerja yang tidak sesuai janji."
-publishedAt: "2026-09-04T01:00:00+07:00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai'
+slug: shift-shock-gen-z-ekspektasi-vs-realitas-kerja
+excerpt: >-
+  72% pekerja alami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2
+  tahun pertama. Bukan ekspektasi tinggi, tapi sistem kerja yang tidak sesuai
+  janji.
+publishedAt: '2026-09-04T01:00:00+07:00'
+status: scheduled
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags:
-  - "shift-shock"
-  - "gen-z"
-  - "ekspektasi-kerja"
-  - "resign"
-  - "fresh-graduate"
-  - "realitas-kerja"
-ogHeadline: "Kerja pertama bikin kamu kecewa? Kamu tidak salah"
-seoMetaTitle: "Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja"
-seoMetaDescription: "72% pekerja alami shift shock. 60% Gen Z Indonesia pertimbangan resign di 2 tahun pertama. Bukan ekspektasi tinggi, tapi sistem kerja yang tidak sesuai janji."
+  - shift-shock
+  - gen-z
+  - ekspektasi-kerja
+  - resign
+  - fresh-graduate
+  - realitas-kerja
+ogHeadline: Kerja pertama bikin kamu kecewa? Kamu tidak salah
+seoMetaTitle: 'Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja'
+seoMetaDescription: >-
+  72% pekerja alami shift shock. Sistem yang nggak beri alasan, bukan kamu yang
+  salah.
 seoKeywords:
-  - "shift shock"
-  - "ekspektasi kerja"
-  - "resign"
-  - "realitas kerja"
-  - "kesenjangan ekspektasi"
-  - "fresh graduate"
+  - shift shock
+  - ekspektasi kerja
+  - resign
+  - realitas kerja
+  - kesenjangan ekspektasi
+  - fresh graduate
 sourceReferences:
-  - type: "link"
-    url: "https://www.themuse.com/advice/shift-shock-muse-survey-2022"
-    label: "The Muse 2022: Shift Shock Survey (72% dari 2.500 responden)"
-  - type: "link"
-    url: "https://link.springer.com/article/10.1186/s40359-026-04044-0"
-    label: "BMC Psychology 2026: ERG Scale Validation for Indonesian Gen Z (751 respondents)"
-  - type: "link"
-    url: "https://etd.repository.ugm.ac.id/penelitian/detail/246088"
-    label: "UGM Thesis 2026: Kesenjangan Ekspektasi Kerja terhadap Job-Hopping (268 Gen Z)"
-  - type: "link"
-    url: "https://www.kompas.id/artikel/harvard-reveals-that-gen-z-wants-meaningful-work-but-decent-work-is-difficult-in-indonesia"
-    label: "Kompas.id 2026: Harvard + Gallup + Walton Foundation Survey (2.436 Gen Z)"
-  - type: "link"
-    url: "https://ijsm.uniku.ac.id/pub/article/view/78"
-    label: "IJSM 2026: Gen Z Talent Management Expectations (147 respondents, Kuningan)"
-  - type: "link"
-    url: "https://mobitekno.com/read/2026/04/02/jobstreet-pekerja-bahagia-burnout/"
-    label: "JobStreet by SEEK 2025-2026: Workplace Happiness Index Indonesia"
-  - type: "link"
-    url: "https://duniafintech.com/71-gen-z-utamakan-gaji-besar/"
-    label: "Jakpat 2026: Survei Gen Z 1.158 responden (17-28 tahun)"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/05/19/150500826/survei-gen-z-hanya-bertahan-18-tahun-di-satu-pekerjaan"
-    label: "Kompas Money May 2026: Gateway Commercial Finance Survey (1.000+ responden)"
-  - type: "link"
-    url: "https://www.kompas.com/tren/read/2026/05/08/150000365/ada-apa-dengan-gen-z-ogah-loyal-dan-emoh-naik-jabatan-"
-    label: "Kompas May 2026: WEF 2025 + Robert Walters Conscious Unbossing"
-  - type: "link"
-    url: "https://employernews.co.uk/hr-news/the-quick-quitters-53-of-professionals-admit-to-quitting-a-new-role-due-to-unmet-expectations/"
-    label: "Robert Walters Poll: Quick Quitters (53% quit due to unmet expectations)"
-  - type: "link"
-    url: "https://katadata.co.id/finansial/makro/699d2b95144ea/menunggu-kerja-makin-mahal-celios-ungkap-tekanan-ganda-gen-z"
-    label: "CELIOS via Katadata Feb 2026: BPS Sakernas Aug 2025, biaya cari kerja Gen Z"
-  - type: "link"
-    url: "https://jurnal.goretanpena.com/index.php/JSSR/article/view/4071"
-    label: "JSSR 2026: Persepsi dan Realitas Kerja Gen Z di Kabupaten Asahan (110 responden)"
-  - type: "link"
-    url: "https://educativa.id/2026/06/11/ekspektasi-vs-realitas-dunia-kerja-yang-bikin-gen-z-kaget/"
-    label: "Educativa.id Jun 2026: Ekspektasi vs Realitas Dunia Kerja Gen Z"
-  - type: "link"
-    url: "https://www.kompas.id/artikel/kaum-muda-sarjana-merana-tak-bekerja"
-    label: "Kompas.id 2026: Kaum Muda Sarjana Merana Tak Bekerja"
+  - type: link
+    url: 'https://www.themuse.com/advice/shift-shock-muse-survey-2022'
+    label: 'The Muse 2022: Shift Shock Survey (72% dari 2.500 responden)'
+  - type: link
+    url: 'https://link.springer.com/article/10.1186/s40359-026-04044-0'
+    label: >-
+      BMC Psychology 2026: ERG Scale Validation for Indonesian Gen Z (751
+      respondents)
+  - type: link
+    url: 'https://etd.repository.ugm.ac.id/penelitian/detail/246088'
+    label: >-
+      UGM Thesis 2026: Kesenjangan Ekspektasi Kerja terhadap Job-Hopping (268
+      Gen Z)
+  - type: link
+    url: >-
+      https://www.kompas.id/artikel/harvard-reveals-that-gen-z-wants-meaningful-work-but-decent-work-is-difficult-in-indonesia
+    label: 'Kompas.id 2026: Harvard + Gallup + Walton Foundation Survey (2.436 Gen Z)'
+  - type: link
+    url: 'https://ijsm.uniku.ac.id/pub/article/view/78'
+    label: >-
+      IJSM 2026: Gen Z Talent Management Expectations (147 respondents,
+      Kuningan)
+  - type: link
+    url: 'https://mobitekno.com/read/2026/04/02/jobstreet-pekerja-bahagia-burnout/'
+    label: 'JobStreet by SEEK 2025-2026: Workplace Happiness Index Indonesia'
+  - type: link
+    url: 'https://duniafintech.com/71-gen-z-utamakan-gaji-besar/'
+    label: 'Jakpat 2026: Survei Gen Z 1.158 responden (17-28 tahun)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/19/150500826/survei-gen-z-hanya-bertahan-18-tahun-di-satu-pekerjaan
+    label: >-
+      Kompas Money May 2026: Gateway Commercial Finance Survey (1.000+
+      responden)
+  - type: link
+    url: >-
+      https://www.kompas.com/tren/read/2026/05/08/150000365/ada-apa-dengan-gen-z-ogah-loyal-dan-emoh-naik-jabatan-
+    label: 'Kompas May 2026: WEF 2025 + Robert Walters Conscious Unbossing'
+  - type: link
+    url: >-
+      https://employernews.co.uk/hr-news/the-quick-quitters-53-of-professionals-admit-to-quitting-a-new-role-due-to-unmet-expectations/
+    label: 'Robert Walters Poll: Quick Quitters (53% quit due to unmet expectations)'
+  - type: link
+    url: >-
+      https://katadata.co.id/finansial/makro/699d2b95144ea/menunggu-kerja-makin-mahal-celios-ungkap-tekanan-ganda-gen-z
+    label: >-
+      CELIOS via Katadata Feb 2026: BPS Sakernas Aug 2025, biaya cari kerja Gen
+      Z
+  - type: link
+    url: 'https://jurnal.goretanpena.com/index.php/JSSR/article/view/4071'
+    label: >-
+      JSSR 2026: Persepsi dan Realitas Kerja Gen Z di Kabupaten Asahan (110
+      responden)
+  - type: link
+    url: >-
+      https://educativa.id/2026/06/11/ekspektasi-vs-realitas-dunia-kerja-yang-bikin-gen-z-kaget/
+    label: 'Educativa.id Jun 2026: Ekspektasi vs Realitas Dunia Kerja Gen Z'
+  - type: link
+    url: 'https://www.kompas.id/artikel/kaum-muda-sarjana-merana-tak-bekerja'
+    label: 'Kompas.id 2026: Kaum Muda Sarjana Merana Tak Bekerja'
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

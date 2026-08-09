@@ -23,7 +23,7 @@ ogHeadline: 'Guru trading untung dari kursus, bukan trading'
 seoMetaTitle: 'Guru Finansial TikTok: Siapa yang Sebenarnya Untung? | TAM'
 seoMetaDescription: >-
   Finfluencer Indonesia jual kelas trading dengan komisi referral dari broker.
-  Mereka untung dari kursus, bukan dari trading. Kamu yang membayar harga.
+  Sistem yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - guru finansial TikTok
   - kelas trading penipuan
@@ -33,13 +33,14 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://www.ialc.or.id/'
-    label: 'IALC - Standarisasi harga Life Coach Practitioner'
+    label: IALC - Standarisasi harga Life Coach Practitioner
   - type: link
     url: 'https://tax.atmo.co.id/id/panduan/pajak-coach-trainer'
-    label: 'Pajak Atmo/DJP - Pajak coach dan trainer'
+    label: Pajak Atmo/DJP - Pajak coach dan trainer
   - type: link
-    url: 'https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir'
-    label: 'CNBC Indonesia - Finfluencer dan afiliator'
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir
+    label: CNBC Indonesia - Finfluencer dan afiliator
 featured: false
 humanSignature: true
 factCheckStatus: verified

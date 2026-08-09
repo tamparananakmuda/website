@@ -19,7 +19,7 @@ tags:
   - akses-keadilan
   - sistem-hukum
   - gen-z
-ogHeadline: 'Keadilan di Indonesia diukur dengan gaji'
+ogHeadline: Keadilan di Indonesia diukur dengan gaji
 seoMetaTitle: 'Biaya Pengacara Indonesia: Keadilan yang Diukur dengan Gaji | TAM'
 seoMetaDescription: >-
   Rp500 ribu sampai Rp50 juta. LBH gratis tapi butuh surat miskin. Gen Z di
@@ -31,20 +31,23 @@ seoKeywords:
   - akses keadilan
 sourceReferences:
   - type: link
-    url: 'https://www.pengacarasumatera.com/2025/05/27/biaya-jasa-pengacara-di-indonesia-dari-yang-tertinggi-dan-paling-murah/'
-    label: 'Asosiasi Advokat Indonesia (AAI) 2024 - Biaya pengacara Rp500rb-Rp50jt'
+    url: >-
+      https://www.pengacarasumatera.com/2025/05/27/biaya-jasa-pengacara-di-indonesia-dari-yang-tertinggi-dan-paling-murah/
+    label: Asosiasi Advokat Indonesia (AAI) 2024 - Biaya pengacara Rp500rb-Rp50jt
   - type: link
     url: 'https://tuwaga.id/artikel/biaya-sewa-pengacara-2025/'
-    label: 'Tuwaga (2025) - Biaya sewa pengacara 2025'
+    label: Tuwaga (2025) - Biaya sewa pengacara 2025
   - type: link
-    url: 'https://www.hukumonline.com/berita/a/syarat-dan-cara-mendapatkan-bantuan-hukum-gratis-dari-lbh-lt6618ae8c15200/'
-    label: 'Hukumonline - Syarat dan cara mendapatkan bantuan hukum gratis dari LBH'
+    url: >-
+      https://www.hukumonline.com/berita/a/syarat-dan-cara-mendapatkan-bantuan-hukum-gratis-dari-lbh-lt6618ae8c15200/
+    label: Hukumonline - Syarat dan cara mendapatkan bantuan hukum gratis dari LBH
   - type: link
-    url: 'https://kemenkum.go.id/berita-utama/konsultasi-hukum-makin-mudah-kemenkum-hadirkan-5-008-pos-bantuan-hukum'
-    label: 'Kemenkum (Jun 2025) - 5.008 Posbankum'
+    url: >-
+      https://kemenkum.go.id/berita-utama/konsultasi-hukum-makin-mudah-kemenkum-hadirkan-5-008-pos-bantuan-hukum
+    label: Kemenkum (Jun 2025) - 5.008 Posbankum
   - type: link
     url: 'https://jakarta.kemenkumham.go.id/hukum/bantuan-hukum'
-    label: 'Kemenkumham - Bantuan hukum gratis bagi masyarakat miskin'
+    label: Kemenkumham - Bantuan hukum gratis bagi masyarakat miskin
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -52,6 +55,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** 54.026 pengguna narkoba dipenjara, bukan direhab. UU mengatakan rehab, sistem mengatakan penjara. Baca part sebelumnya: [Part 3](/artikel/sistem-hukum-indonesia-part-3-narkoba-penjara-bukan-sembuh)

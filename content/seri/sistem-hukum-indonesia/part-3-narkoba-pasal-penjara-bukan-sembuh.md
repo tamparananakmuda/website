@@ -31,17 +31,21 @@ seoKeywords:
   - UU narkotika 35/2009
 sourceReferences:
   - type: link
-    url: 'https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan'
-    label: 'Kompas/BNN (Apr 2026) - 54% penghuni lapas kasus narkotika'
+    url: >-
+      https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan
+    label: Kompas/BNN (Apr 2026) - 54% penghuni lapas kasus narkotika
   - type: link
-    url: 'https://tirto.id/agus-mau-pecandu-narkoba-direhab-demi-tangani-overcapacity-lapas-g5qV'
+    url: >-
+      https://tirto.id/agus-mau-pecandu-narkoba-direhab-demi-tangani-overcapacity-lapas-g5qV
     label: 'Tirto.id (Nov 2024) - Menteri Imipas: pecandu harus direhab'
   - type: link
-    url: 'https://kemenimipas.go.id/berita-utama/overcrowding-lapas-menurun-menteri-imipas-pertegas-komitmen-berantas-narkoba'
-    label: 'Kemenimipas (Apr 2026) - Overcrowding dan penanganan narkoba'
+    url: >-
+      https://kemenimipas.go.id/berita-utama/overcrowding-lapas-menurun-menteri-imipas-pertegas-komitmen-berantas-narkoba
+    label: Kemenimipas (Apr 2026) - Overcrowding dan penanganan narkoba
   - type: link
-    url: 'https://www.ditjenpas.go.id/mengurai-permasalahan-overcrowded-di-lapasrutan'
-    label: 'Ditjenpas - Mengurai permasalahan overcrowded'
+    url: >-
+      https://www.ditjenpas.go.id/mengurai-permasalahan-overcrowded-di-lapasrutan
+    label: Ditjenpas - Mengurai permasalahan overcrowded
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -49,6 +53,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** 278.000 orang dipenjara di lapas kapasitas 146.000. 90% overkapasitas. Miskin di penjara, kaya di rumah. Baca part sebelumnya: [Part 2](/artikel/sistem-hukum-indonesia-part-2-penahanan-miskin-penjara)

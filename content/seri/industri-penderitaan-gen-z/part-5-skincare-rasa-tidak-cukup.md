@@ -20,12 +20,11 @@ tags:
   - influencer
   - rasa-tidak-cukup
   - k-beauty
-ogHeadline: 'Industri skincare jual rasa tidak cukup ke Gen Z'
+ogHeadline: Industri skincare jual rasa tidak cukup ke Gen Z
 seoMetaTitle: 'Skincare Indonesia $3M: Gen Z 54% Pasar, 69% Influencer | TAM'
 seoMetaDescription: >-
-  Pasar skincare Indonesia $3.07 miliar, Gen Z 54% pasar. 69% konsumen
-  dipengaruhi influencer. Industri kecantikan menjual rasa tidak cukup, bukan
-  produk.
+  Pasar skincare Indonesia $3. Sistem yang nggak beri alasan, bukan kamu yang
+  salah.
 seoKeywords:
   - beauty industry Indonesia
   - skincare Indonesia market size
@@ -35,16 +34,19 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://www.inkwoodresearch.com/reports/indonesia-skin-care-market-size/'
-    label: 'Inkwood Research - Indonesia skincare market 2025-2032'
+    label: Inkwood Research - Indonesia skincare market 2025-2032
   - type: link
-    url: 'https://www.jakartamarketlab.com/2025/08/indonesia-skincare-cosmetics-market.html'
-    label: 'Jakarta Market Lab - Indonesia skincare market analysis'
+    url: >-
+      https://www.jakartamarketlab.com/2025/08/indonesia-skincare-cosmetics-market.html
+    label: Jakarta Market Lab - Indonesia skincare market analysis
   - type: link
-    url: 'https://hybrid.co.id/post/rangkuman-dari-laporan-winning-the-skincare-social-media-battlefield-oleh-indsight-by-nolimit-indonesia/'
-    label: 'NoLimit Indonesia - Skincare social media report'
+    url: >-
+      https://hybrid.co.id/post/rangkuman-dari-laporan-winning-the-skincare-social-media-battlefield-oleh-indsight-by-nolimit-indonesia/
+    label: NoLimit Indonesia - Skincare social media report
   - type: link
-    url: 'https://www.statista.com/topics/7592/cosmetics-and-personal-care-market-in-indonesia/'
-    label: 'Statista - Cosmetics and personal care Indonesia'
+    url: >-
+      https://www.statista.com/topics/7592/cosmetics-and-personal-care-market-in-indonesia/
+    label: Statista - Cosmetics and personal care Indonesia
 featured: false
 humanSignature: true
 factCheckStatus: verified

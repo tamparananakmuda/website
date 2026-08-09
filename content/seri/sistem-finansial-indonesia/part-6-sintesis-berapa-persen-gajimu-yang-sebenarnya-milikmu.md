@@ -23,8 +23,8 @@ tags:
 ogHeadline: 'Gaji 5 juta, yang sampai ke kamu mungkin setengah'
 seoMetaTitle: 'Total Ekstraksi Sistem Finansial: Berapa Persen Gajimu Milikmu? | TAM'
 seoMetaDescription: >-
-  PPh 21, BPJS, biaya bank, inflasi, fee investasi, premi asuransi. Hitung total
-  ekstraksi sistem finansial Indonesia dari gaji 5 juta. Hasilnya mengejutkan.
+  PPh 21, BPJS, biaya bank, inflasi, fee investasi, premi asuransi. Sistem yang
+  nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - sistem finansial Indonesia
   - ekstraksi gaji gen Z
@@ -32,23 +32,28 @@ seoKeywords:
   - biaya tersembunyi finansial
 sourceReferences:
   - type: link
-    url: 'https://www.ojk.go.id/id/kanal/perbankan/data-dan-statistik/booklet-perbankan-indonesia/Pages/Booklet-Perbankan-Indonesia-2025.aspx'
-    label: 'OJK Booklet Perbankan Indonesia 2025'
+    url: >-
+      https://www.ojk.go.id/id/kanal/perbankan/data-dan-statistik/booklet-perbankan-indonesia/Pages/Booklet-Perbankan-Indonesia-2025.aspx
+    label: OJK Booklet Perbankan Indonesia 2025
   - type: link
-    url: 'https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_270125.aspx'
-    label: 'Bank Indonesia - Inflasi 2024'
+    url: >-
+      https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_270125.aspx
+    label: Bank Indonesia - Inflasi 2024
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250306/215/1859085/bpjs-ketenagakerjaan-bidik-dana-kelolaan-naik-1137-pada-2025'
-    label: 'Bisnis.com - BPJS Ketenagakerjaan dana kelolaan 2025'
+    url: >-
+      https://finansial.bisnis.com/read/20250306/215/1859085/bpjs-ketenagakerjaan-bidik-dana-kelolaan-naik-1137-pada-2025
+    label: Bisnis.com - BPJS Ketenagakerjaan dana kelolaan 2025
   - type: link
-    url: 'https://www.cnbcindonesia.com/market/20250816175145-17-658718/berlaku-agustus-2025-cek-biaya-admin-bank-mandiri-bni-bri-dan-btn'
-    label: 'CNBC Indonesia - Biaya admin bank 2025'
+    url: >-
+      https://www.cnbcindonesia.com/market/20250816175145-17-658718/berlaku-agustus-2025-cek-biaya-admin-bank-mandiri-bni-bri-dan-btn
+    label: CNBC Indonesia - Biaya admin bank 2025
   - type: link
     url: 'https://web.ksei.co.id/Files/Statistik_Publik_Desember_2025.Pdf'
-    label: 'KSEI Statistik Pasar Modal Desember 2025'
+    label: KSEI Statistik Pasar Modal Desember 2025
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara'
-    label: 'Bisnis.com - Klaim surrender asuransi jiwa 2024'
+    url: >-
+      https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara
+    label: Bisnis.com - Klaim surrender asuransi jiwa 2024
 featured: false
 humanSignature: true
 factCheckStatus: pending

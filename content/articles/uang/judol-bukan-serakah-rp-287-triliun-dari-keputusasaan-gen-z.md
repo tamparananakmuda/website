@@ -1,83 +1,112 @@
 ---
-title: "Judol Bukan Serakah, Rp 287 Triliun dari Keputusasaan Gen Z"
-slug: "judol-bukan-serakah-rp-287-triliun-dari-keputusasaan-gen-z"
-excerpt: "12,3 juta pemain, Rp 287 triliun, 88,6% deposit via QRIS. Judol bukan keserakahan Gen Z, industri yang profit dari keputusasaan. Data PPATK 2026."
-publishedAt: "2026-09-11T01:00:00+07:00"
-status: "scheduled"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Judol Bukan Serakah, Rp 287 Triliun dari Keputusasaan Gen Z'
+slug: judol-bukan-serakah-rp-287-triliun-dari-keputusasaan-gen-z
+excerpt: >-
+  12,3 juta pemain, Rp 287 triliun, 88,6% deposit via QRIS. Judol bukan
+  keserakahan Gen Z, industri yang profit dari keputusasaan. Data PPATK 2026.
+publishedAt: '2026-09-11T01:00:00+07:00'
+status: scheduled
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "12 juta pemain, Rp 287T: bukan serakah, putus asa"
-seoMetaTitle: "Judol Bukan Serakah, Rp 287 Triliun dari Keputusasaan Gen Z"
-seoMetaDescription: "12,3 juta pemain, Rp 287 triliun, 88,6% deposit via QRIS. Judol bukan keserakahan Gen Z, industri yang profit dari keputusasaan. Data PPATK 2026."
+ogHeadline: '12 juta pemain, Rp 287T: bukan serakah, putus asa'
+seoMetaTitle: '12 juta pemain, Rp 287T: bukan serakah, putus asa | TAM'
+seoMetaDescription: >-
+  12,3 juta pemain, Rp 287 triliun, 88,6% deposit via QRIS. Sistem yang nggak
+  beri alasan, bukan kamu yang salah.
 seoKeywords:
-  - "judi online gen z"
-  - "judol Indonesia"
-  - "QRIS judi online"
-  - "statistik judi online Indonesia"
-  - "dampak judi online"
-  - "cara kerja judi online"
+  - judi online gen z
+  - judol Indonesia
+  - QRIS judi online
+  - statistik judi online Indonesia
+  - dampak judi online
+  - cara kerja judi online
 sourceReferences:
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/08/05/094834426/perputaran-uang-judi-online-tembus-rp-868-triliun-ppatk-modus-pelaku-makin"
-    label: "Kompas: PPATK Perputaran Dana Judi Online S1 2026 (Agt 2026)"
-  - type: "link"
-    url: "https://periskop.id/nasional/20260513/ppatk-sekitar-4-dari-100-orang-indonesia-main-judi-online-pada-2025"
-    label: "Periskop: PPATK 4 dari 100 Orang Indonesia Main Judi Online (Mei 2026)"
-  - type: "link"
-    url: "https://www.cnnindonesia.com/ekonomi/20260723091346-92-1383923/ppatk-beber-103-ribu-anak-remaja-terhubung-transaksi-judi-online"
-    label: "CNN Indonesia: PPATK 103 Ribu Anak-Remaja Terhubung Transaksi Judol (Jul 2026)"
-  - type: "link"
-    url: "https://www.bloombergtechnoz.com/detail-news/116167/ppatk-qris-jadi-jalur-utama-deposit-judi-online-capai-88-6"
-    label: "Bloomberg Technoz: PPATK QRIS Jadi Jalur Utama Deposit Judi Online (Jul 2026)"
-  - type: "link"
-    url: "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t"
-    label: "CNBC Indonesia: PPATK Perputaran Dana Judol Turun 20% (Jul 2026)"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/08/05/094700426/ppatk--deposit-judi-online-lewat-qris-tembus-rp-12-3-triliun-pada-semester-i"
-    label: "Kompas: PPATK Deposit QRIS Judol Tembus Rp12,3T S1 2026 (Agt 2026)"
-  - type: "link"
-    url: "https://www.cnnindonesia.com/nasional/20260805120446-12-1388825/ppatk-temukan-rp102-triliun-deposit-judol-terkait-piala-dunia-2026"
-    label: "CNN Indonesia: PPATK Rp1,02T Deposit Judol Piala Dunia 2026 (Agt 2026)"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/08/05/131400226/ppatk-blokir-2-815-rekening-judi-online-saldo-mencapai-rp-325-miliar"
-    label: "Kompas: PPATK Blokir 2.815 Rekening Judi Online (Agt 2026)"
-  - type: "link"
-    url: "https://nasional.kompas.com/read/2026/07/17/13513421/komdigi-tindak-37-juta-situs-dan-konten-bermuatan-judol-dari-oktober-2024"
-    label: "Kompas: Komdigi Tindak 3,7 Juta Situs Judol (Jul 2026)"
-  - type: "link"
-    url: "https://www.cnnindonesia.com/teknologi/20260630064433-185-1374888/modus-baru-judol-terungkap-promosi-lewat-kolom-komentar-media-sosial"
-    label: "CNN Indonesia: Komdigi Modus Baru Promosi Judol via Kolom Komentar (Jun 2026)"
-  - type: "link"
-    url: "https://www.cnnindonesia.com/nasional/20241121154134-20-1169225/mendikti-960-ribu-pelajar-mahasiswa-terlibat-judi-online"
-    label: "CNN Indonesia: Mendikti 960 Ribu Pelajar-Mahasiswa Terlibat Judol (Nov 2024)"
-  - type: "link"
-    url: "https://polkam.go.id/kemenko-polkam-dorong-penguatan-regulasi-pengentasan-judi-daring-melalui-tata-kelola-nasional-yang-terintegrasi-2/"
-    label: "Kemenko Polkam: Penguatan Regulasi Pengentasan Judi Daring (Jun 2026)"
-  - type: "link"
-    url: "http://repository.nusaputra.ac.id/id/eprint/1724/"
-    label: "Rizwan Maulana (2025): Risiko Finansial All In Judi Online Gen Z Sukabumi, Nusa Putra"
-  - type: "link"
-    url: "https://ukinstitute.org/journals/jopp/article/view/1467"
-    label: "Scoping Review: Psychosocial Determinants of Online Gambling Addiction Indonesia, JOPP 2025"
-  - type: "link"
-    url: "https://cibangsa.com/index.php/musytari/article/view/9527"
-    label: "Musytari: Pengalaman Psikologis Gen Z Terjebak Judi Online, 2025"
-  - type: "link"
-    url: "https://www.jsser.org/index.php/jsser/article/viewFile/7348/769"
-    label: "JSSE: Online Gambling Policies in Indonesia Education Sector, 2025"
-  - type: "link"
-    url: "https://www.antaranews.com/berita/5652831/kaspersky-ungkap-perubahan-pola-promosi-judi-online-di-media-sosial"
-    label: "Antara: Kaspersky Perubahan Pola Promosi Judi Online di Medsos, 2026"
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/08/05/094834426/perputaran-uang-judi-online-tembus-rp-868-triliun-ppatk-modus-pelaku-makin
+    label: 'Kompas: PPATK Perputaran Dana Judi Online S1 2026 (Agt 2026)'
+  - type: link
+    url: >-
+      https://periskop.id/nasional/20260513/ppatk-sekitar-4-dari-100-orang-indonesia-main-judi-online-pada-2025
+    label: 'Periskop: PPATK 4 dari 100 Orang Indonesia Main Judi Online (Mei 2026)'
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/ekonomi/20260723091346-92-1383923/ppatk-beber-103-ribu-anak-remaja-terhubung-transaksi-judi-online
+    label: >-
+      CNN Indonesia: PPATK 103 Ribu Anak-Remaja Terhubung Transaksi Judol (Jul
+      2026)
+  - type: link
+    url: >-
+      https://www.bloombergtechnoz.com/detail-news/116167/ppatk-qris-jadi-jalur-utama-deposit-judi-online-capai-88-6
+    label: >-
+      Bloomberg Technoz: PPATK QRIS Jadi Jalur Utama Deposit Judi Online (Jul
+      2026)
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t
+    label: 'CNBC Indonesia: PPATK Perputaran Dana Judol Turun 20% (Jul 2026)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/08/05/094700426/ppatk--deposit-judi-online-lewat-qris-tembus-rp-12-3-triliun-pada-semester-i
+    label: 'Kompas: PPATK Deposit QRIS Judol Tembus Rp12,3T S1 2026 (Agt 2026)'
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/nasional/20260805120446-12-1388825/ppatk-temukan-rp102-triliun-deposit-judol-terkait-piala-dunia-2026
+    label: 'CNN Indonesia: PPATK Rp1,02T Deposit Judol Piala Dunia 2026 (Agt 2026)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/08/05/131400226/ppatk-blokir-2-815-rekening-judi-online-saldo-mencapai-rp-325-miliar
+    label: 'Kompas: PPATK Blokir 2.815 Rekening Judi Online (Agt 2026)'
+  - type: link
+    url: >-
+      https://nasional.kompas.com/read/2026/07/17/13513421/komdigi-tindak-37-juta-situs-dan-konten-bermuatan-judol-dari-oktober-2024
+    label: 'Kompas: Komdigi Tindak 3,7 Juta Situs Judol (Jul 2026)'
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/teknologi/20260630064433-185-1374888/modus-baru-judol-terungkap-promosi-lewat-kolom-komentar-media-sosial
+    label: >-
+      CNN Indonesia: Komdigi Modus Baru Promosi Judol via Kolom Komentar (Jun
+      2026)
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/nasional/20241121154134-20-1169225/mendikti-960-ribu-pelajar-mahasiswa-terlibat-judi-online
+    label: >-
+      CNN Indonesia: Mendikti 960 Ribu Pelajar-Mahasiswa Terlibat Judol (Nov
+      2024)
+  - type: link
+    url: >-
+      https://polkam.go.id/kemenko-polkam-dorong-penguatan-regulasi-pengentasan-judi-daring-melalui-tata-kelola-nasional-yang-terintegrasi-2/
+    label: 'Kemenko Polkam: Penguatan Regulasi Pengentasan Judi Daring (Jun 2026)'
+  - type: link
+    url: 'http://repository.nusaputra.ac.id/id/eprint/1724/'
+    label: >-
+      Rizwan Maulana (2025): Risiko Finansial All In Judi Online Gen Z Sukabumi,
+      Nusa Putra
+  - type: link
+    url: 'https://ukinstitute.org/journals/jopp/article/view/1467'
+    label: >-
+      Scoping Review: Psychosocial Determinants of Online Gambling Addiction
+      Indonesia, JOPP 2025
+  - type: link
+    url: 'https://cibangsa.com/index.php/musytari/article/view/9527'
+    label: 'Musytari: Pengalaman Psikologis Gen Z Terjebak Judi Online, 2025'
+  - type: link
+    url: 'https://www.jsser.org/index.php/jsser/article/viewFile/7348/769'
+    label: 'JSSE: Online Gambling Policies in Indonesia Education Sector, 2025'
+  - type: link
+    url: >-
+      https://www.antaranews.com/berita/5652831/kaspersky-ungkap-perubahan-pola-promosi-judi-online-di-media-sosial
+    label: 'Antara: Kaspersky Perubahan Pola Promosi Judi Online di Medsos, 2026'
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

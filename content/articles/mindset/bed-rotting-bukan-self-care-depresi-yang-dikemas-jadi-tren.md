@@ -20,10 +20,10 @@ tags:
   - tiktok-tren
   - normalisasi
 ogHeadline: 'Rebahan bukan self-care, itu gejala depresi'
-seoMetaTitle: 'Bed Rotting Bukan Self-Care, Depresi yang Dikemas Jadi Tren'
+seoMetaTitle: 'Rebahan bukan self-care, itu gejala depresi | TAM'
 seoMetaDescription: >-
-  363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Tapi TikTok
-  menyebut rebahan seharian self-care. Kenapa normalisasi ini berbahaya?
+  363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Sistem yang
+  nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - bed rotting gen z
   - bed rotting adalah

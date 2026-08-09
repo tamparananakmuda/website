@@ -1,60 +1,97 @@
 ---
-title: "Masalahmu Bukan Kopi. Masalahmu Sistem yang Rampas Tidurmu."
-slug: "kopi-gen-z-bukan-gaya-hidup-self-medikasi-sistemik"
-excerpt: "77% Gen Z Indonesia konsumsi kopi. 461.991 kedai kopi terbanyak di dunia. 51% orang dewasa tidur kurang dari 7 jam. Kopi bukan gaya hidup, tapi self-medikasi."
-publishedAt: "2026-09-08T01:00:00+07:00"
-status: "scheduled"
-category: "kehidupan"
-subcategory: "kehidupan-relasi"
-author: "yovie-setiawan"
+title: Masalahmu Bukan Kopi. Masalahmu Sistem yang Rampas Tidurmu.
+slug: kopi-gen-z-bukan-gaya-hidup-self-medikasi-sistemik
+excerpt: >-
+  77% Gen Z Indonesia konsumsi kopi. 461.991 kedai kopi terbanyak di dunia. 51%
+  orang dewasa tidur kurang dari 7 jam. Kopi bukan gaya hidup, tapi
+  self-medikasi.
+publishedAt: '2026-09-08T01:00:00+07:00'
+status: scheduled
+category: kehidupan
+subcategory: kehidupan-relasi
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags:
-  - "kopi"
-  - "gen-z"
-  - "kafein"
-  - "self-medikasi"
-  - "sleep-deprivation"
-  - "gaya-hidup"
-  - "ketergantungan-kafein"
-ogHeadline: "Kopi 25rb x 30 hari = 750rb. Bukan gaya hidup."
+  - kopi
+  - gen-z
+  - kafein
+  - self-medikasi
+  - sleep-deprivation
+  - gaya-hidup
+  - ketergantungan-kafein
+ogHeadline: Kopi 25rb x 30 hari = 750rb. Bukan gaya hidup.
 ogHeadlineEn: null
-seoMetaTitle: "Kopi Gen Z: Bukan Gaya Hidup, Tapi Self Medikasi Sistemik"
-seoMetaDescription: "77% Gen Z Indonesia konsumsi kopi. 461.991 kedai kopi terbanyak di dunia. 51% orang dewasa tidur kurang dari 7 jam. Kopi bukan gaya hidup, tapi self-medikasi."
+seoMetaTitle: 'Kopi Gen Z: Bukan Gaya Hidup, Tapi Self Medikasi Sistemik'
+seoMetaDescription: >-
+  77% Gen Z Indonesia konsumsi kopi. Sistem yang nggak beri alasan, bukan kamu
+  yang salah.
 seoKeywords:
-  - "kopi gen z"
-  - "ketergantungan kafein"
-  - "biaya kopi"
-  - "konsumsi kopi"
-  - "kafein"
-  - "kedai kopi"
-  - "gaya hidup"
+  - kopi gen z
+  - ketergantungan kafein
+  - biaya kopi
+  - konsumsi kopi
+  - kafein
+  - kedai kopi
+  - gaya hidup
 sourceReferences:
-  - url: "https://databoks.katadata.co.id/en/consumer-services/statistics/677cd50372d4a/how-much-do-gen-z-spend-on-coffee-this-survey-reveals"
-    label: "Jakpat via Databoks Dec 2024: 77% Gen Z konsumsi kopi, 48% spend <Rp10k/cup, 30% Rp10-25k, 18% Rp25-50k, n=1,115"
-  - url: "https://databoks.katadata.co.id/en/technology-telecommunications/statistics/67722bef79e2d/how-often-does-gen-z-drink-coffee-this-survey-reveals"
-    label: "Jakpat via Databoks Dec 2024: 31% 1-2x/week, 19% once a day, 12% 2-3x/day, 4% >3x/day, 22% tidak konsumsi, n=1,155"
-  - url: "https://www.aeki-aice.org/en/Indonesian-daily-coffee-consumption-data/"
-    label: "AEKI-AICE Jul 2026: Konsumsi 4.83M bags (289.8k ton), 1.02 kg/kapita, GoodStats 40% minum 2 gelas/hari, n=1,000"
-  - url: "https://seasia.co/2026/01/10/indonesia-tops-the-world-with-nearly-462-000-coffee-shops"
-    label: "Seasia.co Jan 2026: 461,991 coffee shops Indonesia, world's highest, SCAI + POI data Nov 2025"
-  - url: "https://intelligence.coffee/2025/12/indonesias-rise-as-a-coffee-powerhouse/"
-    label: "Coffee Intelligence Dec 2025: Konsumsi tripled pre-pandemic, 5th largest consumer globally, 5% growth/year, Gen Z dominant force"
-  - url: "https://www.kompas.id/artikel/en-apakah-anda-tidur-cukup-tadi-malam"
-    label: "YouGov via Kompas Mar 2024: 51% Indonesian adults sleep <7h, 24% sleep <5h, Indonesia ranks 15th globally"
-  - url: "https://kumparan.com/juang-fiqih-ramadhani/indonesia-darurat-krisis-pola-istirahat-27F3IBWY9ag"
-    label: "Kurious-KIC via Kumparan 2025: 46.2% tidur 4-6 jam, 14.4% tidur 2-4 jam, 92.2% Gen Z poor sleep quality, 98.9% SMK students sleep disorders"
-  - url: "https://kumparan.com/nadine-aulia-suprayogi/ketergantungan-kafein-generasi-muda-untuk-sulit-hidup-tanpa-kopi-27QJQJH49WE"
-    label: "Kumparan 2025: DSM-5 caffeine withdrawal, FDA 400mg limit, 40% coffee buyers are teens, tolerance mechanism, siklus kafein-tidur"
-  - url: "https://ejournal.atmajaya.ac.id/index.php/damianus/article/view/3610"
-    label: "Atma Jaya study 2024: 386 mahasiswa, significant relationship caffeine & sleep disorders (p<0.05), 21.5% gangguan tidur, 43.52% konsumsi kafein"
-  - url: "https://etd.repository.ugm.ac.id/penelitian/detail/232149"
-    label: "UGM study: 103 mahasiswa, negative emotions predict caffeine dependence (7.8% effective contribution), CCDS + PANAS-X scales"
-  - url: "https://www.kompas.id/artikel/en-mencermati-tren-dan-tantangan-bisnis-kedai-kopi-tahun-2026"
-    label: "Kompas.id 2026: Coffee shop market $2.1B (Rp34T) in 2023, CAGR 10%, specialty 12%/year, 462k coffee shops"
-  - url: "https://www.jakartamarketlab.com/2026/05/coffee-in-indonesia-market-overview.html"
-    label: "JakartaMarketLab Dec 2025: IDR 70.3T retail coffee market 2025, +12% value growth (price-driven not volume), Gen Z & Alpha targeting"
+  - url: >-
+      https://databoks.katadata.co.id/en/consumer-services/statistics/677cd50372d4a/how-much-do-gen-z-spend-on-coffee-this-survey-reveals
+    label: >-
+      Jakpat via Databoks Dec 2024: 77% Gen Z konsumsi kopi, 48% spend
+      <Rp10k/cup, 30% Rp10-25k, 18% Rp25-50k, n=1,115
+  - url: >-
+      https://databoks.katadata.co.id/en/technology-telecommunications/statistics/67722bef79e2d/how-often-does-gen-z-drink-coffee-this-survey-reveals
+    label: >-
+      Jakpat via Databoks Dec 2024: 31% 1-2x/week, 19% once a day, 12% 2-3x/day,
+      4% >3x/day, 22% tidak konsumsi, n=1,155
+  - url: 'https://www.aeki-aice.org/en/Indonesian-daily-coffee-consumption-data/'
+    label: >-
+      AEKI-AICE Jul 2026: Konsumsi 4.83M bags (289.8k ton), 1.02 kg/kapita,
+      GoodStats 40% minum 2 gelas/hari, n=1,000
+  - url: >-
+      https://seasia.co/2026/01/10/indonesia-tops-the-world-with-nearly-462-000-coffee-shops
+    label: >-
+      Seasia.co Jan 2026: 461,991 coffee shops Indonesia, world's highest, SCAI
+      + POI data Nov 2025
+  - url: >-
+      https://intelligence.coffee/2025/12/indonesias-rise-as-a-coffee-powerhouse/
+    label: >-
+      Coffee Intelligence Dec 2025: Konsumsi tripled pre-pandemic, 5th largest
+      consumer globally, 5% growth/year, Gen Z dominant force
+  - url: 'https://www.kompas.id/artikel/en-apakah-anda-tidur-cukup-tadi-malam'
+    label: >-
+      YouGov via Kompas Mar 2024: 51% Indonesian adults sleep <7h, 24% sleep
+      <5h, Indonesia ranks 15th globally
+  - url: >-
+      https://kumparan.com/juang-fiqih-ramadhani/indonesia-darurat-krisis-pola-istirahat-27F3IBWY9ag
+    label: >-
+      Kurious-KIC via Kumparan 2025: 46.2% tidur 4-6 jam, 14.4% tidur 2-4 jam,
+      92.2% Gen Z poor sleep quality, 98.9% SMK students sleep disorders
+  - url: >-
+      https://kumparan.com/nadine-aulia-suprayogi/ketergantungan-kafein-generasi-muda-untuk-sulit-hidup-tanpa-kopi-27QJQJH49WE
+    label: >-
+      Kumparan 2025: DSM-5 caffeine withdrawal, FDA 400mg limit, 40% coffee
+      buyers are teens, tolerance mechanism, siklus kafein-tidur
+  - url: 'https://ejournal.atmajaya.ac.id/index.php/damianus/article/view/3610'
+    label: >-
+      Atma Jaya study 2024: 386 mahasiswa, significant relationship caffeine &
+      sleep disorders (p<0.05), 21.5% gangguan tidur, 43.52% konsumsi kafein
+  - url: 'https://etd.repository.ugm.ac.id/penelitian/detail/232149'
+    label: >-
+      UGM study: 103 mahasiswa, negative emotions predict caffeine dependence
+      (7.8% effective contribution), CCDS + PANAS-X scales
+  - url: >-
+      https://www.kompas.id/artikel/en-mencermati-tren-dan-tantangan-bisnis-kedai-kopi-tahun-2026
+    label: >-
+      Kompas.id 2026: Coffee shop market $2.1B (Rp34T) in 2023, CAGR 10%,
+      specialty 12%/year, 462k coffee shops
+  - url: >-
+      https://www.jakartamarketlab.com/2026/05/coffee-in-indonesia-market-overview.html
+    label: >-
+      JakartaMarketLab Dec 2025: IDR 70.3T retail coffee market 2025, +12% value
+      growth (price-driven not volume), Gen Z & Alpha targeting
 readingTime: 7
 featured: false
 isPremium: false

@@ -21,10 +21,10 @@ tags:
   - burnout
   - budaya-kerja
 ogHeadline: 'Kerja sakit bukan dedikasi, kamu tidak punya opsi'
-seoMetaTitle: 'Resenteeism: Masuk Kerja Sakit Bukan Dedikasi, Tidak Ada Pilihan Lain'
+seoMetaTitle: 'Kerja sakit bukan dedikasi, kamu tidak punya opsi | TAM'
 seoMetaDescription: >-
-  26,1% pekerja formal Indonesia masuk kerja saat sakit. Biaya presenteeism 3x
-  absenteeism. Bukan dedikasi, itu ketiadaan jaring pengaman.
+  26,1% pekerja formal Indonesia masuk kerja saat sakit. Sistem yang nggak beri
+  alasan, bukan kamu yang salah.
 seoKeywords:
   - presenteeism adalah
   - masuk kerja sakit tidak bisa cuti

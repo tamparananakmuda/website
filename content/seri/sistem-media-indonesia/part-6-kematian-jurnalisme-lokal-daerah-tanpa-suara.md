@@ -19,7 +19,7 @@ tags:
   - news-deserts
   - kebebasan-pers
   - media-indonesia
-ogHeadline: '549 jurnalis PHK 2025. Daerah tanpa suara.'
+ogHeadline: 549 jurnalis PHK 2025. Daerah tanpa suara.
 seoMetaTitle: 'Jurnalisme Lokal Mati: Daerah Indonesia Tanpa Suara | TAM'
 seoMetaDescription: >-
   549 jurnalis PHK 2025. Media biro daerah tutup. 75% iklan ke Google/Meta. 4
@@ -33,19 +33,23 @@ seoKeywords:
   - media lokal APBD
 sourceReferences:
   - type: link
-    url: 'https://aji.or.id/system/files/2025-08/laporan-riset-phk-layoutcompressed.pdf'
-    label: 'AJI Indonesia - Laporan Riset PHK 2025 "Pecat dan Bungkam"'
+    url: >-
+      https://aji.or.id/system/files/2025-08/laporan-riset-phk-layoutcompressed.pdf
+    label: AJI Indonesia - Laporan Riset PHK 2025 "Pecat dan Bungkam"
   - type: link
-    url: 'https://aji.or.id/informasi/catatan-tahun-2025-pers-dalam-pusaran-otoritarian'
+    url: >-
+      https://aji.or.id/informasi/catatan-tahun-2025-pers-dalam-pusaran-otoritarian
     label: 'AJI Indonesia - Catatan Tahun 2025: Pers dalam Pusaran Otoritarian'
   - type: link
-    url: 'https://www.tempo.co/ekonomi/aji-dan-fspmi-mengadukan-phk-di-perusahaan-media-1653192'
-    label: 'Tempo - AJI dan FSPMI Mengadukan PHK di Perusahaan Media 2025'
+    url: >-
+      https://www.tempo.co/ekonomi/aji-dan-fspmi-mengadukan-phk-di-perusahaan-media-1653192
+    label: Tempo - AJI dan FSPMI Mengadukan PHK di Perusahaan Media 2025
   - type: link
     url: 'https://www.keadilan.id/media-yang-mati-pelan-pelan/'
-    label: 'Keadilan.id - Media Yang Mati Pelan-Pelan 2025'
+    label: Keadilan.id - Media Yang Mati Pelan-Pelan 2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** Influencer-jurnalis tanpa kode etik punya jangkauan lebih besar dari media. Pemerintah bayar influencer, bukan media. Baca [part 5: Influencer sebagai Jurnalis](/artikel/sistem-media-indonesia-part-5-influencer-sebagai-jurnalis-opini-dikemas-fakta)

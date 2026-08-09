@@ -1,55 +1,99 @@
 ---
-title: "Secondhand Stress: Bukan Cemas Sendiri, Warisan Stres Orang Tua yang Gen Z Bawa Tanpa Sadar"
-slug: "secondhand-stress-warisan-stres-orang-tua-gen-z"
-excerpt: "64 persen Gen Z Indonesia stres finansial. Tapi sebagian kecemasan itu bukan milik mereka, melainkan warisan emosional dari orang tua. Ini datanya."
-publishedAt: "2026-08-27T05:00:00+07:00"
-status: "scheduled"
-category: "kehidupan"
-subcategory: "psikologi"
-author: "yovie-setiawan"
+title: >-
+  Secondhand Stress: Bukan Cemas Sendiri, Warisan Stres Orang Tua yang Gen Z
+  Bawa Tanpa Sadar
+slug: secondhand-stress-warisan-stres-orang-tua-gen-z
+excerpt: >-
+  64 persen Gen Z Indonesia stres finansial. Tapi sebagian kecemasan itu bukan
+  milik mereka, melainkan warisan emosional dari orang tua. Ini datanya.
+publishedAt: '2026-08-27T05:00:00+07:00'
+status: scheduled
+category: kehidupan
+subcategory: psikologi
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags:
-  - "gen-z"
-  - "stres"
-  - "kecemasan"
-  - "kesehatan-mental"
-  - "warisan-emosional"
-  - "secondhand-stress"
-ogHeadline: "Kecemasan kamu bukan salah kamu, itu warisan"
-seoMetaTitle: "Secondhand Stress: Warisan Stres Orang Tua ke Gen Z"
-seoMetaDescription: "64 persen Gen Z Indonesia stres finansial. Tapi sebagian kecemasan itu bukan milik mereka, melainkan warisan emosional dari orang tua. Ini datanya."
+  - gen-z
+  - stres
+  - kecemasan
+  - kesehatan-mental
+  - warisan-emosional
+  - secondhand-stress
+ogHeadline: 'Kecemasan kamu bukan salah kamu, itu warisan'
+seoMetaTitle: 'Secondhand Stress: Warisan Stres Orang Tua ke Gen Z'
+seoMetaDescription: >-
+  64 persen Gen Z Indonesia stres finansial. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "secondhand stress gen z"
-  - "kenapa gen z cemas terus"
-  - "stres orang tua menular ke anak"
-  - "kecemasan finansial gen z"
-  - "gen z cemas uang"
-  - "emotional contagion keluarga"
-  - "gen z anxiety warisan orang tua"
-  - "money dysmorphia gen z indonesia"
+  - secondhand stress gen z
+  - kenapa gen z cemas terus
+  - stres orang tua menular ke anak
+  - kecemasan finansial gen z
+  - gen z cemas uang
+  - emotional contagion keluarga
+  - gen z anxiety warisan orang tua
+  - money dysmorphia gen z indonesia
 sourceReferences:
-  - {"type":"link","url":"https://www.orlandohealth.com/content-hub/secondhand-stress-how-people-around-you-can-increase-your-anxiety","label":"Orlando Health: Secondhand Stress"}
-  - {"type":"link","url":"https://lifestyle.kompas.com/read/2026/01/18/130000220/bijak-pilih-lingkungan-karena-stres-bisa-menular","label":"Kompas: Stres Bisa Menular (Jan 2026)"}
-  - {"type":"link","url":"https://jatim.jpnn.com/jatim-terkini/46306/dirut-btn-ungkap-64-persen-gen-z-indonesia-mengalami-stres-finansial","label":"BTN: 64% Gen Z Stres Finansial (Jun 2026)"}
-  - {"type":"link","url":"https://doi.org/10.61132/menawan.v3i2.1276","label":"Survei: 86.7% Gen Z Khawatir Keuangan Orang Tua (2025)"}
-  - {"type":"link","url":"https://www.apa.org/topics/stress/parental-burnout","label":"APA: Parental Burnout"}
-  - {"type":"link","url":"https://www.ncbi.nlm.nih.gov/sites/books/NBK606662/","label":"HHS/NCBI: Parents Under Pressure"}
-  - {"type":"link","url":"https://doi.org/10.1016/j.psyneuen.2025.107280","label":"Psychoneuroendocrinology: Cortisol Covariation (2025)"}
-  - {"type":"link","url":"https://doi.org/10.1037/dev0001972","label":"Dev Psych: Adolescents Vicarious Stress (2025)"}
-  - {"type":"link","url":"https://doi.org/10.1111/jora.13038","label":"JRA: Parent-Adolescent Emotion Contagion (2024)"}
-  - {"type":"link","url":"https://preview-www.nature.com/articles/s44271-024-00150-0","label":"Nature: Maternal Stress Affects Children (2024)"}
-  - {"type":"link","url":"https://www.idntimes.com/business/finance/merasa-kurang-uang-terus-psikologi-jelaskan-3-kebiasaan-penyebabnya-c1c2-01-p8d4w-yz4vn2","label":"IDN Times: Money Scripts dari Masa Kecil"}
-  - {"type":"link","url":"https://undiknas.ac.id/2025/08/money-dysmorphia-fenomena-yang-banyak-dirasakan-gen-z-saat-ini/","label":"UNDiknas: Money Dysmorphia Gen Z"}
-  - {"type":"link","url":"https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran","label":"Kompas: Gen Z Persimpangan Ekonomi (Mei 2026)"}
-  - {"type":"link","url":"https://money.kompas.com/read/2024/08/16/100451626/dampak-krisis-moneter-1998-sisi-ekonomi-sosial-hingga-politik","label":"Kompas: Krisis Moneter 1998"}
-  - {"type":"link","url":"https://www.popmama.com/big-kid/6-9-years-old/benarkah-stres-orangtua-bisa-menular-ke-anak-ini-faktanya-00-6wd2h-rzhbqt","label":"Popmama: Stres Orang Tua Menular"}
+  - type: link
+    url: >-
+      https://www.orlandohealth.com/content-hub/secondhand-stress-how-people-around-you-can-increase-your-anxiety
+    label: 'Orlando Health: Secondhand Stress'
+  - type: link
+    url: >-
+      https://lifestyle.kompas.com/read/2026/01/18/130000220/bijak-pilih-lingkungan-karena-stres-bisa-menular
+    label: 'Kompas: Stres Bisa Menular (Jan 2026)'
+  - type: link
+    url: >-
+      https://jatim.jpnn.com/jatim-terkini/46306/dirut-btn-ungkap-64-persen-gen-z-indonesia-mengalami-stres-finansial
+    label: 'BTN: 64% Gen Z Stres Finansial (Jun 2026)'
+  - type: link
+    url: 'https://doi.org/10.61132/menawan.v3i2.1276'
+    label: 'Survei: 86.7% Gen Z Khawatir Keuangan Orang Tua (2025)'
+  - type: link
+    url: 'https://www.apa.org/topics/stress/parental-burnout'
+    label: 'APA: Parental Burnout'
+  - type: link
+    url: 'https://www.ncbi.nlm.nih.gov/sites/books/NBK606662/'
+    label: 'HHS/NCBI: Parents Under Pressure'
+  - type: link
+    url: 'https://doi.org/10.1016/j.psyneuen.2025.107280'
+    label: 'Psychoneuroendocrinology: Cortisol Covariation (2025)'
+  - type: link
+    url: 'https://doi.org/10.1037/dev0001972'
+    label: 'Dev Psych: Adolescents Vicarious Stress (2025)'
+  - type: link
+    url: 'https://doi.org/10.1111/jora.13038'
+    label: 'JRA: Parent-Adolescent Emotion Contagion (2024)'
+  - type: link
+    url: 'https://preview-www.nature.com/articles/s44271-024-00150-0'
+    label: 'Nature: Maternal Stress Affects Children (2024)'
+  - type: link
+    url: >-
+      https://www.idntimes.com/business/finance/merasa-kurang-uang-terus-psikologi-jelaskan-3-kebiasaan-penyebabnya-c1c2-01-p8d4w-yz4vn2
+    label: 'IDN Times: Money Scripts dari Masa Kecil'
+  - type: link
+    url: >-
+      https://undiknas.ac.id/2025/08/money-dysmorphia-fenomena-yang-banyak-dirasakan-gen-z-saat-ini/
+    label: 'UNDiknas: Money Dysmorphia Gen Z'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran
+    label: 'Kompas: Gen Z Persimpangan Ekonomi (Mei 2026)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2024/08/16/100451626/dampak-krisis-moneter-1998-sisi-ekonomi-sosial-hingga-politik
+    label: 'Kompas: Krisis Moneter 1998'
+  - type: link
+    url: >-
+      https://www.popmama.com/big-kid/6-9-years-old/benarkah-stres-orangtua-bisa-menular-ke-anak-ini-faktanya-00-6wd2h-rzhbqt
+    label: 'Popmama: Stres Orang Tua Menular'
 featured: false
 readingTime: 12
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

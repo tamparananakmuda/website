@@ -1,9 +1,11 @@
 ---
-title: "Begadang Bukan Malas, Balas Dendam Karena Siang Bukan Milikmu"
+title: 'Begadang Bukan Malas, Balas Dendam Karena Siang Bukan Milikmu'
 slug: begadang-bukan-malas-balas-dendam-karena-siang-bukan-milikmu
 excerpt: >-
-  Begadang balas dendam bukan kebiasaan, itu reaksi siang yang direbut. Jurnal UNTAR 2026: 420 mahasiswa Jakarta, self-regulation rendah = begadang lebih lama.
-publishedAt: "2026-09-17T01:00:00.000Z"
+  Begadang balas dendam bukan kebiasaan, itu reaksi siang yang direbut. Jurnal
+  UNTAR 2026: 420 mahasiswa Jakarta, self-regulation rendah = begadang lebih
+  lama.
+publishedAt: '2026-09-17T01:00:00.000Z'
 status: scheduled
 category: mindset
 subcategory: psikologi
@@ -18,10 +20,11 @@ tags:
   - tidur
   - self-regulation
   - otonomi
-ogHeadline: "Siang bukan milikmu, malam balas dendammu"
-seoMetaTitle: "Begadang Bukan Malas, Balas Dendam Karena Siang Bukan Milikmu"
+ogHeadline: 'Siang bukan milikmu, malam balas dendammu'
+seoMetaTitle: 'Siang bukan milikmu, malam balas dendammu | TAM'
 seoMetaDescription: >-
-  Begadang balas dendam bukan kebiasaan, itu reaksi siang yang direbut. Jurnal UNTAR 2026: 420 mahasiswa Jakarta, self-regulation rendah = begadang lebih lama.
+  Begadang balas dendam bukan kebiasaan, itu reaksi siang yang direbut. Sistem
+  yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - revenge bedtime procrastination
   - begadang balas dendam
@@ -31,17 +34,21 @@ seoKeywords:
   - cara mengatasi revenge bedtime procrastination
 sourceReferences:
   - type: link
-    url: "https://journal.untar.ac.id/index.php/provitae/article/view/36957"
-    label: "UNTAR Provitae Journal, Apr 2026: Self-Regulation dan Revenge Bedtime Procrastination pada Mahasiswa Jakarta"
+    url: 'https://journal.untar.ac.id/index.php/provitae/article/view/36957'
+    label: >-
+      UNTAR Provitae Journal, Apr 2026: Self-Regulation dan Revenge Bedtime
+      Procrastination pada Mahasiswa Jakarta
   - type: link
-    url: "https://www.simplypsychology.com/articles/revenge-bedtime-procrastination"
-    label: "Simply Psychology 2026: Revenge Bedtime Procrastination"
+    url: 'https://www.simplypsychology.com/articles/revenge-bedtime-procrastination'
+    label: 'Simply Psychology 2026: Revenge Bedtime Procrastination'
   - type: link
-    url: "https://www.simplypsychology.com/articles/main-character-syndrome"
-    label: "Simply Psychology 2026: Main Character Syndrome"
+    url: 'https://www.simplypsychology.com/articles/main-character-syndrome'
+    label: 'Simply Psychology 2026: Main Character Syndrome'
   - type: link
-    url: "https://journal.untar.ac.id/index.php/provitae/article/view/36957"
-    label: "Khou et al. 2024, Provitae: Gambaran Revenge Bedtime Procrastination Pada Mahasiswa"
+    url: 'https://journal.untar.ac.id/index.php/provitae/article/view/36957'
+    label: >-
+      Khou et al. 2024, Provitae: Gambaran Revenge Bedtime Procrastination Pada
+      Mahasiswa
 featured: false
 readingTime: 8
 humanSignature: true

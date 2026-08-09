@@ -1,54 +1,82 @@
 ---
-title: "AI Divide Indonesia: 70% Gen Z Tidak Pakai AI, Bukan Tidak Mau, Kuota Mahal"
-slug: "ai-divide-indonesia-gen-z-tidak-pakai-ai-kuota-mahal"
-excerpt: "Survei APJII 2026: hanya 29,4% Gen Z pakai AI. 70,6% tidak. Bukan tidak mau, 35,5% tidak tahu AI, kuota mahal. AI divide bukan kemampuan, akses."
-publishedAt: "2026-08-15 05:00:00+00"
-status: "scheduled"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+title: 'AI Divide Indonesia: 70% Gen Z Tidak Pakai AI, Bukan Tidak Mau, Kuota Mahal'
+slug: ai-divide-indonesia-gen-z-tidak-pakai-ai-kuota-mahal
+excerpt: >-
+  Survei APJII 2026: hanya 29,4% Gen Z pakai AI. 70,6% tidak. Bukan tidak mau,
+  35,5% tidak tahu AI, kuota mahal. AI divide bukan kemampuan, akses.
+publishedAt: '2026-08-15 05:00:00+00'
+status: scheduled
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["ai-divide", "gen-z", "apjii", "kesenjangan-digital", "literasi-ai", "adopsi-ai", "kuota-internet"]
-ogHeadline: "70% Gen Z tidak pakai AI, bukan tidak mampu"
-seoMetaTitle: "AI Divide Indonesia: 70% Gen Z Tidak Pakai AI, Kuota Mahal"
-seoMetaDescription: "Survei APJII 2026: hanya 29,4% Gen Z pakai AI. 70,6% tidak. Bukan tidak mau, 35,5% tidak tahu AI, kuota mahal. AI divide bukan kemampuan, akses."
+povTag: data
+tags:
+  - ai-divide
+  - gen-z
+  - apjii
+  - kesenjangan-digital
+  - literasi-ai
+  - adopsi-ai
+  - kuota-internet
+ogHeadline: '70% Gen Z tidak pakai AI, bukan tidak mampu'
+seoMetaTitle: 'AI Divide Indonesia: 70% Gen Z Tidak Pakai AI, Kuota Mahal'
+seoMetaDescription: >-
+  Survei APJII 2026: hanya 29,4% Gen Z pakai AI. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "adopsi AI Indonesia 2026"
-  - "kesenjangan digital AI Indonesia"
-  - "gen z tidak pakai AI"
-  - "literasi AI gen z Indonesia"
-  - "AI divide Indonesia kuota mahal"
-  - "survei APJII AI 2026"
-  - "gen z akses AI hiburan bukan produktivitas"
+  - adopsi AI Indonesia 2026
+  - kesenjangan digital AI Indonesia
+  - gen z tidak pakai AI
+  - literasi AI gen z Indonesia
+  - AI divide Indonesia kuota mahal
+  - survei APJII AI 2026
+  - gen z akses AI hiburan bukan produktivitas
 sourceReferences:
-  - type: "link"
-    url: "https://www.metrotvnews.com/read/kqYCdR56-survei-apjii-gen-z-paling-banyak-mengakses-ai"
-    label: "APJII Survei Penetrasi Internet 2026: Adopsi AI dan Gen Z (MetroTV, Jun 2026)"
-  - type: "link"
-    url: "https://teknologi.bisnis.com/read/20260622/84/1982423/pengguna-ai-di-ri-masih-182-gen-z-jadi-generasi-paling-aktif"
-    label: "APJII 2026: Pengguna AI di RI Masih 18,2% (Bisnis.com, Jun 2026)"
-  - type: "link"
-    url: "https://news.detik.com/berita/d-8513574/orang-indonesia-pakai-ai-paling-sering-buat-apa"
-    label: "APJII 2026: Penggunaan AI per Kategori (Detik.com, Jun 2026)"
-  - type: "link"
-    url: "https://www.antaranews.com/berita/5576225/survei-apjii-penetrasi-internet-di-indonesia-2026-capai-817-persen"
-    label: "APJII 2026: Penetrasi Internet 81,72% dan Alasan Tidak Internet (Antara, Jun 2026)"
-  - type: "link"
-    url: "https://hybrid.co.id/post/fakta-dan-data-pengguna-internet-indonesia-2026-gen-z-video-pendek-dan-info-lainnya/"
-    label: "APJII 2026: Digital Divide dan Kendala Daya Beli Gen Z (Hybrid.co.id, Jun 2026)"
-  - type: "link"
-    url: "https://www.bloombergtechnoz.com/detail-news/112110/survei-apjii-ai-makin-populer-di-ri-gen-z-pengguna-terbesar"
-    label: "APJII 2026: Gen Z Pengguna AI Terbesar per Kategori (Bloomberg Technoz, Jun 2026)"
-  - type: "link"
-    url: "https://www.cnnindonesia.com/teknologi/20260716130742-192-1381432/komdigi-ungkap-4-langkah-strategis-tutup-kesenjangan-ai-di-indonesia"
-    label: "Komdigi: 4 Langkah Strategis Tutup Kesenjangan AI (CNN Indonesia, Jul 2026)"
+  - type: link
+    url: >-
+      https://www.metrotvnews.com/read/kqYCdR56-survei-apjii-gen-z-paling-banyak-mengakses-ai
+    label: >-
+      APJII Survei Penetrasi Internet 2026: Adopsi AI dan Gen Z (MetroTV, Jun
+      2026)
+  - type: link
+    url: >-
+      https://teknologi.bisnis.com/read/20260622/84/1982423/pengguna-ai-di-ri-masih-182-gen-z-jadi-generasi-paling-aktif
+    label: 'APJII 2026: Pengguna AI di RI Masih 18,2% (Bisnis.com, Jun 2026)'
+  - type: link
+    url: >-
+      https://news.detik.com/berita/d-8513574/orang-indonesia-pakai-ai-paling-sering-buat-apa
+    label: 'APJII 2026: Penggunaan AI per Kategori (Detik.com, Jun 2026)'
+  - type: link
+    url: >-
+      https://www.antaranews.com/berita/5576225/survei-apjii-penetrasi-internet-di-indonesia-2026-capai-817-persen
+    label: >-
+      APJII 2026: Penetrasi Internet 81,72% dan Alasan Tidak Internet (Antara,
+      Jun 2026)
+  - type: link
+    url: >-
+      https://hybrid.co.id/post/fakta-dan-data-pengguna-internet-indonesia-2026-gen-z-video-pendek-dan-info-lainnya/
+    label: >-
+      APJII 2026: Digital Divide dan Kendala Daya Beli Gen Z (Hybrid.co.id, Jun
+      2026)
+  - type: link
+    url: >-
+      https://www.bloombergtechnoz.com/detail-news/112110/survei-apjii-ai-makin-populer-di-ri-gen-z-pengguna-terbesar
+    label: >-
+      APJII 2026: Gen Z Pengguna AI Terbesar per Kategori (Bloomberg Technoz,
+      Jun 2026)
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/teknologi/20260716130742-192-1381432/komdigi-ungkap-4-langkah-strategis-tutup-kesenjangan-ai-di-indonesia
+    label: >-
+      Komdigi: 4 Langkah Strategis Tutup Kesenjangan AI (CNN Indonesia, Jul
+      2026)
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

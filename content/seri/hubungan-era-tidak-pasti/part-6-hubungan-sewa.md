@@ -23,8 +23,8 @@ tags:
 ogHeadline: 'Kalau semua disewa, apakah cinta juga?'
 seoMetaTitle: 'Hubungan Sewa: Generasi yang Tidak Bisa Menjanjikan Masa Depan | TAM'
 seoMetaDescription: >-
-  Situationship, ghosting, friendship breakup, kesepian, menunda menikah. Semua
-  pola ini punya satu akar: ekonomi tidak pasti. Hubungan jadi sewa.
+  Situationship, ghosting, friendship breakup, kesepian, menunda menikah. Sistem
+  yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - hubungan gen z Indonesia
   - hubungan sewa gen z

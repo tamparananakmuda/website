@@ -19,11 +19,9 @@ tags:
   - bisnis-model
   - kesepian
   - gen-z
-ogHeadline: 'Dating app tidak ingin kamu ketemu pasangan'
+ogHeadline: Dating app tidak ingin kamu ketemu pasangan
 seoMetaTitle: 'Dating App Business Model: Mereka Tidak Ingin Kamu Jadian | TAM'
-seoMetaDescription: >-
-  Dating app churn 12.4% per bulan. Bisnis model mereka tidak dirancang untuk
-  membuatmu ketemu pasangan, tapi untuk membuatmu tetap mencari.
+seoMetaDescription: 'Dating app churn 12. Sistem yang nggak beri alasan, bukan kamu yang salah.'
 seoKeywords:
   - dating app business model
   - Tinder Bumble Indonesia
@@ -33,19 +31,22 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://retentioncheck.com/churn-benchmarks/dating-apps'
-    label: 'RetentionCheck - Dating app churn benchmarks 2026'
+    label: RetentionCheck - Dating app churn benchmarks 2026
   - type: link
     url: 'https://www.businessofapps.com/data/dating-app-benchmarks/'
-    label: 'Business of Apps - Dating app benchmarks 2026'
+    label: Business of Apps - Dating app benchmarks 2026
   - type: link
-    url: 'https://www.datingindustryinsights.com/resources/market-insights/dating-platform-unit-economics-analysis'
-    label: 'Dating Industry Insights - Unit economics analysis'
+    url: >-
+      https://www.datingindustryinsights.com/resources/market-insights/dating-platform-unit-economics-analysis
+    label: Dating Industry Insights - Unit economics analysis
   - type: link
-    url: 'https://www.datingindustryinsights.com/resources/market-insights/dating-app-revenue-models-compared'
-    label: 'Dating Industry Insights - Revenue models compared'
+    url: >-
+      https://www.datingindustryinsights.com/resources/market-insights/dating-app-revenue-models-compared
+    label: Dating Industry Insights - Revenue models compared
   - type: link
-    url: 'https://www.sec.gov/Archives/edgar/data/891103/000089110326000068/matchgroup2025annualreport.pdf'
-    label: 'Match Group 2025 Annual Report (SEC filing)'
+    url: >-
+      https://www.sec.gov/Archives/edgar/data/891103/000089110326000068/matchgroup2025annualreport.pdf
+    label: Match Group 2025 Annual Report (SEC filing)
 featured: false
 humanSignature: true
 factCheckStatus: verified

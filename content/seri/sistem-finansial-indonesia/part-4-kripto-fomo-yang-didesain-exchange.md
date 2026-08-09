@@ -22,8 +22,8 @@ tags:
 ogHeadline: 'Exchange untung dari volatilitas, bukan kenaikan'
 seoMetaTitle: 'Kripto Indonesia: FOMO yang Didesain Exchange, Bukan Investasi | TAM'
 seoMetaDescription: >-
-  Transaksi kripto Indonesia Rp650 triliun di 2024, 22 juta pengguna. Data
-  bongkar kenapa exchange selalu menang dari volatilitas, bukan kenaikan harga.
+  Transaksi kripto Indonesia Rp650 triliun di 2024, 22 juta pengguna. Sistem
+  yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - kripto Indonesia
   - Bappebti regulasi
@@ -31,19 +31,24 @@ seoKeywords:
   - transaksi kripto Indonesia
 sourceReferences:
   - type: link
-    url: 'https://money.kompas.com/read/2025/02/01/120000226/transaksi-kripto-indonesia-melonjak-4-kali-lipat-tembus-rp-650-61-triliun'
-    label: 'Kompas - Transaksi kripto Indonesia melonjak 4 kali lipat 2024'
+    url: >-
+      https://money.kompas.com/read/2025/02/01/120000226/transaksi-kripto-indonesia-melonjak-4-kali-lipat-tembus-rp-650-61-triliun
+    label: Kompas - Transaksi kripto Indonesia melonjak 4 kali lipat 2024
   - type: link
-    url: 'https://money.kompas.com/read/2026/01/11/141600626/nilai-transaksi-kripto-turun-sepanjang-2025-jumlah-konsumen-meningkat'
+    url: >-
+      https://money.kompas.com/read/2026/01/11/141600626/nilai-transaksi-kripto-turun-sepanjang-2025-jumlah-konsumen-meningkat
     label: 'Kompas - Nilai transaksi kripto turun 2025, konsumen meningkat'
   - type: link
-    url: 'https://www.tempo.co/ekonomi/perdagangan-aset-kripto-di-bappebti-capai-rp-650-61-triliun-di-tahun-2024-1198410'
+    url: >-
+      https://www.tempo.co/ekonomi/perdagangan-aset-kripto-di-bappebti-capai-rp-650-61-triliun-di-tahun-2024-1198410
     label: 'Tempo - Perdagangan aset kripto di Bappebti capai Rp650,61 triliun'
   - type: link
-    url: 'https://www.antaranews.com/berita/4561078/bappebti-transaksi-aset-kripto-di-indonesia-capai-rp55653-triliun'
+    url: >-
+      https://www.antaranews.com/berita/4561078/bappebti-transaksi-aset-kripto-di-indonesia-capai-rp55653-triliun
     label: 'ANTARA - Bappebti transaksi aset kripto capai Rp556,53 triliun'
   - type: link
-    url: 'https://www.kemendag.go.id/berita/siaran-pers/tumbuh-35616-persen-tahun-ini-transaksi-aset-kripto-capai-rp-55653-triliun'
+    url: >-
+      https://www.kemendag.go.id/berita/siaran-pers/tumbuh-35616-persen-tahun-ini-transaksi-aset-kripto-capai-rp-55653-triliun
     label: 'Kemendag - Transaksi aset kripto tumbuh 356,16 persen'
 featured: false
 humanSignature: true

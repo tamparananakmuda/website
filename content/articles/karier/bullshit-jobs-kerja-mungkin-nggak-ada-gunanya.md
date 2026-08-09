@@ -1,55 +1,98 @@
 ---
-title: "Bullshit Jobs: Kerjamu Mungkin Nggak Ada Gunanya"
-slug: "bullshit-jobs-kerja-mungkin-nggak-ada-gunanya"
-excerpt: "Gallup 2026: 80% pekerja global cuma bertahan. 37% bilang kerja mereka nggak bermakna. Dan AI akan mengekspos pekerjaan mana yang memang sia-sia."
-publishedAt: "2026-09-16 01:00:00+00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-korporat"
-author: "yovie-setiawan"
+title: 'Bullshit Jobs: Kerjamu Mungkin Nggak Ada Gunanya'
+slug: bullshit-jobs-kerja-mungkin-nggak-ada-gunanya
+excerpt: >-
+  Gallup 2026: 80% pekerja global cuma bertahan. 37% bilang kerja mereka nggak
+  bermakna. Dan AI akan mengekspos pekerjaan mana yang memang sia-sia.
+publishedAt: '2026-09-16 01:00:00+00'
+status: scheduled
+category: karier
+subcategory: karier-korporat
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags:
-  - "bullshit jobs"
-  - "pekerjaan sia-sia"
-  - "produktivitas"
-  - "gen z"
-  - "karier"
-  - "david graeber"
-  - "boreout"
-ogHeadline: "Kerjamu mungkin memang nggak ada gunanya"
-seoMetaTitle: "Bullshit Jobs: Kerjamu Mungkin Nggak Ada Gunanya"
-seoMetaDescription: "20% pekerja global yang engaged dengan kerja mereka. Sisanya cuma bertahan. Masalahmu bukan kamu malas, pekerjaanmu mungkin nggak ada gunanya."
+  - bullshit jobs
+  - pekerjaan sia-sia
+  - produktivitas
+  - gen z
+  - karier
+  - david graeber
+  - boreout
+ogHeadline: Kerjamu mungkin memang nggak ada gunanya
+seoMetaTitle: Kerjamu mungkin memang nggak ada gunanya | TAM
+seoMetaDescription: >-
+  20% pekerja global yang engaged dengan kerja mereka. Sisanya cuma bertahan.
+  Masalahmu bukan kamu malas, pekerjaanmu mungkin nggak ada gunanya.
 seoKeywords:
-  - "bullshit jobs indonesia"
-  - "pekerjaan sia-sia"
-  - "kerja tidak bermanfaat"
-  - "kenapa kerja terasa sia-sia"
-  - "meaningless work gen z"
-  - "david graeber bullshit jobs"
-  - "boreout syndrome indonesia"
-  - "gallup employee engagement indonesia"
+  - bullshit jobs indonesia
+  - pekerjaan sia-sia
+  - kerja tidak bermanfaat
+  - kenapa kerja terasa sia-sia
+  - meaningless work gen z
+  - david graeber bullshit jobs
+  - boreout syndrome indonesia
+  - gallup employee engagement indonesia
 sourceReferences:
-  - {"type":"data","url":"https://www.gallup.com/workplace/697904/state-of-the-global-workplace-global-data.aspx","label":"Gallup State of the Global Workplace 2026 - Global Data"}
-  - {"type":"data","url":"https://www.gallup.com/workplace/705674/state-global-workplace-indonesia-country-level-data.aspx","label":"Gallup State of the Global Workplace 2026 - Indonesia"}
-  - {"type":"data","url":"https://www.gallup.com/workplace/708071/global-employee-engagement-continues-decline.aspx","label":"Gallup - Global Employee Engagement Continues Decline"}
-  - {"type":"survey","url":"https://yougov.com/en-gb/articles/13005-british-jobs-meaningless","label":"YouGov - 37% British workers think jobs meaningless"}
-  - {"type":"reference","url":"https://davidgraeber.org/articles/i-had-to-guard-an-empty-room/","label":"David Graeber - On the Phenomenon of Bullshit Jobs"}
-  - {"type":"article","url":"https://www.surau.co/2025/06/19595/mengenal-fenomena-bullshit-job-saat-pekerjaan-terasa-sia-sia-dan-tak-bermakna/","label":"Surau.co - Mengenal Fenomena Bullshit Job"}
-  - {"type":"article","url":"https://jbr.id/resensi/bullshit-jobs-sebuah-buku-untuk-mengenal-pekerjaan-yang-sia-sia-9820/","label":"JBR - Bullshit Jobs book review"}
-  - {"type":"article","url":"https://www.kompas.id/artikel/harvard-ungkap-gen-z-ingin-pekerjaan-bermakna-tapi-kerjaan-layak-saja-sulit-di-indonesia","label":"Kompas.id - Gen Z Ingin Pekerjaan Bermakna"}
-  - {"type":"article","url":"https://www.cnnindonesia.com/gaya-hidup/20260720140523-284-1382706/kebalikan-dari-burnout-boreout-juga-mengancam-karyawan-apa-itu","label":"CNN Indonesia - Boreout Mengancam Karyawan"}
-  - {"type":"article","url":"https://periskop.id/ketenagakerjaan/20260803/boreout-kerja-tiap-hari-tapi-merasa-kosong","label":"Periskop.id - Boreout Kerja Tiap Hari tapi Merasa Kosong"}
-  - {"type":"report","url":"https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/","label":"WEF Future of Jobs Report 2025"}
-  - {"type":"academic","url":"https://doi.org/10.51878/paedagogy.v5i4.7621","label":"Paedagogy Journal - Boreout Scale Indonesia"}
-  - {"type":"article","url":"https://www.kompas.com/tren/read/2026/02/12/103551965/pekerja-indonesia-paling-bahagia-tapi-produktivitas-tercecer","label":"Kompas - Pekerja Indonesia Paling Bahagia tapi Produktivitas Tercecer"}
-  - {"type":"article","url":"https://www.kompas.com/tren/read/2026/05/08/150000365/ada-apa-dengan-gen-z-ogah-loyal-dan-emoh-naik-jabatan-","label":"Kompas - Gen Z Ogah Loyal dan Emoh Naik Jabatan"}
+  - type: data
+    url: >-
+      https://www.gallup.com/workplace/697904/state-of-the-global-workplace-global-data.aspx
+    label: Gallup State of the Global Workplace 2026 - Global Data
+  - type: data
+    url: >-
+      https://www.gallup.com/workplace/705674/state-global-workplace-indonesia-country-level-data.aspx
+    label: Gallup State of the Global Workplace 2026 - Indonesia
+  - type: data
+    url: >-
+      https://www.gallup.com/workplace/708071/global-employee-engagement-continues-decline.aspx
+    label: Gallup - Global Employee Engagement Continues Decline
+  - type: survey
+    url: 'https://yougov.com/en-gb/articles/13005-british-jobs-meaningless'
+    label: YouGov - 37% British workers think jobs meaningless
+  - type: reference
+    url: 'https://davidgraeber.org/articles/i-had-to-guard-an-empty-room/'
+    label: David Graeber - On the Phenomenon of Bullshit Jobs
+  - type: article
+    url: >-
+      https://www.surau.co/2025/06/19595/mengenal-fenomena-bullshit-job-saat-pekerjaan-terasa-sia-sia-dan-tak-bermakna/
+    label: Surau.co - Mengenal Fenomena Bullshit Job
+  - type: article
+    url: >-
+      https://jbr.id/resensi/bullshit-jobs-sebuah-buku-untuk-mengenal-pekerjaan-yang-sia-sia-9820/
+    label: JBR - Bullshit Jobs book review
+  - type: article
+    url: >-
+      https://www.kompas.id/artikel/harvard-ungkap-gen-z-ingin-pekerjaan-bermakna-tapi-kerjaan-layak-saja-sulit-di-indonesia
+    label: Kompas.id - Gen Z Ingin Pekerjaan Bermakna
+  - type: article
+    url: >-
+      https://www.cnnindonesia.com/gaya-hidup/20260720140523-284-1382706/kebalikan-dari-burnout-boreout-juga-mengancam-karyawan-apa-itu
+    label: CNN Indonesia - Boreout Mengancam Karyawan
+  - type: article
+    url: >-
+      https://periskop.id/ketenagakerjaan/20260803/boreout-kerja-tiap-hari-tapi-merasa-kosong
+    label: Periskop.id - Boreout Kerja Tiap Hari tapi Merasa Kosong
+  - type: report
+    url: >-
+      https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/
+    label: WEF Future of Jobs Report 2025
+  - type: academic
+    url: 'https://doi.org/10.51878/paedagogy.v5i4.7621'
+    label: Paedagogy Journal - Boreout Scale Indonesia
+  - type: article
+    url: >-
+      https://www.kompas.com/tren/read/2026/02/12/103551965/pekerja-indonesia-paling-bahagia-tapi-produktivitas-tercecer
+    label: Kompas - Pekerja Indonesia Paling Bahagia tapi Produktivitas Tercecer
+  - type: article
+    url: >-
+      https://www.kompas.com/tren/read/2026/05/08/150000365/ada-apa-dengan-gen-z-ogah-loyal-dan-emoh-naik-jabatan-
+    label: Kompas - Gen Z Ogah Loyal dan Emoh Naik Jabatan
 featured: false
 readingTime: 11
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

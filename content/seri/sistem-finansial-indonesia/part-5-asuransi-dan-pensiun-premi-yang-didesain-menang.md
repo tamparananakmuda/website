@@ -23,8 +23,8 @@ tags:
 ogHeadline: 'Asuransi unit link: kamu bayar, sistem yang untung'
 seoMetaTitle: 'Asuransi Unit Link & BPJS Pensiun: Premi yang Didesain Menang | TAM'
 seoMetaDescription: >-
-  Klaim surrender asuransi jiwa Rp77 triliun di 2024, 74,5% dari unit link. Dana
-  JHT BPJS Rp489 triliun. Data bongkar kenapa premi selalu menang dari nasabah.
+  Klaim surrender asuransi jiwa Rp77 triliun di 2024, 74,5% dari unit link.
+  Sistem yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - asuransi Indonesia
   - unit link
@@ -32,19 +32,24 @@ seoKeywords:
   - dana pensiun Indonesia
 sourceReferences:
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara'
-    label: 'Bisnis.com - Klaim surrender asuransi jiwa 2024 didominasi unit linked'
+    url: >-
+      https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara
+    label: Bisnis.com - Klaim surrender asuransi jiwa 2024 didominasi unit linked
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250306/215/1859085/bpjs-ketenagakerjaan-bidik-dana-kelolaan-naik-1137-pada-2025'
+    url: >-
+      https://finansial.bisnis.com/read/20250306/215/1859085/bpjs-ketenagakerjaan-bidik-dana-kelolaan-naik-1137-pada-2025
     label: 'Bisnis.com - BPJS Ketenagakerjaan bidik dana kelolaan naik 11,37%'
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250218/215/1840586/bpjs-ketenagakerjaan-bayar-klaim-rp6072-triliun-pada-2024'
+    url: >-
+      https://finansial.bisnis.com/read/20250218/215/1840586/bpjs-ketenagakerjaan-bayar-klaim-rp6072-triliun-pada-2024
     label: 'Bisnis.com - BPJS Ketenagakerjaan bayar klaim Rp60,72 triliun 2024'
   - type: link
-    url: 'https://keuangan.kontan.co.id/news/kinerja-program-jht-jaminan-pensiun-bpjs-ketenagakerjaan-diprediksi-positif-di-2025'
-    label: 'Kontan - Kinerja program JHT & Jaminan Pensiun BPJS 2025'
+    url: >-
+      https://keuangan.kontan.co.id/news/kinerja-program-jht-jaminan-pensiun-bpjs-ketenagakerjaan-diprediksi-positif-di-2025
+    label: Kontan - Kinerja program JHT & Jaminan Pensiun BPJS 2025
   - type: link
-    url: 'https://www.bpjsketenagakerjaan.go.id/berita/29299/Dana-Kelolaan-Program-Jaminan-Pensiun-BPJS-Ketenagakerjaan-Capai-Rp-189,2-Triliun'
+    url: >-
+      https://www.bpjsketenagakerjaan.go.id/berita/29299/Dana-Kelolaan-Program-Jaminan-Pensiun-BPJS-Ketenagakerjaan-Capai-Rp-189,2-Triliun
     label: 'BPJS Ketenagakerjaan - Dana kelolaan Jaminan Pensiun Rp189,2 triliun'
 featured: false
 humanSignature: true

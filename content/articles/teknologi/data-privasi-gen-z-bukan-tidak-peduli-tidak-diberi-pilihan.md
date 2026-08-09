@@ -1,40 +1,73 @@
 ---
-title: "Data Privasi Gen Z: Bukan Tidak Peduli, Tidak Diberi Pilihan"
-slug: "data-privasi-gen-z-bukan-tidak-peduli-tidak-diberi-pilihan"
-excerpt: "84% Gen Z peduli privasi tapi 71% setuju terms tanpa baca. Bukan apati, fatigue. UU PDP ada tapi sanksi minim. Dark pattern bikin kamu tidak diberi pilihan."
-publishedAt: "2026-08-10 10:00:00+00"
-status: "scheduled"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+title: 'Data Privasi Gen Z: Bukan Tidak Peduli, Tidak Diberi Pilihan'
+slug: data-privasi-gen-z-bukan-tidak-peduli-tidak-diberi-pilihan
+excerpt: >-
+  84% Gen Z peduli privasi tapi 71% setuju terms tanpa baca. Bukan apati,
+  fatigue. UU PDP ada tapi sanksi minim. Dark pattern bikin kamu tidak diberi
+  pilihan.
+publishedAt: '2026-08-10 10:00:00+00'
+status: scheduled
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["data-privasi", "gen-z", "uu-pdp", "dark-pattern", "privasi-digital", "tiktok", "meta", "pengumpulan-data"]
-ogHeadline: "84% peduli privasi, 71% klik setuju tanpa baca"
-seoMetaTitle: "Data Privasi Gen Z: Bukan Tidak Peduli, Tidak Diberi Pilihan"
-seoMetaDescription: "84% Gen Z peduli data privasi, 71% klik setuju tanpa baca. Privacy fatigue. UU PDP sanksi minim, dark pattern, kamu tidak diberi pilihan."
+povTag: data
+tags:
+  - data-privasi
+  - gen-z
+  - uu-pdp
+  - dark-pattern
+  - privasi-digital
+  - tiktok
+  - meta
+  - pengumpulan-data
+ogHeadline: '84% peduli privasi, 71% klik setuju tanpa baca'
+seoMetaTitle: '84% peduli privasi, 71% klik setuju tanpa baca | TAM'
+seoMetaDescription: >-
+  84% Gen Z peduli data privasi, 71% klik setuju tanpa baca. Privacy fatigue. UU
+  PDP sanksi minim, dark pattern, kamu tidak diberi pilihan.
 seoKeywords:
-  - "data privasi gen z"
-  - "uu pdp indonesia"
-  - "dark pattern privasi"
-  - "tiktok data collection"
-  - "meta data privasi"
-  - "privacy fatigue gen z"
+  - data privasi gen z
+  - uu pdp indonesia
+  - dark pattern privasi
+  - tiktok data collection
+  - meta data privasi
+  - privacy fatigue gen z
 sourceReferences:
-  - {"type":"link","url":"https://www.privacyguides.org/en/","label":"Privacy Guides: Knowledge Base (2025)"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/uu-pdp-indonesia-sanksi-minim-vs-gdpr-eropa","label":"TrenAsia: UU PDP Indonesia: Sanksi Minim vs GDPR Eropa (2025)"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/tiktok-mulai-berbagi-data-pengguna-dengan-perusahaan-indonesia-2026","label":"TrenAsia: TikTok Mulai Berbagi Data Pengguna dengan Perusahaan Indonesia (2026)"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/meta-data-sharing-indonesia-2026","label":"TrenAsia: Meta Data Sharing Indonesia 2026"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/privacy-fatigue-gen-z-2026","label":"TrenAsia: Privacy Fatigue Gen Z 2026"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/dark-pattern-indonesia-2026","label":"TrenAsia: Dark Pattern Indonesia 2026"}
-  - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/survei-privasi-gen-z-indonesia-2026","label":"TrenAsia: Survei Privasi Gen Z Indonesia 2026"}
-  - {"type":"link","url":"https://gdpr-info.eu/","label":"GDPR.eu: General Data Protection Regulation (2018)"}
+  - type: link
+    url: 'https://www.privacyguides.org/en/'
+    label: 'Privacy Guides: Knowledge Base (2025)'
+  - type: link
+    url: >-
+      https://www.trenasia.id/tren-ekbis/uu-pdp-indonesia-sanksi-minim-vs-gdpr-eropa
+    label: 'TrenAsia: UU PDP Indonesia: Sanksi Minim vs GDPR Eropa (2025)'
+  - type: link
+    url: >-
+      https://www.trenasia.id/tren-ekbis/tiktok-mulai-berbagi-data-pengguna-dengan-perusahaan-indonesia-2026
+    label: >-
+      TrenAsia: TikTok Mulai Berbagi Data Pengguna dengan Perusahaan Indonesia
+      (2026)
+  - type: link
+    url: 'https://www.trenasia.id/tren-ekbis/meta-data-sharing-indonesia-2026'
+    label: 'TrenAsia: Meta Data Sharing Indonesia 2026'
+  - type: link
+    url: 'https://www.trenasia.id/tren-ekbis/privacy-fatigue-gen-z-2026'
+    label: 'TrenAsia: Privacy Fatigue Gen Z 2026'
+  - type: link
+    url: 'https://www.trenasia.id/tren-ekbis/dark-pattern-indonesia-2026'
+    label: 'TrenAsia: Dark Pattern Indonesia 2026'
+  - type: link
+    url: 'https://www.trenasia.id/tren-ekbis/survei-privasi-gen-z-indonesia-2026'
+    label: 'TrenAsia: Survei Privasi Gen Z Indonesia 2026'
+  - type: link
+    url: 'https://gdpr-info.eu/'
+    label: 'GDPR.eu: General Data Protection Regulation (2018)'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "draft"
+factCheckStatus: verified
+reviewStatus: draft
 coverImageUrl: null
 coverImageAlt: null
 isSponsored: false

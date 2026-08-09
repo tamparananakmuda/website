@@ -23,8 +23,8 @@ tags:
 ogHeadline: '20 juta investor ritel, untungnya bukan kamu'
 seoMetaTitle: 'Saham Indonesia IHSG: Kasino yang Dikemas Investasi | TAM'
 seoMetaDescription: >-
-  20 juta investor ritel, 99,78% lokal. IHSG 2024 anjlok 2,65%. Data KSEI
-  bongkar kenapa investor ritel jadi exit liquidity di pasar saham Indonesia.
+  20 juta investor ritel, 99,78% lokal. Sistem yang nggak beri alasan, bukan
+  kamu yang salah.
 seoKeywords:
   - saham Indonesia
   - IHSG
@@ -33,16 +33,18 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://web.ksei.co.id/Files/Statistik_Publik_Desember_2025.Pdf'
-    label: 'KSEI Statistik Pasar Modal Desember 2025'
+    label: KSEI Statistik Pasar Modal Desember 2025
   - type: link
-    url: 'https://www.antaranews.com/berita/5327392/jumlah-investor-pasar-modal-ri-capai-2032-juta-sid-di-akhir-2025'
+    url: >-
+      https://www.antaranews.com/berita/5327392/jumlah-investor-pasar-modal-ri-capai-2032-juta-sid-di-akhir-2025
     label: 'ANTARA News - Investor pasar modal RI capai 20,32 juta SID'
   - type: link
     url: 'https://web.ksei.co.id/files/Statistik_Publik_Juli_2025.pdf'
-    label: 'KSEI Statistik Pasar Modal Juli 2025'
+    label: KSEI Statistik Pasar Modal Juli 2025
   - type: link
-    url: 'https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara'
-    label: 'Bisnis.com - Klaim surrender asuransi jiwa 2024 didominasi unit linked'
+    url: >-
+      https://finansial.bisnis.com/read/20250313/215/1860919/klaim-surrender-asuransi-jiwa-2024-didominasi-unit-linked-ojk-buka-suara
+    label: Bisnis.com - Klaim surrender asuransi jiwa 2024 didominasi unit linked
 featured: false
 humanSignature: true
 factCheckStatus: pending

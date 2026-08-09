@@ -1,6 +1,7 @@
 ---
 title: 'Sintesis: Media Nggak Gagal, Didesain Bikin Kamu Nggak Percaya'
-slug: sistem-media-indonesia-part-7-sintesis-media-tidak-gagal-didesain-bikin-kamu-nggak-percaya
+slug: >-
+  sistem-media-indonesia-part-7-sintesis-media-tidak-gagal-didesain-bikin-kamu-nggak-percaya
 excerpt: >-
   Sintesis: media didesain bikin kamu marah, terbelah, nggak percaya. Karena
   nggak percaya = mudah dikontrol. Media literacy bukan solusi.
@@ -20,7 +21,7 @@ tags:
   - disinformasi
   - demokrasi
   - indonesia
-ogHeadline: 'Media literacy bukan solusi untuk sistem media'
+ogHeadline: Media literacy bukan solusi untuk sistem media
 seoMetaTitle: 'Media Indonesia Nggak Gagal: Didesain Bikin Kamu Nggak Percaya | TAM'
 seoMetaDescription: >-
   Sintesis 6 part: kepemilikan, klik, algoritma, hoax, influencer, lokal. Media
@@ -35,19 +36,23 @@ seoKeywords:
   - RSF press freedom index 2025
 sourceReferences:
   - type: link
-    url: 'https://saferinternetlab.org/wp-content/uploads/2025/02/EN_Rilis-Survei-Publik-CSIS_SAIL_.pdf'
-    label: 'CSIS/SAIL - Mis/Disinformation Map in Indonesia 2024'
+    url: >-
+      https://saferinternetlab.org/wp-content/uploads/2025/02/EN_Rilis-Survei-Publik-CSIS_SAIL_.pdf
+    label: CSIS/SAIL - Mis/Disinformation Map in Indonesia 2024
   - type: link
-    url: 'https://rsf.org/en/rsf-world-press-freedom-index-2025-economic-fragility-leading-threat-press-freedom'
+    url: >-
+      https://rsf.org/en/rsf-world-press-freedom-index-2025-economic-fragility-leading-threat-press-freedom
     label: 'RSF - World Press Freedom Index 2025: Economic Fragility'
   - type: link
     url: 'https://rsf.org/en/country/indonesia'
-    label: 'RSF - Indonesia Country Profile 2025'
+    label: RSF - Indonesia Country Profile 2025
   - type: link
-    url: 'https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia'
-    label: 'Kompas - Makna Kenaikan Kepercayaan Publik terhadap Media 2025'
+    url: >-
+      https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia
+    label: Kompas - Makna Kenaikan Kepercayaan Publik terhadap Media 2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** Media lokal mati, 549 PHK 2025, 4 jenis kematian media, daerah tanpa suara. Baca [part 6: Kematian Jurnalisme Lokal](/artikel/sistem-media-indonesia-part-6-kematian-jurnalisme-lokal-daerah-tanpa-suara)

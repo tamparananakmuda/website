@@ -1,56 +1,101 @@
 ---
-title: "Kerja Remote Bukan Bebas, Laptop-mu Jadi Pengawas"
-slug: "kerja-remote-bukan-bebas-laptop-jadi-pengawas"
-excerpt: "Kamu pikir WFH bebas. 70% perusahaan Indonesia pasang monitoring di laptop kerja: keylogger, screenshot, webcam tracking. Bukan untuk bantu kamu, untuk kontrol."
-publishedAt: "2026-09-16 01:00:00+00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-korporat"
-author: "yovie-setiawan"
+title: 'Kerja Remote Bukan Bebas, Laptop-mu Jadi Pengawas'
+slug: kerja-remote-bukan-bebas-laptop-jadi-pengawas
+excerpt: >-
+  Kamu pikir WFH bebas. 70% perusahaan Indonesia pasang monitoring di laptop
+  kerja: keylogger, screenshot, webcam tracking. Bukan untuk bantu kamu, untuk
+  kontrol.
+publishedAt: '2026-09-16 01:00:00+00'
+status: scheduled
+category: karier
+subcategory: karier-korporat
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags:
-  - "employee-monitoring"
-  - "bossware"
-  - "kerja-remote"
-  - "privasi"
-  - "uu-pdp"
-  - "surveillance"
-  - "karier"
-ogHeadline: "Laptop kerjamu bukan alat, itu pengawas perusahaan"
-seoMetaTitle: "Kerja Remote Bukan Bebas, Laptop-mu Jadi Pengawas"
-seoMetaDescription: "Kamu pikir WFH bebas. 70% perusahaan Indonesia pasang monitoring di laptop kerja: keylogger, screenshot, webcam tracking. Bukan untuk bantu kamu, untuk kontrol."
+  - employee-monitoring
+  - bossware
+  - kerja-remote
+  - privasi
+  - uu-pdp
+  - surveillance
+  - karier
+ogHeadline: 'Laptop kerjamu bukan alat, itu pengawas perusahaan'
+seoMetaTitle: 'Laptop kerjamu bukan alat, itu pengawas perusahaan | TAM'
+seoMetaDescription: 'Kamu pikir WFH bebas. Sistem yang nggak beri alasan, bukan kamu yang salah.'
 seoKeywords:
-  - "kerja remote"
-  - "employee monitoring"
-  - "software pengawas karyawan"
-  - "WFH privasi"
-  - "surveillance workplace indonesia"
-  - "laptop kerja diawasi"
-  - "productivity tracking"
-  - "UU PDP kerja"
+  - kerja remote
+  - employee monitoring
+  - software pengawas karyawan
+  - WFH privasi
+  - surveillance workplace indonesia
+  - laptop kerja diawasi
+  - productivity tracking
+  - UU PDP kerja
 sourceReferences:
-  - {"type":"link","url":"https://www.employee-monitoring.net/resources/state-of-employee-monitoring-report-2026","label":"eMonitor State of Employee Monitoring Report 2026"}
-  - {"type":"link","url":"https://www.expressvpn.com/blog/us-workers-quit-workplace-surveillance-survey/","label":"ExpressVPN Workplace Surveillance Survey 2025"}
-  - {"type":"link","url":"https://www.cnbcindonesia.com/tech/20260422143832-37-728932/taktik-baru-perusahaan-lacak-gerak-gerik-karyawan-bikin-ngeri","label":"CNBC Indonesia: Meta pasang software pelacak karyawan April 2026"}
-  - {"type":"link","url":"https://www.cnbcindonesia.com/tech/20260603111831-37-739689/zuckerberg-akhirnya-tobat-setelah-terus-terusan-zalim-ke-pegawai","label":"CNBC Indonesia: Zuckerberg backtracked monitoring June 2026"}
-  - {"type":"link","url":"https://www.gao.gov/assets/gao-25-107126.pdf","label":"US GAO Report: Digital Surveillance Effects on Workers 2025"}
-  - {"type":"link","url":"https://journals.sagepub.com/doi/10.1177/23294965241228874","label":"Sage Journals: Workplace Surveillance and Worker Well-Being (N=3508)"}
-  - {"type":"link","url":"https://www.employee-monitoring.net/compliance/employee-monitoring-laws-indonesia","label":"Employee Monitoring Laws Indonesia 2026: UU PDP Guide"}
-  - {"type":"link","url":"https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia","label":"Chambers: Data Protection & Privacy 2026 Indonesia"}
-  - {"type":"link","url":"https://journal.iaimnumetrolampung.ac.id/index.php/jm/article/view/7719","label":"Jurnal Mahkamah: Digital Workplace Monitoring and Privacy Rights in Indonesia (2026)"}
-  - {"type":"link","url":"https://teknologi.bisnis.com/read/20260423/84/1968711/meta-rekam-aktivitas-klik-dan-keyboard-karyawan-untuk-latih-model-ai","label":"Bisnis.com: Meta Rekam Aktivitas Klik dan Keyboard Karyawan untuk Latih AI"}
-  - {"type":"link","url":"https://grit-ai.asia/2026/02/21/pemantauan-komunikasi-karyawan-dan-penggunaan-internet-batas-hukum-di-indonesia/","label":"GRIT AI: Pemantauan Komunikasi Karyawan dan Batas Hukum di Indonesia"}
-  - {"type":"link","url":"https://www.gadjian.com/blog/2026/02/19/productivity-monitoring-software-indonesia/","label":"Gadjian: Productivity Monitoring Software for Indonesian Remote Teams"}
-  - {"type":"link","url":"https://www.hubstaff.com/blog/employee-monitoring-statistics/","label":"Hubstaff: Employee Monitoring Statistics 2026"}
-  - {"type":"link","url":"https://www.gallup.com/workplace/705674/state-global-workplace-indonesia-country-level-data.aspx","label":"Gallup State of the Global Workplace 2026: Indonesia"}
-  - {"type":"link","url":"https://ejournal.mandalanursa.org/index.php/JIHAD/article/view/10402","label":"JIHAD Journal: Criminal Liability for Off-Duty Worker Surveillance (2026)"}
+  - type: link
+    url: >-
+      https://www.employee-monitoring.net/resources/state-of-employee-monitoring-report-2026
+    label: eMonitor State of Employee Monitoring Report 2026
+  - type: link
+    url: >-
+      https://www.expressvpn.com/blog/us-workers-quit-workplace-surveillance-survey/
+    label: ExpressVPN Workplace Surveillance Survey 2025
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260422143832-37-728932/taktik-baru-perusahaan-lacak-gerak-gerik-karyawan-bikin-ngeri
+    label: 'CNBC Indonesia: Meta pasang software pelacak karyawan April 2026'
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260603111831-37-739689/zuckerberg-akhirnya-tobat-setelah-terus-terusan-zalim-ke-pegawai
+    label: 'CNBC Indonesia: Zuckerberg backtracked monitoring June 2026'
+  - type: link
+    url: 'https://www.gao.gov/assets/gao-25-107126.pdf'
+    label: 'US GAO Report: Digital Surveillance Effects on Workers 2025'
+  - type: link
+    url: 'https://journals.sagepub.com/doi/10.1177/23294965241228874'
+    label: 'Sage Journals: Workplace Surveillance and Worker Well-Being (N=3508)'
+  - type: link
+    url: >-
+      https://www.employee-monitoring.net/compliance/employee-monitoring-laws-indonesia
+    label: 'Employee Monitoring Laws Indonesia 2026: UU PDP Guide'
+  - type: link
+    url: >-
+      https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/indonesia
+    label: 'Chambers: Data Protection & Privacy 2026 Indonesia'
+  - type: link
+    url: 'https://journal.iaimnumetrolampung.ac.id/index.php/jm/article/view/7719'
+    label: >-
+      Jurnal Mahkamah: Digital Workplace Monitoring and Privacy Rights in
+      Indonesia (2026)
+  - type: link
+    url: >-
+      https://teknologi.bisnis.com/read/20260423/84/1968711/meta-rekam-aktivitas-klik-dan-keyboard-karyawan-untuk-latih-model-ai
+    label: 'Bisnis.com: Meta Rekam Aktivitas Klik dan Keyboard Karyawan untuk Latih AI'
+  - type: link
+    url: >-
+      https://grit-ai.asia/2026/02/21/pemantauan-komunikasi-karyawan-dan-penggunaan-internet-batas-hukum-di-indonesia/
+    label: 'GRIT AI: Pemantauan Komunikasi Karyawan dan Batas Hukum di Indonesia'
+  - type: link
+    url: >-
+      https://www.gadjian.com/blog/2026/02/19/productivity-monitoring-software-indonesia/
+    label: 'Gadjian: Productivity Monitoring Software for Indonesian Remote Teams'
+  - type: link
+    url: 'https://www.hubstaff.com/blog/employee-monitoring-statistics/'
+    label: 'Hubstaff: Employee Monitoring Statistics 2026'
+  - type: link
+    url: >-
+      https://www.gallup.com/workplace/705674/state-global-workplace-indonesia-country-level-data.aspx
+    label: 'Gallup State of the Global Workplace 2026: Indonesia'
+  - type: link
+    url: 'https://ejournal.mandalanursa.org/index.php/JIHAD/article/view/10402'
+    label: 'JIHAD Journal: Criminal Liability for Off-Duty Worker Surveillance (2026)'
 featured: false
 readingTime: 9
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

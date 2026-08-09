@@ -1,52 +1,91 @@
 ---
-title: "Tempat Ketiga Mati, Gen Z Bayar atau Pulang"
-slug: "tempat-ketiga-mati-gen-z-bayar-atau-pulang"
-excerpt: "173 mall di Jakarta, taman gratis tinggal cerita. Gen Z bukan anti-sosial, cuma nggak punya tempat ketiga yang gratis."
-publishedAt: "2026-09-18T01:00:00.000Z"
-status: "scheduled"
-category: "kehidupan"
+title: 'Tempat Ketiga Mati, Gen Z Bayar atau Pulang'
+slug: tempat-ketiga-mati-gen-z-bayar-atau-pulang
+excerpt: >-
+  173 mall di Jakarta, taman gratis tinggal cerita. Gen Z bukan anti-sosial,
+  cuma nggak punya tempat ketiga yang gratis.
+publishedAt: '2026-09-18T01:00:00.000Z'
+status: scheduled
+category: kehidupan
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags:
-  - "gen-z"
-  - "ruang-publik"
-  - "tempat-ketiga"
-  - "mall"
-  - "jakarta"
-  - "urbanisasi"
-  - "nongkrong"
-  - "ruang-hijau"
-ogHeadline: "173 Mall di Jakarta, Taman Gratis Tinggal Cerita"
-seoMetaTitle: "Tempat Ketiga Mati, Gen Z Bayar atau Pulang"
-seoMetaDescription: "Gen Z dibilang anti-sosial karena cuma di rumah. Padahal Jakarta punya 173 mall tapi ruang hijau cuma 5,59%. Nongkrong butuh uang. Kamu bukan anti-sosial."
+  - gen-z
+  - ruang-publik
+  - tempat-ketiga
+  - mall
+  - jakarta
+  - urbanisasi
+  - nongkrong
+  - ruang-hijau
+ogHeadline: '173 Mall di Jakarta, Taman Gratis Tinggal Cerita'
+seoMetaTitle: '173 Mall di Jakarta, Taman Gratis Tinggal Cerita | TAM'
+seoMetaDescription: >-
+  Gen Z dibilang anti-sosial karena cuma di rumah. Padahal Jakarta punya 173
+  mall tapi ruang hijau cuma 5,59%. Nongkrong butuh uang. Kamu bukan
+  anti-sosial.
 seoKeywords:
-  - "tempat ketiga"
-  - "gen z"
-  - "ruang publik"
-  - "mall jakarta"
-  - "ruang terbuka hijau"
-  - "biaya nongkrong"
-  - "jakarta"
+  - tempat ketiga
+  - gen z
+  - ruang publik
+  - mall jakarta
+  - ruang terbuka hijau
+  - biaya nongkrong
+  - jakarta
 sourceReferences:
-  - {"type":"link","url":"https://www.tempo.co/prelude/taman-kota-vs-taman-belanja--925032","label":"Tempo: Taman Kota vs Taman Belanja - Jakarta 173 mall, RTH hanya 83,27 hektare"}
-  - {"type":"link","url":"https://www.kompas.com/properti/read/2026/05/06/133100021/penasaran-berapa-luas-seluruh-ruang-terbuka-hijau-di-dki-","label":"Kompas, Mei 2026: RTH Jakarta 3.703,56 hektare (5,59%), target 30%"}
-  - {"type":"link","url":"https://nasional.kompas.com/read/2026/01/23/12034971/rth-jakarta-baru-531-persen-taman-kota-dinilai-belum-jadi-penyangga-ekologis","label":"Kompas, Jan 2026: RTH Jakarta baru 5,31%, jauh dari target 30%"}
-  - {"type":"link","url":"https://id.wikipedia.org/wiki/Ruang_ketiga","label":"Wikipedia: Ruang Ketiga (Ray Oldenburg, The Great Good Place 1989)"}
-  - {"type":"link","url":"https://greatgoodplace.org/the-third-place-first-defined/","label":"Ray Oldenburg: The Third Place first defined - greatgoodplace.org"}
-  - {"type":"link","url":"https://www.unesco.org/en/articles/third-places-true-citizen-spaces","label":"UNESCO: Third Places, True Citizen Spaces (Oldenburg & Christensen)"}
-  - {"type":"link","url":"https://publikasi.mercubuana.ac.id/index.php/virtuvian/article/view/18759","label":"Jurnal Vitruvian Mercubuana: Ruang Ketiga di DKI Jakarta Era Digital"}
-  - {"type":"link","url":"https://www.idntimes.com/life/inspiration/kenapa-sekarang-mau-nongkrong-ngopi-aja-harus-mikir-dua-kali-00-17z4g-k1v5b1","label":"IDN Times: Kenapa nongkrong ngopi sekarang harus mikir dua kali"}
-  - {"type":"link","url":"https://energijuangnews.com/2026/05/13/jakarta-di-mata-gen-z-ruang-publik-bukan-sekadar-taman-tapi-penyegaran-mental/","label":"Energi Juang News, Mei 2026: Jakarta di Mata Gen Z - Ruang Publik sebagai Penyegaran Mental"}
-  - {"type":"link","url":"https://www.titiktemu.co/gaya-hidup/8617180687/third-place-sudah-punah-di-jakarta-kenapa-kita-kehilangan-ruang-untuk-sekadar-ada","label":"TitikTemu: Third Place Sudah Punah di Jakarta?"}
-  - {"type":"link","url":"https://nasional.kompas.com/read/2025/10/10/11045751/gen-z-dan-krisis-sunyi","label":"Kompas, Okt 2025: Gen Z dan Krisis Sunyi - BPS: 20% remaja 15-24 tahun gangguan emosional"}
+  - type: link
+    url: 'https://www.tempo.co/prelude/taman-kota-vs-taman-belanja--925032'
+    label: >-
+      Tempo: Taman Kota vs Taman Belanja - Jakarta 173 mall, RTH hanya 83,27
+      hektare
+  - type: link
+    url: >-
+      https://www.kompas.com/properti/read/2026/05/06/133100021/penasaran-berapa-luas-seluruh-ruang-terbuka-hijau-di-dki-
+    label: 'Kompas, Mei 2026: RTH Jakarta 3.703,56 hektare (5,59%), target 30%'
+  - type: link
+    url: >-
+      https://nasional.kompas.com/read/2026/01/23/12034971/rth-jakarta-baru-531-persen-taman-kota-dinilai-belum-jadi-penyangga-ekologis
+    label: 'Kompas, Jan 2026: RTH Jakarta baru 5,31%, jauh dari target 30%'
+  - type: link
+    url: 'https://id.wikipedia.org/wiki/Ruang_ketiga'
+    label: 'Wikipedia: Ruang Ketiga (Ray Oldenburg, The Great Good Place 1989)'
+  - type: link
+    url: 'https://greatgoodplace.org/the-third-place-first-defined/'
+    label: 'Ray Oldenburg: The Third Place first defined - greatgoodplace.org'
+  - type: link
+    url: 'https://www.unesco.org/en/articles/third-places-true-citizen-spaces'
+    label: 'UNESCO: Third Places, True Citizen Spaces (Oldenburg & Christensen)'
+  - type: link
+    url: 'https://publikasi.mercubuana.ac.id/index.php/virtuvian/article/view/18759'
+    label: 'Jurnal Vitruvian Mercubuana: Ruang Ketiga di DKI Jakarta Era Digital'
+  - type: link
+    url: >-
+      https://www.idntimes.com/life/inspiration/kenapa-sekarang-mau-nongkrong-ngopi-aja-harus-mikir-dua-kali-00-17z4g-k1v5b1
+    label: 'IDN Times: Kenapa nongkrong ngopi sekarang harus mikir dua kali'
+  - type: link
+    url: >-
+      https://energijuangnews.com/2026/05/13/jakarta-di-mata-gen-z-ruang-publik-bukan-sekadar-taman-tapi-penyegaran-mental/
+    label: >-
+      Energi Juang News, Mei 2026: Jakarta di Mata Gen Z - Ruang Publik sebagai
+      Penyegaran Mental
+  - type: link
+    url: >-
+      https://www.titiktemu.co/gaya-hidup/8617180687/third-place-sudah-punah-di-jakarta-kenapa-kita-kehilangan-ruang-untuk-sekadar-ada
+    label: 'TitikTemu: Third Place Sudah Punah di Jakarta?'
+  - type: link
+    url: >-
+      https://nasional.kompas.com/read/2025/10/10/11045751/gen-z-dan-krisis-sunyi
+    label: >-
+      Kompas, Okt 2025: Gen Z dan Krisis Sunyi - BPS: 20% remaja 15-24 tahun
+      gangguan emosional
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

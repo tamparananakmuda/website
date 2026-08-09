@@ -1,66 +1,84 @@
 ---
-title: "Kelas Menengah Menyusut 1.2 Juta, Gen Z Bangun Ekonomi Tanpa Investor"
-slug: "kelas-menengah-menyusut-gen-z-bangun-ekonomi-tanpa-investor"
-excerpt: "Kelas menengah menyusut 1.2 juta orang. Gen Z bangun ekonomi sendiri lewat komunitas tanpa investor. Tapi infrastruktur paralel ini rentan eksploitasi."
-publishedAt: "2026-08-11 05:00:00+00"
-status: "scheduled"
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+title: 'Kelas Menengah Menyusut 1.2 Juta, Gen Z Bangun Ekonomi Tanpa Investor'
+slug: kelas-menengah-menyusut-gen-z-bangun-ekonomi-tanpa-investor
+excerpt: >-
+  Kelas menengah menyusut 1.2 juta orang. Gen Z bangun ekonomi sendiri lewat
+  komunitas tanpa investor. Tapi infrastruktur paralel ini rentan eksploitasi.
+publishedAt: '2026-08-11 05:00:00+00'
+status: scheduled
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["kelas-menengah", "ekonomi-gen-z", "gig-economy", "aspiring-middle-class", "fan-economy", "diversifikasi-pendapatan"]
-ogHeadline: "Kelas menengah hilang, Gen Z bikin ekonomi sendiri"
-seoMetaTitle: "Kelas Menengah Menyusut 1.2 Juta, Gen Z Bangun Ekonomi Tanpa Investor"
-seoMetaDescription: "Kelas menengah Indonesia berkurang 1.2 juta orang. Gen Z tidak menunggu sistem berubah, mereka bangun ekonomi sendiri lewat komunitas. Tapi rentan eksploitasi."
+povTag: data
+tags:
+  - kelas-menengah
+  - ekonomi-gen-z
+  - gig-economy
+  - aspiring-middle-class
+  - fan-economy
+  - diversifikasi-pendapatan
+ogHeadline: 'Kelas menengah hilang, Gen Z bikin ekonomi sendiri'
+seoMetaTitle: 'Kelas menengah hilang, Gen Z bikin ekonomi sendiri | TAM'
+seoMetaDescription: >-
+  Kelas menengah Indonesia berkurang 1.2 juta orang. Gen Z tidak menunggu sistem
+  berubah, mereka bangun ekonomi sendiri lewat komunitas. Tapi rentan
+  eksploitasi.
 seoKeywords:
-  - "kelas menengah Indonesia menyusut"
-  - "ekonomi gen z Indonesia 2026"
-  - "gig economy gen z Indonesia"
-  - "aspiring middle class Indonesia"
-  - "diversifikasi pendapatan gen z"
-  - "sektor informal pekerja muda Indonesia"
-  - "fan economy creator economy Indonesia"
-  - "bisnis tanpa modal gen z"
+  - kelas menengah Indonesia menyusut
+  - ekonomi gen z Indonesia 2026
+  - gig economy gen z Indonesia
+  - aspiring middle class Indonesia
+  - diversifikasi pendapatan gen z
+  - sektor informal pekerja muda Indonesia
+  - fan economy creator economy Indonesia
+  - bisnis tanpa modal gen z
 sourceReferences:
-  - title: "Indonesia Millennial & Gen Z Report 2027 Diluncurkan"
-    url: "https://www.idnresearchinstitute.com/society/indonesia-millennial-and-gen-z-report-2027-resmi-diluncurkan-00-vnqjp-tjdsq0"
-    source: "IDN Research Institute"
+  - title: Indonesia Millennial & Gen Z Report 2027 Diluncurkan
+    url: >-
+      https://www.idnresearchinstitute.com/society/indonesia-millennial-and-gen-z-report-2027-resmi-diluncurkan-00-vnqjp-tjdsq0
+    source: IDN Research Institute
     tier: 1
-  - title: "Ekonom Wanti-wanti Bahaya Gen Z Lebih Banyak Kerja di Sektor Informal"
-    url: "https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal"
-    source: "CNN Indonesia"
+  - title: Ekonom Wanti-wanti Bahaya Gen Z Lebih Banyak Kerja di Sektor Informal
+    url: >-
+      https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal
+    source: CNN Indonesia
     tier: 2
-  - title: "Fakta Pahit: 6 dari 10 Warga RI Cari Nafkah di Sektor Informal"
-    url: "https://www.cnbcindonesia.com/research/20260630055018-128-746677/fakta-pahit-6-dari-10-warga-ri-cari-nafkah-di-sektor-informal"
-    source: "CNBC Indonesia"
+  - title: 'Fakta Pahit: 6 dari 10 Warga RI Cari Nafkah di Sektor Informal'
+    url: >-
+      https://www.cnbcindonesia.com/research/20260630055018-128-746677/fakta-pahit-6-dari-10-warga-ri-cari-nafkah-di-sektor-informal
+    source: CNBC Indonesia
     tier: 2
-  - title: "Kelas Menengah di Persimpangan Masa Depan"
-    url: "https://databoks.katadata.co.id/en/publications/2026/04/15/kelas-menengah-di-persimpangan-masa-depan"
-    source: "Katadata Databoks KIMCI"
+  - title: Kelas Menengah di Persimpangan Masa Depan
+    url: >-
+      https://databoks.katadata.co.id/en/publications/2026/04/15/kelas-menengah-di-persimpangan-masa-depan
+    source: Katadata Databoks KIMCI
     tier: 1
-  - title: "Kelas Menengah Menyusut dan Ancaman Konsumsi Domestik"
-    url: "https://money.kompas.com/read/2026/07/27/133300726/kelas-menengah-menyusut-dan-ancaman-konsumsi-domestik"
-    source: "Kompas Money"
+  - title: Kelas Menengah Menyusut dan Ancaman Konsumsi Domestik
+    url: >-
+      https://money.kompas.com/read/2026/07/27/133300726/kelas-menengah-menyusut-dan-ancaman-konsumsi-domestik
+    source: Kompas Money
     tier: 2
-  - title: "Bekerja Keras di Luar Jangkauan Negara"
-    url: "https://katadata.co.id/indepth/opini/6a431a3393623/bekerja-keras-di-luar-jangkauan-negara"
-    source: "Katadata"
+  - title: Bekerja Keras di Luar Jangkauan Negara
+    url: >-
+      https://katadata.co.id/indepth/opini/6a431a3393623/bekerja-keras-di-luar-jangkauan-negara
+    source: Katadata
     tier: 2
-  - title: "Kelas Menengah Indonesia Semakin Menyusut"
-    url: "https://www.idntimes.com/life/inspiration/kelas-menengah-indonesia-semakin-menyusut-00-98756-mq25yx"
-    source: "IDN Times"
+  - title: Kelas Menengah Indonesia Semakin Menyusut
+    url: >-
+      https://www.idntimes.com/life/inspiration/kelas-menengah-indonesia-semakin-menyusut-00-98756-mq25yx
+    source: IDN Times
     tier: 2
-  - title: "Peta Profil Pekerja Digital Transportasi di Indonesia"
-    url: "https://nextpolicy.org/id/riset/peta-profil-pekerja-digital-transportasi"
-    source: "Next Policy"
+  - title: Peta Profil Pekerja Digital Transportasi di Indonesia
+    url: 'https://nextpolicy.org/id/riset/peta-profil-pekerja-digital-transportasi'
+    source: Next Policy
     tier: 1
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

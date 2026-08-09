@@ -19,7 +19,7 @@ tags:
   - akses-keadilan
   - sistem-hukum
   - sidang-online
-ogHeadline: 'Sidang online? Bagus kalau kamu punya kuota'
+ogHeadline: Sidang online? Bagus kalau kamu punya kuota
 seoMetaTitle: 'Sidang Online Indonesia: e-Court yang Tidak Adil | TAM'
 seoMetaDescription: >-
   e-Court kedengarannya modern. Tapi digital divide membuat sidang online
@@ -32,16 +32,17 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://ejournal.ust.ac.id/index.php/JHJ/article/view/6224'
-    label: 'Jurnal Hukum Justice (2025) - Digitalisasi peradilan dan akses keadilan'
+    label: Jurnal Hukum Justice (2025) - Digitalisasi peradilan dan akses keadilan
   - type: link
     url: 'https://ejournal.yasin-alsys.org/ahkam/article/view/10393'
-    label: 'Jurnal Ahkam (2025) - E-Court dan akses keadilan digital'
+    label: Jurnal Ahkam (2025) - E-Court dan akses keadilan digital
   - type: link
     url: 'https://journal.sahakreasindo.co.id/index.php/ar-rasyid/article/view/123'
-    label: 'Jurnal Ar-Rasyid (Des 2025) - Transformasi digital hukum acara perdata'
+    label: Jurnal Ar-Rasyid (Des 2025) - Transformasi digital hukum acara perdata
   - type: link
-    url: 'https://kemenkum.go.id/berita-utama/konsultasi-hukum-makin-mudah-kemenkum-hadirkan-5-008-pos-bantuan-hukum'
-    label: 'Kemenkum (Jun 2025) - 5.008 Posbankum'
+    url: >-
+      https://kemenkum.go.id/berita-utama/konsultasi-hukum-makin-mudah-kemenkum-hadirkan-5-008-pos-bantuan-hukum
+    label: Kemenkum (Jun 2025) - 5.008 Posbankum
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -49,6 +50,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** 636.000 ormas, 15.400 kasus premanisme. Hukum yang tak sentuh yang berkuasa. Baca part sebelumnya: [Part 6](/artikel/sistem-hukum-indonesia-part-6-premanisme-ormas-tak-sentuh)

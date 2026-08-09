@@ -1,49 +1,105 @@
 ---
-title: "Kos Naik 2x, Gaji Nggak Gerak: Bukan Kamu yang Boros"
-slug: "kos-naik-2x-gaji-nggak-gerak-bukan-kamu-yang-boros"
-excerpt: "Kos naik dua kali lipat dalam 5 tahun. Gaji nggak gerak. Gen Z yang merantau ke Jakarta bayar hampir setengah gaji cuma untuk tempat tidur. Lalu dibilang boros."
-publishedAt: "2026-09-21 01:00:00+00"
-status: "scheduled"
-category: "uang"
-subcategory: "uang-housing"
-author: "Yovie Setiawan"
+title: 'Kos Naik 2x, Gaji Nggak Gerak: Bukan Kamu yang Boros'
+slug: kos-naik-2x-gaji-nggak-gerak-bukan-kamu-yang-boros
+excerpt: >-
+  Kos naik dua kali lipat dalam 5 tahun. Gaji nggak gerak. Gen Z yang merantau
+  ke Jakarta bayar hampir setengah gaji cuma untuk tempat tidur. Lalu dibilang
+  boros.
+publishedAt: '2026-09-21 01:00:00+00'
+status: scheduled
+category: uang
+subcategory: uang-housing
+author: Yovie Setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags:
-  - "kos"
-  - "biaya-hidup"
-  - "gaji"
-  - "gen-z"
-  - "sewa"
-  - "jakarta"
-ogHeadline: "40% gajimu habis untuk kos, dibilang boros?"
-seoMetaTitle: "Kos Naik 2x, Gaji Nggak Gerak: Bukan Kamu yang Boros"
-seoMetaDescription: "Biaya kos naik 2x dalam 5 tahun, gaji cuma naik 16%. Gen Z di Jakarta bayar 40% gaji untuk tempat tidur. Bukan kamu yang boros, sistem yang rampas gajimu."
+  - kos
+  - biaya-hidup
+  - gaji
+  - gen-z
+  - sewa
+  - jakarta
+ogHeadline: '40% gajimu habis untuk kos, dibilang boros?'
+seoMetaTitle: '40% gajimu habis untuk kos, dibilang boros? | TAM'
+seoMetaDescription: >-
+  Biaya kos naik 2x dalam 5 tahun, gaji cuma naik 16%. Gen Z di Jakarta bayar
+  40% gaji untuk tempat tidur. Bukan kamu yang boros, sistem yang rampas gajimu.
 seoKeywords:
-  - "kos jakarta"
-  - "harga kos naik"
-  - "gaji lulusan s1"
-  - "biaya kos"
-  - "gen z di jakarta"
+  - kos jakarta
+  - harga kos naik
+  - gaji lulusan s1
+  - biaya kos
+  - gen z di jakarta
 sourceReferences:
-  - {"type":"data","url":"https://katadata.co.id/finansial/makro/69fc549976362/rerata-gaji-lulusan-perguruaan-tinggi-ri-masih-di-bawah-ump-jakarta","label":"BPS Sakernas Februari 2026: Rata-rata gaji lulusan S1-S3 Rp4,77 juta, masih di bawah UMP Jakarta"}
-  - {"type":"data","url":"https://www.detik.com/kalimantan/bisnis/d-8361117/bps-catat-rata-rata-gaji-lulusan-s1-s3-rp-4-6-juta","label":"BPS Sakernas Mei 2026: Rata-rata upah buruh Rp3,39 juta, lulusan S1-S3 Rp4,99 juta"}
-  - {"type":"data","url":"https://www.bbc.com/indonesia/articles/cd9kwy1n002o","label":"UMP Jakarta 2026: Rp5.729.876, naik 6,17% dari Rp5.396.761"}
-  - {"type":"data","url":"https://www.industry.co.id/read/149301/konektivitas-jadi-nyawa-hunian-gen-z-jakarta-tod-dongkrak-harga-sewa-co-living-hingga-10","label":"Cove: Kos dekat TOD naik 5-10%, Gen Z prioritas jarak kantor 40% dan harga 38%"}
-  - {"type":"data","url":"https://properti1.com/blog/tren-harga-sewa-apartemen-2020-2025/","label":"Properti1: Harga sewa apartemen naik 5-8% per tahun (2024-2025), Jakarta termahal"}
-  - {"type":"data","url":"https://katadata.co.id/finansial/makro/699d2b95144ea/menunggu-kerja-makin-mahal-celios-ungkap-tekanan-ganda-gen-z","label":"CELIOS: Biaya cari kerja di Jakarta Rp39,8 juta, durasi rata-rata 8 bulan"}
-  - {"type":"data","url":"https://doi.org/10.14710/jdep.5.2.110-120","label":"BPS/JDEP: Pengeluaran perumahan naik dari 17% (2002) ke 25% (2019), standar terjangkau maksimal 30%"}
-  - {"type":"data","url":"https://www.detik.com/properti/berita/d-7973251/mending-sewa-rumah-di-jakarta-atau-beli-rumah-subsidi-18-meter","label":"Detik Properti: Harga kontrakan Jakarta Rp3 juta, apartemen Rp6 juta, kos lebih murah tapi tidak punya aset (2025)"}
-  - {"type":"story","url":"https://mojok.co/liputan/urban/kerja-gaji-5-juta-jakarta-cukup-tapi-rampas-banyak-hal/","label":"Mojok.co: Gaji 5 juta di Jakarta cukup tapi rampas banyak hal, perantau tak bisa pulang"}
-  - {"type":"story","url":"https://mojok.co/liputan/urban/jakarta-tak-cocok-bagi-fresh-graduate/","label":"Mojok.co: Fresh graduate Fajar (25), kos Rp1 juta di Tebet, gaji UMR habis untuk kos dan makan"}
-  - {"type":"data","url":"https://digilib.uinsgd.ac.id/126072/","label":"Penelitian hukum UIN Bandung: Perjanjian sewa kos mayoritas lisan, penyewa tanpa perlindungan hukum"}
-  - {"type":"data","url":"https://finance.detik.com/berita-ekonomi-bisnis/d-8360783/survei-bps-gaji-pekerja-lulusan-sd-rp-2-2-juta-s1-rp-4-6-juta","label":"BPS Sakernas Nov 2025: Rata-rata upah pekerja Indonesia Rp3,33 juta, lulusan S1 Rp4,63 juta"}
+  - type: data
+    url: >-
+      https://katadata.co.id/finansial/makro/69fc549976362/rerata-gaji-lulusan-perguruaan-tinggi-ri-masih-di-bawah-ump-jakarta
+    label: >-
+      BPS Sakernas Februari 2026: Rata-rata gaji lulusan S1-S3 Rp4,77 juta,
+      masih di bawah UMP Jakarta
+  - type: data
+    url: >-
+      https://www.detik.com/kalimantan/bisnis/d-8361117/bps-catat-rata-rata-gaji-lulusan-s1-s3-rp-4-6-juta
+    label: >-
+      BPS Sakernas Mei 2026: Rata-rata upah buruh Rp3,39 juta, lulusan S1-S3
+      Rp4,99 juta
+  - type: data
+    url: 'https://www.bbc.com/indonesia/articles/cd9kwy1n002o'
+    label: 'UMP Jakarta 2026: Rp5.729.876, naik 6,17% dari Rp5.396.761'
+  - type: data
+    url: >-
+      https://www.industry.co.id/read/149301/konektivitas-jadi-nyawa-hunian-gen-z-jakarta-tod-dongkrak-harga-sewa-co-living-hingga-10
+    label: >-
+      Cove: Kos dekat TOD naik 5-10%, Gen Z prioritas jarak kantor 40% dan harga
+      38%
+  - type: data
+    url: 'https://properti1.com/blog/tren-harga-sewa-apartemen-2020-2025/'
+    label: >-
+      Properti1: Harga sewa apartemen naik 5-8% per tahun (2024-2025), Jakarta
+      termahal
+  - type: data
+    url: >-
+      https://katadata.co.id/finansial/makro/699d2b95144ea/menunggu-kerja-makin-mahal-celios-ungkap-tekanan-ganda-gen-z
+    label: 'CELIOS: Biaya cari kerja di Jakarta Rp39,8 juta, durasi rata-rata 8 bulan'
+  - type: data
+    url: 'https://doi.org/10.14710/jdep.5.2.110-120'
+    label: >-
+      BPS/JDEP: Pengeluaran perumahan naik dari 17% (2002) ke 25% (2019),
+      standar terjangkau maksimal 30%
+  - type: data
+    url: >-
+      https://www.detik.com/properti/berita/d-7973251/mending-sewa-rumah-di-jakarta-atau-beli-rumah-subsidi-18-meter
+    label: >-
+      Detik Properti: Harga kontrakan Jakarta Rp3 juta, apartemen Rp6 juta, kos
+      lebih murah tapi tidak punya aset (2025)
+  - type: story
+    url: >-
+      https://mojok.co/liputan/urban/kerja-gaji-5-juta-jakarta-cukup-tapi-rampas-banyak-hal/
+    label: >-
+      Mojok.co: Gaji 5 juta di Jakarta cukup tapi rampas banyak hal, perantau
+      tak bisa pulang
+  - type: story
+    url: 'https://mojok.co/liputan/urban/jakarta-tak-cocok-bagi-fresh-graduate/'
+    label: >-
+      Mojok.co: Fresh graduate Fajar (25), kos Rp1 juta di Tebet, gaji UMR habis
+      untuk kos dan makan
+  - type: data
+    url: 'https://digilib.uinsgd.ac.id/126072/'
+    label: >-
+      Penelitian hukum UIN Bandung: Perjanjian sewa kos mayoritas lisan, penyewa
+      tanpa perlindungan hukum
+  - type: data
+    url: >-
+      https://finance.detik.com/berita-ekonomi-bisnis/d-8360783/survei-bps-gaji-pekerja-lulusan-sd-rp-2-2-juta-s1-rp-4-6-juta
+    label: >-
+      BPS Sakernas Nov 2025: Rata-rata upah pekerja Indonesia Rp3,33 juta,
+      lulusan S1 Rp4,63 juta
 featured: false
 readingTime: 9
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

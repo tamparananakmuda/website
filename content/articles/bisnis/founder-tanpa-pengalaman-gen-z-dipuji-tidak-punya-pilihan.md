@@ -1,54 +1,75 @@
 ---
-title: "Founder Tanpa Pengalaman: Gen Z Dipuji Jadi Entrepreneur, Padahal Tidak Punya Pilihan Lain"
-slug: "founder-tanpa-pengalaman-gen-z-dipuji-tidak-punya-pilihan"
-excerpt: "68% Gen Z mau bisnis, 60% tidak punya modal. Entry-level dihapus AI. 80% UMKM gagal 5 tahun. Founder economy bukan ambisi, konsekuensi sistem yang gagal."
-publishedAt: "2026-08-15 10:00:00+00"
-status: "scheduled"
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+title: >-
+  Founder Tanpa Pengalaman: Gen Z Dipuji Jadi Entrepreneur, Padahal Tidak Punya
+  Pilihan Lain
+slug: founder-tanpa-pengalaman-gen-z-dipuji-tidak-punya-pilihan
+excerpt: >-
+  68% Gen Z mau bisnis, 60% tidak punya modal. Entry-level dihapus AI. 80% UMKM
+  gagal 5 tahun. Founder economy bukan ambisi, konsekuensi sistem yang gagal.
+publishedAt: '2026-08-15 10:00:00+00'
+status: scheduled
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["gen-z", "founder", "entrepreneur", "entry-level", "ai", "umkm", "founder-economy"]
-ogHeadline: "Gen Z jadi founder bukan ambisi, tidak ada kerjaan"
-seoMetaTitle: "Gen Z Founder: Dipuji Jadi Entrepreneur, Padahal Tidak Punya Pilihan"
-seoMetaDescription: "68% Gen Z mau bisnis, 60% tidak punya modal. Entry-level dihapus AI. 80% UMKM gagal 5 tahun. Founder economy bukan ambisi, konsekuensi sistem yang gagal."
+povTag: kontra-narasi
+tags:
+  - gen-z
+  - founder
+  - entrepreneur
+  - entry-level
+  - ai
+  - umkm
+  - founder-economy
+ogHeadline: 'Gen Z jadi founder bukan ambisi, tidak ada kerjaan'
+seoMetaTitle: 'Gen Z Founder: Dipuji Jadi Entrepreneur, Padahal Tidak Punya Pilihan'
+seoMetaDescription: >-
+  68% Gen Z mau bisnis, 60% tidak punya modal. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "gen z founder Indonesia"
-  - "entrepreneur gen z 2026"
-  - "bisnis gen z gagal"
-  - "entry level diganti AI"
-  - "gen z wirausaha tanpa pengalaman"
-  - "bisnis gagal 5 tahun pertama Indonesia"
-  - "gen z mau bikin bisnis modal terbatas"
+  - gen z founder Indonesia
+  - entrepreneur gen z 2026
+  - bisnis gen z gagal
+  - entry level diganti AI
+  - gen z wirausaha tanpa pengalaman
+  - bisnis gagal 5 tahun pertama Indonesia
+  - gen z mau bikin bisnis modal terbatas
 sourceReferences:
-  - type: "link"
-    url: "https://goodstats.id/article/68-gen-z-indonesia-tertarik-memulai-bisnis-apa-kendala-terbesarnya-4N1Ln"
-    label: "Jakpat Feb 2026: 68% Gen Z Indonesia Tertarik Memulai Bisnis (GoodStats)"
-  - type: "link"
-    url: "https://insimen.com/bisnis/2025/1058/analisis-kegagalan-umkm-di-tahun-pertama/"
-    label: "Kemenkop UKM / Prof Yuyun Wirasasmita: Kegagalan UMKM Indonesia (Insimen, 2025)"
-  - type: "link"
-    url: "https://indonewswire.com/berita/2026/jul/14/ai-merusak-tangga-karier/"
-    label: "Intuit Entrepreneurship 2026: Ambisi Kewirausahaan Gen Z (IndoNewswire, Jul 2026)"
-  - type: "link"
-    url: "https://dailyberita.com/ai-hapus-entry-level/"
-    label: "GMAC, Blackstone, Handshake, Monster: Data Entry-Level dan AI (DailyBerita, 2026)"
-  - type: "link"
-    url: "https://www.bls.gov/data/"
-    label: "Bureau of Labor Statistics AS: Tingkat Kegagalan Bisnis 5 Tahun (2026)"
-  - type: "link"
-    url: "https://www.usbank.com/business-visions/study/cash-flow-management.html"
-    label: "U.S. Bank Study: 82% Bisnis Kecil Gagal karena Cash Flow (2024)"
-  - type: "link"
-    url: "https://foodizz.id/blog/90-persen-bisnis-kuliner-gagal-tahun-pertama"
-    label: "Foodizz: 90% Bisnis Kuliner Gagal Tahun Pertama (2025)"
+  - type: link
+    url: >-
+      https://goodstats.id/article/68-gen-z-indonesia-tertarik-memulai-bisnis-apa-kendala-terbesarnya-4N1Ln
+    label: 'Jakpat Feb 2026: 68% Gen Z Indonesia Tertarik Memulai Bisnis (GoodStats)'
+  - type: link
+    url: >-
+      https://insimen.com/bisnis/2025/1058/analisis-kegagalan-umkm-di-tahun-pertama/
+    label: >-
+      Kemenkop UKM / Prof Yuyun Wirasasmita: Kegagalan UMKM Indonesia (Insimen,
+      2025)
+  - type: link
+    url: 'https://indonewswire.com/berita/2026/jul/14/ai-merusak-tangga-karier/'
+    label: >-
+      Intuit Entrepreneurship 2026: Ambisi Kewirausahaan Gen Z (IndoNewswire,
+      Jul 2026)
+  - type: link
+    url: 'https://dailyberita.com/ai-hapus-entry-level/'
+    label: >-
+      GMAC, Blackstone, Handshake, Monster: Data Entry-Level dan AI
+      (DailyBerita, 2026)
+  - type: link
+    url: 'https://www.bls.gov/data/'
+    label: 'Bureau of Labor Statistics AS: Tingkat Kegagalan Bisnis 5 Tahun (2026)'
+  - type: link
+    url: 'https://www.usbank.com/business-visions/study/cash-flow-management.html'
+    label: 'U.S. Bank Study: 82% Bisnis Kecil Gagal karena Cash Flow (2024)'
+  - type: link
+    url: 'https://foodizz.id/blog/90-persen-bisnis-kuliner-gagal-tahun-pertama'
+    label: 'Foodizz: 90% Bisnis Kuliner Gagal Tahun Pertama (2025)'
 featured: false
 readingTime: 9
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

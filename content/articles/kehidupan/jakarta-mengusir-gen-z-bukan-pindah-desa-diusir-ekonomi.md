@@ -1,58 +1,83 @@
 ---
-title: "Jakarta Mengusir Gen Z: Bukan Pindah ke Desa, Diusir Ekonomi"
-slug: "jakarta-mengusir-gen-z-bukan-pindah-desa-diusir-ekonomi"
-excerpt: "22.617 orang pindah keluar Jakarta, 71,57% usia produktif. Bukan cari tenang, biaya hidupnya tidak masuk akal. KHL Rp5,9 juta vs UMP Rp5,7 juta. Itu pengusiran."
-publishedAt: "2026-09-12 01:00:00+00"
-status: "scheduled"
-category: "kehidupan"
-subcategory: "kehidupan-sosial"
-author: "yovie-setiawan"
+title: 'Jakarta Mengusir Gen Z: Bukan Pindah ke Desa, Diusir Ekonomi'
+slug: jakarta-mengusir-gen-z-bukan-pindah-desa-diusir-ekonomi
+excerpt: >-
+  22.617 orang pindah keluar Jakarta, 71,57% usia produktif. Bukan cari tenang,
+  biaya hidupnya tidak masuk akal. KHL Rp5,9 juta vs UMP Rp5,7 juta. Itu
+  pengusiran.
+publishedAt: '2026-09-12 01:00:00+00'
+status: scheduled
+category: kehidupan
+subcategory: kehidupan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["gen-z", "migrasi", "jakarta", "biaya-hidup", "urban-exodus", "ump", "wfa"]
-ogHeadline: "Jakarta terlalu mahal untuk gaji kamu"
-seoMetaTitle: "Jakarta Mengusir Gen Z: Bukan Pindah ke Desa, Diusir Ekonomi"
-seoMetaDescription: "Gen Z pindah dari Jakarta bukan cari slow living. Data BPS: migrasi neto minus 5,40%. Dukcapil: 71,57% usia produktif. Jakarta terlalu mahal untuk gaji kamu."
+povTag: kontra-narasi
+tags:
+  - gen-z
+  - migrasi
+  - jakarta
+  - biaya-hidup
+  - urban-exodus
+  - ump
+  - wfa
+ogHeadline: Jakarta terlalu mahal untuk gaji kamu
+seoMetaTitle: Jakarta terlalu mahal untuk gaji kamu | TAM
+seoMetaDescription: >-
+  Gen Z pindah dari Jakarta bukan cari slow living. Data BPS: migrasi neto minus
+  5,40%. Dukcapil: 71,57% usia produktif. Jakarta terlalu mahal untuk gaji kamu.
 humanSignature: true
 featured: true
 readingTime: 8
-seoKeywords: ["gen z pindah jakarta", "biaya hidup jakarta", "migrasi jakarta", "ump jakarta 2026", "khl jakarta", "wfa indonesia"]
-factCheckStatus: "verified"
-reviewStatus: "publish"
+seoKeywords:
+  - gen z pindah jakarta
+  - biaya hidup jakarta
+  - migrasi jakarta
+  - ump jakarta 2026
+  - khl jakarta
+  - wfa indonesia
+factCheckStatus: verified
+reviewStatus: publish
 coverImageUrl: null
 coverImageAlt: null
 sourceReferences:
-  - type: "link"
-    url: "https://goodstats.id/publication/hasil-survei-penduduk-antar-sensus-supas-2025-provinsi-dki-jakarta-WlOZ3"
-    label: "BPS SUPAS 2025 - Migrasi Neto DKI Jakarta"
-  - type: "link"
-    url: "https://kependudukancapil.jakarta.go.id/2026/05/05/update-hasil-rekapitulasi-pendataan-pendatang-baru-warga-dki-jakarta-yang-pindah-keluar-mendekati-2x-lipat-lebih-banyak-dari-pendatang-baru-pasca-lebaran/"
-    label: "Dukcapil DKI Jakarta - Data Pindah Keluar 2026"
-  - type: "link"
-    url: "https://megapolitan.kompas.com/read/2026/08/04/13162381/bekasi-bogor-dan-tangerang-jadi-tujuan-pindah-penduduk-terbanyak-di"
-    label: "Dukcapil Kemendagri - Data Perpindahan Penduduk Semester I 2026"
-  - type: "link"
-    url: "https://www.tempo.co/ekonomi/ump-2026-diumumkan-berapa-standar-kebutuhan-hidup-layak--2102162"
-    label: "Kemnaker - KHL 2026 per Provinsi"
-  - type: "link"
-    url: "https://www.inews.id/news/megapolitan/breaking-news-ump-jakarta-2026-rp57-juta-naik-617-persen/2"
-    label: "UMP Jakarta 2026 - Pemprov DKI"
-  - type: "link"
-    url: "https://www.kompas.tv/ekonomi/667071/bps-sebut-migrasi-berubah-arah-jakarta-ditinggalkan-komuter-meningkat-di-kota-besar"
-    label: "Kompas TV - BPS: Migrasi Berubah Arah"
-  - type: "link"
-    url: "https://kebebasanfinansial.com/biaya-hidup-di-indonesia-2026-panduan-lengkap-dari-seluruh-wilayah/"
-    label: "Biaya Hidup Indonesia 2026 - KHL vs UMP"
-  - type: "link"
-    url: "https://affordwhere.com/indonesia"
-    label: "AffordWhere - Biaya Hidup per Kota 2026"
-  - type: "link"
-    url: "https://gradient.academy/blog/biaya-hidup-mahasiswa-di-kota-kampus-ptn"
-    label: "Gradient Academy - Biaya Kos per Kota 2026"
-  - type: "link"
-    url: "https://mojok.co/liputan/urban/kerja-di-desa-lebih-baik-ketimbang-jakarta/"
-    label: "Mojok.co - Kerja di Desa vs Jakarta"
+  - type: link
+    url: >-
+      https://goodstats.id/publication/hasil-survei-penduduk-antar-sensus-supas-2025-provinsi-dki-jakarta-WlOZ3
+    label: BPS SUPAS 2025 - Migrasi Neto DKI Jakarta
+  - type: link
+    url: >-
+      https://kependudukancapil.jakarta.go.id/2026/05/05/update-hasil-rekapitulasi-pendataan-pendatang-baru-warga-dki-jakarta-yang-pindah-keluar-mendekati-2x-lipat-lebih-banyak-dari-pendatang-baru-pasca-lebaran/
+    label: Dukcapil DKI Jakarta - Data Pindah Keluar 2026
+  - type: link
+    url: >-
+      https://megapolitan.kompas.com/read/2026/08/04/13162381/bekasi-bogor-dan-tangerang-jadi-tujuan-pindah-penduduk-terbanyak-di
+    label: Dukcapil Kemendagri - Data Perpindahan Penduduk Semester I 2026
+  - type: link
+    url: >-
+      https://www.tempo.co/ekonomi/ump-2026-diumumkan-berapa-standar-kebutuhan-hidup-layak--2102162
+    label: Kemnaker - KHL 2026 per Provinsi
+  - type: link
+    url: >-
+      https://www.inews.id/news/megapolitan/breaking-news-ump-jakarta-2026-rp57-juta-naik-617-persen/2
+    label: UMP Jakarta 2026 - Pemprov DKI
+  - type: link
+    url: >-
+      https://www.kompas.tv/ekonomi/667071/bps-sebut-migrasi-berubah-arah-jakarta-ditinggalkan-komuter-meningkat-di-kota-besar
+    label: 'Kompas TV - BPS: Migrasi Berubah Arah'
+  - type: link
+    url: >-
+      https://kebebasanfinansial.com/biaya-hidup-di-indonesia-2026-panduan-lengkap-dari-seluruh-wilayah/
+    label: Biaya Hidup Indonesia 2026 - KHL vs UMP
+  - type: link
+    url: 'https://affordwhere.com/indonesia'
+    label: AffordWhere - Biaya Hidup per Kota 2026
+  - type: link
+    url: 'https://gradient.academy/blog/biaya-hidup-mahasiswa-di-kota-kampus-ptn'
+    label: Gradient Academy - Biaya Kos per Kota 2026
+  - type: link
+    url: 'https://mojok.co/liputan/urban/kerja-di-desa-lebih-baik-ketimbang-jakarta/'
+    label: Mojok.co - Kerja di Desa vs Jakarta
 ---
 
 Semua bilang Gen Z pindah dari Jakarta karena cari kualitas hidup, mau slow living, kembali ke alam. Tapi data Dukcapil DKI Jakarta bilang sebaliknya: dari 22.617 orang yang pindah keluar pasca Lebaran 2026, 71,57% usia produktif, 64,53% berpenghasilan rendah, 33,92% alasan utamanya perumahan. Itu bukan pilihan lifestyle. Itu pelarian ekonomi.

@@ -1,69 +1,98 @@
 ---
-title: "Technostress Gen Z: Bukan Lemah, Beban Digital yang Dibuat Sistem"
-slug: "technostress-gen-z-beban-digital-kerja-hybrid"
-excerpt: "Riset 2026 buktikan technostress di kerja hybrid memprediksi resign Gen Z Indonesia. 58% alami digital fatigue. Bukan lemah, sistem tanpa boundary digital."
-publishedAt: "2026-09-05T01:00:00+07:00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'Technostress Gen Z: Bukan Lemah, Beban Digital yang Dibuat Sistem'
+slug: technostress-gen-z-beban-digital-kerja-hybrid
+excerpt: >-
+  Riset 2026 buktikan technostress di kerja hybrid memprediksi resign Gen Z
+  Indonesia. 58% alami digital fatigue. Bukan lemah, sistem tanpa boundary
+  digital.
+publishedAt: '2026-09-05T01:00:00+07:00'
+status: scheduled
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags:
-  - "technostress"
-  - "gen-z"
-  - "kerja-hybrid"
-  - "digital-fatigue"
-  - "right-to-disconnect"
-  - "turnover-intention"
-  - "beban-digital"
-ogHeadline: "Kerja hybrid bikin lelah? Bukan kamu yang lemah"
-seoMetaTitle: "Technostress Gen Z: Bukan Lemah, Beban Digital Sistem"
-seoMetaDescription: "Riset 2026 ke 235 Gen Z Indonesia buktikan technostress di kerja hybrid memprediksi resign. 58% alami digital fatigue. Bukan Gen Z lemah, sistem tanpa boundary."
+  - technostress
+  - gen-z
+  - kerja-hybrid
+  - digital-fatigue
+  - right-to-disconnect
+  - turnover-intention
+  - beban-digital
+ogHeadline: Kerja hybrid bikin lelah? Bukan kamu yang lemah
+seoMetaTitle: 'Technostress Gen Z: Bukan Lemah, Beban Digital Sistem'
+seoMetaDescription: >-
+  Riset 2026 ke 235 Gen Z Indonesia buktikan technostress di kerja hybrid
+  memprediksi resign. 58% alami digital fatigue. Bukan Gen Z lemah, sistem tanpa
+  boundary.
 seoKeywords:
-  - "technostress"
-  - "gen z"
-  - "hybrid work"
-  - "digital fatigue"
-  - "right to disconnect"
-  - "turnover intention"
-  - "beban digital"
+  - technostress
+  - gen z
+  - hybrid work
+  - digital fatigue
+  - right to disconnect
+  - turnover intention
+  - beban digital
 sourceReferences:
-  - type: "link"
-    url: "https://reference-global.com/article/10.22367/jem.2026.48.07"
-    label: "Wijaya et al. (2026) JEM Vol 48: Technostress dan Turnover Intention Gen Z Hybrid Work Indonesia (235 responden, PLS-SEM)"
-  - type: "link"
-    url: "https://ideas.repec.org/a/vrs/jecman/v48y2026i1p149-180n1007.html"
-    label: "Kandita et al. (2026) IJBMR Vol 3 No 1: Technostress → Burnout → Turnover Intention Gen Z Surabaya (SEM-PLS)"
-  - type: "link"
-    url: "https://www.deloitte.com/global/en/about/press-room/deloitte-2026-gen-z-and-millennial-survey.html"
-    label: "Deloitte 2026 Gen Z and Millennial Survey: 22.500 responden, 44 negara, 500+ Indonesia"
-  - type: "link"
-    url: "https://marketing.co.id/riset-gen-z-dan-milenial-indonesia-pekerja-paling-siap-ai-di-dunia/"
-    label: "Marketing.co.id 2026: Deloitte Survey Indonesia, 87% Gen Z pakai AI vs 74% global"
-  - type: "link"
-    url: "https://journal.uii.ac.id/Lex-Renaissance/article/view/30845"
-    label: "Lex Renaissance (UII): Right to Disconnect dalam Hukum Ketenagakerjaan Indonesia"
-  - type: "link"
-    url: "https://jurnal.dim-unpas.web.id/index.php/kompartemen/article/view/843"
-    label: "Kompartemen UNPAS: Digital Boundary Management Gen Z Startup Indonesia (Phenomenology)"
-  - type: "link"
-    url: "https://journal.diginus.id/JEEMBA/article/view/1063"
-    label: "Widyastuti et al. (2026) JEMBA Vol 4 No 4: Digital Work Pressure Gen Z Yogyakarta (20 responden, kualitatif)"
-  - type: "link"
-    url: "https://dinastirev.org/JIMT/article/view/9101"
-    label: "Sinaga & Putri (2026) JIMT Vol 7 No 6: Jam Kerja Fleksibel, WFH, Kelelahan Kerja Gen Z Indonesia (150 responden)"
-  - type: "link"
-    url: "http://www.ulilalbabinstitute.id/index.php/JIM/article/view/18185"
-    label: "Pooroe & Hasanati (2026) ULIL ALBAB Vol 5 No 8: Strategi Koping Tekanan Kerja Digital (SLR 11 studi 2022-2026)"
-  - type: "link"
-    url: "https://journal.unika.ac.id/index.php/JMBE/article/view/12149"
-    label: "JMBE UNIKA: Technostress sebagai Moderator Technology Mastery vs Employee Turnover (151 workers Semarang)"
+  - type: link
+    url: 'https://reference-global.com/article/10.22367/jem.2026.48.07'
+    label: >-
+      Wijaya et al. (2026) JEM Vol 48: Technostress dan Turnover Intention Gen Z
+      Hybrid Work Indonesia (235 responden, PLS-SEM)
+  - type: link
+    url: 'https://ideas.repec.org/a/vrs/jecman/v48y2026i1p149-180n1007.html'
+    label: >-
+      Kandita et al. (2026) IJBMR Vol 3 No 1: Technostress → Burnout → Turnover
+      Intention Gen Z Surabaya (SEM-PLS)
+  - type: link
+    url: >-
+      https://www.deloitte.com/global/en/about/press-room/deloitte-2026-gen-z-and-millennial-survey.html
+    label: >-
+      Deloitte 2026 Gen Z and Millennial Survey: 22.500 responden, 44 negara,
+      500+ Indonesia
+  - type: link
+    url: >-
+      https://marketing.co.id/riset-gen-z-dan-milenial-indonesia-pekerja-paling-siap-ai-di-dunia/
+    label: >-
+      Marketing.co.id 2026: Deloitte Survey Indonesia, 87% Gen Z pakai AI vs 74%
+      global
+  - type: link
+    url: 'https://journal.uii.ac.id/Lex-Renaissance/article/view/30845'
+    label: >-
+      Lex Renaissance (UII): Right to Disconnect dalam Hukum Ketenagakerjaan
+      Indonesia
+  - type: link
+    url: 'https://jurnal.dim-unpas.web.id/index.php/kompartemen/article/view/843'
+    label: >-
+      Kompartemen UNPAS: Digital Boundary Management Gen Z Startup Indonesia
+      (Phenomenology)
+  - type: link
+    url: 'https://journal.diginus.id/JEEMBA/article/view/1063'
+    label: >-
+      Widyastuti et al. (2026) JEMBA Vol 4 No 4: Digital Work Pressure Gen Z
+      Yogyakarta (20 responden, kualitatif)
+  - type: link
+    url: 'https://dinastirev.org/JIMT/article/view/9101'
+    label: >-
+      Sinaga & Putri (2026) JIMT Vol 7 No 6: Jam Kerja Fleksibel, WFH, Kelelahan
+      Kerja Gen Z Indonesia (150 responden)
+  - type: link
+    url: 'http://www.ulilalbabinstitute.id/index.php/JIM/article/view/18185'
+    label: >-
+      Pooroe & Hasanati (2026) ULIL ALBAB Vol 5 No 8: Strategi Koping Tekanan
+      Kerja Digital (SLR 11 studi 2022-2026)
+  - type: link
+    url: 'https://journal.unika.ac.id/index.php/JMBE/article/view/12149'
+    label: >-
+      JMBE UNIKA: Technostress sebagai Moderator Technology Mastery vs Employee
+      Turnover (151 workers Semarang)
 featured: false
 readingTime: 8
 coverImageUrl: null
 coverImageAlt: null
+humanSignature: true
 ---
 
 Deloitte 2026 menyurvei 22.500 Gen Z di 44 negara. Menurut survei tersebut, 58% Gen Z mengalami digital fatigue, kelelahan dari notifikasi konstan, perpindahan antar-aplikasi, dan tumpukan platform digital. Di Indonesia, data Deloitte yang dirangkum CNBC 2026 mencatat 87% Gen Z memakai AI dalam pekerjaan harian, jauh di atas rata-rata global 74%. Tapi tidak ada satu pun pasal di UU Ketenagakerjaan Indonesia yang melindungi mereka dari beban digital tanpa batas.

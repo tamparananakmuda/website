@@ -1,54 +1,72 @@
 ---
-title: "Gen Z Beli Emas: Bukan Investasi Tradisional, Tidak Percaya Sistem Finansial"
-slug: "gen-z-beli-emas-bukan-tradisi-tidak-percaya-sistem-finansial"
-excerpt: "Gen Z dominasi pertumbuhan nasabah emas 116% YoY. Bukan FOMO atau ikut orang tua. Emas adalah protes diam terhadap sistem finansial yang tidak dipercaya."
-publishedAt: "2026-08-14 05:00:00+00"
-status: "scheduled"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Gen Z Beli Emas: Bukan Investasi Tradisional, Tidak Percaya Sistem Finansial'
+slug: gen-z-beli-emas-bukan-tradisi-tidak-percaya-sistem-finansial
+excerpt: >-
+  Gen Z dominasi pertumbuhan nasabah emas 116% YoY. Bukan FOMO atau ikut orang
+  tua. Emas adalah protes diam terhadap sistem finansial yang tidak dipercaya.
+publishedAt: '2026-08-14 05:00:00+00'
+status: scheduled
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["emas", "investasi-gen-z", "emas-digital", "pegadaian", "sistem-finansial", "safe-haven", "literasi-finansial"]
-ogHeadline: "Emas bukan investasi orang tua, tapi protes Gen Z"
-seoMetaTitle: "Gen Z Beli Emas: Bukan Tradisi, Tidak Percaya Sistem Finansial"
-seoMetaDescription: "Gen Z dominasi pertumbuhan nasabah emas 116% YoY. Bukan FOMO atau ikut orang tua. Emas adalah protes diam terhadap sistem finansial yang tidak dipercaya."
+povTag: kontra-narasi
+tags:
+  - emas
+  - investasi-gen-z
+  - emas-digital
+  - pegadaian
+  - sistem-finansial
+  - safe-haven
+  - literasi-finansial
+ogHeadline: 'Emas bukan investasi orang tua, tapi protes Gen Z'
+seoMetaTitle: 'Gen Z Beli Emas: Bukan Tradisi, Tidak Percaya Sistem Finansial'
+seoMetaDescription: >-
+  Gen Z dominasi pertumbuhan nasabah emas 116% YoY. Sistem yang nggak beri
+  alasan, bukan kamu yang salah.
 seoKeywords:
-  - "gen z beli emas Indonesia"
-  - "investasi emas gen z"
-  - "emas digital pegadaian"
-  - "emas vs saham gen z"
-  - "harga emas antam 2026"
-  - "nabung emas gen z"
-  - "emas batangan vs emas digital"
+  - gen z beli emas Indonesia
+  - investasi emas gen z
+  - emas digital pegadaian
+  - emas vs saham gen z
+  - harga emas antam 2026
+  - nabung emas gen z
+  - emas batangan vs emas digital
 sourceReferences:
-  - type: "link"
-    url: "https://kaltara.antaranews.com/berita/519245/kesadaran-finansial-meningkat-gen-z-dominasi-pertumbuhan-nasabah-tabungan-emas-pegadaian"
-    label: "Pegadaian: Gen Z Dominasi Tabungan Emas 2025 (Antara News)"
-  - type: "link"
-    url: "https://www.suara.com/bisnis/2026/01/16/154523/harga-makin-naik-gen-z-dan-milenial-kompak-borong-beli-emas"
-    label: "BSI BYOND: 2.18 Ton Emas Terjual 2025 (Suara.com)"
-  - type: "link"
-    url: "https://www.antaranews.com/berita/5667179/senin-pagi-harga-emas-antam-naik-rp10000-jadi-rp2622-juta-per-gram"
-    label: "Harga Emas Antam Juli 2026 (Antara News)"
-  - type: "link"
-    url: "https://pluang.com/akademi/berita-analisis/emas-semakin-digemari-kalangan-genz-dan-milenial"
-    label: "Pluang Research / Smytten PulseAI Survey 2026"
-  - type: "link"
-    url: "https://finance.detik.com/berita-ekonomi-bisnis/d-8324601/gen-z-milenial-ramai-ramai-nabung-emas-fomo-atau-melek-finansial"
-    label: "OJK: 5 Alasan Beli Emas (Detik.com)"
-  - type: "link"
-    url: "https://goodstats.id/article/berapa-lama-orang-indonesia-habiskan-waktu-untuk-scroll-tiktok-dalam-sehari-bGKAs"
-    label: "We Are Social Digital Indonesia 2026 (GoodStats)"
-  - type: "link"
-    url: "https://news.rakyatmediapers.co.id/ubah-stagnasi-menjadi-peluang-harga-emas-antam-26-juni-2026-mandek"
-    label: "Harga Emas Antam YTD 2026 (Rakyat Media Pers)"
+  - type: link
+    url: >-
+      https://kaltara.antaranews.com/berita/519245/kesadaran-finansial-meningkat-gen-z-dominasi-pertumbuhan-nasabah-tabungan-emas-pegadaian
+    label: 'Pegadaian: Gen Z Dominasi Tabungan Emas 2025 (Antara News)'
+  - type: link
+    url: >-
+      https://www.suara.com/bisnis/2026/01/16/154523/harga-makin-naik-gen-z-dan-milenial-kompak-borong-beli-emas
+    label: 'BSI BYOND: 2.18 Ton Emas Terjual 2025 (Suara.com)'
+  - type: link
+    url: >-
+      https://www.antaranews.com/berita/5667179/senin-pagi-harga-emas-antam-naik-rp10000-jadi-rp2622-juta-per-gram
+    label: Harga Emas Antam Juli 2026 (Antara News)
+  - type: link
+    url: >-
+      https://pluang.com/akademi/berita-analisis/emas-semakin-digemari-kalangan-genz-dan-milenial
+    label: Pluang Research / Smytten PulseAI Survey 2026
+  - type: link
+    url: >-
+      https://finance.detik.com/berita-ekonomi-bisnis/d-8324601/gen-z-milenial-ramai-ramai-nabung-emas-fomo-atau-melek-finansial
+    label: 'OJK: 5 Alasan Beli Emas (Detik.com)'
+  - type: link
+    url: >-
+      https://goodstats.id/article/berapa-lama-orang-indonesia-habiskan-waktu-untuk-scroll-tiktok-dalam-sehari-bGKAs
+    label: We Are Social Digital Indonesia 2026 (GoodStats)
+  - type: link
+    url: >-
+      https://news.rakyatmediapers.co.id/ubah-stagnasi-menjadi-peluang-harga-emas-antam-26-juni-2026-mandek
+    label: Harga Emas Antam YTD 2026 (Rakyat Media Pers)
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

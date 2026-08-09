@@ -19,7 +19,7 @@ tags:
   - phk-jurnalis
   - media-indonesia
   - programmatic
-ogHeadline: 'Marah = iklan. Itu bisnis media Indonesia.'
+ogHeadline: Marah = iklan. Itu bisnis media Indonesia.
 seoMetaTitle: 'Ekonomi Klik Media: Marah = Engagement = Iklan | TAM'
 seoMetaDescription: >-
   Media Indonesia adopsi clickbait karena marah = engagement tertinggi. 80%
@@ -33,19 +33,24 @@ seoKeywords:
   - media business model
 sourceReferences:
   - type: link
-    url: 'https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-29-indonesian-mainstream-media-in-the-digital-age-corporate-convergence-low-quality-news-and-staff-exploitation'
-    label: 'ISEAS Perspective 2024/29 - Indonesian Mainstream Media in the Digital Age'
+    url: >-
+      https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-29-indonesian-mainstream-media-in-the-digital-age-corporate-convergence-low-quality-news-and-staff-exploitation
+    label: ISEAS Perspective 2024/29 - Indonesian Mainstream Media in the Digital Age
   - type: link
-    url: 'https://aji.or.id/system/files/2025-08/laporan-riset-phk-layoutcompressed.pdf'
-    label: 'AJI Indonesia - Laporan Riset PHK 2025 "Pecat dan Bungkam"'
+    url: >-
+      https://aji.or.id/system/files/2025-08/laporan-riset-phk-layoutcompressed.pdf
+    label: AJI Indonesia - Laporan Riset PHK 2025 "Pecat dan Bungkam"
   - type: link
-    url: 'https://aji.or.id/informasi/catatan-tahun-2025-pers-dalam-pusaran-otoritarian'
+    url: >-
+      https://aji.or.id/informasi/catatan-tahun-2025-pers-dalam-pusaran-otoritarian
     label: 'AJI Indonesia - Catatan Tahun 2025: Pers dalam Pusaran Otoritarian'
   - type: link
-    url: 'https://www.tempo.co/ekonomi/aji-dan-fspmi-mengadukan-phk-di-perusahaan-media-1653192'
-    label: 'Tempo - AJI dan FSPMI Mengadukan PHK di Perusahaan Media 2025'
+    url: >-
+      https://www.tempo.co/ekonomi/aji-dan-fspmi-mengadukan-phk-di-perusahaan-media-1653192
+    label: Tempo - AJI dan FSPMI Mengadukan PHK di Perusahaan Media 2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** 8 orang dengan afiliasi politik kontrol media Indonesia. MNC, Media Group, EMTEK, Kompas, semua punya kepentingan. Baca [part 1: Konsentrasi Kepemilikan](/artikel/sistem-media-indonesia-part-1-konsentrasi-kepemilikan-6-grup-90-persen-berita)

@@ -2,8 +2,8 @@
 title: 'Sintesis: Keadilan untuk Siapa?'
 slug: sistem-hukum-indonesia-part-8-sintesis-keadilan-siapa
 excerpt: >-
-  UU ITE, overcrowding, narkoba, pengacara, korupsi, premanisme, sidang
-  online. 7 lapis sistem hukum yang semua menunjuk: keadilan untuk yang punya.
+  UU ITE, overcrowding, narkoba, pengacara, korupsi, premanisme, sidang online.
+  7 lapis sistem hukum yang semua menunjuk: keadilan untuk yang punya.
 publishedAt: '2026-09-22T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -22,34 +22,39 @@ tags:
 ogHeadline: 'Hukum: alokasi sumber daya, bukan keadilan'
 seoMetaTitle: 'Sistem Hukum Indonesia: Keadilan untuk Siapa? Sintesis 8 Part | TAM'
 seoMetaDescription: >-
-  UU ITE, overcrowding, narkoba, pengacara, korupsi, premanisme, sidang
-  online. 7 lapis sistem hukum yang menunjuk: keadilan untuk yang punya.
+  UU ITE, overcrowding, narkoba, pengacara, korupsi, premanisme, sidang online.
+  7 lapis sistem hukum yang menunjuk: keadilan untuk yang punya.
 seoKeywords:
   - sistem peradilan Indonesia
   - keadilan Indonesia
   - biaya keadilan
 sourceReferences:
   - type: link
-    url: 'https://www.kompas.id/artikel/mahasiswi-pembuat-meme-presiden-ditangkap-dan-dijerat-dengan-uu-ite-menuai-kritik-keras'
-    label: 'Kompas (Mei 2025) - Kasus UU ITE mahasiswi ITB'
+    url: >-
+      https://www.kompas.id/artikel/mahasiswi-pembuat-meme-presiden-ditangkap-dan-dijerat-dengan-uu-ite-menuai-kritik-keras
+    label: Kompas (Mei 2025) - Kasus UU ITE mahasiswi ITB
   - type: link
-    url: 'https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan'
-    label: 'BNN (Apr 2026) - Overkapasitas lapas 90%'
+    url: >-
+      https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan
+    label: BNN (Apr 2026) - Overkapasitas lapas 90%
   - type: link
     url: 'https://antikorupsi.org/id/tren-vonis-kasus-korupsi-2024'
-    label: 'ICW (2024) - Tren vonis korupsi'
+    label: ICW (2024) - Tren vonis korupsi
   - type: link
-    url: 'https://polkam.go.id/hadapi-lonjakan-ormas-dan-premanisme-pemerintah-bahas-penertiban-pengawasan-dan-reformasi-data/'
-    label: 'Polkam (Nov 2025) - Premanisme ormas'
+    url: >-
+      https://polkam.go.id/hadapi-lonjakan-ormas-dan-premanisme-pemerintah-bahas-penertiban-pengawasan-dan-reformasi-data/
+    label: Polkam (Nov 2025) - Premanisme ormas
   - type: link
-    url: 'https://www.csis.or.id/publication/collective-violence-incidents-in-indonesia-escalation-and-emerging-trends/'
-    label: 'CSIS (2025) - Kekerasan kolektif Indonesia'
+    url: >-
+      https://www.csis.or.id/publication/collective-violence-incidents-in-indonesia-escalation-and-emerging-trends/
+    label: CSIS (2025) - Kekerasan kolektif Indonesia
   - type: link
-    url: 'https://www.pengacarasumatera.com/2025/05/27/biaya-jasa-pengacara-di-indonesia-dari-yang-tertinggi-dan-paling-murah/'
-    label: 'AAI (2024) - Biaya pengacara Indonesia'
+    url: >-
+      https://www.pengacarasumatera.com/2025/05/27/biaya-jasa-pengacara-di-indonesia-dari-yang-tertinggi-dan-paling-murah/
+    label: AAI (2024) - Biaya pengacara Indonesia
   - type: link
     url: 'https://ejournal.ust.ac.id/index.php/JHJ/article/view/6224'
-    label: 'Jurnal Hukum Justice (2025) - Digitalisasi peradilan'
+    label: Jurnal Hukum Justice (2025) - Digitalisasi peradilan
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -57,6 +62,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** e-Court kedengarannya modern, tapi sidang online mengucilkan yang tidak punya kuota. Keadilan digital hanya untuk yang digital. Baca part sebelumnya: [Part 7](/artikel/sistem-hukum-indonesia-part-7-peradilan-digital-tidak-adil)

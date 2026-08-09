@@ -1,38 +1,71 @@
 ---
-title: "Asuransi Swasta Gen Z: Bayar Premi untuk Sistem yang Didesain Menang dari Kamu"
-slug: "asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu"
-excerpt: "Premi Rp300-500K/bulan selama 20-30 tahun. Rasio klaim 83.59%. Industri laba Rp16T. Kamu tidak dilindungi, kamu yang ngasih untung perusahaan asuransi."
-publishedAt: "2026-08-09 10:00:00+00"
-status: "scheduled"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Asuransi Swasta Gen Z: Bayar Premi untuk Sistem yang Didesain Menang dari Kamu'
+slug: asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu
+excerpt: >-
+  Premi Rp300-500K/bulan selama 20-30 tahun. Rasio klaim 83.59%. Industri laba
+  Rp16T. Kamu tidak dilindungi, kamu yang ngasih untung perusahaan asuransi.
+publishedAt: '2026-08-09 10:00:00+00'
+status: scheduled
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["asuransi", "asuransi-kesehatan", "gen-z", "premi", "bpjs", "rasio-klaim"]
-ogHeadline: "Bayar asuransi 20 tahun untuk klaim tak terpakai"
-seoMetaTitle: "Asuransi Swasta Gen Z: Bayar Premi untuk Sistem yang Didesain Menang"
-seoMetaDescription: "Premi Rp300-500K/bulan selama 20-30 tahun. Rasio klaim 83.59%. Industri laba Rp16T. Kamu tidak dilindungi, kamu yang ngasih untung perusahaan asuransi."
+povTag: kontra-narasi
+tags:
+  - asuransi
+  - asuransi-kesehatan
+  - gen-z
+  - premi
+  - bpjs
+  - rasio-klaim
+ogHeadline: Bayar asuransi 20 tahun untuk klaim tak terpakai
+seoMetaTitle: 'Asuransi Swasta Gen Z: Bayar Premi untuk Sistem yang Didesain Menang'
+seoMetaDescription: >-
+  Premi Rp300-500K/bulan selama 20-30 tahun. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "asuransi kesehatan gen z"
-  - "premi asuransi swasta 2026"
-  - "asuransi swasta vs BPJS"
-  - "rasio klaim asuransi Indonesia"
-  - "apakah gen z butuh asuransi"
+  - asuransi kesehatan gen z
+  - premi asuransi swasta 2026
+  - asuransi swasta vs BPJS
+  - rasio klaim asuransi Indonesia
+  - apakah gen z butuh asuransi
 sourceReferences:
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20251213/215/1936507/rasio-klaim-asuransi-kesehatan-tembus-835-ojk-beberkan-data-lengkapnya","label":"Bisnis.com: Rasio Klaim Asuransi Kesehatan Tembus 83.5%, OJK Beberkan Data Lengkapnya (Des 2025)"}
-  - {"type":"link","url":"https://keuangan.kontan.co.id/news/ojk-rasio-klaim-asuransi-turun-imbas-penyesuaian-premi-kesehatan","label":"Kontan: OJK Rasio Klaim Asuransi Turun Imbas Penyesuaian Premi Kesehatan (Apr 2025)"}
-  - {"type":"link","url":"https://ifgprogress.id/wp-content/uploads/2026/03/Insurance-Quarterly-Report_Q4-2025_Published.pdf","label":"IFG Progress: Insurance Quarterly Report Q4 2025 (2026)"}
-  - {"type":"link","url":"https://aaui.or.id/wp-content/uploads/2026/02/Book-ver-2025_WEB.pdf","label":"AAUI: Indonesia General Insurance Industry Book 2025 (Feb 2026)"}
-  - {"type":"link","url":"https://desanaob.id/biaya-premi-asuransi-kesehatan-swasta-2026/","label":"DesanaOb: Biaya Premi Asuransi 2026 Tarif Kesehatan Swasta Terbaru"}
-  - {"type":"link","url":"https://wartaekonomi.co.id/read564827/sasar-gen-z-prudential-indonesia-dan-prudential-syariah-luncurkan-prusehat","label":"Warta Ekonomi: Sasar Gen Z, Prudential Luncurkan PRUSehat (Apr 2025)"}
-  - {"type":"link","url":"https://www.greateasternlife.com/id/in/asuransi-individu/mengenal-asuransi/bagaimana-memulai-rencana/asuransi-kesehatan/asuransi-kesehatan-swasta.html","label":"Great Eastern Life: Asuransi Kesehatan Swasta Rp 100 Ribu Per Bulan"}
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20251213/215/1936507/rasio-klaim-asuransi-kesehatan-tembus-835-ojk-beberkan-data-lengkapnya
+    label: >-
+      Bisnis.com: Rasio Klaim Asuransi Kesehatan Tembus 83.5%, OJK Beberkan Data
+      Lengkapnya (Des 2025)
+  - type: link
+    url: >-
+      https://keuangan.kontan.co.id/news/ojk-rasio-klaim-asuransi-turun-imbas-penyesuaian-premi-kesehatan
+    label: >-
+      Kontan: OJK Rasio Klaim Asuransi Turun Imbas Penyesuaian Premi Kesehatan
+      (Apr 2025)
+  - type: link
+    url: >-
+      https://ifgprogress.id/wp-content/uploads/2026/03/Insurance-Quarterly-Report_Q4-2025_Published.pdf
+    label: 'IFG Progress: Insurance Quarterly Report Q4 2025 (2026)'
+  - type: link
+    url: 'https://aaui.or.id/wp-content/uploads/2026/02/Book-ver-2025_WEB.pdf'
+    label: 'AAUI: Indonesia General Insurance Industry Book 2025 (Feb 2026)'
+  - type: link
+    url: 'https://desanaob.id/biaya-premi-asuransi-kesehatan-swasta-2026/'
+    label: 'DesanaOb: Biaya Premi Asuransi 2026 Tarif Kesehatan Swasta Terbaru'
+  - type: link
+    url: >-
+      https://wartaekonomi.co.id/read564827/sasar-gen-z-prudential-indonesia-dan-prudential-syariah-luncurkan-prusehat
+    label: 'Warta Ekonomi: Sasar Gen Z, Prudential Luncurkan PRUSehat (Apr 2025)'
+  - type: link
+    url: >-
+      https://www.greateasternlife.com/id/in/asuransi-individu/mengenal-asuransi/bagaimana-memulai-rencana/asuransi-kesehatan/asuransi-kesehatan-swasta.html
+    label: 'Great Eastern Life: Asuransi Kesehatan Swasta Rp 100 Ribu Per Bulan'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 coverImageUrl: null
 coverImageAlt: null
 isSponsored: false

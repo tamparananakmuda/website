@@ -24,9 +24,8 @@ tags:
 ogHeadline: 'Tujuh industri, satu pola: kamu adalah produknya'
 seoMetaTitle: 'Sintesis Industri Penderitaan Gen Z: Siklus yang Tidak Berakhir | TAM'
 seoMetaDescription: >-
-  TikTok Shop affiliate komisi dibekukan, Rp3T dana di-banned. 7 industri, 1
-  pola: mereka tidak menjual solusi, mereka menjual ketergantungan. Kamu adalah
-  produk.
+  TikTok Shop affiliate komisi dibekukan, Rp3T dana di-banned. Sistem yang nggak
+  beri alasan, bukan kamu yang salah.
 seoKeywords:
   - TikTok Shop affiliate Indonesia
   - eksploitasi gen z
@@ -35,17 +34,18 @@ seoKeywords:
   - perlindungan hukum afiliator
 sourceReferences:
   - type: link
-    url: 'https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir'
-    label: 'CNBC Indonesia - Afiliator TikTok Shop komisi dibekukan 2026'
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir
+    label: CNBC Indonesia - Afiliator TikTok Shop komisi dibekukan 2026
   - type: link
     url: 'https://journal.unismuh.ac.id/index.php/Justicia/article/view/14960'
-    label: 'Justicia Journal - Perlindungan hukum afiliator 2025'
+    label: Justicia Journal - Perlindungan hukum afiliator 2025
   - type: link
     url: 'https://thecube.asia/2026/01/sea-creator-economy-report/'
-    label: 'Cube Asia - SEA creator economy report 2026'
+    label: Cube Asia - SEA creator economy report 2026
   - type: link
     url: 'https://garuda.kemdikbud.go.id/'
-    label: 'Garuda/Kemdikbud - Digital exploitation study 2025'
+    label: Garuda/Kemdikbud - Digital exploitation study 2025
 featured: false
 humanSignature: true
 factCheckStatus: verified

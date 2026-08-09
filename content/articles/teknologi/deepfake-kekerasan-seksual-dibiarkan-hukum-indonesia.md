@@ -1,41 +1,93 @@
 ---
-title: "Deepfake Bukan Masalah Teknologi, Kekerasan Seksual yang Dibiarkan Hukum"
-slug: "deepfake-kekerasan-seksual-dibiarkan-hukum-indonesia"
-excerpt: "96% deepfake di internet adalah pornografi non-konsensual. Korban perempuan muda. Hukum Indonesia tidak punya pasal yang mendefinisikan deepfake."
-publishedAt: "2026-08-09 05:00:00+00"
-status: "scheduled"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+title: 'Deepfake Bukan Masalah Teknologi, Kekerasan Seksual yang Dibiarkan Hukum'
+slug: deepfake-kekerasan-seksual-dibiarkan-hukum-indonesia
+excerpt: >-
+  96% deepfake di internet adalah pornografi non-konsensual. Korban perempuan
+  muda. Hukum Indonesia tidak punya pasal yang mendefinisikan deepfake.
+publishedAt: '2026-08-09 05:00:00+00'
+status: scheduled
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["deepfake", "kekerasan-seksual", "hukum-indonesia", "ai", "perlindungan-korban", "perempuan"]
-ogHeadline: "Wajah kamu di video porno tanpa izin, hukum diam"
-seoMetaTitle: "Deepfake Bukan Masalah Tech: Kekerasan Seksual yang Dibiarkan Hukum"
-seoMetaDescription: "96% deepfake di internet adalah pornografi non-konsensual. Korban perempuan muda. Hukum Indonesia tidak punya pasal yang mendefinisikan deepfake."
+povTag: kontra-narasi
+tags:
+  - deepfake
+  - kekerasan-seksual
+  - hukum-indonesia
+  - ai
+  - perlindungan-korban
+  - perempuan
+ogHeadline: 'Wajah kamu di video porno tanpa izin, hukum diam'
+seoMetaTitle: 'Deepfake Bukan Masalah Tech: Kekerasan Seksual yang Dibiarkan Hukum'
+seoMetaDescription: >-
+  96% deepfake di internet adalah pornografi non-konsensual. Sistem yang nggak
+  beri alasan, bukan kamu yang salah.
 seoKeywords:
-  - "deepfake Indonesia"
-  - "deepfake pornografi"
-  - "hukum deepfake Indonesia"
-  - "korban deepfake AI"
-  - "perlindungan korban deepfake"
+  - deepfake Indonesia
+  - deepfake pornografi
+  - hukum deepfake Indonesia
+  - korban deepfake AI
+  - perlindungan korban deepfake
 sourceReferences:
-  - {"type":"link","url":"https://www.ntvnews.id/news/0191747/mahasiswa-undip-divonis-1-tahun-penjara-atas-kasus-deepfake-pornografi","label":"NTVnews: Mahasiswa Undip Divonis 1 Tahun Penjara atas Kasus Deepfake Pornografi (Mar 2026)"}
-  - {"type":"link","url":"https://www.tempo.co/hukum/polda-jateng-tahan-mahasiswa-undip-pembuat-deepfake-porn-2090387","label":"Tempo: Polda Jateng Tahan Mahasiswa Undip Pembuat Deepfake Porn (Nov 2025)"}
-  - {"type":"link","url":"https://sumut.idntimes.com/news/sumatra-utara/kasus-deepfake-pornografi-ai-pelaku-manipulasi-foto-untuk-memeras-00-f4z9n-lzsknx","label":"IDN Times Sumut: Kasus Deepfake Pornografi AI, Pelaku Manipulasi Foto untuk Memeras (Jul 2026)"}
-  - {"type":"link","url":"https://regional.kompas.com/read/2026/07/27/153740678/7-perempuan-diduga-jadi-korban-deepfake-ai-porno-mahasiswi-uns-lapor-polisi","label":"Kompas: 7 Perempuan Diduga Jadi Korban Deepfake AI Porno, Mahasiswi UNS Lapor Polisi (Jul 2026)"}
-  - {"type":"link","url":"https://kumparan.com/kumparannews/chiko-pembuat-konten-porno-deepfake-konten-smanse-divonis-1-tahun-penjara-26x41mBFULb","label":"Kumparan: Chiko Pembuat Konten Porno Deepfake Divonis 1 Tahun Penjara (Mar 2026)"}
-  - {"type":"link","url":"https://jakartaglobe.id/tech/indonesia-urges-tech-giants-to-add-ai-labels-to-fight-deepfakes","label":"Jakarta Globe: Indonesia Urges Tech Giants to Add AI Labels to Fight Deepfakes (2025)"}
-  - {"type":"link","url":"https://selular.id/2025/09/konten-deepfake-di-indonesia-naik-550/","label":"Selular.id: Konten Deepfake di Indonesia Naik 550% (Sep 2025)"}
-  - {"type":"link","url":"https://doi.org/10.15642/aj.2025.11.1.125-153","label":"Jurnal Ansiru Law: Analysis of Criminal Law Enforcement on Non-Consensual Deepfake Pornography in Indonesia (2025)"}
-  - {"type":"link","url":"https://journal.cattleyadf.org/index.php/Judge/article/download/2279/1292","label":"Jurnal Cattleya: Urgensi dan Kecukupan Pengaturan Deepfake dalam UU ITE di Indonesia (2025)"}
-  - {"type":"link","url":"https://techcollectivesea.com/2025/01/06/deepfakes-southeast-asia-problem/","label":"Tech Collective: How the Region is Combatting the Problem of Deepfake Content (2025)"}
+  - type: link
+    url: >-
+      https://www.ntvnews.id/news/0191747/mahasiswa-undip-divonis-1-tahun-penjara-atas-kasus-deepfake-pornografi
+    label: >-
+      NTVnews: Mahasiswa Undip Divonis 1 Tahun Penjara atas Kasus Deepfake
+      Pornografi (Mar 2026)
+  - type: link
+    url: >-
+      https://www.tempo.co/hukum/polda-jateng-tahan-mahasiswa-undip-pembuat-deepfake-porn-2090387
+    label: 'Tempo: Polda Jateng Tahan Mahasiswa Undip Pembuat Deepfake Porn (Nov 2025)'
+  - type: link
+    url: >-
+      https://sumut.idntimes.com/news/sumatra-utara/kasus-deepfake-pornografi-ai-pelaku-manipulasi-foto-untuk-memeras-00-f4z9n-lzsknx
+    label: >-
+      IDN Times Sumut: Kasus Deepfake Pornografi AI, Pelaku Manipulasi Foto
+      untuk Memeras (Jul 2026)
+  - type: link
+    url: >-
+      https://regional.kompas.com/read/2026/07/27/153740678/7-perempuan-diduga-jadi-korban-deepfake-ai-porno-mahasiswi-uns-lapor-polisi
+    label: >-
+      Kompas: 7 Perempuan Diduga Jadi Korban Deepfake AI Porno, Mahasiswi UNS
+      Lapor Polisi (Jul 2026)
+  - type: link
+    url: >-
+      https://kumparan.com/kumparannews/chiko-pembuat-konten-porno-deepfake-konten-smanse-divonis-1-tahun-penjara-26x41mBFULb
+    label: >-
+      Kumparan: Chiko Pembuat Konten Porno Deepfake Divonis 1 Tahun Penjara (Mar
+      2026)
+  - type: link
+    url: >-
+      https://jakartaglobe.id/tech/indonesia-urges-tech-giants-to-add-ai-labels-to-fight-deepfakes
+    label: >-
+      Jakarta Globe: Indonesia Urges Tech Giants to Add AI Labels to Fight
+      Deepfakes (2025)
+  - type: link
+    url: 'https://selular.id/2025/09/konten-deepfake-di-indonesia-naik-550/'
+    label: 'Selular.id: Konten Deepfake di Indonesia Naik 550% (Sep 2025)'
+  - type: link
+    url: 'https://doi.org/10.15642/aj.2025.11.1.125-153'
+    label: >-
+      Jurnal Ansiru Law: Analysis of Criminal Law Enforcement on Non-Consensual
+      Deepfake Pornography in Indonesia (2025)
+  - type: link
+    url: 'https://journal.cattleyadf.org/index.php/Judge/article/download/2279/1292'
+    label: >-
+      Jurnal Cattleya: Urgensi dan Kecukupan Pengaturan Deepfake dalam UU ITE di
+      Indonesia (2025)
+  - type: link
+    url: 'https://techcollectivesea.com/2025/01/06/deepfakes-southeast-asia-problem/'
+    label: >-
+      Tech Collective: How the Region is Combatting the Problem of Deepfake
+      Content (2025)
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 coverImageUrl: null
 coverImageAlt: null
 isSponsored: false

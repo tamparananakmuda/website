@@ -1,26 +1,36 @@
 ---
-title: "Afiliasi TikTok Shop Bukan Bisnis, Kerja Sales untuk Platform"
-slug: "afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform"
-excerpt: "80% afiliator TikTok Shop pemula penghasilan di bawah Rp 2 juta per bulan. Komisi bisa dibekukan kapan saja. Kamu tidak punya produk, brand, atau asset."
-publishedAt: "2026-08-08T05:00:00.000Z"
+title: 'Afiliasi TikTok Shop Bukan Bisnis, Kerja Sales untuk Platform'
+slug: afiliate-tiktok-shop-bukan-bisnis-kerja-sales-untuk-platform
+excerpt: >-
+  80% afiliator TikTok Shop pemula penghasilan di bawah Rp 2 juta per bulan.
+  Komisi bisa dibekukan kapan saja. Kamu tidak punya produk, brand, atau asset.
+publishedAt: '2026-08-08T05:00:00.000Z'
 status: scheduled
-category: "bisnis"
+category: bisnis
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["affiliate-marketing", "tiktok-shop", "gen-z", "bisnis-online", "komisi", "platform-ekonomi"]
-ogHeadline: "80% afiliator TikTok pemula di bawah 2 juta"
-seoMetaTitle: "Afiliasi TikTok Shop Bukan Bisnis, Kamu Sales untuk Platform"
-seoMetaDescription: "80% afiliator TikTok Shop pemula penghasilan di bawah Rp 2 juta per bulan. Komisi bisa dibekukan kapan saja. Kamu tidak punya produk, brand, atau asset."
+povTag: kontra-narasi
+tags:
+  - affiliate-marketing
+  - tiktok-shop
+  - gen-z
+  - bisnis-online
+  - komisi
+  - platform-ekonomi
+ogHeadline: 80% afiliator TikTok pemula di bawah 2 juta
+seoMetaTitle: 'Afiliasi TikTok Shop Bukan Bisnis, Kamu Sales untuk Platform'
+seoMetaDescription: >-
+  80% afiliator TikTok Shop pemula penghasilan di bawah Rp 2 juta per bulan.
+  Sistem yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
-  - "affiliate marketing tiktok shop"
-  - "komisi tiktok affiliate"
-  - "bisnis online tanpa modal"
-  - "afiliator tiktok shop"
-  - "penghasilan affiliate"
-  - "tiktok shop affiliate"
+  - affiliate marketing tiktok shop
+  - komisi tiktok affiliate
+  - bisnis online tanpa modal
+  - afiliator tiktok shop
+  - penghasilan affiliate
+  - tiktok shop affiliate
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,12 +45,36 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://data.goodstats.id/statistic/shopee-dan-tiktok-shop-kuasai-trafik-affiliate-link-2025-mwRyP","label":"GoodStats Data: Shopee dan TikTok Shop Kuasai Trafik Affiliate Link 2025 (Jakpat)"}
-  - {"type":"link","url":"https://www.konteks.co.id/ekonomi/1631418446/wow-tiktok-indonesia-ungkap-fakta-63-persen-konten-kreator-cuan-di-atas-upah-minimum","label":"Konteks.co.id: TikTok Indonesia Ungkap Fakta 63 Persen Konten Kreator Cuan di Atas UMP (Jul 2025)"}
-  - {"type":"link","url":"https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir","label":"CNBC Indonesia: Nasib Afiliator TikTok Shop, Komisi Dibekukan Perkara Gratis Ongkir (Jul 2026)"}
-  - {"type":"link","url":"https://teknologi.bisnis.com/read/20260619/266/1981902/komunitas-affiliate-kerek-bisnis-seller-tiktok-shop-begini-caranya","label":"Bisnis.com: Komunitas Affiliate Kerek Bisnis Seller TikTok Shop (Jun 2026)"}
-  - {"type":"link","url":"https://www.fortuneidn.com/business/jelang-ramadan-affiliate-tiktok-shop-bisa-cetak-omzet-ratusan-juta-00-4vfn9-65z258","label":"Fortune Indonesia: Affiliate TikTok Shop Cetak Omzet Ratusan Juta (2026)"}
-  - {"type":"link","url":"https://blog.buzzerpanel.id/panduan-affiliate-marketing-tiktok-shop-pemula/","label":"Buzzerpanel: Panduan Affiliate Marketing TikTok Shop Pemula 2026"}
+  - type: link
+    url: >-
+      https://data.goodstats.id/statistic/shopee-dan-tiktok-shop-kuasai-trafik-affiliate-link-2025-mwRyP
+    label: >-
+      GoodStats Data: Shopee dan TikTok Shop Kuasai Trafik Affiliate Link 2025
+      (Jakpat)
+  - type: link
+    url: >-
+      https://www.konteks.co.id/ekonomi/1631418446/wow-tiktok-indonesia-ungkap-fakta-63-persen-konten-kreator-cuan-di-atas-upah-minimum
+    label: >-
+      Konteks.co.id: TikTok Indonesia Ungkap Fakta 63 Persen Konten Kreator Cuan
+      di Atas UMP (Jul 2025)
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260707152842-37-748834/nasib-afiliator-tiktok-shop-komisi-dibekukan-perkara-gratis-ongkir
+    label: >-
+      CNBC Indonesia: Nasib Afiliator TikTok Shop, Komisi Dibekukan Perkara
+      Gratis Ongkir (Jul 2026)
+  - type: link
+    url: >-
+      https://teknologi.bisnis.com/read/20260619/266/1981902/komunitas-affiliate-kerek-bisnis-seller-tiktok-shop-begini-caranya
+    label: 'Bisnis.com: Komunitas Affiliate Kerek Bisnis Seller TikTok Shop (Jun 2026)'
+  - type: link
+    url: >-
+      https://www.fortuneidn.com/business/jelang-ramadan-affiliate-tiktok-shop-bisa-cetak-omzet-ratusan-juta-00-4vfn9-65z258
+    label: 'Fortune Indonesia: Affiliate TikTok Shop Cetak Omzet Ratusan Juta (2026)'
+  - type: link
+    url: >-
+      https://blog.buzzerpanel.id/panduan-affiliate-marketing-tiktok-shop-pemula/
+    label: 'Buzzerpanel: Panduan Affiliate Marketing TikTok Shop Pemula 2026'
 ---
 
 ## Hook

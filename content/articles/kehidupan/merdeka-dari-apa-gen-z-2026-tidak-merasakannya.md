@@ -1,47 +1,102 @@
 ---
-title: "Merdeka dari Apa? Gen Z 2026 Tidak Merasakannya"
-slug: "merdeka-dari-apa-gen-z-2026-tidak-merasakannya"
-excerpt: "20 juta Gen Z belum punya tabungan, 41 persen ingin kabur. Saat Indonesia rayakan 81 tahun merdeka, Gen Z bertanya: merdeka dari apa?"
-publishedAt: "2026-08-16 01:00:00+00"
-status: "scheduled"
-category: "kehidupan"
+title: Merdeka dari Apa? Gen Z 2026 Tidak Merasakannya
+slug: merdeka-dari-apa-gen-z-2026-tidak-merasakannya
+excerpt: >-
+  20 juta Gen Z belum punya tabungan, 41 persen ingin kabur. Saat Indonesia
+  rayakan 81 tahun merdeka, Gen Z bertanya: merdeka dari apa?
+publishedAt: '2026-08-16 01:00:00+00'
+status: scheduled
+category: kehidupan
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["merdeka", "gen-z", "kemerdekaan", "ekonomi", "tan-malaka", "kabur-aja-dulu", "neet"]
-ogHeadline: "17 Agustus dirayakan, Gen Z tidak merasakannya"
-seoMetaTitle: "Merdeka dari Apa? Gen Z 2026 Tidak Merasakannya"
-seoMetaDescription: "20 juta Gen Z belum punya tabungan. 41 persen ingin kabur ke luar negeri. Saat Indonesia rayakan 81 tahun merdeka, pertanyaannya: merdeka dari apa?"
+povTag: kontra-narasi
+tags:
+  - merdeka
+  - gen-z
+  - kemerdekaan
+  - ekonomi
+  - tan-malaka
+  - kabur-aja-dulu
+  - neet
+ogHeadline: '17 Agustus dirayakan, Gen Z tidak merasakannya'
+seoMetaTitle: '17 Agustus dirayakan, Gen Z tidak merasakannya | TAM'
+seoMetaDescription: >-
+  20 juta Gen Z belum punya tabungan. 41 persen ingin kabur ke luar negeri. Saat
+  Indonesia rayakan 81 tahun merdeka, pertanyaannya: merdeka dari apa?
 seoKeywords:
-  - "merdeka"
-  - "gen z"
-  - "kemerdekaan"
-  - "tan malaka"
-  - "kabur aja dulu"
-  - "neet"
+  - merdeka
+  - gen z
+  - kemerdekaan
+  - tan malaka
+  - kabur aja dulu
+  - neet
 sourceReferences:
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS Sakernas Februari 2026: TPT usia 15-24 tahun 16.36%, total pengangguran 7.24 juta"}
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS NEET 2024: 20.31% Gen Z usia 15-24 tahun berstatus NEET"}
-  - {"type":"link","url":"https://www.bi.go.id/","label":"Bank Indonesia November 2025: 20 juta Gen Z belum punya tabungan di bank"}
-  - {"type":"link","url":"https://www.ojk.go.id/","label":"OJK SNLIK 2025: Literasi keuangan 66.46%, inklusi 80.51%, gap 14 poin"}
-  - {"type":"link","url":"https://www.ojk.go.id/","label":"OJK Maret 2026: BNPL Rp28.3 triliun, 48.65% kredit macet dari usia 19-34 tahun"}
-  - {"type":"link","url":"https://www.idntimes.com/news/indonesia/riset-imgr-mayoritas-anak-muda-anggap-kritik-bentuk-nasionalisme-00-pnxwk-jkwg48","label":"IMGR 2027 IDN Research Institute: 59.3% Gen Z anggap kritik = nasionalisme"}
-  - {"type":"link","url":"https://www.cnnindonesia.com/gaya-hidup/20250309155529-277-1206753/survei-kaburajadulu-mayoritas-gen-z-ingin-pindah-ke-luar-negeri","label":"YouGov Februari 2025: 41% Gen Z ingin pindah ke luar negeri"}
-  - {"type":"link","url":"https://www.kompas.id/artikel/dirgahayu-republik-indonesia-dari-kami-para-gen-z","label":"Kompas.id Agustus 2025: Gen Z 71.5 juta jiwa, 26.5% populasi Indonesia"}
-  - {"type":"link","url":"https://www.marxists.org/indonesia/archive/malaka/1945-Politik.htm","label":"Tan Malaka: Merdeka 100% (1945) - Kedaulatan ekonomi dan politik"}
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS DKI Jakarta 2025: Pengeluaran Gen Z Jakarta Rp11.97 juta per bulan"}
-  - {"type":"link","url":"https://www.populix.co/","label":"Populix Maret 2025: 82% responden ingin bekerja di luar negeri"}
-  - {"type":"link","url":"https://www.cna.id/indonesia/anak-muda-indonesia-kaburajadulu-brain-drain-38896","label":"CNA.id 2025: #KaburAjaDulu 200.000 postingan TikTok, 44.3% pekerja muda sektor informal"}
-  - {"type":"link","url":"https://fundforpeace.org/","label":"Fund for Peace: Indonesia peringkat 90 dari 179 negara di indikator brain drain"}
-  - {"type":"link","url":"https://journal.ugm.ac.id/populasi/article/view/114245","label":"UGM Jurnal Populasi: Resiliensi nasional rendah meningkatkan niat migrasi Gen Z"}
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS Sakernas 2025: TPT lulusan SMK 8%, S1 6.23%"}
+  - type: link
+    url: 'https://www.bps.go.id/'
+    label: >-
+      BPS Sakernas Februari 2026: TPT usia 15-24 tahun 16.36%, total
+      pengangguran 7.24 juta
+  - type: link
+    url: 'https://www.bps.go.id/'
+    label: 'BPS NEET 2024: 20.31% Gen Z usia 15-24 tahun berstatus NEET'
+  - type: link
+    url: 'https://www.bi.go.id/'
+    label: 'Bank Indonesia November 2025: 20 juta Gen Z belum punya tabungan di bank'
+  - type: link
+    url: 'https://www.ojk.go.id/'
+    label: 'OJK SNLIK 2025: Literasi keuangan 66.46%, inklusi 80.51%, gap 14 poin'
+  - type: link
+    url: 'https://www.ojk.go.id/'
+    label: >-
+      OJK Maret 2026: BNPL Rp28.3 triliun, 48.65% kredit macet dari usia 19-34
+      tahun
+  - type: link
+    url: >-
+      https://www.idntimes.com/news/indonesia/riset-imgr-mayoritas-anak-muda-anggap-kritik-bentuk-nasionalisme-00-pnxwk-jkwg48
+    label: 'IMGR 2027 IDN Research Institute: 59.3% Gen Z anggap kritik = nasionalisme'
+  - type: link
+    url: >-
+      https://www.cnnindonesia.com/gaya-hidup/20250309155529-277-1206753/survei-kaburajadulu-mayoritas-gen-z-ingin-pindah-ke-luar-negeri
+    label: 'YouGov Februari 2025: 41% Gen Z ingin pindah ke luar negeri'
+  - type: link
+    url: >-
+      https://www.kompas.id/artikel/dirgahayu-republik-indonesia-dari-kami-para-gen-z
+    label: 'Kompas.id Agustus 2025: Gen Z 71.5 juta jiwa, 26.5% populasi Indonesia'
+  - type: link
+    url: 'https://www.marxists.org/indonesia/archive/malaka/1945-Politik.htm'
+    label: 'Tan Malaka: Merdeka 100% (1945) - Kedaulatan ekonomi dan politik'
+  - type: link
+    url: 'https://www.bps.go.id/'
+    label: 'BPS DKI Jakarta 2025: Pengeluaran Gen Z Jakarta Rp11.97 juta per bulan'
+  - type: link
+    url: 'https://www.populix.co/'
+    label: 'Populix Maret 2025: 82% responden ingin bekerja di luar negeri'
+  - type: link
+    url: >-
+      https://www.cna.id/indonesia/anak-muda-indonesia-kaburajadulu-brain-drain-38896
+    label: >-
+      CNA.id 2025: #KaburAjaDulu 200.000 postingan TikTok, 44.3% pekerja muda
+      sektor informal
+  - type: link
+    url: 'https://fundforpeace.org/'
+    label: >-
+      Fund for Peace: Indonesia peringkat 90 dari 179 negara di indikator brain
+      drain
+  - type: link
+    url: 'https://journal.ugm.ac.id/populasi/article/view/114245'
+    label: >-
+      UGM Jurnal Populasi: Resiliensi nasional rendah meningkatkan niat migrasi
+      Gen Z
+  - type: link
+    url: 'https://www.bps.go.id/'
+    label: 'BPS Sakernas 2025: TPT lulusan SMK 8%, S1 6.23%'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

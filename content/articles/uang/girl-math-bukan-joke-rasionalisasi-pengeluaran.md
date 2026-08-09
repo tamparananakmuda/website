@@ -1,40 +1,65 @@
 ---
-title: "Girl Math Bukan Joke, Rasionalisasi Belanja Saat Nabung Tak Masuk Akal"
-slug: "girl-math-bukan-joke-rasionalisasi-pengeluaran"
-excerpt: "20 juta Gen Z Indonesia belum punya tabungan. Utang BNPL Rp28,3 triliun. Tapi girl math di TikTok bilang belanja itu investasi. Bukan humor, itu coping."
-publishedAt: "2026-08-12 05:00:00+00"
-status: "scheduled"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Girl Math Bukan Joke, Rasionalisasi Belanja Saat Nabung Tak Masuk Akal'
+slug: girl-math-bukan-joke-rasionalisasi-pengeluaran
+excerpt: >-
+  20 juta Gen Z Indonesia belum punya tabungan. Utang BNPL Rp28,3 triliun. Tapi
+  girl math di TikTok bilang belanja itu investasi. Bukan humor, itu coping.
+publishedAt: '2026-08-12 05:00:00+00'
+status: scheduled
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["girl-math", "mental-accounting", "belanja-impulsif", "gen-z-keuangan", "bnpl", "paylater", "rasionalisasi"]
-ogHeadline: "Girl math bukan humor, itu rasionalisasi belanja"
-seoMetaTitle: "Girl Math Bukan Joke, Rasionalisasi Belanja Saat Nabung Tak Masuk Akal"
-seoMetaDescription: "20 juta Gen Z Indonesia belum punya tabungan. Utang BNPL Rp28,3 triliun. Tapi girl math di TikTok bilang belanja itu investasi. Bukan humor, itu coping."
+povTag: kontra-narasi
+tags:
+  - girl-math
+  - mental-accounting
+  - belanja-impulsif
+  - gen-z-keuangan
+  - bnpl
+  - paylater
+  - rasionalisasi
+ogHeadline: 'Girl math bukan humor, itu rasionalisasi belanja'
+seoMetaTitle: 'Girl math bukan humor, itu rasionalisasi belanja | TAM'
+seoMetaDescription: >-
+  20 juta Gen Z Indonesia belum punya tabungan. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "girl math adalah"
-  - "girl math gen z Indonesia"
-  - "psikologi girl math"
-  - "girl math mental accounting"
-  - "girl math belanja impulsif"
-  - "cara mengatasi girl math"
-  - "girl math tiktok tren"
+  - girl math adalah
+  - girl math gen z Indonesia
+  - psikologi girl math
+  - girl math mental accounting
+  - girl math belanja impulsif
+  - cara mengatasi girl math
+  - girl math tiktok tren
 sourceReferences:
-  - {"type":"link","url":"https://www.bi.go.id/id/publikasi/data/","label":"Bank Indonesia: Data Tabungan Gen Z (2025)"}
-  - {"type":"link","url":"https://www.ojk.go.id/id/kanal/iknb/","label":"OJK: Total Utang BNPL Nasional (2026)"}
-  - {"type":"link","url":"https://www.ojk.go.id/id/kanal/iknb/","label":"OJK: Survei Nasional Literasi dan Inklusi Keuangan 2025"}
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS DKI Jakarta: Pengeluaran Gen Z (2025)"}
-  - {"type":"link","url":"https://www.idnresearchinstitute.com/","label":"IDN Research Institute: Indonesia Millennial and Gen Z Report 2026"}
-  - {"type":"link","url":"https://www.apjii.or.id/","label":"APJII: Survei Peminjam Online (2025)"}
-  - {"type":"link","url":"https://theconversation.com/","label":"The Conversation: Girl Math and Financial Anxiety"}
+  - type: link
+    url: 'https://www.bi.go.id/id/publikasi/data/'
+    label: 'Bank Indonesia: Data Tabungan Gen Z (2025)'
+  - type: link
+    url: 'https://www.ojk.go.id/id/kanal/iknb/'
+    label: 'OJK: Total Utang BNPL Nasional (2026)'
+  - type: link
+    url: 'https://www.ojk.go.id/id/kanal/iknb/'
+    label: 'OJK: Survei Nasional Literasi dan Inklusi Keuangan 2025'
+  - type: link
+    url: 'https://www.bps.go.id/'
+    label: 'BPS DKI Jakarta: Pengeluaran Gen Z (2025)'
+  - type: link
+    url: 'https://www.idnresearchinstitute.com/'
+    label: 'IDN Research Institute: Indonesia Millennial and Gen Z Report 2026'
+  - type: link
+    url: 'https://www.apjii.or.id/'
+    label: 'APJII: Survei Peminjam Online (2025)'
+  - type: link
+    url: 'https://theconversation.com/'
+    label: 'The Conversation: Girl Math and Financial Anxiety'
 featured: false
 readingTime: 9
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

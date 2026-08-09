@@ -3,7 +3,8 @@ title: 'Bank: Tempat Uangmu Diperlambat Mati'
 slug: sistem-finansial-indonesia-part-1-bank-diperlambat-mati
 excerpt: >-
   Bunga tabungan 0,5-1%, inflasi 2,92%. Bank pakai uangmu untuk kredit 12-18%.
-  Data OJK dan BPS bongkar mekanisme ekstraksi perbankan Indonesia dari gaji gen Z.
+  Data OJK dan BPS bongkar mekanisme ekstraksi perbankan Indonesia dari gaji gen
+  Z.
 publishedAt: '2026-08-01T01:00:00.000Z'
 status: scheduled
 category: uang
@@ -19,11 +20,11 @@ tags:
   - biaya-admin
   - gen-z
   - sistem-finansial
-ogHeadline: 'Uangmu di bank berkurang tanpa kamu sadar'
+ogHeadline: Uangmu di bank berkurang tanpa kamu sadar
 seoMetaTitle: 'Bunga Tabungan vs Inflasi: Kenapa Uangmu di Bank Berkurang | TAM'
 seoMetaDescription: >-
-  Bunga tabungan 0,5-1%, inflasi 2,92%. Bank pakai uangmu untuk kredit 12-18%.
-  Data OJK dan BPS bongkar mekanisme ekstraksi perbankan Indonesia dari gaji gen Z.
+  Bunga tabungan 0,5-1%, inflasi 2,92%. Sistem yang nggak beri alasan, bukan
+  kamu yang salah.
 seoKeywords:
   - bunga tabungan vs inflasi Indonesia
   - sistem perbankan Indonesia
@@ -31,23 +32,28 @@ seoKeywords:
   - LPS penjaminan simpanan
 sourceReferences:
   - type: link
-    url: 'https://www.ojk.go.id/id/kanal/perbankan/data-dan-statistik/booklet-perbankan-indonesia/Pages/Booklet-Perbankan-Indonesia-2025.aspx'
-    label: 'OJK Booklet Perbankan Indonesia 2025'
+    url: >-
+      https://www.ojk.go.id/id/kanal/perbankan/data-dan-statistik/booklet-perbankan-indonesia/Pages/Booklet-Perbankan-Indonesia-2025.aspx
+    label: OJK Booklet Perbankan Indonesia 2025
   - type: link
-    url: 'https://www.bps.go.id/en/pressrelease/2025/01/02/2397/consumer-price-index.html'
-    label: 'BPS Inflasi IHK Desember 2024'
+    url: >-
+      https://www.bps.go.id/en/pressrelease/2025/01/02/2397/consumer-price-index.html
+    label: BPS Inflasi IHK Desember 2024
   - type: link
-    url: 'https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_270125.aspx'
-    label: 'Bank Indonesia Siaran Pers Inflasi 2024'
+    url: >-
+      https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_270125.aspx
+    label: Bank Indonesia Siaran Pers Inflasi 2024
   - type: link
     url: 'https://lps.go.id/laporan-tahunan-lps-2024/'
-    label: 'LPS Laporan Tahunan 2024'
+    label: LPS Laporan Tahunan 2024
   - type: link
-    url: 'https://www.cnbcindonesia.com/market/20250816175145-17-658718/berlaku-agustus-2025-cek-biaya-admin-bank-mandiri-bni-bri-dan-btn'
+    url: >-
+      https://www.cnbcindonesia.com/market/20250816175145-17-658718/berlaku-agustus-2025-cek-biaya-admin-bank-mandiri-bni-bri-dan-btn
     label: 'CNBC Indonesia (Ags 2025) - Biaya admin bank Mandiri, BNI, BRI, BTN'
   - type: link
-    url: 'https://keuangan.kontan.co.id/news/bank-digital-diminati-gen-z-survei-populix-beberkan-beberapa-penyebabnya'
-    label: 'Kontan/Populix - Bank digital diminati Gen Z'
+    url: >-
+      https://keuangan.kontan.co.id/news/bank-digital-diminati-gen-z-survei-populix-beberkan-beberapa-penyebabnya
+    label: Kontan/Populix - Bank digital diminati Gen Z
 featured: false
 humanSignature: true
 factCheckStatus: pending

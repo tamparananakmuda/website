@@ -2,8 +2,8 @@
 title: 'UU ITE: Hukum untuk yang Bicara, Bukan untuk yang Sakit'
 slug: sistem-hukum-indonesia-part-1-uu-ite-bicara-sakit
 excerpt: >-
-  Mahasiswi ITB ditangkap karena meme presiden. 6 tahun penjara. UU ITE
-  didesain untuk yang punya power, bukan yang punya luka. Data dan analisis lengkap.
+  Mahasiswi ITB ditangkap karena meme presiden. 6 tahun penjara. UU ITE didesain
+  untuk yang punya power, bukan yang punya luka. Data dan analisis lengkap.
 publishedAt: '2026-09-15T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -19,7 +19,7 @@ tags:
   - kebebasan-berekspresi
   - sistem-hukum
   - mahasiswa
-ogHeadline: 'Meme presiden = 6 tahun penjara. Serius?'
+ogHeadline: Meme presiden = 6 tahun penjara. Serius?
 seoMetaTitle: 'UU ITE Gen Z: Hukum untuk yang Bicara, Bukan untuk yang Sakit | TAM'
 seoMetaDescription: >-
   Mahasiswi ITB ditangkap karena meme. 6 tahun penjara. UU ITE didesain untuk
@@ -31,20 +31,24 @@ seoKeywords:
   - putusan MK UU ITE
 sourceReferences:
   - type: link
-    url: 'https://www.kompas.id/artikel/mahasiswi-pembuat-meme-presiden-ditangkap-dan-dijerat-dengan-uu-ite-menuai-kritik-keras'
-    label: 'Kompas (Mei 2025) - Mahasiswi ITB ditangkap karena meme presiden'
+    url: >-
+      https://www.kompas.id/artikel/mahasiswi-pembuat-meme-presiden-ditangkap-dan-dijerat-dengan-uu-ite-menuai-kritik-keras
+    label: Kompas (Mei 2025) - Mahasiswi ITB ditangkap karena meme presiden
   - type: link
-    url: 'https://www.tempo.co/politik/kritik-atas-pengenaan-uu-ite-terhadap-pengunggah-meme-prabowo-jokowi-1414059'
-    label: 'Tempo (Mei 2025) - Kritik pengenaan UU ITE terhadap pengunggah meme'
+    url: >-
+      https://www.tempo.co/politik/kritik-atas-pengenaan-uu-ite-terhadap-pengunggah-meme-prabowo-jokowi-1414059
+    label: Tempo (Mei 2025) - Kritik pengenaan UU ITE terhadap pengunggah meme
   - type: link
     url: 'https://www.bbc.com/indonesia/articles/c5yg3yvd3pyo'
-    label: 'BBC News Indonesia (Apr 2025) - Putusan MK UU ITE'
+    label: BBC News Indonesia (Apr 2025) - Putusan MK UU ITE
   - type: link
-    url: 'https://www.tempo.co/hukum/hakim-kabulkan-eksepsi-khariq-anhar-di-kasus-ite-2109379'
-    label: 'Tempo (Jan 2026) - Hakim kabulkan eksepsi Khariq Anhar kasus ITE'
+    url: >-
+      https://www.tempo.co/hukum/hakim-kabulkan-eksepsi-khariq-anhar-di-kasus-ite-2109379
+    label: Tempo (Jan 2026) - Hakim kabulkan eksepsi Khariq Anhar kasus ITE
   - type: link
-    url: 'https://www.detik.com/jatim/hukum-dan-kriminal/d-7922001/youtuber-jember-sebut-nabi-tokoh-fiktif-ternyata-residivis-uu-ite'
-    label: 'Detik (Mei 2025) - YouTuber Jember residivis UU ITE'
+    url: >-
+      https://www.detik.com/jatim/hukum-dan-kriminal/d-7922001/youtuber-jember-sebut-nabi-tokoh-fiktif-ternyata-residivis-uu-ite
+    label: Detik (Mei 2025) - YouTuber Jember residivis UU ITE
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -52,6 +56,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 6
 ---
 
 Mei 2025. Seorang mahasiswi Institut Teknologi Bandung ditangkap di kosnya di Jatinangor. Dia membuat meme. Meme yang berisi gambar Presiden Prabowo Subianto dan Presiden ke-7 Joko Widodo. Polisi menjeratnya dengan Pasal 27 ayat 1 UU ITE, pasal tentang kesusilaan. Ancaman hukumannya: 6 tahun penjara dan denda Rp1 miliar. Untuk sebuah meme.

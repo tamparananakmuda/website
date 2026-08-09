@@ -22,8 +22,8 @@ tags:
 ogHeadline: '84% mau menikah, tapi ekonomi bilang jangan dulu'
 seoMetaTitle: 'Gen Z Mau Menikah Bukan Tidak Mau: Ekonomi yang Menghalangi | TAM'
 seoMetaDescription: >-
-  BPS: 71% usia 16-30 belum kawin. Tapi 84% tetap ingin menikah. Cinta tidak
-  hilang, kemampuan ekonomi yang hilang. Baca datanya.
+  BPS: 71% usia 16-30 belum kawin. Sistem yang nggak beri alasan, bukan kamu
+  yang salah.
 seoKeywords:
   - gen z menikah Indonesia
   - biaya pernikahan Indonesia 2026

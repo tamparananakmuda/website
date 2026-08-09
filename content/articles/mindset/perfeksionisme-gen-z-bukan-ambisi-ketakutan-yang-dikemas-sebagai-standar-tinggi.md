@@ -1,26 +1,40 @@
 ---
-title: "Perfeksionisme Gen Z Bukan Ambisi, Ketakutan yang Dikemas sebagai Standar Tinggi"
-slug: "perfeksionisme-gen-z-bukan-ambisi-ketakutan-yang-dikemas-sebagai-standar-tinggi"
-excerpt: "Perfeksionisme Gen Z naik 33% dalam 27 tahun. Bukan ambisi, ketakutan dinilai tidak cukup. Link ke prokrastinasi, burnout, dan people pleaser."
-publishedAt: "2026-08-08T10:00:00.000Z"
+title: >-
+  Perfeksionisme Gen Z Bukan Ambisi, Ketakutan yang Dikemas sebagai Standar
+  Tinggi
+slug: >-
+  perfeksionisme-gen-z-bukan-ambisi-ketakutan-yang-dikemas-sebagai-standar-tinggi
+excerpt: >-
+  Perfeksionisme Gen Z naik 33% dalam 27 tahun. Bukan ambisi, ketakutan dinilai
+  tidak cukup. Link ke prokrastinasi, burnout, dan people pleaser.
+publishedAt: '2026-08-08T10:00:00.000Z'
 status: scheduled
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["perfeksionisme", "gen-z", "burnout", "prokrastinasi", "people-pleaser", "kesehatan-mental", "media-sosial"]
-ogHeadline: "Perfeksionisme bukan ambisi, itu ketakutan"
-seoMetaTitle: "Perfeksionisme Gen Z Bukan Ambisi, Itu Ketakutan Dinilai Tidak Cukup"
-seoMetaDescription: "Perfeksionisme Gen Z naik 33% dalam 27 tahun. Bukan ambisi, ketakutan dinilai tidak cukup. Link ke prokrastinasi, burnout, dan people pleaser."
+povTag: kontra-narasi
+tags:
+  - perfeksionisme
+  - gen-z
+  - burnout
+  - prokrastinasi
+  - people-pleaser
+  - kesehatan-mental
+  - media-sosial
+ogHeadline: 'Perfeksionisme bukan ambisi, itu ketakutan'
+seoMetaTitle: 'Perfeksionisme Gen Z Bukan Ambisi, Itu Ketakutan Dinilai Tidak Cukup'
+seoMetaDescription: >-
+  Perfeksionisme Gen Z naik 33% dalam 27 tahun. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "perfeksionisme gen z"
-  - "perfeksionisme dan burnout"
-  - "perfeksionis prokrastinasi"
-  - "perfeksionisme people pleaser"
-  - "perfeksionisme media sosial"
-  - "mengatasi perfeksionisme"
+  - perfeksionisme gen z
+  - perfeksionisme dan burnout
+  - perfeksionis prokrastinasi
+  - perfeksionisme people pleaser
+  - perfeksionisme media sosial
+  - mengatasi perfeksionisme
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,12 +49,36 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://doi.org/10.1037/bul0000138","label":"Curran & Hill (2019): Perfectionism is Increasing Over Time, Psychological Bulletin"}
-  - {"type":"link","url":"https://journal.literasisains.id/index.php/sabana/article/view/5012","label":"SABANA Journal: Perfeksionisme Penyebab Mental Gen Z Menjadi People Pleasure (2025)"}
-  - {"type":"link","url":"https://doi.org/10.26740/jpeka.v7n1.p67-78","label":"JPEKA UST Yogyakarta: Pengaruh Efikasi Diri dan Perfeksionisme terhadap Prokrastinasi Akademik"}
-  - {"type":"link","url":"https://bimaberilmu.com/jurnal/index.php/jppi/article/view/3924","label":"JPPI IAIN Fattahul Muluk Papua: Dinamika Perfeksionisme dan Burnout Akademik (2026)"}
-  - {"type":"link","url":"https://jppipa.unram.ac.id/index.php/jcar/article/view/13891","label":"JCAR UNRAM: Perfeksionisme dan Efikasi Diri Membentuk Prokrastinasi Akademik Mahasiswa Tingkat Akhir (2026)"}
-  - {"type":"link","url":"https://www.sciencedaily.com/releases/2018/01/180102103305.htm","label":"ScienceDaily: Perfectionism Among Young People Significantly Increased Since 1980s (2018)"}
+  - type: link
+    url: 'https://doi.org/10.1037/bul0000138'
+    label: >-
+      Curran & Hill (2019): Perfectionism is Increasing Over Time, Psychological
+      Bulletin
+  - type: link
+    url: 'https://journal.literasisains.id/index.php/sabana/article/view/5012'
+    label: >-
+      SABANA Journal: Perfeksionisme Penyebab Mental Gen Z Menjadi People
+      Pleasure (2025)
+  - type: link
+    url: 'https://doi.org/10.26740/jpeka.v7n1.p67-78'
+    label: >-
+      JPEKA UST Yogyakarta: Pengaruh Efikasi Diri dan Perfeksionisme terhadap
+      Prokrastinasi Akademik
+  - type: link
+    url: 'https://bimaberilmu.com/jurnal/index.php/jppi/article/view/3924'
+    label: >-
+      JPPI IAIN Fattahul Muluk Papua: Dinamika Perfeksionisme dan Burnout
+      Akademik (2026)
+  - type: link
+    url: 'https://jppipa.unram.ac.id/index.php/jcar/article/view/13891'
+    label: >-
+      JCAR UNRAM: Perfeksionisme dan Efikasi Diri Membentuk Prokrastinasi
+      Akademik Mahasiswa Tingkat Akhir (2026)
+  - type: link
+    url: 'https://www.sciencedaily.com/releases/2018/01/180102103305.htm'
+    label: >-
+      ScienceDaily: Perfectionism Among Young People Significantly Increased
+      Since 1980s (2018)
 ---
 
 ## Hook

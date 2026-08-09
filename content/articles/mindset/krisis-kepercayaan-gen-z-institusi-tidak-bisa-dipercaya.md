@@ -1,54 +1,87 @@
 ---
-title: "Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya"
-slug: "krisis-kepercayaan-gen-z-institusi-tidak-bisa-dipercaya"
-excerpt: "Data Kawula17 dan ISEAS tunjukkan Gen Z paling tidak percaya di ASEAN. Bukan trend skeptis, tapi respons rasional terhadap institusi yang gagal bekerja."
-publishedAt: "2026-09-06T01:00:00+07:00"
-status: "scheduled"
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+title: 'Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya'
+slug: krisis-kepercayaan-gen-z-institusi-tidak-bisa-dipercaya
+excerpt: >-
+  Data Kawula17 dan ISEAS tunjukkan Gen Z paling tidak percaya di ASEAN. Bukan
+  trend skeptis, tapi respons rasional terhadap institusi yang gagal bekerja.
+publishedAt: '2026-09-06T01:00:00+07:00'
+status: scheduled
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags:
-  - "krisis-kepercayaan"
-  - "gen-z"
-  - "institusi"
-  - "trust-issue"
-  - "korupsi"
-  - "skeptisisme"
-  - "politik"
-ogHeadline: "Gen Z tidak percaya institusi, dan itu rasional"
+  - krisis-kepercayaan
+  - gen-z
+  - institusi
+  - trust-issue
+  - korupsi
+  - skeptisisme
+  - politik
+ogHeadline: 'Gen Z tidak percaya institusi, dan itu rasional'
 ogHeadlineEn: null
-seoMetaTitle: "Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya"
-seoMetaDescription: "49% anak muda Indonesia tidak percaya pemerintah. 53.9% nilai politik buruk, tertinggi di ASEAN. Bukan skeptis, institusi yang bukti tidak bisa dipercaya."
+seoMetaTitle: 'Gen Z tidak percaya institusi, dan itu rasional | TAM'
+seoMetaDescription: >-
+  49% anak muda Indonesia tidak percaya pemerintah. 53.9% nilai politik buruk,
+  tertinggi di ASEAN. Bukan skeptis, institusi yang bukti tidak bisa dipercaya.
 seoKeywords:
-  - "krisis kepercayaan gen z"
-  - "tidak percaya pemerintah"
-  - "trust issue gen z"
-  - "kepercayaan publik"
-  - "insular trust"
-  - "media arus utama"
-  - "tidak bisa dipercaya"
+  - krisis kepercayaan gen z
+  - tidak percaya pemerintah
+  - trust issue gen z
+  - kepercayaan publik
+  - insular trust
+  - media arus utama
+  - tidak bisa dipercaya
 sourceReferences:
-  - url: "https://www.edelman.com/trust/2026/trust-barometer"
-    label: "Edelman Trust Barometer 2026 Indonesia: Trust Index 73, insular trust 66%, trust gap 26 poin, government 68%, media 76%, business 80%, employer 92%, NGO 67%, n=1.200, Oct-Nov 2025"
-  - url: "https://www.marketing-interactive.com/two-thirds-of-indonesians-show-insular-trust-mindset-edelman-finds"
-    label: "Marketing-Interactive/Edelman Indonesia: 66% insular trust mindset, trust gap 26 poin, 56% percaya generasi berikutnya lebih baik (turun 9 poin), May 2026"
-  - url: "https://data.goodstats.id/statistic/korupsi-jadi-alasan-utama-anak-muda-kehilangan-kepercayaan-pada-pemerintah-q2-2026-r7Lnj"
-    label: "GoodStats/Kawula17 Q2 2026: 49% anak muda tidak yakin terhadap pemerintah, korupsi 52% alasan utama, ekonomi 41%, n=409, Jun 2026"
-  - url: "https://databoks.katadata.co.id/politik/statistik/69e5aca5bc52e/tingkat-keyakinan-gen-z-dan-milenial-indonesia-terhadap-pemerintah-awal-2026"
-    label: "Katadata Databoks/Kawula17 Q1 2026: 38% yakin, 29% agak yakin, 32% tidak yakin, urban 38% tidak yakin vs rural 45% yakin, n=387, Mar 2026"
-  - url: "https://www.iseas.edu.sg/articles-commentaries/trends-in-southeast-asia/youth-and-civic-engagement-in-southeast-asia-a-survey-of-undergraduates-in-six-countries-by-norshahril-saat/"
-    label: "ISEAS-Yusof Ishak Institute: 53.9% anak muda Indonesia nilai politik buruk (tertinggi 6 negara ASEAN), 15.3% nilai baik, 97% khawatir pengangguran, n=3.081, Aug-Oct 2024"
-  - url: "https://www.idntimes.com/news/indonesia/survei-imgs-generasi-muda-tak-percaya-lembaga-politik-00-rgfwk-y8pp3d"
-    label: "IDN Times/IDN Research Institute IMGR 2026: 63% sebut korupsi alasan tidak percaya lembaga politik, 48% kurang transparansi, 48% ketimpangan hukum, n=1.500, Feb-Apr 2025"
-  - url: "https://www.kompas.id/artikel/masihkah-publik-percaya-pada-media-arustama"
-    label: "Litbang Kompas Apr 2026: kepercayaan media arus utama 44% (turun dari 51.6% Sep 2025), Reuters Institute 36-39% (5 tahun), hanya 6.4% percaya influencer"
-  - url: "https://journal.untar.ac.id/index.php/koneksi/article/view/36299"
-    label: "Franco & Salman (2026) Koneksi UNTAR: Kabur Aja Dulu sebagai manifestasi krisis kepercayaan Gen Z, SCCT Coombs + Encoding/Decoding Stuart Hall, migrasi rasional"
-  - url: "https://www.bbc.com/indonesia/articles/c8d99e36depo"
-    label: "BBC Indonesia/ISEAS: Anak muda Indonesia paling pesimis di ASEAN, BRIN warning Indonesia Emas 2045, PHK 80.000 orang, kelas menengah menyusut"
+  - url: 'https://www.edelman.com/trust/2026/trust-barometer'
+    label: >-
+      Edelman Trust Barometer 2026 Indonesia: Trust Index 73, insular trust 66%,
+      trust gap 26 poin, government 68%, media 76%, business 80%, employer 92%,
+      NGO 67%, n=1.200, Oct-Nov 2025
+  - url: >-
+      https://www.marketing-interactive.com/two-thirds-of-indonesians-show-insular-trust-mindset-edelman-finds
+    label: >-
+      Marketing-Interactive/Edelman Indonesia: 66% insular trust mindset, trust
+      gap 26 poin, 56% percaya generasi berikutnya lebih baik (turun 9 poin),
+      May 2026
+  - url: >-
+      https://data.goodstats.id/statistic/korupsi-jadi-alasan-utama-anak-muda-kehilangan-kepercayaan-pada-pemerintah-q2-2026-r7Lnj
+    label: >-
+      GoodStats/Kawula17 Q2 2026: 49% anak muda tidak yakin terhadap pemerintah,
+      korupsi 52% alasan utama, ekonomi 41%, n=409, Jun 2026
+  - url: >-
+      https://databoks.katadata.co.id/politik/statistik/69e5aca5bc52e/tingkat-keyakinan-gen-z-dan-milenial-indonesia-terhadap-pemerintah-awal-2026
+    label: >-
+      Katadata Databoks/Kawula17 Q1 2026: 38% yakin, 29% agak yakin, 32% tidak
+      yakin, urban 38% tidak yakin vs rural 45% yakin, n=387, Mar 2026
+  - url: >-
+      https://www.iseas.edu.sg/articles-commentaries/trends-in-southeast-asia/youth-and-civic-engagement-in-southeast-asia-a-survey-of-undergraduates-in-six-countries-by-norshahril-saat/
+    label: >-
+      ISEAS-Yusof Ishak Institute: 53.9% anak muda Indonesia nilai politik buruk
+      (tertinggi 6 negara ASEAN), 15.3% nilai baik, 97% khawatir pengangguran,
+      n=3.081, Aug-Oct 2024
+  - url: >-
+      https://www.idntimes.com/news/indonesia/survei-imgs-generasi-muda-tak-percaya-lembaga-politik-00-rgfwk-y8pp3d
+    label: >-
+      IDN Times/IDN Research Institute IMGR 2026: 63% sebut korupsi alasan tidak
+      percaya lembaga politik, 48% kurang transparansi, 48% ketimpangan hukum,
+      n=1.500, Feb-Apr 2025
+  - url: 'https://www.kompas.id/artikel/masihkah-publik-percaya-pada-media-arustama'
+    label: >-
+      Litbang Kompas Apr 2026: kepercayaan media arus utama 44% (turun dari
+      51.6% Sep 2025), Reuters Institute 36-39% (5 tahun), hanya 6.4% percaya
+      influencer
+  - url: 'https://journal.untar.ac.id/index.php/koneksi/article/view/36299'
+    label: >-
+      Franco & Salman (2026) Koneksi UNTAR: Kabur Aja Dulu sebagai manifestasi
+      krisis kepercayaan Gen Z, SCCT Coombs + Encoding/Decoding Stuart Hall,
+      migrasi rasional
+  - url: 'https://www.bbc.com/indonesia/articles/c8d99e36depo'
+    label: >-
+      BBC Indonesia/ISEAS: Anak muda Indonesia paling pesimis di ASEAN, BRIN
+      warning Indonesia Emas 2045, PHK 80.000 orang, kelas menengah menyusut
 readingTime: 8
 featured: false
 isPremium: false
@@ -56,8 +89,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

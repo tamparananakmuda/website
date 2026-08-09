@@ -1,26 +1,36 @@
 ---
-title: "Dana Pensiun Gen Z: Nabung 40 Tahun untuk Uang yang Belum Pasti Ada"
-slug: "dana-pensiun-gen-z-nabung-40-tahun-untuk-uang-yang-belum-pasti-ada"
-excerpt: "Replacement ratio pensiun Indonesia hanya 15-20% vs standar ILO 40%. Gen Z nabung 40 tahun, hasilnya di bawah UMP. Bukan kamu yang salah, sistemnya."
-publishedAt: "2026-08-08T01:00:00.000Z"
+title: 'Dana Pensiun Gen Z: Nabung 40 Tahun untuk Uang yang Belum Pasti Ada'
+slug: dana-pensiun-gen-z-nabung-40-tahun-untuk-uang-yang-belum-pasti-ada
+excerpt: >-
+  Replacement ratio pensiun Indonesia hanya 15-20% vs standar ILO 40%. Gen Z
+  nabung 40 tahun, hasilnya di bawah UMP. Bukan kamu yang salah, sistemnya.
+publishedAt: '2026-08-08T01:00:00.000Z'
 status: scheduled
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["dana-pensiun", "gen-z", "bpjs-ketenagakerjaan", "replacement-ratio", "literasi-finansial", "pensiun"]
-ogHeadline: "Nabung pensiun 40 tahun, hasil tak cukup hidup"
-seoMetaTitle: "Dana Pensiun Gen Z: Nabung 40 Tahun, Hasilnya Tidak Cukup Hidup"
-seoMetaDescription: "Replacement ratio pensiun Indonesia hanya 15-20% vs standar ILO 40%. Gen Z nabung 40 tahun, hasilnya di bawah UMP. Bukan kamu yang salah, sistemnya."
+povTag: kontra-narasi
+tags:
+  - dana-pensiun
+  - gen-z
+  - bpjs-ketenagakerjaan
+  - replacement-ratio
+  - literasi-finansial
+  - pensiun
+ogHeadline: 'Nabung pensiun 40 tahun, hasil tak cukup hidup'
+seoMetaTitle: 'Dana Pensiun Gen Z: Nabung 40 Tahun, Hasilnya Tidak Cukup Hidup'
+seoMetaDescription: >-
+  Replacement ratio pensiun Indonesia hanya 15-20% vs standar ILO 40%. Sistem
+  yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
-  - "dana pensiun gen z"
-  - "bpjs ketenagakerjaan pensiun"
-  - "usia pensiun indonesia"
-  - "replacement ratio pensiun"
-  - "iuran jaminan pensiun"
-  - "nabung pensiun"
+  - dana pensiun gen z
+  - bpjs ketenagakerjaan pensiun
+  - usia pensiun indonesia
+  - replacement ratio pensiun
+  - iuran jaminan pensiun
+  - nabung pensiun
 readingTime: 8
 featured: false
 humanSignature: true
@@ -35,13 +45,46 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://www.kompas.com/tren/read/2025/01/09/161500265/gen-z-baru-bisa-cairkan-jaminan-pensiun-di-usia-65-tahun-ini-kata-bpjs","label":"Kompas.com: Gen Z Baru Bisa Cairkan Jaminan Pensiun di Usia 65 Tahun (Jan 2025)"}
-  - {"type":"link","url":"https://www.bpjsketenagakerjaan.go.id/artikel/18913/artikel-berapa-besaran-iuran-jht%2C-jkk%2C-jkm%2C-jp-dan-jkp","label":"BPJS Ketenagakerjaan: Besaran Iuran JHT, JKK, JKM, JP dan JKP"}
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20250724/215/1896226/alasan-di-balik-bpjs-ketenagakerjaan-dorong-iuran-jaminan-pensiun-naik-jadi-8","label":"Bisnis.com: BPJS Ketenagakerjaan Dorong Iuran Jaminan Pensiun Naik jadi 8% (Jul 2025)"}
-  - {"type":"link","url":"https://www.ilo.org/sites/default/files/2025-10/251030Can%20Indonesia%20cover%20all%20older%20persons%20with%20a%20public%20pension%20scheme%20-%20ILO%20brief%20%282%29.pdf","label":"ILO Brief: Can Indonesia Cover All Older Persons with a Public Pension Scheme? (2025)"}
-  - {"type":"link","url":"https://www.kompas.id/artikel/mengapa-kita-perlu-mempersiapkan-keuangan-sebelum-pensiun","label":"Kompas.id: Mengapa Kita Perlu Mempersiapkan Keuangan Sebelum Pensiun (Sep 2025)"}
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20250109/215/1830161/ojk-ingin-pensiunan-ri-nikmati-40-pengembalian-manfaat-pensiun","label":"Bisnis.com: OJK Ingin Pensiunan RI Nikmati 40% Pengembalian Manfaat Pensiun (Jan 2025)"}
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20250725/215/1896314/revisi-pp-452015-terkait-bpjs-ketenagakerjaan-mendesak-manfaat-pensiun-ri-belum-penuhi-standar","label":"Bisnis.com: Revisi PP 45/2015 Mendesak, Manfaat Pensiun RI Belum Penuhi Standar (Jul 2025)"}
+  - type: link
+    url: >-
+      https://www.kompas.com/tren/read/2025/01/09/161500265/gen-z-baru-bisa-cairkan-jaminan-pensiun-di-usia-65-tahun-ini-kata-bpjs
+    label: >-
+      Kompas.com: Gen Z Baru Bisa Cairkan Jaminan Pensiun di Usia 65 Tahun (Jan
+      2025)
+  - type: link
+    url: >-
+      https://www.bpjsketenagakerjaan.go.id/artikel/18913/artikel-berapa-besaran-iuran-jht%2C-jkk%2C-jkm%2C-jp-dan-jkp
+    label: 'BPJS Ketenagakerjaan: Besaran Iuran JHT, JKK, JKM, JP dan JKP'
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20250724/215/1896226/alasan-di-balik-bpjs-ketenagakerjaan-dorong-iuran-jaminan-pensiun-naik-jadi-8
+    label: >-
+      Bisnis.com: BPJS Ketenagakerjaan Dorong Iuran Jaminan Pensiun Naik jadi 8%
+      (Jul 2025)
+  - type: link
+    url: >-
+      https://www.ilo.org/sites/default/files/2025-10/251030Can%20Indonesia%20cover%20all%20older%20persons%20with%20a%20public%20pension%20scheme%20-%20ILO%20brief%20%282%29.pdf
+    label: >-
+      ILO Brief: Can Indonesia Cover All Older Persons with a Public Pension
+      Scheme? (2025)
+  - type: link
+    url: >-
+      https://www.kompas.id/artikel/mengapa-kita-perlu-mempersiapkan-keuangan-sebelum-pensiun
+    label: >-
+      Kompas.id: Mengapa Kita Perlu Mempersiapkan Keuangan Sebelum Pensiun (Sep
+      2025)
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20250109/215/1830161/ojk-ingin-pensiunan-ri-nikmati-40-pengembalian-manfaat-pensiun
+    label: >-
+      Bisnis.com: OJK Ingin Pensiunan RI Nikmati 40% Pengembalian Manfaat
+      Pensiun (Jan 2025)
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20250725/215/1896314/revisi-pp-452015-terkait-bpjs-ketenagakerjaan-mendesak-manfaat-pensiun-ri-belum-penuhi-standar
+    label: >-
+      Bisnis.com: Revisi PP 45/2015 Mendesak, Manfaat Pensiun RI Belum Penuhi
+      Standar (Jul 2025)
 ---
 
 ## Hook

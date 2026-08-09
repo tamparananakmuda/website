@@ -1,51 +1,67 @@
 ---
-title: "Brain Rot: Gen Z Sadar Konten Bikin Bodoh, Tapi Algoritma yang Pegang Kendali"
-slug: "brain-rot-gen-z-sadar-konten-bikin-bodoh"
-excerpt: "81,8% pakar sepakat brain rot = penurunan kognitif. Gen Z yang menciptakan istilah ini tahu konten mereka bodoh. Tapi algoritma dirancang menang."
-publishedAt: "2026-08-14 10:00:00+00"
-status: "scheduled"
-category: "mindset"
-subcategory: "analisis-fenomena"
-author: "yovie-setiawan"
+title: 'Brain Rot: Gen Z Sadar Konten Bikin Bodoh, Tapi Algoritma yang Pegang Kendali'
+slug: brain-rot-gen-z-sadar-konten-bikin-bodoh
+excerpt: >-
+  81,8% pakar sepakat brain rot = penurunan kognitif. Gen Z yang menciptakan
+  istilah ini tahu konten mereka bodoh. Tapi algoritma dirancang menang.
+publishedAt: '2026-08-14 10:00:00+00'
+status: scheduled
+category: mindset
+subcategory: analisis-fenomena
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
-tags: ["brain-rot", "tiktok", "algoritma", "dopamin", "gen-z", "konten-digital", "kognitif"]
-ogHeadline: "Gen Z tahu TikTok bikin bodoh, tapi tetap scroll"
-seoMetaTitle: "Brain Rot: Gen Z Tahu Konten Bikin Bodoh, Algoritma Pegang Kendali"
-seoMetaDescription: "81,8% pakar sepakat brain rot = penurunan kognitif. Gen Z yang menciptakan istilah ini tahu konten mereka bodoh. Tapi algoritma dirancang menang."
+povTag: refleksi
+tags:
+  - brain-rot
+  - tiktok
+  - algoritma
+  - dopamin
+  - gen-z
+  - konten-digital
+  - kognitif
+ogHeadline: 'Gen Z tahu TikTok bikin bodoh, tapi tetap scroll'
+seoMetaTitle: 'Brain Rot: Gen Z Tahu Konten Bikin Bodoh, Algoritma Pegang Kendali'
+seoMetaDescription: >-
+  81,8% pakar sepakat brain rot = penurunan kognitif. Sistem yang nggak beri
+  alasan, bukan kamu yang salah.
 seoKeywords:
-  - "brain rot content gen z"
-  - "tiktok bikin bodoh"
-  - "konten brain rot Indonesia"
-  - "efek tiktok pada otak"
-  - "brain rot mahasiswa gen z"
-  - "konten receh tiktok dampak"
-  - "dopamin scroll tiktok"
+  - brain rot content gen z
+  - tiktok bikin bodoh
+  - konten brain rot Indonesia
+  - efek tiktok pada otak
+  - brain rot mahasiswa gen z
+  - konten receh tiktok dampak
+  - dopamin scroll tiktok
 sourceReferences:
-  - type: "link"
-    url: "https://www.kompas.id/artikel/brain-rot-mengintai-generasi-muda-2"
-    label: "Litbang Kompas: Brain Rot Mengintai Generasi Muda (Apr 2025)"
-  - type: "link"
-    url: "https://www.metrotvnews.com/read/K5nCRZXp-pakar-ungkap-penyebab-brain-rot-sering-scrolling-konten-receh"
-    label: "Prof UI Agustino Zulys: Penyebab Brain Rot (MetroTV, Jul 2026)"
-  - type: "link"
-    url: "https://mahasiswaindonesia.id/hubungan-konsumsi-konten-brainrot-dengan-tingkat-distraksi-dan-fokus-belajar-pada-mahasiswa-gen-z/"
-    label: "Harsanto dkk 2025: Brainrot dan Fokus Belajar Mahasiswa Gen Z"
-  - type: "link"
-    url: "https://goodstats.id/article/berapa-lama-orang-indonesia-habiskan-waktu-untuk-scroll-tiktok-dalam-sehari-bGKAs"
-    label: "We Are Social Digital Indonesia 2026 (GoodStats)"
-  - type: "link"
-    url: "https://teknologi.bisnis.com/read/20260615/101/1981065/tiktok-jadi-aplikasi-paling-sering-diakses-pengguna-internet-ri-instagram-dan-facebook-menyusul"
-    label: "APJII Survei Penetrasi Internet 2026 (Bisnis.com)"
-  - type: "link"
-    url: "https://buletin.k-pin.org/index.php/arsip-artikel/1836-penyebab-dan-dampak-brainrot-pada-kognitif-serta-kesehatan-mental-generasi-z"
-    label: "K-PIN Bulletin: Brainrot pada Kognitif Gen Z (Jul 2025)"
+  - type: link
+    url: 'https://www.kompas.id/artikel/brain-rot-mengintai-generasi-muda-2'
+    label: 'Litbang Kompas: Brain Rot Mengintai Generasi Muda (Apr 2025)'
+  - type: link
+    url: >-
+      https://www.metrotvnews.com/read/K5nCRZXp-pakar-ungkap-penyebab-brain-rot-sering-scrolling-konten-receh
+    label: 'Prof UI Agustino Zulys: Penyebab Brain Rot (MetroTV, Jul 2026)'
+  - type: link
+    url: >-
+      https://mahasiswaindonesia.id/hubungan-konsumsi-konten-brainrot-dengan-tingkat-distraksi-dan-fokus-belajar-pada-mahasiswa-gen-z/
+    label: 'Harsanto dkk 2025: Brainrot dan Fokus Belajar Mahasiswa Gen Z'
+  - type: link
+    url: >-
+      https://goodstats.id/article/berapa-lama-orang-indonesia-habiskan-waktu-untuk-scroll-tiktok-dalam-sehari-bGKAs
+    label: We Are Social Digital Indonesia 2026 (GoodStats)
+  - type: link
+    url: >-
+      https://teknologi.bisnis.com/read/20260615/101/1981065/tiktok-jadi-aplikasi-paling-sering-diakses-pengguna-internet-ri-instagram-dan-facebook-menyusul
+    label: APJII Survei Penetrasi Internet 2026 (Bisnis.com)
+  - type: link
+    url: >-
+      https://buletin.k-pin.org/index.php/arsip-artikel/1836-penyebab-dan-dampak-brainrot-pada-kognitif-serta-kesehatan-mental-generasi-z
+    label: 'K-PIN Bulletin: Brainrot pada Kognitif Gen Z (Jul 2025)'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

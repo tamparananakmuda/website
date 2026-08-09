@@ -1,9 +1,10 @@
 ---
-title: 'Kursus Rp5 Juta untuk Masalah yang Diciptakan Sistem Pendidikan'
+title: Kursus Rp5 Juta untuk Masalah yang Diciptakan Sistem Pendidikan
 slug: industri-penderitaan-gen-z-part-1-edtech-kursus-solusi-palsu
 excerpt: >-
   EdTech Indonesia tumbuh 8.9% per tahun. Tapi kursus yang kamu beli bukan
-  solusi, itu pelarian dari sistem pendidikan yang sudah gagal mengajarkan hidup.
+  solusi, itu pelarian dari sistem pendidikan yang sudah gagal mengajarkan
+  hidup.
 publishedAt: '2026-11-01T01:00:00.000Z'
 status: scheduled
 category: bisnis
@@ -22,8 +23,8 @@ tags:
 ogHeadline: 'Kursus online mahal bukan solusi, itu pelarian'
 seoMetaTitle: 'EdTech Indonesia: Kursus Mahal untuk Masalah Sistem | TAM'
 seoMetaDescription: >-
-  EdTech Indonesia tumbuh 8.9% per tahun. Tapi kursus yang kamu beli bukan
-  solusi, itu pelarian dari sistem pendidikan yang sudah gagal mengajarkan hidup.
+  EdTech Indonesia tumbuh 8. Sistem yang nggak beri alasan, bukan kamu yang
+  salah.
 seoKeywords:
   - kursus online Indonesia
   - EdTech Indonesia market size
@@ -32,17 +33,19 @@ seoKeywords:
   - edtech Indonesia 2025 2026
 sourceReferences:
   - type: link
-    url: 'https://www.globaldata.com/media/consumer/indonesian-skincare-market-grow-8-9-cagr-2026-forecasts-globaldata/'
-    label: 'GlobalData Indonesia EdTech Market 2025'
+    url: >-
+      https://www.globaldata.com/media/consumer/indonesian-skincare-market-grow-8-9-cagr-2026-forecasts-globaldata/
+    label: GlobalData Indonesia EdTech Market 2025
   - type: link
     url: 'https://www.ialc.or.id/'
-    label: 'Indonesia Association of Life Coach (IALC)'
+    label: Indonesia Association of Life Coach (IALC)
   - type: link
-    url: 'https://mediabalqis.sch.id/healing-butuh-cuan-peluang-emas-bisnis-coaching-dan-self-development-online/'
-    label: 'Media Balqis - Bisnis coaching online'
+    url: >-
+      https://mediabalqis.sch.id/healing-butuh-cuan-peluang-emas-bisnis-coaching-dan-self-development-online/
+    label: Media Balqis - Bisnis coaching online
   - type: link
     url: 'https://tax.atmo.co.id/id/panduan/pajak-coach-trainer'
-    label: 'Pajak Atmo/DJP - Pajak coach dan trainer'
+    label: Pajak Atmo/DJP - Pajak coach dan trainer
 featured: true
 humanSignature: true
 factCheckStatus: verified

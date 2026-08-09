@@ -19,11 +19,11 @@ tags:
   - kredit-konsumsi
   - gen-z
   - sistem-finansial
-ogHeadline: 'BI checking menilai layaknya kamu masuk utang'
+ogHeadline: BI checking menilai layaknya kamu masuk utang
 seoMetaTitle: 'BI Checking SLIK OJK: Sistem yang Menilai Kelayakanmu | TAM'
 seoMetaDescription: >-
-  BI checking bukan menilai kemampuanmu, tapi kelayakanmu masuk utang. Data OJK
-  SLIK bongkar cara sistem perbankan menilai gen Z Indonesia sebagai debitur.
+  BI checking bukan menilai kemampuanmu, tapi kelayakanmu masuk utang. Sistem
+  yang nggak beri alasan, bukan kamu yang salah.
 seoKeywords:
   - BI checking Indonesia
   - SLIK OJK
@@ -31,14 +31,16 @@ seoKeywords:
   - kredit konsumsi Indonesia
 sourceReferences:
   - type: link
-    url: 'https://ojk.go.id/id/kanal/perbankan/data-dan-statistik/Statistik-Informasi-Perkreditan/Default.aspx'
-    label: 'OJK Statistik Sistem Layanan Informasi Keuangan (SLIK)'
+    url: >-
+      https://ojk.go.id/id/kanal/perbankan/data-dan-statistik/Statistik-Informasi-Perkreditan/Default.aspx
+    label: OJK Statistik Sistem Layanan Informasi Keuangan (SLIK)
   - type: link
     url: 'https://www.bi.go.id/id/publikasi/laporan/Documents/SBank-Tw-IV-2024.pdf'
-    label: 'Bank Indonesia Survei Perbankan Triwulan IV 2024'
+    label: Bank Indonesia Survei Perbankan Triwulan IV 2024
   - type: link
-    url: 'https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/OJK-Terbitkan-Aturan-Baru-Pelaporan-dan-Permintaan-Informasi-Debitur-Melalui-Sistem-Layanan-Informasi-Keuangan-SLIK.aspx'
-    label: 'OJK Siaran Pers POJK SLIK No.11 Tahun 2024'
+    url: >-
+      https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/OJK-Terbitkan-Aturan-Baru-Pelaporan-dan-Permintaan-Informasi-Debitur-Melalui-Sistem-Layanan-Informasi-Keuangan-SLIK.aspx
+    label: OJK Siaran Pers POJK SLIK No.11 Tahun 2024
 featured: false
 humanSignature: true
 factCheckStatus: pending

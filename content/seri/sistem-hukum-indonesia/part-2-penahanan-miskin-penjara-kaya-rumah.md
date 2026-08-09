@@ -19,11 +19,9 @@ tags:
   - sistem-hukum
   - ketimpangan
   - ditjenpas
-ogHeadline: '278 ribu orang di lapas kapasitas 146 ribu'
+ogHeadline: 278 ribu orang di lapas kapasitas 146 ribu
 seoMetaTitle: 'Overcrowding Lapas 90%: Miskin di Penjara, Kaya di Rumah | TAM'
-seoMetaDescription: >-
-  278.000 orang di lapas kapasitas 146.000. Overkapasitas 90%. Siapa yang
-  dipenjara? Yang tidak mampu bayar jaminan. Data Ditjenpas 2025-2026.
+seoMetaDescription: '278. Sistem yang nggak beri alasan, bukan kamu yang salah.'
 seoKeywords:
   - overcrowding lapas Indonesia
   - kapasitas lapas Indonesia
@@ -31,20 +29,25 @@ seoKeywords:
   - penahanan rutan
 sourceReferences:
   - type: link
-    url: 'https://www.ditjenpas.go.id/ditjenpas-gandeng-media-perkuat-edukasi-publik-soal-program-prioritas'
-    label: 'Ditjenpas (Jun 2025) - Data overcrowding 279.537 penghuni'
+    url: >-
+      https://www.ditjenpas.go.id/ditjenpas-gandeng-media-perkuat-edukasi-publik-soal-program-prioritas
+    label: Ditjenpas (Jun 2025) - Data overcrowding 279.537 penghuni
   - type: link
-    url: 'https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan'
+    url: >-
+      https://nasional.kompas.com/read/2026/04/07/15425601/bnn-lapas-di-indonesia-overkapasitas-90-persen-separuh-penghuninya-tahanan
     label: 'Kompas/BNN (Apr 2026) - Lapas overkapasitas 90%, 54% narkoba'
   - type: link
-    url: 'https://kemenimipas.go.id/berita-utama/overcrowding-lapas-menurun-menteri-imipas-pertegas-komitmen-berantas-narkoba'
-    label: 'Kemenimipas (Apr 2026) - Overcrowding turun ke 85%'
+    url: >-
+      https://kemenimipas.go.id/berita-utama/overcrowding-lapas-menurun-menteri-imipas-pertegas-komitmen-berantas-narkoba
+    label: Kemenimipas (Apr 2026) - Overcrowding turun ke 85%
   - type: link
-    url: 'https://www.ditjenpas.go.id/mengurai-permasalahan-overcrowded-di-lapasrutan'
-    label: 'Ditjenpas - Mengurai permasalahan overcrowded di Lapas/Rutan'
+    url: >-
+      https://www.ditjenpas.go.id/mengurai-permasalahan-overcrowded-di-lapasrutan
+    label: Ditjenpas - Mengurai permasalahan overcrowded di Lapas/Rutan
   - type: link
-    url: 'https://tirto.id/agus-mau-pecandu-narkoba-direhab-demi-tangani-overcapacity-lapas-g5qV'
-    label: 'Tirto.id (Nov 2024) - Agus mau pecandu narkoba direhab'
+    url: >-
+      https://tirto.id/agus-mau-pecandu-narkoba-direhab-demi-tangani-overcapacity-lapas-g5qV
+    label: Tirto.id (Nov 2024) - Agus mau pecandu narkoba direhab
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -52,6 +55,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** UU ITE membuktikan hukum digital Indonesia didesain untuk yang punya power, bukan yang punya luka. Mahasiswi ITB ditangkap karena meme, polisi jadi hakim, putusan MK diabaikan. Baca part sebelumnya: [Part 1](/artikel/sistem-hukum-indonesia-part-1-uu-ite-bicara-sakit)

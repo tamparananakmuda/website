@@ -22,8 +22,8 @@ tags:
 ogHeadline: 'Koruptor curi Rp300 triliun, 3 tahun penjara'
 seoMetaTitle: 'Vonis Koruptor Indonesia 3 Tahun: Hukum Ringan untuk yang Berat | TAM'
 seoMetaDescription: >-
-  Vonis rata-rata koruptor 3 tahun 3 bulan, kerugian Rp330,9 triliun.
-  Pemulihan 4,84%. 70 vonis bebas. Data ICW 2024.
+  Vonis rata-rata koruptor 3 tahun 3 bulan, kerugian Rp330,9 triliun. Pemulihan
+  4,84%. 70 vonis bebas. Data ICW 2024.
 seoKeywords:
   - vonis koruptor Indonesia
   - ICW laporan korupsi
@@ -32,16 +32,17 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://antikorupsi.org/id/tren-vonis-kasus-korupsi-2024'
-    label: 'ICW (2024) - Tren vonis kasus korupsi 2024'
+    label: ICW (2024) - Tren vonis kasus korupsi 2024
   - type: link
-    url: 'https://www.kompas.id/artikel/vonis-korupsi-2024-temuan-icw-rata-rata-3-tahun-penjara-pemulihan-kerugian-hanya-48-persen'
+    url: >-
+      https://www.kompas.id/artikel/vonis-korupsi-2024-temuan-icw-rata-rata-3-tahun-penjara-pemulihan-kerugian-hanya-48-persen
     label: 'Kompas (Des 2025) - ICW: rata-rata 3 tahun, pemulihan 4,84%'
   - type: link
     url: 'https://www.kpk.go.id/'
-    label: 'KPK - Komisi Pemberantasan Korupsi'
+    label: KPK - Komisi Pemberantasan Korupsi
   - type: link
     url: 'https://www.ma.go.id/'
-    label: 'Mahkamah Agung RI - Direktori Putusan'
+    label: Mahkamah Agung RI - Direktori Putusan
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -49,6 +50,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** Biaya pengacara Rp500 ribu sampai Rp50 juta. Keadilan diukur dengan gaji. Gen Z di tengah, tanpa jaring pengaman. Baca part sebelumnya: [Part 4](/artikel/sistem-hukum-indonesia-part-4-pengacara-keadilan-gaji)

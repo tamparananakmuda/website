@@ -19,7 +19,7 @@ tags:
   - kebebasan-pers
   - oligarki-media
   - indonesia
-ogHeadline: '8 orang punya 90% berita yang kamu baca'
+ogHeadline: 8 orang punya 90% berita yang kamu baca
 seoMetaTitle: 'Kepemilikan Media Indonesia: 8 Orang Kontrol Beritamu | TAM'
 seoMetaDescription: >-
   8 orang dengan afiliasi politik punya media Indonesia. Kompas, MNC, EMTEK,
@@ -34,18 +34,22 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://rsf.org/en/country/indonesia'
-    label: 'RSF - Indonesia Country Profile 2025'
+    label: RSF - Indonesia Country Profile 2025
   - type: link
-    url: 'https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-29-indonesian-mainstream-media-in-the-digital-age-corporate-convergence-low-quality-news-and-staff-exploitation'
-    label: 'ISEAS Perspective 2024/29 - Indonesian Mainstream Media in the Digital Age'
+    url: >-
+      https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-29-indonesian-mainstream-media-in-the-digital-age-corporate-convergence-low-quality-news-and-staff-exploitation
+    label: ISEAS Perspective 2024/29 - Indonesian Mainstream Media in the Digital Age
   - type: link
-    url: 'https://www.thejakartapost.com/indonesia/2025/05/05/indonesia-slides-in-global-press-freedom-index'
-    label: 'The Jakarta Post - Indonesia slides in global press freedom index 2025'
+    url: >-
+      https://www.thejakartapost.com/indonesia/2025/05/05/indonesia-slides-in-global-press-freedom-index
+    label: The Jakarta Post - Indonesia slides in global press freedom index 2025
   - type: link
-    url: 'https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia'
-    label: 'Kompas - Makna kenaikan kepercayaan publik terhadap media 2025'
+    url: >-
+      https://www.kompas.id/artikel/en-makna-kenaikan-kepercayaan-publik-terhadap-media-di-indonesia
+    label: Kompas - Makna kenaikan kepercayaan publik terhadap media 2025
 featured: true
 humanSignature: true
+readingTime: 5
 ---
 
 ## Hook

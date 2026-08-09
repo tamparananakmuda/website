@@ -19,7 +19,7 @@ tags:
   - propaganda-digital
   - mafindo
   - ai-generatif
-ogHeadline: 'Hoax bukan kesalahan. Hoax industri yang untung.'
+ogHeadline: Hoax bukan kesalahan. Hoax industri yang untung.
 seoMetaTitle: 'Hoax Indonesia: Bukan Kesalahan, Tapi Industri | TAM'
 seoMetaDescription: >-
   Buzzer Indonesia: jutaan-miliaran rupiah per proyek, 70,000 akun, SMM Panel
@@ -33,19 +33,24 @@ seoKeywords:
   - disinformasi pemilu
 sourceReferences:
   - type: link
-    url: 'https://www.kompas.id/artikel/buzzer-merajalela-kebenaran-di-ruang-digital-kian-terancam'
-    label: 'Kompas - Investigasi Buzzer Indonesia 2025'
+    url: >-
+      https://www.kompas.id/artikel/buzzer-merajalela-kebenaran-di-ruang-digital-kian-terancam
+    label: Kompas - Investigasi Buzzer Indonesia 2025
   - type: link
-    url: 'https://www.abc.net.au/news/2024-01-20/political-buzzers-indonesia-election-misinformation-social-media/103298530'
-    label: 'ABC News - Indonesia Social Media Buzzers 2024'
+    url: >-
+      https://www.abc.net.au/news/2024-01-20/political-buzzers-indonesia-election-misinformation-social-media/103298530
+    label: ABC News - Indonesia Social Media Buzzers 2024
   - type: link
-    url: 'https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-66-political-buzzer-networks-as-threat-to-indonesian-democracy-by-iim-halimatusadiyah-and-ronald-adam'
-    label: 'ISEAS Perspective 2024/66 - Political Buzzer Networks'
+    url: >-
+      https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2024-66-political-buzzer-networks-as-threat-to-indonesian-democracy-by-iim-halimatusadiyah-and-ronald-adam
+    label: ISEAS Perspective 2024/66 - Political Buzzer Networks
   - type: link
-    url: 'https://www.kompas.id/artikel/bagaimana-cara-mengenali-buzzer-di-era-informasi-yang-makin-blur'
-    label: 'Kompas - Mengenali Buzzer di Era AI 2025'
+    url: >-
+      https://www.kompas.id/artikel/bagaimana-cara-mengenali-buzzer-di-era-informasi-yang-makin-blur
+    label: Kompas - Mengenali Buzzer di Era AI 2025
 featured: false
 humanSignature: true
+readingTime: 5
 ---
 
 > **Sebelumnya di Kamu Marah, Mereka Untung:** Algoritma TikTok jadi editor utama berita Indonesia. 112 juta pengguna, filter bubble, echo chamber. Baca [part 3: Algoritma sebagai Editor](/artikel/sistem-media-indonesia-part-3-algoritma-sebagai-editor-platform-bukan-netral)

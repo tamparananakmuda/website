@@ -2,8 +2,8 @@
 title: 'Premanisme Berkedok Ormas: Hukum yang Tak Sentuh yang Berkuasa'
 slug: sistem-hukum-indonesia-part-6-premanisme-ormas-tak-sentuh
 excerpt: >-
-  636.000 ormas terdaftar. 15.400 kasus premanisme. 709 vigilantisme.
-  Kenapa yang berkuasa tidak pernah dihukum? Data Polkam dan CSIS 2025.
+  636.000 ormas terdaftar. 15.400 kasus premanisme. 709 vigilantisme. Kenapa
+  yang berkuasa tidak pernah dihukum? Data Polkam dan CSIS 2025.
 publishedAt: '2026-09-20T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -30,17 +30,20 @@ seoKeywords:
   - ormas premanisme kasus
 sourceReferences:
   - type: link
-    url: 'https://polkam.go.id/hadapi-lonjakan-ormas-dan-premanisme-pemerintah-bahas-penertiban-pengawasan-dan-reformasi-data/'
+    url: >-
+      https://polkam.go.id/hadapi-lonjakan-ormas-dan-premanisme-pemerintah-bahas-penertiban-pengawasan-dan-reformasi-data/
     label: 'Polkam (Nov 2025) - 636.000 ormas, 15.400 kasus premanisme'
   - type: link
-    url: 'https://www.csis.or.id/publication/collective-violence-incidents-in-indonesia-escalation-and-emerging-trends/'
-    label: 'CSIS (2025) - Collective Violence Early Warning Dataset 2025'
+    url: >-
+      https://www.csis.or.id/publication/collective-violence-incidents-in-indonesia-escalation-and-emerging-trends/
+    label: CSIS (2025) - Collective Violence Early Warning Dataset 2025
   - type: link
-    url: 'https://kumparan.com/kumparannews/mengapa-main-hakim-sendiri-terus-terjadi-psikolog-ungkap-penyebab-dan-solusinya-27uegmKxBT1'
-    label: 'Kumparan (Jul 2025) - Psikolog ungkap penyebab vigilantisme'
+    url: >-
+      https://kumparan.com/kumparannews/mengapa-main-hakim-sendiri-terus-terjadi-psikolog-ungkap-penyebab-dan-solusinya-27uegmKxBT1
+    label: Kumparan (Jul 2025) - Psikolog ungkap penyebab vigilantisme
   - type: link
     url: 'https://doi.org/10.31004/riggs.v5i1.6235'
-    label: 'Jurnal RIGGS (2025) - Implikasi KUHP Baru dan UU Ormas terhadap premanisme'
+    label: Jurnal RIGGS (2025) - Implikasi KUHP Baru dan UU Ormas terhadap premanisme
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -48,6 +51,7 @@ reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Hukum Indonesia:** Koruptor curi Rp330,9 triliun, vonis 3 tahun. Pencuri Rp1 juta, 5 tahun. Hukum ringan untuk yang berat. Baca part sebelumnya: [Part 5](/artikel/sistem-hukum-indonesia-part-5-korupsi-ringan-berat)

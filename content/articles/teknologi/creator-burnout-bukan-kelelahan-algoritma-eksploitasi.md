@@ -1,51 +1,102 @@
 ---
-title: "Creator Burnout Bukan Kelelahan, Algoritma yang Eksploitasi Kamu"
-slug: "creator-burnout-bukan-kelelahan-algoritma-eksploitasi"
-excerpt: "62% creator burnout, 37% mau keluar. Algoritma menghukum inconsistency, platform untung dari exhaustion. Self-care tidak cukup untuk masalah struktural."
-publishedAt: "2026-08-24 01:00:00+00"
-status: "scheduled"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
-povTag: "kontra-narasi"
-tags: ["creator-burnout", "algoritma", "creator-economy", "gen-z", "tiktok", "kesehatan-mental", "eksploitasi"]
-ogHeadline: "Bukan kamu burnout, algoritma yang eksploitasi"
-seoMetaTitle: "Creator Burnout Bukan Kelelahan, Algoritma yang Eksploitasi Kamu"
-seoMetaDescription: "62% content creator mengalami burnout. Bukan masalah mental health, algoritma platform yang eksploitasi. Self-care tidak cukup untuk masalah struktural."
-seoKeywords: ["creator burnout", "creator economy", "algoritma tiktok", "content creator", "kreator konten", "burnout", "platform"]
+title: 'Creator Burnout Bukan Kelelahan, Algoritma yang Eksploitasi Kamu'
+slug: creator-burnout-bukan-kelelahan-algoritma-eksploitasi
+excerpt: >-
+  62% creator burnout, 37% mau keluar. Algoritma menghukum inconsistency,
+  platform untung dari exhaustion. Self-care tidak cukup untuk masalah
+  struktural.
+publishedAt: '2026-08-24 01:00:00+00'
+status: scheduled
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
+povTag: kontra-narasi
+tags:
+  - creator-burnout
+  - algoritma
+  - creator-economy
+  - gen-z
+  - tiktok
+  - kesehatan-mental
+  - eksploitasi
+ogHeadline: 'Bukan kamu burnout, algoritma yang eksploitasi'
+seoMetaTitle: 'Bukan kamu burnout, algoritma yang eksploitasi | TAM'
+seoMetaDescription: >-
+  62% content creator mengalami burnout. Bukan masalah mental health, algoritma
+  platform yang eksploitasi. Self-care tidak cukup untuk masalah struktural.
+seoKeywords:
+  - creator burnout
+  - creator economy
+  - algoritma tiktok
+  - content creator
+  - kreator konten
+  - burnout
+  - platform
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 featured: false
 sourceReferences:
-  - type: "link"
-    url: "https://www.creators4mentalhealth.com/study"
-    label: "Creator Mental Health Study 2025 (Creators4MentalHealth + Lupiani Insights): Survey 542 creator, 62% burnout, 65% anxiety/depression, 69% financial instability, 77% algorithm changes, 1 in 10 suicidal thoughts, 89% no mental health access"
-  - type: "link"
-    url: "https://www.billiondollarboy.com/news/over-half-of-creators-face-burnout"
-    label: "Billion Dollar Boy Creator Burnout Study 2025: Survey 1000 creator + 1000 marketer US/UK, 52% burnout, 37% consider leaving, 55% financial instability #1 cause"
-  - type: "link"
-    url: "https://www.cnbcindonesia.com/tech/20260630112940-37-746782/raffi-ahmad-dkk-terancam-makin-miskin-tandanya-sudah-ada-di-amerika"
-    label: "CNBC Indonesia: 3,5 juta creator aktif Indonesia, 800rb full-time, hanya 3-5% >Rp100jt/bulan, 55% creator global <US$18rb/tahun (Goldman Sachs, NeoReach, APEDI, We Are Social 2026)"
-  - type: "link"
-    url: "https://tiktokcalculator.net/data/engagement/posting-frequency-engagement-correlation/"
-    label: "TikTok Posting Frequency vs Engagement Correlation: Analisis 1,9 juta video TikTok, 1x/day = 4,52% engagement, <5x/week = penalty, algorithm favors consistency"
-  - type: "link"
-    url: "https://tiktokcalculator.net/calculators/engagement-rate/engagement-rate-dropping/"
-    label: "TikTok Engagement Rate Dropping Analysis 2026: 60% creator affected by algorithm changes, distribution penalty within 10-14 days for <4 posts/week, negative feedback loop"
-  - type: "link"
-    url: "https://data.stateglobe.com/indonesia/creator-economy-revenue-statistics"
-    label: "Stateglobe Creator Economy Indonesia 2026: US$1,2 miliar revenue, 3,5 juta influencer, engagement rate 4,8%, influencer marketing spend US$650 juta"
-  - type: "link"
-    url: "https://www.fortuneidn.com/news/indonesia-creator-marketing-report-2026-babak-baru-industri-kreator-00-3bbtz-b4t5rb"
-    label: "FORTUNE Indonesia/IDN Research Institute ICMR 2026: Survey 553 creator + 600 audiens + 30 brand + 150 UMKM, shift dari viral ke trust, creator lebih sadar kesehatan mental"
-  - type: "link"
-    url: "https://www.kompas.id/baca/adv_post/indonesia-jadi-negara-dengan-dampak-komersial-kreator-terbesar-di-asia-pasifik-diprediksi-tembus-376-miliar-dollar-as"
-    label: "Kompas/TikTok CreatorFest 2025 (Accenture Song): Kreator Indonesia proyeksi US$376 miliar dampak komersial 2030, TikTok creator termonetisasi tumbuh 2000% YoY Q3 2025, 81% konsumen beli karena konten autentik"
-  - type: "link"
-    url: "https://kreasidigitalpro.com/the-creator-paradox/"
-    label: "Kreasi Digital Pro: The Creator Paradox 2025 - Paradoks kreator, siklus burnout, 12 juta kreator Indonesia, model bisnis platform sebagai pialang iklan"
+  - type: link
+    url: 'https://www.creators4mentalhealth.com/study'
+    label: >-
+      Creator Mental Health Study 2025 (Creators4MentalHealth + Lupiani
+      Insights): Survey 542 creator, 62% burnout, 65% anxiety/depression, 69%
+      financial instability, 77% algorithm changes, 1 in 10 suicidal thoughts,
+      89% no mental health access
+  - type: link
+    url: 'https://www.billiondollarboy.com/news/over-half-of-creators-face-burnout'
+    label: >-
+      Billion Dollar Boy Creator Burnout Study 2025: Survey 1000 creator + 1000
+      marketer US/UK, 52% burnout, 37% consider leaving, 55% financial
+      instability #1 cause
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/tech/20260630112940-37-746782/raffi-ahmad-dkk-terancam-makin-miskin-tandanya-sudah-ada-di-amerika
+    label: >-
+      CNBC Indonesia: 3,5 juta creator aktif Indonesia, 800rb full-time, hanya
+      3-5% >Rp100jt/bulan, 55% creator global <US$18rb/tahun (Goldman Sachs,
+      NeoReach, APEDI, We Are Social 2026)
+  - type: link
+    url: >-
+      https://tiktokcalculator.net/data/engagement/posting-frequency-engagement-correlation/
+    label: >-
+      TikTok Posting Frequency vs Engagement Correlation: Analisis 1,9 juta
+      video TikTok, 1x/day = 4,52% engagement, <5x/week = penalty, algorithm
+      favors consistency
+  - type: link
+    url: >-
+      https://tiktokcalculator.net/calculators/engagement-rate/engagement-rate-dropping/
+    label: >-
+      TikTok Engagement Rate Dropping Analysis 2026: 60% creator affected by
+      algorithm changes, distribution penalty within 10-14 days for <4
+      posts/week, negative feedback loop
+  - type: link
+    url: 'https://data.stateglobe.com/indonesia/creator-economy-revenue-statistics'
+    label: >-
+      Stateglobe Creator Economy Indonesia 2026: US$1,2 miliar revenue, 3,5 juta
+      influencer, engagement rate 4,8%, influencer marketing spend US$650 juta
+  - type: link
+    url: >-
+      https://www.fortuneidn.com/news/indonesia-creator-marketing-report-2026-babak-baru-industri-kreator-00-3bbtz-b4t5rb
+    label: >-
+      FORTUNE Indonesia/IDN Research Institute ICMR 2026: Survey 553 creator +
+      600 audiens + 30 brand + 150 UMKM, shift dari viral ke trust, creator
+      lebih sadar kesehatan mental
+  - type: link
+    url: >-
+      https://www.kompas.id/baca/adv_post/indonesia-jadi-negara-dengan-dampak-komersial-kreator-terbesar-di-asia-pasifik-diprediksi-tembus-376-miliar-dollar-as
+    label: >-
+      Kompas/TikTok CreatorFest 2025 (Accenture Song): Kreator Indonesia
+      proyeksi US$376 miliar dampak komersial 2030, TikTok creator termonetisasi
+      tumbuh 2000% YoY Q3 2025, 81% konsumen beli karena konten autentik
+  - type: link
+    url: 'https://kreasidigitalpro.com/the-creator-paradox/'
+    label: >-
+      Kreasi Digital Pro: The Creator Paradox 2025 - Paradoks kreator, siklus
+      burnout, 12 juta kreator Indonesia, model bisnis platform sebagai pialang
+      iklan
 ---
 
 ## Hook

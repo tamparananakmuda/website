@@ -1,54 +1,73 @@
 ---
-title: "2026 is the New 2016: Nostalgia Gen Z Bukan Rindu Masa Lalu, Protes Medsos yang Bikin Capek"
-slug: "2026-new-2016-nostalgia-gen-z-protes-medsos-bikin-capek"
-excerpt: "Tren 2026 is the new 2016 viral di TikTok. Gen Z rindu medsos 2016 bukan sentimentality, protes terhadap algoritma yang bikin capek. Screen time 7,5 jam/hari."
-publishedAt: "2026-08-15 01:00:00+00"
-status: "scheduled"
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+title: >-
+  2026 is the New 2016: Nostalgia Gen Z Bukan Rindu Masa Lalu, Protes Medsos
+  yang Bikin Capek
+slug: 2026-new-2016-nostalgia-gen-z-protes-medsos-bikin-capek
+excerpt: >-
+  Tren 2026 is the new 2016 viral di TikTok. Gen Z rindu medsos 2016 bukan
+  sentimentality, protes terhadap algoritma yang bikin capek. Screen time 7,5
+  jam/hari.
+publishedAt: '2026-08-15 01:00:00+00'
+status: scheduled
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
-tags: ["nostalgia-2016", "gen-z", "media-sosial", "algoritma", "burnout-digital", "kelelahan-digital"]
-ogHeadline: "Gen Z rindu 2016, medsos sekarang bikin capek"
-seoMetaTitle: "Nostalgia 2016 Gen Z: Bukan Rindu Masa Lalu, Protes Medsos"
-seoMetaDescription: "Tren 2026 is the new 2016 viral di TikTok. Gen Z rindu medsos 2016 bukan sentimentality, protes terhadap algoritma yang bikin capek. Screen time 7,5 jam/hari."
+povTag: refleksi
+tags:
+  - nostalgia-2016
+  - gen-z
+  - media-sosial
+  - algoritma
+  - burnout-digital
+  - kelelahan-digital
+ogHeadline: 'Gen Z rindu 2016, medsos sekarang bikin capek'
+seoMetaTitle: 'Nostalgia 2016 Gen Z: Bukan Rindu Masa Lalu, Protes Medsos'
+seoMetaDescription: >-
+  Tren 2026 is the new 2016 viral di TikTok. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
-  - "nostalgia media sosial gen z"
-  - "2026 is the new 2016 tren TikTok"
-  - "kelelahan digital gen z Indonesia"
-  - "gen z rindu media sosial lama"
-  - "burnout digital media sosial"
-  - "tekanan algoritma media sosial gen z"
-  - "gen z lelah media sosial sempurna"
+  - nostalgia media sosial gen z
+  - 2026 is the new 2016 tren TikTok
+  - kelelahan digital gen z Indonesia
+  - gen z rindu media sosial lama
+  - burnout digital media sosial
+  - tekanan algoritma media sosial gen z
+  - gen z lelah media sosial sempurna
 sourceReferences:
-  - type: "link"
-    url: "https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/"
-    label: "Kemenko PMK Pratikno: Screen Time Indonesia 7,5 jam/hari (2025)"
-  - type: "link"
-    url: "https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/"
-    label: "Survei Diginex x Inventure x ivosights: Gen Z Screen Time (2026)"
-  - type: "link"
-    url: "https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/"
-    label: "Jakpat Feb 2026: 41% Gen Z Batasi Notifikasi"
-  - type: "link"
-    url: "https://jurnal.peneliti.net/index.php/JIWP/article/view/12262"
-    label: "Jurnal Ilmiah Wahana Pendidikan: Burnout Digital Remaja Indonesia (Jan 2026)"
-  - type: "link"
-    url: "https://jurnalilmukomunikasi.uho.ac.id/index.php/journal/article/view/1879"
-    label: "Jurnal Ilmu Komunikasi UHO: Doomscrolling dan Kelelahan Digital Gen Z Medan (Jan 2026)"
-  - type: "link"
-    url: "https://www.viva.co.id/gaya-hidup/digilife/1874382-tren-media-sosial-terbaru-warganet-ramai-ramai-nostalgia-ke-tahun-2016"
-    label: "Viva.co.id: Tren Nostalgia 2016 di Media Sosial (Jan 2026)"
-  - type: "link"
-    url: "https://www.kompas.id/artikel/berapa-jam-gen-z-mengonsumi-medsos-setiap-hari"
-    label: "Litbang Kompas: Gangguan Psikis Akibat Gawai (Apr 2025)"
+  - type: link
+    url: 'https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/'
+    label: 'Kemenko PMK Pratikno: Screen Time Indonesia 7,5 jam/hari (2025)'
+  - type: link
+    url: 'https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/'
+    label: 'Survei Diginex x Inventure x ivosights: Gen Z Screen Time (2026)'
+  - type: link
+    url: 'https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/'
+    label: 'Jakpat Feb 2026: 41% Gen Z Batasi Notifikasi'
+  - type: link
+    url: 'https://jurnal.peneliti.net/index.php/JIWP/article/view/12262'
+    label: >-
+      Jurnal Ilmiah Wahana Pendidikan: Burnout Digital Remaja Indonesia (Jan
+      2026)
+  - type: link
+    url: 'https://jurnalilmukomunikasi.uho.ac.id/index.php/journal/article/view/1879'
+    label: >-
+      Jurnal Ilmu Komunikasi UHO: Doomscrolling dan Kelelahan Digital Gen Z
+      Medan (Jan 2026)
+  - type: link
+    url: >-
+      https://www.viva.co.id/gaya-hidup/digilife/1874382-tren-media-sosial-terbaru-warganet-ramai-ramai-nostalgia-ke-tahun-2016
+    label: 'Viva.co.id: Tren Nostalgia 2016 di Media Sosial (Jan 2026)'
+  - type: link
+    url: >-
+      https://www.kompas.id/artikel/berapa-jam-gen-z-mengonsumi-medsos-setiap-hari
+    label: 'Litbang Kompas: Gangguan Psikis Akibat Gawai (Apr 2025)'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

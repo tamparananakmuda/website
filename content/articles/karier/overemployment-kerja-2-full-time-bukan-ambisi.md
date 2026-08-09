@@ -1,57 +1,74 @@
 ---
-title: "Overemployment: Kerja 2 Full-Time Bukan Ambisi, Satu Gaji Tidak Cukup"
-slug: "overemployment-kerja-2-full-time-bukan-ambisi"
-excerpt: "47% Gen Z hidup paycheck to paycheck. Overemployment bukan hustle culture, tapi triage ekonomi. Kenapa Gen Z kerja dua full-time secara rahasia?"
-publishedAt: "2026-08-14 01:00:00+00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'Overemployment: Kerja 2 Full-Time Bukan Ambisi, Satu Gaji Tidak Cukup'
+slug: overemployment-kerja-2-full-time-bukan-ambisi
+excerpt: >-
+  47% Gen Z hidup paycheck to paycheck. Overemployment bukan hustle culture,
+  tapi triage ekonomi. Kenapa Gen Z kerja dua full-time secara rahasia?
+publishedAt: '2026-08-14 01:00:00+00'
+status: scheduled
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["overemployment", "kerja-dua-full-time", "gen-z", "side-hustle", "paycheck-to-paycheck", "double-job", "ekonomi"]
-ogHeadline: "Kerja dua full-time bukan ambisi, tapi darurat"
-seoMetaTitle: "Overemployment Gen Z: Kerja 2 Full-Time Bukan Ambisi"
-seoMetaDescription: "47% Gen Z hidup paycheck to paycheck. Overemployment bukan hustle culture, tapi triage ekonomi. Kenapa Gen Z kerja dua full-time secara rahasia?"
+povTag: data
+tags:
+  - overemployment
+  - kerja-dua-full-time
+  - gen-z
+  - side-hustle
+  - paycheck-to-paycheck
+  - double-job
+  - ekonomi
+ogHeadline: 'Kerja dua full-time bukan ambisi, tapi darurat'
+seoMetaTitle: 'Overemployment Gen Z: Kerja 2 Full-Time Bukan Ambisi'
+seoMetaDescription: >-
+  47% Gen Z hidup paycheck to paycheck. Sistem yang nggak beri alasan, bukan
+  kamu yang salah.
 seoKeywords:
-  - "overemployment gen z Indonesia"
-  - "kerja dua full time"
-  - "polyworking gen z"
-  - "income stacking gen z"
-  - "kerja sampingan gen z"
-  - "double job karyawan"
-  - "kerja remote dua pekerjaan"
+  - overemployment gen z Indonesia
+  - kerja dua full time
+  - polyworking gen z
+  - income stacking gen z
+  - kerja sampingan gen z
+  - double job karyawan
+  - kerja remote dua pekerjaan
 sourceReferences:
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/05/18/174758226/survei-deloitte-hampir-30-persen-gen-z-punya-pekerjaan-sampingan"
-    label: "Deloitte Gen Z and Millennial Survey 2026 (via Kompas)"
-  - type: "link"
-    url: "https://www.kompas.id/artikel/gen-z-dalam-tekanan-overwork"
-    label: "BPS Sakernas Agustus 2025 (via Kompas.id)"
-  - type: "link"
-    url: "https://populi.id/2026/07/08/mencuat-tren-polyworking-siasat-bertahan-hidup-zaman-now/"
-    label: "Sakernas Agustus 2024 (via Populi.id/UGM)"
-  - type: "link"
-    url: "https://www.hukumonline.com/klinik/a/hukum-bekerja-di-dua-perusahaan-lt4dbe0fdfeec26/"
-    label: "Hukumonline: Hukum Bekerja di Dua Perusahaan"
-  - type: "link"
-    url: "https://www.bbc.com/indonesia/vert-cap-59073574"
-    label: "BBC Indonesia: Overemployment"
-  - type: "link"
-    url: "https://mojok.co/liputan/mendalam/pekerja-terpaksa-overwork-dan-multiple-jobs-karena-upah-rendah/"
-    label: "Mojok.co: Overwork Multiple Jobs"
-  - type: "link"
-    url: "https://www.viva.co.id/bisnis/1876738-menguak-fenomena-poligami-kerja-ketika-karyawan-punya-lebih-dari-satu-pekerjaan-lagi-marak-di-inggris"
-    label: "Viva.co.id: Poligami Kerja Inggris (Cifas 2026)"
-  - type: "link"
-    url: "https://www.kompas.id/artikel/mengapa-tak-sedikit-gen-z-yang-memiliki-lebih-dari-satu-pekerjaan"
-    label: "Kompas.id: Polyworking Global (BLS AS 2024)"
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/18/174758226/survei-deloitte-hampir-30-persen-gen-z-punya-pekerjaan-sampingan
+    label: Deloitte Gen Z and Millennial Survey 2026 (via Kompas)
+  - type: link
+    url: 'https://www.kompas.id/artikel/gen-z-dalam-tekanan-overwork'
+    label: BPS Sakernas Agustus 2025 (via Kompas.id)
+  - type: link
+    url: >-
+      https://populi.id/2026/07/08/mencuat-tren-polyworking-siasat-bertahan-hidup-zaman-now/
+    label: Sakernas Agustus 2024 (via Populi.id/UGM)
+  - type: link
+    url: >-
+      https://www.hukumonline.com/klinik/a/hukum-bekerja-di-dua-perusahaan-lt4dbe0fdfeec26/
+    label: 'Hukumonline: Hukum Bekerja di Dua Perusahaan'
+  - type: link
+    url: 'https://www.bbc.com/indonesia/vert-cap-59073574'
+    label: 'BBC Indonesia: Overemployment'
+  - type: link
+    url: >-
+      https://mojok.co/liputan/mendalam/pekerja-terpaksa-overwork-dan-multiple-jobs-karena-upah-rendah/
+    label: 'Mojok.co: Overwork Multiple Jobs'
+  - type: link
+    url: >-
+      https://www.viva.co.id/bisnis/1876738-menguak-fenomena-poligami-kerja-ketika-karyawan-punya-lebih-dari-satu-pekerjaan-lagi-marak-di-inggris
+    label: 'Viva.co.id: Poligami Kerja Inggris (Cifas 2026)'
+  - type: link
+    url: >-
+      https://www.kompas.id/artikel/mengapa-tak-sedikit-gen-z-yang-memiliki-lebih-dari-satu-pekerjaan
+    label: 'Kompas.id: Polyworking Global (BLS AS 2024)'
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

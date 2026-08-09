@@ -23,8 +23,8 @@ tags:
 ogHeadline: 'Kamu bukan mitra Gojek Grab, kamu modal mereka'
 seoMetaTitle: 'Gig Economy Indonesia: Kamu Bukan Mitra, Kamu Modal | TAM'
 seoMetaDescription: >-
-  BPS catat 153 juta tenaga kerja Indonesia. Jutaan menjadi driver ojol tanpa
-  jaminan sosial. Kamu bukan mitra, kamu modal yang menanggung semua risiko.
+  BPS catat 153 juta tenaga kerja Indonesia. Sistem yang nggak beri alasan,
+  bukan kamu yang salah.
 seoKeywords:
   - gojek grab eksploitasi mitra
   - gig economy Indonesia
@@ -34,10 +34,10 @@ seoKeywords:
 sourceReferences:
   - type: link
     url: 'https://www.bps.go.id/'
-    label: 'BPS Data Tenaga Kerja Februari 2025'
+    label: BPS Data Tenaga Kerja Februari 2025
   - type: link
     url: 'https://sejiva.id/the-2026-founder-readiness-audit-report/'
-    label: 'Sejiva - Founder Readiness Audit Report 2026'
+    label: Sejiva - Founder Readiness Audit Report 2026
 featured: false
 humanSignature: true
 factCheckStatus: verified

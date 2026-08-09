@@ -1,38 +1,65 @@
 ---
-title: "Kerja Remote untuk Bule: Gen Z Indonesia Jadi Talent Ekspor Termurah"
-slug: "kerja-remote-bule-gen-z-indonesia-talent-ekspor-termurah"
-excerpt: "Gaji USD 5-10x lokal kelihatan enak. Tapi tanpa BPJS, THR, atau pesangon, kamu bukan talent global. Kamu talent murah yang kebetulan kerja dari rumah."
-publishedAt: "2026-08-09 01:00:00+00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-freelance"
-author: "yovie-setiawan"
+title: 'Kerja Remote untuk Bule: Gen Z Indonesia Jadi Talent Ekspor Termurah'
+slug: kerja-remote-bule-gen-z-indonesia-talent-ekspor-termurah
+excerpt: >-
+  Gaji USD 5-10x lokal kelihatan enak. Tapi tanpa BPJS, THR, atau pesangon, kamu
+  bukan talent global. Kamu talent murah yang kebetulan kerja dari rumah.
+publishedAt: '2026-08-09 01:00:00+00'
+status: scheduled
+category: karier
+subcategory: karier-freelance
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["kerja-remote", "gaji-dollar", "freelancer", "perlindungan-pekerja", "gen-z", "outsourcing"]
-ogHeadline: "Gaji USD bukan berarti kamu talent global"
-seoMetaTitle: "Kerja Remote Bule: Gen Z Indonesia Jadi Talent Ekspor Termurah"
-seoMetaDescription: "Gaji USD 5-10x lokal kelihatan enak. Tapi tanpa BPJS, THR, atau pesangon, kamu bukan talent global. Kamu talent murah yang kebetulan kerja dari rumah."
+povTag: kontra-narasi
+tags:
+  - kerja-remote
+  - gaji-dollar
+  - freelancer
+  - perlindungan-pekerja
+  - gen-z
+  - outsourcing
+ogHeadline: Gaji USD bukan berarti kamu talent global
+seoMetaTitle: 'Kerja Remote Bule: Gen Z Indonesia Jadi Talent Ekspor Termurah'
+seoMetaDescription: >-
+  Gaji USD 5-10x lokal kelihatan enak. Sistem yang nggak beri alasan, bukan kamu
+  yang salah.
 seoKeywords:
-  - "kerja remote luar negeri"
-  - "gaji dollar kerja remote"
-  - "remote worker indonesia"
-  - "freelance luar negeri perlindungan hukum"
-  - "geographic discount remote work"
+  - kerja remote luar negeri
+  - gaji dollar kerja remote
+  - remote worker indonesia
+  - freelance luar negeri perlindungan hukum
+  - geographic discount remote work
 sourceReferences:
-  - {"type":"link","url":"https://lokerdollar.com/id/salary-guide","label":"LokerDollar: Panduan Gaji Remote USD untuk Profesional Indonesia (2026)"}
-  - {"type":"link","url":"https://roamjobs.com/guides/negotiation/remote-salary-usd-vs-idr/","label":"RoamJobs: How to Negotiate Remote Salary USD vs IDR (2026)"}
-  - {"type":"link","url":"https://roamjobs.com/guides/negotiation/remote-salary-negotiation-by-region/","label":"RoamJobs: Remote Salary Negotiation by Region (2026)"}
-  - {"type":"link","url":"https://doi.org/10.31942/jqi.v18i1.12652","label":"Jurnal QI: Perlindungan Hukum Pekerja Freelance dan Remote-Working di Indonesia (2024)"}
-  - {"type":"link","url":"https://commoner-law.com/indonesia/workers-rights/bpjs-ketenagakerjaan","label":"Commoner Law: BPJS Ketenagakerjaan 2026 Panduan Hukum"}
-  - {"type":"link","url":"https://www.talenta.co/blog/aturan-jaminan-kehilangan-pekerjaan/","label":"Talenta: Aturan Jaminan Kehilangan Pekerjaan PP 6/2025"}
-  - {"type":"link","url":"https://tempatbelajar.id/gaji-kerja-remote-indonesia/","label":"TempatBelajar: Berapa Gaji Kerja Remote di Indonesia per Profesi (2026)"}
+  - type: link
+    url: 'https://lokerdollar.com/id/salary-guide'
+    label: 'LokerDollar: Panduan Gaji Remote USD untuk Profesional Indonesia (2026)'
+  - type: link
+    url: 'https://roamjobs.com/guides/negotiation/remote-salary-usd-vs-idr/'
+    label: 'RoamJobs: How to Negotiate Remote Salary USD vs IDR (2026)'
+  - type: link
+    url: >-
+      https://roamjobs.com/guides/negotiation/remote-salary-negotiation-by-region/
+    label: 'RoamJobs: Remote Salary Negotiation by Region (2026)'
+  - type: link
+    url: 'https://doi.org/10.31942/jqi.v18i1.12652'
+    label: >-
+      Jurnal QI: Perlindungan Hukum Pekerja Freelance dan Remote-Working di
+      Indonesia (2024)
+  - type: link
+    url: 'https://commoner-law.com/indonesia/workers-rights/bpjs-ketenagakerjaan'
+    label: 'Commoner Law: BPJS Ketenagakerjaan 2026 Panduan Hukum'
+  - type: link
+    url: 'https://www.talenta.co/blog/aturan-jaminan-kehilangan-pekerjaan/'
+    label: 'Talenta: Aturan Jaminan Kehilangan Pekerjaan PP 6/2025'
+  - type: link
+    url: 'https://tempatbelajar.id/gaji-kerja-remote-indonesia/'
+    label: 'TempatBelajar: Berapa Gaji Kerja Remote di Indonesia per Profesi (2026)'
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 coverImageUrl: null
 coverImageAlt: null
 isSponsored: false

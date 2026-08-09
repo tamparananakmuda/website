@@ -1,67 +1,100 @@
 ---
-title: "Doomscrolling Bukan Kebiasaan, Ketakutan yang Algoritma Jual"
-slug: "doomscrolling-bukan-kebiasaan-ketakutan-yang-algoritma-jual"
-excerpt: "82% remaja Indonesia doomscroll 4x seminggu, rata-rata 45 menit per sesi. Bukan kelemahan personal, algoritma yang sengaja feed ketakutan untuk engagement."
-publishedAt: "2026-09-09T01:00:00+07:00"
-status: "scheduled"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+title: 'Doomscrolling Bukan Kebiasaan, Ketakutan yang Algoritma Jual'
+slug: doomscrolling-bukan-kebiasaan-ketakutan-yang-algoritma-jual
+excerpt: >-
+  82% remaja Indonesia doomscroll 4x seminggu, rata-rata 45 menit per sesi.
+  Bukan kelemahan personal, algoritma yang sengaja feed ketakutan untuk
+  engagement.
+publishedAt: '2026-09-09T01:00:00+07:00'
+status: scheduled
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags:
-  - "doomscrolling"
-  - "gen-z"
-  - "algoritma"
-  - "kesehatan-mental"
-  - "media-sosial"
-  - "ketakutan"
-  - "waktu-layar"
-ogHeadline: "Kamu scroll berita buruk, algoritma yang untung"
+  - doomscrolling
+  - gen-z
+  - algoritma
+  - kesehatan-mental
+  - media-sosial
+  - ketakutan
+  - waktu-layar
+ogHeadline: 'Kamu scroll berita buruk, algoritma yang untung'
 ogHeadlineEn: null
-seoMetaTitle: "Doomscrolling Bukan Kebiasaan, Ketakutan yang Algoritma Jual"
-seoMetaDescription: "82% remaja Indonesia doomscroll 4x seminggu. Bukan kelemahan, algoritma yang rancang ketakutan untuk engagement dan profit."
+seoMetaTitle: 'Kamu scroll berita buruk, algoritma yang untung | TAM'
+seoMetaDescription: >-
+  82% remaja Indonesia doomscroll 4x seminggu. Bukan kelemahan, algoritma yang
+  rancang ketakutan untuk engagement dan profit.
 seoKeywords:
-  - "doomscrolling"
-  - "doomscrolling gen z"
-  - "efek doomscrolling"
-  - "algoritma media sosial"
-  - "kesehatan mental"
-  - "waktu layar"
-  - "ketakutan"
+  - doomscrolling
+  - doomscrolling gen z
+  - efek doomscrolling
+  - algoritma media sosial
+  - kesehatan mental
+  - waktu layar
+  - ketakutan
 sourceReferences:
-  - url: "https://www.nature.com/articles/s41562-023-01538-4"
-    label: "Nature Human Behaviour 2023: 22,743 RCTs, 105K headline variations, 5.7M clicks. Each negative word +2.3% CTR"
-  - url: "https://repository.unair.ac.id/133526/"
-    label: "Universitas Airlangga 2024: 190 Gen Z, doomscrolling → psychological distress → lower mental well-being, Gen Z 27% say social media negative impact"
-  - url: "https://digamed.net/index.php/psychologytoday/article/view/516"
-    label: "Pekanbaru study 2024: 400 Gen Z, r=0.554 p<0.001, doomscrolling positively correlated with psychological distress"
-  - url: "https://doi.org/10.47467/edu.v5i2.9741"
-    label: "Karawang study 2025: 384 respondents aged 13-28, regression -0.748, doomscrolling contributes 75.7% to lower mental health"
-  - url: "https://journal.alifba.id/index.php/jcpr/article/view/88"
-    label: "Indonesian Adolescents study 2025: 600 adolescents Jakarta/Yogya/Surabaya, 82.3% doomscroll 4x/week, avg 45 min/session, anxiety r=0.62"
-  - url: "https://jurnal.konselingindonesia.com/index.php/jkp/article/view/1641"
-    label: "Mahasiswa study 2025: 490 respondents, male higher doomscrolling, age 21-24 highest, more social media = more doomscrolling"
-  - url: "https://link.springer.com/article/10.1186/s40359-025-03865-9"
-    label: "BMC Psychology 2025: 663 adults, doomscrolling → poor sleep quality via nomophobia, FoMO mediates"
-  - url: "https://www.sciencedirect.com/science/article/pii/S245195882400071X"
-    label: "Shabahang et al. 2024: 800 students Iran+US, doomscrolling → existential anxiety, pessimism about human nature"
-  - url: "https://yougov.com/reports/52747-id-media-consumption-report-2025"
-    label: "YouGov 2025: 81% Indonesians active on social media, 48% Gen Z 1-5 hours/day, 78% YouTube, 75% Instagram, 65% TikTok"
-  - url: "https://data.goodstats.id/statistic/anak-muda-indonesia-habiskan-4-6-jam-per-hari-di-media-sosial-Uwbbp"
-    label: "GoodStats/Diginex 2025: 51% Milenial 31% Gen Z spend 4-6 hours/day on social media, 625 respondents 69% Gen Z"
-  - url: "https://www.kompas.id/artikel/en-doomscrolling-ketika-perhatian-menjadi-komoditas"
-    label: "Kompas.id 2025: We Are Social Indonesia avg 7 hours/day, Deloitte 56% Gen Z difficulty limiting screen time, 74% feel compelled to check"
-  - url: "https://pubmed.ncbi.nlm.nih.gov/40070432/"
-    label: "Twitter algorithm audit 2025: engagement-based ranking amplifies emotionally charged out-group hostile content, users don't prefer algorithm-selected tweets"
+  - url: 'https://www.nature.com/articles/s41562-023-01538-4'
+    label: >-
+      Nature Human Behaviour 2023: 22,743 RCTs, 105K headline variations, 5.7M
+      clicks. Each negative word +2.3% CTR
+  - url: 'https://repository.unair.ac.id/133526/'
+    label: >-
+      Universitas Airlangga 2024: 190 Gen Z, doomscrolling → psychological
+      distress → lower mental well-being, Gen Z 27% say social media negative
+      impact
+  - url: 'https://digamed.net/index.php/psychologytoday/article/view/516'
+    label: >-
+      Pekanbaru study 2024: 400 Gen Z, r=0.554 p<0.001, doomscrolling positively
+      correlated with psychological distress
+  - url: 'https://doi.org/10.47467/edu.v5i2.9741'
+    label: >-
+      Karawang study 2025: 384 respondents aged 13-28, regression -0.748,
+      doomscrolling contributes 75.7% to lower mental health
+  - url: 'https://journal.alifba.id/index.php/jcpr/article/view/88'
+    label: >-
+      Indonesian Adolescents study 2025: 600 adolescents Jakarta/Yogya/Surabaya,
+      82.3% doomscroll 4x/week, avg 45 min/session, anxiety r=0.62
+  - url: 'https://jurnal.konselingindonesia.com/index.php/jkp/article/view/1641'
+    label: >-
+      Mahasiswa study 2025: 490 respondents, male higher doomscrolling, age
+      21-24 highest, more social media = more doomscrolling
+  - url: 'https://link.springer.com/article/10.1186/s40359-025-03865-9'
+    label: >-
+      BMC Psychology 2025: 663 adults, doomscrolling → poor sleep quality via
+      nomophobia, FoMO mediates
+  - url: 'https://www.sciencedirect.com/science/article/pii/S245195882400071X'
+    label: >-
+      Shabahang et al. 2024: 800 students Iran+US, doomscrolling → existential
+      anxiety, pessimism about human nature
+  - url: 'https://yougov.com/reports/52747-id-media-consumption-report-2025'
+    label: >-
+      YouGov 2025: 81% Indonesians active on social media, 48% Gen Z 1-5
+      hours/day, 78% YouTube, 75% Instagram, 65% TikTok
+  - url: >-
+      https://data.goodstats.id/statistic/anak-muda-indonesia-habiskan-4-6-jam-per-hari-di-media-sosial-Uwbbp
+    label: >-
+      GoodStats/Diginex 2025: 51% Milenial 31% Gen Z spend 4-6 hours/day on
+      social media, 625 respondents 69% Gen Z
+  - url: >-
+      https://www.kompas.id/artikel/en-doomscrolling-ketika-perhatian-menjadi-komoditas
+    label: >-
+      Kompas.id 2025: We Are Social Indonesia avg 7 hours/day, Deloitte 56% Gen
+      Z difficulty limiting screen time, 74% feel compelled to check
+  - url: 'https://pubmed.ncbi.nlm.nih.gov/40070432/'
+    label: >-
+      Twitter algorithm audit 2025: engagement-based ranking amplifies
+      emotionally charged out-group hostile content, users don't prefer
+      algorithm-selected tweets
 readingTime: 7
 featured: false
 isPremium: false
 premiumExcerpt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 ---
 
 Kamu tidak bisa berhenti scroll berita buruk. Bukan karena kamu lemah. Karena algoritma tahu ketakutan lebih menguntungkan daripada kebahagiaan.

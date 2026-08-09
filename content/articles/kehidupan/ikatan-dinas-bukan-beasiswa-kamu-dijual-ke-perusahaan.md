@@ -21,7 +21,7 @@ tags:
   - sekolah-kedinasan
   - perbudakan-modern
 ogHeadline: Beasiswa ikatan dinas bikin kamu nggak bisa keluar
-seoMetaTitle: 'Ikatan Dinas Bukan Beasiswa, Kamu Dijual ke Perusahaan'
+seoMetaTitle: Beasiswa ikatan dinas bikin kamu nggak bisa keluar | TAM
 seoMetaDescription: >-
   Masalahmu bukan biaya kuliah. Ada kontrak 10 tahun dengan denda ratusan juta
   yang tidak kamu baca saat mendaftar ikatan dinas.
