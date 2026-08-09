@@ -25,10 +25,10 @@ export class MistralClient {
   async chat(options: ChatCompletionOptions) {
     const maxRetries = 3;
     let lastError: Error | null = null;
+    const timeoutMs = options.timeoutMs ?? 20000;
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       const controller = new AbortController();
-      const timeoutMs = options.timeoutMs ?? 30000;
       const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
       try {
@@ -151,7 +151,7 @@ export class MistralClient {
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       const controller = new AbortController();
-      const timeoutMs = options.timeoutMs ?? 45000;
+      const timeoutMs = options.timeoutMs ?? 30000;
       const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
       try {

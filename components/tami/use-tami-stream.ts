@@ -55,6 +55,9 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
         signal: controller.signal,
       });
 
+      // Auto-abort after 45s if no completion (server maxDuration is 60s)
+      const timeoutId = setTimeout(() => controller.abort(), 45000);
+
       if (!response.ok) {
         const errData = await response.json().catch(() => ({ error: 'Stream request failed' }));
         throw new Error(errData.error || `HTTP ${response.status}`);
@@ -100,8 +103,12 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
       }
     } catch (err: any) {
       if (err.name === 'AbortError') {
-        // User aborted, keep partial text
-        optionsRef.current?.onComplete?.(fullTextRef.current);
+        // Could be user abort or timeout — keep partial text
+        if (fullTextRef.current) {
+          optionsRef.current?.onComplete?.(fullTextRef.current);
+        } else {
+          optionsRef.current?.onError?.('TAMI butuh waktu terlalu lama. Coba pertanyaan yang lebih singkat.');
+        }
       } else {
         const msg = err.message || 'Streaming failed';
         setError(msg);

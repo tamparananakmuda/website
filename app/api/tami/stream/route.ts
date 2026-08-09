@@ -73,7 +73,9 @@ export async function POST(req: NextRequest) {
     const { conversationalReply, ...cognitiveData } = cognitiveResponse;
 
     // Fast path: for greetings/simple queries, skip expensive streamTamiReply() LLM call
+    // Exclude degraded responses (circuit breaker fallback) — those need streaming for context
     const isGreetingResponse = cognitiveData.severityLevel === 'ringan' 
+      && !('isDegraded' in cognitiveData && cognitiveData.isDegraded)
       && (!cognitiveData.actionPlan || cognitiveData.actionPlan.length === 0)
       && (!cognitiveData.citations || cognitiveData.citations.length === 0);
 
