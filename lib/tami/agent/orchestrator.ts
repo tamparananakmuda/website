@@ -15,6 +15,7 @@ import { addMessage, compressHistory as compressSessionHistory, trackTopic } fro
 import { trackTopicMention, recordSentiment } from '../observability/conversation-analytics';
 import { logCrisisEvent } from '../guardrails/safety';
 import { isMistralAvailable, recordMistralSuccess, recordMistralFailure, generateFallbackResponse } from '../observability/health';
+import { checkDomain } from '../guardrails/domain-filter';
 
 /**
  * Sanitize user input sebelum di-interpolate ke LLM prompt.
@@ -346,6 +347,41 @@ export async function processTamiIntelligence(query: string, history: { role: 'u
         'Bagaimana menghadapi burnout karir & beban ekspektasi?'
       ],
       severityLevel: 'ringan'
+    };
+  }
+
+  // 0c. Domain filter — multi-layer off-topic detection
+  // Block queries outside TAMI's domain before running expensive 4-agent pipeline
+  const domainCheck = await checkDomain(normalizedQuery);
+  if (domainCheck.isOffTopic) {
+    console.log(`[TAMI DOMAIN] Rejected via ${domainCheck.layer}: ${domainCheck.reason}`);
+    return {
+      mindState: {
+        primaryEmotion: 'netral',
+        resilienceScore: 10,
+        crisisDetected: false,
+        coreDilemma: 'Query di luar domain TAMI.',
+      },
+      diagnosis: {
+        metrics: {
+          financialStress: 'low',
+          careerBurnout: 'low',
+          socialPressure: 'low',
+          futureAnxiety: 'low',
+        },
+        rootCauseAnalysis: 'Query tidak relevan dengan domain TAMI.',
+        cognitiveDistortion: 'Tidak Ada',
+        realityCheckVerdict: domainCheck.rejectionMessage || 'Itu di luar area gue.',
+      },
+      actionPlan: [],
+      citations: [],
+      conversationalReply: domainCheck.rejectionMessage || 'Itu di luar area gue.',
+      suggestions: [
+        'Gimana cara atasi rasa tertinggal dari teman seumuran?',
+        'Berapa besar dana darurat yang ideal untuk anak muda?',
+        'Bagaimana menghadapi burnout karir & beban ekspektasi?',
+      ],
+      severityLevel: 'ringan',
     };
   }
 
@@ -721,7 +757,7 @@ Aturan:
 1. Panjang jawaban ikut LEVEL RESPON di atas. Jangan ngegas lebih panjang. Ringkas = hormatin waktu user.
 2. Semua argumen berbasis Context TAM. Jangan ngarang teori, riset, atau statistik.
 3. Jangan rekomendasiin buku, website, atau mentor eksternal yang nggak ada di Context TAM.
-4. Fokus ke karir, keuangan, tekanan sosial, mental anak muda. Kalau di luar itu, bilang aja TAMI khusus bahas realita hidup anak muda.
+4. **DOMAIN LOCK**: Lo CUMA bahas karir, keuangan, tekanan sosial, mental, dan dilema hidup anak muda Indonesia. Itu doang. Kalau user nanya di luar itu (coding, resep masakan, cuaca, berita, tugas kuliah, review gadget, politik, diagnosa medis, rekomendasi film/musik, travel itinerary, gaming, sejarah, matematika, sains, dll) — TOLAK TEGAS. Bilang: "Itu di luar area gue. Gue TAMI — gue cuma bahas realita hidup anak muda: karir, uang, tekanan sosial, mental." Jangan coba jawab meskipun lo tahu jawabannya. Jangan pujian-pujian dulu. Langsung tolak.
 5. Tone WAJIB ngikut LEVEL RESPON. Baca baik-baik, jangan pakai tone yang sama buat semua user.
 6. Format Markdown. Jangan sebut nama agen internal. Lo bicara sebagai TAMI, bukan sebagai "sistem" atau "asisten".
 7. Link artikel: \`[Judul](/artikel/slug)\` atau \`[Judul Seri](/seri/slug)\`.
@@ -739,7 +775,7 @@ Aturan:
       messages: [
         {
           role: 'system',
-          content: `Lo TAMI. Bukan AI, bukan asisten, bukan chatbot. Lo teman yang ngasih tamparan realita ke anak muda Indonesia. Ngomong langsung, jujur, tajam, tapi nggak nggurui. Pakai bahasa gue/kamu, kasual tapi berbobot. Jangan pernah sebut diri sebagai AI atau model bahasa. Sesuaikan tone berdasarkan severity: ${severity.level.toUpperCase()}.`
+          content: `Lo TAMI. Bukan AI, bukan asisten, bukan chatbot. Lo teman yang ngasih tamparan realita ke anak muda Indonesia. Ngomong langsung, jujur, tajam, tapi nggak nggurui. Pakai bahasa gue/kamu, kasual tapi berbobot. Jangan pernah sebut diri sebagai AI atau model bahasa. DOMAIN LO: karir, keuangan, tekanan sosial, mental, dilema hidup anak muda Indonesia. Itu doang. Di luar itu, tolak tegas. Sesuaikan tone berdasarkan severity: ${severity.level.toUpperCase()}.`
         },
         ...rawHistory.map(h => ({ role: h.role, content: h.content })),
         { role: 'user', content: synthesisPrompt }
@@ -826,7 +862,7 @@ ${streamSeverity.toneInstruction}
 
 Aturan:
 1. Semua argumen selaras dengan artikel TAM di atas. Jangan ngarang referensi eksternal atau statistik fiktif.
-2. Kalau di luar domain karir/keuangan/tekanan hidup anak muda, bilang tegas bahwa TAMI khusus bahas realita hidup anak muda.
+2. **DOMAIN LOCK**: Lo CUMA bahas karir, keuangan, tekanan sosial, mental, dan dilema hidup anak muda Indonesia. Kalau user nanya di luar itu (coding, resep, cuaca, berita, tugas kuliah, review gadget, politik, medis, film/musik, travel, gaming, sejarah, matematika, sains) — TOLAK TEGAS. Bilang: "Itu di luar area gue. Gue TAMI — gue cuma bahas realita hidup anak muda." Jangan jawab meskipun lo tahu. Langsung tolak.
 3. Tone WAJIB ngikut LEVEL RESPON di atas. Baca baik-baik.
 4. Link artikel: \`[Judul](/artikel/slug)\` atau \`[Judul Seri](/seri/slug)\`. Jangan pakai link eksternal.
 5. Visualisasi (opsional): kalau relevan, boleh chart/comparison/nerd box. Format sama kayak biasa. Gunain cuma kalau bantu user paham.`;
@@ -835,7 +871,7 @@ Aturan:
     messages: [
       {
         role: 'system',
-        content: `Lo TAMI. Bukan AI, bukan asisten, bukan chatbot. Lo teman yang ngasih tamparan realita ke anak muda Indonesia. Ngomong langsung, jujur, tajam, tapi nggak nggurui. Pakai bahasa gue/kamu, kasual tapi berbobot. Jangan pernah sebut diri sebagai AI atau model bahasa. Sesuaikan tone berdasarkan severity: ${streamSeverity.level.toUpperCase()}.`
+        content: `Lo TAMI. Bukan AI, bukan asisten, bukan chatbot. Lo teman yang ngasih tamparan realita ke anak muda Indonesia. Ngomong langsung, jujur, tajam, tapi nggak nggurui. Pakai bahasa gue/kamu, kasual tapi berbobot. Jangan pernah sebut diri sebagai AI atau model bahasa. DOMAIN LO: karir, keuangan, tekanan sosial, mental, dilema hidup anak muda Indonesia. Itu doang. Di luar itu, tolak tegas. Sesuaikan tone berdasarkan severity: ${streamSeverity.level.toUpperCase()}.`
       },
       ...rawHistory.map(h => ({ role: h.role, content: h.content })),
       { role: 'user', content: synthesisPrompt }
