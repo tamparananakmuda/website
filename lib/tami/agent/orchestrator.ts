@@ -339,7 +339,7 @@ export async function processTamiIntelligence(query: string, history: { role: 'u
       citations: [],
       conversationalReply: cleanQuery.match(/(terima kasih|thanks|makasih|thank you)/) 
         ? 'Sama-sama kak! Senang bisa mendampingi proses berpikirmu. Kalau ada realita hidup, karir, atau keuangan lainnya yang mau kamu bedah, silakan tumpahkan di sini.'
-        : 'Halo kak! Aku TAMI (Tamparan Anak Muda Intelligence). Ada yang bisa aku bantu? Tumpahkan curhat karir, keuangan, tekanan sosial, atau dilema hidupmu di sini agar bisa kita bedah akar masalahnya secara jujur dan realistis.',
+        : 'Halo kak! Aku TAMI. Ada yang bisa aku bantu? Tumpahkan curhat karir, keuangan, tekanan sosial, atau dilema hidupmu di sini agar bisa kita bedah akar masalahnya secara jujur dan realistis.',
       suggestions: [
         'Gimana cara atasi rasa tertinggal dari teman seumuran?',
         'Berapa besar dana darurat yang ideal untuk anak muda?',
