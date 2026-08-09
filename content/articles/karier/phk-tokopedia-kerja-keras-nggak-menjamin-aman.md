@@ -99,5 +99,5 @@ Kerja keras. Tapi kerja keras untuk masa depan kamu sendiri, bukan untuk loyalit
 ## Baca Juga
 
 - [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-nggak-mau-kamu)
-- [Career Cushioning: Bukan Tidak Loyal, Survival Era PHK](/artikel/career-cushioning-bukan-tidak-loyal-survival-era-phk)
-- [Quiet Firing: Perusahaan Paksa Kamu Keluar](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar)
+- [96% Terbuka Pindah: Bukan Loyalitas yang Mati, Sistemnya](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati-sistemnya)
+- [Quiet Quitting: Bukan Malas, Sistem Kerja yang Nggak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati)

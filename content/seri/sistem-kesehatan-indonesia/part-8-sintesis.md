@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-8-sintesis
 excerpt: >-
   8 part, 1 kesimpulan. BPJS defisit, farmasi impor, dokter keluar, RS bisnis, PTM 85%. Sistem tidak gagal, itu desain.
 publishedAt: '2027-02-08T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan

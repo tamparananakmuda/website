@@ -112,7 +112,7 @@ Padahal, siapa pun berpotensi menjadi korban. Tidak memandang tingkat pendidikan
 
 Pertama, jangan salahkan diri sendiri kalau kamu pernah tertipu. Sistem yang memungkinkan penipuan terjadi bukan tanggung jawabmu. Tapi belajar dari pengalaman dan lindungi diri ke depan.
 
-Kedua, verifikasi sebelum transfer. Kalau ada yang minta transfer darurat, hubungi kembali melalui nomor yang kamu kenal. Kalau ada yang mengaku atasan, konfirmasi melalui channel resmi. Seperti yang kita bahas tentang [overconfidence dan scam](/artikel/86-persen-merasa-bisa-kenali-scam-35-persen-tetap-kena-overconfidence-justru-celah), rasa percaya diri yang berlebihan justru menjadi celah. Jangan merasa kebal.
+Kedua, verifikasi sebelum transfer. Kalau ada yang minta transfer darurat, hubungi kembali melalui nomor yang kamu kenal. Kalau ada yang mengaku atasan, konfirmasi melalui channel resmi. Seperti yang kita bahas tentang [overconfidence dan scam](/artikel/86-persen-pede-kenali-scam-35-persen-tetap-kena-overconfidence-celah), rasa percaya diri yang berlebihan justru menjadi celah. Jangan merasa kebal.
 
 Ketiga, laporkan cepat. OJK mengingatkan: pelaku butuh kurang dari satu jam untuk memindahkan dana. Kalau kamu tertipu, lapor dalam hitungan menit, bukan jam. Hubungi bank, blokir rekening, hubungi IASC. Kecepatan laporan menentukan apakah uangmu bisa diselamatkan.
 

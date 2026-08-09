@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-1-bpjs-defisit
 excerpt: >-
   BPJS defisit Rp17,13 triliun pada 2025. Iuran naik, layanan turun. Jaring pengaman yang dirancang untuk robek.
 publishedAt: '2027-02-01T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan

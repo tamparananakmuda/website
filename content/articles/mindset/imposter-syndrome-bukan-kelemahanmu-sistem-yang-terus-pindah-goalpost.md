@@ -115,7 +115,7 @@ Cari lingkungan yang kasih feedback spesifik, bukan evaluasi vagu. "Kamu bisa le
 
 Batasi konsumsi konten hustle culture. Kalau feed LinkedIn kamu penuh orang yang posting pencapaian tanpa proses, kamu akan terus merasa tertinggal. Ingat yang kami tulis di [Hustle Culture: Kenapa Gen Z Berhenti Berlari](/artikel/hustle-culture-kenapa-gen-z-berhenti-berlari), perbandingan diri dengan pencapaian orang lain adalah jebakan yang dirancang oleh algoritma, bukan kebutuhan psikologis kamu.
 
-Dan seperti yang kami bahas di [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-masa-depan-bukan-mental-lemah-sistem-yang-tidak-pasti), kecemasan kamu atas masa depan bukan tanda kelemahan. Sama seperti imposter syndrome, itu sinyal yang benar dari sistem yang tidak pasti.
+Dan seperti yang kami bahas di [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-lemah-sistem-nggak-pasti), kecemasan kamu atas masa depan bukan tanda kelemahan. Sama seperti imposter syndrome, itu sinyal yang benar dari sistem yang tidak pasti.
 
 ## Conclusion
 

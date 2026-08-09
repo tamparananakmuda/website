@@ -279,6 +279,26 @@
       "source": "/artikel/rp-9-5-triliun-penipuan-online-bukan-soal-bodoh",
       "destination": "/artikel/rp95-triliun-hilang-penipuan-online-bukan-soal-bodoh-soal-sistem",
       "permanent": true
+    },
+    {
+      "source": "/artikel/quiet-quitting-bukan-malas-sistem-tidak-bayar-hati",
+      "destination": "/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati",
+      "permanent": true
+    },
+    {
+      "source": "/artikel/60-persen-gen-z-cemas-masa-depan-bukan-mental-lemah-sistem-yang-tidak-pasti",
+      "destination": "/artikel/60-persen-gen-z-cemas-bukan-mental-lemah-sistem-nggak-pasti",
+      "permanent": true
+    },
+    {
+      "source": "/artikel/gen-z-belanja-12-juta-bpjs-ditunda-bukan-boros-krisis-persepsi",
+      "destination": "/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi",
+      "permanent": true
+    },
+    {
+      "source": "/artikel/86-persen-merasa-bisa-kenali-scam-35-persen-tetap-kena-overconfidence-justru-celah",
+      "destination": "/artikel/86-persen-pede-kenali-scam-35-persen-tetap-kena-overconfidence-celah",
+      "permanent": true
     }
   ]
 }

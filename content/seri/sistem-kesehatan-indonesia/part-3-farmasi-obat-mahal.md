@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-3-farmasi-obat-mahal
 excerpt: >-
   Indonesia impor 90% bahan baku obat dari China dan India. Hanya 35 API lokal. Obat yang sama 10x lebih murah di India.
 publishedAt: '2027-02-03T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan
@@ -117,7 +117,7 @@ Gue pernah beli obat maag di apotek. Harganya Rp35 ribu. Isinya: ranitidine 150 
 
 Dan ada masalah lain: tarif e-katalog BPJS yang rendah membuat industri farmasi lokal tidak tertarik memproduksi obat tertentu. Margin terlalu tipis, bahkan rugi. Hasilnya, obat generics yang seharusnya murah justru langka di pasaran. Pasien BPJS dapat resep tapi obatnya tidak ada di apotek. Mereka harus beli sendiri dengan harga pasar yang lebih mahal. Sistem yang dirancang untuk menekan biaya justru membuat obat tidak tersedia.
 
-Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia dirancang dengan banyak lapis biaya. Obat mahal adalah salah satu lapisnya.
+Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia dirancang dengan banyak lapis biaya. Obat mahal adalah salah satu lapisnya. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa biaya kesehatan termasuk obat adalah beban yang ditunda, bukan diprioritaskan.
 
 ## Conclusion
 

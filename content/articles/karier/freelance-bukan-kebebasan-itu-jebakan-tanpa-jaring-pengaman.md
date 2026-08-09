@@ -157,7 +157,7 @@ Kontrak kerja di industri kreatif sering diberikan secara verbal atau tidak tert
 
 Freelancer Gen Z di Medan yang diwawancarai IDN Times menggambarkan kondisi ini dengan tepat: "bebas tapi semu". Kadang rezeki banjir, banyak proyek masuk. Tapi kalau lagi sepi, tidak ada yang bayar. Tidak ada jaminan sosial atau perlindungan yang jelas dari negara. Mereka loncat ke sana kemari dalam dunia freelance tanpa keamanan.
 
-Ini pola yang sama dengan quiet quitting, di mana pekerja berhenti memberikan ekstra karena sistem tidak menghargai kontribusi mereka. Artikel [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-tidak-bayar-hati) membongkar bagaimana sistem kerja yang tidak menghargai pekerja akhirnya merugikan semua pihak.
+Ini pola yang sama dengan quiet quitting, di mana pekerja berhenti memberikan ekstra karena sistem tidak menghargai kontribusi mereka. Artikel [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-nggak-mau-bayar-hati) membongkar bagaimana sistem kerja yang tidak menghargai pekerja akhirnya merugikan semua pihak.
 
 ## Dari Katup Pengaman Ke Jebakan Permanen
 

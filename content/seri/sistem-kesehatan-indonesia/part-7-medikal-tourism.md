@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-7-medikal-tourism
 excerpt: >-
   970 ribu warga Indonesia berobat ke Malaysia 2025, menyumbang Rp9 triliun. 750 ribu ke Singapura. Total $11,5 miliar hilang.
 publishedAt: '2027-02-07T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan
@@ -117,7 +117,7 @@ Yang mampu keluar. Yang tidak mampu menetap dan bayar sistem yang defisit. Medik
 
 Gue pernah antar keluarga ke Singapura untuk konsultasi kardiologi. Perbedaannya bukan di alat. Di proses. Janji tepat waktu, dokter ngobrol 30 menit tanpa terburu, rekam medis digital yang bisa diakses pasien, farmasi terintegrasi. Tidak ada antri 3 jam untuk ketemu dokter 5 menit. Tidak ada "nanti saja, dokternya lagi sibuk." Sistem yang menghargai waktu pasien. Dan gue nggak menyalahkan dokter Indonesia. Mereka kelebihan beban karena sistem underfunded.
 
-Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya lapis-lapis biaya dan hambatan. Medikal tourism adalah lapis paling akhir: kalau semua gagal, kamu keluar.
+Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya lapis-lapis biaya dan hambatan. Medikal tourism adalah lapis paling akhir: kalau semua gagal, kamu keluar. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa yang tidak mampu keluar negeri menunda pengobatan, bukan karena tidak sakit, tapi karena tidak ada uang.
 
 ## Conclusion
 

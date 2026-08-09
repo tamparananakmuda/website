@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-2-akses-kode-pos
 excerpt: >-
   Rasio dokter Jakarta 2,53 per 1.000, Papua Barat 0,02. 2 provinsi tanpa dokter. Mati atau hidup ditentukan kode pos.
 publishedAt: '2027-02-02T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan
@@ -120,7 +120,7 @@ Ketimpangan bukan karena dokter tidak mau ke daerah. Sistem tidak memberi insent
 
 Gue pernah diskusi dengan teman yang lulus kedokteran. Dia ditempatkan di Puskesmas pelosok Kalimantan. Ceritanya: tidak ada obat, tidak ada alat, pasien datang terlalu malam karena jarak jauh. Dia bilang, "Bisa apa? Obat paracetamol aja kadang habis." Dia pindah ke kota setelah kontrak selesai. Bukan karena tidak idealis. Karena sistem tidak memberinya alasan untuk bertahan.
 
-Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia dirancang dengan asumsi kamu bisa akses layanan. Tapi asumsi itu hanya berlaku kalau kamu tinggal di kota besar.
+Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia dirancang dengan asumsi kamu bisa akses layanan. Tapi asumsi itu hanya berlaku kalau kamu tinggal di kota besar. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa BPJS ditunda bukan karena tidak peduli, tapi karena gaji tidak cukup untuk semua.
 
 ## Conclusion
 

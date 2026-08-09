@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-6-ptm-epidemik
 excerpt: >-
   PTM: 85,19% kematian Indonesia 2025. Jantung Rp17,3T, gagal ginjal Rp13,3T, kanker Rp10,3T klaim BPJS. Sistem tidak siap.
 publishedAt: '2027-02-06T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan

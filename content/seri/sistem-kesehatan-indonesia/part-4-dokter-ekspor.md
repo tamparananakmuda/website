@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-4-dokter-ekspor
 excerpt: >-
   Kekurangan 27.000 spesialis, produksi 2.700/tahun vs butuh 15.000. 423 perawat ke Jerman. Puskesmas kosong.
 publishedAt: '2027-02-04T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan
@@ -109,7 +109,7 @@ Dokter keluar bukan karena tidak nasionalis. Sistem tidak memberi insentif: gaji
 
 Gue punya teman dokter yang ikut uji kompetensi di luar negeri. Dia bilang alasannya sederhana: "Di sini, gaji saya tidak cukup bayar cicilan kuliah. Di sana, 3 bulan sudah lunas." Bukan soal nasionalisme. Soal ekonomi. Sistem tidak memberi alasan untuk tinggal.
 
-Seperti yang dibahas di [Pekerja Indonesia Paling Bahagia di Asia, Tapi 43 Persen Burnout](/artikel/pekerja-indonesia-paling-bahagia-di-asia-tapi-43-persen-burnout), tenaga kerja Indonesia dihadapkan pada sistem yang minta dedikasi tapi tidak memberi imbalan yang adil.
+Seperti yang dibahas di [Pekerja Indonesia Paling Bahagia di Asia, Tapi 43 Persen Burnout](/artikel/pekerja-indonesia-paling-bahagia-di-asia-tapi-43-persen-burnout), tenaga kerja Indonesia dihadapkan pada sistem yang minta dedikasi tapi tidak memberi imbalan yang adil. Dan di [Gen Z Tidur 5 Jam, Bukan Produktif, Slow Motion Burnout](/artikel/gen-z-tidur-5-jam-bukan-produktif-slow-motion-burnout), kita lihat bagaimana sistem kerja yang tidak sehat memaksa kamu mengorbankan tubuh.
 
 ## Conclusion
 

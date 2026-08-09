@@ -4,7 +4,7 @@ slug: sistem-kesehatan-indonesia-part-5-rs-bisnis
 excerpt: >-
   Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun. Margin 29,1%. Pasien jadi customer. Sembuh bukan KPI.
 publishedAt: '2027-02-05T01:00:00.000Z'
-status: draft
+status: scheduled
 category: kehidupan
 subcategory: kehidupan-keluarga
 author: yovie-setiawan
@@ -115,7 +115,7 @@ Gue pernah rawat inap di RS swasta. Kamarnya nyaman, AC dingin, TV layar datar, 
 
 RS negeri punya masalahnya sendiri. Anggaran terbatas, fasilitas tua, dokter overworked. Banyak RS negeri bergantung pada BPJS yang tarifnya rendah. Hasilnya, RS negeri sulit bersaing dengan RS swasta dalam hal fasilitas dan pelayanan. Pasien yang mampu pilih RS swasta, pasien BPJS pilih RS negeri. Pembagian ini bukan kebetulan, tapi hasil dari sistem yang membedakan layanan berdasarkan kemampuan bayar.
 
-Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya banyak lapis biaya. RS adalah lapis yang paling visible.
+Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya banyak lapis biaya. RS adalah lapis yang paling visible. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa biaya RS swasta membuat banyak Gen Z menunda pengobatan sampai kondisi memburuk.
 
 ## Conclusion
 

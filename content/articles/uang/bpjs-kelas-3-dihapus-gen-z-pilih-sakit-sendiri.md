@@ -120,7 +120,7 @@ Ini bukan skeptisisme tanpa dasar. Gen Z tumbuh dengan feed media sosial yang pe
 
 Data BPS Susenas Maret 2025 menunjukkan 81,15% pemuda Indonesia punya jaminan kesehatan. Angkanya terdengar bagus. Tapi teliti lagi: 62,77% itu BPJS PBI, alias iuran ditanggung pemerintah. Yang bayar sendiri (BPJS non-PBI) cuma 31,75%. Sisanya, asuransi dari kantor 3,86%, Jamkesda 3,3%, asuransi swasta nyaris tidak ada. Jadi mayoritas "punya jaminan kesehatan" itu karena pemerintah yang bayar, bukan karena mereka aktif bayar sendiri.
 
-Seperti yang kami bahas di [Gen Z Belanja Rp12 Juta, Tapi BPJS Ditunda: Bukan Boros, Krisis Persepsi](/artikel/gen-z-belanja-12-juta-bpjs-ditunda-bukan-boros-krisis-persepsi), Gen Z bisa belanja Rp12 juta per bulan tapi iuran BPJS Rp35.000 dianggap bisa ditunda. Bukan ability to pay yang rusak. Willingness to pay yang rusak. Dan willingness to pay itu rusak karena kepercayaan pada sistem sudah tipis.
+Seperti yang kami bahas di [Gen Z Belanja Rp12 Juta, Tapi BPJS Ditunda: Bukan Boros, Krisis Persepsi](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), Gen Z bisa belanja Rp12 juta per bulan tapi iuran BPJS Rp35.000 dianggap bisa ditunda. Bukan ability to pay yang rusak. Willingness to pay yang rusak. Dan willingness to pay itu rusak karena kepercayaan pada sistem sudah tipis.
 
 ## KRIS Naik Standar, Tapi Siapa yang Bayar?
 
