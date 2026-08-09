@@ -37,7 +37,7 @@ export const IntelligenceChatInterface: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isExternalUpdate = useRef(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
   const chatContainerRef = useRef<HTMLDivElement>(null);
@@ -101,6 +101,13 @@ export const IntelligenceChatInterface: React.FC = () => {
     return () => {
       window.removeEventListener('tami_history_updated', handleHistoryUpdate);
     };
+  }, []);
+
+  // Open sidebar by default on desktop
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+      setIsSidebarOpen(true);
+    }
   }, []);
 
   // Sync current messages to active session and localStorage
