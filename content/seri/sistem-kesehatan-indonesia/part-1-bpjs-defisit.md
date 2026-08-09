@@ -2,7 +2,8 @@
 title: 'BPJS Defisit: Jaring Pengaman yang Robek'
 slug: sistem-kesehatan-indonesia-part-1-bpjs-defisit
 excerpt: >-
-  BPJS defisit Rp17,13 triliun pada 2025. Iuran naik, layanan turun. Jaring pengaman yang dirancang untuk robek.
+  BPJS defisit Rp17,13 triliun pada 2025. Iuran naik, layanan turun. Jaring
+  pengaman yang dirancang untuk robek.
 publishedAt: '2027-02-01T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -21,7 +22,9 @@ tags:
 ogHeadline: 'BPJS kamu bayar, tapi siapa yang untung?'
 seoMetaTitle: 'BPJS Defisit Rp17 Triliun, Sistem yang Dirancang Robek | TAM'
 seoMetaDescription: >-
-  BPJS defisit Rp17,13 triliun pada 2025, rasio klaim 108,27%. Kenapa jaring pengaman kesehatan Indonesia dirancang untuk robek? Data menunjukkan bukan kegagalan.
+  BPJS defisit Rp17,13 triliun pada 2025, rasio klaim 108,27%. Kenapa jaring
+  pengaman kesehatan Indonesia dirancang untuk robek? Data menunjukkan bukan
+  kegagalan.
 seoKeywords:
   - BPJS defisit
   - BPJS kesehatan
@@ -31,17 +34,21 @@ seoKeywords:
   - iuran BPJS
 sourceReferences:
   - type: link
-    url: 'https://finansial.bisnis.com/read/20260702/215/1984924/aset-neto-dana-jkn-bpjs-kesehatan-turun-rp1875-triliun-pada-2025-hasil-investasi-susut-tajam'
-    label: 'Bisnis.com - BPJS Aset Neto 2025'
+    url: >-
+      https://finansial.bisnis.com/read/20260702/215/1984924/aset-neto-dana-jkn-bpjs-kesehatan-turun-rp1875-triliun-pada-2025-hasil-investasi-susut-tajam
+    label: Bisnis.com - BPJS Aset Neto 2025
   - type: link
-    url: 'https://www.kompas.id/artikel/dana-bpjs-kesehatan-terancam-defisit-risiko-gagal-bayar-butuh-intervensi-mendesak'
-    label: 'Kompas.id - BPJS Defisit Gagal Bayar'
+    url: >-
+      https://www.kompas.id/artikel/dana-bpjs-kesehatan-terancam-defisit-risiko-gagal-bayar-butuh-intervensi-mendesak
+    label: Kompas.id - BPJS Defisit Gagal Bayar
   - type: link
-    url: 'https://nasional.kompas.com/read/2026/06/09/18253391/tekor-rp-2-triliun-tiap-bulan-bpjs-kesehatan-terancam-gagal-bayar-tahun'
-    label: 'Kompas.com - BPJS Tekor Rp2T/bulan'
+    url: >-
+      https://nasional.kompas.com/read/2026/06/09/18253391/tekor-rp-2-triliun-tiap-bulan-bpjs-kesehatan-terancam-gagal-bayar-tahun
+    label: Kompas.com - BPJS Tekor Rp2T/bulan
   - type: link
-    url: 'https://www.bloombergtechnoz.com/detail-news/117103/bpjs-kesehatan-54-juta-peserta-tak-aktif-sumbang-defisit-rp-2-t'
-    label: 'Bloomberg Technoz - 54J Peserta Tidak Aktif'
+    url: >-
+      https://www.bloombergtechnoz.com/detail-news/117103/bpjs-kesehatan-54-juta-peserta-tak-aktif-sumbang-defisit-rp-2-t
+    label: Bloomberg Technoz - 54J Peserta Tidak Aktif
 featured: true
 humanSignature: true
 factCheckStatus: verified
@@ -96,7 +103,7 @@ Dilansir Bloomberg Technoz, 54 juta dari 285 juta peserta BPJS tidak aktif. Tida
 
 Iuran terakhir disesuaikan pada 2020. Aturannya, penyesuaian setiap 2 tahun, tapi 6 tahun berlalu tanpa kenaikan. BPJS Watch, dilaporkan Kompas.id Juli 2026, menyebut kenaikan iuran "keniscayaan". Tapi kenaikan iuran berarti beban tambahan untuk kamu yang sudah bayar. Dan 54 juta yang tidak aktif tetap tidak bayar.
 
-## Risiko Gagal Bayar 2027
+## Bahaya Bangkrut 2027
 
 Tanpa intervensi, aset neto BPJS akan negatif akhir 2026, dan gagal bayar terjadi Juli 2027. Suntikan APBN Rp20 triliun dibutuhkan untuk bertahan. Tapi suntikan APBN berarti uang pajak. Kamu bayar dua kali: iuran BPJS dan pajak untuk menambal defisit BPJS.
 

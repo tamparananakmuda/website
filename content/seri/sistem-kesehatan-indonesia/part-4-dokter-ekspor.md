@@ -2,7 +2,8 @@
 title: 'Dokter Indonesia: Ekspor SDM, Impor Kekosongan'
 slug: sistem-kesehatan-indonesia-part-4-dokter-ekspor
 excerpt: >-
-  Kekurangan 27.000 spesialis, produksi 2.700/tahun vs butuh 15.000. 423 perawat ke Jerman. Puskesmas kosong.
+  Kekurangan 27.000 spesialis, produksi 2.700/tahun vs butuh 15.000. 423 perawat
+  ke Jerman. Puskesmas kosong.
 publishedAt: '2027-02-04T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -21,7 +22,8 @@ tags:
 ogHeadline: 'Dokter Indonesia pergi, siapa yang sisa?'
 seoMetaTitle: 'Dokter Indonesia Keluar Negeri, Kekurangan 27.000 Spesialis | TAM'
 seoMetaDescription: >-
-  Indonesia kekurangan 27.000 dokter spesialis, produksi 2.700/tahun. 423 perawat dikirim ke Jerman. Kenapa dokter ekspor SDM dan impor kekosongan?
+  Indonesia kekurangan 27.000 dokter spesialis, produksi 2.700/tahun. 423
+  perawat dikirim ke Jerman. Kenapa dokter ekspor SDM dan impor kekosongan?
 seoKeywords:
   - dokter Indonesia keluar negeri
   - kekurangan dokter spesialis
@@ -31,20 +33,25 @@ seoKeywords:
   - produksi dokter spesialis
 sourceReferences:
   - type: link
-    url: 'https://www.kompas.id/artikel/indonesia-kekurangan-lebih-dari-70000-dokter-spesialis-dalam-10-tahun-mendatang'
-    label: 'Kompas.id - Kekurangan 70K Dokter Spesialis'
+    url: >-
+      https://www.kompas.id/artikel/indonesia-kekurangan-lebih-dari-70000-dokter-spesialis-dalam-10-tahun-mendatang
+    label: Kompas.id - Kekurangan 70K Dokter Spesialis
   - type: link
-    url: 'https://www.who.int/indonesia/news-room/item/03-03-2026-indonesia-strengthens-health-workforce-planning-through-labour-market-analysis'
-    label: 'WHO - Indonesia HLMA 2026'
+    url: >-
+      https://www.who.int/indonesia/news-room/item/03-03-2026-indonesia-strengthens-health-workforce-planning-through-labour-market-analysis
+    label: WHO - Indonesia HLMA 2026
   - type: link
-    url: 'https://www.kp2mi.go.id/berita-detail/wamen-christina-lepas-29-perawat-pekerja-migran-indonesia-ke-jerman-targetkan-lebih-banyak-penempatan-sektor-kesehatan'
-    label: 'KP2MI - Perawat ke Jerman'
+    url: >-
+      https://www.kp2mi.go.id/berita-detail/wamen-christina-lepas-29-perawat-pekerja-migran-indonesia-ke-jerman-targetkan-lebih-banyak-penempatan-sektor-kesehatan
+    label: KP2MI - Perawat ke Jerman
   - type: link
-    url: 'https://www.kompas.com/edu/read/2026/06/25/165845671/bukan-lagi-sektor-informal-perawat-lulusan-kampus-ri-tembus-rumah-sakit'
-    label: 'Kompas.com - Perawat ke Eropa'
+    url: >-
+      https://www.kompas.com/edu/read/2026/06/25/165845671/bukan-lagi-sektor-informal-perawat-lulusan-kampus-ri-tembus-rumah-sakit
+    label: Kompas.com - Perawat ke Eropa
   - type: link
-    url: 'https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs'
-    label: 'Kompas.id - Diaspora Kesehatan'
+    url: >-
+      https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs
+    label: Kompas.id - Diaspora Kesehatan
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -93,7 +100,7 @@ Kompas.id Agustus 2025 melaporkan sistem matrikulasi diaspora: waktu adaptasi un
 
 ## Mengapa Sistem Gagal Menahan
 
-Indonesia tidak hanya kekurangan dokter, tapi juga kehilangan yang sudah ada. Sistem tidak memberi insentif yang cukup: gaji rendah, karier tidak jelas, beban kerja tinggi, fasilitas tidak memadai. Sementara negara lain menawarkan paket lengkap: gaji tinggi, karier jelas, profesi dihargai.
+Indonesia kekurangan dokter dan kehilangan yang sudah ada. Sistem tidak memberi insentif yang cukup: gaji rendah, karier tidak jelas, beban kerja tinggi, fasilitas tidak memadai. Sementara negara lain menawarkan paket lengkap: gaji tinggi, karier jelas, profesi dihargai.
 
 WHO, dalam laporan Maret 2026, menyebut Indonesia perlu memperkuat perencanaan tenaga kesehatan melalui analisis pasar kerja. Data ada, rencana ada. Tapi implementasi tertinggal. Produksi 2.700/tahun vs kebutuhan 15.000/tahun bukan masalah perencanaan. Itu masalah kapasitas produksi yang tidak diperbesar. Dan sementara kapasitas tidak diperbesar, yang ada dikirim ke luar negeri.
 

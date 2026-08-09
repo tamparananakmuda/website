@@ -62,6 +62,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+updatedAt: '2026-08-09T10:00:02.098Z'
 ---
 
 ## Malam Minggu, Layar Menyala

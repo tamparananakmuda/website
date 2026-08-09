@@ -2,7 +2,8 @@
 title: 'Rumah Sakit: Bisnis Bukan Layanan'
 slug: sistem-kesehatan-indonesia-part-5-rs-bisnis
 excerpt: >-
-  Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun. Margin 29,1%. Pasien jadi customer. Sembuh bukan KPI.
+  Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun. Margin 29,1%. Pasien
+  jadi customer. Sembuh bukan KPI.
 publishedAt: '2027-02-05T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -21,7 +22,9 @@ tags:
 ogHeadline: 'Rumah sakit bukan tempat sembuh, tempat bisnis'
 seoMetaTitle: 'Rumah Sakit Bisnis Bukan Layanan, Siloam Laba Rp1,1 Triliun | TAM'
 seoMetaDescription: >-
-  Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun, margin 29,1%. Rumah sakit Indonesia bisnis bukan layanan. Data menunjukkan desain, bukan kegagalan.
+  Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun, margin 29,1%. Rumah
+  sakit Indonesia bisnis bukan layanan. Data menunjukkan desain, bukan
+  kegagalan.
 seoKeywords:
   - rumah sakit swasta Indonesia
   - bisnis rumah sakit
@@ -31,20 +34,25 @@ seoKeywords:
   - margin rumah sakit
 sourceReferences:
   - type: link
-    url: 'https://money.kompas.com/read/2026/05/12/194959726/siloam-silo-catat-laba-rp-11-triliun-fokus-perkuat-layanan-premium'
-    label: 'Kompas.com - Siloam Laba 2025'
+    url: >-
+      https://money.kompas.com/read/2026/05/12/194959726/siloam-silo-catat-laba-rp-11-triliun-fokus-perkuat-layanan-premium
+    label: Kompas.com - Siloam Laba 2025
   - type: link
-    url: 'https://www.idnfinancials.com/news/67049/silo-profit-jumps-27-1-as-outpatient-business-continues-to-grow'
-    label: 'IDNFinancials - Siloam 1H 2026'
+    url: >-
+      https://www.idnfinancials.com/news/67049/silo-profit-jumps-27-1-as-outpatient-business-continues-to-grow
+    label: IDNFinancials - Siloam 1H 2026
   - type: link
-    url: 'https://www.kabarbursa.com/syariah/silo-mulai-kehilangan-ritme-cetak-laba-1q26-tapi-tak-lagi-agresif'
-    label: 'KabarBursa - Siloam 1Q26'
+    url: >-
+      https://www.kabarbursa.com/syariah/silo-mulai-kehilangan-ritme-cetak-laba-1q26-tapi-tak-lagi-agresif
+    label: KabarBursa - Siloam 1Q26
   - type: link
-    url: 'https://nasional.kompas.com/read/2025/06/12/19105861/masyarakat-indonesia-diperkirakan-habiskan-10-miliar-dollar-as-berobat-ke'
-    label: 'Kompas.com - $10M Berobat ke LN'
+    url: >-
+      https://nasional.kompas.com/read/2025/06/12/19105861/masyarakat-indonesia-diperkirakan-habiskan-10-miliar-dollar-as-berobat-ke
+    label: Kompas.com - $10M Berobat ke LN
   - type: link
-    url: 'https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs'
-    label: 'Kompas.id - Diaspora Kesehatan'
+    url: >-
+      https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs
+    label: Kompas.id - Diaspora Kesehatan
 featured: false
 humanSignature: true
 factCheckStatus: verified

@@ -2,7 +2,8 @@
 title: 'Sintesis: Sistem yang Tidak Dirancang untuk Sehat'
 slug: sistem-kesehatan-indonesia-part-8-sintesis
 excerpt: >-
-  8 part, 1 kesimpulan. BPJS defisit, farmasi impor, dokter keluar, RS bisnis, PTM 85%. Sistem tidak gagal, itu desain.
+  8 part, 1 kesimpulan. BPJS defisit, farmasi impor, dokter keluar, RS bisnis,
+  PTM 85%. Sistem tidak gagal, itu desain.
 publishedAt: '2027-02-08T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -22,7 +23,9 @@ tags:
 ogHeadline: 'Sistem kesehatan tidak gagal, itu desain'
 seoMetaTitle: 'Sistem Kesehatan Indonesia Tidak Gagal, Itu Desain | TAM'
 seoMetaDescription: >-
-  8 part membongkar sistem kesehatan Indonesia. BPJS, farmasi, dokter, RS, PTM, medikal tourism. Sistem tidak gagal, itu desain. Sakit mahal bukan karena alam.
+  8 part membongkar sistem kesehatan Indonesia. BPJS, farmasi, dokter, RS, PTM,
+  medikal tourism. Sistem tidak gagal, itu desain. Sakit mahal bukan karena
+  alam.
 seoKeywords:
   - sistem kesehatan Indonesia
   - krisis kesehatan Indonesia
@@ -32,23 +35,29 @@ seoKeywords:
   - desain sistem kesehatan
 sourceReferences:
   - type: link
-    url: 'https://finansial.bisnis.com/read/20260702/215/1984924/aset-neto-dana-jkn-bpjs-kesehatan-turun-rp1875-triliun-pada-2025-hasil-investasi-susut-tajam'
-    label: 'Bisnis.com - BPJS Aset Neto 2025'
+    url: >-
+      https://finansial.bisnis.com/read/20260702/215/1984924/aset-neto-dana-jkn-bpjs-kesehatan-turun-rp1875-triliun-pada-2025-hasil-investasi-susut-tajam
+    label: Bisnis.com - BPJS Aset Neto 2025
   - type: link
-    url: 'https://www.kompas.id/artikel/85-persen-kematian-di-indonesia-akibat-penyakit-tidak-menular'
-    label: 'Kompas.id - 85% Kematian PTM'
+    url: >-
+      https://www.kompas.id/artikel/85-persen-kematian-di-indonesia-akibat-penyakit-tidak-menular
+    label: Kompas.id - 85% Kematian PTM
   - type: link
-    url: 'https://www.cnbcindonesia.com/lifestyle/20260624170457-33-745443/menkes-ungkap-80-bahan-baku-obat-ri-masih-impor-ini-solusinya'
-    label: 'CNBC Indonesia - Menkes 80% BBO Impor'
+    url: >-
+      https://www.cnbcindonesia.com/lifestyle/20260624170457-33-745443/menkes-ungkap-80-bahan-baku-obat-ri-masih-impor-ini-solusinya
+    label: CNBC Indonesia - Menkes 80% BBO Impor
   - type: link
-    url: 'https://www.jawapos.com/bisnis/2606050289/960-ribu-warga-indonesia-berobat-ke-malaysia-sumbang-rm-22-miliar-ke-negeri-jiran-2025'
-    label: 'JawaPos - 970K ke Malaysia'
+    url: >-
+      https://www.jawapos.com/bisnis/2606050289/960-ribu-warga-indonesia-berobat-ke-malaysia-sumbang-rm-22-miliar-ke-negeri-jiran-2025
+    label: JawaPos - 970K ke Malaysia
   - type: link
-    url: 'https://money.kompas.com/read/2026/05/12/194959726/siloam-silo-catat-laba-rp-11-triliun-fokus-perkuat-layanan-premium'
-    label: 'Kompas.com - Siloam Laba 2025'
+    url: >-
+      https://money.kompas.com/read/2026/05/12/194959726/siloam-silo-catat-laba-rp-11-triliun-fokus-perkuat-layanan-premium
+    label: Kompas.com - Siloam Laba 2025
   - type: link
-    url: 'https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring'
-    label: 'WHO - Indonesia Health 2025'
+    url: >-
+      https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring
+    label: WHO - Indonesia Health 2025
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -123,7 +132,7 @@ Sistem dirancang underfunded. Iuran flat, klaim naik, kapasitas produksi dokter 
 
 Sistem kesehatan Indonesia tidak dirancang untuk membuatmu sehat, melainkan untuk mengubah tubuhmu menjadi bisnis. BPJS adalah pool dana yang defisit, farmasi adalah impor yang mahal, RS adalah bisnis yang profitable, dokter adalah SDM yang diekspor. PTM adalah engine yang menghubungkan semuanya: penyakit yang tidak bisa sembuh, butuh obat terus, butuh rawat inap berulang, dan biayanya dibayar dari pool dana yang terus menyusut.
 
-Gue nulis seri ini bukan karena gue benci sistem kesehatan. Gue nulis karena gue lihat pola. Setiap kali ada berita BPJS defisit, solusinya: naikkan iuran. Setiap kali ada berita dokter kurang, solusinya: impor dokter atau ekspor perawat. Setiap kali ada berita obat mahal, solusinya: subsidi. Tidak pernah yang bertanya: kenapa sistemnya begini, kenapa iuran flat 6 tahun, kenapa produksi dokter 2.700, kenapa 90% bahan baku impor? Pertanyaan ini tidak ditanyakan karena jawabannya menunjuk ke desain, bukan kegagalan. Dan desain punya pihak yang untung. Dan pihak yang untung tidak mau desainnya diubah.
+Gue nulis seri ini bukan karena gue benci sistem kesehatan. Gue nulis karena gue lihat pola. Setiap kali ada berita BPJS defisit, solusinya: naikkan iuran. Setiap kali ada berita dokter kurang, solusinya: impor dokter atau ekspor perawat. Setiap kali ada berita obat mahal, solusinya: subsidi. Tidak pernah yang bertanya: kenapa sistemnya seperti ini, kenapa iuran flat 6 tahun, kenapa produksi dokter 2.700, kenapa 90% bahan baku impor? Pertanyaan ini tidak ditanyakan karena jawabannya menunjuk ke desain, bukan kegagalan. Dan desain punya pihak yang untung. Dan pihak yang untung tidak mau desainnya diubah.
 
 Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), Gen Z sudah mulai mempertanyakan sistem. Dan di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), kita lihat bahwa sistem asuransi swasta juga dirancang untuk menang dari kamu.
 

@@ -2,7 +2,8 @@
 title: 'Akses Layanan: Mati atau Hidup Ditentukan Kode Pos'
 slug: sistem-kesehatan-indonesia-part-2-akses-kode-pos
 excerpt: >-
-  Rasio dokter Jakarta 2,53 per 1.000, Papua Barat 0,02. 2 provinsi tanpa dokter. Mati atau hidup ditentukan kode pos.
+  Rasio dokter Jakarta 2,53 per 1.000, Papua Barat 0,02. 2 provinsi tanpa
+  dokter. Mati atau hidup ditentukan kode pos.
 publishedAt: '2027-02-02T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -18,10 +19,11 @@ tags:
   - papua
   - sistem-kesehatan
   - indonesia
-ogHeadline: 'Tempat tinggalmu tentukan kamu sakit atau mati'
+ogHeadline: Tempat tinggalmu tentukan kamu sakit atau mati
 seoMetaTitle: 'Rasio Dokter Indonesia 0,76 per 1000, Akses Ditetapkan Kode Pos | TAM'
 seoMetaDescription: >-
-  Rasio dokter Indonesia 0,76 per 1.000 penduduk, di bawah target 0,8. Jakarta 2,53, Papua Barat 0,02. Akses kesehatan ditentukan kode pos, bukan kebutuhan.
+  Rasio dokter Indonesia 0,76 per 1.000 penduduk, di bawah target 0,8. Jakarta
+  2,53, Papua Barat 0,02. Akses kesehatan ditentukan kode pos, bukan kebutuhan.
 seoKeywords:
   - rasio dokter Indonesia
   - akses kesehatan
@@ -31,17 +33,21 @@ seoKeywords:
   - puskesmas
 sourceReferences:
   - type: link
-    url: 'https://goodstats.id/article/10-provinsi-dengan-rasio-dokter-tertinggi-2025-LBIsz'
-    label: 'GoodStats - Rasio Dokter per Provinsi 2025'
+    url: >-
+      https://goodstats.id/article/10-provinsi-dengan-rasio-dokter-tertinggi-2025-LBIsz
+    label: GoodStats - Rasio Dokter per Provinsi 2025
   - type: link
-    url: 'https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring'
-    label: 'WHO - Indonesia Health Workforce 2025'
+    url: >-
+      https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring
+    label: WHO - Indonesia Health Workforce 2025
   - type: link
-    url: 'https://www.who.int/indonesia/news-room/item/03-03-2026-indonesia-strengthens-health-workforce-planning-through-labour-market-analysis'
-    label: 'WHO - Indonesia HLMA 2026'
+    url: >-
+      https://www.who.int/indonesia/news-room/item/03-03-2026-indonesia-strengthens-health-workforce-planning-through-labour-market-analysis
+    label: WHO - Indonesia HLMA 2026
   - type: link
-    url: 'https://www.kompas.id/artikel/indonesia-kekurangan-lebih-dari-70000-dokter-spesialis-dalam-10-tahun-mendatang'
-    label: 'Kompas.id - Kekurangan 70K Dokter Spesialis'
+    url: >-
+      https://www.kompas.id/artikel/indonesia-kekurangan-lebih-dari-70000-dokter-spesialis-dalam-10-tahun-mendatang
+    label: Kompas.id - Kekurangan 70K Dokter Spesialis
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -104,7 +110,7 @@ Produksi dokter spesialis hanya 2.700 per tahun. Kebutuhan, menurut Menkes Budi 
 
 Lebih spesifik: 375 kab/kota kekurangan spesialis jantung. 383 kab/kota kekurangan spesialis stroke. 407 kab/kota kekurangan spesialis kanker. Artinya, mayoritas kabupaten dan kota di Indonesia tidak punya dokter spesialis untuk tiga penyakit pembunuh terbesar.
 
-## Rasio Indonesia vs Negara Lain
+## Bandingkan dengan Negara Lain
 
 Rasio spesialis target Indonesia 2032 adalah 0,46 per 1.000 penduduk. Bandingkan: AS 3,30, UK 2,53, Australia 1,47, Singapura 1,12, Malaysia 0,42. Indonesia akan mencapai 0,46 pada 2032, sementara AS sudah di 3,30 sekarang. Selisih 7 kali.
 

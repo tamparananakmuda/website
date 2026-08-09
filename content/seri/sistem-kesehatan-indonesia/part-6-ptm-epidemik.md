@@ -2,7 +2,8 @@
 title: 'Penyakit Tidak Menular: Epidemik yang Tidak Dibiayai'
 slug: sistem-kesehatan-indonesia-part-6-ptm-epidemik
 excerpt: >-
-  PTM: 85,19% kematian Indonesia 2025. Jantung Rp17,3T, gagal ginjal Rp13,3T, kanker Rp10,3T klaim BPJS. Sistem tidak siap.
+  PTM: 85,19% kematian Indonesia 2025. Jantung Rp17,3T, gagal ginjal Rp13,3T,
+  kanker Rp10,3T klaim BPJS. Sistem tidak siap.
 publishedAt: '2027-02-06T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -22,7 +23,8 @@ tags:
 ogHeadline: 'Diabetes dan jantung: epidemik yang diabaikan'
 seoMetaTitle: 'PTM 85% Kematian Indonesia, Epidemik yang Tidak Dibiayai Sistem | TAM'
 seoMetaDescription: >-
-  PTM: 85,19% kematian Indonesia 2025. Jantung, gagal ginjal, kanker makan 26,28% klaim BPJS. Epidemik yang tidak dibiayai sistem kesehatan Indonesia.
+  PTM: 85,19% kematian Indonesia 2025. Jantung, gagal ginjal, kanker makan
+  26,28% klaim BPJS. Epidemik yang tidak dibiayai sistem kesehatan Indonesia.
 seoKeywords:
   - penyakit tidak menular Indonesia
   - PTM kematian
@@ -32,17 +34,21 @@ seoKeywords:
   - epidemik PTM
 sourceReferences:
   - type: link
-    url: 'https://www.kompas.id/artikel/85-persen-kematian-di-indonesia-akibat-penyakit-tidak-menular'
-    label: 'Kompas.id - 85% Kematian PTM'
+    url: >-
+      https://www.kompas.id/artikel/85-persen-kematian-di-indonesia-akibat-penyakit-tidak-menular
+    label: Kompas.id - 85% Kematian PTM
   - type: link
-    url: 'https://www.badankebijakan.kemkes.go.id/potret-sehat-indonesia-dari-kacamata-ski-2023/'
-    label: 'BKPK Kemenkes - SKI 2023'
+    url: >-
+      https://www.badankebijakan.kemkes.go.id/potret-sehat-indonesia-dari-kacamata-ski-2023/
+    label: BKPK Kemenkes - SKI 2023
   - type: link
-    url: 'https://www.kompas.id/artikel/dana-bpjs-kesehatan-terancam-defisit-risiko-gagal-bayar-butuh-intervensi-mendesak'
-    label: 'Kompas.id - BPJS Defisit Gagal Bayar'
+    url: >-
+      https://www.kompas.id/artikel/dana-bpjs-kesehatan-terancam-defisit-risiko-gagal-bayar-butuh-intervensi-mendesak
+    label: Kompas.id - BPJS Defisit Gagal Bayar
   - type: link
-    url: 'https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring'
-    label: 'WHO - Indonesia Health 2025'
+    url: >-
+      https://www.who.int/indonesia/news/detail/18-03-2025-from-data-to-delivery--indonesia-strengthens-health-workforce-governance--global-uhc-and-sdg-monitoring
+    label: WHO - Indonesia Health 2025
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -89,17 +95,17 @@ Penyakit katastropik menyerap 26,28% total pembiayaan BPJS, menurut BPJS Public 
 
 Setiap hari, hampir 2 juta orang menggunakan layanan BPJS. Tapi yang beda: pasien PTM datang berulang, bukan sekali. Cuci darah tiap minggu, kontrol diabetes tiap bulan, kemoterapi tiap siklus. Mereka tidak sembuh, mereka kembali. Dan setiap kali kembali, BPJS bayar lagi. Inilah kenapa PTM adalah beban klaim yang tumbuh eksponensial, bukan linear.
 
-## Usia Harapan Hidup yang Pendek
+## Usia Hidup yang Lebih Singkat
 
-WHO, dilansir Kompas.id Agustus 2026, menyebut usia harapan hidup Indonesia 68,3 tahun. Rata-rata global 71,3 tahun. Selisih 3 tahun. Usia harapan hidup sehat Indonesia: 60,7 tahun. Global 63,5 tahun. Artinya, rata-rata orang Indonesia menghabiskan 7,6 tahun terakhir hidupnya dengan penyakit atau disabilitas.
+Data WHO 2026, dilansir Kompas.id, menunjukkan rata-rata orang Indonesia meninggal di usia 68,3 tahun, sementara rata-rata global 71,3 tahun. Selisih 3 tahun. Usia sehat hanya 60,7 tahun vs global 63,5 tahun. Artinya, rata-rata orang Indonesia menghabiskan 7,6 tahun terakhir hidupnya dengan penyakit atau disabilitas.
 
 Bandingkan dengan global: 7,8 tahun. Hampir sama. Tapi karena usia hidup Indonesia lebih pendek, porsi hidup dengan sakit proporsional lebih besar. Kamu hidup lebih singkat, dan porsi hidup yang sakit lebih panjang.
 
 Provinsi dengan angka kematian tertinggi: DIY 9,22 per 1.000, Jatim 7,88, Bali 7,87. Ketiganya juga provinsi dengan persentase lansia tertinggi. Kematian terkait usia, dan PTM adalah penyakit usia. Tapi sekarang, PTM datang lebih muda.
 
-## Diabetes dan Hipertensi: Faktor Risiko Utama
+## Faktor Risiko: Hipertensi dan Gula
 
-SKI 2023, dilansir BKPK Kemenkes, menunjukkan diabetes diagnosis dokter naik dari 2,0% ke 2,2% pada penduduk berusia 15 tahun ke atas. Diabetes semua umur naik dari 1,5% ke 1,7%. Hipertensi masih tinggi sebagai faktor risiko utama penyakit jantung dan pembuluh darah.
+Survei Kesehatan Indonesia 2023, dilansir BKPK Kemenkes, mencatat kenaikan kasus: diagnosis dokter naik dari 2,0% ke 2,2% pada penduduk berusia 15 tahun ke atas. Kasus semua umur naik dari 1,5% ke 1,7%. Tekanan darah tinggi masih menjadi ancaman utama untuk penyakit jantung dan pembuluh darah.
 
 Yang lebih mengkhawatirkan: jumlah penyandang hipertensi dan diabetes yang menjalani pengobatan rutin masih rendah. Banyak yang tidak tahu mereka punya diabetes atau hipertensi. Dan yang tahu, banyak yang tidak kontrol rutin. Hasilnya: komplikasi. Jantung, stroke, gagal ginjal. Penyakit yang biayanya jauh lebih besar dari pencegahan.
 

@@ -2,7 +2,8 @@
 title: 'Industri Farmasi: Obat Mahal Bukan Karena Riset'
 slug: sistem-kesehatan-indonesia-part-3-farmasi-obat-mahal
 excerpt: >-
-  Indonesia impor 90% bahan baku obat dari China dan India. Hanya 35 API lokal. Obat yang sama 10x lebih murah di India.
+  Indonesia impor 90% bahan baku obat dari China dan India. Hanya 35 API lokal.
+  Obat yang sama 10x lebih murah di India.
 publishedAt: '2027-02-03T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -21,7 +22,9 @@ tags:
 ogHeadline: 'Obat mahal bukan karena riset, tapi monopoli'
 seoMetaTitle: 'Obat Mahal Indonesia: 90% Bahan Baku Impor, Bukan Riset | TAM'
 seoMetaDescription: >-
-  Indonesia impor 80-90% bahan baku obat dari China dan India. Hanya 35 API diproduksi lokal. Kenapa obat mahal bukan karena riset, tapi ketergantungan impor.
+  Indonesia impor 80-90% bahan baku obat dari China dan India. Hanya 35 API
+  diproduksi lokal. Kenapa obat mahal bukan karena riset, tapi ketergantungan
+  impor.
 seoKeywords:
   - industri farmasi Indonesia
   - obat mahal
@@ -31,20 +34,25 @@ seoKeywords:
   - kemandirian farmasi
 sourceReferences:
   - type: link
-    url: 'https://www.cnbcindonesia.com/lifestyle/20260624170457-33-745443/menkes-ungkap-80-bahan-baku-obat-ri-masih-impor-ini-solusinya'
-    label: 'CNBC Indonesia - Menkes 80% BBO Impor'
+    url: >-
+      https://www.cnbcindonesia.com/lifestyle/20260624170457-33-745443/menkes-ungkap-80-bahan-baku-obat-ri-masih-impor-ini-solusinya
+    label: CNBC Indonesia - Menkes 80% BBO Impor
   - type: link
-    url: 'https://ekonomi.bisnis.com/read/20260515/12/1973935/sektor-hulu-belum-siap-industri-farmasi-masih-bergantung-impor-cina'
-    label: 'Bisnis.com - Farmasi Impor Cina'
+    url: >-
+      https://ekonomi.bisnis.com/read/20260515/12/1973935/sektor-hulu-belum-siap-industri-farmasi-masih-bergantung-impor-cina
+    label: Bisnis.com - Farmasi Impor Cina
   - type: link
-    url: 'https://www.kompas.id/artikel/industri-biofarmasi-nasional-terjepit-impor-dan-pelemahan-rupiah'
-    label: 'Kompas.id - Biofarmasi Terjepit'
+    url: >-
+      https://www.kompas.id/artikel/industri-biofarmasi-nasional-terjepit-impor-dan-pelemahan-rupiah
+    label: Kompas.id - Biofarmasi Terjepit
   - type: link
-    url: 'https://www.antaranews.com/berita/5647797/bpom-antisipasi-dampak-penutupan-selat-hormuz-terhadap-industri-obat'
-    label: 'Antara - BPOM Selat Hormuz'
+    url: >-
+      https://www.antaranews.com/berita/5647797/bpom-antisipasi-dampak-penutupan-selat-hormuz-terhadap-industri-obat
+    label: Antara - BPOM Selat Hormuz
   - type: link
-    url: 'https://ekonomi.bisnis.com/read/20260716/257/1988463/mayoritas-impor-wajib-halal-perkuat-urgensi-investasi-industri-bahan-baku-obat'
-    label: 'Bisnis.com - Wajib Halal BBO'
+    url: >-
+      https://ekonomi.bisnis.com/read/20260716/257/1988463/mayoritas-impor-wajib-halal-perkuat-urgensi-investasi-industri-bahan-baku-obat
+    label: Bisnis.com - Wajib Halal BBO
 featured: false
 humanSignature: true
 factCheckStatus: verified

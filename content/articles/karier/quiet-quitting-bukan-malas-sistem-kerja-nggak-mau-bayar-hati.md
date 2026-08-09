@@ -44,6 +44,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+updatedAt: '2026-08-09T10:00:02.098Z'
 ---
 
 Kamu mungkin pernah dengar istilah quiet quitting. Kerja sesuai jam, sesuai job desc, tidak lebih. Tidak lembur tanpa dibayar, tidak nanggung pekerjaan orang lain, tidak pura-pura sibuk demi terlihat dedicated.

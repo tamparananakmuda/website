@@ -40,6 +40,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+updatedAt: '2026-08-09T10:00:02.098Z'
 ---
 
 Kamu sedang scroll TikTok. Tiba-tiba muncul video temanmu di acara yang kamu tidak diundang. Perutmu melilit, kamu merasa ketinggalan dan tidak diinginkan. Kamu terus scroll, mencari konten lain yang mungkin membuatmu merasa lebih baik, tapi justru semakin cemas.

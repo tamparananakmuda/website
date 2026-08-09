@@ -2,7 +2,8 @@
 title: 'Medikal Tourism: Keluar Saat Sakit'
 slug: sistem-kesehatan-indonesia-part-7-medikal-tourism
 excerpt: >-
-  970 ribu warga Indonesia berobat ke Malaysia 2025, menyumbang Rp9 triliun. 750 ribu ke Singapura. Total $11,5 miliar hilang.
+  970 ribu warga Indonesia berobat ke Malaysia 2025, menyumbang Rp9 triliun. 750
+  ribu ke Singapura. Total $11,5 miliar hilang.
 publishedAt: '2027-02-07T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -21,7 +22,8 @@ tags:
 ogHeadline: 'Warga Indonesia keluar saat sakit, kenapa?'
 seoMetaTitle: '970 Ribu Warga Indonesia Berobat ke Malaysia, $11,5 Miliar Hilang'
 seoMetaDescription: >-
-  970 ribu warga Indonesia berobat ke Malaysia 2025, 750 ribu ke Singapura. Total $11,5 miliar hilang. Yang mampu keluar, yang tidak menetap dan bayar.
+  970 ribu warga Indonesia berobat ke Malaysia 2025, 750 ribu ke Singapura.
+  Total $11,5 miliar hilang. Yang mampu keluar, yang tidak menetap dan bayar.
 seoKeywords:
   - medikal tourism Indonesia
   - warga Indonesia berobat ke luar negeri
@@ -31,20 +33,25 @@ seoKeywords:
   - wisata medis
 sourceReferences:
   - type: link
-    url: 'https://nasional.kompas.com/read/2025/06/12/19105861/masyarakat-indonesia-diperkirakan-habiskan-10-miliar-dollar-as-berobat-ke'
-    label: 'Kompas.com - $10M Berobat ke LN'
+    url: >-
+      https://nasional.kompas.com/read/2025/06/12/19105861/masyarakat-indonesia-diperkirakan-habiskan-10-miliar-dollar-as-berobat-ke
+    label: Kompas.com - $10M Berobat ke LN
   - type: link
-    url: 'https://ekonomi.bisnis.com/read/20251227/12/1939780/warga-pilih-berobat-ke-luar-negeri-ri-dorong-potensi-health-tourism'
-    label: 'Bisnis.com - Health Tourism'
+    url: >-
+      https://ekonomi.bisnis.com/read/20251227/12/1939780/warga-pilih-berobat-ke-luar-negeri-ri-dorong-potensi-health-tourism
+    label: Bisnis.com - Health Tourism
   - type: link
-    url: 'https://www.jawapos.com/bisnis/2606050289/960-ribu-warga-indonesia-berobat-ke-malaysia-sumbang-rm-22-miliar-ke-negeri-jiran-2025'
-    label: 'JawaPos - 970K ke Malaysia'
+    url: >-
+      https://www.jawapos.com/bisnis/2606050289/960-ribu-warga-indonesia-berobat-ke-malaysia-sumbang-rm-22-miliar-ke-negeri-jiran-2025
+    label: JawaPos - 970K ke Malaysia
   - type: link
-    url: 'https://health.kompas.com/read/26G18143500468/tiap-tahun-jutaan-warga-ri-berobat-ke-luar-negeri-apa-alasannya'
-    label: 'Kompas.com - Alasan Berobat ke LN'
+    url: >-
+      https://health.kompas.com/read/26G18143500468/tiap-tahun-jutaan-warga-ri-berobat-ke-luar-negeri-apa-alasannya
+    label: Kompas.com - Alasan Berobat ke LN
   - type: link
-    url: 'https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs'
-    label: 'Kompas.id - Diaspora Kesehatan'
+    url: >-
+      https://www.kompas.id/artikel/sektor-kesehatan-penarik-kepulangan-diaspora-ke-tanah-airs
+    label: Kompas.id - Diaspora Kesehatan
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -101,9 +108,9 @@ Malaysia menawarkan paket terintegrasi: penerbangan, akomodasi, layanan cashless
 
 Kompas.com Juni 2025 melaporkan 70% pasien yang berobat ke luar negeri bukan karena teknologi medis. Alasannya: trust. Kepercayaan pada sistem. Kepercayaan bahwa dokter kompeten, diagnosis akurat, tidak ada malapraktik, transparansi biaya. Trust bukan sesuatu yang bisa dibeli dengan gedung mewah atau alat canggih. Trust dibangun dari pengalaman. Dan pengalaman mayoritas warga Indonesia dengan sistem kesehatan adalah: antri lama, diagnosis cepat, resep banyak, biaya tidak transparan. Setiap kali ada kasus malapraktik yang tidak ditindaklanjuti, setiap kali ada tagihan RS yang melonjak tanpa penjelasan, trust turun. Dan trust yang turun tidak bisa dipulihkan dengan iklan.
 
-Masalahnya bukan dokter atau fasilitas. Ada yang tidak kamu sadari.
+Masalahnya bukan dokter atau fasilitas, ada yang tidak kamu sadari.
 
-## Upaya Indonesia: KEK Sanur dan KEK Batam
+## RS Internasional: Solusi atau Ilusi?
 
 Pemerintah membangun RS internasional. BIH (Bali International Hospital) di KEK Sanur Bali dibuka April 2025, dengan dokter diaspora. Kompas.id Agustus 2025 melaporkan sistem matrikulasi diaspora: waktu adaptasi diturunkan dari bertahun-tahun menjadi 1 tahun. Visa Emas untuk dokter diaspora dan asing.
 

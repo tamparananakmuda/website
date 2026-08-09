@@ -69,6 +69,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+updatedAt: '2026-08-09T10:00:02.098Z'
 ---
 
 ## Alarm 4 Pagi, Side Hustle, Terus Kapok
