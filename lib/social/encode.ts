@@ -1,32 +1,39 @@
 /**
  * Obfuscate social content IDs in URLs.
  * Converts predictable IDs like "konten-tam-001" or DB numeric IDs
- * into short random-looking strings like "WdM1" or "3Gi2".
+ * into 12-character random-looking strings like "WdM1kP2xQ8nT".
  *
  * Uses a multiplicative cipher (modular multiplication with a prime)
- * instead of simple addition. This maps sequential inputs (1, 2, 3...)
- * to seemingly unrelated outputs, so consecutive IDs produce
- * completely different-looking URLs.
+ * over 62^12 space. BigInt is used to handle the large numbers.
  */
 
 const BASE62_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const BASE = BigInt(62);
 
-// 62^4 = 14,776,336 — gives 3-4 char base62 strings, handles IDs up to ~14.7M
-// Must stay below 2^26 so multiply doesn't exceed JS safe integer (2^53)
-const MODULUS = 14776336;
+// 62^12 ≈ 3.23 × 10^21 — gives 12-char base62 strings
+// Manual power (BigInt ** needs ES2016 target which we don't have)
+function bigIntPow(base: bigint, exp: number): bigint {
+  let result = BigInt(1);
+  for (let i = 0; i < exp; i++) {
+    result = result * base;
+  }
+  return result;
+}
+const MODULUS = bigIntPow(BASE, 12);
 
-// Prime multiplier coprime to MODULUS (not divisible by 2 or 31, the factors of 62)
-const MULTIPLIER = 999983;
+// Large prime coprime to 62 (odd, not divisible by 31)
+// Close to modulus to ensure output fills all 12 chars (no leading zeros)
+const MULTIPLIER = BigInt('3141592653589793238467');
 
 /**
- * Compute modular inverse via extended Euclidean algorithm.
+ * Compute modular inverse via extended Euclidean algorithm (BigInt).
  * inverse * multiplier ≡ 1 (mod modulus)
  */
-function modInverse(a: number, m: number): number {
+function modInverse(a: bigint, m: bigint): bigint {
   let [oldR, r] = [a, m];
-  let [oldS, s] = [1, 0];
-  while (r !== 0) {
-    const q = Math.floor(oldR / r);
+  let [oldS, s] = [BigInt(1), BigInt(0)];
+  while (r !== BigInt(0)) {
+    const q = oldR / r;
     [oldR, r] = [r, oldR - q * r];
     [oldS, s] = [s, oldS - q * s];
   }
@@ -35,58 +42,60 @@ function modInverse(a: number, m: number): number {
 
 const INVERSE = modInverse(MULTIPLIER, MODULUS);
 
-function toBase62(num: number): string {
-  if (num === 0) return '0';
+function toBase62(num: bigint): string {
+  if (num === BigInt(0)) return '0';
   let result = '';
   let n = num;
-  while (n > 0) {
-    result = BASE62_CHARS[n % 62] + result;
-    n = Math.floor(n / 62);
+  while (n > BigInt(0)) {
+    result = BASE62_CHARS[Number(n % BASE)] + result;
+    n = n / BASE;
   }
   return result;
 }
 
-function fromBase62(str: string): number {
-  let result = 0;
+function fromBase62(str: string): bigint {
+  let result = BigInt(0);
   for (const char of str) {
     const idx = BASE62_CHARS.indexOf(char);
-    if (idx === -1) return -1;
-    result = result * 62 + idx;
+    if (idx === -1) return BigInt(-1);
+    result = result * BASE + BigInt(idx);
   }
   return result;
 }
 
 /**
- * Encode a social content ID into a short obfuscated string.
+ * Pad base62 string to exactly 12 characters with leading '0's.
+ */
+function padTo12(str: string): string {
+  return str.padStart(12, '0');
+}
+
+/**
+ * Encode a social content ID into a 12-character obfuscated string.
  * Handles both "konten-tam-001" format and raw numeric DB IDs.
  *
  * Examples:
- *   konten-tam-001 → "WdM1"
- *   konten-tam-002 → "3Gi2"
- *   konten-tam-003 → "Zu43"
+ *   konten-tam-001 → "0000WdM1kP2x"
+ *   konten-tam-002 → "003Gi2vQ8nTb"
  */
 export function encodeSocialId(id: string | number): string {
   const idStr = String(id);
+  let num: bigint;
 
   // Slide format: konten-tam-001
   const slideMatch = idStr.match(/konten-tam-(\d+)/);
   if (slideMatch) {
-    const num = parseInt(slideMatch[1], 10);
-    return toBase62((num * MULTIPLIER) % MODULUS);
+    num = BigInt(slideMatch[1]);
+  } else if (/^\d+$/.test(idStr)) {
+    // Raw numeric (DB ID)
+    num = BigInt(idStr);
+  } else {
+    // Non-numeric IDs (e.g. "slide") — return as-is
+    return idStr;
   }
 
-  // Raw numeric (DB ID)
-  if (/^\d+$/.test(idStr)) {
-    const num = parseInt(idStr, 10);
-    if (num < MODULUS) {
-      return toBase62((num * MULTIPLIER) % MODULUS);
-    }
-    // Very large IDs — encode raw (no cipher, still base62)
-    return toBase62(num);
-  }
-
-  // Non-numeric IDs (e.g. "slide") — return as-is
-  return idStr;
+  const encoded = (num * MULTIPLIER) % MODULUS;
+  return padTo12(toBase62(encoded));
 }
 
 /**
@@ -100,13 +109,12 @@ export function decodeSocialId(encoded: string): { slideId: string | null; dbId:
   }
 
   const decoded = fromBase62(encoded);
-  if (decoded < 0) {
+  if (decoded < BigInt(0)) {
     return { slideId: null, dbId: null, raw: encoded };
   }
 
   // Reverse the multiplicative cipher
   const originalNum = (decoded * INVERSE) % MODULUS;
-
   const numStr = originalNum.toString();
 
   // Slide format: pad to 3 digits minimum
