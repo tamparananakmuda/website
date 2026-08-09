@@ -1,9 +1,11 @@
 ---
-title: 'E-Government Indonesia: Solusi Digital yang Crash, Birokrasi yang Tidak Berubah'
+title: >-
+  E-Government Indonesia: Solusi Digital yang Crash, Birokrasi yang Tidak
+  Berubah
 slug: sistem-birokrasi-indonesia-part-7-e-government-crash
 excerpt: >-
-  E-government dijanjikan hapus birokrasi. Tapi OSS error, ASN Digital kesulitan,
-  2.2 juta aduan. Birokrasi tidak gagal, berfungsi seperti dirancang.
+  E-government dijanjikan hapus birokrasi. Tapi OSS error, ASN Digital
+  kesulitan, 2.2 juta aduan. Birokrasi tidak gagal, berfungsi seperti dirancang.
 publishedAt: '2026-10-07T01:00:00.000Z'
 status: scheduled
 category: kehidupan
@@ -33,23 +35,28 @@ seoKeywords:
   - ASN Digital
 sourceReferences:
   - type: link
-    url: 'https://www.liputan6.com/bisnis/read/5486193/22-juta-aduan-soal-pelayanan-publik-terbanyak-dari-generasi-milenial-dan-gen-z'
-    label: 'Liputan6 (2023) - 2.2 juta aduan SP4N-LAPOR (KemenPANRB)'
+    url: >-
+      https://www.liputan6.com/bisnis/read/5486193/22-juta-aduan-soal-pelayanan-publik-terbanyak-dari-generasi-milenial-dan-gen-z
+    label: Liputan6 (2023) - 2.2 juta aduan SP4N-LAPOR (KemenPANRB)
   - type: link
     url: 'https://inadigital.go.id/'
-    label: 'INA Digital (2024) - SPBE Prioritas INApas/INAku/INAgov'
+    label: INA Digital (2024) - SPBE Prioritas INApas/INAku/INAgov
   - type: link
-    url: 'https://www.akurat.co/nasional/813024/asn-gen-z-jadi-kekuatan-baru-transformasi-birokrasi-indonesia'
-    label: 'Akurat (2026) - ASN Gen Z 12% dari 5.3 juta (LAN)'
+    url: >-
+      https://www.akurat.co/nasional/813024/asn-gen-z-jadi-kekuatan-baru-transformasi-birokrasi-indonesia
+    label: Akurat (2026) - ASN Gen Z 12% dari 5.3 juta (LAN)
   - type: link
-    url: 'https://smartlegal.id/event/2026/01/23/masalah-oss-dikeluhkan-pelaku-usaha-mengurus-perizinan-usaha-masih-dinilai-sulit-sl/'
+    url: >-
+      https://smartlegal.id/event/2026/01/23/masalah-oss-dikeluhkan-pelaku-usaha-mengurus-perizinan-usaha-masih-dinilai-sulit-sl/
     label: 'SmartLegal (Jan 2026) - OSS error, AI helpdesk tidak membantu'
   - type: link
-    url: 'https://goodstats.id/article/57-gen-z-dan-milenial-pilih-jalur-alternatif-untuk-pelayanan-publik-anggap-jalur-resmi-terlalu-lama-hz0WJ'
-    label: 'GoodStats (Agu 2026) - 57% Gen Z pilih jalur alternatif'
+    url: >-
+      https://goodstats.id/article/57-gen-z-dan-milenial-pilih-jalur-alternatif-untuk-pelayanan-publik-anggap-jalur-resmi-terlalu-lama-hz0WJ
+    label: GoodStats (Agu 2026) - 57% Gen Z pilih jalur alternatif
   - type: link
-    url: 'https://nasional.kompas.com/read/2024/06/12/15415701/cerita-menko-polhukam-soal-pungli-bikin-shm-seharusnya-rp-50000-jadi-rp-10'
-    label: 'Kompas (Jun 2024) - Pungli SHM Rp50rb jadi Rp10jt'
+    url: >-
+      https://nasional.kompas.com/read/2024/06/12/15415701/cerita-menko-polhukam-soal-pungli-bikin-shm-seharusnya-rp-50000-jadi-rp-10
+    label: Kompas (Jun 2024) - Pungli SHM Rp50rb jadi Rp10jt
 featured: false
 humanSignature: true
 factCheckStatus: verified
@@ -62,7 +69,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 9
+readingTime: 6
 ---
 
 > **Sebelumnya di Sistem Birokrasi Indonesia:** Pungli bukan penyimpangan, tapi sistem yang tidak dibiayai. Selama anggaran minim, pungli akan tetap ada. [Baca Part 6](/artikel/sistem-birokrasi-indonesia-part-6-pungli-biaya-tidak-resmi)

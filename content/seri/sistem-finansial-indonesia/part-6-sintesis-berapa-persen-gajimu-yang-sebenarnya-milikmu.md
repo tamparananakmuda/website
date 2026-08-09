@@ -66,7 +66,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 9
+readingTime: 6
 ---
 
 > **Sebelumnya di Sistem Finansial Indonesia:** Asuransi unit link punya klaim surrender Rp77,15 triliun di 2024. BPJS JHT kelola Rp489,23 triliun iuran wajib. Setiap lapis "proteksi" punya struktur yang menguntungkan sistem. Baca: [Part 5](/artikel/sistem-finansial-indonesia-part-5-asuransi-pensiun-premi)

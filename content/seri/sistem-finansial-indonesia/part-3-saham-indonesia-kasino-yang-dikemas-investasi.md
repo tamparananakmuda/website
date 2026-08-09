@@ -57,7 +57,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 8
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Finansial Indonesia:** BI checking menilai kelayakanmu untuk dijebak utang. Sistem perbankan menilai kamu sebagai debitur, bukan sebagai orang yang bisa bebas dari utang. Baca: [Part 2](/artikel/sistem-finansial-indonesia-part-2-bi-checking-jebak-utang)

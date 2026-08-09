@@ -62,7 +62,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 8
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Finansial Indonesia:** Saham Indonesia punya 20 juta investor ritel yang berfungsi sebagai exit liquidity. IHSG 2024 anjlok 2,65%. "Investasi" pun berfungsi seperti kasino. Baca: [Part 3](/artikel/sistem-finansial-indonesia-part-3-saham-kasino-investasi)

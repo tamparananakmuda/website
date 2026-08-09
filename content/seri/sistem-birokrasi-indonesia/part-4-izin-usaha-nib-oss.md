@@ -20,7 +20,7 @@ tags:
   - umkm
   - gen-z
   - sistem-indonesia
-ogHeadline: '40 juta UMKM belum punya NIB'
+ogHeadline: 40 juta UMKM belum punya NIB
 seoMetaTitle: '40 Juta UMKM Belum NIB: OSS Error, Gen Z Setengah Mati Urus Izin | TAM'
 seoMetaDescription: >-
   40 juta UMKM belum punya NIB karena OSS error. KBLI tidak muncul, RDTR belum
@@ -33,19 +33,24 @@ seoKeywords:
   - PKKPR izin lokasi
 sourceReferences:
   - type: link
-    url: 'https://smartlegal.id/event/2026/01/23/masalah-oss-dikeluhkan-pelaku-usaha-mengurus-perizinan-usaha-masih-dinilai-sulit-sl/'
-    label: 'SmartLegal (Jan 2026) - Masalah OSS dikeluhkan pelaku usaha'
+    url: >-
+      https://smartlegal.id/event/2026/01/23/masalah-oss-dikeluhkan-pelaku-usaha-mengurus-perizinan-usaha-masih-dinilai-sulit-sl/
+    label: SmartLegal (Jan 2026) - Masalah OSS dikeluhkan pelaku usaha
   - type: link
-    url: 'https://ekonomi.bisnis.com/read/20260226/9/1956030/pemerintah-relaksasi-syarat-nib-usaha-mikro-di-oss-ini-tata-caranya'
+    url: >-
+      https://ekonomi.bisnis.com/read/20260226/9/1956030/pemerintah-relaksasi-syarat-nib-usaha-mikro-di-oss-ini-tata-caranya
     label: 'Bisnis.com (Feb 2026) - Relaksasi NIB usaha mikro, 40jt UMKM belum NIB'
   - type: link
-    url: 'https://finance.detik.com/berita-ekonomi-bisnis/d-8370883/40-juta-umkm-belum-kantongi-nib-kementerian-investasi-bakal-permudah-perizinan'
-    label: 'Detik (Feb 2026) - 40 juta UMKM belum NIB (BKPM)'
+    url: >-
+      https://finance.detik.com/berita-ekonomi-bisnis/d-8370883/40-juta-umkm-belum-kantongi-nib-kementerian-investasi-bakal-permudah-perizinan
+    label: Detik (Feb 2026) - 40 juta UMKM belum NIB (BKPM)
   - type: link
-    url: 'https://ekonomi.bisnis.com/read/20260625/12/1983309/kemendag-respons-keluhan-seller-e-commerce-soal-pengurusan-nib'
-    label: 'Bisnis.com (Jun 2026) - Kemendag respons keluhan seller NIB'
+    url: >-
+      https://ekonomi.bisnis.com/read/20260625/12/1983309/kemendag-respons-keluhan-seller-e-commerce-soal-pengurusan-nib
+    label: Bisnis.com (Jun 2026) - Kemendag respons keluhan seller NIB
   - type: link
-    url: 'https://finance.detik.com/berita-ekonomi-bisnis/d-8373567/pemerintah-sebut-oss-terus-diperbaiki-bikin-usaha-jadi-makin-mudah'
+    url: >-
+      https://finance.detik.com/berita-ekonomi-bisnis/d-8373567/pemerintah-sebut-oss-terus-diperbaiki-bikin-usaha-jadi-makin-mudah
     label: 'Detik (Feb 2026) - OSS terus diperbaiki, 15 juta NIB terbit'
 featured: false
 humanSignature: true
@@ -59,7 +64,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 8
+readingTime: 5
 ---
 
 > **Sebelumnya di Sistem Birokrasi Indonesia:** Paspor adalah titik rawan gratifikasi. Calo paspor bukan masalah moral, tapi masalah ekonomi yang diciptakan sistem yang mempersulit. [Baca Part 3](/artikel/sistem-birokrasi-indonesia-part-3-paspor-calo-gratifikasi)

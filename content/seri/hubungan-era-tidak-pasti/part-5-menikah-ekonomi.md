@@ -70,7 +70,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 10
+readingTime: 6
 ---
 
 > **Sebelumnya di Hubungan Era Tidak Pasti:** Part 4 membahas paradox kesepian digital, bagaimana Gen Z paling terhubung tapi paling sendirian, dan bagaimana ekonomi membuat sosialisasi jadi terlalu mahal. Baca: [Part 4](/artikel/hubungan-era-tidak-pasti-part-4-kesepian-digital)

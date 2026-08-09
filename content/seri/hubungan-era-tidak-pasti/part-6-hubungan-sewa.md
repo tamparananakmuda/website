@@ -68,7 +68,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
-readingTime: 10
+readingTime: 6
 ---
 
 > **Sebelumnya di Hubungan Era Tidak Pasti:** Part 5 membahas bagaimana 84% Gen Z tetap ingin menikah, tapi 68% menunda karena ekonomi. Cinta tidak hilang, kemampuan ekonomi yang hilang. Baca: [Part 5](/artikel/hubungan-era-tidak-pasti-part-5-menikah-ekonomi)
