@@ -45,7 +45,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -90,6 +90,8 @@ WHO, dalam laporan Maret 2026, menyebut hanya 65% Puskesmas di Indonesia yang pu
 
 Untuk rumah sakit, hanya 78,1% yang punya 7 jenis spesialis dasar. Sisanya, 22%, tidak punya spesialis lengkap. RS tanpa spesialis jantung, tanpa spesialis anak, tanpa spesialis bedah. Kamu dirawat, tapi tidak oleh dokter yang tepat.
 
+Konsekuensinya nyata. Pasien yang butuh spesialis harus rujuk ke kota besar. Perjalanan jam, biaya transportasi, akomodasi selama perawatan. Bagi keluarga di daerah, biaya transportasi bisa lebih mahal dari biaya pengobatan. Hasilnya, banyak yang menunda berobat sampai kondisi memburuk. Datang ke RS sudah terlambat, penyakit sudah parah, pengobatan lebih sulit dan lebih mahal. Sistem yang seharusnya mencegah justru memperburuk karena akses tidak tersedia.
+
 ## Kekurangan Dokter Spesialis
 
 Kemenkes, dilansir Kompas.id Juli 2025, menyebut Indonesia kekurangan 27.000 dokter spesialis pada 2025. Proyeksinya, kekurangan mencapai 65.000 sampai 70.000 pada 2032. Kebutuhan total sekitar 140.000, yang ada sekitar 70.000.
@@ -106,6 +108,8 @@ Lebih spesifik: 375 kab/kota kekurangan spesialis jantung. 383 kab/kota kekurang
 
 Rasio spesialis target Indonesia 2032 adalah 0,46 per 1.000 penduduk. Bandingkan: AS 3,30, UK 2,53, Australia 1,47, Singapura 1,12, Malaysia 0,42. Indonesia akan mencapai 0,46 pada 2032, sementara AS sudah di 3,30 sekarang. Selisih 7 kali.
 
+Dan target 0,46 itu pun tidak dijamin tercapai. Produksi 2.700 per tahun tidak akan menutup gap 27.000, apalagi gap proyeksi 65.000 pada 2032. Target tanpa kapasitas produksi yang memadai bukan target, tapi harapan. Dan harapan tidak menyembuhkan pasien yang butuh spesialis sekarang, bukan 2032.
+
 Rasio dokter umum target 2032 adalah 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang.
 
 Akses timpang dan BPJS defisit terlihat tidak related. Tapi keduanya punya akar yang sama: sistem kesehatan Indonesia underfunded dan maldistributed.
@@ -120,7 +124,7 @@ Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari
 
 ## Conclusion
 
-Jadi, kalau besok kamu sakit di Papua Barat, dengan 14 dokter untuk 500 ribu jiwa, kamu akan ke mana?
+Jadi, kalau besok kamu sakit di Papua Barat, dengan 14 dokter untuk 500 ribu jiwa, kamu akan ke mana? Kalau kamu butuh spesialis jantung dan kabupatenmu tidak punya, kamu harus terbang ke kota besar. Kalau kamu tidak punya uang terbang, kamu menunda. Kalau kamu menunda, penyakitmu memburuk. Dan kalau kamu datang ke RS sudah terlambat, biayanya jauh lebih besar dari kalau kamu diobati lebih awal. Sistem yang seharusnya menjangkau justru meninggalkan.
 
 ## FAQ
 

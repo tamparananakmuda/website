@@ -194,6 +194,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 182 | $101 Miliar dari Kamu Sakit (Seri Sistem Pangan P6) | sistem-pangan-indonesia-part-6-101-miliar-dari-sakit | Kehidupan | Kehidupan & Keluarga | kontra-narasi | 2027-01-10 (scheduled 08:00 WIB) |
 | 183 | Sistem yang Bikin Sakit Itu Desain, Bukan Gagal (Seri Sistem Pangan P7) | sistem-pangan-indonesia-part-7-desain-bukan-gagal | Kehidupan | Kehidupan & Keluarga | kontra-narasi | 2027-01-11 (scheduled 08:00 WIB) |
 | 184 | Judol Bukan Serakah, Rp 287 Triliun dari Keputusasaan Gen Z | judol-bukan-serakah-rp-287-triliun-dari-keputusasaan-gen-z | Uang | Keuangan & Uang | kontra-narasi | 2026-09-11 (scheduled 08:00 WIB) |
+| 185 | Jakarta Mengusir Gen Z: Bukan Pindah ke Desa, Diusir Ekonomi | jakarta-mengusir-gen-z-bukan-pindah-desa-diusir-ekonomi | Kehidupan | Hubungan Sosial / Psikologi | kontra-narasi | 2026-09-12 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

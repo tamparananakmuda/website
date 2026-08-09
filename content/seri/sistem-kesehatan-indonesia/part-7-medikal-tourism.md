@@ -48,7 +48,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -98,6 +98,8 @@ Sekretaris Ditjen Kesehatan Lanjutan Kemenkes, dr. Sunarto, dilansir Kompas.com 
 Kardiolog senior Muhammad Munawar, Ketua Dewan Etik PERKI, menekankan kepercayaan. "Hal yang tidak kalah penting yaitu membangun kepercayaan pasien. Sebab, teknologi yang canggih, pendidikan dokternya bagus, tapi pasiennya tidak percaya juga tidak bisa."
 
 Malaysia menawarkan paket terintegrasi: penerbangan, akomodasi, layanan cashless, MCU murah. Indonesia belum punya ekosistem ini. RS dalam negeri bagus, tapi ekosistem sekitarnya tidak mendukung. Pasien harus urus sendiri tiket, hotel, transportasi, dan koordinasi antar layanan.
+
+Kompas.com Juni 2025 melaporkan 70% pasien yang berobat ke luar negeri bukan karena teknologi medis. Alasannya: trust. Kepercayaan pada sistem. Kepercayaan bahwa dokter kompeten, diagnosis akurat, tidak ada malapraktik, transparansi biaya. Trust bukan sesuatu yang bisa dibeli dengan gedung mewah atau alat canggih. Trust dibangun dari pengalaman. Dan pengalaman mayoritas warga Indonesia dengan sistem kesehatan adalah: antri lama, diagnosis cepat, resep banyak, biaya tidak transparan. Setiap kali ada kasus malapraktik yang tidak ditindaklanjuti, setiap kali ada tagihan RS yang melonjak tanpa penjelasan, trust turun. Dan trust yang turun tidak bisa dipulihkan dengan iklan.
 
 Masalahnya bukan dokter atau fasilitas. Ada yang tidak kamu sadari.
 

@@ -48,7 +48,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -75,6 +75,8 @@ Indonesia punya 216.100 dokter untuk 284 juta penduduk. Rasio 0,76 per 1.000, di
 
 Sementara produksi dokter spesialis hanya 2.700 per tahun, pemerintah justru aktif mengekspor tenaga kesehatan. Program Triple Win mengirim perawat ke Jerman. Binawan Goes to Europe mengirim perawat ke Austria. Diframing sebagai "prestise global" dan "pengirapan tenaga kerja terampil". Tapi di dalam negeri, Puskesmas kosong.
 
+Paradoks ini bukan baru. Indonesia selalu punya surplus tenaga kesehatan yang dilatih dengan biaya negara, lalu dikirim ke luar negeri karena di dalam negeri tidak ada lapangan kerja yang layak. Pendidikan kedokteran dan keperawatan biayanya mahal, subsidi negara besar. Tapi setelah lulus, sistem tidak menyerap. Hasilnya: negara bayar pendidikan, negara lain nikmati tenaganya. Investasi SDM yang bocor ke luar negeri, dan yang tinggal di dalam negeri adalah kekosongan.
+
 ## Kekurangan yang Tidak Pernah Tertutup
 
 Di [Part 2](/artikel/sistem-kesehatan-indonesia-part-2-akses-kode-pos) kita sudah bahas: Indonesia kekurangan 27.000 dokter spesialis pada 2025, produksi hanya 2.700 per tahun, sementara kebutuhan 15.000 sampai 16.000. Menkes Budi Gunadi Sadikin, dalam Kompas.id Juli 2025, mengatakan: "Sampai merdeka ke-100 pun gap belum terpenuhi."
@@ -97,6 +99,8 @@ WHO, dalam laporan Maret 2026, menyebut Indonesia perlu memperkuat perencanaan t
 
 Rasio dokter umum target 2032: 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang dengan GDP per kapita lebih rendah. Dan sementara di bawah Vietnam, perawat Indonesia dikirim ke Jerman.
 
+Yang membuat situasi lebih parah: waktu yang dibutuhkan untuk memperbesar kapasitas produksi dokter spesialis panjang. Seorang dokter umum butuh 4-5 tahun spesialisasi setelah lulus S1. Artinya, kalau kapasitas diperbesar hari ini, hasilnya baru terasa 5 tahun lagi. Selama 5 tahun, kekurangan tetap. Dan selama kekurangan tetap, pasien di daerah tetap tidak dapat spesialis. Solusi jangka pendek tidak ada. Solusi jangka panjang butuh waktu. Dan di tengah waktu itu, sistem terus mengirim perawat ke luar negeri.
+
 Memahami dokter keluar adalah langkah pertama. Langkah kedua lebih sulit.
 
 ## Insight
@@ -110,6 +114,8 @@ Seperti yang dibahas di [Pekerja Indonesia Paling Bahagia di Asia, Tapi 43 Perse
 ## Conclusion
 
 Jadi, kalau 27.000 spesialis kurang dan 2.700 diproduksi per tahun, kapan kamu akan dilayani? Atau kamu sudah pilih keluar negeri?
+
+Dan kalau kamu tidak mampu keluar negeri, kamu menunggu. Menunggu di antri Puskesmas yang kekurangan tenaga. Menunggu rujukan ke RS yang kekurangan spesialis. Menunggu sampai penyakitmu cukup parah untuk diprioritaskan. Sistem yang dirancang tanpa kapasitas yang cukup membuat kamu menunggu, dan menunggu di sistem kesehatan bukan sekadar tidak nyaman. Menunggu bisa berarti perbedaan antara sembuh dan tidak.
 
 ## FAQ
 

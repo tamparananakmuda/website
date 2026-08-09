@@ -46,7 +46,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -103,6 +103,8 @@ SKI 2023, dilansir BKPK Kemenkes, menunjukkan diabetes diagnosis dokter naik dar
 
 Yang lebih mengkhawatirkan: jumlah penyandang hipertensi dan diabetes yang menjalani pengobatan rutin masih rendah. Banyak yang tidak tahu mereka punya diabetes atau hipertensi. Dan yang tahu, banyak yang tidak kontrol rutin. Hasilnya: komplikasi. Jantung, stroke, gagal ginjal. Penyakit yang biayanya jauh lebih besar dari pencegahan.
 
+Sistem kesehatan Indonesia berfokus pada pengobatan, bukan pencegahan. Anggaran pencegahan PTM masih kecil dibandingkan anggaran pengobatan. Padahal deteksi dini dan edukasi gaya hidup bisa menurunkan kasus PTM secara signifikan. Tapi pencegahan tidak menghasilkan klaim, tidak menghasilkan resep, tidak menghasilkan rawat inap. Pencegahan tidak profitable. Pengobatan profitable. Dan sistem memilih yang profitable.
+
 Yang dipertaruhkan bukan biaya pengobatan. Yang dipertaruhkan adalah hidupmu.
 
 ## Insight
@@ -111,7 +113,9 @@ PTM adalah engine yang menghubungkan semua part seri ini. BPJS defisit (P1) kare
 
 Gue punya keluarga yang diabetes. Setiap bulan, beli obat. Setiap 3 bulan, kontrol ke dokter. Setiap tahun, cek laboratorium. Biaya total: sekitar Rp500 ribu per bulan, Rp6 juta per tahun, selama bertahun-tahun. Dan itu kalau tidak ada komplikasi. Kalau ada komplikasi, biayanya melonjak. Cuci darah: Rp500 ribu per sesi, 2x seminggu, Rp4 juta per bulan. Itu kalau pakai BPJS. Kalau tidak, lebih.
 
-Seperti yang dibahas di [Terapi Mahal, Label Gratis: Gen Z Pilih Self-Diagnosis](/artikel/terapi-mahal-label-gratis-gen-z-pilih-self-diagnosis), banyak Gen Z memilih self-diagnosis karena biaya profesional mahal. Dan di [Vape Bukan Gaya Hidup: Industri Tembakau yang Ganti Kemasan](/artikel/vape-bukan-gaya-hidup-industri-tembakau-yang-ganti-kemasan), kita lihat industri yang untung dari kebiasaan yang memicu PTM.
+Yang membuat gue khawatir: pola ini turun-temurun. Orang tua diabetes, anak berisiko diabetes. Bukan hanya genetik, tapi gaya hidup yang diwariskan. Makanan tinggi gula, rendah serat, kurang aktivitas fisik. Gen Z sekarang mulai diagnosis diabetes di usia 20-an, bukan 50-an seperti orang tua mereka. PTM datang lebih muda, dan sistem kesehatan tidak siap untuk gelombang ini.
+
+Seperti yang dibahas di [Terapi Mahal, Label Gratis: Gen Z Pilih Self-Diagnosis](/artikel/terapi-mahal-label-gratis-kenapa-gen-z-pilih-self-diagnosis), banyak Gen Z memilih self-diagnosis karena biaya profesional mahal. Dan di [Vape Bukan Gaya Hidup: Industri Tembakau yang Ganti Kemasan](/artikel/vape-bukan-gaya-hidup-industri-tembakau-yang-ganti-kemasan), kita lihat industri yang untung dari kebiasaan yang memicu PTM.
 
 ## Conclusion
 

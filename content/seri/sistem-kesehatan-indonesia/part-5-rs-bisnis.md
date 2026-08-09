@@ -48,7 +48,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -97,6 +97,8 @@ Siloam menjalankan strategi dua segmen: Network Premium dan Network Value Seeker
 
 Pasien dibagi segmen. Yang mampu bayar mahal dapat Network Premium. Yang BPJS dapat Value Seeker. Dua sistem dalam satu atap. Dan yang BPJS antri lebih lama, dapat kamar lebih kecil, dokter yang berbeda. Bukan diskriminasi. Itu pricing strategy.
 
+Dari sudut pandang bisnis, strategi ini masuk akal. Segmen premium memberikan margin lebih tinggi, segmen value memberikan volume. Tapi dari sudut pandang pasien, ini berarti kualitas layanan kesehatan kamu ditentukan oleh kemampuan bayar, bukan oleh tingkat keparahan penyakit. Pasien BPJS dengan serangan jantung mungkin menunggu lebih lama dari pasien swasta dengan keluhan ringan. Sistem mengurutkan berdasarkan dompet, bukan berdasarkan kebutuhan medis.
+
 ## Uang $10 Miliar yang Kabur
 
 Menkes Budi Gunadi Sadikin, dilansir Kompas.com Juni 2025, menyebut warga Indonesia menghabiskan $10 miliar berobat ke luar negeri. Pemerintah membangun RS internasional: BIH (Bali International Hospital) di KEK Sanur Bali, dibuka April 2025, dengan dokter diaspora. Visa Emas diberikan untuk dokter diaspora dan asing yang mau bekerja di Indonesia.
@@ -110,6 +112,8 @@ Masalahnya bukan RS mahal. Masalahnya lebih besar dari itu.
 RS swasta tidak salah. Mereka bisnis, dan bisnis mencari laba. Tapi sistem yang membuat RS swasta lebih profitable dari RS negeri adalah desain. BPJS bayar rendah ke RS, RS prioritasi pasien swasta, pasien BPJS antri, yang mampu keluar negeri. Sistem ini mengurutkan pasien berdasarkan kemampuan bayar, bukan kebutuhan medis.
 
 Gue pernah rawat inap di RS swasta. Kamarnya nyaman, AC dingin, TV layar datar, suster ramah. Tapi setiap kali dokter datang, ada biaya konsultasi. Setiap kali ganti infus, ada biaya tindakan. Setiap malam di kamar, ada biaya harian. Gue keluar RS dengan tagihan Rp15 juta untuk 2 malam. Dan gue berpikir: kalau gue tidak punya uang Rp15 juta, gue akan ke RS negeri. Antri dari pagi, mungkin dapat tempat tidur, mungkin tidak. Sistem ini mengurutkan kamu berdasarkan dompet.
+
+RS negeri punya masalahnya sendiri. Anggaran terbatas, fasilitas tua, dokter overworked. Banyak RS negeri bergantung pada BPJS yang tarifnya rendah. Hasilnya, RS negeri sulit bersaing dengan RS swasta dalam hal fasilitas dan pelayanan. Pasien yang mampu pilih RS swasta, pasien BPJS pilih RS negeri. Pembagian ini bukan kebetulan, tapi hasil dari sistem yang membedakan layanan berdasarkan kemampuan bayar.
 
 Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya banyak lapis biaya. RS adalah lapis yang paling visible.
 

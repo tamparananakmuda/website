@@ -52,7 +52,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -125,7 +125,7 @@ Sistem kesehatan Indonesia tidak dirancang untuk membuatmu sehat. Dirancang untu
 
 Gue nulis seri ini bukan karena gue benci sistem kesehatan. Gue nulis karena gue lihat pola. Setiap kali ada berita BPJS defisit, solusinya: naikkan iuran. Setiap kali ada berita dokter kurang, solusinya: impor dokter atau ekspor perawat. Setiap kali ada berita obat mahal, solusinya: subsidi. Tidak pernah yang bertanya: kenapa sistemnya begini? Kenapa iuran flat 6 tahun? Kenapa produksi dokter 2.700? Kenapa 90% bahan baku impor? Pertanyaan ini tidak ditanyakan karena jawabannya menunjuk ke desain, bukan kegagalan. Dan desain punya pihak yang untung. Dan pihak yang untung tidak mau desainnya diubah.
 
-Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup), Gen Z sudah mulai mempertanyakan sistem. Dan di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), kita lihat bahwa sistem asuransi swasta juga dirancang untuk menang dari kamu.
+Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), Gen Z sudah mulai mempertanyakan sistem. Dan di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), kita lihat bahwa sistem asuransi swasta juga dirancang untuk menang dari kamu.
 
 ## Conclusion
 

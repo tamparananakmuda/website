@@ -45,7 +45,7 @@ sourceReferences:
 featured: true
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -69,6 +69,8 @@ Kamu bayar iuran tiap bulan. Potong dari gaji, otomatis, tidak bisa ditolak. Tap
 BPJS Kesehatan diluncurkan 2014 sebagai jaminan kesehatan universal. Semua warga terdaftar, semua bayar iuran, semua dapat layanan. Konsepnya sederhana: kumpulkan iuran dari banyak orang sehat, bayarkan layanan untuk sedikit orang sakit. Asuransi sosial, prinsip gotong royong.
 
 Sekarang, 285 juta peserta terdaftar, 98,6% penduduk Indonesia. Tapi 54 juta di antaranya tidak aktif, tidak bayar iuran. Yang aktif pun iurannya tidak naik sejak 2020. Padahal aturannya jelas: penyesuaian iuran setiap 2 tahun. Enam tahun berlalu, iuran flat, klaim melonjak.
+
+Sistem gotong royong ini bekerja kalau jumlah orang sehat lebih banyak dari orang sakit. Tapi struktur penduduk Indonesia berubah. Proporsi lansia meningkat, penyakit kronis naik, biaya pengobatan mahal. Gotong royong yang ditandatangani pada 2014 tidak punya mekanisme adaptasi cepat. Aturan ada, tapi eksekusi tertahan oleh pertimbangan politik. Kenaikan iuran tidak populer, jadi ditunda. Ditunda terus sampai sistem nyangkut di tepi jurang.
 
 Hasilnya: pendapatan iuran 2025 naik 6,9% jadi Rp176,72 triliun, tapi beban klaim naik 12,1% jadi Rp193,85 triliun. Rasio klaim 108,27%. Artinya, setiap Rp100 yang masuk, Rp108 yang keluar. Sistem ini tidak sustainable.
 
@@ -100,17 +102,21 @@ Tanpa intervensi, aset neto BPJS akan negatif akhir 2026, dan gagal bayar terjad
 
 Gue perhatikan, setiap kali BPJS defisit dibahas, solusinya selalu dua: naikkan iuran atau suntik APBN. Jarang yang bertanya: kenapa beban klaim naik 12% per tahun sementara iuran flat? Kenapa 54 juta peserta tidak aktif? Kenapa penyakit katastropik makan 26% dana? Pertanyaan ini tidak nyaman dijawab karena jawabannya menunjuk ke desain sistem, bukan kegagalan operasional.
 
+Dan ada masalah struktural yang lebih dalam: sistem rujukan. Pasien Puskesmas dirujuk ke RS, RS menagih ke BPJS. Tapi tarif INA-CBG yang dibayar BPJS ke RS sering tidak mencukupi biaya operasional RS. RS komplain, BPJS komplain, pasien terjebak di tengah. Sistem yang dirancang untuk efisiensi justru menciptakan friksi di setiap titik.
+
 Kamu pikir BPJS defisit adalah masalah. Sebenarnya BPJS defisit adalah gejala.
 
 ## Insight
 
 BPJS defisit bukan kegagalan manajemen. Ini struktur. Iuran flat sejak 2020, beban klaim naik 12% per tahun, penyakit tidak menular meningkat. Sistem dirancang dengan asumsi iuran selalu lebih besar dari klaim. Tapi PTM membuat klaim tumbuh eksponensial, sementara iuran tumbuh linear. Selisihnya pasti membengkak.
 
-Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup), banyak Gen Z memilih tidak bayar BPJS karena iuran terasa berat. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-12-juta-bpjs-ditunda-bukan-boros-krisis-persepsi), kita lihat bahwa menunda BPJS bukan boros, tapi krisis persepsi: gaji tidak cukup untuk semua.
+Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), banyak Gen Z memilih tidak bayar BPJS karena iuran terasa berat. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa menunda BPJS bukan boros, tapi krisis persepsi: gaji tidak cukup untuk semua.
 
 ## Conclusion
 
 BPJS bukan jaring pengaman. BPJS adalah sistem yang dirancang untuk robek. Iuran naik, layanan turun, dan yang untung bukan kamu. Yang untung adalah penyedia layanan yang dibayar dari pool dana yang terus menyusut.
+
+Dan yang lebih mengkhawatirkan: kamu tidak punya pilihan lain. BPJS adalah satu-satunya jaminan kesehatan nasional. Keluar dari BPJS berarti bayar sendiri, dan bayar sendiri di sistem kesehatan yang mahal adalah pilihan yang tidak terjangkau mayoritas. Kamu terjebak di sistem yang defisit, dengan iuran yang tidak naik, dan klaim yang terus membengkak. Pertanyaannya: kenapa sistem ini dirancang seperti ini?
 
 ## FAQ
 

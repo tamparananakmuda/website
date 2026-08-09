@@ -48,7 +48,7 @@ sourceReferences:
 featured: false
 humanSignature: true
 factCheckStatus: verified
-reviewStatus: draft
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -107,11 +107,15 @@ Permenkes No. 5/2026 mewajibkan obat impor diproduksi lokal dalam 5 tahun. Ini l
 
 Kalau kamu lihat polanya, ketergantungan farmasi bukan kebetulan. Indonesia punya pasar besar tapi tidak punya industri hulu. Negara penghasil bahan baku untung dari menjual. Indonesia untung dari meracik dan mengemas. Dan kamu yang bayar obat mahal karena bahan bakunya diimpor dengan dolar.
 
+Setiap kali rupiah melemah 1%, biaya impor bahan baku naik. Setiap kali ada gangguan pasokan global, ketersediaan obat terancam. Indonesia tidak punya cadangan strategis bahan baku obat, tidak punya industri petrokimia yang cukup untuk mendukung produksi mandiri. Yang ada adalah ketergantungan yang diperkuat oleh struktur ekonomi: lebih murah impor daripada bangun industri hulu. Dan struktur ini yang membuat obat mahal bukan masalah sementara, tapi masalah permanen.
+
 ## Insight
 
 Obat mahal bukan karena riset. Obat mahal karena Indonesia tidak punya industri hulu farmasi. Ketergantungan 80-90% impor berarti harga obat dikontrol oleh China dan India, bukan oleh Indonesia. Kalau rupiah melemah, obat naik. Kalau ada gangguan pasokan, obat langka. Dan kamu tidak punya pilihan.
 
 Gue pernah beli obat maag di apotek. Harganya Rp35 ribu. Isinya: ranitidine 150 mg, 10 tablet. Di India, obat yang sama, bahan yang sama, harganya setara Rp3.500. Selisih 10 kali. Bukan karena riset. Bukan karena kualitas. Karena bahan bakunya diimpor, dan impor pakai dolar.
+
+Dan ada masalah lain: tarif e-katalog BPJS yang rendah membuat industri farmasi lokal tidak tertarik memproduksi obat tertentu. Margin terlalu tipis, bahkan rugi. Hasilnya, obat generics yang seharusnya murah justru langka di pasaran. Pasien BPJS dapat resep tapi obatnya tidak ada di apotek. Mereka harus beli sendiri dengan harga pasar yang lebih mahal. Sistem yang dirancang untuk menekan biaya justru membuat obat tidak tersedia.
 
 Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia dirancang dengan banyak lapis biaya. Obat mahal adalah salah satu lapisnya.
 
