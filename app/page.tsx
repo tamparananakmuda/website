@@ -8,6 +8,7 @@ import { FAQSchema } from '@/components/schema/faq-schema';
 import { faqItems } from '@/components/sections/faq';
 
 export const revalidate = 60;
+export const dynamic = 'force-static';
 
 export default async function HomePage() {
   return (
