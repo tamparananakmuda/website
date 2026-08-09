@@ -28,7 +28,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
   if (articles.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-5xl mt-16 pt-12 border-t border-border">
+    <section className="mx-auto max-w-3xl mt-16 pt-12 border-t border-border">
       <h2 className="mb-6 text-2xl font-bold text-foreground">
         Baca juga
       </h2>

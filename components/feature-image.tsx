@@ -23,7 +23,7 @@ export function FeatureImage({ src, alt, fallbackSrc }: FeatureImageProps) {
   };
 
   return (
-    <div className="relative mx-auto max-w-4xl mb-12 overflow-hidden rounded-xl">
+    <div className="relative mx-auto max-w-3xl mb-12 overflow-hidden rounded-xl">
       <div className="relative aspect-[16/9] w-full bg-muted/20">
         {!loaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-muted/20">
