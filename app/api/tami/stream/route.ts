@@ -72,15 +72,32 @@ export async function POST(req: NextRequest) {
     // Extract cognitive data without conversationalReply for streaming
     const { conversationalReply, ...cognitiveData } = cognitiveResponse;
 
+    // Fast path: for greetings/simple queries, skip expensive streamTamiReply() LLM call
+    const isGreetingResponse = cognitiveData.severityLevel === 'ringan' 
+      && (!cognitiveData.actionPlan || cognitiveData.actionPlan.length === 0)
+      && (!cognitiveData.citations || cognitiveData.citations.length === 0);
+
     // Step 2: Create SSE stream
     const encoder = new TextEncoder();
 
     const stream = new ReadableStream({
       async start(controller) {
-        // Event 1: Send cognitive data (diagnosis, action plan, citations, suggestions)
+        // Event 1: Send cognitive data (diagnosis, action plan, citations, etc.)
         controller.enqueue(
           encoder.encode(`data: ${JSON.stringify({ type: 'cognitive', data: cognitiveData })}\n\n`)
         );
+
+        // Fast path: send pre-computed reply directly for greetings
+        if (isGreetingResponse && conversationalReply) {
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: 'token', content: conversationalReply })}\n\n`)
+          );
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`)
+          );
+          controller.close();
+          return;
+        }
 
         // Event 2: Stream conversational reply token-by-token
         try {

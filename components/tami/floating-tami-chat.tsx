@@ -280,8 +280,17 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     } catch (err) {
       console.error(err);
       timers.forEach(clearTimeout);
-      addLog('⚠️ Pipeline error.');
-      const errorMsg = err instanceof Error ? err.message : 'Maaf, TAMI sedang mengalami kendala. Silakan coba lagi nanti.';
+      const rawMsg = err instanceof Error ? err.message : 'Unknown error';
+      let errorMsg: string;
+      if (rawMsg.includes('429') || rawMsg.includes('rate limit') || rawMsg.includes('Terlalu banyak')) {
+        errorMsg = 'Tunggu sebentar ya, kamu chat terlalu cepat. Coba lagi dalam beberapa detik.';
+      } else if (rawMsg.includes('fetch') || rawMsg.includes('network') || rawMsg.includes('Failed to fetch')) {
+        errorMsg = 'Koneksi terputus. Cek internet kamu lalu coba kirim lagi ya.';
+      } else if (rawMsg.includes('timeout') || rawMsg.includes('Timeout')) {
+        errorMsg = 'TAMI butuh waktu lebih lama dari biasanya. Coba pertanyaan yang lebih singkat.';
+      } else {
+        errorMsg = 'Maaf, TAMI lagi ada kendala teknis. Coba lagi ya.';
+      }
       setMessages((prev) => [
         ...prev,
         { id: `error-${Date.now()}`, role: 'assistant', content: errorMsg },
