@@ -102,6 +102,7 @@ export function LatestSeries({ series }: LatestSeriesProps) {
                           src={post.ogCardUrl || post.ogImageUrl || ''}
                           alt={post.title}
                           fill
+                          unoptimized
                           loading="lazy"
                           sizes="(max-width: 768px) 280px, 320px"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"

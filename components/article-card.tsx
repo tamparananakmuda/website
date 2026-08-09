@@ -38,6 +38,7 @@ export function ArticleCard({ post }: ArticleCardProps) {
             src={imgSrc}
             alt={post.title}
             fill
+            unoptimized
             loading="lazy"
             className={`
               object-cover transition-all duration-500
