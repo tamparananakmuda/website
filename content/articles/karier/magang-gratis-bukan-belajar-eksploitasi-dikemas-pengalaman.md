@@ -1,26 +1,36 @@
 ---
-title: "Magang Gratis Bukan Belajar, Eksploitasi yang Dikemas sebagai Pengalaman"
-slug: "magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman"
-excerpt: "370 ribu orang berebut 100 ribu slot magang. 70% tidak dapat kerja setelahnya. Magang gratis bukan investasi, itu eksploitasi dengan CV sebagai jaminan."
-publishedAt: "2026-08-05T05:00:00.000Z"
+title: 'Magang Gratis Bukan Belajar, Eksploitasi Dikemas Pengalaman'
+slug: magang-gratis-bukan-belajar-eksploitasi-dikemas-pengalaman
+excerpt: >-
+  370 ribu orang berebut 100 ribu slot magang. 70% tidak dapat kerja setelahnya.
+  Magang gratis bukan investasi, itu eksploitasi dengan CV sebagai jaminan.
+publishedAt: '2026-08-05T05:00:00.000Z'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["magang", "eksploitasi", "gen-z", "karier", "hukum-kerja", "pekerja-muda"]
-ogHeadline: "Magang gratis bukan investasi, itu kerja gratis"
-seoMetaTitle: "Magang Gratis Bukan Belajar, Eksploitasi Dikemas Pengalaman"
-seoMetaDescription: "370 ribu orang berebut 100 ribu slot magang. 70% tidak dapat kerja setelahnya. Magang gratis bukan investasi, itu eksploitasi dengan CV sebagai jaminan."
+povTag: kontra-narasi
+tags:
+  - magang
+  - eksploitasi
+  - gen-z
+  - karier
+  - hukum-kerja
+  - pekerja-muda
+ogHeadline: 'Magang gratis bukan investasi, itu kerja gratis'
+seoMetaTitle: 'Magang Gratis: Eksploitasi Dikemas Pengalaman'
+seoMetaDescription: >-
+  370 ribu orang berebut 100 ribu slot magang. 70% tidak dapat kerja setelahnya.
+  Magang gratis bukan investasi, itu eksploitasi dengan CV sebagai jaminan.
 seoKeywords:
-  - "magang gratis Indonesia"
-  - "eksploitasi magang Indonesia"
-  - "hak peserta magang Indonesia"
-  - "uang saku magang minimum"
-  - "magang tidak dibayar legal"
-  - "program magang nasional 2026"
+  - magang gratis Indonesia
+  - eksploitasi magang Indonesia
+  - hak peserta magang Indonesia
+  - uang saku magang minimum
+  - magang tidak dibayar legal
+  - program magang nasional 2026
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,14 +45,42 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://www.cnbcindonesia.com/news/20260625103026-4-745598/tak-ada-standar-uang-saku-magang-6-mahasiswa-gugat-uu-ketenagakerjaan","label":"CNBC Indonesia: 6 Mahasiswa Gugat UU Ketenagakerjaan soal Standar Uang Saku Magang (Jun 2026)"}
-  - {"type":"link","url":"https://kemnaker.go.id/news/detail/sebanyak-24457-lulusan-perguruan-tinggi-lolos-program-magang-nasional-batch-iii","label":"Kemnaker: 102.697 Peserta Program Magang Nasional 2025"}
-  - {"type":"link","url":"https://economy.okezone.com/read/2026/01/21/320/3196696/viral-peserta-magang-dimintai-uang-dan-tidak-sesuai-job-desk-begini-respons-menaker","label":"Okezone: Viral Peserta Magang Dimintai Uang dan Tidak Sesuai Job Desk (Jan 2026)"}
-  - {"type":"link","url":"https://www.kalderanews.com/2026/07/viral-dugaan-penyalahgunaan-maganghub-peserta-cuma-absen-dapat-gaji/","label":"KalderaNews: Viral Dugaan Penyalahgunaan MagangHub (Jul 2026)"}
-  - {"type":"link","url":"https://floresa.co/antara-belajar-dan-buruh-gratis-hotel","label":"Floresa: Pelajar PKL di Hotel Labuan Bajo Kerja 8-13 Jam Tanpa Gaji (Jul 2026)"}
-  - {"type":"link","url":"https://www.ntvnews.id/news/01111149/qodari-target-magang-nasional-2026-naik-jadi-150-ribu-peserta","label":"Ntvnews: Target Magang Nasional 2026 Naik Jadi 150 Ribu Peserta"}
-  - {"type":"link","url":"https://www.klaussa.com/blog/panduan-rekrutmen-magang-legal-indonesia","label":"Klaussa: Panduan Rekrutmen Magang Legal di Indonesia (Permenaker 6/2020)"}
-  - {"type":"link","url":"https://www.antaranews.com/berita/5618511/kemnaker-ungkap-tiga-sektor-yang-menyerap-peserta-maganghub-terbanyak","label":"Antara: Kemnaker Ungkap Sektor Penyerap MagangHub Terbanyak"}
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/news/20260625103026-4-745598/tak-ada-standar-uang-saku-magang-6-mahasiswa-gugat-uu-ketenagakerjaan
+    label: >-
+      CNBC Indonesia: 6 Mahasiswa Gugat UU Ketenagakerjaan soal Standar Uang
+      Saku Magang (Jun 2026)
+  - type: link
+    url: >-
+      https://kemnaker.go.id/news/detail/sebanyak-24457-lulusan-perguruan-tinggi-lolos-program-magang-nasional-batch-iii
+    label: 'Kemnaker: 102.697 Peserta Program Magang Nasional 2025'
+  - type: link
+    url: >-
+      https://economy.okezone.com/read/2026/01/21/320/3196696/viral-peserta-magang-dimintai-uang-dan-tidak-sesuai-job-desk-begini-respons-menaker
+    label: >-
+      Okezone: Viral Peserta Magang Dimintai Uang dan Tidak Sesuai Job Desk (Jan
+      2026)
+  - type: link
+    url: >-
+      https://www.kalderanews.com/2026/07/viral-dugaan-penyalahgunaan-maganghub-peserta-cuma-absen-dapat-gaji/
+    label: 'KalderaNews: Viral Dugaan Penyalahgunaan MagangHub (Jul 2026)'
+  - type: link
+    url: 'https://floresa.co/antara-belajar-dan-buruh-gratis-hotel'
+    label: >-
+      Floresa: Pelajar PKL di Hotel Labuan Bajo Kerja 8-13 Jam Tanpa Gaji (Jul
+      2026)
+  - type: link
+    url: >-
+      https://www.ntvnews.id/news/01111149/qodari-target-magang-nasional-2026-naik-jadi-150-ribu-peserta
+    label: 'Ntvnews: Target Magang Nasional 2026 Naik Jadi 150 Ribu Peserta'
+  - type: link
+    url: 'https://www.klaussa.com/blog/panduan-rekrutmen-magang-legal-indonesia'
+    label: 'Klaussa: Panduan Rekrutmen Magang Legal di Indonesia (Permenaker 6/2020)'
+  - type: link
+    url: >-
+      https://www.antaranews.com/berita/5618511/kemnaker-ungkap-tiga-sektor-yang-menyerap-peserta-maganghub-terbanyak
+    label: 'Antara: Kemnaker Ungkap Sektor Penyerap MagangHub Terbanyak'
 ---
 
 ## Hook

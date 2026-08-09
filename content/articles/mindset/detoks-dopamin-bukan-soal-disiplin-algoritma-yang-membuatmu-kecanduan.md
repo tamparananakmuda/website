@@ -1,40 +1,48 @@
 ---
-title: "Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan"
-slug: "detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan"
-excerpt: "41% Gen Z Indonesia batasi notifikasi. Bukan soal disiplin, algoritma media sosial sengaja didesain mengeksploitasi sistem reward otakmu."
-publishedAt: "2026-07-24 01:00:00+00"
+title: 'Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Bikin Kecanduan'
+slug: detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan
+excerpt: >-
+  41% Gen Z Indonesia batasi notifikasi. Bukan soal disiplin, algoritma media
+  sosial sengaja didesain mengeksploitasi sistem reward otakmu.
+publishedAt: '2026-07-24 01:00:00+00'
 status: published
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Bukan kurang disiplin, otakmu dibajak algoritma"
-seoMetaTitle: "Detoks Dopamin: Algoritma yang Membuatmu Kecanduan"
-seoMetaDescription: "41% Gen Z Indonesia batasi notifikasi. Detoks dopamin bukan soal disiplin, algoritma media sosial sengaja didesain membuat kamu kecanduan."
+ogHeadline: 'Bukan kurang disiplin, otakmu dibajak algoritma'
+seoMetaTitle: 'Detoks Dopamin: Algoritma yang Membuatmu Kecanduan'
+seoMetaDescription: >-
+  41% Gen Z Indonesia batasi notifikasi. Detoks dopamin bukan soal disiplin,
+  algoritma media sosial sengaja didesain membuat kamu kecanduan.
 seoKeywords:
-  - "detoks dopamin gen z"
-  - "dopamine detox Indonesia"
-  - "kecanduan media sosial"
-  - "algoritma media sosial"
-  - "screen time Indonesia"
-  - "digital detox gen z"
+  - detoks dopamin gen z
+  - dopamine detox Indonesia
+  - kecanduan media sosial
+  - algoritma media sosial
+  - screen time Indonesia
+  - digital detox gen z
 sourceReferences:
-  - "Kemenko PMK Pratikno: Screen time rata-rata Indonesia 7,5 jam/hari (2025)"
-  - "Survei Diginex x Inventure x ivosights: 31% Gen Z 4-6 jam medsos/hari (2026)"
-  - "Jakpat Feb 2026: 41% Gen Z Indonesia batasi notifikasi setelah jam kerja"
-  - "American Psychological Association: Hubungan penggunaan media sosial dan stres kronis"
-  - "Jurnal Bimala UNJ (2025): Detoks digital 3 jalur, notifikasi, waktu layar, seleksi konten"
-  - "Deloitte Gen Z Survey 2026: 71% Gen Z pernah butuh cuti melepas stres"
-  - "World Economic Forum: 66% Gen Z rutin pakai aplikasi wellness"
-  - "Global Wellness Institute: Pergeseran ke pendekatan istirahat berkelanjutan"
+  - 'Kemenko PMK Pratikno: Screen time rata-rata Indonesia 7,5 jam/hari (2025)'
+  - 'Survei Diginex x Inventure x ivosights: 31% Gen Z 4-6 jam medsos/hari (2026)'
+  - 'Jakpat Feb 2026: 41% Gen Z Indonesia batasi notifikasi setelah jam kerja'
+  - >-
+    American Psychological Association: Hubungan penggunaan media sosial dan
+    stres kronis
+  - >-
+    Jurnal Bimala UNJ (2025): Detoks digital 3 jalur, notifikasi, waktu layar,
+    seleksi konten
+  - 'Deloitte Gen Z Survey 2026: 71% Gen Z pernah butuh cuti melepas stres'
+  - 'World Economic Forum: 66% Gen Z rutin pakai aplikasi wellness'
+  - 'Global Wellness Institute: Pergeseran ke pendekatan istirahat berkelanjutan'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

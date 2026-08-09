@@ -1,18 +1,30 @@
 ---
-title: "86% Merasa Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Justru Celah"
-slug: "86-persen-pede-bisa-kenali-scam-35-persen-tetap-kena"
-excerpt: "86% orang Indonesia pede bisa kenali scam, tapi 35% tetap jadi korban. Bukan bodoh, tapi overconfidence justru celah terbesar."
-publishedAt: "2026-07-28T10:00:00.000Z"
+title: '86% Pede Kenali Scam, 35% Tetap Kena: Overconfidence Celah'
+slug: 86-persen-pede-bisa-kenali-scam-35-persen-tetap-kena
+excerpt: >-
+  86% orang Indonesia pede bisa kenali scam, tapi 35% tetap jadi korban. Bukan
+  bodoh, tapi overconfidence justru celah terbesar.
+publishedAt: '2026-07-28T10:00:00.000Z'
 status: published
-category: "mindset"
-subcategory: "mindset-psikologi"
-author: "yovie-setiawan"
-seoTitle: "86% Pede Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Celah"
-seoDescription: "Survei GASA: 86% orang Indonesia percaya diri bisa kenali scam, tapi 35% tetap jadi korban. Overconfidence justru celah terbesar."
-seoKeywords: ["overconfidence penipuan online", "korban scam orang pintar", "psikologi penipuan digital", "kenapa orang tertipu scam", "modus penipuan online 2026"]
-ogHeadline: "Pede bisa kenali scam? 35% tetap kena"
+category: mindset
+subcategory: mindset-psikologi
+author: yovie-setiawan
+seoMetaTitle: '86% Pede Bisa Kenali Scam, 35% Tetap Kena: Overconfidence Celah'
+seoMetaDescription: >-
+  Survei GASA: 86% orang Indonesia percaya diri bisa kenali scam, tapi 35% tetap
+  jadi korban. Overconfidence justru celah terbesar.
+seoKeywords:
+  - overconfidence penipuan online
+  - korban scam orang pintar
+  - psikologi penipuan digital
+  - kenapa orang tertipu scam
+  - modus penipuan online 2026
+ogHeadline: Pede bisa kenali scam? 35% tetap kena
 ogHeadlineEn: null
-sourceReferences: ["GASA State of Scams in Indonesia 2025", "OJK/IASC data Juni 2026", "UNODC estimasi 2026"]
+sourceReferences:
+  - GASA State of Scams in Indonesia 2025
+  - OJK/IASC data Juni 2026
+  - UNODC estimasi 2026
 readingTime: 6
 featured: false
 isPremium: false

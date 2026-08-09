@@ -1,37 +1,35 @@
 ---
-title: "S1 Rebutan Loker SMK: Pendidikan Tinggi Jadi Trap"
-slug: "s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap"
-excerpt: "Lulusan S1 bersaing dengan lulusan SMA untuk lowongan yang sama. Data BPS membuktikan: semakin tinggi gelar, semakin besar kemungkinan menganggur."
-publishedAt: "2026-07-19 01:00:00+00"
-status: "published"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'S1 Rebutan Loker SMK: Pendidikan Tinggi Jadi Trap'
+slug: s1-rebutan-loker-smk-pendidikan-tinggi-jadi-trap
+excerpt: >-
+  Lulusan S1 bersaing dengan lulusan SMA untuk lowongan yang sama. Data BPS
+  membuktikan: semakin tinggi gelar, semakin besar kemungkinan menganggur.
+publishedAt: '2026-07-19 01:00:00+00'
+status: published
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Gelar S1 mahal tapi rebutan loker SMA?"
-seoMetaTitle: "S1 Rebutan Loker SMK: Pendidikan Tinggi Jadi Trap"
-seoMetaDescription: "Data BPS: lulusan S1 punya tingkat pengangguran tertinggi. Gelar mahal, kerjaan tidak ada. Baca analisis lengkapnya."
+ogHeadline: Gelar S1 mahal tapi rebutan loker SMA?
+seoMetaTitle: 'Pendidikan Tinggi Jadi Trap: S1 Rebutan Loker SMK'
+seoMetaDescription: >-
+  Data BPS: lulusan S1 punya tingkat pengangguran tertinggi. Gelar mahal,
+  kerjaan tidak ada. Baca analisis lengkapnya.
 seoKeywords:
-  - "lulusan S1 loker SMK"
-  - "tingkat pengangguran sarjana Indonesia"
-  - "pendidikan tinggi trap"
-  - "underemployment Indonesia"
-  - "mismatch skills lulusan universitas"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - lulusan S1 loker SMK
+  - tingkat pengangguran sarjana Indonesia
+  - pendidikan tinggi trap
+  - underemployment Indonesia
+  - mismatch skills lulusan universitas
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

@@ -2,6 +2,7 @@ interface AuthorSchemaProps {
   name: string;
   bio?: string;
   slug?: string;
+  jobTitle?: string;
   socialLinks?: {
     instagram?: string;
     twitter?: string;
@@ -10,7 +11,9 @@ interface AuthorSchemaProps {
   };
 }
 
-export function AuthorSchema({ name, bio, slug, socialLinks }: AuthorSchemaProps) {
+export type { AuthorSchemaProps };
+
+export function AuthorSchema({ name, bio, slug, jobTitle, socialLinks }: AuthorSchemaProps) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
   const sameAs: string[] = [];
@@ -23,6 +26,7 @@ export function AuthorSchema({ name, bio, slug, socialLinks }: AuthorSchemaProps
     '@context': 'https://schema.org',
     '@type': 'Person',
     name,
+    ...(jobTitle && { jobTitle }),
     ...(bio && { description: bio }),
     ...(slug && { url: `${siteUrl}/penulis/${slug}` }),
     ...(sameAs.length > 0 && { sameAs }),

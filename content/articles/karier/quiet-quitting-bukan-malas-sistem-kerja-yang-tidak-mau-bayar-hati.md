@@ -1,37 +1,41 @@
 ---
-title: "Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati"
-slug: "quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati"
-excerpt: "60% Gen Z melakukan quiet quitting. Bukan karena malas, tapi karena sistem kerja mengeksploitasi tanpa batas dan tidak memberi alasan untuk peduli."
-publishedAt: "2026-07-25 05:00:00+00"
-status: "published"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'Quiet Quitting Bukan Malas, Sistem Kerja Nggak Mau Bayar Hati'
+slug: quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati
+excerpt: >-
+  60% Gen Z melakukan quiet quitting. Bukan karena malas, tapi karena sistem
+  kerja mengeksploitasi tanpa batas dan tidak memberi alasan untuk peduli.
+publishedAt: '2026-07-25 05:00:00+00'
+status: published
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Quiet quitting bukan malas, sistemnya yang salah"
-seoMetaTitle: "Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Bayar"
-seoMetaDescription: "60% Gen Z quiet quitting. Bukan malas, tapi sistem kerja mengeksploitasi tanpa batas. 68% karena work-life balance yang hancur."
+ogHeadline: 'Quiet quitting bukan malas, sistemnya yang salah'
+seoMetaTitle: 'Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Bayar'
+seoMetaDescription: >-
+  60% Gen Z quiet quitting. Bukan malas, tapi sistem kerja mengeksploitasi tanpa
+  batas. 68% karena work-life balance yang hancur.
 seoKeywords:
-  - "quiet quitting gen z Indonesia"
-  - "fenomena quiet quitting"
-  - "gen z kerja setengah hati"
-  - "work life balance gen z"
-  - "disengagement kerja gen z"
+  - quiet quitting gen z Indonesia
+  - fenomena quiet quitting
+  - gen z kerja setengah hati
+  - work life balance gen z
+  - disengagement kerja gen z
 sourceReferences:
-  - "Gallup State of the Global Workplace 2026: 60% Gen Z quiet quitting"
-  - "Randstad Workmonitor 2026: 68% Gen Z quiet quit karena WLB"
-  - "ZipDo Workplace Trends 2026: Data disengagement Gen Z"
-  - "Jakpat/GoodStats Apr 2026: 63% Gen Z merasa kompetisi kerja ketat"
-  - "SERUJI Survey 2026: Gen Z dan engagement kerja"
-  - "McKinsey 2026: 48% Gen Z butuh fleksibilitas kerja"
+  - 'Gallup State of the Global Workplace 2026: 60% Gen Z quiet quitting'
+  - 'Randstad Workmonitor 2026: 68% Gen Z quiet quit karena WLB'
+  - 'ZipDo Workplace Trends 2026: Data disengagement Gen Z'
+  - 'Jakpat/GoodStats Apr 2026: 63% Gen Z merasa kompetisi kerja ketat'
+  - 'SERUJI Survey 2026: Gen Z dan engagement kerja'
+  - 'McKinsey 2026: 48% Gen Z butuh fleksibilitas kerja'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

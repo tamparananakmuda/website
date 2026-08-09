@@ -1,45 +1,78 @@
 ---
-title: "Gojek Grab Bukan Jadi Bos Sendiri, Algoritma yang Jadi Bosmu"
-slug: "gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu"
-excerpt: "Perpres 27/2026 potongan turun ke 8%, BPJS wajib. Tapi algoritma tetap atur tarif, jam, rute. Mitra ojol bukan entrepreneur, pekerja tanpa kendali."
-publishedAt: "2026-08-02T10:00:00.000Z"
+title: 'Gojek Grab Bukan Jadi Bos Sendiri, Algoritma yang Jadi Bosmu'
+slug: gojek-grab-bukan-jadi-bos-algoritma-yang-jadi-bosmu
+excerpt: >-
+  Perpres 27/2026 potongan turun ke 8%, BPJS wajib. Tapi algoritma tetap atur
+  tarif, jam, rute. Mitra ojol bukan entrepreneur, pekerja tanpa kendali.
+publishedAt: '2026-08-02T10:00:00.000Z'
 status: published
-category: "teknologi"
-subcategory: "analisis-fenomena"
-author: "yovie-setiawan"
+category: teknologi
+subcategory: analisis-fenomena
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["gojek", "grab", "ojol", "gig-economy", "perpres-27", "algoritma", "pekerja-online"]
-ogHeadline: "Jadi bos sendiri? Bosmu algoritma, bukan kamu"
+povTag: kontra-narasi
+tags:
+  - gojek
+  - grab
+  - ojol
+  - gig-economy
+  - perpres-27
+  - algoritma
+  - pekerja-online
+ogHeadline: 'Jadi bos sendiri? Bosmu algoritma, bukan kamu'
 ogHeadlineEn: null
-seoMetaTitle: "Gojek Grab Bukan Jadi Bos Sendiri, Algoritma yang Jadi Bosmu"
-seoMetaDescription: "Perpres 27/2026 potongan turun ke 8%, BPJS wajib. Tapi algoritma tetap tentukan tarif, jam, rute. Mitra bukan entrepreneur, pekerja tanpa kendali."
+seoMetaTitle: 'Gojek Grab: Algoritma yang Jadi Bosmu'
+seoMetaDescription: >-
+  Perpres 27/2026 potongan turun ke 8%, BPJS wajib. Tapi algoritma tetap
+  tentukan tarif, jam, rute. Mitra bukan entrepreneur, pekerja tanpa kendali.
 seoKeywords:
-  - "gaji mitra gojek 2026"
-  - "gig economy Indonesia"
-  - "pendapatan driver grab"
-  - "Perpres 27 2026 ojol"
-  - "kerja gojek grab untung tidak"
-  - "mitra gojek bukan karyawan"
-  - "perlindungan pekerja online"
+  - gaji mitra gojek 2026
+  - gig economy Indonesia
+  - pendapatan driver grab
+  - Perpres 27 2026 ojol
+  - kerja gojek grab untung tidak
+  - mitra gojek bukan karyawan
+  - perlindungan pekerja online
 sourceReferences:
-  - url: "https://www.cnbcindonesia.com/tech/20260624122725-37-745325/pernyataan-resmi-grab-gojek-soal-potongan-ojol-8-mulai-1-juli-2026"
-    label: "CNBC Indonesia: Pernyataan resmi Grab-Gojek potongan ojol 8% mulai 1 Juli 2026"
-  - url: "https://www.kompas.id/artikel/goto-ikuti-perpres-nomor-27-tahun-2026-pengemudi-goride-bakal-dapat-92-persen-komisi"
-    label: "Kompas: Skema bagi hasil Gojek 92% pengemudi, 8% perusahaan (Perpres 27/2026)"
-  - url: "https://rri.co.id/nasional/2514270/mulai-1-juli-2026-gojek-dan-grab-berlakukan-komisi-8-persen-untuk-pengemudi-ojol"
-    label: "RRI: Gojek & Grab berlakukan komisi 8% efektif 1 Juli 2026"
-  - url: "https://rm.id/baca-berita/nasional/309459/teken-perpres-ojol-prabowo-patok-pendapatan-pengemudi-92-persen-berhak-thr"
-    label: "Rakyat Merdeka: Perpres 27/2026 - pendapatan 92%, BPJS, THR, jaminan kecelakaan kerja"
-  - url: "https://kiakrikil.com/gaji-mitra-gojek-2026-besaran-penghasilan-dan-tips-meningkatkan/"
-    label: "KiaKrikil: Gaji mitra Gojek 2026 - GoRide Rp4,5-6 juta/bln, GoCar Rp6-9 juta/bln bersih"
-  - url: "https://rri.co.id/kesehatan/2383105/presiden-prabowo-pastikan-pengemudi-ojek-daring-terlindungi-program-jkn"
-    label: "RRI: Perpres 27/2026 wajibkan JKN untuk mitra ojol, 36,4 juta peserta aktif"
-  - url: "https://www.kompasiana.com/alifarjuli9327/6a45fecb34777c430015c602/analisis-hukum-dan-ham-perpres-27-2026-tentang-perlindungan-pekerja-transportasi-online"
-    label: "Kompasiana: Analisis hukum Perpres 27/2026 - JKK, JKM, JHT, JKP untuk pekerja transportasi online"
-  - url: "https://katadata.co.id/digital/e-commerce/6a4f3d498b75e/saldo-seller-tiktok-shop-diduga-tertahan-rp-3-triliun-ini-langkah-pemerintah"
-    label: "Katadata: 500 seller TikTok Shop saldo tertahan Rp3 triliun (cross-reference platform account freezing pattern)"
+  - url: >-
+      https://www.cnbcindonesia.com/tech/20260624122725-37-745325/pernyataan-resmi-grab-gojek-soal-potongan-ojol-8-mulai-1-juli-2026
+    label: >-
+      CNBC Indonesia: Pernyataan resmi Grab-Gojek potongan ojol 8% mulai 1 Juli
+      2026
+  - url: >-
+      https://www.kompas.id/artikel/goto-ikuti-perpres-nomor-27-tahun-2026-pengemudi-goride-bakal-dapat-92-persen-komisi
+    label: >-
+      Kompas: Skema bagi hasil Gojek 92% pengemudi, 8% perusahaan (Perpres
+      27/2026)
+  - url: >-
+      https://rri.co.id/nasional/2514270/mulai-1-juli-2026-gojek-dan-grab-berlakukan-komisi-8-persen-untuk-pengemudi-ojol
+    label: 'RRI: Gojek & Grab berlakukan komisi 8% efektif 1 Juli 2026'
+  - url: >-
+      https://rm.id/baca-berita/nasional/309459/teken-perpres-ojol-prabowo-patok-pendapatan-pengemudi-92-persen-berhak-thr
+    label: >-
+      Rakyat Merdeka: Perpres 27/2026 - pendapatan 92%, BPJS, THR, jaminan
+      kecelakaan kerja
+  - url: >-
+      https://kiakrikil.com/gaji-mitra-gojek-2026-besaran-penghasilan-dan-tips-meningkatkan/
+    label: >-
+      KiaKrikil: Gaji mitra Gojek 2026 - GoRide Rp4,5-6 juta/bln, GoCar Rp6-9
+      juta/bln bersih
+  - url: >-
+      https://rri.co.id/kesehatan/2383105/presiden-prabowo-pastikan-pengemudi-ojek-daring-terlindungi-program-jkn
+    label: >-
+      RRI: Perpres 27/2026 wajibkan JKN untuk mitra ojol, 36,4 juta peserta
+      aktif
+  - url: >-
+      https://www.kompasiana.com/alifarjuli9327/6a45fecb34777c430015c602/analisis-hukum-dan-ham-perpres-27-2026-tentang-perlindungan-pekerja-transportasi-online
+    label: >-
+      Kompasiana: Analisis hukum Perpres 27/2026 - JKK, JKM, JHT, JKP untuk
+      pekerja transportasi online
+  - url: >-
+      https://katadata.co.id/digital/e-commerce/6a4f3d498b75e/saldo-seller-tiktok-shop-diduga-tertahan-rp-3-triliun-ini-langkah-pemerintah
+    label: >-
+      Katadata: 500 seller TikTok Shop saldo tertahan Rp3 triliun
+      (cross-reference platform account freezing pattern)
 readingTime: 7
 featured: false
 isPremium: false
@@ -47,8 +80,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

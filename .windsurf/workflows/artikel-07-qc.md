@@ -103,6 +103,27 @@ const og = a.og_headline || '';
 if (!og) issues.push('og_headline: MISSING');
 else if (og === title) issues.push('og_headline == title: must be different');
 else if (og.length > 50) issues.push('og_headline length: ' + og.length + ' (max 50)');
+// === PUNCHY TITLE CHECKS (20 prinsip riset) ===
+const titleWords = title.split(/\s+/).filter(w => w.length > 0);
+if (titleWords.length > 10) issues.push('Title word count: ' + titleWords.length + ' (max 10, ideal 5-8)');
+const formalWords = ['tidak','tidakkah','memberi','memberikan','alasan','kerugian','tidakkah','demikian','begini','beginilah','sedemikian'];
+const foundFormal = formalWords.filter(w => title.toLowerCase().includes(w));
+if (foundFormal.length) issues.push('Title formal words (#1): ' + foundFormal.join(', ') + ' -> pakai kata umum (Nggak, Rugi)');
+const fearWords = ['bahaya','mengerikan','mengancam','menakutkan','menghantui','mematikan','fatal'];
+const foundFear = fearWords.filter(w => title.toLowerCase().includes(w));
+if (foundFear.length) issues.push('Title fear words (#16): ' + foundFear.join(', ') + ' -> fear = avoidance, pakai sadness/loss words (Rugi, Hilang)');
+const superlatives = ['terbaik','terhebat','terpercaya','hebat','amazing','best','luar biasa','fantastis','spektakuler'];
+const foundSuper = superlatives.filter(w => title.toLowerCase().includes(w));
+if (foundSuper.length) issues.push('Title positive superlatives (#19): ' + foundSuper.join(', ') + ' -> decrease CTR, nyatakan temuan');
+if (/\b(kita|kami)\b/i.test(title)) issues.push('Title uses "kita/kami" (#17): negatively associated, pakai "aku" atau "kamu"');
+const clickbait = ['tidak akan percaya','wajib tahu','wajib baca','anda tidak','bocor rahasia','rahasia terungkap','simak ini'];
+const foundClick = clickbait.filter(w => title.toLowerCase().includes(w));
+if (foundClick.length) issues.push('Title clickbait pattern (#18): ' + foundClick.join(', ') + ' -> non-clickbait 2.22x more clicks');
+const numberWordMatch = title.match(/\b(tujuh|delapan|sembilan|sepuluh|lima|enam|tiga|empat|satu|dua)\b/i);
+if (numberWordMatch) issues.push('Title uses number word (#12): "' + numberWordMatch[0] + '" -> pakai digit (7, 5, 3)');
+const explicitFomo = ['jangan sampai','segera baca','sebelum terlambat','limited','terbatas'];
+const foundFomo = explicitFomo.filter(w => title.toLowerCase().includes(w));
+if (foundFomo.length) issues.push('Title explicit FOMO (#11): ' + foundFomo.join(', ') + ' -> NOT effective, subtle scarcity only');
 const refs = a.source_references || [];
 if (!Array.isArray(refs)) issues.push('source_references: must be array');
 const numberSentences = sentences.filter(s => /\d+%|\d+\s*(triliun|miliar|juta|ribu)|Rp[\d.,]+|\d+\s*(persen|%)/i.test(s));
@@ -331,6 +352,8 @@ Jika score < 9: fix sebelum lanjut ke 08-humanizer.
 - [ ] SEO title tidak ada suffix "| TAM"
 - [ ] Tidak ada kalimat duplikat (duplicate sentence check)
 - [ ] Math consistency: rasio/fraksi cocok dengan angka raw (e.g. "2 dari 3" = ~67%, bukan 58%)
+- [ ] Hook & Foreshadow formula audit: og_headline berbeda dari title + max 50 char, excerpt sebagai thumbnail caption max 160 char, meta description mengandung Hook + Foreshadow element max 160 char
+- [ ] Punchy Title Audit (20 prinsip): no formal words, no fear words, no superlatives, no "kita/kami", no clickbait pattern, no number words, no explicit FOMO, max 10 kata, ada active verb
 - [ ] QC audit CLEAN (0 S1, 0 S2, max 3 S3)
 - [ ] Source Quality Audit: 6 checks passed
 - [ ] Citation Density: min 2 per 1.000 kata, 100% data attribution

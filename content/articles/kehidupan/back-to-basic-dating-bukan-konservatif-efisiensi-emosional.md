@@ -1,39 +1,62 @@
 ---
-title: "Back to Basic Dating: Gen Z Capai Situationship, Bukan Konservatif"
-slug: "back-to-basic-dating-bukan-konservatif-efisiensi-emosional"
-excerpt: "Tagar #HubunganSehat miliaran views. Gen Z bukan tiba-tiba konservatif. Mereka capai dengan situationship, ghosting, dan hubungan ambigu yang menguras energi."
-publishedAt: "2026-08-03T05:00:00.000Z"
+title: 'Back to Basic Dating: Gen Z Capai Situationship, Bukan Konservatif'
+slug: back-to-basic-dating-bukan-konservatif-efisiensi-emosional
+excerpt: >-
+  Tagar #HubunganSehat miliaran views. Gen Z bukan tiba-tiba konservatif. Mereka
+  capai dengan situationship, ghosting, dan hubungan ambigu yang menguras
+  energi.
+publishedAt: '2026-08-03T05:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
-tags: ["back-to-basic-dating", "gen-z", "situationship", "hubungan-sehat", "percintaan", "kesehatan-mental"]
-ogHeadline: "Gen z lelah hubungan ambigu, ini reaksi alami"
+povTag: refleksi
+tags:
+  - back-to-basic-dating
+  - gen-z
+  - situationship
+  - hubungan-sehat
+  - percintaan
+  - kesehatan-mental
+ogHeadline: 'Gen z lelah hubungan ambigu, ini reaksi alami'
 ogHeadlineEn: null
-seoMetaTitle: "Back to Basic Dating: Gen Z Capai Situationship, Bukan Konservatif"
-seoMetaDescription: "Gen Z lelah hubungan tanpa kepastian. Back to basic dating bukan gerakan konservatif, itu reaksi kelelahan emosional dari sistem dating modern."
+seoMetaTitle: 'Back to Basic Dating: Gen Z Capai Situationship'
+seoMetaDescription: >-
+  Gen Z lelah hubungan tanpa kepastian. Back to basic dating bukan gerakan
+  konservatif, itu reaksi kelelahan emosional dari sistem dating modern.
 seoKeywords:
-  - "gen z hubungan sehat 2026"
-  - "back to basic dating"
-  - "gen z situationship"
-  - "tren percintaan gen z 2026"
-  - "gen z toxic relationship"
-  - "gen z komunikasi terbuka hubungan"
-  - "gen z menunda pernikahan"
+  - gen z hubungan sehat 2026
+  - back to basic dating
+  - gen z situationship
+  - tren percintaan gen z 2026
+  - gen z toxic relationship
+  - gen z komunikasi terbuka hubungan
+  - gen z menunda pernikahan
 sourceReferences:
-  - url: "https://www.idntimes.com/life/relationship/tren-back-to-basic-dating-kembali-populer-di-kalangan-milenial-dan-gen-z-c1c2-01-qnqcw-923809"
-    label: "IDN Times: Tren back to basic dating, 5 alasan kenapa muncul, Jul 2026"
-  - url: "https://www.kompas.id/artikel/relasi-romantis-gen-z"
-    label: "Kompas.id: Hinge 47% Gen Z gugup kencan, Tinder menikah prioritas ke-10, AIBM 44% Gen Z laki-laki tidak pacaran remaja"
-  - url: "https://lifestyle.kompas.com/read/2026/03/03/143300220/tekanan-media-sosial-bikin-gen-z-sulit-bangun-hubungan-sehat"
-    label: "Kompas/PDSKJI dr. Lahargo Kembaren: 4 pilar hubungan sehat, tekanan media sosial"
-  - url: "https://www.fajarsukabumi.com/ragam/1452876265/tren-percintaan-2026-gen-z-pilih-hubungan-sehat-dan-komunikasi-terbuka"
-    label: "FajarSukabumi: Dr. Rina Anindita, #HubunganSehat miliaran views TikTok, Jul 2026"
-  - url: "https://denting.id/2026/03/02/gen-z-terjebak-toxic-relationship-simak-panduan-hubungan-sehat-dari-psikiater-dr-lahargo-kembaren/"
-    label: "Denting.id/PDSKJI: 4 pilar hubungan sehat, red flags, overthinking dari chat"
+  - url: >-
+      https://www.idntimes.com/life/relationship/tren-back-to-basic-dating-kembali-populer-di-kalangan-milenial-dan-gen-z-c1c2-01-qnqcw-923809
+    label: 'IDN Times: Tren back to basic dating, 5 alasan kenapa muncul, Jul 2026'
+  - url: 'https://www.kompas.id/artikel/relasi-romantis-gen-z'
+    label: >-
+      Kompas.id: Hinge 47% Gen Z gugup kencan, Tinder menikah prioritas ke-10,
+      AIBM 44% Gen Z laki-laki tidak pacaran remaja
+  - url: >-
+      https://lifestyle.kompas.com/read/2026/03/03/143300220/tekanan-media-sosial-bikin-gen-z-sulit-bangun-hubungan-sehat
+    label: >-
+      Kompas/PDSKJI dr. Lahargo Kembaren: 4 pilar hubungan sehat, tekanan media
+      sosial
+  - url: >-
+      https://www.fajarsukabumi.com/ragam/1452876265/tren-percintaan-2026-gen-z-pilih-hubungan-sehat-dan-komunikasi-terbuka
+    label: >-
+      FajarSukabumi: Dr. Rina Anindita, #HubunganSehat miliaran views TikTok,
+      Jul 2026
+  - url: >-
+      https://denting.id/2026/03/02/gen-z-terjebak-toxic-relationship-simak-panduan-hubungan-sehat-dari-psikiater-dr-lahargo-kembaren/
+    label: >-
+      Denting.id/PDSKJI: 4 pilar hubungan sehat, red flags, overthinking dari
+      chat
 readingTime: 7
 featured: false
 isPremium: false
@@ -41,8 +64,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

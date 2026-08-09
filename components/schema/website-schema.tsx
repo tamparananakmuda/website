@@ -12,6 +12,11 @@ export function WebsiteSchema() {
     publisher: {
       '@type': 'Organization',
       name: 'TAMPARAN ANAK MUDA',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`,
+      },
     },
   };
 

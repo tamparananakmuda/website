@@ -1,35 +1,35 @@
 ---
-title: "Generasi Nanti Dulu: Bukan Malas, Gaji yang Tidak Mau Tumbuh"
-slug: "generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh"
-excerpt: "55% Gen Z menunda nikah, beli rumah, punya anak karena gaji tidak kejar biaya hidup. Bukan masalah planning, tapi sistem ekonomi yang tidak berpihak."
-publishedAt: "2026-07-17 05:00:00+00"
-status: "published"
-category: "uang"
+title: 'Generasi Nanti Dulu: Bukan Malas, Gaji Nggak Mau Tumbuh'
+slug: generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh
+excerpt: >-
+  55% Gen Z menunda nikah, beli rumah, punya anak karena gaji tidak kejar biaya
+  hidup. Bukan masalah planning, tapi sistem ekonomi yang tidak berpihak.
+publishedAt: '2026-07-17 05:00:00+00'
+status: published
+category: uang
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: "Gaji kamu tidak akan pernah kejar biaya hidup"
-seoMetaTitle: "Generasi Nanti Dulu: Gaji Tidak Kejar Biaya Hidup"
-seoMetaDescription: "55% Gen Z menunda nikah dan beli rumah karena alasan finansial. Bukan masalah mindset, tapi gaji yang tumbuh lebih lambat dari biaya hidup."
+ogHeadline: Gaji kamu tidak akan pernah kejar biaya hidup
+seoMetaTitle: 'Generasi Nanti Dulu: Gaji Tidak Kejar Biaya Hidup'
+seoMetaDescription: >-
+  55% Gen Z menunda nikah dan beli rumah karena alasan finansial. Bukan masalah
+  mindset, tapi gaji yang tumbuh lebih lambat dari biaya hidup.
 seoKeywords:
-  - "gen z tunda nikah finansial"
-  - "generasi nanti dulu"
-  - "biaya hidup gen z"
-  - "gaji vs biaya hidup indonesia"
-  - "deloitte gen z survey 2026"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - gen z tunda nikah finansial
+  - generasi nanti dulu
+  - biaya hidup gen z
+  - gaji vs biaya hidup indonesia
+  - deloitte gen z survey 2026
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

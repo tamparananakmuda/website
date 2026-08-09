@@ -1,41 +1,37 @@
 ---
-title: "300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu"
-slug: "300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu"
-excerpt: "Ditolak 300 kali bukan anomali. Data BPS mencatat pengangguran sarjana tertinggi di semua jenjang. Masalahnya struktur, bukan sikap."
-publishedAt: "2026-07-20 01:00:00+00"
-status: "published"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: '300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Nggak Mau Kamu'
+slug: 300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu
+excerpt: >-
+  Ditolak 300 kali bukan anomali. Data BPS mencatat pengangguran sarjana
+  tertinggi di semua jenjang. Masalahnya struktur, bukan sikap.
+publishedAt: '2026-07-20 01:00:00+00'
+status: published
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "300 lamaran ditolak, bukan salah kamu"
-seoMetaTitle: "300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu"
-seoMetaDescription: "Ditolak 300 kali bukan anomali. Data BPS mencatat pengangguran sarjana tertinggi di semua jenjang. Masalahnya struktur, bukan sikap."
+ogHeadline: '300 lamaran ditolak, bukan salah kamu'
+seoMetaTitle: '300 Lamaran Ditolak: Sistemnya yang Nggak Mau Kamu'
+seoMetaDescription: >-
+  Ditolak 300 kali bukan anomali. Data BPS mencatat pengangguran sarjana
+  tertinggi di semua jenjang. Masalahnya struktur, bukan sikap.
 seoKeywords:
-  - "lamaran ditolak"
-  - "pengangguran sarjana"
-  - "pasar kerja indonesia"
-  - "lulusan UGM"
-  - "job portal"
-  - "networking"
-  - "BPS pengangguran"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - lamaran ditolak
+  - pengangguran sarjana
+  - pasar kerja indonesia
+  - lulusan UGM
+  - job portal
+  - networking
+  - BPS pengangguran
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

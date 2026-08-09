@@ -35,15 +35,116 @@ Dari `/seri-03-research`
 ## [Teaser ke part berikutnya, HANYA jika ada part selanjutnya]
 ```
 
-## Hook Formulas TAM (pilih 1 per part)
+## Hook & Foreshadow Formula System (Level: Series + Episode)
 
-| Formula | Contoh |
-|---------|--------|
-| **Kontra-narasi** | "Semua bilang kerja keras = sukses. Data bilang sebaliknya." |
-| **Data shock** | "74% lulusan S1 menganggur menurut BPS 2025. Itu 3 dari 4 teman kamu." |
-| **Pertanyaan provokatif** | "Kapan terakhir kali kamu bikin keputusan tanpa tanya media sosial dulu?" |
-| **Observasi spesifik** | "Gue perhatikan temen-temen yang lahir 1997-2000 punya pola yang sama: semua nunggu 'momen yang tepat' yang nggak pernah datang." |
-| **Refleksi personal** | "Gue dulu pikir investasi itu buat orang berduit. Sampai gue sadar, orang berduit itu karena investasi." |
+Reference lengkap: `Hook & Foreshadow by Content Level.md` (30 Hook formula + 20 Foreshadow formula)
+
+### Title Seri (dari step 01-idea, refine di sini)
+
+Title seri sudah dipilih di step 01-idea berdasar 20 prinsip riset punchy (simplicity, negativity, contrast, curiosity gap, concreteness, brevity, active verb, 2nd person, rhythm, emotional arousal, loss framing, digits, odd numbers, forward referencing, unresolved emotion, avoid fear, 1st person singular, avoid clickbait, avoid superlatives, alliteration). Di step 04-outline, refine title menjadi final title seri (pastikan masih punchy, max 10 kata, bahasa orang muda).
+
+### Series Hook (dari step 01-idea, sudah dipilih)
+
+Series Hook formula sudah dipilih di step 01-idea untuk og_headline seri dan series promise opening. BUKAN untuk title. Di step 04-outline, finalisasi og_headline dan series promise dengan formula yang sama.
+
+### Episode Hook Formula (pilih 1 per part dari 30 Hook formula)
+
+Setiap part punya Episode Hook sendiri. Episode Hook berbeda dari Series Hook. Series Hook = hook seluruh seri, Episode Hook = hook part tersebut.
+
+| # | Nama | Template Opening |
+|---|------|------------------|
+| 01 | Expectation vs Reality | "Kamu pikir [X]. Kenyataannya [Y]." |
+| 02 | Data Shock | "[Angka spesifik + sumber]. Angka itu [konteks yang mengejutkan]." |
+| 03 | Provocative Question | "Kapan terakhir kali kamu [X]?" |
+| 04 | Personal Observation | "Saya perhatikan, dari [X], hanya [Y] yang [Z]." |
+| 05 | Counter-Narrative | "Semua bilang [X]. Tapi [data/fakta] bilang sebaliknya." |
+| 06 | Direct Slap | "Kamu tidak [X]. Kamu cuma [Y]." |
+| 07 | Myth Breaking | "Kalau kamu masih percaya [X], saatnya berpikir ulang." |
+| 08 | Time Pressure | "Dalam [X] tahun, [Y] akan [Z]. Kamu sudah siap?" |
+| 09 | Contradiction | "[X] itu [Y]. Tapi [X] juga [Z]." |
+| 10 | False Belief | "Kesalahan terbesar tentang [X] yang dilakukan hampir semua orang." |
+| 11 | Future Prediction | "Dalam 5 tahun, [X] tidak akan ada lagi. Kamu akan [Y]." |
+| 12 | Comparison Shock | "[X] lebih [Y] dari [Z]. Dan tidak ada yang bicara." |
+| 13 | Definition Reset | "[Kata umum] bukan berarti [asumsi umum]. [Kata umum] berarti [definisi tajam]." |
+| 14 | Pattern Recognition | "Ada pola yang muncul: [X], [Y], [Z]. Semua pointing ke [A]." |
+| 15 | Cost of Ignorance | "Setiap hari kamu tidak tahu ini, kamu rugi [X]." |
+| 16 | Status Quo Attack | "[X] sudah jalan [Y] tahun. Hasilnya? [Z]. Saatnya berhenti." |
+| 17 | Before-After | "Sebelum [X], kamu [Y]. Setelah [X], kamu [Z]. Bedanya [A]." |
+| 18 | Paradox | "Makin kamu [X], makin [Y]. Itu bukan kebetulan." |
+| 19 | Reframe | "Masalahmu bukan [X]. Masalahmu adalah [Y]." |
+| 20 | Data Contradiction | "[Sumber A] bilang [X]. [Sumber B] bilang [Y]. Keduanya benar." |
+| 21 | Question Stack | "Kenapa [X]? Kenapa [Y]? Kenapa [Z]? Jawabannya sama." |
+| 22 | Hidden Truth | "Yang tidak pernah diajarkan tentang [X]." |
+| 23 | Uncomfortable Truth | "Tidak ada cara halus untuk bilang ini: [X]." |
+| 24 | Assumption Inversion | "Dan jika [asumsi] salah? Maka [konsekuensi]." |
+| 25 | Trend Reversal | "Selama [X] tahun, [trend A]. Tahun ini, [trend B]." |
+| 26 | System Failure | "Sistem [X] dirancang untuk [Y]. Tapi untuk [Z], sistemnya gagal." |
+| 27 | Personal Cost | "Aku tahu ini karena [X]. Harganya [Y]." |
+| 28 | Silent Epidemic | "Tidak ada yang membicarakan [X]. Tapi [data] menunjukkan [Y]." |
+| 29 | Generational Divide | "Orang tua kamu [X]. Kamu [Y]. Keduanya valid, tapi [Z]." |
+| 30 | Meta Hook | "Artikel ini akan membuat kamu [X]. Kalau kamu tidak siap, jangan baca." |
+
+**Aturan Episode Hook:**
+- Hook progression: Episode Hook setiap part harus berbeda dan semakin tajam (lihat Cross-Part Flow Audit)
+- Part 1 hook: paling broad, menarik widest audience
+- Part tengah hook: semakin spesifik dan deep
+- Part terakhir hook: paling provokatif, payoff dari series promise
+- Jangan repetisi formula di part berurutan (variasikan nomor formula)
+
+### Episode Foreshadow Formula (pilih 1 per part dari 20 Foreshadow formula)
+
+Foreshadow dipakai di akhir section untuk tease section berikutnya, atau di conclusion untuk tease part berikutnya.
+
+| # | Nama | Template |
+|---|------|----------|
+| 01 | Promise | "Di akhir part ini, kamu akan paham [X]." |
+| 02 | Curiosity | "Masalahnya bukan [X]. Ada [Y] yang tidak kamu sadari." |
+| 03 | Cliffhanger | "Tapi itu baru permukaan. Yang lebih dalam ada di section berikutnya." |
+| 04 | Setup-Payoff | "Ingat [X] di awal. Nanti kamu akan tahu kenapa." |
+| 05 | Warning | "Sebelum kamu lanjut, ada yang perlu kamu tahu: [X]." |
+| 06 | Transformation | "Setelah memahami ini, cara kamu melihat [X] akan berubah." |
+| 07 | Question Tease | "Pertanyaannya bukan [X]. Pertanyaannya adalah [Y]." |
+| 08 | Data Tease | "Dan angka ini bukan yang paling mengejutkan." |
+| 09 | Pattern Tease | "Kalau kamu lihat polanya, [X] bukan kebetulan." |
+| 10 | Contradiction Tease | "Tapi tunggu. [X] juga [Y]. Bagaimana mungkin?" |
+| 11 | Personal Tease | "Aku juga dulu [X]. Sampai [Y] terjadi." |
+| 12 | Relevance Tease | "Ini bukan tentang [X]. Ini tentang [Y]. Dan [Y] menyangkut kamu." |
+| 13 | Urgency Tease | "Setiap hari kamu tunda, [X] makin [Y]." |
+| 14 | Inversion Tease | "Kamu pikir [X] adalah masalah. Sebenarnya [X] adalah gejala." |
+| 15 | Connection Tease | "[X] dan [Y] terlihat tidak related. Tapi keduanya punya akar yang sama." |
+| 16 | Stakes Tease | "Yang dipertaruhkan bukan [X]. Yang dipertaruhkan adalah [Y]." |
+| 17 | Next Step Tease | "Memahami ini adalah langkah pertama. Langkah kedua lebih sulit." |
+| 18 | Personal | "Aku dulu juga berpikir seperti itu. Sampai [X]." |
+| 19 | Reframe Tease | "Masalahnya bukan [X]. Masalahnya lebih besar dari itu." |
+| 20 | Resolution Tease | "Ada jalan keluar. Tapi bukan yang kamu kira." |
+
+### Next Tease / Bridge Formula (untuk teaser antar part)
+
+Next Tease adalah Foreshadow khusus yang menghubungkan part N ke part N+1. Berbeda dari Episode Foreshadow (yang dipakai di dalam part), Next Tease dipakai di akhir part untuk tease part berikutnya.
+
+**Next Tease wajib untuk part 1 sampai N-1.**
+
+Pilih dari Foreshadow formula di atas (01-20), atau gunakan formula khusus Next Tease:
+
+| Formula | Template Next Tease |
+|---------|---------------------|
+| **Direct Tease** | "Di part berikutnya: [X]. [Link]" |
+| **Question Tease** | "Pertanyaannya: [X]? Jawabannya di part berikutnya. [Link]" |
+| **Cliffhanger** | "Tapi [X] bukan akhir cerita. [Y] ada di part berikutnya. [Link]" |
+| **Setup-Payoff** | "Yang kita bahas di part ini akan terhubung ke [X] di part berikutnya. [Link]" |
+| **Escalation** | "Dan ini baru [X]. [Y] lebih [Z]. Lanjut ke part berikutnya. [Link]" |
+
+**Aturan Next Tease:**
+- Next Tease part N harus dipenuhi (payoff) di hook part N+1
+- Next Tease tidak boleh spoiler penuh part berikutnya, hanya tease
+- Next Tease format: 1 kalimat + link ke part berikutnya
+- Part terakhir (N): tidak ada Next Tease, tapi boleh pakai Resolution Tease untuk tease seri lain
+
+### Thumbnail Text & Caption Formula per Part
+
+- **Thumbnail text (og_headline):** Max 50 karakter, HARUS berbeda dari title part. Function sebagai visual hook di OG image card (800x450). Pilih Hook formula berbeda dari title.
+- **Thumbnail caption (excerpt):** Max 160 karakter. Function sebagai visual foreshadow di OG image feature (1600x900). Bisa adaptasi dari Foreshadow formula pilihan.
+- **Meta description:** Max 160 karakter, mengandung Hook + Value + Foreshadow element.
 
 ## Conclusion Formulas (anti-generic, pilih 1 per part)
 
@@ -145,7 +246,12 @@ Jika `/seri-03-research` sudah rencanakan chart per part, tentukan posisi exact 
 ## Checklist
 
 - [ ] Outline per part lengkap (min 3 h2 per part)
-- [ ] Hook formula dipilih per part
+- [ ] Episode Hook formula dipilih per part (dari 30 formula, tulis nomor + nama)
+- [ ] Episode Foreshadow formula dipilih per part (dari 20 formula, tulis nomor + nama)
+- [ ] Next Tease / Bridge formula dipilih per part 1 sampai N-1 (dari 5 Next Tease formula)
+- [ ] Thumbnail text direncanakan per part (max 50 chars, berbeda dari title)
+- [ ] Thumbnail caption direncanakan per part (max 160 chars, visual foreshadow)
+- [ ] Meta description direncanakan per part dengan Hook + Foreshadow element (max 160 chars)
 - [ ] Conclusion formula dipilih per part
 - [ ] Recap format planned untuk part 2+
 - [ ] Teaser format planned untuk part 1 sampai N-1

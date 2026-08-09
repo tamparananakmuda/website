@@ -1,44 +1,76 @@
 ---
-title: "Jastip dan Reseller: Bukan Bisnis, Triage Ekonomi"
-slug: "jastip-reseller-bukan-bisnis-triage-ekonomi"
-excerpt: "87 juta orang Indonesia di sektor informal. 1 juta sarjana menganggur. Jastip dan reseller bukan bisnis, itu triage ekonomi saat kerja formal tidak ada."
-publishedAt: "2026-08-04T05:00:00.000Z"
+title: 'Jastip dan Reseller: Bukan Bisnis, Triage Ekonomi'
+slug: jastip-reseller-bukan-bisnis-triage-ekonomi
+excerpt: >-
+  87 juta orang Indonesia di sektor informal. 1 juta sarjana menganggur. Jastip
+  dan reseller bukan bisnis, itu triage ekonomi saat kerja formal tidak ada.
+publishedAt: '2026-08-04T05:00:00.000Z'
 status: published
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["jastip", "reseller", "gen-z", "sektor-informal", "ekonomi", "bisnis-online"]
-ogHeadline: "Jastip dan reseller: bisnis atau survival?"
+povTag: kontra-narasi
+tags:
+  - jastip
+  - reseller
+  - gen-z
+  - sektor-informal
+  - ekonomi
+  - bisnis-online
+ogHeadline: 'Jastip dan reseller: bisnis atau survival?'
 ogHeadlineEn: null
-seoMetaTitle: "Jastip dan Reseller: Bukan Bisnis, Triage Ekonomi"
-seoMetaDescription: "87 juta orang Indonesia di sektor informal. 1 juta sarjana menganggur. Jastip dan reseller bukan entrepreneurship, itu survival ketika kerja formal tidak ada."
+seoMetaTitle: 'Jastip dan Reseller: Triage Ekonomi Gen Z'
+seoMetaDescription: >-
+  87 juta orang Indonesia di sektor informal. 1 juta sarjana menganggur. Jastip
+  dan reseller bukan entrepreneurship, itu survival ketika kerja formal tidak
+  ada.
 seoKeywords:
-  - "bisnis reseller gen z Indonesia"
-  - "jastip online bisnis"
-  - "reseller vs kerja kantoran"
-  - "sektor informal Indonesia data"
-  - "bisnis online modal kecil gen z"
-  - "jastiper penghasilan"
-  - "ekonomi gig Indonesia data"
+  - bisnis reseller gen z Indonesia
+  - jastip online bisnis
+  - reseller vs kerja kantoran
+  - sektor informal Indonesia data
+  - bisnis online modal kecil gen z
+  - jastiper penghasilan
+  - ekonomi gig Indonesia data
 readingTime: 9
 sourceReferences:
-  - url: "https://www.cnbcindonesia.com/research/20260630055018-128-746677/fakta-pahit-6-dari-10-warga-ri-cari-nafkah-di-sektor-informal"
-    label: "CNBC Indonesia/BPS: 87,74 juta pekerja informal (59,42%) per Februari 2026, formal 59,93 juta (40,58%)"
-  - url: "https://www.cnbcindonesia.com/news/20260205130516-4-708447/jumlah-pekerja-ri-naik-jadi-14791-juta-577-berstatus-informal"
-    label: "CNBC Indonesia/BPS: 85,35 juta informal (57,70%) per November 2025, 62,57 juta formal (42,30%)"
-  - url: "https://www.cnbcindonesia.com/news/20250505122542-4-630957/terungkap-86-juta-warga-ri-kerja-jadi-driver-ojol-hingga-pedagang"
-    label: "CNBC Indonesia/BPS: 86,56 juta informal (59,40%) per Februari 2025, termasuk driver ojol, pedagang online, reseller, affiliator"
-  - url: "https://www.kompasiana.com/noviadhitarahmayanti9354/6a3df10c34777c3427480a23/lapangan-kerja-semakin-sempit-jutaan-orang-pilih-jadi-jastiper-dan-reseller"
-    label: "Kompasiana/BPS: 1 juta+ sarjana menganggur, TPT 4,85% (Agu 2025), 7,46 juta penganggur, mayoritas usia 15-24; nilai e-commerce Rp487 triliun (2024); 65% Gen Z punya side hustle (IDN Research 2024)"
-  - url: "https://www.idntimes.com/business/economy/bps-catat-pekerja-formal-di-indonesia-tembus-59-93-juta-orang-00-gshdq-f7xf2r"
-    label: "IDN Times/BPS: 147,67 juta penduduk bekerja per Februari 2026, 49,08 juta kerja tidak penuh waktu (33,23%)"
-  - url: "https://scientia.id/2026/05/31/jastip-peluang-bisnis-anak-muda-di-tengah-tren-konsumtif/"
-    label: "Scientia Indonesia: analisis akademis jastip, search cost, asymmetric information, business entity concept"
-  - url: "https://www.celios.co.id/"
-    label: "CELIOS: daerah dengan ride-hailing punya pengangguran 37% lebih rendah dan kemiskinan 18% lebih rendah"
+  - url: >-
+      https://www.cnbcindonesia.com/research/20260630055018-128-746677/fakta-pahit-6-dari-10-warga-ri-cari-nafkah-di-sektor-informal
+    label: >-
+      CNBC Indonesia/BPS: 87,74 juta pekerja informal (59,42%) per Februari
+      2026, formal 59,93 juta (40,58%)
+  - url: >-
+      https://www.cnbcindonesia.com/news/20260205130516-4-708447/jumlah-pekerja-ri-naik-jadi-14791-juta-577-berstatus-informal
+    label: >-
+      CNBC Indonesia/BPS: 85,35 juta informal (57,70%) per November 2025, 62,57
+      juta formal (42,30%)
+  - url: >-
+      https://www.cnbcindonesia.com/news/20250505122542-4-630957/terungkap-86-juta-warga-ri-kerja-jadi-driver-ojol-hingga-pedagang
+    label: >-
+      CNBC Indonesia/BPS: 86,56 juta informal (59,40%) per Februari 2025,
+      termasuk driver ojol, pedagang online, reseller, affiliator
+  - url: >-
+      https://www.kompasiana.com/noviadhitarahmayanti9354/6a3df10c34777c3427480a23/lapangan-kerja-semakin-sempit-jutaan-orang-pilih-jadi-jastiper-dan-reseller
+    label: >-
+      Kompasiana/BPS: 1 juta+ sarjana menganggur, TPT 4,85% (Agu 2025), 7,46
+      juta penganggur, mayoritas usia 15-24; nilai e-commerce Rp487 triliun
+      (2024); 65% Gen Z punya side hustle (IDN Research 2024)
+  - url: >-
+      https://www.idntimes.com/business/economy/bps-catat-pekerja-formal-di-indonesia-tembus-59-93-juta-orang-00-gshdq-f7xf2r
+    label: >-
+      IDN Times/BPS: 147,67 juta penduduk bekerja per Februari 2026, 49,08 juta
+      kerja tidak penuh waktu (33,23%)
+  - url: >-
+      https://scientia.id/2026/05/31/jastip-peluang-bisnis-anak-muda-di-tengah-tren-konsumtif/
+    label: >-
+      Scientia Indonesia: analisis akademis jastip, search cost, asymmetric
+      information, business entity concept
+  - url: 'https://www.celios.co.id/'
+    label: >-
+      CELIOS: daerah dengan ride-hailing punya pengangguran 37% lebih rendah dan
+      kemiskinan 18% lebih rendah
 ---
 
 ## Hook

@@ -1,35 +1,35 @@
 ---
-title: "Kripto Bukan Investasi Kalau Ikut FOMO"
-slug: "kripto-bukan-investasi-kalau-ikut-fomo"
-excerpt: "60 persen pasar kripto Indonesia diisi Gen Z. Tapi OJK ingatkan: partisipasi tinggi belum berarti literasi tinggi. FOMO bukan strategi investasi."
-publishedAt: "2026-07-21 10:00:00+00"
-status: "published"
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+title: Kripto Bukan Investasi Kalau Ikut FOMO
+slug: kripto-bukan-investasi-kalau-ikut-fomo
+excerpt: >-
+  60 persen pasar kripto Indonesia diisi Gen Z. Tapi OJK ingatkan: partisipasi
+  tinggi belum berarti literasi tinggi. FOMO bukan strategi investasi.
+publishedAt: '2026-07-21 10:00:00+00'
+status: published
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Beli kripto karena FOMO? Itu spekulasi"
-seoMetaTitle: "Kripto Bukan Investasi Kalau Ikut FOMO"
-seoMetaDescription: "60 persen pasar kripto Indonesia diisi Gen Z. Tapi OJK ingatkan: partisipasi tinggi belum berarti literasi tinggi. FOMO bukan strategi investasi."
+ogHeadline: Beli kripto karena FOMO? Itu spekulasi
+seoMetaTitle: 'Kripto dan FOMO: Bukan Investasi untuk Gen Z'
+seoMetaDescription: >-
+  60 persen pasar kripto Indonesia diisi Gen Z. Tapi OJK ingatkan: partisipasi
+  tinggi belum berarti literasi tinggi. FOMO bukan strategi investasi.
 seoKeywords:
-  - "investasi kripto gen z"
-  - "FOMO kripto Indonesia"
-  - "literasi keuangan gen z"
-  - "kripto vs reksa dana"
-  - "investasi pemula Indonesia"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - investasi kripto gen z
+  - FOMO kripto Indonesia
+  - literasi keuangan gen z
+  - kripto vs reksa dana
+  - investasi pemula Indonesia
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

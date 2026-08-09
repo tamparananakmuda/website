@@ -1,34 +1,35 @@
 ---
-title: "Passive Income Bukan Tentang Malas Kerja"
-slug: "passive-income-bukan-tentang-malas-kerja"
-excerpt: "Kreator TikTok jual mimpi passive income, padahal yang mereka lakukan adalah active income. Data OJK bongkar realitasnya."
-publishedAt: "2026-07-19 10:00:00+00"
-status: "published"
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+title: Passive Income Bukan Tentang Malas Kerja
+slug: passive-income-bukan-tentang-malas-kerja
+excerpt: >-
+  Kreator TikTok jual mimpi passive income, padahal yang mereka lakukan adalah
+  active income. Data OJK bongkar realitasnya.
+publishedAt: '2026-07-19 10:00:00+00'
+status: published
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Passive income yang dijual TikTok itu bohong"
-seoMetaTitle: "Passive Income Bukan Tentang Malas Kerja"
-seoMetaDescription: "Kreator TikTok jual mimpi passive income, padahal data OJK tunjukkan mayoritas rugi. Bongkar realitasnya di sini."
+ogHeadline: Passive income yang dijual TikTok itu bohong
+seoMetaTitle: Passive Income Bukan tentang Malas Kerja
+seoMetaDescription: >-
+  Kreator TikTok jual mimpi passive income, padahal data OJK tunjukkan mayoritas
+  rugi. Bongkar realitasnya di sini.
 seoKeywords:
-  - "passive income gen z Indonesia"
-  - "passive income tanpa kerja"
-  - "investasi saham pemula"
-  - "side hustle vs passive income"
-  - "bebas finansial realistis"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - passive income gen z Indonesia
+  - passive income tanpa kerja
+  - investasi saham pemula
+  - side hustle vs passive income
+  - bebas finansial realistis
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

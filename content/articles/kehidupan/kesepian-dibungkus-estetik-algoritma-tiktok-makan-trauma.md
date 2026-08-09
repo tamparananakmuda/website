@@ -1,34 +1,35 @@
 ---
-title: "Kesepian Dibungkus Estetik: Algoritma TikTok Makan Trauma"
-slug: "kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma"
-excerpt: "TikTok menormalisasi kesepian lewat konten estetik. Gen Z menyangka itu pilihan, padahal algoritma yang membentuk kebiasaan isolasi sosial."
-publishedAt: "2026-07-19 05:00:00+00"
-status: "published"
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+title: 'Kesepian Dibungkus Estetik: Algoritma TikTok Makan Trauma'
+slug: kesepian-dibungkus-estetik-algoritma-tiktok-makan-trauma
+excerpt: >-
+  TikTok menormalisasi kesepian lewat konten estetik. Gen Z menyangka itu
+  pilihan, padahal algoritma yang membentuk kebiasaan isolasi sosial.
+publishedAt: '2026-07-19 05:00:00+00'
+status: published
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Kesepianmu bukan estetik, itu algoritma"
-seoMetaTitle: "Kesepian Dibungkus Estetik: Algoritma TikTok Makan Trauma"
-seoMetaDescription: "Konten estetik kesepian di TikTok menormalisasi isolasi sosial Gen Z. Data dan riset membongkar fenomena ini."
+ogHeadline: 'Kesepianmu bukan estetik, itu algoritma'
+seoMetaTitle: 'Kesepian Dibungkus Estetik: TikTok Makan Trauma'
+seoMetaDescription: >-
+  Konten estetik kesepian di TikTok menormalisasi isolasi sosial Gen Z. Data dan
+  riset membongkar fenomena ini.
 seoKeywords:
-  - "kesepian gen z Indonesia"
-  - "isolasi sosial media sosial"
-  - "sad girl aesthetic TikTok"
-  - "algoritma TikTok mental health"
-  - "loneliness epidemic gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - kesepian gen z Indonesia
+  - isolasi sosial media sosial
+  - sad girl aesthetic TikTok
+  - algoritma TikTok mental health
+  - loneliness epidemic gen z
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -100,3 +101,5 @@ Kalau kamu merasa kesepian adalah estetika yang kamu pilih, coba tanya diri send
 Kesepian bukan estetika. Kesepian adalah sinyal bahwa kamu butuh koneksi sosial. Jangan biarkan algoritma membungkus sinyal itu dengan filter cantik.
 
 Kalau kamu tertarik bagaimana media sosial membentuk persepsi, baca juga [bahaya self-diagnosis kesehatan mental dari TikTok](/artikel/tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental).
+
+Kalau kamu merasa kesepian memengaruhi kesehatan mental, baca juga [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti).

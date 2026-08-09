@@ -1,36 +1,37 @@
 ---
-title: "Growth Mindset Dipakai untuk Gaslighting Kamu"
-slug: "growth-mindset-gaslighting"
-excerpt: "Growth mindset dijual sebagai solusi atas segalanya. Tapi ketika dipakai untuk menyalahkan individu atas kegagalan sistem, ia berubah menjadi alat gaslighting."
-publishedAt: "2026-07-15 06:10:00+00"
-status: "published"
-category: "mindset"
+title: Growth Mindset Dipakai Gaslighting Kamu
+slug: growth-mindset-gaslighting
+excerpt: >-
+  Growth mindset dijual sebagai solusi atas segalanya. Tapi ketika dipakai untuk
+  menyalahkan individu atas kegagalan sistem, ia berubah menjadi alat
+  gaslighting.
+publishedAt: '2026-07-15 06:10:00+00'
+status: published
+category: mindset
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Mindsetmu bukan masalah, sistemnya"
-seoMetaTitle: "Growth Mindset Dipakai untuk Gaslighting Kamu"
-seoMetaDescription: "Growth mindset dijual sebagai solusi atas segalanya. Tapi ketika dipakai menyalahkan individu atas kegagalan sistem, ia berubah menjadi alat gaslighting."
+ogHeadline: 'Mindsetmu bukan masalah, sistemnya'
+seoMetaTitle: Growth Mindset Dipakai untuk Gaslighting
+seoMetaDescription: >-
+  Growth mindset dijual sebagai solusi atas segalanya. Tapi ketika dipakai
+  menyalahkan individu atas kegagalan sistem, ia berubah menjadi alat
+  gaslighting.
 seoKeywords:
-  - "growth mindset indonesia"
-  - "fixed mindset"
-  - "mindset sukses"
-  - "ilusi mindset"
-  - "self improvement indonesia"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - growth mindset indonesia
+  - fixed mindset
+  - mindset sukses
+  - ilusi mindset
+  - self improvement indonesia
+sourceReferences: []
 featured: true
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

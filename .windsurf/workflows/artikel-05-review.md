@@ -165,6 +165,22 @@ Jika 1 dimension fail: artikel tidak siap publish.
 | **Section length balance** | Apakah ada section > 500 kata atau < 100 kata? | Trim atau expand |
 | **Paragraph rhythm** | Apakah ada variasi panjang paragraph? | Mix short + long paragraphs |
 
+## Hook & Foreshadow Formula Validation
+
+Validasi bahwa formula yang dipilih di step 03-outline terimplementasi dengan benar:
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Hook formula implemented** | Apakah opening paragraf sesuai Hook formula yang dipilih di outline? | Formula terimplementasi, bukan generic hook |
+| **Foreshadow formula implemented** | Apakah transition/conclusion sesuai Foreshadow formula yang dipilih? | Formula terimplementasi, tease tidak spoiler penuh |
+| **Hook power** | Apakah hook membuat reader ingin lanjut? | Strong, bukan weak |
+| **Foreshadow payoff** | Apakah foreshadow di-bayar di section/conclusion? | Payoff ada, tidak menggantung |
+| **Thumbnail text (og_headline)** | Berbeda dari title? Max 50 char? Function sebagai visual hook? | Ya, semua kriteria terpenuhi |
+| **Thumbnail caption (excerpt)** | Max 160 char? Function sebagai visual foreshadow? | Ya, tease tidak spoiler |
+| **Meta description** | Max 160 char? Mengandung Hook + Foreshadow element? | Ya, Hook + Value + Foreshadow |
+
+Jika Hook atau Foreshadow formula tidak terimplementasi: kembali ke 04-draft untuk fix.
+
 ## Tone Audit
 
 | Check | Pertanyaan | Pass criteria |
@@ -213,6 +229,12 @@ Jika score < 7: revisi sebelum lanjut ke 06-build.
 - [ ] Bayesian Claim Audit: semua claim match evidence strength
 - [ ] E-E-A-T: 4 dimension pass
 - [ ] Structural Review: 7 checks passed
+- [ ] Hook formula implemented sesuai pilihan di outline (nomor + nama)
+- [ ] Foreshadow formula implemented sesuai pilihan di outline (nomor + nama)
+- [ ] Thumbnail text (og_headline): berbeda dari title, max 50 char, visual hook
+- [ ] Title masih punchy berdasar 20 prinsip riset (cek: no formal words, no fear words, no superlatives, no "kita/kami", ada active verb, max 10 kata, ada kontras/surprise)
+- [ ] Thumbnail caption (excerpt): max 160 char, visual foreshadow
+- [ ] Meta description: max 160 char, mengandung Hook + Foreshadow element
 - [ ] Tone Audit: 6 checks passed
 - [ ] Content Quality Score > 80
 - [ ] Review Quality Score > 7 (dari 10)

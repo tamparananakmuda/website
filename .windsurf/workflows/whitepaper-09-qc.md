@@ -214,6 +214,28 @@ if (execSection) {
 const hasFAQ = /faq|frequently asked|pertanyaan umum/i.test(body);
 if (!hasFAQ) warnings.push('No FAQ section (AI engines prefer FAQ for citation)');
 
+// === PUNCHY TITLE CHECKS (20 prinsip riset) ===
+const titleWords = title.split(/\s+/).filter(w => w.length > 0);
+if (titleWords.length > 10) issues.push('Title word count: ' + titleWords.length + ' (max 10, ideal 5-8)');
+const formalWords = ['tidak','tidakkah','memberi','memberikan','alasan','kerugian','demikian','begini','beginilah','sedemikian'];
+const foundFormal = formalWords.filter(w => title.toLowerCase().includes(w));
+if (foundFormal.length) issues.push('Title formal words (#1): ' + foundFormal.join(', ') + ' -> pakai kata umum (Nggak, Rugi)');
+const fearWords = ['bahaya','mengerikan','mengancam','menakutkan','menghantui','mematikan','fatal'];
+const foundFear = fearWords.filter(w => title.toLowerCase().includes(w));
+if (foundFear.length) issues.push('Title fear words (#16): ' + foundFear.join(', ') + ' -> fear = avoidance, pakai sadness/loss words');
+const superlatives = ['terbaik','terhebat','terpercaya','hebat','amazing','best','luar biasa','fantastis','spektakuler'];
+const foundSuper = superlatives.filter(w => title.toLowerCase().includes(w));
+if (foundSuper.length) issues.push('Title positive superlatives (#19): ' + foundSuper.join(', ') + ' -> decrease CTR');
+if (/\b(kita|kami)\b/i.test(title)) issues.push('Title uses "kita/kami" (#17): negatively associated, pakai "aku" atau "kamu"');
+const clickbait = ['tidak akan percaya','wajib tahu','wajib baca','anda tidak','bocor rahasia','rahasia terungkap','simak ini'];
+const foundClick = clickbait.filter(w => title.toLowerCase().includes(w));
+if (foundClick.length) issues.push('Title clickbait pattern (#18): ' + foundClick.join(', ') + ' -> non-clickbait 2.22x more clicks');
+const numberWordMatch = title.match(/\b(tujuh|delapan|sembilan|sepuluh|lima|enam|tiga|empat|satu|dua)\b/i);
+if (numberWordMatch) issues.push('Title uses number word (#12): "' + numberWordMatch[0] + '" -> pakai digit');
+const explicitFomo = ['jangan sampai','segera baca','sebelum terlambat','limited','terbatas'];
+const foundFomo = explicitFomo.filter(w => title.toLowerCase().includes(w));
+if (foundFomo.length) issues.push('Title explicit FOMO (#11): ' + foundFomo.join(', ') + ' -> NOT effective');
+
 // === REPORT ===
 console.log('=== QC AUDIT (WHITEPAPER) ===');
 console.log('Word count:', wc, '| h2:', h2, '| h3:', h3, '| internal links:', il);
@@ -453,6 +475,12 @@ Score: sum of weights where check passes. Target: > 7. Jika < 5, whitepaper tida
 ## Checklist
 
 - [ ] Pre-QC gate: file valid, body tidak kosong, no placeholder
+- [ ] Executive Hook formula terimplementasi (bukan generic hook, sesuai step 01)
+- [ ] Section Hook formula terimplementasi per section (bukan generic hook, sesuai step 03)
+- [ ] Section Foreshadow formula terimplementasi per section (tease tidak spoiler, sesuai step 03)
+- [ ] Bridge formula terimplementasi antar section (connect antar section, dari 5 Bridge formula)
+- [ ] Hook & Foreshadow formula audit: og_headline berbeda dari title + max 50 char, excerpt sebagai thumbnail caption max 160 char, meta description mengandung Hook + Foreshadow element max 160 char
+- [ ] Punchy Title Audit (20 prinsip): no formal words, no fear words, no superlatives, no "kita/kami", no clickbait pattern, no number words, no explicit FOMO, max 10 kata, ada active verb
 - [ ] Sitasi valid (semua angka punya sumber)
 - [ ] Data akurat dan tidak outdated
 - [ ] Tata bahasa clean

@@ -1,37 +1,43 @@
 ---
-title: "Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi Beban"
-slug: "situationship-bukan-takut-komitmen-ekonomi-yang-membuat-komitmen-jadi-beban"
-excerpt: "Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti membuat setiap komitmen jadi beban tambahan yang tidak terjangkau."
-publishedAt: "2026-07-25 10:00:00+00"
+title: 'Situationship Bukan Takut Komitmen, Ekonomi yang Bikin Beban'
+slug: situationship-bukan-takut-komitmen-ekonomi-yang-membuat-komitmen-jadi-beban
+excerpt: >-
+  Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti
+  membuat setiap komitmen jadi beban tambahan yang tidak terjangkau.
+publishedAt: '2026-07-25 10:00:00+00'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Bukan takut komitmen, ekonominya yang tak pasti"
-seoMetaTitle: "Situationship Bukan Takut Komitmen, Ekonomi yang Bikin Beban"
-seoMetaDescription: "Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti membuat komitmen jadi beban tambahan yang tidak terjangkau."
+ogHeadline: 'Bukan takut komitmen, ekonominya yang tak pasti'
+seoMetaTitle: 'Situationship: Ekonomi yang Bikin Komitmen Jadi Beban'
+seoMetaDescription: >-
+  Situationship marak di Gen Z. Bukan takut komitmen, tapi ekonomi tidak pasti
+  membuat komitmen jadi beban tambahan yang tidak terjangkau.
 seoKeywords:
-  - "situationship gen z Indonesia"
-  - "hubungan tanpa status gen z"
-  - "ketakutan komitmen gen z"
-  - "hubungan modern gen z"
-  - "gen z takut berkomitmen"
+  - situationship gen z Indonesia
+  - hubungan tanpa status gen z
+  - ketakutan komitmen gen z
+  - hubungan modern gen z
+  - gen z takut berkomitmen
 sourceReferences:
-  - "Studi FISIP UI 2026: Situationship dan paradigma hubungan Gen Z"
-  - "IDN Times Jul 2026: Liputan situationship Gen Z Indonesia"
-  - "CNN Indonesia: Tren hubungan tanpa label di kalangan muda"
-  - "Kompasiana Jul 2026: Ekonomi dan komitmen hubungan Gen Z"
-  - "Jakpat/GoodStats Apr 2026: 60% Gen Z cemas masa depan, 57% tekanan finansial"
-  - "IDN Research Institute IMGR 2027: Kelas menengah menyusut, adaptasi generasi muda"
+  - 'Studi FISIP UI 2026: Situationship dan paradigma hubungan Gen Z'
+  - 'IDN Times Jul 2026: Liputan situationship Gen Z Indonesia'
+  - 'CNN Indonesia: Tren hubungan tanpa label di kalangan muda'
+  - 'Kompasiana Jul 2026: Ekonomi dan komitmen hubungan Gen Z'
+  - 'Jakpat/GoodStats Apr 2026: 60% Gen Z cemas masa depan, 57% tekanan finansial'
+  - >-
+    IDN Research Institute IMGR 2027: Kelas menengah menyusut, adaptasi generasi
+    muda
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

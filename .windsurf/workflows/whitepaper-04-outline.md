@@ -250,14 +250,41 @@ Placement: paragraf pertama Executive Summary, sebelum hook data.
 
 Format: "[Thesis]. [Kenapa penting]. [Implikasi]."
 
-## Hook Formulas Whitepaper (data-driven, berbeda dari artikel)
+## Section Hook & Foreshadow Formula Integration (dari step 03)
 
-| Formula | Contoh |
-|---------|--------|
-| **Data shocking** | "74% lulusan kuliah Indonesia menganggur. Sistem pendidikan kita sedang mencetak pengangguran terdidik." |
-| **Kontra-narasi** | "Semua bilang freelance itu kebebasan. Data bilang 78% freelancer Indonesia tidak punya BPJS." |
-| **Trend reversal** | "Selama 10 tahun kita percaya ekonomi digital = kesempatan. 2025, data menunjukkan sebaliknya." |
-| **Question provocation** | "Kalau kerja keras = sukses, kenapa 65% Gen Z yang kerja 45+ jam seminggu ingin resign?" |
+Referensi formula yang sudah dipilih di step 03-strategy, rinciakan implementasi per section:
+
+### Executive Hook (dari step 01)
+
+- Executive Hook formula nomor [X] dipilih di step 01-idea
+- Executive Hook = hook untuk whitepaper secara keseluruhan, ditempatkan di title, Executive Summary opening, dan thumbnail
+- Pastikan Executive Hook konsisten dengan thesis dan governing thought
+
+### Section Hook Formula (dari step 03, per section)
+
+- Setiap section punya Section Hook (dipilih di step 03 dari 30 Hook formula)
+- Section Hook = hook untuk section tersebut, ditempatkan di first paragraph section
+- Hook progression: Executive Summary = Executive Hook, Analysis sections = data-driven hooks, Conclusion = synthesis hook
+
+### Section Foreshadow Formula (dari step 03, per section)
+
+- Setiap section punya Section Foreshadow (dipilih di step 03 dari 20 Foreshadow formula)
+- Section Foreshadow = tease untuk section berikutnya, ditempatkan di last paragraph section
+- Foreshadow progression: setiap section tease section berikutnya, Conclusion tease derivative content
+
+### Bridge Formula (dari step 03, antar section)
+
+- Bridge antar section dipilih di step 03 dari 5 Bridge formula
+- Bridge = transition yang connect antar section, bukan generic transition
+- Setiap transition antar section harus menggunakan Bridge formula yang dipilih
+
+### Thumbnail Text, Thumbnail Caption & Meta Description (per whitepaper)
+
+| Field | Rule | Formula |
+|-------|------|---------|
+| **Thumbnail text (og_headline)** | Max 50 char, berbeda dari title, function sebagai visual hook | Executive Hook formula |
+| **Thumbnail caption (excerpt)** | Max 160 char, function sebagai visual foreshadow | Foreshadow formula |
+| **Meta description (seo_meta_description)** | Max 160 char, mengandung Hook + Foreshadow element | Hook + Value + Foreshadow |
 
 ## Conclusion Formula (anti-generic, whitepaper versi)
 
@@ -491,6 +518,13 @@ done
 - [ ] Content atomization extraction points (derivative content marked di outline)
 - [ ] Min 5 h2
 - [ ] Hook formula dipilih
+- [ ] Executive Hook formula dari step 01 dirinci (konsisten dengan thesis)
+- [ ] Section Hook formula per section dari step 03 dirinci (dari 30 Hook system)
+- [ ] Section Foreshadow formula per section dari step 03 dirinci (dari 20 Foreshadow system)
+- [ ] Bridge formula antar section dari step 03 dirinci (dari 5 Bridge formula)
+- [ ] Thumbnail text (og_headline) direncanakan: max 50 char, berbeda dari title, visual hook
+- [ ] Thumbnail caption (excerpt) direncanakan: max 160 char, visual foreshadow
+- [ ] Meta description direncanakan: max 160 char, Hook + Foreshadow element
 - [ ] Conclusion formula diisi (anti-generic)
 - [ ] Data presentation plan selesai
 - [ ] SEO metadata plan: slug, summary, tags

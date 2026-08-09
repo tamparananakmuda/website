@@ -1,34 +1,36 @@
 ---
-title: "Karier Portofolio Bukan Kebebasan, Itu Kerugian yang Dikemas Jadi Pilihan"
-slug: "karier-portofolio-bukan-kebebasan-kerugian-yang-dikemas-jadi-pilihan"
-excerpt: "63% Gen Z beralih ke gig economy tanpa BPJS, tanpa jaminan sosial. Fleksibilitas yang dijual sebagai kebebasan sebenarnya adalah keputusan terpaksa."
-publishedAt: "2026-07-24 01:00:00+00"
+title: 'Karier Portofolio Bukan Kebebasan, Rugi Dikemas Jadi Pilihan'
+slug: karier-portofolio-bukan-kebebasan-kerugian-yang-dikemas-jadi-pilihan
+excerpt: >-
+  63% Gen Z beralih ke gig economy tanpa BPJS, tanpa jaminan sosial.
+  Fleksibilitas yang dijual sebagai kebebasan sebenarnya adalah keputusan
+  terpaksa.
+publishedAt: '2026-07-24 01:00:00+00'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Karier portofolio bukan kebebasan, tapi terpaksa"
-seoMetaTitle: "Karier Portofolio Bukan Kebebasan Gen Z"
-seoMetaDescription: "63% Gen Z beralih ke gig economy tanpa BPJS dan jaminan sosial. Fleksibilitas yang dijual sebagai kebebasan sebenarnya keputusan terpaksa. Baca analisisnya."
+ogHeadline: 'Karier portofolio bukan kebebasan, tapi terpaksa'
+seoMetaTitle: Karier Portofolio Bukan Kebebasan Gen Z
+seoMetaDescription: >-
+  63% Gen Z beralih ke gig economy tanpa BPJS dan jaminan sosial. Fleksibilitas
+  yang dijual sebagai kebebasan sebenarnya keputusan terpaksa. Baca analisisnya.
 seoKeywords:
-  - "karier portofolio gen z"
-  - "gig economy indonesia"
-  - "freelance vs kerja tetap"
-  - "karier gen z 2026"
-  - "pekerjaan lepas indonesia"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - karier portofolio gen z
+  - gig economy indonesia
+  - freelance vs kerja tetap
+  - karier gen z 2026
+  - pekerjaan lepas indonesia
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

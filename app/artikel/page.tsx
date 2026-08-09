@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { getPublishedPostsWithPagination } from '@/lib/db/queries/posts';
 import { ArticleCard } from '@/components/article-card';
 import { Pagination } from '@/components/pagination';
@@ -7,30 +8,54 @@ export const revalidate = 60;
 
 const PER_PAGE = 9;
 
-export const metadata = {
-  title: 'Semua Artikel',
-  description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
-  keywords: ['artikel gen z', 'artikel anak muda', 'perspektif gen z', 'tamparan anak muda', 'mindset', 'karier', 'keuangan', 'teknologi', 'kehidupan', 'bisnis'],
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel`,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'id_ID',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/artikel`,
-    title: 'Semua Artikel - Tamparan Anak Muda',
-    description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Semua Artikel - Tamparan Anak Muda',
-    description: 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.',
-  },
-};
-
 interface ArticlesPageProps {
   searchParams: { page?: string };
+}
+
+export async function generateMetadata({ searchParams }: ArticlesPageProps): Promise<Metadata> {
+  const page = Math.max(1, parseInt(searchParams.page || '1', 10) || 1);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+  const baseUrl = `${siteUrl}/artikel`;
+  const canonicalUrl = page > 1 ? `${baseUrl}?page=${page}` : baseUrl;
+  const ogImageUrl = 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp';
+
+  const title = page > 1 ? `Semua Artikel - Halaman ${page}` : 'Semua Artikel';
+  const description = 'Kumpulan perspektif jujur untuk anak muda Indonesia tentang mindset, bisnis, keuangan, teknologi, dan kehidupan.';
+
+  const alternates: Metadata['alternates'] = {
+    canonical: canonicalUrl,
+  };
+
+  if (page > 1) {
+    alternates.types = {
+      'text/html': [
+        { url: `${baseUrl}?page=${page - 1}`, title: 'Halaman sebelumnya' },
+      ],
+    };
+  }
+
+  return {
+    title,
+    description,
+    keywords: ['artikel gen z', 'artikel anak muda', 'perspektif gen z', 'tamparan anak muda', 'mindset', 'karier', 'keuangan', 'teknologi', 'kehidupan', 'bisnis'],
+    robots: page > 1 ? { index: false, follow: true } : { index: true, follow: true },
+    alternates,
+    openGraph: {
+      type: 'website',
+      locale: 'id_ID',
+      url: canonicalUrl,
+      title: `${title} - Tamparan Anak Muda`,
+      description,
+      siteName: 'TAMPARAN ANAK MUDA',
+      images: [{ url: ogImageUrl, width: 1600, height: 900, alt: 'Semua Artikel - TAMPARAN ANAK MUDA' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} - Tamparan Anak Muda`,
+      description,
+      images: [ogImageUrl],
+    },
+  };
 }
 
 export default async function ArticlesPage({ searchParams }: ArticlesPageProps) {

@@ -1,41 +1,66 @@
 ---
-title: "Hustle Culture: Kenapa Gen Z Berhenti Berlari"
-slug: "hustle-culture-kenapa-gen-z-berhenti-berlari"
-excerpt: "Sejak SMA kamu didorong side hustle, 5 AM club, personal branding. Hasilnya? Burnout massal. Bukan kamu lemah, tapi sistem yang minta lebih tapi beri kurang."
-publishedAt: "2026-07-14 08:00:00+00"
-status: "published"
-category: "karier"
+title: 'Hustle Culture: Kenapa Gen Z Berhenti Berlari'
+slug: hustle-culture-kenapa-gen-z-berhenti-berlari
+excerpt: >-
+  Sejak SMA kamu didorong side hustle, 5 AM club, personal branding. Hasilnya?
+  Burnout massal. Bukan kamu lemah, tapi sistem yang minta lebih tapi beri
+  kurang.
+publishedAt: '2026-07-14 08:00:00+00'
+status: published
+category: karier
 subcategory: null
-author: ""
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: null
-seoMetaTitle: "Hustle Culture ke Burnout: Kenapa Gen Z Berhenti Berlari"
-seoMetaDescription: "22% karyawan global alami burnout, Gen Z tertinggi. 1 dari 3 karyawan Indonesia berhenti karena values tidak sejalan. Bukan malas, ini koreksi sistemis."
-seoKeywords: []
+ogHeadline: 'Hustle culture mati, Gen Z berhenti berlari'
+seoMetaTitle: 'Hustle Culture ke Burnout: Kenapa Gen Z Berhenti Berlari'
+seoMetaDescription: >-
+  22% karyawan global alami burnout, Gen Z tertinggi. 1 dari 3 karyawan
+  Indonesia berhenti karena values tidak sejalan. Bukan malas, ini koreksi
+  sistemis.
+seoKeywords:
+  - hustle culture gen z
+  - burnout pekerja muda
+  - gen z berhenti kerja keras
+  - work ethic generasi z
+  - burnout indonesia 2026
 sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - 'WHO (2019). *Burn-out an Occupational Phenomenon: ICD-11*.'
+  - >-
+    McKinsey Health Institute (2023). *Reframing Employee Health: Moving Beyond
+    Burnout to Holistic Health*. Survey 30.000 karyawan di 30 negara.
+  - McKinsey (2025). *Future of Wellness Trends Survey*.
+  - >-
+    Deloitte Global (2025). *Gen Z and Millennial Survey: Pursuing a Balance of
+    Money, Meaning, and Well-being*.
+  - >-
+    Randstad (2025). *Workmonitor: A New Workplace Baseline*. 26.778 responden
+    di 35 negara.
+  - Gallup (2024). *State of the Global Workplace Report*.
+  - BPS (2026). *Tingkat Pengangguran Terbuka Februari 2026*.
+  - Jakpat (2026). *Gen Z Characteristics and Behaviors Outlook*.
+  - >-
+    Handayani, K. & Purnasiwi, R.G. (2026). *Mental Health Pekerja Generasi Z:
+    Technostress dan Burnout*. Jurnal Kwikkiangie.
+  - >-
+    Mojok.co (2026). *Gen Z: Kerja Bikin Stres dan Gila, tapi Resign Dihujat
+    Tetangga*.
+  - >-
+    Taufik et al. (2024). *Fenomena Resign Massal dan Pengangguran Terselubung
+    di Kalangan Gen Z*. Jurnal Ekonomi Publik.
+  - >-
+    American Medical Association. *WHO Adds Burnout to ICD-11: What It Means for
+    Physicians*.
+  - 'BBC Worklife (2023). *Hustle Culture: Is This the End of Rise-and-Grind?*'
+  - NPR Code Switch (2020). *Hustle Culture's Black Roots*.
+  - PwC (2025). *Hopes and Fears Survey Indonesia*.
 featured: true
 readingTime: 11
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -165,6 +190,13 @@ Mungkin bukan kamu yang perlu berlari lebih cepat. Mungkin lintasannya yang perl
 ---
 
 ### Referensi
+
+
+## Baca Juga
+
+- [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu)
+- [Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah](/artikel/gig-economy-bukan-pilihan-jebakan-produktivitas-rendah)
+- [Quiet Quitting: Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati)
 
 1. WHO (2019). *Burn-out an Occupational Phenomenon: ICD-11*.
 2. McKinsey Health Institute (2023). *Reframing Employee Health: Moving Beyond Burnout to Holistic Health*. Survey 30.000 karyawan di 30 negara.

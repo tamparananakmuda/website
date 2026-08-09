@@ -62,6 +62,37 @@ Aturan:
 - **Part 2-N harus bisa berdiri sendiri** dengan recap singkat di awal (1-2 kalimat)
 - Setiap part WAJIB punya teaser ke part berikutnya di akhir
 
+## Series Hook & Foreshadow Formula Strategy
+
+Referensi formula yang dipilih di step 01-idea, rinciakan strategi implementasi:
+
+### Series Hook Formula (dari step 01)
+
+- Series Hook formula nomor [X] dipilih di step 01-idea
+- Series Hook = hook untuk judul seri secara keseluruhan, bukan per part
+- Series Hook harus terlihat di: series title, series description, part 1 opening
+- Pastikan Series Hook konsisten dengan alur seri yang dipilih (kronologis/problem-solution/progressive/thematic)
+
+### Series Foreshadow Formula (dari step 01)
+
+- Series Foreshadow formula nomor [Y] dipilih di step 01-idea
+- Series Foreshadow = tease untuk seri secara keseluruhan, ditempatkan di series description dan part 1 closing
+- Series Foreshadow harus tease engine question tanpa spoiler jawaban
+
+### Episode Hook/Foreshadow Strategy (per part)
+
+- Setiap part akan punya Episode Hook (dipilih di step 04-outline dari 30 Hook formula)
+- Setiap part akan punya Episode Foreshadow (dipilih di step 04-outline dari 20 Foreshadow formula)
+- Next Tease/Bridge antar part akan dipilih di step 04-outline dari 5 Bridge formula
+- Hook progression: Part 1 broad hook, midpoint (Part N/2) twist hook, final part synthesis hook
+- Foreshadow progression: setiap part tease part berikutnya, final part tease whitepaper/artikel turunan
+
+### Thumbnail & Meta Strategy (per part)
+
+- Setiap part akan punya thumbnail text (og_headline, max 50 char, berbeda dari part title)
+- Setiap part akan punya thumbnail caption (excerpt, max 160 char, visual foreshadow)
+- Setiap part akan punya meta description (max 160 char, Hook + Foreshadow element)
+
 ## Template Output Strategy
 
 Dokumentasi strategy dalam format ini:
@@ -92,6 +123,11 @@ Rilis strategy:
 - [ ] Command validasi config: OK
 - [ ] Naming convention slug dipahami
 - [ ] Part dependency map dibuat
+- [ ] Series Hook formula strategy dirinci (dari step 01, konsisten dengan alur)
+- [ ] Series Foreshadow formula strategy dirinci (dari step 01, tease engine question)
+- [ ] Episode Hook/Foreshadow strategy per part direncanakan (progression: broad, twist, synthesis)
+- [ ] Next Tease/Bridge strategy antar part direncanakan (dari 5 Bridge formula)
+- [ ] Thumbnail & meta strategy per part direncanakan (og_headline, excerpt, meta desc)
 - [ ] Template output strategy diisi
 - [ ] Rilis strategy ditentukan
 - [ ] Series Arc Integrity Check: all pass

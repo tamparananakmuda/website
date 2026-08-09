@@ -1,39 +1,43 @@
 ---
-title: "Bed Rotting Bukan Self-Care, Depresi yang Dikemas Jadi Tren"
-slug: "bed-rotting-bukan-self-care-depresi-yang-dikemas-jadi-tren"
-excerpt: "363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Tapi TikTok menyebut rebahan seharian self-care. Kenapa normalisasi ini berbahaya?"
-publishedAt: "2026-08-12 01:00:00+00"
-status: "scheduled"
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
+title: 'Bed Rotting Bukan Self-Care, Depresi yang Dikemas Jadi Tren'
+slug: bed-rotting-bukan-self-care-depresi-yang-dikemas-jadi-tren
+excerpt: >-
+  363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Tapi TikTok
+  menyebut rebahan seharian self-care. Kenapa normalisasi ini berbahaya?
+publishedAt: '2026-08-12 01:00:00+00'
+status: scheduled
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["bed-rotting", "depresi-gen-z", "self-care", "kesehatan-mental", "tiktok-tren", "normalisasi"]
-ogHeadline: "Rebahan bukan self-care, itu gejala depresi"
-seoMetaTitle: "Bed Rotting Bukan Self-Care, Depresi yang Dikemas Jadi Tren"
-seoMetaDescription: "363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Tapi TikTok menyebut rebahan seharian self-care. Kenapa normalisasi ini berbahaya?"
+povTag: kontra-narasi
+tags:
+  - bed-rotting
+  - depresi-gen-z
+  - self-care
+  - kesehatan-mental
+  - tiktok-tren
+  - normalisasi
+ogHeadline: 'Rebahan bukan self-care, itu gejala depresi'
+seoMetaTitle: 'Bed Rotting Bukan Self-Care, Depresi yang Dikemas Jadi Tren'
+seoMetaDescription: >-
+  363 ribu anak Indonesia gejala depresi menurut Kemenkes 2026. Tapi TikTok
+  menyebut rebahan seharian self-care. Kenapa normalisasi ini berbahaya?
 seoKeywords:
-  - "bed rotting gen z"
-  - "bed rotting adalah"
-  - "apakah bed rotting tanda depresi"
-  - "rebahan seharian self care atau depresi"
-  - "bed rotting tiktok tren"
-  - "bahaya bed rotting kesehatan mental"
-  - "cara beda bed rotting dan depresi"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - bed rotting gen z
+  - bed rotting adalah
+  - apakah bed rotting tanda depresi
+  - rebahan seharian self care atau depresi
+  - bed rotting tiktok tren
+  - bahaya bed rotting kesehatan mental
+  - cara beda bed rotting dan depresi
+sourceReferences: []
 featured: false
 readingTime: 8
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

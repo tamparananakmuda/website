@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Search, Menu, X, Sparkles } from 'lucide-react';
@@ -24,6 +24,7 @@ export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isTamiOpen, setIsTamiOpen] = useState(false);
+  const closeTami = useCallback(() => setIsTamiOpen(false), []);
 
   useEffect(() => {
     if (!isHome) return;
@@ -152,7 +153,7 @@ export function SiteHeader() {
           </div>
         )}
       </header>
-      <FloatingTamiChat isOpen={isTamiOpen} onClose={() => setIsTamiOpen(false)} />
+      <FloatingTamiChat isOpen={isTamiOpen} onClose={closeTami} />
       </>
     );
   }
@@ -244,7 +245,7 @@ export function SiteHeader() {
     </header>
 
     {/* Global Floating Chatbot TAMI */}
-    <FloatingTamiChat isOpen={isTamiOpen} onClose={() => setIsTamiOpen(false)} />
+    <FloatingTamiChat isOpen={isTamiOpen} onClose={closeTami} />
     </>
   );
 }

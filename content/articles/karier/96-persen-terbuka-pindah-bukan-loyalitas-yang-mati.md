@@ -1,50 +1,60 @@
 ---
-title: "96% Terbuka Pindah: Bukan Loyalitas yang Mati, Sistem yang Tidak Memberi Alasan Setia"
-slug: "96-persen-terbuka-pindah-bukan-loyalitas-yang-mati"
-excerpt: "47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi sistem kerja yang tidak memberi alasan untuk tetap setia."
-publishedAt: "2026-07-26T05:00:00.000Z"
+title: '96% Terbuka Pindah: Bukan Loyalitas yang Mati, Sistemnya'
+slug: 96-persen-terbuka-pindah-bukan-loyalitas-yang-mati
+excerpt: >-
+  47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi
+  sistem kerja yang tidak memberi alasan untuk tetap setia.
+publishedAt: '2026-07-26T05:00:00.000Z'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "47% Gen Z siap resign dalam setahun. Kenapa?"
-seoMetaTitle: "96% Terbuka Pindah: Bukan Loyalitas Mati, Sistem"
-seoMetaDescription: "47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi sistem kerja yang tidak memberi alasan untuk tetap setia."
+ogHeadline: 47% Gen Z siap resign dalam setahun. Kenapa?
+seoMetaTitle: '96% Terbuka Pindah: Bukan Loyalitas Mati, Sistem'
+seoMetaDescription: >-
+  47% Gen Z berencana resign dalam setahun. Bukan loyalitas yang mati, tapi
+  sistem kerja yang tidak memberi alasan untuk tetap setia.
 seoKeywords:
-  - "gen z pindah kerja Indonesia"
-  - "loyalitas kerja gen z"
-  - "turnover gen z Indonesia"
-  - "job hopping gen z"
-  - "karyawan gen z resign"
-  - "Randstad Gen Z workplace 2026"
+  - gen z pindah kerja Indonesia
+  - loyalitas kerja gen z
+  - turnover gen z Indonesia
+  - job hopping gen z
+  - karyawan gen z resign
+  - Randstad Gen Z workplace 2026
 sourceReferences:
-  - type: "link"
-    url: "https://www.viva.co.id/bisnis/1873482-survei-gen-z-anggap-pekerjaan-seperti-lsquo-situationship-rsquo-apa-artinya"
-    label: "Viva: Survei Gen Z Anggap Pekerjaan seperti Situationship (2026)"
-  - type: "link"
-    url: "https://liramedia.co.id/survei-deloitte-31-persen-gen-z-pilih-job-hopping-demi-keseimbangan-hidup-dan-stabilitas-finansial"
-    label: "Deloitte Global 2025 Gen Z and Millennial Survey via Lira Media"
-  - type: "link"
-    url: "https://liramedia.co.id/randstad-ungkap-fenomena-gen-z-di-dunia-kerja-durasi-singkat-fleksibilitas-dan-prioritas-tujuan-karier"
-    label: "Randstad: The Gen Z Workplace Blueprint (Feb 2026)"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/05/19/150500826/survei-gen-z-hanya-bertahan-18-tahun-di-satu-pekerjaan"
-    label: "Kompas Money: Gen Z Hanya Bertahan 1,8 Tahun di Satu Pekerjaan (May 2026)"
-  - type: "link"
-    url: "https://surabaya.bisnis.com/read/20260619/531/1981951/gen-z-sering-ganti-pekerjaan-ini-analisis-akademisi"
-    label: "Bisnis.com: Analisis Akademisi tentang Gen Z Ganti Pekerjaan (Jun 2026)"
-  - type: "link"
-    url: "https://www.randstad.com/press/2025/work-life-balance-tops-pay-randstads-workmonitor-reveals/"
-    label: "Randstad Workmonitor 2025: Work-life Balance Tops Pay"
+  - type: link
+    url: >-
+      https://www.viva.co.id/bisnis/1873482-survei-gen-z-anggap-pekerjaan-seperti-lsquo-situationship-rsquo-apa-artinya
+    label: 'Viva: Survei Gen Z Anggap Pekerjaan seperti Situationship (2026)'
+  - type: link
+    url: >-
+      https://liramedia.co.id/survei-deloitte-31-persen-gen-z-pilih-job-hopping-demi-keseimbangan-hidup-dan-stabilitas-finansial
+    label: Deloitte Global 2025 Gen Z and Millennial Survey via Lira Media
+  - type: link
+    url: >-
+      https://liramedia.co.id/randstad-ungkap-fenomena-gen-z-di-dunia-kerja-durasi-singkat-fleksibilitas-dan-prioritas-tujuan-karier
+    label: 'Randstad: The Gen Z Workplace Blueprint (Feb 2026)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/19/150500826/survei-gen-z-hanya-bertahan-18-tahun-di-satu-pekerjaan
+    label: 'Kompas Money: Gen Z Hanya Bertahan 1,8 Tahun di Satu Pekerjaan (May 2026)'
+  - type: link
+    url: >-
+      https://surabaya.bisnis.com/read/20260619/531/1981951/gen-z-sering-ganti-pekerjaan-ini-analisis-akademisi
+    label: 'Bisnis.com: Analisis Akademisi tentang Gen Z Ganti Pekerjaan (Jun 2026)'
+  - type: link
+    url: >-
+      https://www.randstad.com/press/2025/work-life-balance-tops-pay-randstads-workmonitor-reveals/
+    label: 'Randstad Workmonitor 2025: Work-life Balance Tops Pay'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

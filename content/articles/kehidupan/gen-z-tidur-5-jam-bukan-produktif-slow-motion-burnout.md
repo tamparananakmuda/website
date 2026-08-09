@@ -1,26 +1,36 @@
 ---
-title: "Gen Z Tidur 5 Jam: Bukan Produktif, Itu Slow-Motion Burnout"
-slug: "gen-z-tidur-5-jam-bukan-produktif-slow-motion-burnout"
-excerpt: "Indonesia #7 negara paling kurang tidur dunia. 46% dewasa tidur 4-6 jam. Bukan disiplin, itu sistem sita waktu dan hustle culture jual sleep deprivation."
-publishedAt: "2026-08-05T10:00:00.000Z"
+title: 'Gen Z Tidur 5 Jam: Bukan Produktif, Slow-Motion Burnout'
+slug: gen-z-tidur-5-jam-bukan-produktif-slow-motion-burnout
+excerpt: >-
+  Indonesia #7 negara paling kurang tidur dunia. 46% dewasa tidur 4-6 jam. Bukan
+  disiplin, itu sistem sita waktu dan hustle culture jual sleep deprivation.
+publishedAt: '2026-08-05T10:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "lifestyle"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: lifestyle
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["kurang-tidur", "gen-z", "revenge-bedtime-procrastination", "burnout", "hustle-culture", "kesehatan-mental"]
-ogHeadline: "Bangga tidur 5 jam? Itu bukan grind, itu burnout"
-seoMetaTitle: "Gen Z Tidur 5 Jam: Bukan Produktif, Itu Slow-Motion Burnout"
-seoMetaDescription: "Indonesia #7 negara paling kurang tidur dunia. 46% dewasa tidur 4-6 jam. Bukan disiplin, itu sistem sita waktu dan hustle culture jual sleep deprivation."
+povTag: data
+tags:
+  - kurang-tidur
+  - gen-z
+  - revenge-bedtime-procrastination
+  - burnout
+  - hustle-culture
+  - kesehatan-mental
+ogHeadline: 'Bangga tidur 5 jam? Itu bukan grind, itu burnout'
+seoMetaTitle: 'Gen Z Kurang Tidur: Slow-Motion Burnout'
+seoMetaDescription: >-
+  Indonesia #7 negara paling kurang tidur dunia. 46% dewasa tidur 4-6 jam. Bukan
+  disiplin, itu sistem sita waktu dan hustle culture jual sleep deprivation.
 seoKeywords:
-  - "gen z kurang tidur Indonesia"
-  - "revenge bedtime procrastination Indonesia"
-  - "dampak kurang tidur terhadap kerja"
-  - "Indonesia kurang tidur statistik"
-  - "gangguan tidur gen z"
-  - "efek begadang terhadap otak"
+  - gen z kurang tidur Indonesia
+  - revenge bedtime procrastination Indonesia
+  - dampak kurang tidur terhadap kerja
+  - Indonesia kurang tidur statistik
+  - gangguan tidur gen z
+  - efek begadang terhadap otak
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,16 +45,44 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://worldpopulationreview.com/country-rankings/most-sleep-deprived-countries","label":"World Population Review: Most Sleep Deprived Countries 2026"}
-  - {"type":"link","url":"https://kurious.kompas.com/data/462-dewasa-indonesia-tidur-4-6-jam-per-hari","label":"Kurious-KIC: 46.2% Dewasa Indonesia Tidur 4-6 Jam (2025)"}
-  - {"type":"link","url":"https://www.jakpat.com/survey/9338/gangguan-tidur-gen-z","label":"Jakpat: 54% Gen Z Alami Gangguan Tidur (2024)"}
-  - {"type":"link","url":"https://www.kemenkes.go.id/article/gangguan-tidur-remaja-indonesia","label":"Kemenkes P2PTM: 62.9% Remaja Gangguan Tidur"}
-  - {"type":"link","url":"https://nationalgeographic.grid.id/read/134356779/mengapa-otak-kehilangan-fokus-saat-kita-kurang-tidur-ini-kata-studi","label":"National Geographic: Otak Mode Tidur Saat Terjaga, Nature Neuroscience (Okt 2025)"}
-  - {"type":"link","url":"https://ukp.psikologi.ugm.ac.id/2026/07/17/revenge-bedtime-procrastination-5-menit-lagi-berujung-jam-2-pagi/","label":"UGM UKP: Revenge Bedtime Procrastination (Jul 2026)"}
-  - {"type":"link","url":"https://psychology.binus.ac.id/2026/06/15/menguap-seharian-begadang-semalaman-memahami-revenge-bedtime-procrastination/","label":"Binus Psychology: RBP dan Penurunan Performa 60% (Jun 2026)"}
-  - {"type":"link","url":"https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html","label":"Deloitte Gen Z Survey: 91% Gen Z Indonesia Stres Kerja (2023)"}
-  - {"type":"link","url":"https://doi.org/10.51577/jhqd.v5i2.877","label":"Jurnal Kualitas Tidur dan Performa Kerja: r = -0.52 (2025)"}
-  - {"type":"link","url":"https://asana.com/resources/gen-z-workers","label":"Asana: Anatomy of Work Special Report Gen Z 2026"}
+  - type: link
+    url: >-
+      https://worldpopulationreview.com/country-rankings/most-sleep-deprived-countries
+    label: 'World Population Review: Most Sleep Deprived Countries 2026'
+  - type: link
+    url: >-
+      https://kurious.kompas.com/data/462-dewasa-indonesia-tidur-4-6-jam-per-hari
+    label: 'Kurious-KIC: 46.2% Dewasa Indonesia Tidur 4-6 Jam (2025)'
+  - type: link
+    url: 'https://www.jakpat.com/survey/9338/gangguan-tidur-gen-z'
+    label: 'Jakpat: 54% Gen Z Alami Gangguan Tidur (2024)'
+  - type: link
+    url: 'https://www.kemenkes.go.id/article/gangguan-tidur-remaja-indonesia'
+    label: 'Kemenkes P2PTM: 62.9% Remaja Gangguan Tidur'
+  - type: link
+    url: >-
+      https://nationalgeographic.grid.id/read/134356779/mengapa-otak-kehilangan-fokus-saat-kita-kurang-tidur-ini-kata-studi
+    label: >-
+      National Geographic: Otak Mode Tidur Saat Terjaga, Nature Neuroscience
+      (Okt 2025)
+  - type: link
+    url: >-
+      https://ukp.psikologi.ugm.ac.id/2026/07/17/revenge-bedtime-procrastination-5-menit-lagi-berujung-jam-2-pagi/
+    label: 'UGM UKP: Revenge Bedtime Procrastination (Jul 2026)'
+  - type: link
+    url: >-
+      https://psychology.binus.ac.id/2026/06/15/menguap-seharian-begadang-semalaman-memahami-revenge-bedtime-procrastination/
+    label: 'Binus Psychology: RBP dan Penurunan Performa 60% (Jun 2026)'
+  - type: link
+    url: >-
+      https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html
+    label: 'Deloitte Gen Z Survey: 91% Gen Z Indonesia Stres Kerja (2023)'
+  - type: link
+    url: 'https://doi.org/10.51577/jhqd.v5i2.877'
+    label: 'Jurnal Kualitas Tidur dan Performa Kerja: r = -0.52 (2025)'
+  - type: link
+    url: 'https://asana.com/resources/gen-z-workers'
+    label: 'Asana: Anatomy of Work Special Report Gen Z 2026'
 ---
 
 ## Hook

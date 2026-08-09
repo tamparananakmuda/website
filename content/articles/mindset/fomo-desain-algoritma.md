@@ -1,36 +1,37 @@
 ---
-title: "FOMO Bukan Kelemahanmu, Itu Desain Algoritma"
-slug: "fomo-desain-algoritma"
-excerpt: "64,6% remaja Indonesia mengalami FOMO. Bukan karena lemah, tapi karena algoritma media sosial sengaja didesain menciptakan kecemasan agar kamu scroll."
-publishedAt: "2026-07-15 09:00:00+00"
-status: "published"
-category: "mindset"
+title: 'FOMO Bukan Kelemahanmu, Itu Desain Algoritma'
+slug: fomo-desain-algoritma
+excerpt: >-
+  64,6% remaja Indonesia mengalami FOMO. Bukan karena lemah, tapi karena
+  algoritma media sosial sengaja didesain menciptakan kecemasan agar kamu
+  scroll.
+publishedAt: '2026-07-15 09:00:00+00'
+status: published
+category: mindset
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "FOMO itu desain, bukan kelemahanmu"
-seoMetaTitle: "FOMO Bukan Kelemahanmu, Itu Desain Algoritma"
-seoMetaDescription: "64,6% remaja Indonesia mengalami FOMO. Bukan karena lemah, tapi karena algoritma media sosial sengaja didesain menciptakan kecemasan agar kamu terus scroll."
+ogHeadline: 'FOMO itu desain, bukan kelemahanmu'
+seoMetaTitle: 'FOMO Itu Desain Algoritma, Bukan Kelemahanmu'
+seoMetaDescription: >-
+  64,6% remaja Indonesia mengalami FOMO. Bukan karena lemah, tapi karena
+  algoritma media sosial sengaja didesain menciptakan kecemasan agar kamu terus
+  scroll.
 seoKeywords:
-  - "fomo gen z"
-  - "doomscrolling indonesia"
-  - "dampak media sosial mental"
-  - "algoritma media sosial"
-  - "kecemasan digital"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - fomo gen z
+  - doomscrolling indonesia
+  - dampak media sosial mental
+  - algoritma media sosial
+  - kecemasan digital
+sourceReferences: []
 featured: false
 readingTime: 4
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

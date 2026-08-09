@@ -100,6 +100,24 @@ Tolak artikel jika ada salah satu dari ini:
 - Tidak ada kontradiksi antar part
 - Alur seri: setiap part membangun dari part sebelumnya
 
+## Hook & Foreshadow Formula Validation (per part)
+
+Validasi bahwa formula yang dipilih di step 04-outline terimplementasi dengan benar:
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Series Hook consistency** | Apakah Series Hook dari step 01 konsisten di semua part? | Series Hook terlihat di part 1 opening + series description |
+| **Episode Hook implemented** | Apakah opening setiap part sesuai Episode Hook formula yang dipilih? | Formula terimplementasi per part, bukan generic hook |
+| **Episode Foreshadow implemented** | Apakah transition/conclusion setiap part sesuai Foreshadow formula? | Formula terimplementasi, tease tidak spoiler penuh |
+| **Next Tease accuracy** | Apakah Next Tease/Bridge antar part sesuai Bridge formula? | Bridge terimplementasi, connect antar part |
+| **Next Tease payoff** | Apakah tease di part N di-bayar di part N+1? | Payoff ada, tidak menggantung |
+| **Hook progression** | Apakah Hook progression sesuai plan (broad, twist, synthesis)? | Progression terlihat di part 1, midpoint, final |
+| **Thumbnail text (og_headline)** | Per part: berbeda dari title? Max 50 char? Visual hook? | Ya, semua kriteria terpenuhi per part |
+| **Thumbnail caption (excerpt)** | Per part: max 160 char? Function sebagai visual foreshadow? | Ya, tease tidak spoiler per part |
+| **Meta description** | Per part: max 160 char? Mengandung Hook + Foreshadow element? | Ya, Hook + Value + Foreshadow per part |
+
+Jika Episode Hook, Foreshadow, atau Next Tease tidak terimplementasi: kembali ke 05-draft untuk fix.
+
 ## Content Quality Score
 
 Rate setiap part 0-100:
@@ -119,6 +137,15 @@ Target: **> 80 per part**. Jika < 70, revisi sebelum lanjut.
 
 - [ ] Kesinambungan antar part dicek
 - [ ] Cross-part consistency checklist: semua Pass
+- [ ] Series Hook formula konsisten di semua part (dari step 01)
+- [ ] Episode Hook formula implemented per part (nomor + nama dari 30 Hook system)
+- [ ] Episode Foreshadow formula implemented per part (nomor + nama dari 20 Foreshadow system)
+- [ ] Next Tease/Bridge formula implemented antar part (dari 5 Bridge formula)
+- [ ] Next Tease payoff: tease part N di-bayar di part N+1
+- [ ] Hook progression sesuai plan (broad, twist, synthesis)
+- [ ] Thumbnail text (og_headline) per part: berbeda dari title, max 50 char, visual hook
+- [ ] Thumbnail caption (excerpt) per part: max 160 char, visual foreshadow
+- [ ] Meta description per part: max 160 char, mengandung Hook + Foreshadow element
 - [ ] Tidak ada repetisi berlebihan
 - [ ] Setiap part bisa berdiri sendiri
 - [ ] Tone konsisten di seluruh seri
@@ -172,6 +199,15 @@ Score review sebelum lanjut ke 07-build. Target: minimal 9.
 | **Multi-pass** | 1 | Tidak dilakukan | Sebagiane | P1-P4 per part |
 
 Jika score < 9: revisi sebelum lanjut ke build.
+
+## Checklist
+
+- [ ] Multi-Pass Review: P1-P4 per part selesai
+- [ ] Title seri masih punchy berdasar 20 prinsip riset (cek: no formal words, no fear words, no superlatives, no "kita/kami", ada active verb, max 10 kata, ada kontras/surprise)
+- [ ] Title per part masih punchy berdasar 20 prinsip riset
+- [ ] Series Arc Verification: 6 checks pass
+- [ ] Cross-Part consistency: no kontradiksi, no repetisi
+- [ ] Series Review Quality Score: min 9 (dari 12)
 
 ## Next
 

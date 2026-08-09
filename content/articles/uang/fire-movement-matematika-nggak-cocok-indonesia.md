@@ -1,37 +1,45 @@
 ---
-title: "FIRE Movement: Matematika yang Nggak Cocok untuk Indonesia"
-slug: "fire-movement-matematika-nggak-cocok-indonesia"
-excerpt: "Rumus 25x pengeluaran FIRE Movement berasal dari data Amerika 1925. Di Indonesia dengan gaji S1 Rp 4,3 juta dan inflasi medis 19%, matematikanya berbeda."
-publishedAt: "2026-07-16 05:15:00+00"
-status: "published"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'FIRE Movement: Matematika yang Nggak Cocok untuk Indonesia'
+slug: fire-movement-matematika-nggak-cocok-indonesia
+excerpt: >-
+  Rumus 25x pengeluaran FIRE Movement berasal dari data Amerika 1925. Di
+  Indonesia dengan gaji S1 Rp 4,3 juta dan inflasi medis 19%, matematikanya
+  berbeda.
+publishedAt: '2026-07-16 05:15:00+00'
+status: published
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: "Pensiun di umur 35? Matematikanya nggak cocok"
-seoMetaTitle: "FIRE Movement: Matematika yang Nggak Cocok untuk Indonesia"
-seoMetaDescription: "Rumus 25x pengeluaran FIRE Movement berasal dari data Amerika 1925. Di Indonesia dengan gaji S1 Rp 4,3 juta dan inflasi medis 19%, matematikanya berbeda."
+ogHeadline: Pensiun di umur 35? Matematikanya nggak cocok
+seoMetaTitle: 'FIRE Movement: Nggak Cocok untuk Indonesia'
+seoMetaDescription: >-
+  Rumus 25x pengeluaran FIRE Movement berasal dari data Amerika 1925. Di
+  Indonesia dengan gaji S1 Rp 4,3 juta dan inflasi medis 19%, matematikanya
+  berbeda.
 seoKeywords:
-  - "FIRE movement Indonesia"
-  - "pensiun diri Indonesia"
-  - "aturan 4% Trinity Study"
-  - "Coast FIRE Indonesia"
-  - "financial independence Indonesia"
+  - FIRE movement Indonesia
+  - pensiun diri Indonesia
+  - aturan 4% Trinity Study
+  - Coast FIRE Indonesia
+  - financial independence Indonesia
 sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - >-
+    UMR Jakarta 2025 sendiri baru Rp 5.396.761. Itu upah minimum, bukan
+    rata-rata. Banyak lulusan S1 di luar Jakarta menerima gaji di bawah angka
+    ini.
+  - >-
+    Trinity Study menghitung inflasi rata-rata Amerika sekitar 2-3% per tahun.
+    Di Indonesia, inflasi headline BPS Desember 2024 memang hanya 1,57%. Tapi
+    inflasi medis adalah cerita lain.
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "draft"
+factCheckStatus: verified
+reviewStatus: draft
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

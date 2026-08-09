@@ -1,42 +1,37 @@
 ---
-title: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
-slug: "phk-kerja-keras-tidak-menjamin-aman"
-excerpt: "23.470 pekerja kena PHK di 2026. Bukan karena malas. Tapi karena kerja keras tidak pernah menjamin keamanan. Inilah kenyataan yang perlu kamu lihat."
-publishedAt: "2026-07-15 04:42:51+00"
-status: "published"
-category: "karier"
+title: 'PHK Membongkar Ilusi: Kerja Keras Nggak Menjamin Aman'
+slug: phk-kerja-keras-tidak-menjamin-aman
+excerpt: >-
+  23.470 pekerja kena PHK di 2026. Bukan karena malas. Tapi karena kerja keras
+  tidak pernah menjamin keamanan. Inilah kenyataan yang perlu kamu lihat.
+publishedAt: '2026-07-15 04:42:51+00'
+status: published
+category: karier
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Kerja keras tidak menjamin kamu aman dari PHK"
-seoMetaTitle: "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
-seoMetaDescription: "23.470 pekerja kena PHK di 2026, naik 84%. Bukan karena malas. Kerja keras tidak pernah menjamin keamanan. Inilah kenyataan yang perlu kamu lihat."
+ogHeadline: Kerja keras tidak menjamin kamu aman dari PHK
+seoMetaTitle: 'PHK dan Ilusi Kerja Keras: Nggak Menjamin Aman'
+seoMetaDescription: >-
+  23.470 pekerja kena PHK di 2026, naik 84%. Bukan karena malas. Kerja keras
+  tidak pernah menjamin keamanan. Inilah kenyataan yang perlu kamu lihat.
 seoKeywords:
-  - "phk indonesia"
-  - "phk massal 2026"
-  - "kerja keras tidak menjamin"
-  - "keamanan kerja indonesia"
-  - "phk gen z"
-  - "dampak phk"
-  - "hustle culture phk"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - phk indonesia
+  - phk massal 2026
+  - kerja keras tidak menjamin
+  - keamanan kerja indonesia
+  - phk gen z
+  - dampak phk
+  - hustle culture phk
+sourceReferences: []
 featured: true
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

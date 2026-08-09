@@ -246,6 +246,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             name={post.author.name}
             bio={post.author.bio || undefined}
             slug={post.author.slug || undefined}
+            jobTitle={(post.author as { jobTitle?: string | null }).jobTitle || undefined}
+            socialLinks={{
+              instagram: post.author.socialInstagram || undefined,
+              twitter: post.author.socialTwitter || undefined,
+              linkedin: post.author.socialLinkedin || undefined,
+              website: (post.author as { socialWebsite?: string | null }).socialWebsite || undefined,
+            }}
           />
         )}
         {(() => {

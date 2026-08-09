@@ -1,18 +1,38 @@
 ---
-title: "MLM Bukan Bisnis: Itu Eksploitasi Pertemanan yang Dikemas Jadi Entrepreneurship"
-slug: "mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha"
-excerpt: "FTC bongkar 99% peserta MLM rugi. Omzet industri Rp16,3 triliun, tapi mayoritas peserta dapat <Rp84/bulan. MLM bukan bisnis, itu eksploitasi relasi sosial."
-publishedAt: "2026-07-31T01:00:00.000Z"
+title: 'MLM Bukan Bisnis, Eksploitasi Pertemanan Dikemas Wirausaha'
+slug: mlm-bukan-bisnis-eksploitasi-pertemanan-dikemas-wirausaha
+excerpt: >-
+  FTC bongkar 99% peserta MLM rugi. Omzet industri Rp16,3 triliun, tapi
+  mayoritas peserta dapat <Rp84/bulan. MLM bukan bisnis, itu eksploitasi relasi
+  sosial.
+publishedAt: '2026-07-31T01:00:00.000Z'
 status: published
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
-seoMetaTitle: "MLM Bukan Bisnis: 99% Peserta Rugi, Eksploitasi Pertemanan"
-seoMetaDescription: "FTC bongkar 99% peserta MLM rugi. Omzet industri Rp16,3T, tapi mayoritas peserta dapat <$84/bulan. MLM bukan bisnis, itu eksploitasi relasi sosial."
-seoKeywords: ["MLM Indonesia", "bahaya MLM", "MLM gen z", "bisnis MLM untung atau rugi", "MLM halal atau haram", "eksploitasi pertemanan MLM", "MLM vs pyramid scheme"]
-ogHeadline: "99% orang yang gabung MLM rugi. Kamu mau?"
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
+seoMetaTitle: 'MLM Bukan Bisnis: 99% Peserta Rugi, Eksploitasi Pertemanan'
+seoMetaDescription: >-
+  FTC bongkar 99% peserta MLM rugi. Omzet industri Rp16,3T, tapi mayoritas
+  peserta dapat <$84/bulan. MLM bukan bisnis, itu eksploitasi relasi sosial.
+seoKeywords:
+  - MLM Indonesia
+  - bahaya MLM
+  - MLM gen z
+  - bisnis MLM untung atau rugi
+  - MLM halal atau haram
+  - eksploitasi pertemanan MLM
+  - MLM vs pyramid scheme
+ogHeadline: 99% orang yang gabung MLM rugi. Kamu mau?
 ogHeadlineEn: null
-sourceReferences: ["FTC Staff Report 2024 - 70 MLM Income Disclosures", "FTC Proposed Earnings Claim Rule Jan 2025", "APLI/Kemendag data 2020", "OJK via Warta Ekonomi", "AARP Study MLM Participants", "IDN Research IMGR 2027", "Kompasiana MLM Mahasiswa 2025", "Jurnal Tiens Cimahi"]
+sourceReferences:
+  - FTC Staff Report 2024 - 70 MLM Income Disclosures
+  - FTC Proposed Earnings Claim Rule Jan 2025
+  - APLI/Kemendag data 2020
+  - OJK via Warta Ekonomi
+  - AARP Study MLM Participants
+  - IDN Research IMGR 2027
+  - Kompasiana MLM Mahasiswa 2025
+  - Jurnal Tiens Cimahi
 readingTime: 7
 featured: false
 isPremium: false
@@ -20,7 +40,13 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-tags: ["MLM", "bisnis", "gen z", "eksploitasi sosial", "direct selling", "entrepreneurship"]
+tags:
+  - MLM
+  - bisnis
+  - gen z
+  - eksploitasi sosial
+  - direct selling
+  - entrepreneurship
 ---
 
 ## Mayoritas Peserta MLM Dapat Kurang dari Rp84 Per Bulan

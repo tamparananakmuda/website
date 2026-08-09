@@ -1,31 +1,40 @@
 ---
-title: "Paylater Bukan Kemudahan, Penjaga Gaji Kamu"
-slug: "paylater-bukan-kemudahan-penjaga-gaji-kamu"
-excerpt: "Paylater Indonesia tembus Rp43 triliun. Gen Z dominasi 40% pengguna. Paylater bukan kemudahan, sistem yang mengatur gajimu."
-publishedAt: "2026-07-18 10:00:00+00"
-status: "published"
-category: "uang"
+title: 'Paylater Bukan Kemudahan, Penjaga Gaji Kamu'
+slug: paylater-bukan-kemudahan-penjaga-gaji-kamu
+excerpt: >-
+  Paylater Indonesia tembus Rp43 triliun. Gen Z dominasi 40% pengguna. Paylater
+  bukan kemudahan, sistem yang mengatur gajimu.
+publishedAt: '2026-07-18 10:00:00+00'
+status: published
+category: uang
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Paylater bukan kemudahan, dia penjaga gajimu"
-seoMetaTitle: "Paylater Bukan Kemudahan, Penjaga Gaji Kamu"
-seoMetaDescription: "Paylater tembus Rp43 triliun. Gen Z 40% pengguna dengan kredit macet tertinggi. Utang yang dinormalisasi."
-seoKeywords: []
+ogHeadline: 'Paylater bukan kemudahan, dia penjaga gajimu'
+seoMetaTitle: 'Paylater: Penjaga Gaji Gen Z, Bukan Kemudahan'
+seoMetaDescription: >-
+  Paylater tembus Rp43 triliun. Gen Z 40% pengguna dengan kredit macet
+  tertinggi. Utang yang dinormalisasi.
+seoKeywords:
+  - paylater gen z indonesia
+  - utang paylater bahaya
+  - kredit macet gen z
+  - paylater regulasi ojk
+  - gen z utang konsumtif
 sourceReferences:
-  - "OJK: Outstanding paylater Rp43,28 triliun per Mei 2026"
-  - "OJK: NPF paylater multifinance naik dari 2,99% ke 3,44%"
-  - "Poskota: Gen Z dominasi 40% pengguna paylater"
-  - "INDEF: Pergeseran pembiayaan akibat tekanan daya beli"
-  - "Trenasia: Gen Z penyumbang kredit macet tertinggi"
+  - 'OJK: Outstanding paylater Rp43,28 triliun per Mei 2026'
+  - 'OJK: NPF paylater multifinance naik dari 2,99% ke 3,44%'
+  - 'Poskota: Gen Z dominasi 40% pengguna paylater'
+  - 'INDEF: Pergeseran pembiayaan akibat tekanan daya beli'
+  - 'Trenasia: Gen Z penyumbang kredit macet tertinggi'
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -117,3 +126,5 @@ Paylater bukan kemudahan. Paylater adalah sistem yang dirancang agar kamu terus 
 Kalau kamu tidak mengontrol paylater, paylater yang mengontrol gajimu.
 
 Untuk memahami lebih dalam soal keuangan generasi muda, baca juga artikel kami tentang [kenapa gaji tidak mau tumbuh untuk generasi sekarang](/artikel/generasi-nanti-dulu-bukan-malas-gaji-tidak-mau-tumbuh).
+
+Kalau kamu tertarik dengan masalah utang gen z, baca juga [Doom Spending Bukan Self-Care, Itu Gejala Menyerah](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah).

@@ -39,11 +39,13 @@ export async function generateMetadata({
       title: `${category.title} - Tamparan Anak Muda`,
       description: category.description || undefined,
       siteName: 'TAMPARAN ANAK MUDA',
+      images: [{ url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp', width: 1600, height: 900, alt: `${category.title} - TAMPARAN ANAK MUDA` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${category.title} - Tamparan Anak Muda`,
       description: category.description || undefined,
+      images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
     },
   };
 }

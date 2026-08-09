@@ -1,63 +1,85 @@
 ---
-title: "ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi"
-slug: "chatgpt-bukan-curang-sistem-pendidikan-yang-malas-beradaptasi"
-excerpt: "95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah diajarkan etikanya. Dosen juga pakai, tapi mahasiswa yang disalahkan."
-publishedAt: "2026-07-27 01:00:00+00"
+title: 'ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi'
+slug: chatgpt-bukan-curang-sistem-pendidikan-yang-malas-beradaptasi
+excerpt: >-
+  95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah diajarkan etikanya.
+  Dosen juga pakai, tapi mahasiswa yang disalahkan.
+publishedAt: '2026-07-27 01:00:00+00'
 status: published
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "95% mahasiswa pakai AI, sistem yang disalahkan"
-seoMetaTitle: "ChatGPT Bukan Curang, Sistem Pendidikan yang Malas Beradaptasi"
-seoMetaDescription: "95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah dapat panduan etikanya. Bukan mahasiswa yang curang, sistem pendidikan yang tertinggal."
+ogHeadline: '95% mahasiswa pakai AI, sistem yang disalahkan'
+seoMetaTitle: 'ChatGPT Bukan Curang, Sistem Pendidikan Malas Beradaptasi'
+seoMetaDescription: >-
+  95% mahasiswa Indonesia pakai AI, tapi 70.7% tidak pernah dapat panduan
+  etikanya. Bukan mahasiswa yang curang, sistem pendidikan yang tertinggal.
 seoKeywords:
-  - "chatgpt untuk tugas kuliah Indonesia"
-  - "etika penggunaan AI mahasiswa"
-  - "kebijakan AI di kampus Indonesia"
-  - "chatgpt skripsi plagiarisme"
-  - "dampak AI pada pendidikan tinggi"
-  - "panduan AI perguruan tinggi"
-  - "chatgpt curang atau tidak"
+  - chatgpt untuk tugas kuliah Indonesia
+  - etika penggunaan AI mahasiswa
+  - kebijakan AI di kampus Indonesia
+  - chatgpt skripsi plagiarisme
+  - dampak AI pada pendidikan tinggi
+  - panduan AI perguruan tinggi
+  - chatgpt curang atau tidak
 sourceReferences:
-  - type: "link"
-    url: "https://databoks.katadata.co.id/pendidikan/statistik/6874a6323a898/80-mahasiswa-global-pakai-gen-ai-untuk-kuliah-indonesia-tertinggi"
-    label: "Katadata: 80% Mahasiswa Global Pakai Gen AI untuk Kuliah, Indonesia Tertinggi (Chegg 2025)"
-  - type: "link"
-    url: "https://mediaindonesia.com/humaniora/896685/adopsi-ai-mahasiswa-indonesia-tertinggi-dunia"
-    label: "Media Indonesia: Adopsi AI Mahasiswa Indonesia Tertinggi Dunia (Chegg 2025)"
-  - type: "link"
-    url: "https://doi.org/10.56357/jt.v21i2.473"
-    label: "Jurnal: Analisis Dampak Penggunaan Generative AI terhadap Integritas Akademik Mahasiswa (SLR, 2025)"
-  - type: "link"
-    url: "https://doi.org/10.35814/coverage.v14i2.6058"
-    label: "Jurnal: Penggunaan ChatGPT di Kalangan Mahasiswa dan Dosen PT Indonesia (survei 430 responden)"
-  - type: "link"
-    url: "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research"
-    label: "UNESCO: Guidance for Generative AI in Education and Research (2023)"
-  - type: "link"
-    url: "https://kemdiktisaintek.go.id/api/file/humas-production/2024/10/Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi_isbn0506-1.pdf"
-    label: "Kemendikbudristek: Panduan Penggunaan GenAI pada Pembelajaran di PT (Oktober 2024)"
-  - type: "link"
-    url: "https://www.tempo.co/politik/uin-jakarta-atur-regulasi-penggunaan-ai-di-kampus-1653075"
-    label: "Tempo: UIN Jakarta Atur Regulasi Penggunaan AI di Kampus (2025)"
-  - type: "link"
-    url: "https://eng.ui.ac.id/wp-content/uploads/PR-2025-NO-16-tentang-Generative-ai-dalam-penulisan-ilmiah.pdf"
-    label: "UI: Peraturan Rektor No.16 Tahun 2025 tentang GenAI dalam Penulisan Ilmiah"
-  - type: "link"
-    url: "https://xjabar.com/unpad-izinkan-penggunaan-ai-dalam-tugas-kuliah-resmi-2026/"
-    label: "Xjabar: Unpad Izinkan Penggunaan AI dalam Tugas Kuliah (2026)"
-  - type: "link"
-    url: "https://data.goodstats.id/statistic/seberapa-sering-mahasiswa-ri-gunakan-ai-3NFSu"
-    label: "GoodStats: Seberapa Sering Mahasiswa RI Gunakan AI (Chegg 2025)"
+  - type: link
+    url: >-
+      https://databoks.katadata.co.id/pendidikan/statistik/6874a6323a898/80-mahasiswa-global-pakai-gen-ai-untuk-kuliah-indonesia-tertinggi
+    label: >-
+      Katadata: 80% Mahasiswa Global Pakai Gen AI untuk Kuliah, Indonesia
+      Tertinggi (Chegg 2025)
+  - type: link
+    url: >-
+      https://mediaindonesia.com/humaniora/896685/adopsi-ai-mahasiswa-indonesia-tertinggi-dunia
+    label: >-
+      Media Indonesia: Adopsi AI Mahasiswa Indonesia Tertinggi Dunia (Chegg
+      2025)
+  - type: link
+    url: 'https://doi.org/10.56357/jt.v21i2.473'
+    label: >-
+      Jurnal: Analisis Dampak Penggunaan Generative AI terhadap Integritas
+      Akademik Mahasiswa (SLR, 2025)
+  - type: link
+    url: 'https://doi.org/10.35814/coverage.v14i2.6058'
+    label: >-
+      Jurnal: Penggunaan ChatGPT di Kalangan Mahasiswa dan Dosen PT Indonesia
+      (survei 430 responden)
+  - type: link
+    url: >-
+      https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research
+    label: 'UNESCO: Guidance for Generative AI in Education and Research (2023)'
+  - type: link
+    url: >-
+      https://kemdiktisaintek.go.id/api/file/humas-production/2024/10/Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi_isbn0506-1.pdf
+    label: >-
+      Kemendikbudristek: Panduan Penggunaan GenAI pada Pembelajaran di PT
+      (Oktober 2024)
+  - type: link
+    url: >-
+      https://www.tempo.co/politik/uin-jakarta-atur-regulasi-penggunaan-ai-di-kampus-1653075
+    label: 'Tempo: UIN Jakarta Atur Regulasi Penggunaan AI di Kampus (2025)'
+  - type: link
+    url: >-
+      https://eng.ui.ac.id/wp-content/uploads/PR-2025-NO-16-tentang-Generative-ai-dalam-penulisan-ilmiah.pdf
+    label: 'UI: Peraturan Rektor No.16 Tahun 2025 tentang GenAI dalam Penulisan Ilmiah'
+  - type: link
+    url: >-
+      https://xjabar.com/unpad-izinkan-penggunaan-ai-dalam-tugas-kuliah-resmi-2026/
+    label: 'Xjabar: Unpad Izinkan Penggunaan AI dalam Tugas Kuliah (2026)'
+  - type: link
+    url: >-
+      https://data.goodstats.id/statistic/seberapa-sering-mahasiswa-ri-gunakan-ai-3NFSu
+    label: 'GoodStats: Seberapa Sering Mahasiswa RI Gunakan AI (Chegg 2025)'
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

@@ -1,35 +1,35 @@
 ---
-title: "Mau Menikah Bukan Tidak Mau: Ekonomi yang Menghalangi Gen Z"
-slug: "mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z"
-excerpt: "Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi."
-publishedAt: "2026-07-23 01:00:00+00"
+title: 'Mau Menikah Bukan Nggak Mau: Ekonomi yang Menghalangi Gen Z'
+slug: mau-menikah-bukan-tidak-mau-ekonomi-yang-menghalangi-gen-z
+excerpt: >-
+  Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua
+  pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi.
+publishedAt: '2026-07-23 01:00:00+00'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Gen Z mau menikah, tapi ekonomi yang tidak mau"
-seoMetaTitle: "Gen Z Mau Menikah, Ekonomi yang Menghalangi"
-seoMetaDescription: "Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi."
+ogHeadline: 'Gen Z mau menikah, tapi ekonomi yang tidak mau'
+seoMetaTitle: 'Gen Z Mau Menikah, Ekonomi yang Menghalangi'
+seoMetaDescription: >-
+  Gen Z sering dianggap tidak mau menikah. Tapi survei UNFPA menunjukkan dua
+  pertiga ingin berkeluarga. Yang menghalangi bukan sikap, tapi ekonomi.
 seoKeywords:
-  - "gen z menikah"
-  - "ekonomi gen z"
-  - "menunda menikah"
-  - "biaya menikah"
-  - "survei UNFPA gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - gen z menikah
+  - ekonomi gen z
+  - menunda menikah
+  - biaya menikah
+  - survei UNFPA gen z
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +37,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Gen Z ingin menikah tapi terhalang ekonomi: biaya hidup dan perumahan yang tidak terjangkau"
+coverImageAlt: >-
+  Gen Z ingin menikah tapi terhalang ekonomi: biaya hidup dan perumahan yang
+  tidak terjangkau
 ---
 
 ## Narasi yang Salah

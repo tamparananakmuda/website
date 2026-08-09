@@ -1,31 +1,41 @@
 ---
-title: "Viral Bukan Bisnis: Kenapa Bisnis Gen Z Cepat Meledak Lalu Cepat Mati"
-slug: "viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati"
-excerpt: "60% bisnis rintisan gagal di 3 tahun pertama. 10 juta views TikTok hanya hasilkan 150 transaksi. Gen Z kuat marketing, lemah fondasi."
-publishedAt: "2026-07-18 05:00:00+00"
-status: "published"
-category: "bisnis"
+title: 'Viral Bukan Bisnis: Kenapa Bisnis Gen Z Cepat Mati'
+slug: viral-bukan-bisnis-kenapa-bisnis-gen-z-cepat-meledak-lalu-cepat-mati
+excerpt: >-
+  60% bisnis rintisan gagal di 3 tahun pertama. 10 juta views TikTok hanya
+  hasilkan 150 transaksi. Gen Z kuat marketing, lemah fondasi.
+publishedAt: '2026-07-18 05:00:00+00'
+status: published
+category: bisnis
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "10 juta views TikTok, cuma 150 transaksi. Bangkrut."
-seoMetaTitle: "Viral Bukan Bisnis: Kenapa Bisnis Gen Z Cepat Meledak Lalu Cepat Mati"
-seoMetaDescription: "60% bisnis rintisan gagal di 3 tahun pertama. Data BPS: 45% kegagalan karena produk tidak sesuai kebutuhan pasar. Viral di TikTok bukan jaminan bisnis bertahan."
-seoKeywords: []
+ogHeadline: '10 juta views TikTok, cuma 150 transaksi'
+seoMetaTitle: 'Bisnis Gen Z Cepat Meledak Lalu Mati: Kenapa?'
+seoMetaDescription: >-
+  60% bisnis rintisan gagal di 3 tahun pertama. Data BPS: 45% kegagalan karena
+  produk tidak sesuai kebutuhan pasar. Viral di TikTok bukan jaminan bisnis
+  bertahan.
+seoKeywords:
+  - bisnis gen z gagal
+  - viral tiktok bukan bisnis
+  - startup indonesia cepat tutup
+  - bisnis rintisan kegagalan
+  - tiktok sales vs realitas
 sourceReferences:
-  - "Detik: Bisnis Gen Z Cepat Viral Tapi Cepat Hilang (Dosen USU)"
-  - "Kemenkop UKM: 60% bisnis rintisan gagal 3 tahun pertama"
-  - "BPS: 45% kegagalan bisnis karena produk tidak sesuai pasar"
-  - "We Are Social: 98% Gen Z aktif media sosial, 12% konten viral konversi"
-  - "OJK: 52% UMKM tidak punya pembukuan terpisah"
+  - 'Detik: Bisnis Gen Z Cepat Viral Tapi Cepat Hilang (Dosen USU)'
+  - 'Kemenkop UKM: 60% bisnis rintisan gagal 3 tahun pertama'
+  - 'BPS: 45% kegagalan bisnis karena produk tidak sesuai pasar'
+  - 'We Are Social: 98% Gen Z aktif media sosial, 12% konten viral konversi'
+  - 'OJK: 52% UMKM tidak punya pembukuan terpisah'
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

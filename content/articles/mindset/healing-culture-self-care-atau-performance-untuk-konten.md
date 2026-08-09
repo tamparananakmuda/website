@@ -1,39 +1,37 @@
 ---
-title: "Healing Culture: Self-Care atau Performance untuk Konten?"
-slug: "healing-culture-self-care-atau-performance-untuk-konten"
-excerpt: "Healing jadi industri. TikTok mengubah self-care dari praktik pribadi menjadi performansi publik. Kalau healing butuh kamera, itu bukan healing."
-publishedAt: "2026-07-20 05:00:00+00"
-status: "published"
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+title: 'Healing Culture: Self-Care atau Performance untuk Konten?'
+slug: healing-culture-self-care-atau-performance-untuk-konten
+excerpt: >-
+  Healing jadi industri. TikTok mengubah self-care dari praktik pribadi menjadi
+  performansi publik. Kalau healing butuh kamera, itu bukan healing.
+publishedAt: '2026-07-20 05:00:00+00'
+status: published
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Healing kamu butuh kamera? Itu bukan healing"
-seoMetaTitle: "Healing Culture: Self-Care atau Performance untuk Konten?"
-seoMetaDescription: "Healing jadi industri. TikTok mengubah self-care dari praktik pribadi menjadi performansi publik. Kalau healing butuh kamera, itu bukan healing."
+ogHeadline: Healing kamu butuh kamera? Itu bukan healing
+seoMetaTitle: 'Healing Culture: Self-Care atau Performance Konten?'
+seoMetaDescription: >-
+  Healing jadi industri. TikTok mengubah self-care dari praktik pribadi menjadi
+  performansi publik. Kalau healing butuh kamera, itu bukan healing.
 seoKeywords:
-  - "healing culture"
-  - "self-care"
-  - "performative wellbeing"
-  - "TikTok healing"
-  - "Gen Z kesehatan mental"
-  - "digital detox"
-  - "healing estetik"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - healing culture
+  - self-care
+  - performative wellbeing
+  - TikTok healing
+  - Gen Z kesehatan mental
+  - digital detox
+  - healing estetik
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

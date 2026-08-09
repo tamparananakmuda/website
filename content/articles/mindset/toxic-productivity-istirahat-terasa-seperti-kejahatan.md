@@ -1,35 +1,35 @@
 ---
-title: "Toxic Productivity: Istirahat Terasa Seperti Kejahatan"
-slug: "toxic-productivity-istirahat-terasa-seperti-kejahatan"
-excerpt: "Kamu merasa bersalah saat beristirahat? Cemas kalau tidak produktif? Ini bukan produktivitas, ini toxic."
-publishedAt: "2026-07-21 05:00:00+00"
-status: "published"
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+title: 'Toxic Productivity: Istirahat Terasa Seperti Kejahatan'
+slug: toxic-productivity-istirahat-terasa-seperti-kejahatan
+excerpt: >-
+  Kamu merasa bersalah saat beristirahat? Cemas kalau tidak produktif? Ini bukan
+  produktivitas, ini toxic.
+publishedAt: '2026-07-21 05:00:00+00'
+status: published
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Istirahat terasa seperti kejahatan? Itu toxic"
-seoMetaTitle: "Toxic Productivity: Istirahat Terasa Seperti Kejahatan"
-seoMetaDescription: "Kamu merasa bersalah saat beristirahat. Cemas kalau tidak produktif. Memaksa diri terus bergerak meski sudah lelah. Ini toxic."
+ogHeadline: Istirahat terasa seperti kejahatan? Itu toxic
+seoMetaTitle: 'Toxic Productivity: Istirahat Terasa Kejahatan'
+seoMetaDescription: >-
+  Kamu merasa bersalah saat beristirahat. Cemas kalau tidak produktif. Memaksa
+  diri terus bergerak meski sudah lelah. Ini toxic.
 seoKeywords:
-  - "toxic productivity gen z"
-  - "burnout gen z Indonesia"
-  - "istirahat bersalah"
-  - "hustle culture gen z"
-  - "work life balance gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - toxic productivity gen z
+  - burnout gen z Indonesia
+  - istirahat bersalah
+  - hustle culture gen z
+  - work life balance gen z
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

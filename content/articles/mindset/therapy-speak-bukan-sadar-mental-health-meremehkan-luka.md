@@ -1,18 +1,38 @@
 ---
-title: "Semua Jadi Trauma: Therapy Speak Bukan Sadar Mental Health, Itu Meremehkan Luka Nyata"
-slug: "therapy-speak-bukan-sadar-mental-health-meremehkan-luka"
-excerpt: "95% orang dengar istilah terapi setiap hari. 74% Gen Z pakai bahasa klinis di percakapan kasual. Tapi itu bukan awareness, itu senjatisasi penderitaan."
-publishedAt: "2026-07-31T10:00:00.000Z"
+title: 'Semua Jadi Trauma: Therapy Speak Meremehkan Luka Nyata'
+slug: therapy-speak-bukan-sadar-mental-health-meremehkan-luka
+excerpt: >-
+  95% orang dengar istilah terapi setiap hari. 74% Gen Z pakai bahasa klinis di
+  percakapan kasual. Tapi itu bukan awareness, itu senjatisasi penderitaan.
+publishedAt: '2026-07-31T10:00:00.000Z'
 status: published
-category: "mindset"
-subcategory: "psikologi"
-author: "yovie-setiawan"
-seoMetaTitle: "Therapy Speak Bukan Sadar Mental Health, Itu Meremehkan Luka"
-seoMetaDescription: "95% orang dengar istilah terapi setiap hari. 74% Gen Z pakai bahasa klinis di percakapan kasual. Tapi itu bukan awareness, itu senjatisasi penderitaan."
-seoKeywords: ["therapy speak gen z", "istilah psikologi yang sering disalahgunakan", "gaslighting narcissist trauma overuse", "concept creep psikologi", "dikit-dikit toxic red flag", "bahasa klinis di media sosial", "istilah psikologi populer gen z Indonesia", "self diagnosis mental health medsos"]
-ogHeadline: "Dikit-dikit trauma, dikit-dikit toxic. Kenapa?"
+category: mindset
+subcategory: psikologi
+author: yovie-setiawan
+seoMetaTitle: 'Therapy Speak Bukan Sadar Mental Health, Itu Meremehkan Luka'
+seoMetaDescription: >-
+  95% orang dengar istilah terapi setiap hari. 74% Gen Z pakai bahasa klinis di
+  percakapan kasual. Tapi itu bukan awareness, itu senjatisasi penderitaan.
+seoKeywords:
+  - therapy speak gen z
+  - istilah psikologi yang sering disalahgunakan
+  - gaslighting narcissist trauma overuse
+  - concept creep psikologi
+  - dikit-dikit toxic red flag
+  - bahasa klinis di media sosial
+  - istilah psikologi populer gen z Indonesia
+  - self diagnosis mental health medsos
+ogHeadline: 'Dikit-dikit trauma, dikit-dikit toxic. Kenapa?'
 ogHeadlineEn: null
-sourceReferences: ["Thriveworks Survey 2025 via Stacker", "BasePoint BreakThrough Study 2026 via HealthVot", "Nick Haslam University of Melbourne - Concept Creep", "Mental Momentum Research 2025-2026", "Psychology Today Apr 2025", "ITB Swadharma 2025-2026", "Kompasiana Marsha Dec 2025", "YPulse Jun 2026"]
+sourceReferences:
+  - Thriveworks Survey 2025 via Stacker
+  - BasePoint BreakThrough Study 2026 via HealthVot
+  - Nick Haslam University of Melbourne - Concept Creep
+  - Mental Momentum Research 2025-2026
+  - Psychology Today Apr 2025
+  - ITB Swadharma 2025-2026
+  - Kompasiana Marsha Dec 2025
+  - YPulse Jun 2026
 readingTime: 8
 featured: false
 isPremium: false
@@ -20,7 +40,14 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-tags: ["therapy speak", "mental health", "gen z", "concept creep", "gaslighting", "trauma", "psikologi"]
+tags:
+  - therapy speak
+  - mental health
+  - gen z
+  - concept creep
+  - gaslighting
+  - trauma
+  - psikologi
 ---
 
 ## Dilempar Seringan Kacang Goreng

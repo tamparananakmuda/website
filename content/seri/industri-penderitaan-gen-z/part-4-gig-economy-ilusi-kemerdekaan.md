@@ -7,7 +7,7 @@ excerpt: >-
 publishedAt: '2026-11-04T01:00:00.000Z'
 status: scheduled
 category: bisnis
-subcategory: karier-freelance
+subcategory: bisnis
 author: yovie-setiawan
 series: industri-penderitaan-gen-z
 seriesOrder: 4
@@ -40,8 +40,8 @@ sourceReferences:
     label: 'Sejiva - Founder Readiness Audit Report 2026'
 featured: false
 humanSignature: true
-factCheckStatus: pending
-reviewStatus: draft
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -50,6 +50,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+human_signature: true
 readingTime: 7
 ---
 
@@ -57,9 +58,7 @@ readingTime: 7
 
 ## Hook
 
-Coba perhatikan istilah yang mereka pakai: "mitra." Bukan karyawan. Bukan pekerja. Mitra. Kata yang terdengar setara, padahal dalam praktik, kamu yang menanggung semua risiko dan mereka yang mengambil semua keuntungan.
-
-Gojek, Grab, Shopee Food. Semua menyebut kamu "mitra." Tapi coba bayangkan kalau kamu benanggung kecelakaan saat nganter pesanan. Siapa yang bayar RS? Kamu. Coba bayangkan kalau motor rusak. Siapa yang bengkel? Kamu. Coba bayangkan kalau kamu sakit dan tidak bisa kerja seminggu. Siapa yang kasih THR? Tidak ada. "Mitra" adalah kata yang paling akurat sekaligus paling menipu. Karena mitra yang menanggung semua risiko bukan mitra. Itu modal yang berbentuk manusia.
+Coba perhatikan istilah yang mereka pakai: "mitra." Bukan karyawan. Bukan pekerja. Mitra. Kata yang terdengar setara, padahal dalam praktik, kamu yang menanggung semua risiko dan mereka yang mengambil semua keuntungan. Gojek, Grab, Shopee Food. Semua menyebut kamu "mitra." Tapi coba bayangkan kalau kamu benanggung kecelakaan saat nganter pesanan, siapa yang bayar RS? Kamu sendiri. Coba bayangkan kalau motor rusak, siapa yang bengkel? Kamu juga. Coba bayangkan kalau kamu sakit dan tidak bisa kerja seminggu, siapa yang kasih THR? Tidak ada. "Mitra" adalah kata yang paling akurat sekaligus paling menipu. Karena mitra yang menanggung semua risiko bukan mitra. Itu modal yang berbentuk manusia.
 
 ## Konteks
 
@@ -69,23 +68,23 @@ Gojek, Grab, dan Shopee Food mengelola jutaan "mitra" driver di Indonesia. Komis
 
 ## Kamu Bukan Konsumen, Kamu Produk
 
-Sampai part ini, kita bahas industri yang menjual solusi ke kamu. EdTech jual kursus. Finfluencer jual kelas trading. Dating app jual subscription. Kamu konsumen. Kamu bayar, kamu dapat produk. Tapi mulai part ini, polanya berbalik. Kamu bukan konsumen. Kamu adalah produk yang dijual.
+Sampai part ini, kita bahas industri yang menjual solusi ke kamu. EdTech jual kursus, finfluencer jual kelas trading, dating app jual subscription. Kamu konsumen yang bayar dan dapat produk. Tapi mulai part ini, polanya berbalik. Kamu bukan konsumen, kamu adalah produk yang dijual.
 
 Gig platform tidak menjual layanan ke kamu. Mereka menjangkau kamu ke konsumen. Kamu adalah jembatan antara platform dan pelanggan. Dan untuk privilege menjadi jembatan itu, kamu yang bayar: beli motor, beli bensin, beli helm, bayar cicilan, dan setiap transaksi platform ambil 20 sampai 30%. Bisnis model yang sempurna: kamu yang invest, kamu yang kerja, kamu yang menanggung risiko, mereka yang ambil komisi.
 
 BPS mencatat 153.05 juta tenaga kerja Indonesia per Februari 2025. Platform seperti Gojek dan Grab mengambil komisi 20-30% dari setiap transaksi sementara mitra menanggung seluruh biaya operasional. Status "mitra" menghindarkan platform dari kewajiban employer: tidak ada BPJS, tidak ada THR, tidak ada jaminan PHK.
 
-## Eksploitasi yang Dikemas sebagai Empowerment
+## Eksploitasi yang Dikemas sebagai Pemberdayaan
 
-Gig platform membingkai eksploitasi sebagai "kebebasan." Jadi bos sendiri. Atur waktu sendiri. Tidak ada jam kerja. Tidak ada atasan. Framing yang membuat kamu merasa berdaya, padahal kamu kehilangan semua perlindungan yang karyawan formal punya.
+Gig platform membingkai eksploitasi sebagai "kebebasan." Jadi bos sendiri, atur waktu sendiri, tidak ada jam kerja, tidak ada atasan. Framing yang membuat kamu merasa berdaya, padahal kamu kehilangan semua perlindungan yang karyawan formal punya.
 
 Realitasnya: penghasilan turun karena komisi platform naik dan kompetisi mitra makin banyak. Setiap hari ada driver baru yang daftar. Setiap driver baru adalah pesaing yang membagi order yang sama. Sementara itu, komisi platform tidak turun, malah naik. Biaya bensin naik. Biaya makan naik. Tapi tarif per kilometer tidak naik proporsional. Hasilnya: penghasilan per jam kerja turun, tapi jam kerja naik untuk mengejar target yang sama.
 
-Sejiva dalam Founder Readiness Audit Report 2026 menemukan bahwa 59% founder merasa professionally isolated 3-4 kali seminggu. 65% mengalami high-functioning anxiety. 23% mengalami burnout. Ini data founder, bukan driver. Tapi polanya sama: orang yang "bekerja untuk diri sendiri" lebih rentan isolasi, anxiety, dan burnout dibanding karyawan formal. Karena saat kamu "bekerja untuk diri sendiri," kamu tidak punya rekan kerja untuk curhat. Tidak punya HR untuk komplain. Tidak punya serikat untuk advokasi. Kamu sendiri. Dan "sendiri" terdengar seperti kebebasan, padahal lebih mirip penelantaran.
+Sejiva dalam Founder Readiness Audit Report 2026 menemukan bahwa 59% founder merasa professionally isolated 3-4 kali seminggu, 65% mengalami high-functioning anxiety, dan 23% mengalami burnout. Ini data founder, bukan driver. Tapi polanya sama: orang yang "bekerja untuk diri sendiri" lebih rentan isolasi, anxiety, dan burnout dibanding karyawan formal. Karena saat kamu "bekerja untuk diri sendiri," kamu tidak punya rekan kerja untuk curhat, tidak punya HR untuk komplain, tidak punya serikat untuk advokasi. Kamu sendiri. Dan "sendiri" terdengar seperti kebebasan, padahal lebih mirip penelantaran.
 
 ## Sistem yang Berfungsi Seperti yang Didesain
 
-Gig economy bukan kegagalan sistem. Ini adalah sistem yang berfungsi sempurna. Platform berhasil eksploitasi tenaga kerja dengan biaya nol. Tidak ada kewajiban employer. Tidak ada BPJS. Tidak ada THR. Tidak ada pesangon. Tidak ada serikat. Dan yang paling penting: tidak ada yang memprotes, karena kamu "bekerja untuk diri sendiri."
+Gig economy bukan kegagalan sistem. Ini adalah sistem yang berfungsi sempurna. Platform berhasil eksploitasi tenaga kerja dengan biaya nol: tidak ada kewajiban employer, tidak ada BPJS, tidak ada THR, tidak ada pesangon, tidak ada serikat. Dan yang paling penting: tidak ada yang memprotes, karena kamu "bekerja untuk diri sendiri."
 
 Negara membiarkan karena gig economy mengurangi angka pengangguran resmi. Seseorang yang drive ojol 2 jam sehari tercatat sebagai "bekerja" di data BPS. Tapi "bekerja" 2 jam dengan penghasilan Rp30.000 setelah potong bensin bukan pekerjaan. Itu survival. Tapi di data, itu angka kerja. Dan angka kerja yang bagus terlihat seperti pemerintah berhasil.
 
@@ -95,13 +94,13 @@ Seperti yang dibahas di [Gig Economy: Bukan Pilihan, Jebakan Produktivitas Renda
 
 ## Insight
 
-"Mitra" adalah kata yang paling akurat sekaligus paling menipu. Mitra yang menanggung risiko bukan mitra. Itu investor yang tidak dapat dividen. Kamu invest motor Rp15 juta. Kamu invest waktu 10 jam sehari. Kamu invest bensin Rp50 ribu per hari. Dan platform ambil 20-30% dari setiap transaksi tanpa invest apa pun selain app.
+"Mitra" adalah kata yang paling akurat sekaligus paling menipu. Mitra yang menanggung risiko bukan mitra, itu investor yang tidak dapat dividen. Kamu invest motor Rp15 juta, kamu invest waktu 10 jam sehari, kamu invest bensin Rp50 ribu per hari. Dan platform ambil 20-30% dari setiap transaksi tanpa invest apa pun selain app.
 
-Gig economy adalah transfer risiko dari perusahaan ke individu, dikemas sebagai empowerment. Perusahaan tidak perlu beli kendaraan. Tidak perlu bayar BPJS. Tidak perlu bayar THR. Tidak perlu serikat. Tidak perlu aturan ketenagakerjaan. Semua risiko ditransfer ke kamu. Dan kamu menerimanya karena tidak ada pilihan lain. Bukan karena kamu memilih kebebasan. Karena sistem tidak memberi kamu pilihan yang lain.
+Gig economy adalah transfer risiko dari perusahaan ke individu, dikemas sebagai pemberdayaan. Perusahaan tidak perlu beli kendaraan, tidak perlu bayar BPJS, tidak perlu bayar THR, tidak perlu serikat, tidak perlu aturan ketenagakerjaan. Semua risiko ditransfer ke kamu. Dan kamu menerimanya karena tidak ada pilihan lain. Bukan karena kamu memilih kebebasan. Karena sistem tidak memberi kamu pilihan yang lain.
 
 ## Conclusion
 
-Jadi, kalau besok Gojek atau Grab naikkan komisi lagi, atau kalau kompetisi mitra makin banyak sampai penghasilanmu turun, ke mana kamu pergi? Kamu tidak punya serikat. Kamu tidak punya BPJS. Kamu tidak punya PHK. Yang kamu punya hanya "kebebasan" yang ternyata lebih mirip penelantaran.
+Jadi, kalau besok Gojek atau Grab naikkan komisi lagi, atau kalau kompetisi mitra makin banyak sampai penghasilanmu turun, ke mana kamu pergi? Kamu tidak punya serikat, tidak punya BPJS, tidak punya PHK. Yang kamu punya hanya "kebebasan" yang ternyata lebih mirip penelantaran.
 
 Gig economy tidak membebaskan kamu dari sistem. Gig economy adalah sistem baru yang lebih cerdas. Di kantor, kamu tahu kamu dieksploitasi. Di sini, kamu pikir kamu bebas. Dan perbedaan itulah yang membuat gig economy lebih berbahaya dari kerja kantoran tradisional. Karena yang tidak kamu sadari, tidak bisa kamu perbaiki.
 

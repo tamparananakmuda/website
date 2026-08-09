@@ -41,11 +41,13 @@ export async function generateMetadata({
       url,
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
+      images: [{ url: `${siteUrl}/whitepaper/${wp.slug}/opengraph-image`, width: 1600, height: 900, alt: wp.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
+      images: [`${siteUrl}/whitepaper/${wp.slug}/opengraph-image`],
     },
   };
 }
@@ -74,9 +76,11 @@ export default async function WhitepaperDetailPage({ params }: WhitepaperPagePro
         description={wp.summary || wp.subtitle || ''}
         slug={wp.slug}
         publishedAt={wp.publishedAt || new Date().toISOString()}
+        modifiedAt={wp.updatedAt || undefined}
         authorName={wp.author || undefined}
         readingTime={wp.readingTime || undefined}
         keywords={wp.tags || undefined}
+        wordCount={wp.body?.split(/\s+/).length}
         urlPrefix="whitepaper"
       />
 

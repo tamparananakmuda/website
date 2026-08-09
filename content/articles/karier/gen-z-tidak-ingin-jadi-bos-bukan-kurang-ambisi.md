@@ -1,36 +1,53 @@
 ---
-title: "6% Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistem yang Tidak Menarik"
-slug: "gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi"
-excerpt: "Hanya 6% Gen Z mau jadi bos. Tapi 70% develop skill tiap minggu. Bukan kurang ambisi, sistem kerja yang tidak sepadan dengan harga yang harus dibayar."
-publishedAt: "2026-08-01 01:00:00+00"
+title: '6% Ingin Jadi Bos: Bukan Gen Z Kurang Ambisi, Sistemnya'
+slug: gen-z-tidak-ingin-jadi-bos-bukan-kurang-ambisi
+excerpt: >-
+  Hanya 6% Gen Z mau jadi bos. Tapi 70% develop skill tiap minggu. Bukan kurang
+  ambisi, sistem kerja yang tidak sepadan dengan harga yang harus dibayar.
+publishedAt: '2026-08-01 01:00:00+00'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["gen-z", "karier", "conscious-unbossing", "kepemimpinan", "manajer"]
-ogHeadline: "6% mau jadi bos, 70% belajar tiap minggu"
-seoMetaTitle: "Gen Z Tidak Ingin Jadi Bos: Bukan Kurang Ambisi"
-seoMetaDescription: "Hanya 6% Gen Z mau jadi bos. Tapi 70% develop skill tiap minggu. Bukan kurang ambisi, sistem kerja yang tidak sepadan dengan harga yang harus dibayar."
+povTag: kontra-narasi
+tags:
+  - gen-z
+  - karier
+  - conscious-unbossing
+  - kepemimpinan
+  - manajer
+ogHeadline: '6% mau jadi bos, 70% belajar tiap minggu'
+seoMetaTitle: 'Gen Z Tidak Ingin Jadi Bos: Bukan Kurang Ambisi'
+seoMetaDescription: >-
+  Hanya 6% Gen Z mau jadi bos. Tapi 70% develop skill tiap minggu. Bukan kurang
+  ambisi, sistem kerja yang tidak sepadan dengan harga yang harus dibayar.
 seoKeywords:
-  - "gen z tidak ingin jadi bos"
-  - "gen z ogah promosi Indonesia"
-  - "conscious unbossing Indonesia"
-  - "gen z menolak jabatan"
-  - "krisis kepemimpinan gen z"
-  - "gen z ambisi karier Indonesia"
+  - gen z tidak ingin jadi bos
+  - gen z ogah promosi Indonesia
+  - conscious unbossing Indonesia
+  - gen z menolak jabatan
+  - krisis kepemimpinan gen z
+  - gen z ambisi karier Indonesia
 sourceReferences:
-  - "Deloitte Global Gen Z Survey 2025: 6% Gen Z mau jadi bos, 70% develop skill weekly, 67% belajar di luar jam kerja, 535 responden Indonesia"
-  - "Robert Walters Indonesia 2026: 68% perusahaan kesulitan cari manajer, 75% Gen Z pandang manajer penting, 64% mau promosi jika gaji naik"
-  - "Stanton Chase 2025: 74% tenaga kerja global Gen Z+millenial di 2030, leadership pipeline crisis"
-  - "Deloitte 2026 Update: 44% Gen Z pilih steady progress vs 25% mau promosi cepat"
+  - >-
+    Deloitte Global Gen Z Survey 2025: 6% Gen Z mau jadi bos, 70% develop skill
+    weekly, 67% belajar di luar jam kerja, 535 responden Indonesia
+  - >-
+    Robert Walters Indonesia 2026: 68% perusahaan kesulitan cari manajer, 75%
+    Gen Z pandang manajer penting, 64% mau promosi jika gaji naik
+  - >-
+    Stanton Chase 2025: 74% tenaga kerja global Gen Z+millenial di 2030,
+    leadership pipeline crisis
+  - >-
+    Deloitte 2026 Update: 44% Gen Z pilih steady progress vs 25% mau promosi
+    cepat
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

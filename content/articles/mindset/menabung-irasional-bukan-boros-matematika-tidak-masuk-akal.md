@@ -1,50 +1,60 @@
 ---
-title: "Menabung Jadi Irasional: Bukan Gen Z Boros, Matematikanya yang Tidak Masuk Akal"
-slug: "menabung-irasional-bukan-boros-matematika-tidak-masuk-akal"
-excerpt: "Gaji Gen Z Rp 2,7-3,2 juta, kenaikan upah minus 0,06% sementara inflasi 2,72%. Menabung bukan soal niat, tapi matematika yang tidak berpihak."
-publishedAt: "2026-07-26T01:00:00.000Z"
+title: 'Menabung Jadi Irasional: Bukan Boros, Matematikanya yang Rusak'
+slug: menabung-irasional-bukan-boros-matematika-tidak-masuk-akal
+excerpt: >-
+  Gaji Gen Z Rp 2,7-3,2 juta, kenaikan upah minus 0,06% sementara inflasi 2,72%.
+  Menabung bukan soal niat, tapi matematika yang tidak berpihak.
+publishedAt: '2026-07-26T01:00:00.000Z'
 status: published
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Menabung 10 tahun pun tidak cukup uang muka rumah"
-seoMetaTitle: "Menabung Jadi Irasional: Bukan Boros, Matematikanya"
-seoMetaDescription: "Gaji Gen Z Rp 2,7 juta, kenaikan upah minus 0,06% vs inflasi 2,72%. Menabung bukan soal niat, tapi matematika yang tidak berpihak."
+ogHeadline: Menabung 10 tahun pun tidak cukup uang muka rumah
+seoMetaTitle: 'Menabung Jadi Irasional: Bukan Boros, Matematikanya'
+seoMetaDescription: >-
+  Gaji Gen Z Rp 2,7 juta, kenaikan upah minus 0,06% vs inflasi 2,72%. Menabung
+  bukan soal niat, tapi matematika yang tidak berpihak.
 seoKeywords:
-  - "menabung gen z Indonesia"
-  - "generasi nanti dulu menabung"
-  - "high time preference gen z"
-  - "daya beli menurun Indonesia 2025"
-  - "upah riil turun Indonesia"
-  - "working poor gen z Indonesia"
+  - menabung gen z Indonesia
+  - generasi nanti dulu menabung
+  - high time preference gen z
+  - daya beli menurun Indonesia 2025
+  - upah riil turun Indonesia
+  - working poor gen z Indonesia
 sourceReferences:
-  - type: "link"
-    url: "https://terusterang.id/2026/02/20/kerja-tapi-miskin-benarkah-fenomena-working-poor-menimpa-banyak-gen-z-hari-ini/"
-    label: "Terusterang: Fenomena Working Poor Gen Z Indonesia (Feb 2026)"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/06/19/144350226/sulit-cari-kerja-dan-biaya-hidup-naik-generasi-muda-pilih-nikmati-uang-hari"
-    label: "Kompas Money: Gen Z Pilih Nikmati Uang Hari Ini (Jun 2026)"
-  - type: "link"
-    url: "https://nextindonesia.id/Research/2026/02/06/229/Membaca-Sinyal-Daya-Beli-Masyarakat"
-    label: "NEXT Indonesia: Sinyal Daya Beli Masyarakat 2025-2026"
-  - type: "link"
-    url: "https://ekonomi.bisnis.com/read/20260130/9/1948360/upah-naik-daya-beli-turun-apa-yang-sebenarnya-terjadi"
-    label: "Bisnis.com: Upah Naik, Daya Beli Turun (Jan 2026)"
-  - type: "link"
-    url: "https://lps.go.id/perkembangan-indeks-menabung-konsumen-dan-indeks-kepercayaan-konsumen-juni-2026/"
-    label: "LPS: Indeks Menabung Konsumen Juni 2026"
-  - type: "link"
-    url: "https://databoks.katadata.co.id/en/employment/statistics/6819b35f46b23/average-wage-growth-of-indonesian-workers-until-early-2025"
-    label: "BPS Average Wage Growth Feb 2025 via Databoks"
+  - type: link
+    url: >-
+      https://terusterang.id/2026/02/20/kerja-tapi-miskin-benarkah-fenomena-working-poor-menimpa-banyak-gen-z-hari-ini/
+    label: 'Terusterang: Fenomena Working Poor Gen Z Indonesia (Feb 2026)'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/06/19/144350226/sulit-cari-kerja-dan-biaya-hidup-naik-generasi-muda-pilih-nikmati-uang-hari
+    label: 'Kompas Money: Gen Z Pilih Nikmati Uang Hari Ini (Jun 2026)'
+  - type: link
+    url: >-
+      https://nextindonesia.id/Research/2026/02/06/229/Membaca-Sinyal-Daya-Beli-Masyarakat
+    label: 'NEXT Indonesia: Sinyal Daya Beli Masyarakat 2025-2026'
+  - type: link
+    url: >-
+      https://ekonomi.bisnis.com/read/20260130/9/1948360/upah-naik-daya-beli-turun-apa-yang-sebenarnya-terjadi
+    label: 'Bisnis.com: Upah Naik, Daya Beli Turun (Jan 2026)'
+  - type: link
+    url: >-
+      https://lps.go.id/perkembangan-indeks-menabung-konsumen-dan-indeks-kepercayaan-konsumen-juni-2026/
+    label: 'LPS: Indeks Menabung Konsumen Juni 2026'
+  - type: link
+    url: >-
+      https://databoks.katadata.co.id/en/employment/statistics/6819b35f46b23/average-wage-growth-of-indonesian-workers-until-early-2025
+    label: BPS Average Wage Growth Feb 2025 via Databoks
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

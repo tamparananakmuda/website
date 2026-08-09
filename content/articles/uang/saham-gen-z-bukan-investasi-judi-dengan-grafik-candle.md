@@ -1,42 +1,69 @@
 ---
-title: "Saham Gen Z: Bukan Investasi, Judi dengan Grafik Candle"
-slug: "saham-gen-z-bukan-investasi-judi-dengan-grafik-candle"
-excerpt: "50% transaksi saham ritel, 70% Gen Z. 620 ribu orang trading harian, 72% rugi. Saham Gen Z bukan investasi, itu judi dengan grafik candle."
-publishedAt: "2026-08-04T01:00:00.000Z"
+title: 'Saham Gen Z: Bukan Investasi, Judi dengan Grafik Candle'
+slug: saham-gen-z-bukan-investasi-judi-dengan-grafik-candle
+excerpt: >-
+  50% transaksi saham ritel, 70% Gen Z. 620 ribu orang trading harian, 72% rugi.
+  Saham Gen Z bukan investasi, itu judi dengan grafik candle.
+publishedAt: '2026-08-04T01:00:00.000Z'
 status: published
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["saham", "gen-z", "investasi", "trading", "bursa-efek", "fomo"]
-ogHeadline: "Saham Gen Z: investasi atau judi grafik candle?"
+povTag: kontra-narasi
+tags:
+  - saham
+  - gen-z
+  - investasi
+  - trading
+  - bursa-efek
+  - fomo
+ogHeadline: 'Saham Gen Z: investasi atau judi grafik candle?'
 ogHeadlineEn: null
-seoMetaTitle: "Saham Gen Z: Bukan Investasi, Judi dengan Grafik Candle"
-seoMetaDescription: "50% transaksi saham Indonesia adalah ritel, 70% Gen Z. OJK bilang jangan trading harian. Tapi 620 ribu orang trading setiap hari dan 72% rugi."
+seoMetaTitle: 'Saham Gen Z: Judi dengan Grafik Candle'
+seoMetaDescription: >-
+  50% transaksi saham Indonesia adalah ritel, 70% Gen Z. OJK bilang jangan
+  trading harian. Tapi 620 ribu orang trading setiap hari dan 72% rugi.
 seoKeywords:
-  - "gen z investasi saham Indonesia"
-  - "investasi saham pemula 2026"
-  - "trading vs investasi saham"
-  - "investor ritel saham Indonesia"
-  - "saham gorengan gen z"
-  - "cara mulai investasi saham modal kecil"
-  - "bahaya trading saham harian"
+  - gen z investasi saham Indonesia
+  - investasi saham pemula 2026
+  - trading vs investasi saham
+  - investor ritel saham Indonesia
+  - saham gorengan gen z
+  - cara mulai investasi saham modal kecil
+  - bahaya trading saham harian
 readingTime: 9
 sourceReferences:
-  - url: "https://www.ksei.co.id/"
-    label: "KSEI: 26,1 juta SID per April 2026, 9,52 juta investor saham, naik 28,37% YoY"
-  - url: "https://money.kompas.com/read/2026/01/02/134118726/jumlah-investor-ritel-ri-melejit-ini-kesalahan-investasi-tiap-generasi"
-    label: "Kompas/OJK: investor ritel 50% transaksi (naik dari 38% di 2024), 70%+ milenial & Gen Z, 24,74 juta investor per Maret 2026"
-  - url: "https://www.sekarang.id/lebih-baik-menjadi-trader-atau-investor-ini-fakta-dan-statistik-di-indonesia/"
-    label: "Sekarang.id/OJK: 72% pedagang aset keuangan digital rugi sepanjang 2025, 90-95% trader ritel gagal profit konsisten"
-  - url: "https://jatim.pikiran-rakyat.com/ekonomi/pr-37410119219/copy-trading-vs-analisis-mandiri-mana-strategi-investasi-2026-yang-paling-cuan-dan-aman-bagi-pemula"
-    label: "Pikiran Rakyat/BEI: ritel 52% transaksi harian, 620 ribu investor aktif harian (3x lipat dari 2024), 40% pemula pakai copy trading"
-  - url: "https://www.heygotrade.com/id/blog/investasi-untuk-gen-z-indonesia-mindset-platform-dan-jebakan-yang-harus-dihindari/"
-    label: "Heygotrade: 70% akun investor baru di bawah 30 tahun, SID 13 juta akhir 2025, jebakan saham gorengan dan pump & dump"
-  - url: "https://money.kompas.com/read/2026/04/16/134118726/jumlah-investor-ritel-ri-melejit-ini-kesalahan-investasi-tiap-generasi"
-    label: "Kompas/OJK: 54% investor di bawah 30 tahun, +1,78 juta investor baru dalam 1 bulan (Maret 2026)"
+  - url: 'https://www.ksei.co.id/'
+    label: >-
+      KSEI: 26,1 juta SID per April 2026, 9,52 juta investor saham, naik 28,37%
+      YoY
+  - url: >-
+      https://money.kompas.com/read/2026/01/02/134118726/jumlah-investor-ritel-ri-melejit-ini-kesalahan-investasi-tiap-generasi
+    label: >-
+      Kompas/OJK: investor ritel 50% transaksi (naik dari 38% di 2024), 70%+
+      milenial & Gen Z, 24,74 juta investor per Maret 2026
+  - url: >-
+      https://www.sekarang.id/lebih-baik-menjadi-trader-atau-investor-ini-fakta-dan-statistik-di-indonesia/
+    label: >-
+      Sekarang.id/OJK: 72% pedagang aset keuangan digital rugi sepanjang 2025,
+      90-95% trader ritel gagal profit konsisten
+  - url: >-
+      https://jatim.pikiran-rakyat.com/ekonomi/pr-37410119219/copy-trading-vs-analisis-mandiri-mana-strategi-investasi-2026-yang-paling-cuan-dan-aman-bagi-pemula
+    label: >-
+      Pikiran Rakyat/BEI: ritel 52% transaksi harian, 620 ribu investor aktif
+      harian (3x lipat dari 2024), 40% pemula pakai copy trading
+  - url: >-
+      https://www.heygotrade.com/id/blog/investasi-untuk-gen-z-indonesia-mindset-platform-dan-jebakan-yang-harus-dihindari/
+    label: >-
+      Heygotrade: 70% akun investor baru di bawah 30 tahun, SID 13 juta akhir
+      2025, jebakan saham gorengan dan pump & dump
+  - url: >-
+      https://money.kompas.com/read/2026/04/16/134118726/jumlah-investor-ritel-ri-melejit-ini-kesalahan-investasi-tiap-generasi
+    label: >-
+      Kompas/OJK: 54% investor di bawah 30 tahun, +1,78 juta investor baru dalam
+      1 bulan (Maret 2026)
 ---
 
 ## Hook

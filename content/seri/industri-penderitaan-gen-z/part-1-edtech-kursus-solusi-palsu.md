@@ -7,7 +7,7 @@ excerpt: >-
 publishedAt: '2026-11-01T01:00:00.000Z'
 status: scheduled
 category: bisnis
-subcategory: bisnis-startup
+subcategory: bisnis
 author: yovie-setiawan
 series: industri-penderitaan-gen-z
 seriesOrder: 1
@@ -45,8 +45,8 @@ sourceReferences:
     label: 'Pajak Atmo/DJP - Pajak coach dan trainer'
 featured: true
 humanSignature: true
-factCheckStatus: pending
-reviewStatus: draft
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -55,6 +55,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+human_signature: true
 readingTime: 7
 ---
 
@@ -70,7 +71,7 @@ EdTech Indonesia adalah pasar yang tumbuh cepat. Dari platform global seperti Ud
 
 Gen Z menjadi target pasar utama. Data Jakarta Market Lab 2025 menunjukkan Gen Z menyumbang 54% market share EdTech dengan rata-rata pengeluaran $45 per bulan. Masuk akal. Generasi yang lahir setelah 1997 tumbuh dengan internet. Belajar online terasa natural. Tapi yang tidak natural adalah kenapa setelah lulus kuliah, kamu masih perlu kursus tambahan untuk "siap kerja."
 
-Fenomena "kursus hopping" menyebar di kalangan Gen Z. Beli kursus digital marketing, tidak selesai. Beli kursus coding, tidak selesai. Beli kursus public speaking, tidak selesai. Setiap kursus terlihat seperti jawaban, tapi setiap kursus hanya menambah daftar yang belum selesai. Dan setiap kali kamu tidak selesai, kamu merasa butuh kursus lain yang "lebih cocok."
+Fenomena "kursus hopping" menyebar di kalangan Gen Z. Beli kursus digital marketing, tidak selesai. Beli kursus coding, juga tidak selesai. Beli kursus public speaking, sama, tidak selesai. Setiap kursus terlihat seperti jawaban, tapi setiap kursus hanya menambah daftar yang belum selesai. Dan setiap kali kamu tidak selesai, kamu merasa butuh kursus lain yang "lebih cocok."
 
 ## Bisnis Model Ketergantungan
 
@@ -88,11 +89,11 @@ EdTech Indonesia tumbuh dari $1.7 miliar di 2021 menjadi $2.5 miliar di 2026 den
 
 Sistem pendidikan formal tidak mengajarkan skill yang dibutuhkan pasar. Lulusan S1 butuh kursus tambahan untuk "siap kerja." Itu bukan kebetulan. Itu desain.
 
-Kamu belajar empat tahun di kuliah. Skripsi. Sidang. Lulus. Tapi saat melamar kerja, kamu ditanya "apakah kamu bisa pakai Excel?" atau "apakah kamu paham Google Analytics?" Pertanyaan yang seharusnya dijawab oleh kuliah, tapi tidak. Jadi kamu butuh kursus tambahan. Kursus yang seharusnya tidak perlu kamu beli kalau sistem pendidikan bekerja.
+Kamu belajar empat tahun di kuliah, skripsi, sidang, lulus. Tapi saat melamar kerja, kamu ditanya "apakah kamu bisa pakai Excel?" atau "apakah kamu paham Google Analytics?" Pertanyaan yang seharusnya dijawab oleh kuliah, tapi tidak. Jadi kamu butuh kursus tambahan. Kursus yang seharusnya tidak perlu kamu beli kalau sistem pendidikan bekerja.
 
 EdTech mengisi gap yang diciptakan oleh sistem yang sama. Negara tidak mengajarkan skill yang dibutuhkan pasar. EdTech menjual skill yang negara tidak ajarkan. Dan kamu yang membayar, dua kali: pertama via pajak untuk pendidikan formal yang tidak memadai, kedua via kursus online untuk mengisi kekosongan itu.
 
-Indonesia Association of Life Coach (IALC) menawarkan sertifikasi Life Coach Practitioner seharga Rp3.500.000 per kelas. Industri coaching dan self-development online tumbuh signifikan, dengan platform seperti Udemy dan Zoom memperluas akses, demikian dilansir Media Balqis 2025. Setiap orang bisa jadi "coach" dengan sertifikasi yang dibeli, bukan dengan pengalaman yang teruji.
+Indonesia Association of Life Coach (IALC) menawarkan sertifikasi Life Coach Practitioner seharga Rp3.500.000 per kelas. Industri coaching dan self-development online tumbuh pesat, dengan platform seperti Udemy dan Zoom memperluas akses, demikian dilansir Media Balqis 2025. Setiap orang bisa jadi "coach" dengan sertifikasi yang dibeli, bukan dengan pengalaman yang teruji.
 
 ## Illusi "Investasi Diri"
 

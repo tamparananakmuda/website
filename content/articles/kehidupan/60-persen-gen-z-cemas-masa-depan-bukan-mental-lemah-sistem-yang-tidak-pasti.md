@@ -1,18 +1,32 @@
 ---
-title: "60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti"
-slug: "60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti"
-excerpt: "Survei Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial. Bukan mental lemah, tapi sistem yang tidak memberi kepastian."
-publishedAt: "2026-07-30T10:00:00.000Z"
+title: '60% Gen Z Cemas: Bukan Mental Lemah, Sistem Nggak Pasti'
+slug: 60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti
+excerpt: >-
+  Survei Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial. Bukan mental
+  lemah, tapi sistem yang tidak memberi kepastian.
+publishedAt: '2026-07-30T10:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "kehidupan-sosial"
-author: "yovie-setiawan"
-seoTitle: "60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem Tidak Pasti"
-seoDescription: "Survei Jakpat: 60% Gen Z Indonesia cemas masa depan, 57% tekanan finansial, 42% ekspektasi sosial. Bukan mental lemah, sistem yang tidak pasti."
-seoKeywords: ["gen z cemas masa depan 2026", "kesehatan mental gen z Indonesia", "tekanan finansial gen z", "ekspektasi sosial gen z", "sistem kerja tidak pasti Indonesia"]
-ogHeadline: "60% Gen Z cemas: bukan mental, sistemnya"
+category: kehidupan
+subcategory: kehidupan-sosial
+author: yovie-setiawan
+seoMetaTitle: '60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem Tidak Pasti'
+seoMetaDescription: >-
+  Survei Jakpat: 60% Gen Z Indonesia cemas masa depan, 57% tekanan finansial,
+  42% ekspektasi sosial. Bukan mental lemah, sistem yang tidak pasti.
+seoKeywords:
+  - gen z cemas masa depan 2026
+  - kesehatan mental gen z Indonesia
+  - tekanan finansial gen z
+  - ekspektasi sosial gen z
+  - sistem kerja tidak pasti Indonesia
+ogHeadline: '60% Gen Z cemas: bukan mental, sistemnya'
 ogHeadlineEn: null
-sourceReferences: ["Jakpat/GoodStats Data April 2026", "IMGR 2027 IDN Research Institute", "BPS Februari 2025", "CNN Indonesia Juli 2026", "Halodoc data 2026"]
+sourceReferences:
+  - Jakpat/GoodStats Data April 2026
+  - IMGR 2027 IDN Research Institute
+  - BPS Februari 2025
+  - CNN Indonesia Juli 2026
+  - Halodoc data 2026
 readingTime: 7
 featured: false
 isPremium: false

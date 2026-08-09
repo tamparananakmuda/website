@@ -1,45 +1,78 @@
 ---
-title: "Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya"
-slug: "gen-z-doomerism-pesimis-bukan-depresi-mereka-baca-datanya"
-excerpt: "Gen Z disebut sakit mental karena pesimis. Tapi data BPS, YouGov, dan Jakpat mendukung pesimisme itu. Mungkin yang perlu periksa mata adalah yang masih optimis."
-publishedAt: "2026-08-03T10:00:00.000Z"
+title: 'Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya'
+slug: gen-z-doomerism-pesimis-bukan-depresi-mereka-baca-datanya
+excerpt: >-
+  Gen Z disebut sakit mental karena pesimis. Tapi data BPS, YouGov, dan Jakpat
+  mendukung pesimisme itu. Mungkin yang perlu periksa mata adalah yang masih
+  optimis.
+publishedAt: '2026-08-03T10:00:00.000Z'
 status: published
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["doomerism", "gen-z", "pesimisme", "kabur-aja-dulu", "kesehatan-mental", "ekonomi"]
-ogHeadline: "Gen z pesimis bukan depresi, mereka baca datanya"
+povTag: kontra-narasi
+tags:
+  - doomerism
+  - gen-z
+  - pesimisme
+  - kabur-aja-dulu
+  - kesehatan-mental
+  - ekonomi
+ogHeadline: 'Gen z pesimis bukan depresi, mereka baca datanya'
 ogHeadlineEn: null
-seoMetaTitle: "Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya"
-seoMetaDescription: "60% Gen Z cemas masa depan, 37% pesimis, 41% ingin kabur. Bukan sakit mental, mereka baca datanya: pengangguran, ekonomi, iklim. Pesimisme rasional."
+seoMetaTitle: 'Gen Z Doomerism: Pesimis Bukan Depresi'
+seoMetaDescription: >-
+  60% Gen Z cemas masa depan, 37% pesimis, 41% ingin kabur. Bukan sakit mental,
+  mereka baca datanya: pengangguran, ekonomi, iklim. Pesimisme rasional.
 seoKeywords:
-  - "gen z pesimis masa depan Indonesia"
-  - "gen z doomerism"
-  - "gen z cemas masa depan"
-  - "gen z kabur aja dulu"
-  - "gen z stres finansial 2026"
-  - "gen z doom spending Indonesia"
-  - "gen z pesimisme rasional"
+  - gen z pesimis masa depan Indonesia
+  - gen z doomerism
+  - gen z cemas masa depan
+  - gen z kabur aja dulu
+  - gen z stres finansial 2026
+  - gen z doom spending Indonesia
+  - gen z pesimisme rasional
 sourceReferences:
-  - url: "https://www.cnnindonesia.com/gaya-hidup/20250309155529-277-1206753/survei-kaburajadulu-mayoritas-gen-z-ingin-pindah-ke-luar-negeri"
-    label: "CNN Indonesia/YouGov: 41% Gen Z pertimbangkan pindah, 37% pesimis, 2.003 responden Feb 2025"
-  - url: "https://www.mdi.news/60-gen-z-ri-cemas-masa-depan-ini-biang-keroknya-di-dunia-kerja/"
-    label: "MDI News/Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial, 62% mood swing, 1.158 responden Des 2025"
-  - url: "https://www.bps.go.id/id/publication/2024/12/31/b2dbaac4542352cea8794590/statistik-pemuda-indonesia-2024.html"
-    label: "BPS Statistik Pemuda 2024: TPT umur muda 16,42%, 7,47 juta pengangguran, rasio TPT muda:dewasa 5,84x"
-  - url: "https://money.kompas.com/read/2026/06/19/131934426/gen-z-kehilangan-harapan-punya-rumah-belanja-impulsif-meningkat"
-    label: "Kompas/BTN: 64% Gen Z stres finansial, doom spending, lipstick effect, Jun 2026"
-  - url: "https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal"
-    label: "CNN Indonesia/ISEAI: 75% pekerja digital < Rp3 juta, low productivity trap, 2,41 juta pekerja digital"
-  - url: "https://doi.org/10.37275/oaijss.v8i5.305"
-    label: "OAIJSS Academic: #KaburAjaDulu study, Working Dead Syndrome, Green Pasture Mirage, 30 participants IPA + 1.000 SEM"
-  - url: "https://www.kompas.com/sains/read/2025/07/02/130000123/gelombang-panas-eropa-10-000-kematian-dalam-satu-musim-panas"
-    label: "Kompas: Gelombang panas Eropa, 10.000 kematian, suhu 40 derajat Celsius, Jul 2025"
-  - url: "https://bengkelnarasi.id/2026/06/stigma-kesehatan-mental-gen-z-indonesia/"
-    label: "Bengkel Narasi: Stigma kesehatan mental Gen Z, hanya 2,6% populasi akses konseling profesional, Jun 2026"
+  - url: >-
+      https://www.cnnindonesia.com/gaya-hidup/20250309155529-277-1206753/survei-kaburajadulu-mayoritas-gen-z-ingin-pindah-ke-luar-negeri
+    label: >-
+      CNN Indonesia/YouGov: 41% Gen Z pertimbangkan pindah, 37% pesimis, 2.003
+      responden Feb 2025
+  - url: >-
+      https://www.mdi.news/60-gen-z-ri-cemas-masa-depan-ini-biang-keroknya-di-dunia-kerja/
+    label: >-
+      MDI News/Jakpat: 60% Gen Z cemas masa depan, 57% tekanan finansial, 62%
+      mood swing, 1.158 responden Des 2025
+  - url: >-
+      https://www.bps.go.id/id/publication/2024/12/31/b2dbaac4542352cea8794590/statistik-pemuda-indonesia-2024.html
+    label: >-
+      BPS Statistik Pemuda 2024: TPT umur muda 16,42%, 7,47 juta pengangguran,
+      rasio TPT muda:dewasa 5,84x
+  - url: >-
+      https://money.kompas.com/read/2026/06/19/131934426/gen-z-kehilangan-harapan-punya-rumah-belanja-impulsif-meningkat
+    label: >-
+      Kompas/BTN: 64% Gen Z stres finansial, doom spending, lipstick effect, Jun
+      2026
+  - url: >-
+      https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal
+    label: >-
+      CNN Indonesia/ISEAI: 75% pekerja digital < Rp3 juta, low productivity
+      trap, 2,41 juta pekerja digital
+  - url: 'https://doi.org/10.37275/oaijss.v8i5.305'
+    label: >-
+      OAIJSS Academic: #KaburAjaDulu study, Working Dead Syndrome, Green Pasture
+      Mirage, 30 participants IPA + 1.000 SEM
+  - url: >-
+      https://www.kompas.com/sains/read/2025/07/02/130000123/gelombang-panas-eropa-10-000-kematian-dalam-satu-musim-panas
+    label: >-
+      Kompas: Gelombang panas Eropa, 10.000 kematian, suhu 40 derajat Celsius,
+      Jul 2025
+  - url: 'https://bengkelnarasi.id/2026/06/stigma-kesehatan-mental-gen-z-indonesia/'
+    label: >-
+      Bengkel Narasi: Stigma kesehatan mental Gen Z, hanya 2,6% populasi akses
+      konseling profesional, Jun 2026
 readingTime: 10
 featured: true
 isPremium: false
@@ -47,8 +80,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

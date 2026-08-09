@@ -208,16 +208,109 @@ Pilih narrative framework berdasarkan goal whitepaper:
 6. Conclusion (restate thesis + implication + human signature)
 ```
 
-### Hook Strategy
+### Hook Strategy (30 Hook Formula System)
 
-Pilih hook type berdasarkan data terkuat dari 02-research:
+Reference lengkap: `Hook & Foreshadow by Content Level.md` (30 Hook formula + 20 Foreshadow formula)
 
-| Hook type | Kapan dipakai | Contoh |
-|-----------|---------------|--------|
-| **Data shocking** | Ada 1 angka yang sangat striking | "74% lulusan kuliah Indonesia menganggur." |
-| **Kontra-narasi** | Thesis bertentangan dengan narasi publik | "Semua bilang freelance itu kebebasan. Data bilang 78% tidak punya BPJS." |
-| **Trend reversal** | Ada perubahan tren signifikan | "Selama 10 tahun kita percaya ekonomi digital = kesempatan. 2025, data menunjukkan sebaliknya." |
-| **Question provocation** | Ada pertanyaan yang tidak bisa dijawab narasi publik | "Kalau kerja keras = sukses, kenapa 65% Gen Z yang kerja 45+ jam seminggu ingin resign?" |
+#### Executive Hook (dari step 01-idea, sudah dipilih)
+
+Executive Hook formula sudah dipilih di step 01-idea untuk og_headline dan Executive Summary opening. BUKAN untuk title.
+
+**Title whitepaper** sudah dipilih di step 01-idea berdasar 20 prinsip riset punchy (simplicity, negativity, contrast, curiosity gap, concreteness, brevity, active verb, 2nd person, rhythm, emotional arousal, loss framing, digits, odd numbers, forward referencing, unresolved emotion, avoid fear, 1st person singular, avoid clickbait, avoid superlatives, alliteration). Di step 03-strategy, refine title jika perlu (pastikan masih punchy, max 10 kata, bahasa orang muda).
+
+**Executive Hook formula** diterapkan di:
+- **og_headline** (max 50 char, berbeda dari title, function sebagai visual hook)
+- **Executive Summary opening paragraph** (first paragraph di Exec Summary)
+
+Di step 03-strategy, finalisasi og_headline dan Executive Summary opening dengan Executive Hook formula yang dipilih.
+
+#### Section Hook Formula (pilih 1 per section dari 30 Hook formula)
+
+Whitepaper punya multiple section, setiap section punya Section Hook sendiri. Section Hook = hook untuk section tersebut (paragraf pertama section).
+
+| # | Nama | Template Opening |
+|---|------|------------------|
+| 01 | Expectation vs Reality | "Kamu pikir [X]. Kenyataannya [Y]." |
+| 02 | Data Shock | "[Angka spesifik + sumber]. Angka itu [konteks yang mengejutkan]." |
+| 03 | Provocative Question | "Kapan terakhir kali kamu [X]?" |
+| 04 | Personal Observation | "Saya perhatikan, dari [X], hanya [Y] yang [Z]." |
+| 05 | Counter-Narrative | "Semua bilang [X]. Tapi [data/fakta] bilang sebaliknya." |
+| 06 | Direct Slap | "Kamu tidak [X]. Kamu cuma [Y]." |
+| 07 | Myth Breaking | "Kalau kamu masih percaya [X], saatnya berpikir ulang." |
+| 08 | Time Pressure | "Dalam [X] tahun, [Y] akan [Z]. Kamu sudah siap?" |
+| 09 | Contradiction | "[X] itu [Y]. Tapi [X] juga [Z]." |
+| 10 | False Belief | "Kesalahan terbesar tentang [X] yang dilakukan hampir semua orang." |
+| 11 | Future Prediction | "Dalam 5 tahun, [X] tidak akan ada lagi. Kamu akan [Y]." |
+| 12 | Comparison Shock | "[X] lebih [Y] dari [Z]. Dan tidak ada yang bicara." |
+| 13 | Definition Reset | "[Kata umum] bukan berarti [asumsi umum]. [Kata umum] berarti [definisi tajam]." |
+| 14 | Pattern Recognition | "Ada pola yang muncul: [X], [Y], [Z]. Semua pointing ke [A]." |
+| 15 | Cost of Ignorance | "Setiap hari kamu tidak tahu ini, kamu rugi [X]." |
+| 16 | Status Quo Attack | "[X] sudah jalan [Y] tahun. Hasilnya? [Z]. Saatnya berhenti." |
+| 17 | Before-After | "Sebelum [X], kamu [Y]. Setelah [X], kamu [Z]. Bedanya [A]." |
+| 18 | Paradox | "Makin kamu [X], makin [Y]. Itu bukan kebetulan." |
+| 19 | Reframe | "Masalahmu bukan [X]. Masalahmu adalah [Y]." |
+| 20 | Data Contradiction | "[Sumber A] bilang [X]. [Sumber B] bilang [Y]. Keduanya benar." |
+| 21 | Question Stack | "Kenapa [X]? Kenapa [Y]? Kenapa [Z]? Jawabannya sama." |
+| 22 | Hidden Truth | "Yang tidak pernah diajarkan tentang [X]." |
+| 23 | Uncomfortable Truth | "Tidak ada cara halus untuk bilang ini: [X]." |
+| 24 | Assumption Inversion | "Dan jika [asumsi] salah? Maka [konsekuensi]." |
+| 25 | Trend Reversal | "Selama [X] tahun, [trend A]. Tahun ini, [trend B]." |
+| 26 | System Failure | "Sistem [X] dirancang untuk [Y]. Tapi untuk [Z], sistemnya gagal." |
+| 27 | Personal Cost | "Aku tahu ini karena [X]. Harganya [Y]." |
+| 28 | Silent Epidemic | "Tidak ada yang membicarakan [X]. Tapi [data] menunjukkan [Y]." |
+| 29 | Generational Divide | "Orang tua kamu [X]. Kamu [Y]. Keduanya valid, tapi [Z]." |
+| 30 | Meta Hook | "Whitepaper ini akan membuat kamu [X]. Kalau kamu tidak siap, jangan baca." |
+
+**Aturan Section Hook:**
+- Setiap section (Executive Summary, Background, Analysis, Recommendation, Conclusion) punya 1 Section Hook
+- Section Hook berbeda dari Executive Hook (judul whitepaper)
+- Hook progression: Executive Summary hook paling broad, Analysis hook semakin deep, Conclusion hook paling provokatif
+- Jangan repetisi formula di section berurutan
+
+#### Section Foreshadow Formula (pilih 1 per section dari 20 Foreshadow formula)
+
+Foreshadow dipakai di akhir section untuk tease section berikutnya, atau di conclusion untuk tease whitepaper terkait/artikel turunan.
+
+| # | Nama | Template |
+|---|------|----------|
+| 01 | Promise | "Di akhir section ini, kamu akan paham [X]." |
+| 02 | Curiosity | "Masalahnya bukan [X]. Ada [Y] yang tidak kamu sadari." |
+| 03 | Cliffhanger | "Tapi itu baru permukaan. Yang lebih dalam ada di section berikutnya." |
+| 04 | Setup-Payoff | "Ingat [X] di awal. Nanti kamu akan tahu kenapa." |
+| 05 | Warning | "Sebelum kamu lanjut, ada yang perlu kamu tahu: [X]." |
+| 06 | Transformation | "Setelah memahami ini, cara kamu melihat [X] akan berubah." |
+| 07 | Question Tease | "Pertanyaannya bukan [X]. Pertanyaannya adalah [Y]." |
+| 08 | Data Tease | "Dan angka ini bukan yang paling mengejutkan." |
+| 09 | Pattern Tease | "Kalau kamu lihat polanya, [X] bukan kebetulan." |
+| 10 | Contradiction Tease | "Tapi tunggu. [X] juga [Y]. Bagaimana mungkin?" |
+| 11 | Personal Tease | "Aku juga dulu [X]. Sampai [Y] terjadi." |
+| 12 | Relevance Tease | "Ini bukan tentang [X]. Ini tentang [Y]. Dan [Y] menyangkut kamu." |
+| 13 | Urgency Tease | "Setiap hari kamu tunda, [X] makin [Y]." |
+| 14 | Inversion Tease | "Kamu pikir [X] adalah masalah. Sebenarnya [X] adalah gejala." |
+| 15 | Connection Tease | "[X] dan [Y] terlihat tidak related. Tapi keduanya punya akar yang sama." |
+| 16 | Stakes Tease | "Yang dipertaruhkan bukan [X]. Yang dipertaruhkan adalah [Y]." |
+| 17 | Next Step Tease | "Memahami ini adalah langkah pertama. Langkah kedua lebih sulit." |
+| 18 | Personal | "Aku dulu juga berpikir seperti itu. Sampai [X]." |
+| 19 | Reframe Tease | "Masalahnya bukan [X]. Masalahnya lebih besar dari itu." |
+| 20 | Resolution Tease | "Ada jalan keluar. Tapi bukan yang kamu kira." |
+
+#### Bridge Formula (untuk transition antar section)
+
+Bridge = kalimat penghubung antar section yang maintain reading momentum. Berbeda dari Section Foreshadow (tease), Bridge = transition yang connect argument section A ke section B.
+
+| Formula | Template Bridge |
+|---------|-----------------|
+| **Causal Bridge** | "Dari data di atas, muncul pertanyaan: [X]?" |
+| **Contrast Bridge** | "Tapi data itu hanya satu sisi. Ada [Y] yang juga perlu dilihat." |
+| **Escalation Bridge** | "Dan masalahnya tidak berhenti di situ. [Y] lebih [Z]." |
+| **Question Bridge** | "Lalu, apa artinya semua ini untuk [X]?" |
+| **Synthesis Bridge** | "Jika kita gabungkan [A] dan [B], muncul pola [C]." |
+
+#### Thumbnail Text, Caption & Meta Description Formula
+
+- **Thumbnail text (og_headline):** Max 50 karakter, HARUS berbeda dari title. Function sebagai visual hook di OG image card (800x450). Pilih Hook formula berbeda dari title.
+- **Thumbnail caption (excerpt/summary):** Max 180 karakter. Function sebagai visual foreshadow di OG image feature (1600x900). Bisa adaptasi dari Foreshadow formula pilihan.
+- **Meta description:** Max 160 karakter, mengandung Hook + Value + Foreshadow element (opening = hook, middle = value, closing = foreshadow tease).
 
 ### Conclusion Strategy (anti-generic)
 
@@ -541,6 +634,16 @@ Ini akan dipakai di step 04-outline untuk struktur section.
 - [ ] Causal chain analysis selesai (root cause → consequence)
 - [ ] Confounding variables identified
 - [ ] Narrative strategy dipilih (goal, framework, emotional arc, hook)
+- [ ] Title whitepaper final punchy berdasar 20 prinsip riset (simplicity, negativity, contrast, curiosity gap, concreteness, brevity, active verb, 2nd person, rhythm, emotional arousal, loss framing, digits, odd numbers, forward referencing, unresolved emotion, avoid fear, 1st person singular, avoid clickbait, avoid superlatives, alliteration)
+- [ ] Title max 10 kata (ideal 5-8), kata umum > formal, ada kontras/surprise, bervariasi pattern
+- [ ] Title pakai bahasa yang orang muda pakai, bukan bahasa jurnal/skripsi
+- [ ] Executive Hook formula diterapkan di og_headline (max 50 char, berbeda dari title) dan Exec Summary opening
+- [ ] Section Hook formula dipilih per section (dari 30 formula, tulis nomor + nama)
+- [ ] Section Foreshadow formula dipilih per section (dari 20 formula, tulis nomor + nama)
+- [ ] Bridge formula dipilih untuk transition antar section (dari 5 Bridge formula)
+- [ ] Thumbnail text direncanakan (max 50 chars, berbeda dari title, visual hook)
+- [ ] Thumbnail caption direncanakan (max 180 chars, visual foreshadow)
+- [ ] Meta description direncanakan dengan Hook + Foreshadow element (max 160 chars)
 - [ ] Conclusion strategy anti-generic
 - [ ] Recommendation framework: individual + organisasi + kebijakan (jika relevan)
 - [ ] Semua rekomendasi lolos 5 kriteria quality check

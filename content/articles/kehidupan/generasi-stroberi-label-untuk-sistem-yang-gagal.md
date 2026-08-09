@@ -1,35 +1,35 @@
 ---
-title: "Generasi Stroberi: Label untuk Sistem yang Gagal"
-slug: "generasi-stroberi-label-untuk-sistem-yang-gagal"
-excerpt: "Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa masalahnya bukan kelemahan individu, melainkan sistem yang gagal."
-publishedAt: "2026-07-22 10:00:00+00"
+title: 'Generasi Stroberi: Label untuk Sistem yang Gagal'
+slug: generasi-stroberi-label-untuk-sistem-yang-gagal
+excerpt: >-
+  Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa
+  masalahnya bukan kelemahan individu, melainkan sistem yang gagal.
+publishedAt: '2026-07-22 10:00:00+00'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Gen Z stroberi? Bukan buahnya, tanahnya yang rusak"
-seoMetaTitle: "Generasi Stroberi: Label untuk Sistem yang Gagal"
-seoMetaDescription: "Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa masalahnya bukan kelemahan individu, melainkan sistem yang gagal."
+ogHeadline: 'Gen Z stroberi? Bukan buahnya, tanahnya yang rusak'
+seoMetaTitle: 'Generasi Stroberi: Label untuk Sistem Gagal'
+seoMetaDescription: >-
+  Gen Z disebut stroberi: lunak, mudah hancur. Tapi label ini mengabaikan bahwa
+  masalahnya bukan kelemahan individu, melainkan sistem yang gagal.
 seoKeywords:
-  - "generasi stroberi"
-  - "gen z kesehatan mental"
-  - "stigma gen z"
-  - "sistem yang gagal"
-  - "gen z Indonesia"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - generasi stroberi
+  - gen z kesehatan mental
+  - stigma gen z
+  - sistem yang gagal
+  - gen z Indonesia
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +37,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Gen Z dilabeli generasi stroberi, tapi data menunjukkan sistem yang gagal bukan generasi yang lemah"
+coverImageAlt: >-
+  Gen Z dilabeli generasi stroberi, tapi data menunjukkan sistem yang gagal
+  bukan generasi yang lemah
 ---
 
 ## Label yang Mulai dari Mana

@@ -1,35 +1,35 @@
 ---
-title: "AI Tidak Mengambil Kerjamu, AI Mengambil Tahap Belajarmu"
-slug: "ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu"
-excerpt: "99% CEO siap PHK karena AI. Posisi entry-level yang hilang bukan sekadar pekerjaan, itu satu-satunya jalur belajar praktis bagi lulusan baru."
-publishedAt: "2026-07-17 10:00:00+00"
-status: "published"
-category: "teknologi"
+title: 'AI Nggak Mengambil Kerjamu, AI Mengambil Tahap Belajarmu'
+slug: ai-tidak-mengambil-kerjamu-ai-mengambil-tahap-belajarmu
+excerpt: >-
+  99% CEO siap PHK karena AI. Posisi entry-level yang hilang bukan sekadar
+  pekerjaan, itu satu-satunya jalur belajar praktis bagi lulusan baru.
+publishedAt: '2026-07-17 10:00:00+00'
+status: published
+category: teknologi
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "AI ambil tahap belajarmu, bukan kerjamu"
-seoMetaTitle: "AI Ambil Tahap Belajarmu, Bukan Kerjamu"
-seoMetaDescription: "AI menggantikan posisi entry-level, bukan sekadar mengambil pekerjaan tapi menghapus jalur belajar praktis bagi Gen Z dan lulusan baru."
+ogHeadline: 'AI ambil tahap belajarmu, bukan kerjamu'
+seoMetaTitle: 'AI Ambil Tahap Belajarmu, Bukan Kerjamu'
+seoMetaDescription: >-
+  AI menggantikan posisi entry-level, bukan sekadar mengambil pekerjaan tapi
+  menghapus jalur belajar praktis bagi Gen Z dan lulusan baru.
 seoKeywords:
-  - "AI gantikan pekerjaan entry level"
-  - "AI PHK fresh graduate"
-  - "gen z AI dunia kerja"
-  - "entry level jobs AI Indonesia"
-  - "cognitive offloading gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - AI gantikan pekerjaan entry level
+  - AI PHK fresh graduate
+  - gen z AI dunia kerja
+  - entry level jobs AI Indonesia
+  - cognitive offloading gen z
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

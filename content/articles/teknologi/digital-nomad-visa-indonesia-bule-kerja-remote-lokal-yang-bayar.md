@@ -1,26 +1,36 @@
 ---
-title: "Digital Nomad Visa Indonesia: Bule Kerja Remote di Bali, Lokal yang Bayar"
-slug: "digital-nomad-visa-indonesia-bule-kerja-remote-lokal-yang-bayar"
-excerpt: "E33G visa $60,000/tahun. Harga sewa Canggu naik 11-41%. 342 deportasi 2026. Indonesia jual visa digital nomad, warga lokal yang bayar harga naik."
-publishedAt: "2026-08-06T05:00:00.000Z"
+title: 'Digital Nomad Visa: Bule Kerja Remote, Lokal yang Bayar'
+slug: digital-nomad-visa-indonesia-bule-kerja-remote-lokal-yang-bayar
+excerpt: >-
+  E33G visa $60,000/tahun. Harga sewa Canggu naik 11-41%. 342 deportasi 2026.
+  Indonesia jual visa digital nomad, warga lokal yang bayar harga naik.
+publishedAt: '2026-08-06T05:00:00.000Z'
 status: published
-category: "teknologi"
-subcategory: "analisis-fenomena"
-author: "yovie-setiawan"
+category: teknologi
+subcategory: analisis-fenomena
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["digital-nomad", "bali", "gentrifikasi", "visa-e33g", "ekspat", "properti"]
-ogHeadline: "Bule kerja remote di Bali, lokal yang bayar"
-seoMetaTitle: "Digital Nomad Visa Indonesia: Bule Remote, Lokal Bayar"
-seoMetaDescription: "E33G visa $60,000/tahun. Harga sewa Canggu naik 11-41%. 342 deportasi 2026. Indonesia jual visa, warga lokal yang bayar."
+povTag: data
+tags:
+  - digital-nomad
+  - bali
+  - gentrifikasi
+  - visa-e33g
+  - ekspat
+  - properti
+ogHeadline: 'Bule kerja remote di Bali, lokal yang bayar'
+seoMetaTitle: 'Digital Nomad Visa Indonesia: Bule Remote, Lokal Bayar'
+seoMetaDescription: >-
+  E33G visa $60,000/tahun. Harga sewa Canggu naik 11-41%. 342 deportasi 2026.
+  Indonesia jual visa, warga lokal yang bayar.
 seoKeywords:
-  - "digital nomad visa indonesia"
-  - "bali gentrifikasi"
-  - "harga sewa canggu"
-  - "e33g visa indonesia"
-  - "digital nomad bali 2026"
-  - "bali deportasi 2026"
+  - digital nomad visa indonesia
+  - bali gentrifikasi
+  - harga sewa canggu
+  - e33g visa indonesia
+  - digital nomad bali 2026
+  - bali deportasi 2026
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,16 +45,46 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://theconversation.com/nomad-digital-bikin-ekonomi-canggu-melesat-tapi-bagaimana-dengan-warga-lokal-275322","label":"The Conversation: Nomad Digital Bikin Ekonomi Canggu Melesat, Tapi Bagaimana dengan Warga Lokal? (2026)"}
-  - {"type":"link","url":"https://www.antaranews.com/berita/5606763/menataarusdigitalnomaddemistabilitashargadidaerah","label":"Antara News: Menata Arus Digital Nomad Demi Stabilitas Harga di Daerah (2026)"}
-  - {"type":"link","url":"https://iannomad.com/bali-digital-nomad-visa-b211a-vs-e33g-2026/","label":"IAN Nomad: B211A vs E33G Bali Digital Nomad Visa 2026 Guide"}
-  - {"type":"link","url":"https://lowdown.today/t/nomads-and-communities/3/indonesia-raises-e33g-syncs-tax-with-immigration/","label":"Lowdown: Indonesia Raises E33G, Syncs Tax with Immigration (2026)"}
-  - {"type":"link","url":"https://www.nusabali.com/index.php/berita/226474/ramai-ekspat-beli-villa-di-bali-alih-alih-sewa-ini-alasannya","label":"NusaBali: Ramai Ekspat Beli Villa di Bali Alih-Alih Sewa (2026)"}
-  - {"type":"link","url":"https://prestigepropertybali.com/id/blog/cost-of-living-in-bali","label":"Prestige Property Bali: Biaya Hidup di Bali Panduan 2026"}
-  - {"type":"link","url":"https://www.tntmagazine.com/news/travel-news/indonesia-digital-nomad-visa-crackdown-2026/","label":"TNT Magazine: Indonesia's Nomad Visa Crackdown Is Getting Real (2026)"}
-  - {"type":"link","url":"https://swiftvisaindo.com/working-remotely-bali-legally-2026-visa-guide/","label":"SwiftVisaIndo: Working Remotely in Bali Legally 2026 Visa Guide"}
-  - {"type":"link","url":"https://www.newsy-today.com/bali-deports-foreigners-working-on-tourist-visas/","label":"Newsy Today: Bali Deports Foreigners Working on Tourist Visas (2026)"}
-  - {"type":"link","url":"https://xpnd.co.id/blogs/indonesia-immigration-enforcement-2026/","label":"XPND: Indonesia Immigration Enforcement 2026 Employer Guide"}
+  - type: link
+    url: >-
+      https://theconversation.com/nomad-digital-bikin-ekonomi-canggu-melesat-tapi-bagaimana-dengan-warga-lokal-275322
+    label: >-
+      The Conversation: Nomad Digital Bikin Ekonomi Canggu Melesat, Tapi
+      Bagaimana dengan Warga Lokal? (2026)
+  - type: link
+    url: >-
+      https://www.antaranews.com/berita/5606763/menataarusdigitalnomaddemistabilitashargadidaerah
+    label: >-
+      Antara News: Menata Arus Digital Nomad Demi Stabilitas Harga di Daerah
+      (2026)
+  - type: link
+    url: 'https://iannomad.com/bali-digital-nomad-visa-b211a-vs-e33g-2026/'
+    label: 'IAN Nomad: B211A vs E33G Bali Digital Nomad Visa 2026 Guide'
+  - type: link
+    url: >-
+      https://lowdown.today/t/nomads-and-communities/3/indonesia-raises-e33g-syncs-tax-with-immigration/
+    label: 'Lowdown: Indonesia Raises E33G, Syncs Tax with Immigration (2026)'
+  - type: link
+    url: >-
+      https://www.nusabali.com/index.php/berita/226474/ramai-ekspat-beli-villa-di-bali-alih-alih-sewa-ini-alasannya
+    label: 'NusaBali: Ramai Ekspat Beli Villa di Bali Alih-Alih Sewa (2026)'
+  - type: link
+    url: 'https://prestigepropertybali.com/id/blog/cost-of-living-in-bali'
+    label: 'Prestige Property Bali: Biaya Hidup di Bali Panduan 2026'
+  - type: link
+    url: >-
+      https://www.tntmagazine.com/news/travel-news/indonesia-digital-nomad-visa-crackdown-2026/
+    label: 'TNT Magazine: Indonesia''s Nomad Visa Crackdown Is Getting Real (2026)'
+  - type: link
+    url: 'https://swiftvisaindo.com/working-remotely-bali-legally-2026-visa-guide/'
+    label: 'SwiftVisaIndo: Working Remotely in Bali Legally 2026 Visa Guide'
+  - type: link
+    url: >-
+      https://www.newsy-today.com/bali-deports-foreigners-working-on-tourist-visas/
+    label: 'Newsy Today: Bali Deports Foreigners Working on Tourist Visas (2026)'
+  - type: link
+    url: 'https://xpnd.co.id/blogs/indonesia-immigration-enforcement-2026/'
+    label: 'XPND: Indonesia Immigration Enforcement 2026 Employer Guide'
 ---
 
 ## Hook

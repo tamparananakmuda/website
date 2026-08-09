@@ -1,50 +1,64 @@
 ---
-title: "Situationship Bukan Takut Komitmen, Ekonomi yang Membuat Komitmen Jadi Beban"
-slug: "situationship-bukan-takut-komitmen-ekonomi-yang-bikin-beban"
-excerpt: "63% Gen Z menunda nikah karena tekanan biaya hidup. Situationship bukan ketakutan, tapi respons rasional terhadap ekonomi yang tidak pasti."
-publishedAt: "2026-07-25T10:00:00.000Z"
-status: "published"
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+title: 'Situationship Bukan Takut Komitmen, Ekonomi yang Bikin Beban'
+slug: situationship-bukan-takut-komitmen-ekonomi-yang-bikin-beban
+excerpt: >-
+  63% Gen Z menunda nikah karena tekanan biaya hidup. Situationship bukan
+  ketakutan, tapi respons rasional terhadap ekonomi yang tidak pasti.
+publishedAt: '2026-07-25T10:00:00.000Z'
+status: published
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Bukan takut komitmen, ekonomi yang bikin komitmen jadi beban"
-seoMetaTitle: "Situationship Bukan Takut Komitmen, Ekonomi yang Beban"
-seoMetaDescription: "63% Gen Z menunda nikah karena biaya hidup. Situationship bukan ketakutan komitmen, tapi respons rasional terhadap ekonomi yang tidak pasti."
+ogHeadline: 'Bukan takut komitmen, ekonomi yang bikin beban'
+seoMetaTitle: 'Situationship Bukan Takut Komitmen, Ekonomi yang Beban'
+seoMetaDescription: >-
+  63% Gen Z menunda nikah karena biaya hidup. Situationship bukan ketakutan
+  komitmen, tapi respons rasional terhadap ekonomi yang tidak pasti.
 seoKeywords:
-  - "situationship gen z Indonesia"
-  - "gen z takut komitmen"
-  - "hubungan tanpa status gen z"
-  - "kenapa gen z menunda nikah"
-  - "ekonomi dan hubungan gen z"
-  - "biaya menikah gen z Indonesia"
+  - situationship gen z Indonesia
+  - gen z takut komitmen
+  - hubungan tanpa status gen z
+  - kenapa gen z menunda nikah
+  - ekonomi dan hubungan gen z
+  - biaya menikah gen z Indonesia
 sourceReferences:
-  - type: "link"
-    url: "https://profesi-unm.com/opini-menjelang-30-gen-z-1997-di-persimpangan-nikah-situationship-dan-beban-berlapis/"
-    label: "Profesi Online: Gen Z 1997 di Persimpangan Nikah dan Situationship (2026)"
-  - type: "link"
-    url: "https://www.idntimes.com/life/relationship/kenapa-gen-z-gampang-banget-terjebak-situationship-c1c2-01-wdyz2-nqqrq3"
-    label: "IDN Times: Kenapa Gen Z Gampang Terjebak Situationship"
-  - type: "link"
-    url: "https://www.titiktemu.co/gaya-hidup/8617282116/situationship-bukan-generasi-lemah-itu-respons-rasional-pada-ekonomi-yang-tidak-pasti"
-    label: "TitikTemu: Situationship Bukan Generasi Lemah, Respons Rasional pada Ekonomi"
-  - type: "link"
-    url: "https://www.tribunnews.com/nasional/7842527/banyak-gen-z-menunda-nikah-wihaji-sebut-kecemasan-finansial-jadi-penyebab-utama"
-    label: "TribunNews: BKKBN - Kecemasan Finansial Jadi Penyebab Gen Z Menunda Nikah (Jun 2026)"
-  - type: "link"
-    url: "https://www.idntimes.com/life/relationship/situationship-kenapa-hubungan-makin-abu-abu-dan-disukai-00-17z4g-4hmbn6"
-    label: "IDN Times: Situationship, Kenapa Hubungan Makin Abu-abu"
-  - type: "link"
-    url: "https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah"
-    label: "Kompas: Ekonom Bhima Yudhistira tentang Upah vs Biaya Hidup (Aug 2025)"
+  - type: link
+    url: >-
+      https://profesi-unm.com/opini-menjelang-30-gen-z-1997-di-persimpangan-nikah-situationship-dan-beban-berlapis/
+    label: 'Profesi Online: Gen Z 1997 di Persimpangan Nikah dan Situationship (2026)'
+  - type: link
+    url: >-
+      https://www.idntimes.com/life/relationship/kenapa-gen-z-gampang-banget-terjebak-situationship-c1c2-01-wdyz2-nqqrq3
+    label: 'IDN Times: Kenapa Gen Z Gampang Terjebak Situationship'
+  - type: link
+    url: >-
+      https://www.titiktemu.co/gaya-hidup/8617282116/situationship-bukan-generasi-lemah-itu-respons-rasional-pada-ekonomi-yang-tidak-pasti
+    label: >-
+      TitikTemu: Situationship Bukan Generasi Lemah, Respons Rasional pada
+      Ekonomi
+  - type: link
+    url: >-
+      https://www.tribunnews.com/nasional/7842527/banyak-gen-z-menunda-nikah-wihaji-sebut-kecemasan-finansial-jadi-penyebab-utama
+    label: >-
+      TribunNews: BKKBN - Kecemasan Finansial Jadi Penyebab Gen Z Menunda Nikah
+      (Jun 2026)
+  - type: link
+    url: >-
+      https://www.idntimes.com/life/relationship/situationship-kenapa-hubungan-makin-abu-abu-dan-disukai-00-17z4g-4hmbn6
+    label: 'IDN Times: Situationship, Kenapa Hubungan Makin Abu-abu'
+  - type: link
+    url: >-
+      https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah
+    label: 'Kompas: Ekonom Bhima Yudhistira tentang Upah vs Biaya Hidup (Aug 2025)'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

@@ -39,12 +39,15 @@ export async function GET() {
     const pubDate = new Date(wp.publishedAt || new Date()).toUTCString();
     const description = wp.summary || wp.subtitle || '';
 
+    const wpOgImage = `${siteUrl}/whitepaper/${wp.slug}/opengraph-image`;
+
     return `    <item>
       <title><![CDATA[${wp.title} [Whitepaper]]]></title>
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
       <description><![CDATA[${description}]]></description>
       <pubDate>${pubDate}</pubDate>
+      <enclosure url="${wpOgImage}" type="image/webp" length="0" />
       <category><![CDATA[Whitepaper]]></category>
     </item>`;
   });

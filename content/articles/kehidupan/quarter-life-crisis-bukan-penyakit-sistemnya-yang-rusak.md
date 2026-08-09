@@ -1,35 +1,34 @@
 ---
-title: "Quarter-Life Crisis Bukan Penyakit, Sistemnya yang Rusak"
-slug: "quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak"
-excerpt: "Satu generasi penuh mengalami krisis yang sama di usia yang sama. Kalau semua orang sakit di tempat yang sama, bukan orangnya yang rusak."
-publishedAt: "2026-07-17 03:00:00+00"
-status: "published"
-category: "kehidupan"
+title: 'Quarter-Life Crisis Bukan Penyakit, Sistemnya yang Rusak'
+slug: quarter-life-crisis-bukan-penyakit-sistemnya-yang-rusak
+excerpt: >-
+  Satu generasi penuh mengalami krisis yang sama di usia yang sama. Kalau semua
+  orang sakit di tempat yang sama, bukan orangnya yang rusak.
+publishedAt: '2026-07-17 03:00:00+00'
+status: published
+category: kehidupan
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Krisis usia 20-an bukan salah kamu"
-seoMetaTitle: "Quarter-Life Crisis Bukan Penyakit, Sistemnya yang Rusak"
-seoMetaDescription: "Satu generasi penuh krisis di usia yang sama. Kalau semua orang sakit di tempat yang sama, bukan orangnya yang rusak. Sistemnya yang rusak."
+ogHeadline: Krisis usia 20-an bukan salah kamu
+seoMetaTitle: 'Quarter-Life Crisis: Sistemnya yang Rusak'
+seoMetaDescription: >-
+  Satu generasi penuh krisis di usia yang sama. Kalau semua orang sakit di
+  tempat yang sama, bukan orangnya yang rusak. Sistemnya yang rusak.
 seoKeywords:
-  - "quarter life crisis"
-  - "krisis usia 20 an"
-  - "Gen Z Indonesia"
-  - "lulus kuliah pengangguran"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - quarter life crisis
+  - krisis usia 20 an
+  - Gen Z Indonesia
+  - lulus kuliah pengangguran
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -107,3 +106,8 @@ Itu bukan penyakit. Itu momen bangun.
 Dan momen bangun itu menyakitkan, tapi perlu. Karena selama kamu tidur, kamu percaya sistem yang berbohong. Selama kamu percaya, kamu ikut aturan yang nggak menguntungkan kamu. Dan selama kamu ikut aturan itu, kamu hidup untuk ekspektasi orang lain, bukan untuk diri sendiri.
 
 Kamu nggak rusak. Kamu baru sadar. Dan kesadaran itu, meski menyakitkan, adalah langkah pertama untuk hidup dengan mata terbuka.
+
+## Baca Juga
+
+- [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti)
+- [Adulting Bukan Soal Gede: Sistem yang Paksa Kamu Mandiri Sebelum Siap](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap)

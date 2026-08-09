@@ -96,6 +96,122 @@ Pertanyaan cluster:
 - Jika ya: seri baru ini melengkapi, melawan, atau update dari seri lama?
 - Jika belum: ini seri pertama di cluster, plan untuk buat artikel pendukung
 
+## Title & Series Hook/Foreshadow Formula Selection (Level: Series)
+
+Reference lengkap: `Hook & Foreshadow by Content Level.md` (30 Hook formula + 20 Foreshadow formula)
+
+Series Hook dan Series Foreshadow berbeda dari Episode Hook/Foreshadow. Series Hook = hook untuk seluruh seri (og_headline + series promise). Series Foreshadow = tease untuk membuat reader commit baca semua part.
+
+### Title Seri (natural, punchy, research-backed)
+
+Title seri HARUS natural, punchy, dan terdengar seperti cara orang muda bicara. Bukan judul skripsi. Bukan judul clickbait. Tamparan yang bikin penasaran untuk seluruh seri.
+
+**20 prinsip riset yang bikin judul PUNCHY** (Nature, PLOS, Science Advances, Wharton, Upworthy 100K+ A/B tests, Google Discover 3.4M articles, Kentucky 6 studies, PNAS, CHI 2021, Deep Marketing 35K content):
+
+1. **Simplicity** — kata umum + pendek = gampang diproses = gampang diklik. "Nggak" > "Tidak"
+2. **Negativity Bias** — kata negatif naikkan CTR 2.3% per kata. "Hilang", "Gagal", "Trap" > "Berhasil", "Untung"
+3. **Contrast & Surprise** — otak = prediction machine, surprise = strongest attention attractor (72% gaze shifts). "Bukan [X]" setelah [Y] = kontras
+4. **Curiosity Gap** — cukup info untuk penasaran, tidak cukup untuk puas. Terlalu vague = klik rendah, terlalu concrete = klik rendah
+5. **Concreteness** — angka spesifik > klaim abstrak. "74%" > "Banyak". Familiar + concrete = foundations of good copywriting
+6. **Brevity** — working memory 3-4 chunks. 5-8 kata ideal, max 10 kata. 40-60 karakter = highest CTR
+7. **Active Verbs** — verb di dekat awal = urgency. Verbs > nouns untuk action. "Hilang", "Jadi", "Bocor"
+8. **2nd Person** — "kamu" naikkan engagement + resonance. Question + "kamu" = 175% more clicks
+9. **Rhythm & Alliteration** — staccato = urgency. Alliteration reduces N400 (easier to process) + boosts memory. Baca keras-keras: kalau ngos-ngosan, terlalu panjang
+10. **Emotional Arousal** — high-arousal (kecewa, terkejut, sadar) > low-arousal (sedih). TAM: jujur, bukan marah
+11. **Loss Framing** — "Kamu akan kehilangan" > "Kamu akan dapat". Subtle scarcity = effective, explicit FOMO = NOT effective
+12. **Digits > Number Words** — "7" > "tujuh". Digits feel right, processed faster, stand out visually
+13. **Odd Numbers** — 3, 5, 7, 9 outperform even by ~20%. Odd = less padded, more authentic
+14. **Forward Referencing** — "Yang Tidak Pernah..." = tease yang belum diungkap. Create information gap
+15. **Unresolved Emotion** — hope > happiness, anxiety > sadness, excitement > satisfaction. Uncertainty = sustained attention
+16. **Avoid Fear Words** — fear = avoidance (TURUNKAN CTR). Sadness = approach (naikkan CTR). "Rugi" > "Bahaya"
+17. **1st Person Singular > Plural** — "aku" = strongest pronoun effect. "kita" = negatively associated. Hindari "kita"
+18. **Avoid Clickbait** — non-clickbait 2.22x more clicks. Clickbait = source derogation. Punchy != clickbait
+19. **Avoid Positive Superlatives** — "terbaik", "hebat", "amazing" = decrease CTR. Nyatakan temuan, bukan self-praise
+20. **Alliteration** — sound pattern boosts attention + memory traces. "Trap, Bukan Tangga" (T-T)
+
+**Aturan Title Seri:**
+- Max 10 kata (ideal 5-8, working memory 3-4 chunks)
+- Kata umum > kata formal ("Nggak" > "Tidak", "Rugi" > "Kerugian") (#1)
+- Conclusive: nyatakan temuan seri, bukan deskripsi topik
+- Kontras/surprise: ada elemen yang melanggar ekspektasi (#3)
+- Active verb di dekat awal (#7)
+- Boleh pakai "kamu" untuk personal relevance (#8)
+- Boleh pakai "aku" (1st person singular = strongest pronoun effect #17)
+- Hindari "kita" / "kami" (negatively associated #17)
+- Loss framing > gain framing (#11): "Kamu akan kehilangan" > "Kamu akan dapat"
+- Pakai digit, bukan kata angka (#12): "74%" > "tujuh puluh empat persen"
+- Pakai sadness/loss words, hindari fear words (#16): "Rugi" > "Bahaya"
+- Hindari positive superlatives (#19): no "terbaik", "hebat", "amazing"
+- Hindari clickbait yang tidak di-backup data (#18)
+- Cari alliteration atau rhythm (#9, #20): "Trap, Bukan Tangga" (T-T)
+- Searchable: mengandung keyword utama seri
+- Bervariasi: jangan ulang pattern
+- Baca keras-keras: kalau ngos-ngosan, terlalu panjang
+- Title seri harus cukup kuat untuk menahan minat reader di semua part
+
+**Pattern title seri yang boleh dipakai (variasikan):**
+
+| Pattern | Contoh punchy | Kapan dipakai |
+|---------|--------------|---------------|
+| **Declarative + Contrast** | "Industri Penderitaan Gen Z" | Temuan seri bisa diungkap 1 frasa tegas |
+| **Colon + Twist** | "Infrastruktur Kesepian: Sistem yang Membuat Gen Z Sendiri" | Konteks + temuan punya kontras |
+| **Question** | "Kenapa Gen Z Lebih Enak Sendiri?" | Seri menjawab pertanyaan provokatif |
+| **Kontra-narasi** | "Hustle Culture Itu Trap" | Membongkar narasi populer |
+| **Punchy short (hammer)** | "Generasi Sewa" | Temuan seri bisa diungkap 2-3 kata |
+| **2nd Person direct** | "Bisnis yang Untung dari Kesengsaraanmu" | Sistem berdampak langsung ke reader |
+
+**Anti-pattern title (HINDARI):**
+- Kata formal/akademis (#1): "Tidak" → "Nggak", "Kerugian" → "Rugi"
+- Title > 10 kata (#6): shorter = more clicks, setiap kata harus earn tempatnya
+- Title deskriptif tanpa temuan (#4): "Analisis Generasi Z" = lemah, zero curiosity gap
+- Zero kontras/surprise (#3): surprise = strongest attention attractor
+- Clickbait yang tidak di-backup data (#18): non-clickbait 2.22x more clicks
+- Passive voice atau verb-less (#7): active verb = more engagement
+- Fear words (#16): "Bahaya", "Mengerikan" = avoidance, turunkan CTR
+- "Kita" / "kami" (#17): 1st person plural = negatively associated
+- Positive superlatives (#19): "Terbaik", "Hebat" = decrease CTR
+- Explicit FOMO (#11): "Jangan sampai ketinggalan!" = NOT effective
+- Number words (#12): "tujuh" > "7" = wrong direction
+
+### Series Hook Formula (pilih 1 dari 30, untuk og_headline + series promise opening)
+
+Pilih Hook formula untuk og_headline seri dan opening series promise. BUKAN untuk title. Formula terbaik untuk seri: **01, 05, 08, 14, 22, 28**.
+
+| # | Nama | Template untuk og_headline / Series Promise |
+|---|------|---------------------------------------------|
+| 01 | Expectation vs Reality | `[X] Bukan [Y]: Kenapa [asumsi umum] Adalah Mitos` |
+| 05 | Counter-Narrative | `Semua Bilang [X]. Tapi [Data/Fakta] Bilang Sebaliknya.` |
+| 08 | Time Pressure | `Dalam [X] Tahun, [Y] Akan [Z]. Kamu Sudah Siap?` |
+| 14 | Pattern Recognition | `Ada Pola: [X], [Y], [Z]. Semua Pointing ke [A].` |
+| 22 | Hidden Truth | `Yang Tidak Pernah Diajarkan tentang [X]` |
+| 28 | Silent Epidemic | `Tidak Ada yang Bicara tentang [X]. Tapi [Data] Menunjukkan [Y].` |
+
+Lihat file reference untuk semua 30 formula.
+
+### Series Foreshadow Formula (pilih 1-2 dari 20)
+
+Pilih Foreshadow formula untuk series promise (tease apa yang reader dapat setelah baca semua part). Formula terbaik untuk seri: **01, 04, 06, 09, 15**.
+
+| # | Nama | Template untuk Series Promise |
+|---|------|------------------------------|
+| 01 | Promise | `Di akhir seri ini, kamu akan paham [X].` |
+| 04 | Setup-Payoff | `Ingat [X] di awal. Nanti kamu akan tahu kenapa.` |
+| 06 | Transformation | `Setelah memahami ini, cara kamu melihat [X] akan berubah.` |
+| 09 | Pattern Tease | `Kalau kamu lihat polanya, [X] bukan kebetulan.` |
+| 15 | Connection Tease | `[X] dan [Y] terlihat tidak related. Tapi keduanya punya akar yang sama.` |
+
+Lihat file reference untuk semua 20 formula.
+
+### Aturan Formula Selection untuk Seri
+
+- **Title seri:** natural, punchy, max 10 kata, bervariasi pattern (tidak locked ke satu formula)
+- **1 Series Hook formula** untuk og_headline (max 50 karakter) dan series promise opening
+- **1-2 Series Foreshadow formula** untuk series promise (max 170 karakter)
+- Series Hook berbeda dari Episode Hook (dipilih di step 04-outline per part)
+- Series Foreshadow berbeda dari Episode Foreshadow/Next Tease (dipilih di step 04-outline per part)
+- Series Hook harus cukup kuat untuk menahan minat reader di semua part
+- Series Foreshadow harus tease payoff di part terakhir tanpa spoiler
+
 ## Template Output Ide Seri
 
 Dokumentasi ide dalam format ini (dipakai di step berikutnya):
@@ -111,7 +227,9 @@ Search intent: [informational/transactional/commercial]
 Goal seri: [educate/provoke/convert]
 Cluster: [seri baru / melengkapi seri X / melawan seri Y]
 Keyword utama seri: [1 keyword utama]
-Working title seri: [judul seri sementara]
+Working title seri (natural, punchy, max 10 kata): [judul seri sementara, bahasa orang muda, bukan jurnal]
+Series Hook formula [N] (untuk og_headline + series promise opening): [hook pendek, max 50 char untuk og_headline]
+Series promise (Series Foreshadow formula [N]): [promise seri, max 170 karakter]
 ```
 
 ## Cinematic Storytelling Framework (wajib untuk seri 5+ part)
@@ -274,6 +392,9 @@ Jika > 2 check fail: pertimbangkan artikel tunggal, bukan seri.
 - [ ] Category dipilih
 - [ ] Content cluster dicek (artikel/seri existing di kategori sama)
 - [ ] Estimasi jumlah part ditentukan
+- [ ] Title seri punchy berdasar 20 prinsip riset (simplicity, negativity, contrast, curiosity gap, concreteness, brevity, active verb, 2nd person, rhythm, emotional arousal, loss framing, digits, odd numbers, forward referencing, unresolved emotion, avoid fear, 1st person singular, avoid clickbait, avoid superlatives, alliteration)
+- [ ] Title seri max 10 kata (ideal 5-8), kata umum > formal, ada kontras/surprise
+- [ ] Series Hook formula dipilih untuk og_headline + series promise opening (bukan untuk title)
 - [ ] Template output ide seri diisi
 - [ ] (Jika 5+ part) Engine question didefinisikan
 - [ ] (Jika 5+ part) Emotional arc dipilih (sesuai goal seri)

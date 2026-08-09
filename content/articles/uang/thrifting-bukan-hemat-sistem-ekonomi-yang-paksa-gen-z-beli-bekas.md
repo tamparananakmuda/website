@@ -1,18 +1,33 @@
 ---
-title: "Thrifting Bukan Hemat, Sistem Ekonomi yang Paksa Gen Z Beli Bekas"
-slug: "thrifting-bukan-hemat-sistem-paksa-gen-z-beli-bekas"
-excerpt: "63% pelanggan thrift Gen Z, 67% beli untuk hemat. Bukan tren, tapi sistem yang tidak mampu sediakan barang baru terjangkau."
-publishedAt: "2026-07-29T10:00:00.000Z"
+title: 'Thrifting Bukan Hemat, Sistem Paksa Gen Z Beli Bekas'
+slug: thrifting-bukan-hemat-sistem-paksa-gen-z-beli-bekas
+excerpt: >-
+  63% pelanggan thrift Gen Z, 67% beli untuk hemat. Bukan tren, tapi sistem yang
+  tidak mampu sediakan barang baru terjangkau.
+publishedAt: '2026-07-29T10:00:00.000Z'
 status: published
-category: "uang"
-subcategory: "uang-finansial"
-author: "yovie-setiawan"
-seoTitle: "Thrifting Bukan Hemat, Sistem Ekonomi yang Paksa Gen Z Beli Bekas"
-seoDescription: "63% pelanggan thrift Gen Z, 67% beli untuk hemat. Gaji riil turun, kelas menengah susut. Thrifting bukan tren, tapi sistem yang paksa."
-seoKeywords: ["thrifting gen z Indonesia 2026", "pakaian bekas tren ekonomi", "daya beli gen z turun", "kelas menengah Indonesia susut", "konsumsi gen z Indonesia"]
-ogHeadline: "Thrifting bukan tren, sistem yang paksa"
+category: uang
+subcategory: uang-finansial
+author: yovie-setiawan
+seoMetaTitle: 'Thrifting Gen Z: Sistem Paksa Beli Bekas'
+seoMetaDescription: >-
+  63% pelanggan thrift Gen Z, 67% beli untuk hemat. Gaji riil turun, kelas
+  menengah susut. Thrifting bukan tren, tapi sistem yang paksa.
+seoKeywords:
+  - thrifting gen z Indonesia 2026
+  - pakaian bekas tren ekonomi
+  - daya beli gen z turun
+  - kelas menengah Indonesia susut
+  - konsumsi gen z Indonesia
+ogHeadline: 'Thrifting bukan tren, sistem yang paksa'
 ogHeadlineEn: null
-sourceReferences: ["IDN Research Institute IMGR 2027", "BPS data 2024-2025", "Bank Indonesia Consumer Survey Agustus 2025", "Mandiri Institute 2025", "OJK data Desember 2025", "Iva Latifa 2025"]
+sourceReferences:
+  - IDN Research Institute IMGR 2027
+  - BPS data 2024-2025
+  - Bank Indonesia Consumer Survey Agustus 2025
+  - Mandiri Institute 2025
+  - OJK data Desember 2025
+  - Iva Latifa 2025
 readingTime: 7
 featured: false
 isPremium: false

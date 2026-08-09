@@ -1,39 +1,61 @@
 ---
-title: "Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit dari Putus Cinta"
-slug: "friendship-breakup-lebih-sakit-dari-putus-cinta"
-excerpt: "Putus pertemanan di usia dewasa lebih menyakitkan dari putus cinta. Tidak ada closure, tidak ada ritual duka. Luka yang tidak punya nama tidak bisa disembuhkan."
-publishedAt: "2026-08-01 05:00:00+00"
+title: 'Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit dari Putus'
+slug: friendship-breakup-lebih-sakit-dari-putus-cinta
+excerpt: >-
+  Putus pertemanan di usia dewasa lebih menyakitkan dari putus cinta. Tidak ada
+  closure, tidak ada ritual duka. Luka yang tidak punya nama tidak bisa
+  disembuhkan.
+publishedAt: '2026-08-01 05:00:00+00'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
-tags: ["friendship-breakup", "ghosting", "ambiguous-loss", "persahabatan", "kesehatan-mental"]
-ogHeadline: "Putus teman sakitnya lebih dari putus cinta"
-seoMetaTitle: "Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit"
-seoMetaDescription: "Putus pertemanan di usia dewasa lebih menyakitkan dari putus cinta. Tidak ada closure atau ritual duka. Luka yang tidak punya nama tidak bisa disembuhkan."
+povTag: refleksi
+tags:
+  - friendship-breakup
+  - ghosting
+  - ambiguous-loss
+  - persahabatan
+  - kesehatan-mental
+ogHeadline: Putus teman sakitnya lebih dari putus cinta
+seoMetaTitle: 'Friendship Breakup: Kenapa Kehilangan Teman Lebih Sakit'
+seoMetaDescription: >-
+  Putus pertemanan di usia dewasa lebih menyakitkan dari putus cinta. Tidak ada
+  closure atau ritual duka. Luka yang tidak punya nama tidak bisa disembuhkan.
 seoKeywords:
-  - "friendship breakup Indonesia"
-  - "kehilangan teman lebih sakit dari putus cinta"
-  - "ghosting pertemanan"
-  - "ambiguous loss persahabatan"
-  - "putus pertemanan gen z"
-  - "cara menghadapi friendship breakup"
+  - friendship breakup Indonesia
+  - kehilangan teman lebih sakit dari putus cinta
+  - ghosting pertemanan
+  - ambiguous loss persahabatan
+  - putus pertemanan gen z
+  - cara menghadapi friendship breakup
 sourceReferences:
-  - "Eisenberger (2012): Otak memproses kehilangan sosial di anterior cingulate cortex dan insula, area yang sama dengan sakit fisik"
-  - "Brooks et al. (2025): Teman dekat sebagai regulator emosi, kehilangan = gangguan keseimbangan afektif"
-  - "University of Milano-Bicocca, Computers in Human Behavior (Nov 2025): Ghosting lebih menyakitkan dari penolakan langsung, dampak lebih lama"
-  - "RIGGS Journal (2026): Studi Bandung ghosting pertemanan, 6 informan mahasiswa, 4 tema utama"
-  - "Journal of Social & Personal Relationships: Pertemanan terbentuk setelah 200+ jam bersama"
-  - "Zhang et al. (2019): Rasa sakit sosial meningkatkan sensitivitas nyeri fisik"
-  - "Psychology Today via Suara.com Jul 2026: Kehilangan persahabatan bisa terasa menyakitkan seperti kehilangan pasangan atau duka cita"
+  - >-
+    Eisenberger (2012): Otak memproses kehilangan sosial di anterior cingulate
+    cortex dan insula, area yang sama dengan sakit fisik
+  - >-
+    Brooks et al. (2025): Teman dekat sebagai regulator emosi, kehilangan =
+    gangguan keseimbangan afektif
+  - >-
+    University of Milano-Bicocca, Computers in Human Behavior (Nov 2025):
+    Ghosting lebih menyakitkan dari penolakan langsung, dampak lebih lama
+  - >-
+    RIGGS Journal (2026): Studi Bandung ghosting pertemanan, 6 informan
+    mahasiswa, 4 tema utama
+  - >-
+    Journal of Social & Personal Relationships: Pertemanan terbentuk setelah
+    200+ jam bersama
+  - 'Zhang et al. (2019): Rasa sakit sosial meningkatkan sensitivitas nyeri fisik'
+  - >-
+    Psychology Today via Suara.com Jul 2026: Kehilangan persahabatan bisa terasa
+    menyakitkan seperti kehilangan pasangan atau duka cita
 featured: false
 readingTime: 7
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

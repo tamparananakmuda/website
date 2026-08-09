@@ -1,35 +1,35 @@
 ---
-title: "LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok, Bukan di Platform Profesional"
-slug: "linkedin-kena-ick-gen-z-cari-kerja-di-tiktok"
-excerpt: "Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke TikTok dan Instagram, di mana informasi karier terasa lebih nyata."
-publishedAt: "2026-07-22 01:00:00+00"
+title: 'LinkedIn Kena Ick, Gen Z Pindah Cari Kerja di TikTok'
+slug: linkedin-kena-ick-gen-z-cari-kerja-di-tiktok
+excerpt: >-
+  Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke
+  TikTok dan Instagram, di mana informasi karier terasa lebih nyata.
+publishedAt: '2026-07-22 01:00:00+00'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Gen Z cari kerja di TikTok, bukan LinkedIn"
-seoMetaTitle: "LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok"
-seoMetaDescription: "Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke TikTok dan Instagram, di mana informasi karier terasa lebih nyata."
+ogHeadline: 'Gen Z cari kerja di TikTok, bukan LinkedIn'
+seoMetaTitle: 'LinkedIn Kena Ick: Gen Z Cari Kerja di TikTok'
+seoMetaDescription: >-
+  Gen Z tidak lagi mengandalkan LinkedIn untuk mencari kerja. Mereka pindah ke
+  TikTok dan Instagram, di mana informasi karier terasa lebih nyata.
 seoKeywords:
-  - "gen z cari kerja"
-  - "linkedin vs tiktok"
-  - "transparansi gaji gen z"
-  - "gen z rekrutmen"
-  - "cari kerja media sosial"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - gen z cari kerja
+  - linkedin vs tiktok
+  - transparansi gaji gen z
+  - gen z rekrutmen
+  - cari kerja media sosial
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +37,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Gen Z beralih dari LinkedIn ke TikTok dan Instagram untuk mencari informasi karier"
+coverImageAlt: >-
+  Gen Z beralih dari LinkedIn ke TikTok dan Instagram untuk mencari informasi
+  karier
 ---
 
 ## LinkedIn Dulu Jadi Standar Profesional

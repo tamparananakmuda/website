@@ -37,13 +37,88 @@ Dari `/artikel-02-research`
 [Conclusion formula, tidak generic]
 ```
 
-## Hook Formulas TAM (pilih salah satu)
+## Hook & Foreshadow Formula System (Level: Artikel)
 
-1. **Data mengejutkan:** "74% lulusan baru Indonesia menganggur menurut BPS 2025. Angka itu lebih tinggi dari tahun sebelumnya."
-2. **Pertanyaan provokatif:** "Kapan terakhir kali kamu merasa cukup? Bukan lebih, bukan kurang. Cukup."
-3. **Observasi personal:** "Saya perhatikan, dari 10 teman kuliah saya, hanya 2 yang kerja di bidang yang sesuai jurusan."
-4. **Kontra-narasi:** "Semua bilang kerja keras = sukses. Tapi data PHK tech 2025 bilang sebaliknya."
-5. **Tamparan langsung:** "Kamu tidak terlambat. Kamu cuma salah mulai."
+Reference lengkap: `Hook & Foreshadow by Content Level.md` (30 Hook formula + 20 Foreshadow formula)
+
+### Title Artikel (dari step 01-idea, refine di sini)
+
+Title artikel sudah dipilih di step 01-idea berdasar 20 prinsip riset punchy (simplicity, negativity, contrast, curiosity gap, concreteness, brevity, active verb, 2nd person, rhythm, emotional arousal, loss framing, digits, odd numbers, forward referencing, unresolved emotion, avoid fear, 1st person singular, avoid clickbait, avoid superlatives, alliteration). Di step 03-outline, refine title menjadi final title (pastikan masih punchy, max 10 kata, bahasa orang muda).
+
+### Hook Formula untuk Opening + og_headline (pilih 1 dari 30)
+
+Pilih Hook formula untuk paragraf pembuka artikel dan og_headline (thumbnail text). BUKAN untuk title. Hook formula dari step 01-idea bisa berbeda dari hook formula opening (body). Title = judul natural, Opening hook = paragraf pertama, og_headline = thumbnail text (max 50 char, berbeda dari title).
+
+**Formula rekomendasi untuk artikel:**
+
+| # | Nama | Template Opening |
+|---|------|------------------|
+| 01 | Expectation vs Reality | "Kamu pikir [X]. Kenyataannya [Y]." |
+| 02 | Data Shock | "[Angka spesifik + sumber]. Angka itu [konteks yang mengejutkan]." |
+| 03 | Provocative Question | "Kapan terakhir kali kamu [X]?" |
+| 04 | Personal Observation | "Saya perhatikan, dari [X], hanya [Y] yang [Z]." |
+| 05 | Counter-Narrative | "Semua bilang [X]. Tapi [data/fakta] bilang sebaliknya." |
+| 06 | Direct Slap | "Kamu tidak [X]. Kamu cuma [Y]." |
+| 07 | Myth Breaking | "Kalau kamu masih percaya [X], saatnya berpikir ulang." |
+| 08 | Time Pressure | "Dalam [X] tahun, [Y] akan [Z]. Kamu sudah siap?" |
+| 09 | Contradiction | "[X] itu [Y]. Tapi [X] juga [Z]." |
+| 10 | False Belief | "Kesalahan terbesar tentang [X] yang dilakukan hampir semua orang." |
+| 11 | Future Prediction | "Dalam 5 tahun, [X] tidak akan ada lagi. Kamu akan [Y]." |
+| 12 | Comparison Shock | "[X] lebih [Y] dari [Z]. Dan tidak ada yang bicara." |
+| 13 | Definition Reset | "[Kata umum] bukan berarti [asumsi umum]. [Kata umum] berarti [definisi tajam]." |
+| 14 | Pattern Recognition | "Ada pola yang muncul: [X], [Y], [Z]. Semua pointing ke [A]." |
+| 15 | Cost of Ignorance | "Setiap hari kamu tidak tahu ini, kamu rugi [X]." |
+| 16 | Status Quo Attack | "[X] sudah jalan [Y] tahun. Hasilnya? [Z]. Saatnya berhenti." |
+| 17 | Before-After | "Sebelum [X], kamu [Y]. Setelah [X], kamu [Z]. Bedanya [A]." |
+| 18 | Paradox | "Makin kamu [X], makin [Y]. Itu bukan kebetulan." |
+| 19 | Reframe | "Masalahmu bukan [X]. Masalahmu adalah [Y]." |
+| 20 | Data Contradiction | "[Sumber A] bilang [X]. [Sumber B] bilang [Y]. Keduanya benar." |
+| 21 | Question Stack | "Kenapa [X]? Kenapa [Y]? Kenapa [Z]? Jawabannya sama." |
+| 22 | Hidden Truth | "Yang tidak pernah diajarkan tentang [X]." |
+| 23 | Uncomfortable Truth | "Tidak ada cara halus untuk bilang ini: [X]." |
+| 24 | Assumption Inversion | "Dan jika [asumsi] salah? Maka [konsekuensi]." |
+| 25 | Trend Reversal | "Selama [X] tahun, [trend A]. Tahun ini, [trend B]." |
+| 26 | System Failure | "Sistem [X] dirancang untuk [Y]. Tapi untuk [Z], sistemnya gagal." |
+| 27 | Personal Cost | "Aku tahu ini karena [X]. Harganya [Y]." |
+| 28 | Silent Epidemic | "Tidak ada yang membicarakan [X]. Tapi [data] menunjukkan [Y]." |
+| 29 | Generational Divide | "Orang tua kamu [X]. Kamu [Y]. Keduanya valid, tapi [Z]." |
+| 30 | Meta Hook | "Artikel ini akan membuat kamu [X]. Kalau kamu tidak siap, jangan baca." |
+
+### Foreshadow Formula untuk Closing/Transition (pilih 1-2 dari 20)
+
+Foreshadow dipakai di akhir section untuk membuat reader penasaran ke section berikutnya, atau di conclusion untuk tease artikel terkait.
+
+| # | Nama | Template |
+|---|------|----------|
+| 01 | Promise | "Di akhir artikel ini, kamu akan paham [X]." |
+| 02 | Curiosity | "Masalahnya bukan [X]. Ada [Y] yang tidak kamu sadari." |
+| 03 | Cliffhanger | "Tapi itu baru permukaan. Yang lebih dalam ada di section berikutnya." |
+| 04 | Setup-Payoff | "Ingat [X] di awal. Nanti kamu akan tahu kenapa." |
+| 05 | Warning | "Sebelum kamu lanjut, ada yang perlu kamu tahu: [X]." |
+| 06 | Transformation | "Setelah memahami ini, cara kamu melihat [X] akan berubah." |
+| 07 | Question Tease | "Pertanyaannya bukan [X]. Pertanyaannya adalah [Y]." |
+| 08 | Data Tease | "Dan angka ini bukan yang paling mengejutkan." |
+| 09 | Pattern Tease | "Kalau kamu lihat polanya, [X] bukan kebetulan." |
+| 10 | Contradiction Tease | "Tapi tunggu. [X] juga [Y]. Bagaimana mungkin?" |
+| 11 | Personal Tease | "Aku juga dulu [X]. Sampai [Y] terjadi." |
+| 12 | Relevance Tease | "Ini bukan tentang [X]. Ini tentang [Y]. Dan [Y] menyangkut kamu." |
+| 13 | Urgency Tease | "Setiap hari kamu tunda, [X] makin [Y]." |
+| 14 | Inversion Tease | "Kamu pikir [X] adalah masalah. Sebenarnya [X] adalah gejala." |
+| 15 | Connection Tease | "[X] dan [Y] terlihat tidak related. Tapi keduanya punya akar yang sama." |
+| 16 | Stakes Tease | "Yang dipertaruhkan bukan [X]. Yang dipertaruhkan adalah [Y]." |
+| 17 | Next Step Tease | "Memahami ini adalah langkah pertama. Langkah kedua lebih sulit." |
+| 18 | Personal | "Aku dulu juga berpikir seperti itu. Sampai [X]." |
+| 19 | Reframe Tease | "Masalahnya bukan [X]. Masalahnya lebih besar dari itu." |
+| 20 | Resolution Tease | "Ada jalan keluar. Tapi bukan yang kamu kira." |
+
+### Aturan Penggunaan Formula
+
+- **1 Hook formula** untuk opening paragraf (pilih dari 30 formula di atas)
+- **1-2 Foreshadow formula** untuk transition antar section dan/atau conclusion tease
+- Hook opening dan Hook title (dari step 01) boleh berbeda formula
+- Foreshadow di transition: letakkan di akhir section untuk tease section berikutnya
+- Foreshadow di conclusion: tease artikel terkait atau seri (jika ada)
+- Setiap formula wajib diisi dengan konten spesifik artikel (tidak boleh template kosong)
 
 ## Conclusion Formula (TIDAK BOLEH generic)
 
@@ -76,9 +151,39 @@ grep -rl "category:.*KATEGORI" content/articles/ --include="*.md" \
 
 ## SEO Metadata Plan
 
-- Meta Title Formula: `[Keyword Utama] + [Hook] ` (max 60 karakter)
+- Meta Title Formula: `[Title punchy yang sudah mengandung keyword]` (max 60 karakter, sama dengan title artikel)
 - Meta Description Formula: `[Konteks] + [Value Prop] + [CTA]` (max 160 karakter)
 - Slug: kebab-case, keyword di awal, max 60 karakter, unique
+
+## Thumbnail Text Formula
+
+Thumbnail text adalah teks yang muncul di OG image card (800x450). Hanya headline yang ditampilkan.
+
+- **Thumbnail text = OG Headline** (max 50 karakter)
+- HARUS berbeda dari `title`. Jangan copy-paste
+- Format: kalimat langsung, conversational, punchy
+- Function: sebagai HOOK visual yang membuat orang klik saat share di social
+- Contoh: title "PHK Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman" → thumbnail text "Kerja keras tidak menjamin kamu aman dari PHK"
+- Pilih Hook formula yang berbeda dari title untuk thumbnail text (bisa dari 30 formula yang sama, tapi angle berbeda)
+
+## Thumbnail Caption Formula
+
+Thumbnail caption adalah teks pendamping di OG image feature size (1600x900).
+
+- **Thumbnail caption = Excerpt** (max 180 karakter)
+- Berfungsi sebagai Foreshadow visual: tease value artikel tanpa spoiler penuh
+- Format: 1-2 kalimat, conversational, mengandung promise atau curiosity
+- Bisa adaptasi dari Foreshadow formula yang dipilih (01-20)
+- Contoh: "Data PHK 2025 membongkar ilusi kerja keras. Kamu mungkin lebih aman dari yang kamu kira. Atau tidak."
+
+## Meta Description Formula (dengan Hook & Foreshadow)
+
+Meta description (max 160 karakter) harus mengandung elemen Hook + Foreshadow:
+
+- **Opening (Hook element):** 1 kalimat yang provoke curiosity (adaptasi dari Hook formula pilihan)
+- **Middle (Value prop):** 1 kalimat yang menjelaskan apa yang reader dapat
+- **Closing (Foreshadow element):** 1 kalimat yang tease insight akhir (adaptasi dari Foreshadow formula pilihan)
+- Contoh: "Kerja keras tidak menjamin aman dari PHK. Data 2025 membongkar pola yang sistem tidak ingin kamu tahu. Baca sebelum giliranmu."
 
 ## OG Headline Plan
 
@@ -239,7 +344,8 @@ Jika `/artikel-02-research` sudah rencanakan chart, tentukan posisi exact di out
 
 - [ ] Struktur H2-H4 lengkap (min 3 h2)
 - [ ] Artikel struktur template diisi (Hook > Konteks > Data > Insight > Conclusion)
-- [ ] Hook formula dipilih
+- [ ] Hook formula dipilih (dari 30 formula, tulis nomor + nama)
+- [ ] Foreshadow formula dipilih untuk transition/conclusion (dari 20 formula, tulis nomor + nama)
 - [ ] Conclusion formula dipilih (tidak generic)
 - [ ] Hook-Conclusion Alignment: 4 checks passed
 - [ ] Section Weight Balance: Data/Analysis 50-65%, Hook < 15%
@@ -252,6 +358,9 @@ Jika `/artikel-02-research` sudah rencanakan chart, tentukan posisi exact di out
 - [ ] SEO meta title direncanakan (max 70 chars)
 - [ ] SEO meta description direncanakan (max 160 chars)
 - [ ] Slug direncanakan (kebab-case, max 60 chars)
+- [ ] Thumbnail text direncanakan (max 50 chars, berbeda dari title, function sebagai visual hook)
+- [ ] Thumbnail caption direncanakan (max 180 chars, function sebagai visual foreshadow)
+- [ ] Meta description direncanakan dengan Hook + Foreshadow element (max 160 chars)
 - [ ] OG headline direncanakan (max 50 chars, berbeda dari title)
 - [ ] Schema markup direncanakan (Article + FAQ jika ada)
 - [ ] AI SEO/AEO consideration dicek

@@ -7,7 +7,7 @@ excerpt: >-
 publishedAt: '2026-11-02T01:00:00.000Z'
 status: scheduled
 category: bisnis
-subcategory: uang-investasi
+subcategory: bisnis
 author: yovie-setiawan
 series: industri-penderitaan-gen-z
 seriesOrder: 2
@@ -19,7 +19,7 @@ tags:
   - kelas-trading
   - investasi-bodong
   - gen-z
-ogHeadline: 'Guru trading untung dari kursus, bukan dari trading'
+ogHeadline: 'Guru trading untung dari kursus, bukan trading'
 seoMetaTitle: 'Guru Finansial TikTok: Siapa yang Sebenarnya Untung? | TAM'
 seoMetaDescription: >-
   Finfluencer Indonesia jual kelas trading dengan komisi referral dari broker.
@@ -42,8 +42,8 @@ sourceReferences:
     label: 'CNBC Indonesia - Finfluencer dan afiliator'
 featured: false
 humanSignature: true
-factCheckStatus: pending
-reviewStatus: draft
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -52,6 +52,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+human_signature: true
 readingTime: 6
 ---
 
@@ -61,7 +62,7 @@ readingTime: 6
 
 OJK secara berkala mengeluarkan daftar investasi bodong. Tapi tidak ada daftar "guru finansial bodong." Padahal, jumlahnya mungkin lebih banyak dari investasi bodong yang mereka peringatkan.
 
-Buka TikTok, cari "#trading" atau "#investasi." Dalam 30 detik, kamu akan menemukan setidaknya lima akun yang menjanjikan kebebasan finansial lewat kelas trading. Screenshot profit jutaan rupiah per hari. Lamborghini di background. Jam mahal di pergelangan tangan. Semua sengaja dipajang untuk satu tujuan: membuat kamu merasa bahwa kamu juga bisa, asal ikut kelasnya.
+Buka TikTok, cari "#trading" atau "#investasi." Dalam 30 detik, kamu akan menemukan setidaknya lima akun yang menjanjikan kebebasan finansial lewat kelas trading. Screenshot profit jutaan rupiah per hari, Lamborghini di background, jam mahal di pergelangan tangan. Semua sengaja dipajang untuk satu tujuan: membuat kamu merasa bahwa kamu juga bisa, asal ikut kelasnya.
 
 ## Konteks
 
@@ -83,7 +84,7 @@ Menurut Pajak Atmo/DJP 2025, fee in-house training korporat untuk coach bisa men
 
 Ini pertanyaan paling sederhana tapi paling jarang ditanyakan. Kalau trading benar-benar menguntungkan, kenapa mereka mengajar? Kalau strategi trading mereka konsisten menghasilkan profit, kenapa tidak diam di rumah dan trading saja?
 
-Jawabannya tidak nyaman: mengajar trading lebih menguntungkan daripada trading itu sendiri. Trading punya risiko. Profit tidak konsisten. Bisa rugi. Tapi mengajar trading punya revenue yang lebih predictable. Setiap peserta bayar Rp2 juta, kalau ada 100 peserta per batch, itu Rp200 juta per batch. Tiga batch per tahun, Rp600 juta. Tanpa risiko market. Tanpa drawdown. Tanpa margin call.
+Jawabannya tidak nyaman: mengajar trading lebih menguntungkan daripada trading itu sendiri. Trading punya risiko, profit tidak konsisten, bisa rugi. Tapi mengajar trading punya revenue yang lebih predictable. Setiap peserta bayar Rp2 juta, kalau ada 100 peserta per batch, itu Rp200 juta per batch. Tiga batch per tahun, Rp600 juta. Tanpa risiko market, tanpa drawdown, tanpa margin call.
 
 "Guru" yang paling sukses bukan trader terbaik. "Guru" yang paling sukses adalah marketer terbaik. Mereka paham cara membuat konten yang viral, cara membangun otoritas palsu, dan cara mengkonversi follower menjadi peserta. Skill trading bukan modal utama. Skill marketing adalah.
 
@@ -95,7 +96,11 @@ Guru finansial tidak menjual kebebasan finansial. Mereka menjual tiket lotere de
 
 Model ini sangat cerdas karena tidak bisa di-busted. Tidak ada jaminan yang dilanggar, karena tidak ada jaminan yang diberikan. "Hasil dapat bervariasi" adalah disclaimer yang melindungi segala klaim. Tapi yang tidak dilindungi adalah kamu. Kamu yang rugi Rp2 juta untuk kelas yang tidak menghasilkan. Kamu yang deposit $500 ke broker karena "saran" guru. Kamu yang margin call saat market bergerak melawan posisi yang "dianalisis" di kelas.
 
-Seperti yang dibahas di [Sistem Finansial Indonesia: Kripto, FOMO yang Didesain Exchange](/artikel/sistem-finansial-indonesia-part-4-kripto-fomo-yang-didesain-exchange), sistem finansial didesain agar kamu takut kehilangan, sehingga kamu mudah dipengaruhi oleh janji keamanan. Finfluencer mengisi kekosongan itu. Mereka tidak menjual ilmu. Mereka menjual rasa aman yang palsu.
+Yang membuat ini lebih parah: OJK sudah tahu fenomena ini ada. OJK sudah mengeluarkan peringatan tentang investasi bodong berkali-kali. Tapi finfluencer berbeda dari investasi bodong. Investasi bodong mengambil uangmu langsung. Finfluencer mengambil uangmu lewat kelas, lalu mengarahkanmu ke broker yang memberi mereka komisi. Alurnya lebih panjang, tapi hasilnya sama: uangmu pindah ke kantong mereka. Dan karena alurnya lebih panjang, regulasi yang ada tidak menjangkau.
+
+Di negara lain, Australia dan Inggris sudah mengatur finfluencer dengan ketat. ASIC (Australia) mengeluarkan guidance spesifik untuk financial influencer yang wajib disclosure konflik kepentingan dan larangan klaim hasil tidak terverifikasi. FCA (Inggris) bahkan melarang promosi produk investasi high-risk ke retail consumer tanpa izin. Indonesia belum ada kerangka serupa. Finfluencer Indonesia beroperasi di ruang hukum yang kosong.
+
+Seperti yang dibahas di [Sistem Finansial Indonesia: Kripto, FOMO yang Didesain Exchange](/artikel/sistem-finansial-indonesia-part-4-kripto-fomo-yang-didesain-exchange), sistem finansial didesain agar kamu takut kehilangan, sehingga kamu mudah dipengaruhi oleh janji keamanan. Finfluencer mengisi kekosongan itu dengan menjual rasa aman yang palsu, bukan ilmu.
 
 ## Conclusion
 

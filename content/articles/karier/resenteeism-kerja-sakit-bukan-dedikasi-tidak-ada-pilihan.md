@@ -1,40 +1,44 @@
 ---
-title: "Resenteeism: Masuk Kerja Sakit Bukan Dedikasi, Tidak Ada Pilihan Lain"
-slug: "resenteeism-kerja-sakit-bukan-dedikasi-tidak-ada-pilihan"
-excerpt: "26,1% pekerja formal Indonesia masuk kerja saat sakit. Biaya presenteeism 3x absenteeism. Bukan dedikasi, itu ketiadaan jaring pengaman."
-publishedAt: "2026-08-12 10:00:00+00"
-status: "scheduled"
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+title: 'Resenteeism: Masuk Kerja Sakit Bukan Dedikasi, Tidak Ada Pilihan Lain'
+slug: resenteeism-kerja-sakit-bukan-dedikasi-tidak-ada-pilihan
+excerpt: >-
+  26,1% pekerja formal Indonesia masuk kerja saat sakit. Biaya presenteeism 3x
+  absenteeism. Bukan dedikasi, itu ketiadaan jaring pengaman.
+publishedAt: '2026-08-12 10:00:00+00'
+status: scheduled
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["presenteeism", "resenteeism", "kerja-sakit", "kesehatan-kerja", "gen-z", "burnout", "budaya-kerja"]
-ogHeadline: "Kerja sakit bukan dedikasi, kamu tidak punya opsi"
-seoMetaTitle: "Resenteeism: Masuk Kerja Sakit Bukan Dedikasi, Tidak Ada Pilihan Lain"
-seoMetaDescription: "26,1% pekerja formal Indonesia masuk kerja saat sakit. Biaya presenteeism 3x absenteeism. Bukan dedikasi, itu ketiadaan jaring pengaman."
+povTag: kontra-narasi
+tags:
+  - presenteeism
+  - resenteeism
+  - kerja-sakit
+  - kesehatan-kerja
+  - gen-z
+  - burnout
+  - budaya-kerja
+ogHeadline: 'Kerja sakit bukan dedikasi, kamu tidak punya opsi'
+seoMetaTitle: 'Resenteeism: Masuk Kerja Sakit Bukan Dedikasi, Tidak Ada Pilihan Lain'
+seoMetaDescription: >-
+  26,1% pekerja formal Indonesia masuk kerja saat sakit. Biaya presenteeism 3x
+  absenteeism. Bukan dedikasi, itu ketiadaan jaring pengaman.
 seoKeywords:
-  - "presenteeism adalah"
-  - "masuk kerja sakit tidak bisa cuti"
-  - "resenteeism Indonesia"
-  - "kerja sakit potong gaji"
-  - "presenteeism karyawan Indonesia"
-  - "bahaya masuk kerja saat sakit"
-  - "presenteeism gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - presenteeism adalah
+  - masuk kerja sakit tidak bisa cuti
+  - resenteeism Indonesia
+  - kerja sakit potong gaji
+  - presenteeism karyawan Indonesia
+  - bahaya masuk kerja saat sakit
+  - presenteeism gen z
+sourceReferences: []
 featured: false
 readingTime: 9
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

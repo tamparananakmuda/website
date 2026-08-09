@@ -1,26 +1,35 @@
 ---
-title: "Ghosting Bukan Tidak Bisa Komunikasi, Hubungan yang Dijual Terlalu Murah untuk Komitmen"
-slug: "ghosting-bukan-tidak-bisa-komunikasi-hubungan-yang-dijual-terlalu-murah"
-excerpt: "63% anak muda Indonesia pakai dating apps. Ghosting nyumbang 8,4% perceraian. Bukan kelemahan komunikasi, tapi respons rasional ke sistem tanpa konsekuensi."
-publishedAt: "2026-08-07T10:00:00.000Z"
+title: 'Ghosting Bukan Nggak Bisa Komunikasi, Hubungan Dijual Terlalu Murah'
+slug: ghosting-bukan-tidak-bisa-komunikasi-hubungan-yang-dijual-terlalu-murah
+excerpt: >-
+  63% anak muda Indonesia pakai dating apps. Ghosting nyumbang 8,4% perceraian.
+  Bukan kelemahan komunikasi, tapi respons rasional ke sistem tanpa konsekuensi.
+publishedAt: '2026-08-07T10:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "hubungan-sosial"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: hubungan-sosial
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["ghosting", "dating-apps", "hubungan", "gen-z", "komitmen"]
-ogHeadline: "Ghosting bukan kamu toxic, sistemnya yang murah"
-seoMetaTitle: "Ghosting Bukan Tidak Bisa Komunikasi, Hubungan Dijual Murah"
-seoMetaDescription: "63% anak muda Indonesia pakai dating apps. Ghosting nyumbang 8,4% perceraian. Bukan kelemahan komunikasi, tapi respons rasional ke sistem hubungan."
+povTag: kontra-narasi
+tags:
+  - ghosting
+  - dating-apps
+  - hubungan
+  - gen-z
+  - komitmen
+ogHeadline: 'Ghosting bukan kamu toxic, sistemnya yang murah'
+seoMetaTitle: 'Ghosting Bukan Tidak Bisa Komunikasi, Hubungan Dijual Murah'
+seoMetaDescription: >-
+  63% anak muda Indonesia pakai dating apps. Ghosting nyumbang 8,4% perceraian.
+  Bukan kelemahan komunikasi, tapi respons rasional ke sistem hubungan.
 seoKeywords:
-  - "ghosting"
-  - "dating apps"
-  - "psikologi ghosting"
-  - "paradox of choice"
-  - "Gen Z"
-  - "komitmen"
+  - ghosting
+  - dating apps
+  - psikologi ghosting
+  - paradox of choice
+  - Gen Z
+  - komitmen
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,16 +44,46 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://www.populix.co/","label":"Populix 2026: 63% Anak Muda Indonesia Pakai Aplikasi Kencan Online (n=1.165)"}
-  - {"type":"link","url":"https://www.kemenag.go.id/","label":"Kementerian Agama 2024: Data Perceraian Indonesia (408.347 kasus)"}
-  - {"type":"link","url":"https://doi.org/10.55123/sabana.v4i1.4995","label":"SABANA Journal: Ghosting dalam Hubungan Romantis, Tinjauan Psikologis dan Sosiologis (2025)"}
-  - {"type":"link","url":"https://doi.org/10.33557/jpsyche.v17i2.2790","label":"JPsyche 2024: Self-Esteem dan Ghosting Behavior (n=203)"}
-  - {"type":"link","url":"https://e-journal.unair.ac.id/BRPKM/article/view/34564","label":"UNAIR BRPKM: Moral Disengagement dan Ghosting di Tinder (n=70)"}
-  - {"type":"link","url":"https://kc.umn.ac.id/id/eprint/39715/","label":"UMN 2025: Pengalaman Ghosting Perempuan Gen Z di Bumble (Skripsi Zefanya Channete)"}
-  - {"type":"link","url":"https://lifestyle.kompas.com/read/2024/12/17/101500520/terlalu-banyak-pilihan-di-dating-apps-memudahkan-gen-z-menemukan-pasangan","label":"Kompas: Paradox of Choice di Dating Apps (Des 2024)"}
-  - {"type":"link","url":"https://lifestyle.kompas.com/read/2026/06/01/210300320/fenomena-dating-app-fatigue-saat-pengguna-terobsesi-mencari-pasangan","label":"Kompas: Dating App Fatigue (Jun 2026)"}
-  - {"type":"link","url":"https://apjii.or.id/","label":"APJII 2023: 215,63 Juta Pengguna Internet Indonesia"}
-  - {"type":"link","url":"https://doi.org/10.3389/fpsyg.2021.720479","label":"Navarro et al. 2021: Ghosting Behavior and Dating Apps, Frontiers in Psychology"}
+  - type: link
+    url: 'https://www.populix.co/'
+    label: >-
+      Populix 2026: 63% Anak Muda Indonesia Pakai Aplikasi Kencan Online
+      (n=1.165)
+  - type: link
+    url: 'https://www.kemenag.go.id/'
+    label: 'Kementerian Agama 2024: Data Perceraian Indonesia (408.347 kasus)'
+  - type: link
+    url: 'https://doi.org/10.55123/sabana.v4i1.4995'
+    label: >-
+      SABANA Journal: Ghosting dalam Hubungan Romantis, Tinjauan Psikologis dan
+      Sosiologis (2025)
+  - type: link
+    url: 'https://doi.org/10.33557/jpsyche.v17i2.2790'
+    label: 'JPsyche 2024: Self-Esteem dan Ghosting Behavior (n=203)'
+  - type: link
+    url: 'https://e-journal.unair.ac.id/BRPKM/article/view/34564'
+    label: 'UNAIR BRPKM: Moral Disengagement dan Ghosting di Tinder (n=70)'
+  - type: link
+    url: 'https://kc.umn.ac.id/id/eprint/39715/'
+    label: >-
+      UMN 2025: Pengalaman Ghosting Perempuan Gen Z di Bumble (Skripsi Zefanya
+      Channete)
+  - type: link
+    url: >-
+      https://lifestyle.kompas.com/read/2024/12/17/101500520/terlalu-banyak-pilihan-di-dating-apps-memudahkan-gen-z-menemukan-pasangan
+    label: 'Kompas: Paradox of Choice di Dating Apps (Des 2024)'
+  - type: link
+    url: >-
+      https://lifestyle.kompas.com/read/2026/06/01/210300320/fenomena-dating-app-fatigue-saat-pengguna-terobsesi-mencari-pasangan
+    label: 'Kompas: Dating App Fatigue (Jun 2026)'
+  - type: link
+    url: 'https://apjii.or.id/'
+    label: 'APJII 2023: 215,63 Juta Pengguna Internet Indonesia'
+  - type: link
+    url: 'https://doi.org/10.3389/fpsyg.2021.720479'
+    label: >-
+      Navarro et al. 2021: Ghosting Behavior and Dating Apps, Frontiers in
+      Psychology
 ---
 
 ## Hook

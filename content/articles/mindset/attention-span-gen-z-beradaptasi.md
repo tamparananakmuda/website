@@ -1,36 +1,35 @@
 ---
-title: "Attention Span Gen Z Bukan Rusak, Otakmu Hanya Beradaptasi"
-slug: "attention-span-gen-z-beradaptasi"
-excerpt: "68% Gen Z mengalami gangguan fokus. Bukan otak rusak, tapi adaptasi terhadap lingkungan digital yang didesain untuk membuat mereka kecanduan."
-publishedAt: "2026-07-15 12:00:00+00"
-status: "published"
-category: "mindset"
+title: 'Attention Span Gen Z Nggak Rusak, Otakmu Beradaptasi'
+slug: attention-span-gen-z-beradaptasi
+excerpt: >-
+  68% Gen Z mengalami gangguan fokus. Bukan otak rusak, tapi adaptasi terhadap
+  lingkungan digital yang didesain untuk membuat mereka kecanduan.
+publishedAt: '2026-07-15 12:00:00+00'
+status: published
+category: mindset
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: "Otakmu beradaptasi, bukan rusak"
-seoMetaTitle: "Attention Span Gen Z Bukan Rusak, Otakmu Beradaptasi"
-seoMetaDescription: "68% Gen Z mengalami gangguan fokus. Bukan otak rusak, tapi adaptasi terhadap lingkungan digital yang didesain untuk membuat mereka kecanduan."
+ogHeadline: 'Otakmu beradaptasi, bukan rusak'
+seoMetaTitle: 'Attention Span Gen Z Bukan Rusak, Otakmu Beradaptasi'
+seoMetaDescription: >-
+  68% Gen Z mengalami gangguan fokus. Bukan otak rusak, tapi adaptasi terhadap
+  lingkungan digital yang didesain untuk membuat mereka kecanduan.
 seoKeywords:
-  - "attention span gen z"
-  - "gangguan fokus"
-  - "dopamine loop"
-  - "kecanduan gadget"
-  - "konsentrasi menurun"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - attention span gen z
+  - gangguan fokus
+  - dopamine loop
+  - kecanduan gadget
+  - konsentrasi menurun
+sourceReferences: []
 featured: false
 readingTime: 4
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

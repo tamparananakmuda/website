@@ -1,31 +1,44 @@
 ---
-title: "TikTok Bukan Terapis: Bahaya Self-Diagnosis Kesehatan Mental"
-slug: "tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental"
-excerpt: "Algoritma TikTok bukan diagnosis. Jutaan Gen Z mengambil diagnosa mental dari akun yang pembuatnya bukan psikolog."
-publishedAt: "2026-07-18 01:00:00+00"
-status: "published"
-category: "mindset"
+title: 'TikTok Bukan Terapis: Self-Diagnosis Meremehkan Luka Nyata'
+slug: tiktok-bukan-terapis-bahaya-self-diagnosis-kesehatan-mental
+excerpt: >-
+  Algoritma TikTok bukan diagnosis. Jutaan Gen Z mengambil diagnosa mental dari
+  akun yang pembuatnya bukan psikolog.
+publishedAt: '2026-07-18 01:00:00+00'
+status: published
+category: mindset
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "TikTok bukan terapis, algoritma bukan diagnosis"
-seoMetaTitle: "TikTok Bukan Terapis: Bahaya Self-Diagnosis Kesehatan Mental"
-seoMetaDescription: "Self-diagnosis kesehatan mental dari TikTok membahayakan Gen Z. Data Kemenkes 2026: hanya 12,7% penderita depresi yang cari bantuan profesional."
-seoKeywords: []
+ogHeadline: 'TikTok bukan terapis, algoritma bukan diagnosis'
+seoMetaTitle: 'TikTok Bukan Terapis: Self-Diagnosis Meremehkan Luka'
+seoMetaDescription: >-
+  Self-diagnosis kesehatan mental dari TikTok membahayakan Gen Z. Data Kemenkes
+  2026: hanya 12,7% penderita depresi yang cari bantuan profesional.
+seoKeywords:
+  - self diagnosis kesehatan mental
+  - tiktok terapis bahaya
+  - mental health gen z indonesia
+  - diagnosis tiktok trend
+  - kesehatan mental profesional vs sosial media
 sourceReferences:
-  - "IDN Research Institute: Gen Z Indonesia Tahu Anxiety, Tapi Hanya 10% yang Mencari Bantuan"
-  - "Kemenkes RI: Program Cek Kesehatan Gratis Maret 2026"
-  - "Universitas Muhammadiyah Yogyakarta: Loneliness in the Crowd - TikTok dan Kesepian Gen Z"
-  - "Universitas Moestopo: Analisis Akun TikTok Fact Psikologi"
-  - "Jurnalika: Fenomena Healing Culture di Kalangan Gen Z"
+  - >-
+    IDN Research Institute: Gen Z Indonesia Tahu Anxiety, Tapi Hanya 10% yang
+    Mencari Bantuan
+  - 'Kemenkes RI: Program Cek Kesehatan Gratis Maret 2026'
+  - >-
+    Universitas Muhammadiyah Yogyakarta: Loneliness in the Crowd - TikTok dan
+    Kesepian Gen Z
+  - 'Universitas Moestopo: Analisis Akun TikTok Fact Psikologi'
+  - 'Jurnalika: Fenomena Healing Culture di Kalangan Gen Z'
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -105,3 +118,10 @@ Media sosial bisa menjadi pintu masuk untuk sadar bahwa kamu butuh bantuan. Itu 
 Kesadaran tanpa akses hanya setengah solusi. Tapi kesadaran yang disertai self-diagnosis dari algoritma justru bisa menjadi masalah baru.
 
 Kenali dirimu, tapi kenali dengan benar.
+
+
+## Baca Juga
+
+- [Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan)
+- [FOMO Bukan Kelemahanmu, Itu Desain Algoritma](/artikel/fomo-desain-algoritma)
+- [Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong](/artikel/emotional-exhaustion-bukan-sekadar-capek-kamu-kosong)

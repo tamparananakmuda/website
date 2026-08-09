@@ -1,41 +1,63 @@
 ---
-title: "NEET Gen Z: 1 dari 5 Anak Muda Indonesia Hilang dari Sistem"
-slug: "neet-gen-z-1-dari-5-anak-muda-indonesia-hilang-dari-sistem"
-excerpt: "20,31% anak muda Indonesia berstatus NEET, tidak sekolah tidak kerja tidak pelatihan. Bukan malas, sistem yang tidak punya jalur untuk mereka."
-publishedAt: "2026-08-03T01:00:00.000Z"
+title: 'NEET Gen Z: 1 dari 5 Anak Muda Hilang'
+slug: neet-gen-z-1-dari-5-anak-muda-indonesia-hilang-dari-sistem
+excerpt: >-
+  20,31% anak muda Indonesia berstatus NEET, tidak sekolah tidak kerja tidak
+  pelatihan. Bukan malas, sistem yang tidak punya jalur untuk mereka.
+publishedAt: '2026-08-03T01:00:00.000Z'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["neet", "gen-z", "pengangguran", "pendidikan", "ketenagakerjaan", "bps"]
-ogHeadline: "1 dari 5 anak muda Indonesia hilang dari radar"
+povTag: kontra-narasi
+tags:
+  - neet
+  - gen-z
+  - pengangguran
+  - pendidikan
+  - ketenagakerjaan
+  - bps
+ogHeadline: 1 dari 5 anak muda Indonesia hilang dari radar
 ogHeadlineEn: null
-seoMetaTitle: "NEET Gen Z: 1 dari 5 Anak Muda Indonesia Hilang dari Sistem"
-seoMetaDescription: "20,31% Gen Z Indonesia berstatus NEET, tidak sekolah tidak kerja. Bukan malas, sistemnya yang tidak punya jalur untuk mereka. Data BPS 2024."
+seoMetaTitle: 'NEET Gen Z Indonesia: 1 dari 5 Anak Muda Hilang'
+seoMetaDescription: >-
+  20,31% Gen Z Indonesia berstatus NEET, tidak sekolah tidak kerja. Bukan malas,
+  sistemnya yang tidak punya jalur untuk mereka. Data BPS 2024.
 seoKeywords:
-  - "NEET gen z Indonesia"
-  - "pengangguran gen z Indonesia 2024"
-  - "gen z tidak kerja tidak sekolah"
-  - "NEET Indonesia BPS"
-  - "pengangguran lulusan SMA SMK"
-  - "mismatch pendidikan dan kerja Indonesia"
-  - "tingkat pengangguran terbuka gen z"
+  - NEET gen z Indonesia
+  - pengangguran gen z Indonesia 2024
+  - gen z tidak kerja tidak sekolah
+  - NEET Indonesia BPS
+  - pengangguran lulusan SMA SMK
+  - mismatch pendidikan dan kerja Indonesia
+  - tingkat pengangguran terbuka gen z
 sourceReferences:
-  - url: "https://www.bps.go.id/id/publication/2024/12/31/b2dbaac4542352cea8794590/statistik-pemuda-indonesia-2024.html"
-    label: "BPS Statistik Pemuda Indonesia 2024: NEET 20,31% usia 15-24 tahun"
-  - url: "https://www.kompas.com/tren/read/2025/02/12/143000065/bps-sebut-20-31-persen-gen-z-berstatus-neet-apa-itu-"
-    label: "Kompas/BPS: Definisi NEET OECD/ILO, data 38 provinsi 2024"
-  - url: "https://katadata.co.id/finansial/makro/664bc8bd83492/10-juta-gen-z-masih-menganggur-terbanyak-perempuan-dan-lulusan-sma"
-    label: "Katadata/BPS: 9,9 juta NEET (2023), perempuan 5,73 juta, lulusan SMA 3,57 juta, quote Celios + Indef"
-  - url: "https://www.timelinesinews.com/2026/07/benarkah-gen-z-kebanyakan-menganggur-ini-akar-masalah-yang-sering-diabaikan/"
-    label: "TimelinesInews: Mismatch keterampilan, NEET 20,4% (2023), 2 dari 3 perempuan, BPS Feb 2025"
-  - url: "https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal"
-    label: "CNN Indonesia/ISEAI: 75% pekerja digital < Rp3 juta, low productivity trap, 2,41 juta pekerja digital"
-  - url: "https://www.ntvnews.id/ekonomi/0135562/bps-ungkap-2031-persen-gen-z-di-ri-terjebak-status-neet-alias-tidak-sekolah-dan-tidak-bekerja"
-    label: "Ntvnews/BPS: Tren NEET 2015-2024, 24,77% turun ke 20,31%, data 38 provinsi"
+  - url: >-
+      https://www.bps.go.id/id/publication/2024/12/31/b2dbaac4542352cea8794590/statistik-pemuda-indonesia-2024.html
+    label: 'BPS Statistik Pemuda Indonesia 2024: NEET 20,31% usia 15-24 tahun'
+  - url: >-
+      https://www.kompas.com/tren/read/2025/02/12/143000065/bps-sebut-20-31-persen-gen-z-berstatus-neet-apa-itu-
+    label: 'Kompas/BPS: Definisi NEET OECD/ILO, data 38 provinsi 2024'
+  - url: >-
+      https://katadata.co.id/finansial/makro/664bc8bd83492/10-juta-gen-z-masih-menganggur-terbanyak-perempuan-dan-lulusan-sma
+    label: >-
+      Katadata/BPS: 9,9 juta NEET (2023), perempuan 5,73 juta, lulusan SMA 3,57
+      juta, quote Celios + Indef
+  - url: >-
+      https://www.timelinesinews.com/2026/07/benarkah-gen-z-kebanyakan-menganggur-ini-akar-masalah-yang-sering-diabaikan/
+    label: >-
+      TimelinesInews: Mismatch keterampilan, NEET 20,4% (2023), 2 dari 3
+      perempuan, BPS Feb 2025
+  - url: >-
+      https://www.cnnindonesia.com/ekonomi/20260724123312-92-1384467/ekonom-wanti-wanti-bahaya-gen-z-lebih-banyak-kerja-di-sektor-informal
+    label: >-
+      CNN Indonesia/ISEAI: 75% pekerja digital < Rp3 juta, low productivity
+      trap, 2,41 juta pekerja digital
+  - url: >-
+      https://www.ntvnews.id/ekonomi/0135562/bps-ungkap-2031-persen-gen-z-di-ri-terjebak-status-neet-alias-tidak-sekolah-dan-tidak-bekerja
+    label: 'Ntvnews/BPS: Tren NEET 2015-2024, 24,77% turun ke 20,31%, data 38 provinsi'
 readingTime: 8
 featured: false
 isPremium: false
@@ -43,8 +65,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

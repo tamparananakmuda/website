@@ -2,13 +2,12 @@
 title: 'Dating App yang Tidak Ingin Kamu Jadian: Bisnis Model Kesepian'
 slug: industri-penderitaan-gen-z-part-3-dating-app-bisnis-kesepian
 excerpt: >-
-  Dating app churn 12.4% per bulan, subscriber lifespan 2-3 bulan. Bisnis model
-  mereka tidak dirancang untuk membuatmu ketemu pasangan, tapi untuk membuatmu
-  tetap mencari.
+  Dating app churn 12.4% per bulan. Bisnis model mereka tidak dirancang untuk
+  membuatmu ketemu pasangan, tapi untuk membuatmu tetap mencari.
 publishedAt: '2026-11-03T01:00:00.000Z'
 status: scheduled
 category: bisnis
-subcategory: kehidupan-relasi
+subcategory: bisnis
 author: yovie-setiawan
 series: industri-penderitaan-gen-z
 seriesOrder: 3
@@ -23,9 +22,8 @@ tags:
 ogHeadline: 'Dating app tidak ingin kamu ketemu pasangan'
 seoMetaTitle: 'Dating App Business Model: Mereka Tidak Ingin Kamu Jadian | TAM'
 seoMetaDescription: >-
-  Dating app churn 12.4% per bulan, subscriber lifespan 2-3 bulan. Bisnis model
-  mereka tidak dirancang untuk membuatmu ketemu pasangan, tapi untuk membuatmu
-  tetap mencari.
+  Dating app churn 12.4% per bulan. Bisnis model mereka tidak dirancang untuk
+  membuatmu ketemu pasangan, tapi untuk membuatmu tetap mencari.
 seoKeywords:
   - dating app business model
   - Tinder Bumble Indonesia
@@ -50,8 +48,8 @@ sourceReferences:
     label: 'Match Group 2025 Annual Report (SEC filing)'
 featured: false
 humanSignature: true
-factCheckStatus: pending
-reviewStatus: draft
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -60,6 +58,7 @@ isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
+human_signature: true
 readingTime: 7
 ---
 
@@ -83,7 +82,7 @@ Dating app memiliki kontradiksi struktural yang fundamental. Tujuan pengguna ada
 
 Dating app memiliki churn rate 12.4% per bulan di 2026 (RetentionCheck). Hanya 3.3% pengguna masih aktif setelah 12 bulan (Business of Apps). Model bisnis dating app memiliki kontradiksi struktural: tujuan pengguna (menemukan pasangan) langsung menyebabkan churn, sehingga platform memiliki insentif untuk memperpanjang pencarian, bukan mempercepat pertemuan.
 
-Dari 30% pengguna yang churn, hanya sebagian yang churn karena "found a relationship." Sisanya, 27% churn karena frustrasi dengan match quality, 22% karena fatigue, 14% karena cost, dan 7% karena switching ke app lain. Artinya, mayoritas orang berhenti bukan karena berhasil, tapi karena kelelahan. Dan kelelahan ini bukan bug. Kalau kamu cepat lelah, kamu churn. Kalau kamu churn, platform tidak perlu mengerjakan "retention" untukmu. Mereka fokus mendapatkan pengguna baru.
+Menurut RetentionCheck 2026, dari 30% pengguna yang churn, hanya sebagian yang churn karena "found a relationship." Sisanya, 27% churn karena frustrasi dengan match quality, 22% karena fatigue, 14% karena cost, dan 7% karena switching ke app lain. Artinya, mayoritas orang berhenti bukan karena berhasil, tapi karena kelelahan. Dan kelelahan ini bukan bug. Kalau kamu cepat lelah, kamu churn. Kalau kamu churn, platform tidak perlu mengerjakan "retention" untukmu. Mereka fokus mendapatkan pengguna baru.
 
 ```chart:funnel
 {"title":"Dating App User Funnel","subtitle":"Dari download hingga retained 12 bulan","source":"RetentionCheck, Business of Apps (2026)","data":[{"label":"Total Members","value":350,"color":"#3b82f6"},{"label":"Paying Subscribers","value":25,"color":"#f4a825"},{"label":"Retained 12 Months","value":1.2,"color":"#ef4444"}]}
@@ -93,7 +92,7 @@ Dari 30% pengguna yang churn, hanya sebagian yang churn karena "found a relation
 
 Dating Industry Insights 2025 melaporkan CAC (Customer Acquisition Cost) dating app sebesar $39 per paying subscriber. LTV (Lifetime Value) hanya $40 sampai $60. LTV:CAC ratio 1.0 sampai 1.5x. Untuk konteks, investor biasanya mau LTV:CAC minimal 3x. Dating app beroperasi di bawah threshold itu. Artinya, setiap pengguna baru hampir tidak menghasilkan profit. Bisnis yang CAC-nya hampir sama dengan LTV-nya bukan bisnis yang mengandalkan retensi. Bisnis itu mengandalkan volume: terus dapat pengguna baru, terus ganti yang churn.
 
-Average subscriber lifespan hanya 2 sampai 3 bulan. Kurang dari 15% renew untuk periode kedua. Subscription menyumbang 48% revenue global, microtransaction tumbuh 14.58% CAGR. Di Asia Tenggara, one-time purchases menyumbang 72% dari gross sales, dengan average order value $4.20. Angka-angka ini menunjukkan satu hal: pengguna tidak betah lama. Dan platform sudah mengakomodasi itu dengan model harga yang menangkap uang dalam window singkat sebelum kamu pergi.
+Average subscriber lifespan hanya 2 sampai 3 bulan. Kurang dari 15% renew untuk periode kedua. Menurut Dating Industry Insights 2025, subscription menyumbang 48% revenue global, microtransaction tumbuh 14.58% CAGR. Di Asia Tenggara, one-time purchases menyumbang 72% dari gross sales, dengan average order value $4.20. Angka-angka ini menunjukkan satu hal: pengguna tidak betah lama. Dan platform sudah mengakomodasi itu dengan model harga yang menangkap uang dalam window singkat sebelum kamu pergi.
 
 ```chart:bar
 {"title":"Alasan Churn Dating App (%)","subtitle":"Kenapa pengguna berhenti pakai dating app","source":"RetentionCheck (2026)","data":[{"label":"Found Relationship","value":30,"color":"#22c55e"},{"label":"Frustrasi Match Quality","value":27,"color":"#ef4444"},{"label":"Fatigue","value":22,"color":"#f4a825"},{"label":"Cost","value":14,"color":"#a855f7"},{"label":"Switching App","value":7,"color":"#3b82f6"}]}
@@ -111,16 +110,16 @@ Laporan tahunan Match Group 2025 ke SEC mengungkapkan sesuatu yang menarik: "Rev
 
 Dating app tidak menjual cinta. Mereka menjual harapan bahwa cinta ada di swipe berikutnya. Algoritma tidak dioptimasi untuk match. Algoritma dioptimasi untuk engagement. Semakin lama kamu mencari, semakin banyak swipe, semakin banyak iklan yang kamu lihat, semakin banyak subscription yang kamu bayar. Semakin cepat kamu jadian, semakin cepat kamu pergi. Dari sudut pandang revenue, jadian adalah worst case scenario.
 
-Gue punya teman yang pakai Tinder selama dua tahun. Dua tahun. Setiap bulan bayar subscription Tinder Gold. Total Rp6 juta lebih. Dia tidak pernah jadian. Tapi dia terus swipe. "Mungkin next profile," katanya. Dua tahun mencari "next profile" dan Tinder senang. Karena selama dia mencari, Tinder menghasilkan. Tinder tidak ingin dia berhenti mencari. Tinder ingin dia terus percaya bahwa "next profile" adalah profile yang benar.
+Gue punya teman yang pakai Tinder selama dua tahun. Setiap bulan bayar subscription Tinder Gold, total Rp6 juta lebih. Dia tidak pernah jadian, tapi dia terus swipe. "Mungkin next profile," katanya. Dua tahun mencari "next profile" dan Tinder senang. Karena selama dia mencari, Tinder menghasilkan. Tinder tidak ingin dia berhenti mencari. Tinder ingin dia terus percaya bahwa "next profile" adalah profile yang benar.
 
 Seperti yang dibahas di [Hubungan Era Tidak Pasti: Situationship Ekonomi](/artikel/hubungan-era-tidak-pasti-part-1-situationship-ekonomi), ekonomi yang tidak pasti membuat kamu tidak bisa menjanjikan besok. Dating app mengisi kekosongan itu dengan ilusi bahwa ada ribuan pilihan di ujung jari. Tapi ribuan pilihan itu bukan jalan menuju hubungan. Itu adalah alasan untuk tidak memilih.
 
 ## Conclusion
 
-Dating app adalah satu-satunya bisnis di mana produk yang berhasil membuat pelanggan pergi. Tapi mereka sudah punya solusinya: kalau kamu jadian dan churn, mereka punya app lain untuk kalau kamu break up. Kalau kamu menyerah, mereka punya app lain untuk kalau kamu mencoba lagi. Mereka tidak kehilanganmu. Mereka hanya meminjam.
+Bisnis model dating app punya paradox yang elegant: keberhasilan produk = kehilangan pelanggan. Tapi mereka sudah punya solusinya: kalau kamu jadian dan churn, mereka punya app lain untuk kalau kamu break up. Kalau kamu menyerah, mereka punya app lain untuk kalau kamu mencoba lagi. Mereka tidak kehilanganmu. Mereka hanya meminjam.
 
-Dan sementara kamu meminjam harapan dari algoritma, ada industri yang lebih radikal menunggu. Industri yang tidak menjual solusi untuk masalahmu. Industri yang menjual kamu sendiri. Kamu bukan konsumen. Kamu adalah produk.
+Dan sementara kamu meminjam harapan dari algoritma, ada industri yang lebih radikal menunggu. Industri yang tidak menjual solusi untuk masalahmu. Industri yang menjual kamu sendiri, bukan produk ke kamu. Kamu adalah produk.
 
 ---
 
-**Selanjutnya di Industri Penderitaan Gen Z:** Selama ini kita bahas industri yang menjual solusi untuk masalah kamu. Tapi ada industri yang lebih radikal: industri yang tidak menjual solusi sama sekali. Mereka menjual kamu. Bukan produk ke kamu. Kamu sendiri adalah produk. [Lanjut ke Part 4](/artikel/industri-penderitaan-gen-z-part-4-gig-economy-ilusi-kemerdekaan)
+**Selanjutnya di Industri Penderitaan Gen Z:** Selama ini kita bahas industri yang menjual solusi untuk masalah kamu. Tapi ada industri yang lebih radikal: industri yang tidak menjual solusi sama sekali. Mereka menjual kamu, bukan produk ke kamu. Kamu sendiri adalah produk. [Lanjut ke Part 4](/artikel/industri-penderitaan-gen-z-part-4-gig-economy-ilusi-kemerdekaan)

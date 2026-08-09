@@ -1,40 +1,37 @@
 ---
-title: "Side Hustle Bukan Ambisi, Kebutuhan Ekonomi"
-slug: "side-hustle-bukan-ambisi-kebutuhan-ekonomi"
-excerpt: "73% Gen Z dengan bisnis online hasilkan kurang dari Rp1 juta per bulan. Side hustle bukan bukti rajin, tapi bukti gaji utama tidak cukup."
-publishedAt: "2026-07-20 10:00:00+00"
-status: "published"
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+title: 'Side Hustle Bukan Ambisi, Kebutuhan Ekonomi'
+slug: side-hustle-bukan-ambisi-kebutuhan-ekonomi
+excerpt: >-
+  73% Gen Z dengan bisnis online hasilkan kurang dari Rp1 juta per bulan. Side
+  hustle bukan bukti rajin, tapi bukti gaji utama tidak cukup.
+publishedAt: '2026-07-20 10:00:00+00'
+status: published
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Side hustle bukan bukti kamu rajin"
-seoMetaTitle: "Side Hustle Bukan Ambisi, Kebutuhan Ekonomi"
-seoMetaDescription: "73% Gen Z dengan bisnis online hasilkan kurang dari Rp1 juta per bulan. Side hustle bukan bukti rajin, tapi bukti gaji utama tidak cukup."
+ogHeadline: Side hustle bukan bukti kamu rajin
+seoMetaTitle: 'Side Hustle: Kebutuhan Ekonomi Gen Z'
+seoMetaDescription: >-
+  73% Gen Z dengan bisnis online hasilkan kurang dari Rp1 juta per bulan. Side
+  hustle bukan bukti rajin, tapi bukti gaji utama tidak cukup.
 seoKeywords:
-  - "side hustle"
-  - "Gen Z ekonomi"
-  - "gaji tidak cukup"
-  - "grind culture"
-  - "hustle mentality"
-  - "UMP Jakarta"
-  - "pekerja sampingan"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - side hustle
+  - Gen Z ekonomi
+  - gaji tidak cukup
+  - grind culture
+  - hustle mentality
+  - UMP Jakarta
+  - pekerja sampingan
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

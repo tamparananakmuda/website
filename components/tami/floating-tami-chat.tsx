@@ -123,13 +123,14 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   // Save conversation when changed
   useEffect(() => {
     if (isLoaded) {
+      const wasExternal = isExternalUpdate.current;
+      isExternalUpdate.current = false;
       localStorage.setItem('tami_conversation_history', JSON.stringify(messages));
       // Only dispatch event if this update is from user action, not from external sync
       // to prevent infinite loop between floating chat and full-page chat
-      if (!isExternalUpdate.current) {
+      if (!wasExternal) {
         window.dispatchEvent(new Event('tami_history_updated'));
       }
-      isExternalUpdate.current = false;
     }
   }, [messages, isLoaded]);
 

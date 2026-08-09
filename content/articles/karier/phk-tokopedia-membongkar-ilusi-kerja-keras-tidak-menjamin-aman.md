@@ -1,35 +1,34 @@
 ---
-title: "PHK Tokopedia Membongkar Ilusi: Kerja Keras Tidak Menjamin Aman"
-slug: "phk-tokopedia-membongkar-ilusi-kerja-keras-tidak-menjamin-aman"
-excerpt: "450 karyawan di-PHK 2024, 450 lagi 2025, dan 2026 rumor 90% dipangkas. Kalau kerja keras menjamin keamanan, kenapa ini terjadi?"
-publishedAt: "2026-07-16 20:50:00+00"
-status: "published"
-category: "karier"
+title: 'PHK Tokopedia: Kerja Keras Nggak Menjamin Aman'
+slug: phk-tokopedia-membongkar-ilusi-kerja-keras-tidak-menjamin-aman
+excerpt: >-
+  450 karyawan di-PHK 2024, 450 lagi 2025, dan 2026 rumor 90% dipangkas. Kalau
+  kerja keras menjamin keamanan, kenapa ini terjadi?
+publishedAt: '2026-07-16 20:50:00+00'
+status: published
+category: karier
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Kerja keras tidak menjamin kamu aman dari PHK"
-seoMetaTitle: "PHK Tokopedia: Kerja Keras Tidak Menjamin Aman"
-seoMetaDescription: "450 karyawan di-PHK 2024, 450 lagi 2025, 2026 rumor 90% dipangkas. Pelajaran untuk anak muda: kerja keras tidak menjamin aman."
+ogHeadline: Kerja keras tidak menjamin kamu aman dari PHK
+seoMetaTitle: 'PHK Tokopedia: Kerja Keras Tidak Menjamin Aman'
+seoMetaDescription: >-
+  450 karyawan di-PHK 2024, 450 lagi 2025, 2026 rumor 90% dipangkas. Pelajaran
+  untuk anak muda: kerja keras tidak menjamin aman.
 seoKeywords:
-  - "PHK Tokopedia"
-  - "kerja keras tidak menjamin"
-  - "pelajaran PHK startup"
-  - "tips karier aman dari PHK"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - PHK Tokopedia
+  - kerja keras tidak menjamin
+  - pelajaran PHK startup
+  - tips karier aman dari PHK
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -95,3 +94,10 @@ Tokopedia bukan korban. Tokopedia adalah bisnis. Dan bisnis akan lakukan apa pun
 Kamu nggak bisa menghentikan perusahaan dari PHK. Tapi kamu bisa menghentikan diri kamu dari ketergantungan pada satu perusahaan.
 
 Kerja keras. Tapi kerja keras untuk masa depan kamu sendiri, bukan untuk loyalitas ke perusahaan yang akan menghapus kamu saat angka di spreadsheet nggak cocok.
+
+
+## Baca Juga
+
+- [300 Lamaran Ditolak: Bukan Pilih-Pilih, Sistemnya yang Tidak Mau Kamu](/artikel/300-lamaran-ditolak-bukan-pilih-pilih-sistemnya-yang-tidak-mau-kamu)
+- [Career Cushioning: Bukan Tidak Loyal, Survival Era PHK](/artikel/career-cushioning-bukan-tidak-loyal-survival-era-phk)
+- [Quiet Firing: Perusahaan Paksa Kamu Keluar](/artikel/quiet-firing-perusahaan-paksa-kamu-keluar)

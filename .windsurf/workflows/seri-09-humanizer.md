@@ -91,6 +91,19 @@ Setelah semua part di-humanize, lakukan tone consistency check:
 4. Cek: apakah format recap/teaser konsisten di semua part?
 5. Jika ada inkonsistensi: pilih tone part 1 sebagai benchmark, sesuaikan part lain
 
+## Hook & Foreshadow Formula Preservation Rules
+
+Saat humanizing, WAJIB jaga integritas formula yang sudah diimplementasi:
+
+- **Jangan break Series Hook formula:** Series Hook dari step 01 harus tetap utuh di part 1 opening dan series description. Boleh perbaiki bahasa, tapi pattern tidak boleh berubah.
+- **Jangan break Episode Hook formula:** Episode Hook per part boleh di-humanize, tapi formula pattern harus tetap utuh. Contoh: jika Hook formula #7 (Question Hook), jangan ganti jadi data hook.
+- **Jangan break Episode Foreshadow formula:** Foreshadow tease per part boleh di-natural-kan, tapi tease element harus tetap ada. Jangan hapus foreshadow karena "terlalu dramatis".
+- **Jangan break Next Tease/Bridge formula:** Bridge antar part boleh di-perbaiki flow-nya, tapi connection antar part harus tetap ada. Jangan hapus Next Tease di akhir part.
+- **Jangan ubah thumbnail text (og_headline):** og_headline sudah dirancang sebagai visual hook per part. Boleh perbaiki bahasa jika AI pattern terdeteksi, tapi tetap berbeda dari title dan max 50 char.
+- **Jangan ubah thumbnail caption (excerpt):** Excerpt sudah dirancang sebagai visual foreshadow per part. Boleh perbaiki flow, tapi tetap max 160 char dan function sebagai tease.
+- **Jangan ubah meta description:** Meta description sudah dirancang dengan Hook + Foreshadow element per part. Boleh perbaiki bahasa, tapi struktur Hook + Value + Foreshadow harus tetap.
+- **Formula audit setelah humanize:** Setelah humanizer selesai, re-check bahwa semua formula (Series Hook, Episode Hook, Episode Foreshadow, Next Tease/Bridge) masih utuh. Jika formula rusak, fix sebelum re-run QC.
+
 ## Setelah humanizer
 
 1. Set `human_signature: true` di article JSON per part
@@ -106,6 +119,13 @@ Setelah semua part di-humanize, lakukan tone consistency check:
 - [ ] Human signature per part (min 1 dari 3 tipe)
 - [ ] Command auto-check: CLEAN untuk semua part
 - [ ] `human_signature: true` di JSON per part
+- [ ] Series Hook formula masih utuh setelah humanizing
+- [ ] Episode Hook formula masih utuh per part setelah humanizing
+- [ ] Episode Foreshadow formula masih utuh per part setelah humanizing
+- [ ] Next Tease/Bridge formula masih utuh antar part setelah humanizing
+- [ ] Thumbnail text (og_headline) per part tetap berbeda dari title, max 50 char
+- [ ] Thumbnail caption (excerpt) per part tetap max 160 char, function sebagai tease
+- [ ] Meta description per part tetap mengandung Hook + Foreshadow element, max 160 char
 - [ ] Re-run `/seri-08-qc` dan hasil CLEAN
 - [ ] Paragraph Rhythm Audit per part
 - [ ] Cross-Part Tone Calibration: all pass
@@ -149,6 +169,16 @@ Target: min 9.
 | **Transition quality** | 1 | Robotik | Sebagiane | Natural |
 
 Jika score < 9: revisi sebelum lanjut ke schedule.
+
+## Checklist
+
+- [ ] No AI vocab EN/ID per part
+- [ ] No staccato drama, rule-of-three abuse, negative parallelisms per part
+- [ ] Title seri + title per part tidak mengandung AI tells: no formal words, no positive superlatives, no "kita/kami", no fear words, ada active verb, max 10 kata, still punchy berdasar 20 prinsip riset
+- [ ] Human signature: min 1 per part
+- [ ] Cross-Part Tone Calibration: 5 checks pass
+- [ ] Series Humanizer Quality Score: min 9 (dari 12)
+- [ ] Re-run `/seri-08-qc` dan hasil CLEAN per part
 
 ## Next
 

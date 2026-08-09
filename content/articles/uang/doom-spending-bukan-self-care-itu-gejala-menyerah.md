@@ -1,34 +1,35 @@
 ---
-title: "Doom Spending Bukan Self-Care, Itu Gejala Menyerah"
-slug: "doom-spending-bukan-self-care-itu-gejala-menyerah"
-excerpt: "Belanja impulsif bukan self-reward. Itu reaksi rasional terhadap sistem yang terasa tidak rasional. Tapi reaksi yang tidak akan pernah mengubah sistem."
-publishedAt: "2026-07-21 01:00:00+00"
-status: "published"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Doom Spending Bukan Self-Care, Itu Gejala Menyerah'
+slug: doom-spending-bukan-self-care-itu-gejala-menyerah
+excerpt: >-
+  Belanja impulsif bukan self-reward. Itu reaksi rasional terhadap sistem yang
+  terasa tidak rasional. Tapi reaksi yang tidak akan pernah mengubah sistem.
+publishedAt: '2026-07-21 01:00:00+00'
+status: published
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Belanja saat stres bukan self-care, itu gejala menyerah"
-seoMetaTitle: "Doom Spending Bukan Self-Care, Itu Gejala Menyerah"
-seoMetaDescription: "Belanja impulsif bukan self-reward. Itu reaksi rasional terhadap sistem yang terasa tidak rasional. Tapi reaksi yang tidak akan pernah mengubah sistem."
+ogHeadline: 'Belanja stres bukan self-care, gejala menyerah'
+seoMetaTitle: 'Doom Spending Bukan Self-Care, Gejala Menyerah'
+seoMetaDescription: >-
+  Belanja impulsif bukan self-reward. Itu reaksi rasional terhadap sistem yang
+  terasa tidak rasional. Tapi reaksi yang tidak akan pernah mengubah sistem.
 seoKeywords:
-  - "doom spending gen z"
-  - "belanja impulsif gen z"
-  - "gen z keuangan Indonesia"
-  - "self reward berlebihan"
-  - "high time preference"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - doom spending gen z
+  - belanja impulsif gen z
+  - gen z keuangan Indonesia
+  - self reward berlebihan
+  - high time preference
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

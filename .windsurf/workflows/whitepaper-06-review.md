@@ -246,9 +246,34 @@ SME cek akurasi teknis, bukan tone atau style.
 
 Total = sum(bobot x skor). Target > 80. Jika < 70, revisi major.
 
+## Section Hook/Foreshadow/Bridge Formula Validation
+
+Validasi bahwa formula yang dipilih di step 03-strategy terimplementasi dengan benar:
+
+| Check | Pertanyaan | Pass criteria |
+|-------|------------|---------------|
+| **Executive Hook implemented** | Apakah title dan Executive Summary opening sesuai Executive Hook formula dari step 01? | Formula terimplementasi, bukan generic hook |
+| **Section Hook implemented** | Apakah opening setiap section sesuai Section Hook formula yang dipilih di step 03? | Formula terimplementasi per section, bukan generic hook |
+| **Section Foreshadow implemented** | Apakah closing setiap section sesuai Foreshadow formula yang dipilih? | Formula terimplementasi, tease tidak spoiler penuh |
+| **Bridge formula implemented** | Apakah transition antar section sesuai Bridge formula yang dipilih? | Bridge terimplementasi, connect antar section |
+| **Foreshadow payoff** | Apakah foreshadow di section N di-bayar di section N+1? | Payoff ada, tidak menggantung |
+| **Thumbnail text (og_headline)** | Berbeda dari title? Max 50 char? Function sebagai visual hook? | Ya, semua kriteria terpenuhi |
+| **Thumbnail caption (excerpt)** | Max 160 char? Function sebagai visual foreshadow? | Ya, tease tidak spoiler |
+| **Meta description** | Max 160 char? Mengandung Hook + Foreshadow element? | Ya, Hook + Value + Foreshadow |
+
+Jika Section Hook, Foreshadow, atau Bridge tidak terimplementasi: kembali ke 05-draft untuk fix.
+
 ## Checklist
 
 - [ ] 5-pass review selesai (structural, accuracy, readability, brand/tone, copy edit)
+- [ ] Executive Hook formula implemented sesuai pilihan di step 01 (nomor + nama)
+- [ ] Section Hook formula implemented per section sesuai pilihan di step 03 (nomor + nama)
+- [ ] Section Foreshadow formula implemented per section sesuai pilihan di step 03 (nomor + nama)
+- [ ] Bridge formula implemented antar section sesuai pilihan di step 03 (dari 5 Bridge formula)
+- [ ] Thumbnail text (og_headline): berbeda dari title, max 50 char, visual hook
+- [ ] Title masih punchy berdasar 20 prinsip riset (cek: no formal words, no fear words, no superlatives, no "kita/kami", ada active verb, max 10 kata, ada kontras/surprise, no "Krisis X Indonesia:" default, no "X: Sistem yang Y" default)
+- [ ] Thumbnail caption (excerpt): max 160 char, visual foreshadow
+- [ ] Meta description: max 160 char, mengandung Hook + Foreshadow element
 - [ ] Bayesian audit: semua key claim proportionate to evidence
 - [ ] E-E-A-T verification: all 8 signals checked
 - [ ] Pyramid Principle structure check: governing thought, MECE, SCQA

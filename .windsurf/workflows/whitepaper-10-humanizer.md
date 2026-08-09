@@ -318,6 +318,19 @@ Whitepaper TAM boleh pakai pertanyaan untuk mengajak berpikir. Tapi pertanyaan h
 
 Pertanyaan terbaik TAM: datang dari data, bukan dari moral high ground. "74% lulusan menganggur. Apakah kerja keras saja cukup?"
 
+## Section Hook/Foreshadow/Bridge Formula Preservation Rules
+
+Saat humanizing, WAJIB jaga integritas formula yang sudah diimplementasi:
+
+- **Jangan break Executive Hook formula:** Executive Hook dari step 01 harus tetap utuh di title dan Executive Summary opening. Boleh perbaiki bahasa, tapi pattern tidak boleh berubah.
+- **Jangan break Section Hook formula:** Section Hook per section boleh di-humanize, tapi formula pattern harus tetap utuh. Contoh: jika Hook formula #3 (Data Counter-Intuitive), jangan ganti jadi generic hook.
+- **Jangan break Section Foreshadow formula:** Foreshadow tease per section boleh di-natural-kan, tapi tease element harus tetap ada. Jangan hapus foreshadow karena "terlalu dramatis".
+- **Jangan break Bridge formula:** Bridge antar section boleh di-perbaiki flow-nya, tapi connection antar section harus tetap ada. Jangan hapus Bridge dan ganti dengan generic transition.
+- **Jangan ubah thumbnail text (og_headline):** og_headline sudah dirancang sebagai visual hook. Boleh perbaiki bahasa jika AI pattern terdeteksi, tapi tetap berbeda dari title dan max 50 char.
+- **Jangan ubah thumbnail caption (excerpt):** Excerpt sudah dirancang sebagai visual foreshadow. Boleh perbaiki flow, tapi tetap max 160 char dan function sebagai tease.
+- **Jangan ubah meta description:** Meta description sudah dirancang dengan Hook + Foreshadow element. Boleh perbaiki bahasa, tapi struktur Hook + Value + Foreshadow harus tetap.
+- **Formula audit setelah humanize:** Setelah humanizer selesai, re-check bahwa semua formula (Executive Hook, Section Hook, Section Foreshadow, Bridge) masih utuh. Jika formula rusak, fix sebelum re-run QC.
+
 ## Setelah humanizer
 
 1. Set `human_signature: true` di article JSON
@@ -358,6 +371,14 @@ Pertanyaan terbaik TAM: datang dari data, bukan dari moral high ground. "74% lul
 - [ ] Readability target: Exec Summary/Background/Recommendation/Conclusion = Grade 10-12
 - [ ] Question quality: no rhetorical kosong, no obvious answer, max 1-2 per section
 - [ ] Command auto-check: CLEAN
+- [ ] Executive Hook formula masih utuh setelah humanizing
+- [ ] Title tidak mengandung AI tells: no formal words ("Tidak" -> "Nggak"), no positive superlatives ("terbaik", "hebat"), no "kita/kami", no fear words, ada active verb, max 10 kata, still punchy berdasar 20 prinsip riset, no "Krisis X Indonesia:" default pattern
+- [ ] Section Hook formula masih utuh per section setelah humanizing
+- [ ] Section Foreshadow formula masih utuh per section setelah humanizing
+- [ ] Bridge formula masih utuh antar section setelah humanizing
+- [ ] Thumbnail text (og_headline) tetap berbeda dari title, max 50 char
+- [ ] Thumbnail caption (excerpt) tetap max 160 char, function sebagai tease
+- [ ] Meta description tetap mengandung Hook + Foreshadow element, max 160 char
 - [ ] Re-run `/whitepaper-09-qc` dan hasil 0 FAIL, maksimal 3 WARNING
 
 ## Next

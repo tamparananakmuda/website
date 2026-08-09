@@ -1,65 +1,79 @@
 ---
-title: "Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji Tanpa Makan"
-slug: "beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan"
-excerpt: "Rasio harga rumah dan gaji di Jakarta butuh 26 tahun tanpa makan. Bukan kopi yang bikin Gen Z sulit beli rumah, tapi sistem."
-publishedAt: "2026-07-25T01:00:00.000Z"
-status: "published"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Beli Rumah Bukan Soal Kopi, Soal 25 Tahun Gaji'
+slug: beli-rumah-bukan-soal-kopi-soal-25-tahun-gaji-tanpa-makan
+excerpt: >-
+  Rasio harga rumah dan gaji di Jakarta butuh 26 tahun tanpa makan. Bukan kopi
+  yang bikin Gen Z sulit beli rumah, tapi sistem.
+publishedAt: '2026-07-25T01:00:00.000Z'
+status: published
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "26 tahun gaji tanpa makan untuk beli rumah"
-seoMetaTitle: "Beli Rumah Bukan Soal Kopi, Soal Sistem"
-seoMetaDescription: "Rasio harga rumah dan gaji di Jakarta butuh 26 tahun tanpa makan. Bukan kopi yang bikin Gen Z sulit beli rumah, tapi sistem properti."
+ogHeadline: 26 tahun gaji tanpa makan untuk beli rumah
+seoMetaTitle: 'Beli Rumah Bukan Soal Kopi, Soal Sistem'
+seoMetaDescription: >-
+  Rasio harga rumah dan gaji di Jakarta butuh 26 tahun tanpa makan. Bukan kopi
+  yang bikin Gen Z sulit beli rumah, tapi sistem properti.
 seoKeywords:
-  - "gen z beli rumah Indonesia"
-  - "rasio harga rumah pendapatan Jakarta"
-  - "harga rumah vs gaji 2025"
-  - "keterjangkauan rumah gen z"
-  - "mitos kopi beli rumah"
-  - "harga properti Jabodetabek 2025"
+  - gen z beli rumah Indonesia
+  - rasio harga rumah pendapatan Jakarta
+  - harga rumah vs gaji 2025
+  - keterjangkauan rumah gen z
+  - mitos kopi beli rumah
+  - harga properti Jabodetabek 2025
 sourceReferences:
-  - type: "link"
-    url: "https://www.numbeo.com/property-investment/in/Jakarta"
-    label: "Numbeo Property Prices Jakarta (Jul 2026)"
-  - type: "link"
-    url: "https://www.numbeo.com/property-investment/country_result.jsp?country=Indonesia"
-    label: "Numbeo Property Prices Indonesia (Jul 2026)"
-  - type: "link"
-    url: "https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?displayColumn=5&title=2025"
-    label: "Numbeo Price to Income Ratio by Country 2025"
-  - type: "link"
-    url: "https://databoks.katadata.co.id/en/employment/statistics/6819b35f46b23/average-wage-growth-of-indonesian-workers-until-early-2025"
-    label: "BPS Average Wage Growth Feb 2025 via Databoks"
-  - type: "link"
-    url: "https://www.bps.go.id/en/publication/2024/12/20/adf684ebfadf6b11627eaac9/residential-property-price-index-2024.html"
-    label: "BPS Residential Property Price Index 2024"
-  - type: "link"
-    url: "https://www.detik.com/properti/berita/d-7973565/stok-rumah-tapak-di-jabodetabek-188-ribu-unit-segini-kisaran-harganya"
-    label: "detikFinance: Stok Rumah Tapak Jabodetabek Q1 2025"
-  - type: "link"
-    url: "https://www.tempo.co/ekonomi/penjualan-rumah-tapak-mulai-dari-rp-600-juta-laris-pada-2025-2114866"
-    label: "JLL Indonesia via Tempo: Penjualan Rumah Tapak 2H 2025"
-  - type: "link"
-    url: "https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah"
-    label: "Kompas: Viral Narasi Gen Z Sulit Beli Rumah (Aug 2025)"
-  - type: "link"
-    url: "https://theconversation.com/apakah-kita-mampu-beli-tiny-house-kalau-enggak-beli-kopi-255775"
-    label: "The Conversation: Tiny House dan Daya Beli Gen Z"
-  - type: "link"
-    url: "https://money.kompas.com/read/2026/06/19/131934426/gen-z-kehilangan-harapan-punya-rumah-belanja-impulsif-meningkat"
-    label: "Kompas Money: Gen Z Kehilangan Harapan Punya Rumah (Jun 2026)"
-  - type: "link"
-    url: "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q4/apac-and-gc/greater-jakarta-land-residential-2h2025.pdf"
-    label: "Cushman & Wakefield: Greater Jakarta Landed Residential 2H 2025"
+  - type: link
+    url: 'https://www.numbeo.com/property-investment/in/Jakarta'
+    label: Numbeo Property Prices Jakarta (Jul 2026)
+  - type: link
+    url: >-
+      https://www.numbeo.com/property-investment/country_result.jsp?country=Indonesia
+    label: Numbeo Property Prices Indonesia (Jul 2026)
+  - type: link
+    url: >-
+      https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?displayColumn=5&title=2025
+    label: Numbeo Price to Income Ratio by Country 2025
+  - type: link
+    url: >-
+      https://databoks.katadata.co.id/en/employment/statistics/6819b35f46b23/average-wage-growth-of-indonesian-workers-until-early-2025
+    label: BPS Average Wage Growth Feb 2025 via Databoks
+  - type: link
+    url: >-
+      https://www.bps.go.id/en/publication/2024/12/20/adf684ebfadf6b11627eaac9/residential-property-price-index-2024.html
+    label: BPS Residential Property Price Index 2024
+  - type: link
+    url: >-
+      https://www.detik.com/properti/berita/d-7973565/stok-rumah-tapak-di-jabodetabek-188-ribu-unit-segini-kisaran-harganya
+    label: 'detikFinance: Stok Rumah Tapak Jabodetabek Q1 2025'
+  - type: link
+    url: >-
+      https://www.tempo.co/ekonomi/penjualan-rumah-tapak-mulai-dari-rp-600-juta-laris-pada-2025-2114866
+    label: 'JLL Indonesia via Tempo: Penjualan Rumah Tapak 2H 2025'
+  - type: link
+    url: >-
+      https://www.kompas.com/tren/read/2025/08/25/194500165/viral-narasi-gen-z-sulit-beli-rumah-karena-boros-ekonom--upah-di-bawah
+    label: 'Kompas: Viral Narasi Gen Z Sulit Beli Rumah (Aug 2025)'
+  - type: link
+    url: >-
+      https://theconversation.com/apakah-kita-mampu-beli-tiny-house-kalau-enggak-beli-kopi-255775
+    label: 'The Conversation: Tiny House dan Daya Beli Gen Z'
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/06/19/131934426/gen-z-kehilangan-harapan-punya-rumah-belanja-impulsif-meningkat
+    label: 'Kompas Money: Gen Z Kehilangan Harapan Punya Rumah (Jun 2026)'
+  - type: link
+    url: >-
+      https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q4/apac-and-gc/greater-jakarta-land-residential-2h2025.pdf
+    label: 'Cushman & Wakefield: Greater Jakarta Landed Residential 2H 2025'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

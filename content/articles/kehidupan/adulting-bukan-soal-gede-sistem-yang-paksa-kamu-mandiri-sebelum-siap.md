@@ -1,26 +1,37 @@
 ---
-title: "Adulting Bukan Soal Gede: Sistem yang Paksa Kamu Mandiri Sebelum Siap"
-slug: "adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap"
-excerpt: "64% Gen Z masih andalkan ortu. Gaji Rp4 juta, biaya hidup Jakarta Rp7 juta. Bukan telat dewasa, sistem tidak kasih ruang transisi untuk dewasa dengan layak."
-publishedAt: "2026-08-06T10:00:00.000Z"
+title: 'Adulting Bukan Soal Gede: Sistem Paksa Kamu Mandiri Sebelum Siap'
+slug: adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap
+excerpt: >-
+  64% Gen Z masih andalkan ortu. Gaji Rp4 juta, biaya hidup Jakarta Rp7 juta.
+  Bukan telat dewasa, sistem tidak kasih ruang transisi untuk dewasa dengan
+  layak.
+publishedAt: '2026-08-06T10:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "lifestyle"
-author: "yovie-setiawan"
+category: kehidupan
+subcategory: lifestyle
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
-tags: ["adulting", "gen-z", "kemandirian", "biaya-hidup", "ekonomi", "generasi"]
-ogHeadline: "64% Gen Z masih andalkan ortu, bukan manja"
-seoMetaTitle: "Adulting Bukan Soal Gede: Sistem yang Paksa Mandiri Sebelum Siap"
-seoMetaDescription: "64% Gen Z masih andalkan ortu. Gaji Rp4 juta, biaya hidup Jakarta Rp7 juta. Bukan telat dewasa, sistem yang tidak kasih ruang transisi."
+povTag: data
+tags:
+  - adulting
+  - gen-z
+  - kemandirian
+  - biaya-hidup
+  - ekonomi
+  - generasi
+ogHeadline: '64% Gen Z masih andalkan ortu, bukan manja'
+seoMetaTitle: 'Adulting Bukan Soal Gede: Sistem yang Paksa Mandiri Sebelum Siap'
+seoMetaDescription: >-
+  64% Gen Z masih andalkan ortu. Gaji Rp4 juta, biaya hidup Jakarta Rp7 juta.
+  Bukan telat dewasa, sistem yang tidak kasih ruang transisi.
 seoKeywords:
-  - "gen z adulting indonesia"
-  - "masih tinggal dengan ortu"
-  - "gen z belum mandiri finansial"
-  - "kapan mandiri gen z"
-  - "biaya hidup jakarta 2026"
-  - "gen z manja atau ekonomi"
+  - gen z adulting indonesia
+  - masih tinggal dengan ortu
+  - gen z belum mandiri finansial
+  - kapan mandiri gen z
+  - biaya hidup jakarta 2026
+  - gen z manja atau ekonomi
 readingTime: 9
 featured: false
 humanSignature: true
@@ -35,14 +46,44 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://goodstats.id/article/42-gen-z-masih-andalkan-orang-tua-sebagai-sumber-penghasilan-c7RnO","label":"GoodStats: 42% Gen Z Masih Andalkan Orang Tua (Jakpat Nov 2025)"}
-  - {"type":"link","url":"https://www.ibenews.id/lifestyle/2057373949/riset-mayoritas-gen-z-indonesia-belum-mandiri-secara-finansial","label":"Ibenews: Riset Mayoritas Gen Z Indonesia Belum Mandiri Secara Finansial (Lalana.corp 2026)"}
-  - {"type":"link","url":"https://bincangperempuan.com/gen-z-masih-bergantung-secara-ekonomi-kepada-orangtua-kondisi-ekonomi-atau-gen-z-yang-manja/","label":"Bincang Perempuan: Gen Z Masih Bergantung Secara Ekonomi kepada Orangtua (Wells Fargo 2026)"}
-  - {"type":"link","url":"https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran","label":"Kompas Money: Gen Z dalam Persimpangan Tekanan Ekonomi (Mei 2026)"}
-  - {"type":"link","url":"https://databoks.katadata.co.id/properti/statistik/67b6c2c64dce7/survei-kic-mayoritas-kelas-menengah-tinggal-di-rumah-orang-tua","label":"Databoks: Survei KIC, Mayoritas Kelas Menengah Tinggal di Rumah Orang Tua"}
-  - {"type":"link","url":"https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html","label":"Deloitte Gen Z and Millennial Survey: Country Report Indonesia (2025)"}
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20250827/215/1900045/lembaga-riset-19-3-juta-pekerja-ri-punya-pekerjaan-tambahan-ump-di-bawah-khl","label":"Bisnis.com: LPEM FEB UI, 19,3 Juta Pekerja RI Punya Pekeran Tambahan (Agu 2024)"}
-  - {"type":"link","url":"https://goodstats.id/article/60-gen-z-masih-bergantung-pada-orang-tua-apakah-gen-z-bisa-mandiri-secara-finansial","label":"GoodStats: 60% Gen Z Masih Bergantung pada Orang Tua (2024)"}
+  - type: link
+    url: >-
+      https://goodstats.id/article/42-gen-z-masih-andalkan-orang-tua-sebagai-sumber-penghasilan-c7RnO
+    label: 'GoodStats: 42% Gen Z Masih Andalkan Orang Tua (Jakpat Nov 2025)'
+  - type: link
+    url: >-
+      https://www.ibenews.id/lifestyle/2057373949/riset-mayoritas-gen-z-indonesia-belum-mandiri-secara-finansial
+    label: >-
+      Ibenews: Riset Mayoritas Gen Z Indonesia Belum Mandiri Secara Finansial
+      (Lalana.corp 2026)
+  - type: link
+    url: >-
+      https://bincangperempuan.com/gen-z-masih-bergantung-secara-ekonomi-kepada-orangtua-kondisi-ekonomi-atau-gen-z-yang-manja/
+    label: >-
+      Bincang Perempuan: Gen Z Masih Bergantung Secara Ekonomi kepada Orangtua
+      (Wells Fargo 2026)
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran
+    label: 'Kompas Money: Gen Z dalam Persimpangan Tekanan Ekonomi (Mei 2026)'
+  - type: link
+    url: >-
+      https://databoks.katadata.co.id/properti/statistik/67b6c2c64dce7/survei-kic-mayoritas-kelas-menengah-tinggal-di-rumah-orang-tua
+    label: 'Databoks: Survei KIC, Mayoritas Kelas Menengah Tinggal di Rumah Orang Tua'
+  - type: link
+    url: >-
+      https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html
+    label: 'Deloitte Gen Z and Millennial Survey: Country Report Indonesia (2025)'
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20250827/215/1900045/lembaga-riset-19-3-juta-pekerja-ri-punya-pekerjaan-tambahan-ump-di-bawah-khl
+    label: >-
+      Bisnis.com: LPEM FEB UI, 19,3 Juta Pekerja RI Punya Pekeran Tambahan (Agu
+      2024)
+  - type: link
+    url: >-
+      https://goodstats.id/article/60-gen-z-masih-bergantung-pada-orang-tua-apakah-gen-z-bisa-mandiri-secara-finansial
+    label: 'GoodStats: 60% Gen Z Masih Bergantung pada Orang Tua (2024)'
 ---
 
 ## Hook

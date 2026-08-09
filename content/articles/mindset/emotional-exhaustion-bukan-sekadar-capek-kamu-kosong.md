@@ -1,35 +1,35 @@
 ---
-title: "Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong"
-slug: "emotional-exhaustion-bukan-sekadar-capek-kamu-kosong"
-excerpt: "Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional exhaustion. Gen Z paling rentan mengalaminya."
-publishedAt: "2026-07-22 05:00:00+00"
+title: 'Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong'
+slug: emotional-exhaustion-bukan-sekadar-capek-kamu-kosong
+excerpt: >-
+  Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional
+  exhaustion. Gen Z paling rentan mengalaminya.
+publishedAt: '2026-07-22 05:00:00+00'
 status: published
-category: "mindset"
-subcategory: "mindset-realita"
-author: "yovie-setiawan"
+category: mindset
+subcategory: mindset-realita
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Bangun pagi tapi tetap kosong? Bukan sekadar capek"
-seoMetaTitle: "Emotional Exhaustion: Bukan Sekadar Capek, Kamu Kosong"
-seoMetaDescription: "Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional exhaustion. Gen Z paling rentan mengalaminya."
+ogHeadline: Bangun pagi tapi tetap kosong? Bukan sekadar capek
+seoMetaTitle: 'Emotional Exhaustion: Kamu Capek dan Kosong'
+seoMetaDescription: >-
+  Bangun pagi, tidur cukup, tapi tetap kosong. Bukan lelah biasa, ini emotional
+  exhaustion. Gen Z paling rentan mengalaminya.
 seoKeywords:
-  - "emotional exhaustion gen z"
-  - "kelelahan emosional"
-  - "burnout gen z"
-  - "kesehatan mental gen z"
-  - "capek tanpa alasan"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - emotional exhaustion gen z
+  - kelelahan emosional
+  - burnout gen z
+  - kesehatan mental gen z
+  - capek tanpa alasan
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +37,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Ilustrasi emotional exhaustion: kelelahan emosional yang membuat Gen Z merasa kosong meski sudah istirahat"
+coverImageAlt: >-
+  Ilustrasi emotional exhaustion: kelelahan emosional yang membuat Gen Z merasa
+  kosong meski sudah istirahat
 ---
 
 ## Bukan Sekadar Capek

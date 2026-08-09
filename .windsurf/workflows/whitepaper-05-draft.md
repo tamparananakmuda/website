@@ -546,6 +546,39 @@ Whitepaper TAM mendukung comparison table yang di-render dari `comparison` code 
 - Contoh: `["riset", "gen-z", "karier", "freelance", "bpjs"]`
 - Tidak pakai brand tag, otomatis ditambahkan oleh sistem
 
+## Hook & Foreshadow Implementation Requirements
+
+### Section Hook Implementation (per section)
+
+- Section Hook formula yang dipilih di step 03-strategy WAJIB diimplementasi di paragraf pembuka setiap section
+- Setiap section (Executive Summary, Background, Analysis, Recommendation, Conclusion) punya 1 Section Hook
+- Hook harus sesuai template formula, diisi dengan konten spesifik section tersebut
+- Hook progression: Executive Summary broad, Analysis deep, Conclusion provokatif
+- Jangan repetisi formula di section berurutan
+- Hook max 2 paragraf per section
+
+### Section Foreshadow Implementation (per section)
+
+- Section Foreshadow formula WAJIB diimplementasi di akhir setiap section untuk tease section berikutnya
+- Foreshadow tidak boleh spoiler penuh, harus tease (buat penasaran, tidak reveal)
+- Foreshadow di transition: 1 kalimat di akhir section, bukan paragraf tersendiri
+- Foreshadow di conclusion: tease whitepaper terkait atau artikel turunan (content atomization)
+- Foreshadow harus connect ke Hook section berikutnya (payoff)
+
+### Bridge Implementation (antar section)
+
+- Bridge formula yang dipilih di step 03-strategy WAJIB diimplementasi sebagai transition antar section
+- Bridge = kalimat penghubung yang maintain reading momentum
+- Bridge berbeda dari Foreshadow: Bridge connect argument, Foreshadow tease content
+- Bridge ditempatkan di akhir section A / awal section B (pilih salah satu, konsisten)
+- Setiap transition antar section WAJIB punya Bridge
+
+### Thumbnail Text & Caption Implementation
+
+- **Thumbnail text (og_headline):** Implementasi dari Thumbnail Text Formula di step 03-strategy. Max 50 karakter, HARUS berbeda dari title. Function sebagai visual hook di OG image card (800x450).
+- **Thumbnail caption (summary):** Implementasi dari Thumbnail Caption Formula di step 03-strategy. Max 180 karakter. Function sebagai visual foreshadow di OG image feature (1600x900).
+- **Meta description:** Implementasi dari Meta Description Formula di step 03-strategy (Hook + Value + Foreshadow). Max 160 karakter.
+
 ## Draft Quality Gates (per section sebelum lanjut)
 
 Setiap section harus pass 3 gates sebelum dianggap selesai:
@@ -755,6 +788,12 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 - [ ] Internal linking: min 3 link ke konten TAM
 - [ ] JSON disimpan ke `$ARTICLE_JSON`
 - [ ] Draft Quality Gates: G1 Structure, G2 Evidence, G3 Tone passed per section
+- [ ] Section Hook formula diimplementasi per section (nomor + nama dari 30 Hook system)
+- [ ] Section Foreshadow formula diimplementasi per section (nomor + nama dari 20 Foreshadow system)
+- [ ] Bridge formula diimplementasi untuk transition antar section (dari 5 Bridge formula)
+- [ ] Thumbnail text direncanakan (max 50 chars, berbeda dari title, visual hook)
+- [ ] Thumbnail caption direncanakan (max 180 chars, visual foreshadow)
+- [ ] Meta description mengandung Hook + Foreshadow element (max 160 chars)
 - [ ] Section-by-Section Writing Protocol: Analysis first, Exec Summary setelah body
 - [ ] Evidence-Claim Mapping Table: setiap claim ada di table
 - [ ] Paragraph Construction: 1 idea, topic sentence first, max 150 words, data per paragraph

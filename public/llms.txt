@@ -75,8 +75,31 @@ TAM gratis untuk semua. Donasi membantu kami tetap independen dan terus menulis 
 Riset mendalam dan analisis data tentang generasi muda Indonesia. Whitepaper TAM ditulis berbasis data dan riset, dengan sumber yang bisa diverifikasi. Bukan opini, bukan clickbait.
 
 - [Skill Gap & Pendidikan: Pendidikan Tinggi Jadi Trap, Bukan Tangga](https://tamparananakmuda.com/whitepaper/skill-gap-indonesia-pendidikan-tinggi-jadi-trap-bukan-tangga): Analisis struktur insentif pendidikan tinggi Indonesia. 91.7% PT swasta model SPP, TPT S1 5.25%, ROI PTS 5.9%. Sistem perlu dirombak, bukan lulusan.
+- [Kelas Menengah Indonesia: Tangga yang Dicabut](https://tamparananakmuda.com/whitepaper/kelas-menengah-indonesia-tangga-yang-dicabut): Analisis struktural penyusutan kelas menengah Indonesia. 9.48 juta orang turun kasta dalam 5 tahun. Upah riil stagnan 0.6%, PIR Jakarta 19.76x, PPN regresif 40.8% beban ke 18.8% populasi.
+- [Krisis Demografis Indonesia: Sistem yang Tidak Memberi Alasan Punya Anak](https://tamparananakmuda.com/whitepaper/krisis-demografis-indonesia-sistem-yang-tidak-memberi-alasan-punya-anak): Total Fertility Rate turun ke 1.8, di bawah replacement level. Gen Z tidak mau punya anak bukan egois, tapi rasional.
+- [Krisis Kesehatan Mental Indonesia: Sistem yang Tidak Ada](https://tamparananakmuda.com/whitepaper/krisis-kesehatan-mental-indonesia-sistem-yang-tidak-ada): 1 psikiater per 300 ribu penduduk. 90% orang dengan gangguan mental tidak dapat treatment. Sistem kesehatan mental Indonesia tidak ada.
+- [Krisis Lapangan Kerja: Lulusan yang Dibuat tapi Tidak Dibutuhkan](https://tamparananakmuda.com/whitepaper/krisis-lapangan-kerja-lulusan-yang-dibuat-tapi-tidak-dibutuhkan): TPT S1 5.25%, 9.5 juta pengangguran terbuka. Sistem pendidikan memproduksi lulusan yang pasar tidak butuhkan.
+- [Krisis Pangan Indonesia: Sistem yang Membuat yang Makan Susah](https://tamparananakmuda.com/whitepaper/krisis-pangan-indonesia-sistem-yang-membuat-yang-makan-susah): 47% yang dimakan bukan makanan. 65% bahan pangan diimpor. Industri $101 miliar untung dari kamu sakit.
+- [Krisis Pendidikan Mahal: Sistem yang Bikin Belajar Jadi Privilege](https://tamparananakmuda.com/whitepaper/krisis-pendidikan-mahal-indonesia-sistem-yang-bikin-belajar-jadi-privilege): Pendidikan tinggi Indonesia bukan tangga mobilitas, tapi trap utang. Biaya kuliah 87% dari upah median.
+- [Krisis Pensiun Generasi Muda: Sistem yang Tidak Akan Ada](https://tamparananakmuda.com/whitepaper/krisis-pensiun-generasi-muda-sistem-yang-tidak-akan-ada): Rasio ketergantungan 67% di 2050. Dana JHT hanya cukup 5 tahun. Gen Z akan pensiun tanpa jaring pengaman.
+- [Krisis Perumahan Gen Z: Sistem yang Didesain Agar Tidak Bisa Beli](https://tamparananakmuda.com/whitepaper/krisis-perumahan-gen-z-sistem-yang-didesain-agar-tidak-bisa-beli): Harga rumah 20x gaji tahunan. 85% Gen Z tidak akan mampu beli rumah. Sistem properti didesain untuk investor, bukan penghuni.
+- [Menabung Irasional: Sistem Keuangan yang Didesain Agar Kamu Rugi](https://tamparananakmuda.com/whitepaper/menabung-irasional-sistem-keuangan-yang-didesain-agar-kamu-rugi): Inflasi 3.5%, bunga tabungan 0.5%. Menabung di bank = kehilangan uang perlahan. Sistem keuangan didesain agar kamu rugi.
+- [Pajak Kelas Menengah: Sistem yang Menarik dari yang Lemah](https://tamparananakmuda.com/whitepaper/pajak-kelas-menengah-sistem-yang-menarik-dari-yang-lemah): PPN regresif 40.8% beban ke 18.8% populasi. Kelas menengah bayar pajak proporsional lebih besar daripada kelas atas.
+- [Penipuan Online Indonesia: Rp9.5 Triliun, Sistem yang Didesain Menangkap](https://tamparananakmuda.com/whitepaper/penipuan-online-indonesia-rp9-5-triliun-sistem-yang-didesain-menangkap): Rp9.5 triliun hilang ke penipuan online. 71% korban usia 18-35. Sistem hukum tidak mengejar penipu kecil.
+- [Quiet Quitting: Sistem Kerja yang Tidak Mau Bayar Hati](https://tamparananakmuda.com/whitepaper/quiet-quitting-sistem-kerja-yang-tidak-mau-bayar-hati): Quiet quitting bukan malas, tapi respons rasional ke sistem yang minta lebih tapi bayar kurang. 59% Gen Z quiet quitting.
 
-- [Kelas Menengah Indonesia: Tangga yang Dicabut](https://tamparananakmuda.com/whitepaper/kelas-menengah-indonesia-tangga-yang-dicabut): Analisis struktural penyusutan kelas menengah Indonesia. 9.48 juta orang turun kasta dalam 5 tahun. Upah riil stagnan 0.6%, PIR Jakarta 19.76x, PPN regresif 40.8% beban ke 18.8% populasi. 70% punya perencanaan keuangan sehat tapi tetap gagal.
+## Seri Konten
+
+Seri multi-part TAM membongkar satu sistem secara mendalam dari berbagai sudut. Setiap seri 4-12 part, dirilis harian.
+
+- [Mental Health di Era Digital: Sistem yang Menjual Luka, Bukan Obat](https://tamparananakmuda.com/seri/kesehatan-mental-era-digital): 12 part. Setiap kali kamu mencari bantuan untuk mental health, kamu masuk lebih dalam ke sistem yang membuatmu sakit.
+- [Generasi Sewa: Memiliki Jadi Mewah](https://tamparananakmuda.com/seri/generasi-sewa): Generasi pertama yang menyewa hampir semua hal: rumah, hiburan, uang, bahkan pekerjaan.
+- [Hubungan Era Tidak Pasti: Cinta yang Tidak Bisa Dijanjikan](https://tamparananakmuda.com/seri/hubungan-era-tidak-pasti): Ekonomi tidak pasti adalah arsitek tak terlihat di balik krisis hubungan Gen Z.
+- [Industri Penderitaan Gen Z: Bisnis yang Untung dari Kesengsaraanmu](https://tamparananakmuda.com/seri/industri-penderitaan-gen-z): 7 part. EdTech, guru finansial, dating app, gig platform, beauty industry, creator economy. Mereka tidak ingin kamu sembuh, mereka ingin kamu kembali.
+- [Infrastruktur Kesepian: Sistem yang Membuat Gen Z Sendiri](https://tamparananakmuda.com/seri/infrastruktur-kesepian): 4 part. Kesepian Gen Z bukan masalah personal, tapi hasil sistem yang menghapus ruang ketiga dan mengganti hubungan manusia dengan algoritma.
+- [Makanan Murah, Tubuh Mahal](https://tamparananakmuda.com/seri/sistem-pangan-indonesia): 7 part. 47% yang kamu makan bukan makanan. 65% bahan pangan diimpor. Industri $101 miliar untung dari kamu sakit.
+- [Sistem Finansial Indonesia: Didesain Menang dari Kamu](https://tamparananakmuda.com/seri/sistem-finansial-indonesia): 6 part. Setiap produk finansial yang dijual ke Gen Z didesain agar sistem selalu menang.
+- [Sistem Hukum Indonesia: Keadilan yang Didesain untuk yang Punya](https://tamparananakmuda.com/seri/sistem-hukum-indonesia): 8 part. Miskin di penjara, kaya di rumah. Koruptor 2 tahun, pencuri 5 tahun. Keadilan untuk siapa?
 
 ## Kontak
 

@@ -465,6 +465,17 @@ if (issues.length) {
 "
 ```
 
+## Hook & Foreshadow Formula Preservation Rules
+
+Saat humanizing, WAJIB jaga integritas formula yang sudah diimplementasi:
+
+- **Jangan break Hook formula:** Hook structure boleh di-humanize (ganti kata, perbaiki flow), tapi formula pattern harus tetap utuh. Contoh: jika Hook formula #3 (Data Counter-Intuitive), jangan ganti jadi generic hook.
+- **Jangan break Foreshadow formula:** Foreshadow tease boleh di-natural-kan bahasanya, tapi tease element harus tetap ada. Jangan hapus foreshadow karena "terlalu dramatis" jika itu bagian dari formula.
+- **Jangan ubah thumbnail text (og_headline):** og_headline sudah dirancang sebagai visual hook. Boleh perbaiki bahasa jika terdeteksi AI pattern, tapi harus tetap berbeda dari title dan max 50 char.
+- **Jangan ubah thumbnail caption (excerpt):** Excerpt sudah dirancang sebagai visual foreshadow. Boleh perbaiki flow, tapi tetap max 160 char dan function sebagai tease.
+- **Jangan ubah meta description:** Meta description sudah dirancang dengan Hook + Foreshadow element. Boleh perbaiki bahasa, tapi struktur Hook + Value + Foreshadow harus tetap.
+- **Hook & Foreshadow formula audit setelah humanize:** Setelah humanizer selesai, re-check bahwa formula masih utuh. Jika formula rusak karena humanizing, fix formula terlebih dahulu sebelum re-run QC.
+
 ## Setelah humanizer
 
 1. Set `human_signature: true` di article JSON
@@ -609,6 +620,11 @@ Jika score < 9: revisi sebelum re-run QC.
 - [ ] Closing Line Quality: semua section pass, min 3 punch/bridge
 - [ ] TAM Voice Calibration: 0-1 element match AI voice
 - [ ] `human_signature: true` di JSON
+- [ ] Hook & Foreshadow formula masih utuh setelah humanizing (re-check formula pattern)
+- [ ] Title tidak mengandung AI tells: no formal words ("Tidak" -> "Nggak"), no positive superlatives ("terbaik", "hebat"), no "kita/kami", no fear words, ada active verb, max 10 kata, still punchy berdasar 20 prinsip riset
+- [ ] Thumbnail text (og_headline) tetap berbeda dari title, max 50 char
+- [ ] Thumbnail caption (excerpt) tetap max 160 char, function sebagai tease
+- [ ] Meta description tetap mengandung Hook + Foreshadow element, max 160 char
 - [ ] Humanizer Quality Score: min 9 (dari 12)
 - [ ] Re-run `/artikel-07-qc` dan hasil CLEAN
 

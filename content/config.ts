@@ -20,10 +20,12 @@ export interface AuthorConfig {
   name: string;
   slug: string;
   bio: string;
+  jobTitle: string | null;
   avatarUrl: string | null;
   socialInstagram: string | null;
   socialTwitter: string | null;
   socialLinkedin: string | null;
+  socialWebsite: string | null;
 }
 
 export interface SeriesConfig {
@@ -67,7 +69,7 @@ export const subcategories: SubcategoryConfig[] = [
 ];
 
 export const authors: AuthorConfig[] = [
-  { id: '30268f32-de51-4080-ba1b-20c20fff3c6b', name: 'Yovie Setiawan', slug: 'yovie-setiawan', bio: 'Founder TAMPARAN ANAK MUDA.', avatarUrl: null, socialInstagram: null, socialTwitter: null, socialLinkedin: null },
+  { id: '30268f32-de51-4080-ba1b-20c20fff3c6b', name: 'Yovie Setiawan', slug: 'yovie-setiawan', bio: 'Founder TAMPARAN ANAK MUDA.', jobTitle: 'Founder & Editor', avatarUrl: null, socialInstagram: 'https://instagram.com/yoviesetiawann', socialTwitter: 'https://x.com/yoviesetiawann', socialLinkedin: null, socialWebsite: 'https://yoviesetiawan.com' },
 ];
 
 export const series: SeriesConfig[] = [
@@ -81,6 +83,9 @@ export const series: SeriesConfig[] = [
   { id: 'f6a7b8c9-d0e1-2345-fabc-678901234567', title: 'Sistem Hukum Indonesia: Keadilan yang Didesain untuk yang Punya', slug: 'sistem-hukum-indonesia', description: 'Setiap kali Gen Z berhadapan dengan sistem hukum Indonesia, dari UU ITE sampai kasus korupsi, sistem dirancang agar yang punya sumber daya selalu menang. Bukan teori konspirasi, tapi mekanisme yang bisa dibuktikan dengan data MA, KPK, dan LBH.', status: 'scheduled', expectedDate: '2026-09-15', expectedParts: 8, teaser: 'Miskin di penjara, kaya di rumah. Koruptor 2 tahun, pencuri 5 tahun. Keadilan untuk siapa?' },
   { id: 'a7b8c9d0-e1f2-3456-abcd-789012345678', title: 'Sistem Birokrasi Indonesia: Pelayanan yang Didesain untuk Membuatmu Menyerah', slug: 'sistem-birokrasi-indonesia', description: 'Setiap urusan dengan negara di Indonesia adalah test kesabaran yang dirancang untuk membuatmu menyerah. Bukan sistem yang melayani, tapi sistem yang memperlambat. Seri ini membongkar kenapa birokrasi Indonesia tidak gagal, tapi berfungsi seperti yang dirancang.', status: 'coming-soon', expectedDate: '2026-10-01', expectedParts: 7, teaser: 'Urus KTP butuh hari libur. Paspor antri 6 jam. Izin usaha butuh 20 dokumen. Kenapa sistem dirancang untuk membuatmu menyerah?' },
   { id: 'b8c9d0e1-f2a3-4567-bcde-890123456789', title: 'Industri Penderitaan Gen Z: Bisnis yang Untung dari Kesengsaraanmu', slug: 'industri-penderitaan-gen-z', description: 'Setiap masalah Gen Z sudah dikomersialisasi. EdTech, guru finansial, dating app, gig platform, beauty industry, creator economy. Mereka jual solusi untuk masalah yang sebagian diciptakan oleh sistem yang sama. Mereka tidak ingin kamu sembuh. Mereka ingin kamu kembali.', status: 'coming-soon', expectedDate: '2026-11-01', expectedParts: 7, teaser: 'Kursus Rp5 juta, therapy app Rp50 ribu/bulan, dating app yang tidak ingin kamu ketemu pasangan. Siapa yang sebenarnya untung dari penderitaanmu?' },
+  { id: 'af9227d5-4442-4a8c-bfa5-faad0da9f00a', title: 'Infrastruktur Kesepian: Sistem yang Membuat Gen Z Sendiri', slug: 'infrastruktur-kesepian', description: 'Kesepian Gen Z bukan masalah personal. Ini hasil dari sistem yang menghapus ruang ketiga, mengkomersialisasi setiap ruang sosial, dan mengganti hubungan manusia dengan algoritma. Dari taman yang ditutup sampai kopi Rp40 ribu untuk duduk, dari gotong royong yang hilang sampai AI companion yang mengganti teman.', status: 'coming-soon', expectedParts: 4, teaser: 'Kenapa kamu lebih enak sendiri di kafe Rp40 ribu daripada di taman gratis yang ditutup?' },
+  { id: 'c9d0e1f2-a3b4-5678-cdef-901234567890', title: 'Makanan Murah, Tubuh Mahal', slug: 'sistem-pangan-indonesia', description: 'Makanan sehat itu mewah bukan karena alam, tapi karena sistem yang membuat junk food murah, mudah didapat, dan adiktif. 7 part membongkar kenapa 47% yang kamu makan bukan makanan, kenapa 65% bahan pangan diimpor, dan kenapa industri $101 miliar untung dari kamu sakit.', status: 'scheduled', expectedDate: '2027-01-05', expectedParts: 7, teaser: 'Kenapa makan yang bikin kamu sakit justru yang paling murah dan gampang didapat?' },
+  { id: 'd0e1f2a3-b4c5-6789-0abc-123456789abc', title: 'Sakit Itu Mahal: Tubuh yang Dijadikan Bisnis', slug: 'sistem-kesehatan-indonesia', description: 'Sistem kesehatan Indonesia tidak dirancang untuk membuatmu sehat, tapi untuk mengubah tubuhmu menjadi bisnis. 8 part membongkar kenapa BPJS defisit, kenapa dokter keluar negeri, kenapa obat mahal, dan kenapa sakit itu mahal bukan karena alam tapi karena desain.', status: 'coming-soon', expectedParts: 8, teaser: 'BPJS defisit tiap tahun, dokter keluar negeri, obat mahal. Sistem kesehatan untuk siapa: yang sakit atau yang untung?' },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryConfig | undefined {

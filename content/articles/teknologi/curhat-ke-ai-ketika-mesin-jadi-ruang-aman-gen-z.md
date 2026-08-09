@@ -1,35 +1,35 @@
 ---
-title: "Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z"
-slug: "curhat-ke-ai-ketika-mesin-jadi-ruang-aman-gen-z"
-excerpt: "81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara."
-publishedAt: "2026-07-23 05:00:00+00"
+title: 'Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z'
+slug: curhat-ke-ai-ketika-mesin-jadi-ruang-aman-gen-z
+excerpt: >-
+  81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak
+  butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara.
+publishedAt: '2026-07-23 05:00:00+00'
 status: published
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "81% Gen Z curhat ke AI, bukan ke teman"
-seoMetaTitle: "Curhat ke AI: Ketika Mesin Jadi Ruang Aman Gen Z"
-seoMetaDescription: "81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara."
+ogHeadline: '81% Gen Z curhat ke AI, bukan ke teman'
+seoMetaTitle: 'Curhat ke AI: Mesin Jadi Ruang Aman Gen Z'
+seoMetaDescription: >-
+  81 persen Gen Z Indonesia pernah curhat ke AI chatbot. Bukan karena tidak
+  butuh manusia, tapi karena manusia terlalu tidak aman untuk diajak bicara.
 seoKeywords:
-  - "gen z curhat ke ai"
-  - "ai chatbot curhat"
-  - "character ai indonesia"
-  - "kesehatan mental gen z"
-  - "ruang aman gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - gen z curhat ke ai
+  - ai chatbot curhat
+  - character ai indonesia
+  - kesehatan mental gen z
+  - ruang aman gen z
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +37,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Gen Z Indonesia memilih curhat ke AI chatbot daripada ke teman atau keluarga karena merasa lebih aman"
+coverImageAlt: >-
+  Gen Z Indonesia memilih curhat ke AI chatbot daripada ke teman atau keluarga
+  karena merasa lebih aman
 ---
 
 ## Mengapa Gen Z Bercerita ke Mesin

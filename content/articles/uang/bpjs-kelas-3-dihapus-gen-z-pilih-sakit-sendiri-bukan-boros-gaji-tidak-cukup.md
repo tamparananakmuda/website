@@ -1,26 +1,37 @@
 ---
-title: "BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri, Bukan Boros, Gaji Tidak Cukup"
-slug: "bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup"
-excerpt: "54% Gen Z belum punya asuransi. BPJS Kelas 3 cuma Rp35.000 tapi tetap tidak dibayar. Bukan tidak peduli kesehatan, matematika gaji vs premi yang tidak masuk."
-publishedAt: "2026-08-06T01:00:00.000Z"
+title: 'BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri'
+slug: bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri-bukan-boros-gaji-tidak-cukup
+excerpt: >-
+  54% Gen Z belum punya asuransi. BPJS Kelas 3 cuma Rp35.000 tapi tetap tidak
+  dibayar. Bukan tidak peduli kesehatan, matematika gaji vs premi yang tidak
+  masuk.
+publishedAt: '2026-08-06T01:00:00.000Z'
 status: published
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["bpjs", "gen-z", "asuransi", "kris", "kesehatan", "literasi-finansial"]
-ogHeadline: "BPJS hapus kelas 3, Gen Z pilih keluar"
-seoMetaTitle: "BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit, Bukan Boros"
-seoMetaDescription: "KRIS ganti kelas 1,2,3 BPJS. 54% Gen Z belum punya asuransi. Bukan tidak peduli kesehatan, matematika gaji vs premi yang tidak masuk."
+povTag: kontra-narasi
+tags:
+  - bpjs
+  - gen-z
+  - asuransi
+  - kris
+  - kesehatan
+  - literasi-finansial
+ogHeadline: 'BPJS hapus kelas 3, Gen Z pilih keluar'
+seoMetaTitle: 'BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit, Bukan Boros'
+seoMetaDescription: >-
+  KRIS ganti kelas 1,2,3 BPJS. 54% Gen Z belum punya asuransi. Bukan tidak
+  peduli kesehatan, matematika gaji vs premi yang tidak masuk.
 seoKeywords:
-  - "bpjs kelas 3 dihapus"
-  - "iuran bpjs kesehatan 2026"
-  - "kris bpjs kesehatan"
-  - "biaya bpjs kesehatan per bulan"
-  - "gen z tidak punya asuransi"
-  - "bpjs kesehatan naik 2026"
+  - bpjs kelas 3 dihapus
+  - iuran bpjs kesehatan 2026
+  - kris bpjs kesehatan
+  - biaya bpjs kesehatan per bulan
+  - gen z tidak punya asuransi
+  - bpjs kesehatan naik 2026
 readingTime: 8
 featured: false
 humanSignature: true
@@ -35,16 +46,48 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 sourceReferences:
-  - {"type":"link","url":"https://www.fortuneidn.com/news/54-gen-z-tak-punya-asuransi-industri-terhalang-krisis-kepercayaan-00-4vfn9-v8nsky","label":"Fortune Indonesia: 54% Gen Z Tak Punya Asuransi (IMGR 2027)"}
-  - {"type":"link","url":"https://goodstats.id/article/bpjs-jadi-andalan-mengapa-asuransi-swasta-dianggap-kurang-meyakinkan-YWoMA","label":"GoodStats: BPJS Jadi Andalan, Asuransi Swasta Kurang Meyakinkan (2027)"}
-  - {"type":"link","url":"https://data.goodstats.id/statistic/81-pemuda-ri-punya-jaminan-kesehatan-pada-2025-PD7cP","label":"GoodStats Data: 81% Pemuda RI Punya Jaminan Kesehatan (BPS Susenas 2025)"}
-  - {"type":"link","url":"https://www.cnbcindonesia.com/news/20260330060230-4-722298/sistem-kelas-123-bpjs-kesehatan-dihapus-dan-diganti-kris-kapan","label":"CNBC Indonesia: Sistem Kelas 1,2,3 BPJS Dihapus, Diganti KRIS (Mar 2026)"}
-  - {"type":"link","url":"https://www.idntimes.com/business/economy/iuran-bpjs-kesehatan-kelas-1-2-3-tahun-2026-1-01-tg1j7-l08bmf","label":"IDN Times: Iuran BPJS Kesehatan Kelas 1, 2, 3 Tahun 2026"}
-  - {"type":"link","url":"https://rri.co.id/indepth/10743/wacana-kenaikan-iuran-bpjs-kesehatan-untuk-peserta-mandiri","label":"RRI: Wacana Kenaikan Iuran BPJS Kesehatan untuk Peserta Mandiri (2026)"}
-  - {"type":"link","url":"https://www.kemkes.go.id/id/%20kelas-rawat-inap-standar-jamin-pelayanan-pasien-tak-dibeda-bedakan","label":"Kemenkes: Kelas Rawat Inap Standar (KRIS)"}
-  - {"type":"link","url":"https://finansial.bisnis.com/read/20250731/215/1897945/riset-ifg-progress-usia-di-bawah-30-tahun-paling-ngebet-jadi-peserta-asuransi","label":"Bisnis.com: Riset IFG Progress, Usia di Bawah 30 Tahun Paling Ingin Ikut Asuransi (Jul 2025)"}
-  - {"type":"link","url":"https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran","label":"Kompas Money: Gen Z dalam Persimpangan Tekanan Ekonomi (Mei 2026)"}
-  - {"type":"link","url":"https://goodstats.id/article/42-gen-z-masih-andalkan-orang-tua-sebagai-sumber-penghasilan-c7RnO","label":"GoodStats: 42% Gen Z Masih Andalkan Orang Tua (Jakpat Nov 2025)"}
+  - type: link
+    url: >-
+      https://www.fortuneidn.com/news/54-gen-z-tak-punya-asuransi-industri-terhalang-krisis-kepercayaan-00-4vfn9-v8nsky
+    label: 'Fortune Indonesia: 54% Gen Z Tak Punya Asuransi (IMGR 2027)'
+  - type: link
+    url: >-
+      https://goodstats.id/article/bpjs-jadi-andalan-mengapa-asuransi-swasta-dianggap-kurang-meyakinkan-YWoMA
+    label: 'GoodStats: BPJS Jadi Andalan, Asuransi Swasta Kurang Meyakinkan (2027)'
+  - type: link
+    url: >-
+      https://data.goodstats.id/statistic/81-pemuda-ri-punya-jaminan-kesehatan-pada-2025-PD7cP
+    label: 'GoodStats Data: 81% Pemuda RI Punya Jaminan Kesehatan (BPS Susenas 2025)'
+  - type: link
+    url: >-
+      https://www.cnbcindonesia.com/news/20260330060230-4-722298/sistem-kelas-123-bpjs-kesehatan-dihapus-dan-diganti-kris-kapan
+    label: 'CNBC Indonesia: Sistem Kelas 1,2,3 BPJS Dihapus, Diganti KRIS (Mar 2026)'
+  - type: link
+    url: >-
+      https://www.idntimes.com/business/economy/iuran-bpjs-kesehatan-kelas-1-2-3-tahun-2026-1-01-tg1j7-l08bmf
+    label: 'IDN Times: Iuran BPJS Kesehatan Kelas 1, 2, 3 Tahun 2026'
+  - type: link
+    url: >-
+      https://rri.co.id/indepth/10743/wacana-kenaikan-iuran-bpjs-kesehatan-untuk-peserta-mandiri
+    label: 'RRI: Wacana Kenaikan Iuran BPJS Kesehatan untuk Peserta Mandiri (2026)'
+  - type: link
+    url: >-
+      https://www.kemkes.go.id/id/%20kelas-rawat-inap-standar-jamin-pelayanan-pasien-tak-dibeda-bedakan
+    label: 'Kemenkes: Kelas Rawat Inap Standar (KRIS)'
+  - type: link
+    url: >-
+      https://finansial.bisnis.com/read/20250731/215/1897945/riset-ifg-progress-usia-di-bawah-30-tahun-paling-ngebet-jadi-peserta-asuransi
+    label: >-
+      Bisnis.com: Riset IFG Progress, Usia di Bawah 30 Tahun Paling Ingin Ikut
+      Asuransi (Jul 2025)
+  - type: link
+    url: >-
+      https://money.kompas.com/read/2026/05/03/130719626/gen-z-dalam-persimpangan-tekanan-ekonomi-kedewasaan-finansial-dan-kehadiran
+    label: 'Kompas Money: Gen Z dalam Persimpangan Tekanan Ekonomi (Mei 2026)'
+  - type: link
+    url: >-
+      https://goodstats.id/article/42-gen-z-masih-andalkan-orang-tua-sebagai-sumber-penghasilan-c7RnO
+    label: 'GoodStats: 42% Gen Z Masih Andalkan Orang Tua (Jakpat Nov 2025)'
 ---
 
 ## Hook

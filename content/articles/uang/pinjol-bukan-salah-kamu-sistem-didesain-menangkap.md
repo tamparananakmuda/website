@@ -1,36 +1,35 @@
 ---
-title: "Pinjol Bukan Salah Kamu, Itu Sistem yang Didesain untuk Menangkap"
-slug: "pinjol-bukan-salah-kamu-sistem-didesain-menangkap"
-excerpt: "60% korban pinjol ilegal adalah Gen Z. Media bilang kurang literasi. Tapi sistemnya yang didesain predator, bukan anak mudanya yang bodoh."
-publishedAt: "2026-07-16 00:30:00+00"
-status: "published"
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+title: 'Pinjol Bukan Salah Kamu, Itu Sistem yang Didesain untuk Menangkap'
+slug: pinjol-bukan-salah-kamu-sistem-didesain-menangkap
+excerpt: >-
+  60% korban pinjol ilegal adalah Gen Z. Media bilang kurang literasi. Tapi
+  sistemnya yang didesain predator, bukan anak mudanya yang bodoh.
+publishedAt: '2026-07-16 00:30:00+00'
+status: published
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Pinjol didesain untuk menangkap kamu"
-seoMetaTitle: "Pinjol Bukan Salah Kamu, Sistemnya yang Didesain Predator"
-seoMetaDescription: "60% korban pinjol ilegal adalah Gen Z. Media bilang kurang literasi. Tapi sistemnya yang didesain predator, bukan anak mudanya."
+ogHeadline: Pinjol didesain untuk menangkap kamu
+seoMetaTitle: 'Pinjol Bukan Salah Kamu, Sistemnya yang Didesain Predator'
+seoMetaDescription: >-
+  60% korban pinjol ilegal adalah Gen Z. Media bilang kurang literasi. Tapi
+  sistemnya yang didesain predator, bukan anak mudanya.
 seoKeywords:
-  - "pinjol gen z"
-  - "korban pinjaman online"
-  - "paylater gen z indonesia"
-  - "utang gen z"
-  - "literasi keuangan gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - pinjol gen z
+  - korban pinjaman online
+  - paylater gen z indonesia
+  - utang gen z
+  - literasi keuangan gen z
+sourceReferences: []
 featured: true
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

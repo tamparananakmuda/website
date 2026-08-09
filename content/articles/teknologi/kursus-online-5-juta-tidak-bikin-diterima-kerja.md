@@ -1,18 +1,36 @@
 ---
-title: "Kursus Online Rp5 Juta Tidak Bikin Kamu Diterima Kerja"
-slug: "kursus-online-5-juta-tidak-bikin-diterima-kerja"
-excerpt: "1,1 juta sarjana menganggur. EdTech Indonesia tumbuh 20% per tahun. Kursus online tidak ciptakan lapangan kerja. Masalahnya job gap, bukan skill gap."
-publishedAt: "2026-07-31T05:00:00.000Z"
+title: Kursus Online Rp5 Juta Nggak Bikin Kamu Diterima Kerja
+slug: kursus-online-5-juta-tidak-bikin-diterima-kerja
+excerpt: >-
+  1,1 juta sarjana menganggur. EdTech Indonesia tumbuh 20% per tahun. Kursus
+  online tidak ciptakan lapangan kerja. Masalahnya job gap, bukan skill gap.
+publishedAt: '2026-07-31T05:00:00.000Z'
 status: published
-category: "teknologi"
-subcategory: "teknologi-ai"
-author: "yovie-setiawan"
-seoMetaTitle: "Kursus Online Rp5 Juta Tidak Bikin Diterima Kerja"
-seoMetaDescription: "1,1 juta sarjana menganggur. EdTech Indonesia tumbuh 20% per tahun. Kursus online tidak ciptakan lapangan kerja. Masalahnya job gap, bukan skill gap."
-seoKeywords: ["kursus online untuk kerja", "sertifikat online untuk CV", "pelatihan kerja 2026", "edtech Indonesia", "bootcamp coding Indonesia", "micro-credentials Indonesia", "skill gap vs job gap", "kursus online tidak garansi kerja"]
-ogHeadline: "Kursus online Rp5 juta, tapi tetap nganggur"
+category: teknologi
+subcategory: teknologi-ai
+author: yovie-setiawan
+seoMetaTitle: Kursus Online Rp5 Juta Tidak Bikin Diterima Kerja
+seoMetaDescription: >-
+  1,1 juta sarjana menganggur. EdTech Indonesia tumbuh 20% per tahun. Kursus
+  online tidak ciptakan lapangan kerja. Masalahnya job gap, bukan skill gap.
+seoKeywords:
+  - kursus online untuk kerja
+  - sertifikat online untuk CV
+  - pelatihan kerja 2026
+  - edtech Indonesia
+  - bootcamp coding Indonesia
+  - micro-credentials Indonesia
+  - skill gap vs job gap
+  - kursus online tidak garansi kerja
+ogHeadline: 'Kursus online Rp5 juta, tapi tetap nganggur'
 ogHeadlineEn: null
-sourceReferences: ["BPS November 2025 via CNN Indonesia", "Kemdiktisaintek Employer Forum Jun 2026", "Coursera Micro-Credentials Report 2026 via Hybrid.co.id", "Grand View Research 2025 via Founder Plus", "Prolegal.id KBLI 2025", "New York Fed Liberty Street Economics Jun 2026 via CNBC Indonesia"]
+sourceReferences:
+  - BPS November 2025 via CNN Indonesia
+  - Kemdiktisaintek Employer Forum Jun 2026
+  - Coursera Micro-Credentials Report 2026 via Hybrid.co.id
+  - Grand View Research 2025 via Founder Plus
+  - Prolegal.id KBLI 2025
+  - New York Fed Liberty Street Economics Jun 2026 via CNBC Indonesia
 readingTime: 8
 featured: false
 isPremium: false
@@ -20,7 +38,14 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-tags: ["edtech", "kursus online", "pengangguran", "skill gap", "job gap", "gen z", "sertifikat"]
+tags:
+  - edtech
+  - kursus online
+  - pengangguran
+  - skill gap
+  - job gap
+  - gen z
+  - sertifikat
 ---
 
 ## EdTech Tumbuh 20% Per Tahun, Tapi Pengangguran Juga Tumbuh

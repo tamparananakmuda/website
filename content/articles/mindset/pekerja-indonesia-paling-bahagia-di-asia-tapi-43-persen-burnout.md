@@ -1,18 +1,32 @@
 ---
-title: "Pekerja Indonesia Paling Bahagia di Asia, Tapi 43% Burnout"
-slug: "pekerja-indonesia-bahagia-tapi-43-persen-burnout"
-excerpt: "Jobstreet: 82% pekerja Indonesia paling bahagia di Asia-Pasifik. Tapi 43% burnout dan wellbeing score cuma 50,98%. Bahagia dan kosong barengan."
-publishedAt: "2026-07-29T05:00:00.000Z"
+title: 'Pekerja Indonesia Paling Bahagia di Asia, Tapi 43% Burnout'
+slug: pekerja-indonesia-bahagia-tapi-43-persen-burnout
+excerpt: >-
+  Jobstreet: 82% pekerja Indonesia paling bahagia di Asia-Pasifik. Tapi 43%
+  burnout dan wellbeing score cuma 50,98%. Bahagia dan kosong barengan.
+publishedAt: '2026-07-29T05:00:00.000Z'
 status: published
-category: "mindset"
-subcategory: "mindset-psikologi"
-author: "yovie-setiawan"
-seoTitle: "Pekerja Indonesia Paling Bahagia di Asia, Tapi 43% Burnout"
-seoDescription: "Jobstreet: 82% pekerja Indonesia paling bahagia di Asia-Pasifik, tapi 43% burnout. Wellbeing score 50,98% vs global 58,62%. Paradoks kesehatan mental."
-seoKeywords: ["burnout pekerja Indonesia 2026", "kesehatan mental kerja", "workplace happiness index Indonesia", "pekerja bahagia tapi burnout", "wellbeing score Indonesia"]
-ogHeadline: "Paling bahagia di Asia, tapi 43% burnout"
+category: mindset
+subcategory: mindset-psikologi
+author: yovie-setiawan
+seoMetaTitle: 'Pekerja Indonesia Bahagia di Asia, Tapi 43% Burnout'
+seoMetaDescription: >-
+  Jobstreet: 82% pekerja Indonesia paling bahagia di Asia-Pasifik, tapi 43%
+  burnout. Wellbeing score 50,98% vs global 58,62%. Paradoks kesehatan mental.
+seoKeywords:
+  - burnout pekerja Indonesia 2026
+  - kesehatan mental kerja
+  - workplace happiness index Indonesia
+  - pekerja bahagia tapi burnout
+  - wellbeing score Indonesia
+ogHeadline: 'Paling bahagia di Asia, tapi 43% burnout'
 ogHeadlineEn: null
-sourceReferences: ["Jobstreet by SEEK Workplace Happiness Index 2025", "IMGR 2026 IDN Research Institute", "Gallup State of the Global Workplace 2026", "Korn Ferry 2026", "Halodoc data 2026"]
+sourceReferences:
+  - Jobstreet by SEEK Workplace Happiness Index 2025
+  - IMGR 2026 IDN Research Institute
+  - Gallup State of the Global Workplace 2026
+  - Korn Ferry 2026
+  - Halodoc data 2026
 readingTime: 6
 featured: false
 isPremium: false

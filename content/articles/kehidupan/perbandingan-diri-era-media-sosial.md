@@ -1,35 +1,59 @@
 ---
-title: "Perbandingan Diri di Era Media Sosial: Kenapa Kamu Merasa Tidak Cukup"
-slug: "perbandingan-diri-era-media-sosial"
-excerpt: "Pernah scroll media sosial lalu tiba-tiba merasa hidupmu tertinggal? Bukan kebetulan. Itu mekanisme yang dipelajari psikologi selama 70 tahun."
-publishedAt: "2026-07-14 12:00:00+00"
-status: "published"
-category: "kehidupan"
+title: 'Perbandingan Diri Era Media Sosial: Kenapa Kamu Merasa Nggak Cukup'
+slug: perbandingan-diri-era-media-sosial
+excerpt: >-
+  Pernah scroll media sosial lalu tiba-tiba merasa hidupmu tertinggal? Bukan
+  kebetulan. Itu mekanisme yang dipelajari psikologi selama 70 tahun.
+publishedAt: '2026-07-14 12:00:00+00'
+status: published
+category: kehidupan
 subcategory: null
-author: "yovie-setiawan"
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: "Scroll media sosial bikin kamu merasa gagal?"
-seoMetaTitle: "Perbandingan Diri di Media Sosial: Kenapa Kamu Merasa Tidak Cukup"
-seoMetaDescription: "Data menunjukkan 15,5 juta remaja Indonesia punya masalah mental. Media sosial memperparah dengan upward comparison. Ini penjelasannya."
-seoKeywords: []
+ogHeadline: Scroll media sosial bikin kamu merasa gagal?
+seoMetaTitle: 'Perbandingan Diri di Media Sosial: Kenapa Kamu Merasa Tidak Cukup'
+seoMetaDescription: >-
+  Data menunjukkan 15,5 juta remaja Indonesia punya masalah mental. Media sosial
+  memperparah dengan upward comparison. Ini penjelasannya.
+seoKeywords:
+  - perbandingan diri media sosial
+  - upward comparison gen z
+  - dampak media sosial mental
+  - body image media sosial
+  - self esteem gen z indonesia
 sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - >-
+    Festinger, L. (1954). *A Theory of Social Comparison Processes*. Human
+    Relations, 7, 117-140.
+  - >-
+    Gerber, J.P., Wheeler, L., & Suls, J. *A Meta-Analysis of 60 Years of Social
+    Comparison Research*.
+  - >-
+    I-NAMHS (2021). *Indonesia National Adolescent Mental Health Survey*.
+    Universitas Airlangga.
+  - APJII (2024). *Survei Penetrasi Internet Indonesia 2024*.
+  - 'We Are Social (2024). *Digital 2024: Global Overview Report*.'
+  - IDN Research Institute (2025). *Indonesia Millennial and Gen Z Report*.
+  - >-
+    HBSC Norway (2022). *Health Behaviour in School-Aged Children Study*. SSPH
+    Journal.
+  - >-
+    ABCD Study. *Adolescent Brain Cognitive Development Study*. Nature Digital
+    Medicine.
+  - >-
+    Frontiers in Psychology (2025). *Social Comparison on Social Media and Young
+    Adults Mental Health*.
+  - >-
+    Hartini, N. Universitas Airlangga. Pengaruh media sosial bagi kesehatan
+    mental gen Z.
 featured: true
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -123,6 +147,13 @@ Kalau jawabannya sulit ditemukan, mungkin bukan kamu yang bermasalah. Mungkin ce
 ---
 
 ### Referensi
+
+
+## Baca Juga
+
+- [60% Gen Z Cemas Masa Depan: Bukan Mental Lemah, Sistem yang Tidak Pasti](/artikel/60-persen-gen-z-cemas-bukan-mental-sistem-tidak-pasti)
+- [FOMO Bukan Kelemahanmu, Itu Desain Algoritma](/artikel/fomo-desain-algoritma)
+- [Detoks Dopamin: Bukan Soal Disiplin, Algoritma yang Membuatmu Kecanduan](/artikel/detoks-dopamin-bukan-soal-disiplin-algoritma-yang-membuatmu-kecanduan)
 
 1. Festinger, L. (1954). *A Theory of Social Comparison Processes*. Human Relations, 7, 117-140.
 2. Gerber, J.P., Wheeler, L., & Suls, J. *A Meta-Analysis of 60 Years of Social Comparison Research*.

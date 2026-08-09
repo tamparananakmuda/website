@@ -14,7 +14,8 @@ Dari `/artikel-03-outline`
 
 ```
 ## Hook (1-2 paragraf)
-[Hook formula dari outline]
+[Hook formula dari outline, pilih dari 30 Hook formula system]
+[Wajib: tulis nomor + nama formula di comment untuk tracking]
 
 ## Konteks (2-3 paragraf)
 [Background masalah, kenapa relevan sekarang]
@@ -29,6 +30,7 @@ Dari `/artikel-03-outline`
 
 ## Conclusion (1-2 paragraf)
 [Conclusion formula dari outline, tidak generic]
+[Foreshadow formula dari outline untuk tease artikel terkait/seri, pilih dari 20 Foreshadow formula system]
 ```
 
 ## Word Count (STANDAR TAM)
@@ -217,6 +219,44 @@ Detail teknis yang TIDAK esensial untuk argumen utama. Default collapsed. Max 1 
 - Artikel featured harus punya OG image yang menarik
 - Jika ragu, set `featured: false`. Bisa di-update nanti.
 
+## Hook & Foreshadow Implementation Requirements
+
+### Hook Implementation (di body artikel)
+
+- Hook formula yang dipilih di step 03-outline WAJIB diimplementasi di paragraf pembuka (section Hook)
+- Hook harus sesuai template formula yang dipilih, diisi dengan konten spesifik artikel
+- Hook tidak boleh generic atau bisa dipakai untuk artikel lain tanpa modifikasi
+- Jika Hook formula 02 (Data Shock): wajib ada angka spesifik + sumber di kalimat pertama
+- Jika Hook formula 03 (Provocative Question): pertanyaan harus provokatif, bukan retoris
+- Jika Hook formula 05 (Counter-Narrative): wajib ada narasi umum vs data/fakta yang bertentangan
+- Hook max 2 paragraf, max 150 kata (5-10% dari total word count)
+
+### Foreshadow Implementation (di transition dan conclusion)
+
+- Foreshadow formula yang dipilih di step 03-outline WAJIB diimplementasi di:
+  - **Transition antar section:** 1-2 Foreshadow di akhir section untuk tease section berikutnya
+  - **Conclusion:** 1 Foreshadow untuk tease artikel terkait atau seri (jika ada)
+- Foreshadow tidak boleh spoiler penuh, harus tease (buat penasaran, tidak reveal)
+- Foreshadow di transition: 1 kalimat di akhir section, bukan paragraf tersendiri
+- Foreshadow di conclusion: bisa 1-2 kalimat, boleh link ke artikel terkait jika ada
+
+### Thumbnail Text & Caption Implementation
+
+- **Thumbnail text (og_headline):** Implementasi dari Thumbnail Text Formula di step 03-outline
+  - Max 50 karakter, HARUS berbeda dari title
+  - Function sebagai visual hook di OG image card (800x450)
+  - Tulis di field `og_headline` di JSON
+- **Thumbnail caption (excerpt):** Implementasi dari Thumbnail Caption Formula di step 03-outline
+  - Max 160 karakter (untuk excerpt field di database)
+  - Function sebagai visual foreshadow di OG image feature (1600x900)
+  - Tulis di field `excerpt` di JSON
+
+### Meta Description Implementation
+
+- Meta description mengikuti Meta Description Formula dari step 03-outline (Hook + Value + Foreshadow)
+- Max 160 karakter
+- Tulis di field `seo_meta_description` di JSON
+
 ## Draft Quality Gates (per section sebelum lanjut)
 
 Setiap section harus pass 3 gates sebelum dianggap selesai:
@@ -390,8 +430,11 @@ console.log('word count:', wc, wc < 1000 ? 'WARNING: butuh min 1.000' : wc > 250
 - [ ] Self-Review per Section: 10 questions answered
 - [ ] Internal linking: min 2 link ke artikel TAM
 - [ ] `sourceReferences`: array `{type, url, label}`
-- [ ] `excerpt`: max 160 karakter
-- [ ] `ogHeadline`: berbeda dari title, max 50 karakter
+- [ ] `excerpt`: max 160 karakter (function sebagai thumbnail caption / visual foreshadow)
+- [ ] `ogHeadline`: berbeda dari title, max 50 karakter (function sebagai thumbnail text / visual hook)
+- [ ] Hook formula diimplementasi di opening (nomor + nama formula dari 30 Hook system)
+- [ ] Foreshadow formula diimplementasi di transition/conclusion (nomor + nama formula dari 20 Foreshadow system)
+- [ ] Meta description mengandung Hook + Foreshadow element (max 160 karakter)
 - [ ] `reading_time`: di-set di JSON (estimasi: word_count / 200)
 - [ ] `published_at`: format "YYYY-MM-DD HH:MM:SS+00"
 - [ ] Draft Completion Score: > 8 (dari 12)

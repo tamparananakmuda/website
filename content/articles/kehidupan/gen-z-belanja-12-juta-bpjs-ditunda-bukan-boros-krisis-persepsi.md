@@ -1,18 +1,32 @@
 ---
-title: "Gen Z Belanja Rp12 Juta, Tapi BPJS Ditunda: Bukan Boros, Krisis Persepsi"
-slug: "gen-z-belanja-12-juta-bpjs-ditunda-krisis-persepsi"
-excerpt: "Gen Z Jakarta spend Rp12 juta per bulan, tapi iuran BPJS Rp35.000 dianggap bisa ditunda. Bukan soal boros, tapi krisis persepsi nilai kesehatan."
-publishedAt: "2026-07-27T05:00:00.000Z"
+title: 'Gen Z Belanja Rp12 Juta, BPJS Ditunda: Krisis Persepsi'
+slug: gen-z-belanja-12-juta-bpjs-ditunda-krisis-persepsi
+excerpt: >-
+  Gen Z Jakarta spend Rp12 juta per bulan, tapi iuran BPJS Rp35.000 dianggap
+  bisa ditunda. Bukan soal boros, tapi krisis persepsi nilai kesehatan.
+publishedAt: '2026-07-27T05:00:00.000Z'
 status: published
-category: "kehidupan"
-subcategory: "lifestyle"
-author: "yovie-setiawan"
-seoTitle: "Gen Z Belanja Rp12 Juta, BPJS Ditunda: Bukan Boros, Krisis Persepsi"
-seoDescription: "BPS DKI Jakarta: Gen Z spend Rp12 juta/bulan, tapi 53,7 juta peserta BPJS nonaktif. Bukan ability to pay, tapi willingness to pay yang rusak."
-seoKeywords: ["BPJS Kesehatan Gen Z", "gen z pengeluaran kesehatan", "willingness to pay BPJS", "peserta BPJS nonaktif", "gen z belanja kesehatan"]
-ogHeadline: "Belanja Rp12 juta, tapi BPJS Rp35 ribu ditunda?"
+category: kehidupan
+subcategory: lifestyle
+author: yovie-setiawan
+seoMetaTitle: 'Gen Z Belanja Rp12 Juta, BPJS Ditunda: Bukan Boros, Krisis Persepsi'
+seoMetaDescription: >-
+  BPS DKI Jakarta: Gen Z spend Rp12 juta/bulan, tapi 53,7 juta peserta BPJS
+  nonaktif. Bukan ability to pay, tapi willingness to pay yang rusak.
+seoKeywords:
+  - BPJS Kesehatan Gen Z
+  - gen z pengeluaran kesehatan
+  - willingness to pay BPJS
+  - peserta BPJS nonaktif
+  - gen z belanja kesehatan
+ogHeadline: 'Belanja Rp12 juta, tapi BPJS Rp35 ribu ditunda?'
 ogHeadlineEn: null
-sourceReferences: ["BPS DKI Jakarta 2026", "BPJS Kesehatan data 2026", "Syamsu Hidayat UAD Yogyakarta", "Ewunetje Bayked Frontiers Public Health 2024", "Kompas 21 Jul 2026"]
+sourceReferences:
+  - BPS DKI Jakarta 2026
+  - BPJS Kesehatan data 2026
+  - Syamsu Hidayat UAD Yogyakarta
+  - Ewunetje Bayked Frontiers Public Health 2024
+  - Kompas 21 Jul 2026
 readingTime: 6
 featured: false
 isPremium: false
@@ -20,13 +34,18 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "approved"
+factCheckStatus: verified
+reviewStatus: approved
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
 sponsorDisclosure: null
-tags: ["BPJS Kesehatan", "Gen Z", "kesehatan", "perlindungan kesehatan", "behavioral economics"]
+tags:
+  - BPJS Kesehatan
+  - Gen Z
+  - kesehatan
+  - perlindungan kesehatan
+  - behavioral economics
 ---
 
 ## Belanja Besar, Proteksi Kosong

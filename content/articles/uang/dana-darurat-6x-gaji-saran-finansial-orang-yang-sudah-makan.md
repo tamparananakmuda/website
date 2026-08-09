@@ -1,43 +1,63 @@
 ---
-title: "Dana Darurat 6x Gaji: Saran Finansial untuk Orang yang Sudah Makan"
-slug: "dana-darurat-6x-gaji-saran-finansial-orang-yang-sudah-makan"
-excerpt: "Gaji Rp2,67 juta, target dana darurat 6x pengeluaran Rp18-24 juta. Sisihan 5% per bulan, butuh 11-15 tahun. Rumus ini bukan untuk Gen Z."
-publishedAt: "2026-08-02T01:00:00.000Z"
+title: 'Dana Darurat 6x Gaji: Saran Finansial Orang yang Sudah Makan'
+slug: dana-darurat-6x-gaji-saran-finansial-orang-yang-sudah-makan
+excerpt: >-
+  Gaji Rp2,67 juta, target dana darurat 6x pengeluaran Rp18-24 juta. Sisihan 5%
+  per bulan, butuh 11-15 tahun. Rumus ini bukan untuk Gen Z.
+publishedAt: '2026-08-02T01:00:00.000Z'
 status: published
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
-tags: ["dana-darurat", "gen-z", "keuangan", "gaji", "menabung", "finansial"]
-ogHeadline: "Gaji 3 juta, dana darurat 18 juta. Kapan?"
+povTag: kontra-narasi
+tags:
+  - dana-darurat
+  - gen-z
+  - keuangan
+  - gaji
+  - menabung
+  - finansial
+ogHeadline: 'Gaji 3 juta, dana darurat 18 juta. Kapan?'
 ogHeadlineEn: null
-seoMetaTitle: "Dana Darurat 6x Gaji: Saran untuk Orang yang Sudah Makan"
-seoMetaDescription: "Gaji Gen Z Rp2,67 juta, target dana darurat 6x pengeluaran Rp18-24 juta. Dengan sisihan 5%, butuh 11-15 tahun. Bukan kamu boros, angkanya untuk generasi lain."
+seoMetaTitle: 'Dana Darurat 6x Gaji: Saran untuk Orang yang Sudah Makan'
+seoMetaDescription: >-
+  Gaji Gen Z Rp2,67 juta, target dana darurat 6x pengeluaran Rp18-24 juta.
+  Dengan sisihan 5%, butuh 11-15 tahun. Bukan kamu boros, angkanya untuk
+  generasi lain.
 seoKeywords:
-  - "dana darurat gen Z"
-  - "berapa dana darurat ideal"
-  - "cara hitung dana darurat"
-  - "dana darurat 6 bulan"
-  - "dana darurat gaji 5 juta"
-  - "menabung dana darurat"
-  - "dana darurat lajang"
+  - dana darurat gen Z
+  - berapa dana darurat ideal
+  - cara hitung dana darurat
+  - dana darurat 6 bulan
+  - dana darurat gaji 5 juta
+  - menabung dana darurat
+  - dana darurat lajang
 sourceReferences:
-  - url: "https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/OJK-dan-BPS-Umumkan-Hasil-Survei-Nasional-Literasi-dan-Inklusi-Keuangan-Tahun-2024.aspx"
-    label: "OJK & BPS SNLIK 2024: Literasi keuangan 18-25 tahun 70,19%"
-  - url: "https://finance.detik.com/berita-ekonomi-bisnis/d-8360783/survei-bps-gaji-pekerja-lulusan-sd-rp-2-2-juta-s1-rp-4-6-juta"
-    label: "BPS Sakernas Nov 2025: Rata-rata upah nasional Rp3,33 juta, usia 20-24 Rp2,67 juta"
-  - url: "https://data.goodstats.id/statistic/rata-rata-upah-buruh-berdasarkan-umur-per-november-2025-tMm5e"
-    label: "GoodStats/BPS: Rata-rata upah per kelompok umur Nov 2025"
-  - url: "https://pusatdata.kontan.co.id/infografik/190/Rata-Rata-Upah-Buruh-Per-November-2025"
-    label: "Kontan/BPS: Rata-rata upah buruh per November 2025 = Rp3.329.095"
-  - url: "https://money.kompas.com/read/2026/04/22/074700626/jangan-salah-besaran-dana-darurat-yang-harus-dimiliki-jomblo-sandwich"
-    label: "Kompas: Dana darurat lajang 3x gaji, sandwich generation 3-6x gaji"
-  - url: "https://www.bankartos.co.id/edukasi-keuangan/341927570/berapa-dana-darurat-yang-ideal-formula-lengkap-berdasarkan-profil-keuangan/"
-    label: "Bankartos: Tabel dana darurat 2026 berdasarkan profil pekerjaan"
-  - url: "https://www.aia-financial.co.id/id/health-and-wellness/aia-content-club/financial-wellness/Berapa-Jumlah-Dana-Darurat-yang-Ideal"
-    label: "AIA: Simulasi dana darurat lajang Rp4jt/bln = Rp12-24 juta target"
+  - url: >-
+      https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/OJK-dan-BPS-Umumkan-Hasil-Survei-Nasional-Literasi-dan-Inklusi-Keuangan-Tahun-2024.aspx
+    label: 'OJK & BPS SNLIK 2024: Literasi keuangan 18-25 tahun 70,19%'
+  - url: >-
+      https://finance.detik.com/berita-ekonomi-bisnis/d-8360783/survei-bps-gaji-pekerja-lulusan-sd-rp-2-2-juta-s1-rp-4-6-juta
+    label: >-
+      BPS Sakernas Nov 2025: Rata-rata upah nasional Rp3,33 juta, usia 20-24
+      Rp2,67 juta
+  - url: >-
+      https://data.goodstats.id/statistic/rata-rata-upah-buruh-berdasarkan-umur-per-november-2025-tMm5e
+    label: 'GoodStats/BPS: Rata-rata upah per kelompok umur Nov 2025'
+  - url: >-
+      https://pusatdata.kontan.co.id/infografik/190/Rata-Rata-Upah-Buruh-Per-November-2025
+    label: 'Kontan/BPS: Rata-rata upah buruh per November 2025 = Rp3.329.095'
+  - url: >-
+      https://money.kompas.com/read/2026/04/22/074700626/jangan-salah-besaran-dana-darurat-yang-harus-dimiliki-jomblo-sandwich
+    label: 'Kompas: Dana darurat lajang 3x gaji, sandwich generation 3-6x gaji'
+  - url: >-
+      https://www.bankartos.co.id/edukasi-keuangan/341927570/berapa-dana-darurat-yang-ideal-formula-lengkap-berdasarkan-profil-keuangan/
+    label: 'Bankartos: Tabel dana darurat 2026 berdasarkan profil pekerjaan'
+  - url: >-
+      https://www.aia-financial.co.id/id/health-and-wellness/aia-content-club/financial-wellness/Berapa-Jumlah-Dana-Darurat-yang-Ideal
+    label: 'AIA: Simulasi dana darurat lajang Rp4jt/bln = Rp12-24 juta target'
 readingTime: 7
 featured: false
 isPremium: false
@@ -45,8 +65,8 @@ premiumExcerpt: null
 coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "reviewed"
+factCheckStatus: verified
+reviewStatus: reviewed
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

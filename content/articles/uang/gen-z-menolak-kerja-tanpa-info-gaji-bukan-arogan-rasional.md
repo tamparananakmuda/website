@@ -1,34 +1,35 @@
 ---
-title: "85% Gen Z Menolak Lamar Kerja Tanpa Info Gaji: Bukan Arogan, Rasional"
-slug: "gen-z-menolak-kerja-tanpa-info-gaji-bukan-arogan-rasional"
-excerpt: "85% Gen Z menolak melamar tanpa info gaji. Bukan arogansi generasi manja, tapi respons rasional terhadap ekonomi yang tidak menjanjikan stabilitas."
-publishedAt: "2026-07-24 05:00:00+00"
+title: '85% Gen Z Menolak Kerja Tanpa Info Gaji: Bukan Arogan'
+slug: gen-z-menolak-kerja-tanpa-info-gaji-bukan-arogan-rasional
+excerpt: >-
+  85% Gen Z menolak melamar tanpa info gaji. Bukan arogansi generasi manja, tapi
+  respons rasional terhadap ekonomi yang tidak menjanjikan stabilitas.
+publishedAt: '2026-07-24 05:00:00+00'
 status: published
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "data"
+povTag: data
 tags: []
-ogHeadline: "Menolak kerja tanpa info gaji bukan arogan"
-seoMetaTitle: "85% Gen Z Menolak Kerja Tanpa Info Gaji"
-seoMetaDescription: "85% Gen Z menolak melamar tanpa info gaji. Bukan arogan, tapi respons rasional terhadap ekonomi yang tidak menjanjikan stabilitas. Baca datanya."
+ogHeadline: Menolak kerja tanpa info gaji bukan arogan
+seoMetaTitle: 85% Gen Z Menolak Kerja Tanpa Info Gaji
+seoMetaDescription: >-
+  85% Gen Z menolak melamar tanpa info gaji. Bukan arogan, tapi respons rasional
+  terhadap ekonomi yang tidak menjanjikan stabilitas. Baca datanya.
 seoKeywords:
-  - "transparansi gaji gen z"
-  - "gen z menolak kerja tanpa info gaji"
-  - "negosiasi gaji gen z"
-  - "lowongan kerja transparan"
-  - "gen z pasar kerja 2026"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - transparansi gaji gen z
+  - gen z menolak kerja tanpa info gaji
+  - negosiasi gaji gen z
+  - lowongan kerja transparan
+  - gen z pasar kerja 2026
+sourceReferences: []
 featured: false
 readingTime: 5
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

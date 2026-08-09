@@ -39,7 +39,8 @@ Dari `/seri-04-outline`
 ## [Recap singkat 1-2 kalimat, HANYA untuk part 2+]
 
 ## Hook (1-2 paragraf)
-[Hook formula dari outline]
+[Episode Hook formula dari outline, pilih dari 30 Hook formula system]
+[Wajib: tulis nomor + nama formula di comment untuk tracking]
 
 ## Konteks (2-3 paragraf)
 [Background masalah, kenapa relevan sekarang]
@@ -54,8 +55,10 @@ Dari `/seri-04-outline`
 
 ## Conclusion (1-2 paragraf)
 [Conclusion formula dari outline, tidak generic]
+[Episode Foreshadow formula dari outline untuk tease part berikutnya, pilih dari 20 Foreshadow formula system]
 
-## [Teaser ke part berikutnya, HANYA jika ada part selanjutnya]
+## [Next Tease / Bridge ke part berikutnya, HANYA jika ada part selanjutnya]
+[Next Tease formula dari outline, pilih dari 5 Next Tease formula atau 20 Foreshadow formula]
 ```
 
 ## Recap Format (untuk Part 2+)
@@ -213,6 +216,38 @@ export ARTICLE_JSON="/tmp/tam-article.json"
 }
 ```
 
+## Hook & Foreshadow Implementation Requirements (per part)
+
+### Episode Hook Implementation
+
+- Episode Hook formula yang dipilih di step 04-outline WAJIB diimplementasi di paragraf pembuka setiap part
+- Hook harus sesuai template formula, diisi dengan konten spesifik part tersebut
+- Hook progression: part 1 broad, part tengah deep, part terakhir provokatif (payoff series promise)
+- Jangan repetisi formula di part berurutan
+- Hook max 2 paragraf, max 150 kata per part
+
+### Episode Foreshadow Implementation
+
+- Episode Foreshadow formula WAJIB diimplementasi di:
+  - **Transition antar section dalam part:** 1-2 Foreshadow di akhir section untuk tease section berikutnya
+  - **Conclusion part:** 1 Foreshadow untuk tease part berikutnya atau series payoff
+- Foreshadow tidak boleh spoiler penuh, harus tease
+- Foreshadow di transition: 1 kalimat di akhir section
+
+### Next Tease / Bridge Implementation
+
+- Next Tease WAJIB di akhir setiap part 1 sampai N-1
+- Next Tease part N harus dipenuhi (payoff) di hook part N+1
+- Next Tease tidak boleh spoiler penuh part berikutnya
+- Format: 1 kalimat tease + link ke part berikutnya
+- Part terakhir: tidak ada Next Tease, boleh pakai Resolution Tease untuk tease seri lain
+
+### Thumbnail Text & Caption Implementation per Part
+
+- **Thumbnail text (og_headline):** Max 50 karakter, HARUS berbeda dari title part. Function sebagai visual hook di OG image card. Tulis di field `og_headline`.
+- **Thumbnail caption (excerpt):** Max 160 karakter. Function sebagai visual foreshadow di OG image feature. Tulis di field `excerpt`.
+- **Meta description:** Max 160 karakter, mengandung Hook + Value + Foreshadow element. Tulis di field `seo_meta_description`.
+
 ## Draft Quality Gates (per part)
 
 | Gate | Check | Pass criteria |
@@ -266,6 +301,12 @@ Target: min 9.
 - [ ] JSON disimpan ke `$ARTICLE_JSON`
 - [ ] Draft Quality Gates: G1, G2, G3 pass per part
 - [ ] Cross-Part Consistency: 5 checks pass
+- [ ] `excerpt`: max 160 karakter (function sebagai thumbnail caption / visual foreshadow)
+- [ ] `ogHeadline`: berbeda dari title, max 50 karakter (function sebagai thumbnail text / visual hook)
+- [ ] Episode Hook formula diimplementasi di opening per part (nomor + nama dari 30 Hook system)
+- [ ] Episode Foreshadow formula diimplementasi di transition/conclusion per part (nomor + nama dari 20 Foreshadow system)
+- [ ] Next Tease / Bridge formula diimplementasi di akhir part 1 sampai N-1
+- [ ] Meta description mengandung Hook + Foreshadow element per part (max 160 karakter)
 - [ ] Series Draft Quality Score: min 9 (dari 12)
 
 ## Next

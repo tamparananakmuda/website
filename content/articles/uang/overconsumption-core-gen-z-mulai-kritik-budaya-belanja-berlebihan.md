@@ -1,35 +1,37 @@
 ---
-title: "Overconsumption Core: Gen Z Mulai Kritik Budaya Belanja Berlebihan"
-slug: "overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan"
-excerpt: "Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z sendiri."
-publishedAt: "2026-07-23 10:00:00+00"
+title: 'Overconsumption Core: Gen Z Mulai Kritik Budaya Belanja Berlebihan'
+slug: overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan
+excerpt: >-
+  Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren
+  overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z
+  sendiri.
+publishedAt: '2026-07-23 10:00:00+00'
 status: published
-category: "uang"
-subcategory: "keuangan-uang"
-author: "yovie-setiawan"
+category: uang
+subcategory: keuangan-uang
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "refleksi"
+povTag: refleksi
 tags: []
-ogHeadline: "Gen Z mulai kritik budaya belanja berlebihan"
-seoMetaTitle: "Overconsumption Core: Gen Z Kritik Belanja Berlebihan"
-seoMetaDescription: "Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z sendiri."
+ogHeadline: Gen Z mulai kritik budaya belanja berlebihan
+seoMetaTitle: 'Overconsumption Core: Gen Z Kritik Belanja Berlebihan'
+seoMetaDescription: >-
+  Gen Z dulu terkenal dengan haul dan checkout impulsif. Sekarang muncul tren
+  overconsumption core, kritik terhadap budaya belanja berlebihan dari Gen Z
+  sendiri.
 seoKeywords:
-  - "overconsumption core"
-  - "gen z belanja"
-  - "budaya konsumtif"
-  - "flash sale gen z"
-  - "literasi keuangan gen z"
-sourceReferences:
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
-  - "[object Object]"
+  - overconsumption core
+  - gen z belanja
+  - budaya konsumtif
+  - flash sale gen z
+  - literasi keuangan gen z
+sourceReferences: []
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
@@ -37,7 +39,9 @@ sponsorDisclosure: null
 isPremium: false
 premiumExcerpt: null
 coverImageUrl: null
-coverImageAlt: "Tren overconsumption core: Gen Z mulai mengkritik budaya belanja berlebihan dan haul di media sosial"
+coverImageAlt: >-
+  Tren overconsumption core: Gen Z mulai mengkritik budaya belanja berlebihan
+  dan haul di media sosial
 ---
 
 ## Dari Haul ke Overconsumption Core

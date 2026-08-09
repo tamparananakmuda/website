@@ -1,39 +1,43 @@
 ---
-title: "Omzet Bukan Untung: Bisnis Gen Z Terlihat Sukses, Tapi Kosong di Kas"
-slug: "omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas"
-excerpt: "Bisnis Gen Z terlihat sukses di Instagram: omzet jutaan, FYP, pesanan bludak. Tapi saat dihitung, sisa laba minus. Omzet bukan untung."
-publishedAt: "2026-07-24 10:00:00+00"
+title: 'Omzet Bukan Untung: Bisnis Gen Z Sukses Tapi Kosong'
+slug: omzet-bukan-untung-bisnis-gen-z-terlihat-sukses-tapi-kosong-di-kas
+excerpt: >-
+  Bisnis Gen Z terlihat sukses di Instagram: omzet jutaan, FYP, pesanan bludak.
+  Tapi saat dihitung, sisa laba minus. Omzet bukan untung.
+publishedAt: '2026-07-24 10:00:00+00'
 status: published
-category: "bisnis"
-subcategory: "bisnis"
-author: "yovie-setiawan"
+category: bisnis
+subcategory: bisnis
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "tamparan"
+povTag: tamparan
 tags: []
-ogHeadline: "Omzet jutaan tapi kas kosong. Kenapa?"
-seoMetaTitle: "Omzet Bukan Untung: Bisnis Gen Z Kosong di Kas"
-seoMetaDescription: "Bisnis Gen Z terlihat sukses di media sosial: omzet jutaan, pesanan bludak. Tapi saat dihitung, sisa laba minus. Omzet bukan untung."
+ogHeadline: Omzet jutaan tapi kas kosong. Kenapa?
+seoMetaTitle: 'Omzet Bukan Untung: Bisnis Gen Z Kosong di Kas'
+seoMetaDescription: >-
+  Bisnis Gen Z terlihat sukses di media sosial: omzet jutaan, pesanan bludak.
+  Tapi saat dihitung, sisa laba minus. Omzet bukan untung.
 seoKeywords:
-  - "omzet vs laba bisnis gen z"
-  - "bisnis gen z rugi"
-  - "financial literacy bisnis"
-  - "umkm gen z untung rugi"
-  - "bisnis online tidak untung"
-  - "pembukuan bisnis pemula"
+  - omzet vs laba bisnis gen z
+  - bisnis gen z rugi
+  - financial literacy bisnis
+  - umkm gen z untung rugi
+  - bisnis online tidak untung
+  - pembukuan bisnis pemula
 sourceReferences:
-  - "Kompasiana Jul 2026: Omzet vs laba, kesalahpahaman bisnis pemula"
-  - "Jurnal Akuntansi UBSI: Longevity bisnis Gen Z dan financial literacy"
-  - "Dosen USU: Gen Z kuat marketing, lemah fondasi bisnis"
-  - "GoodStats x Jakpat: 68% Gen Z mau bisnis, 60% kendala modal"
-  - "OJK: 52% UMKM tidak punya pembukuan terpisah"
-  - "BPS: 45% kegagalan bisnis karena produk tidak sesuai pasar"
-  - "Kemenkop UKM: 60% bisnis rintisan gagal di 3 tahun pertama"
+  - 'Kompasiana Jul 2026: Omzet vs laba, kesalahpahaman bisnis pemula'
+  - 'Jurnal Akuntansi UBSI: Longevity bisnis Gen Z dan financial literacy'
+  - 'Dosen USU: Gen Z kuat marketing, lemah fondasi bisnis'
+  - 'GoodStats x Jakpat: 68% Gen Z mau bisnis, 60% kendala modal'
+  - 'OJK: 52% UMKM tidak punya pembukuan terpisah'
+  - 'BPS: 45% kegagalan bisnis karena produk tidak sesuai pasar'
+  - 'Kemenkop UKM: 60% bisnis rintisan gagal di 3 tahun pertama'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null

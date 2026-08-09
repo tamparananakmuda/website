@@ -1,18 +1,32 @@
 ---
-title: "Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah"
-slug: "gig-economy-bukan-pilihan-jebakan-produktivitas-rendah"
-excerpt: "2,41 juta pekerja digital, 75% di bawah Rp3 juta per bulan. Gen Z bukan pilih gig economy, sektor formal yang tidak mau serap."
-publishedAt: "2026-07-29T01:00:00.000Z"
+title: 'Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah'
+slug: gig-economy-bukan-pilihan-jebakan-produktivitas-rendah
+excerpt: >-
+  2,41 juta pekerja digital, 75% di bawah Rp3 juta per bulan. Gen Z bukan pilih
+  gig economy, sektor formal yang tidak mau serap.
+publishedAt: '2026-07-29T01:00:00.000Z'
 status: published
-category: "karier"
-subcategory: "karier-tren"
-author: "yovie-setiawan"
-seoTitle: "Gig Economy Bukan Pilihan, Jebakan Produktivitas Rendah"
-seoDescription: "Data Next Policy: 75% pekerja digital Indonesia di bawah Rp3 juta per bulan. Gig economy bukan pilihan Gen Z, tapi sektor formal yang tidak menyerap."
-seoKeywords: ["gig economy Indonesia 2026", "pekerja digital Indonesia", "ojol pendapatan rendah", "gen z sektor informal", "low productivity trap Indonesia"]
-ogHeadline: "Ojol, kurir, freelancer: bukan pilihan, jebakan"
+category: karier
+subcategory: karier-tren
+author: yovie-setiawan
+seoMetaTitle: 'Gig Economy: Jebakan Produktivitas Rendah'
+seoMetaDescription: >-
+  Data Next Policy: 75% pekerja digital Indonesia di bawah Rp3 juta per bulan.
+  Gig economy bukan pilihan Gen Z, tapi sektor formal yang tidak menyerap.
+seoKeywords:
+  - gig economy Indonesia 2026
+  - pekerja digital Indonesia
+  - ojol pendapatan rendah
+  - gen z sektor informal
+  - low productivity trap Indonesia
+ogHeadline: 'Ojol, kurir, freelancer: bukan pilihan, jebakan'
 ogHeadlineEn: null
-sourceReferences: ["CNN Indonesia 25 Jul 2026", "Next Policy data 2024", "IMGR 2027 IDN Research Institute", "BPS Februari 2025", "The Conversation 2026"]
+sourceReferences:
+  - CNN Indonesia 25 Jul 2026
+  - Next Policy data 2024
+  - IMGR 2027 IDN Research Institute
+  - BPS Februari 2025
+  - The Conversation 2026
 readingTime: 7
 featured: false
 isPremium: false

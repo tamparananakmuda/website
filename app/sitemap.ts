@@ -8,85 +8,87 @@ import { getPostsBySeries } from '@/lib/articles/loader';
 
 export const revalidate = 3600;
 
+const STATIC_PAGES_LAST_MODIFIED = new Date('2026-08-09T00:00:00Z');
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${siteUrl}/artikel`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
       url: `${siteUrl}/kategori`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
       url: `${siteUrl}/seri`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
       url: `${siteUrl}/tentang`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${siteUrl}/newsletter`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${siteUrl}/newsletter-arsip`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 0.4,
     },
     {
       url: `${siteUrl}/sosial`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
       url: `${siteUrl}/donasi`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.4,
     },
     {
       url: `${siteUrl}/whitepaper`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${siteUrl}/kebijakan-privasi`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
       url: `${siteUrl}/syarat-ketentuan`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
       url: `${siteUrl}/disclaimer`,
-      lastModified: new Date(),
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly',
       priority: 0.3,
     },
@@ -125,15 +127,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Only include series that have at least 1 published article
   const seriesWithPosts = await Promise.all(
     seriesConfig.map(async (s) => {
-      const posts = await getPostsBySeries(s.slug, 1);
-      return { slug: s.slug, hasPosts: posts.length > 0 };
+      const posts = await getPostsBySeries(s.slug, 999);
+      const publishedPosts = posts.filter((p) => p.status === 'published');
+      const latestDate = publishedPosts.length > 0
+        ? publishedPosts.reduce((latest, p) => {
+            const d = new Date(p.publishedAt || p.updatedAt || 0);
+            return d > latest ? d : latest;
+          }, new Date(0))
+        : null;
+      return { slug: s.slug, hasPosts: publishedPosts.length > 0, latestDate };
     })
   );
   const seriPages: MetadataRoute.Sitemap = seriesWithPosts
     .filter((s) => s.hasPosts)
     .map((s) => ({
       url: `${siteUrl}/seri/${s.slug}`,
-      lastModified: new Date(),
+      lastModified: s.latestDate || STATIC_PAGES_LAST_MODIFIED,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }));

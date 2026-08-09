@@ -1,39 +1,45 @@
 ---
-title: "Skill Not School: Tapi Sistem Tetap Pakai Ijazah"
-slug: "skill-not-school-tapi-sistem-tetap-pakai-ijazah"
-excerpt: "Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1. Sistem tetap minta ijazah yang kamu ambil hutang untuk dapatkan."
-publishedAt: "2026-07-24 05:00:00+00"
+title: 'Skill Not School, Tapi Sistem Tetap Pakai Ijazah'
+slug: skill-not-school-tapi-sistem-tetap-pakai-ijazah
+excerpt: >-
+  Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1.
+  Sistem tetap minta ijazah yang kamu ambil hutang untuk dapatkan.
+publishedAt: '2026-07-24 05:00:00+00'
 status: published
-category: "karier"
-subcategory: "karier-dunia-kerja"
-author: "yovie-setiawan"
+category: karier
+subcategory: karier-dunia-kerja
+author: yovie-setiawan
 series: null
 seriesOrder: null
-povTag: "kontra-narasi"
+povTag: kontra-narasi
 tags: []
-ogHeadline: "Skill penting, tapi lowongan tetap minta ijazah"
-seoMetaTitle: "Skill Not School: Tapi Sistem Tetap Pakai Ijazah"
-seoMetaDescription: "Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1. Sistem tetap menuntut ijazah yang kamu ambil hutang untuk dapatkan."
+ogHeadline: 'Skill penting, tapi lowongan tetap minta ijazah'
+seoMetaTitle: 'Skill vs Ijazah: Sistem Tetap Pakai Ijazah'
+seoMetaDescription: >-
+  Menaker bilang skill lebih penting dari ijazah. Tapi lowongan tetap syarat S1.
+  Sistem tetap menuntut ijazah yang kamu ambil hutang untuk dapatkan.
 seoKeywords:
-  - "skill not school Indonesia"
-  - "skill vs ijazah gen z"
-  - "syarat ijazah lowongan kerja"
-  - "mismatch pasar kerja Indonesia"
-  - "skill gen z Indonesia"
-  - "menaker skill not school"
+  - skill not school Indonesia
+  - skill vs ijazah gen z
+  - syarat ijazah lowongan kerja
+  - mismatch pasar kerja Indonesia
+  - skill gen z Indonesia
+  - menaker skill not school
 sourceReferences:
-  - "Menaker Yassierli Jul 2026: Pernyataan skill not school"
-  - "CNBC Indonesia: Liputan skill vs ijazah pasar kerja 2026"
-  - "BPS Sakernas 2025: Tingkat pengangguran terbuka berdasarkan pendidikan"
-  - "Survei Kelly Services 2026: 67% perusahaan masih filter CV berdasarkan jenjang pendidikan"
-  - "Bank Indonesia: 58% lulusan S1 menganggur karena mismatch skills"
-  - "Kemenaker: Data 12 juta pencari kerja vs 9 juta lowongan 2026"
-  - "Survei Katadata Insight Center: 73% HRD jadikan ijazah sebagai filter awal"
+  - 'Menaker Yassierli Jul 2026: Pernyataan skill not school'
+  - 'CNBC Indonesia: Liputan skill vs ijazah pasar kerja 2026'
+  - 'BPS Sakernas 2025: Tingkat pengangguran terbuka berdasarkan pendidikan'
+  - >-
+    Survei Kelly Services 2026: 67% perusahaan masih filter CV berdasarkan
+    jenjang pendidikan
+  - 'Bank Indonesia: 58% lulusan S1 menganggur karena mismatch skills'
+  - 'Kemenaker: Data 12 juta pencari kerja vs 9 juta lowongan 2026'
+  - 'Survei Katadata Insight Center: 73% HRD jadikan ijazah sebagai filter awal'
 featured: false
 readingTime: 6
 humanSignature: true
-factCheckStatus: "verified"
-reviewStatus: "publish"
+factCheckStatus: verified
+reviewStatus: publish
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
