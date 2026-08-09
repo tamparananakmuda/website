@@ -170,6 +170,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 158 | E-Government Indonesia: Solusi Digital yang Crash, Birokrasi yang Tidak Berubah (Seri Birokrasi P7) | sistem-birokrasi-indonesia-part-7-e-government-crash | Kehidupan | Sistem Birokrasi | data | 2026-10-07 (scheduled 08:00 WIB) |
 | 159 | Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai | shift-shock-gen-z-ekspektasi-vs-realitas-kerja | Karier | Karier & Dunia Kerja | data | 2026-09-04 (scheduled 08:00 WIB) |
 | 160 | Technostress Gen Z: Bukan Lemah, Beban Digital yang Dibuat Sistem | technostress-gen-z-beban-digital-kerja-hybrid | Karier | Karier & Dunia Kerja | data | 2026-09-05 (scheduled 08:00 WIB) |
+| 161 | Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya | krisis-kepercayaan-gen-z-institusi-tidak-bisa-dipercaya | Mindset | Mindset & Realita | data | 2026-09-06 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

@@ -1,7 +1,7 @@
 ---
 title: "Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya"
 slug: "krisis-kepercayaan-gen-z-institusi-tidak-bisa-dipercaya"
-excerpt: "49% anak muda Indonesia tidak percaya pemerintah. 53.9% nilai politik buruk, tertinggi di ASEAN. Bukan skeptis, institusi yang sudah buktikan tidak bisa dipercaya."
+excerpt: "Data Kawula17 dan ISEAS tunjukkan Gen Z paling tidak percaya di ASEAN. Bukan trend skeptis, tapi respons rasional terhadap institusi yang gagal bekerja."
 publishedAt: "2026-09-06T01:00:00+07:00"
 status: "scheduled"
 category: "mindset"
@@ -21,15 +21,15 @@ tags:
 ogHeadline: "Gen Z tidak percaya institusi, dan itu rasional"
 ogHeadlineEn: null
 seoMetaTitle: "Krisis Kepercayaan Gen Z: Institusi yang Bukti Tidak Bisa Dipercaya"
-seoMetaDescription: "49% anak muda Indonesia tidak percaya pemerintah. 53.9% nilai politik buruk, tertinggi di ASEAN. Bukan skeptis, institusi yang sudah buktikan tidak bisa dipercaya."
+seoMetaDescription: "49% anak muda Indonesia tidak percaya pemerintah. 53.9% nilai politik buruk, tertinggi di ASEAN. Bukan skeptis, institusi yang bukti tidak bisa dipercaya."
 seoKeywords:
   - "krisis kepercayaan gen z"
-  - "gen z tidak percaya pemerintah"
-  - "trust issue gen z Indonesia"
-  - "gen z skeptis institusi"
-  - "gen z tidak percaya media"
-  - "kepercayaan publik institusi Indonesia"
-  - "gen z apatis politik Indonesia"
+  - "tidak percaya pemerintah"
+  - "trust issue gen z"
+  - "kepercayaan publik"
+  - "insular trust"
+  - "media arus utama"
+  - "tidak bisa dipercaya"
 sourceReferences:
   - url: "https://www.edelman.com/trust/2026/trust-barometer"
     label: "Edelman Trust Barometer 2026 Indonesia: Trust Index 73, insular trust 66%, trust gap 26 poin, government 68%, media 76%, business 80%, employer 92%, NGO 67%, n=1.200, Oct-Nov 2025"
@@ -57,20 +57,20 @@ coverImageUrl: null
 coverImageAlt: null
 humanSignature: true
 factCheckStatus: "verified"
-reviewStatus: "draft"
+reviewStatus: "reviewed"
 isSponsored: false
 sponsorName: null
 sponsorUrl: null
 sponsorDisclosure: null
 ---
 
-## 49% Tidak Percaya, dan Itu Rasional
+## Potret Kepercayaan
 
-Survei Kawula17 Q2 2026 mencatat 49% anak muda Indonesia usia 17-35 tahun tidak yakin atau sangat tidak yakin terhadap pemerintah. Tiga bulan sebelumnya, angka yang tidak yakin "hanya" 32%. Di tingkat ASEAN, survei ISEAS-Yusof Ishak Institute terhadap 3.081 mahasiswa menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi dari enam negara disurvei. Hanya 15.3% yang menganggap baik.
+Survei Kawula17 Q2 2026 mencatat 49% anak muda Indonesia usia 17-35 tahun tidak yakin atau sangat tidak yakin terhadap pemerintah. Tiga bulan sebelumnya, data Kawula17 Q1 mencatat angka yang tidak yakin "hanya" 32%. Di tingkat ASEAN, survei ISEAS-Yusof Ishak Institute terhadap 3.081 mahasiswa menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi dari enam negara disurvei. Hanya 15.3% yang menganggap baik menurut data ISEAS.
 
-Sebelum kamu menyebut Gen Z terlalu sinis atau kurang nasionalis, coba lihat track record institusi yang mereka tidak percayai. Korupsi yang tidak pernah berhenti. PHK massal tanpa jaring pengaman. Media yang trust-nya terus turun. Janji politik yang diingkari begitu kursi didapat. Bukan Gen Z yang berubah. Institusi yang sudah membuktikan tidak bisa dipercaya, berkali-kali.
+Sebelum kamu menyebut Gen Z terlalu sinis atau kurang nasionalis, coba lihat track record institusi yang mereka tidak percayai: korupsi yang tidak pernah berhenti, PHK massal tanpa jaring pengaman, media yang trust-nya terus turun, dan janji politik yang diingkari begitu kursi didapat. Bukan Gen Z yang berubah. Institusi yang sudah membuktikan tidak bisa dipercaya, berkali-kali.
 
-## Trust Index Tinggi, Tapi Realita Berbeda
+## Laporan Global 2026
 
 Edelman Trust Barometer 2026 menempatkan Indonesia di Trust Index 73, salah satu tertinggi dunia. Tapi angka agregat itu menutupi realita yang lebih kompleks. Edelman juga mencatat 66% masyarakat Indonesia punya insular trust mindset, enggan mempercayai orang dengan pandangan berbeda. Trust gap antara kelompok berpenghasilan tinggi dan rendah mencapai 26 poin, salah satu terbesar di dunia.
 
@@ -78,41 +78,41 @@ Artinya: secara agregat Indonesia "terpercaya", tapi kepercayaan itu terkonsentr
 
 Saya perhatikan di lingkungan saya sendiri, teman-teman Gen Z tidak lagi mempercayai media mainstream untuk berita politik. Mereka cross-check di X, tanya di group WhatsApp, dan lebih percaya analisis dari akun-akun independen. Bukan karena media mainstream selalu salah, tapi karena mereka sudah terlalu sering melihat bias pemilik modal dan agenda politik di balik pemberitaan. Skeptisisme ini bukan sikap anti-intelektual. Justru sebaliknya, ini bentuk literasi yang lebih tinggi.
 
-## Pemerintah: Korupsi yang Tidak Pernah Berhenti
+## Korupsi, Ekonomi, Incompetence
 
-Alasan utama anak muda tidak percaya pemerintah bukan ideologi atau preferensi partai. Survei Kawula17 Q2 2026 menanyakan ke 320 responden yang tidak yakin: apa alasannya? 52% menyebut korupsi oleh pejabat. 41% menilai ekonomi memburuk. 36% menyebut pejabat tidak kompeten. 28% menyoroti ketidakpastian hukum. 25% merasa kebebasan berpendapat dibatasi.
+Alasan utama anak muda tidak percaya pemerintah bukan ideologi atau preferensi partai. Survei Kawula17 Q2 2026 menanyakan ke responden yang menyatakan tidak yakin: apa alasannya? Data Kawula17 menunjukkan 52% menyebut korupsi oleh pejabat, 41% menilai ekonomi memburuk, dan 36% menyebut pejabat tidak kompeten. Selain itu, data Kawula17 mencatat 28% menyoroti ketidakpastian hukum dan 25% merasa kebebasan berpendapat dibatasi.
 
-Data IMGR 2026 dari IDN Research Institute memperkuat temuan ini. Dari 1.500 responden Gen Z dan Milenial di 12 kota, 63% menyebut korupsi dan penyalahgunaan wewenang sebagai alasan tidak percaya lembaga politik. 48% menyebut kurang transparansi dan skandal politik. 48% lagi menyoroti ketimpangan penegakan hukum. Di kota-kota sekunder, 54% menyebut janji politik yang diingkari sebagai faktor utama, lebih tinggi dari 43% di kota besar.
+Data IMGR 2026 dari IDN Research Institute memperkuat temuan ini. Dari 1.500 responden Gen Z dan Milenial di 12 kota, survei IMGR mencatat 63% menyebut korupsi dan penyalahgunaan wewenang sebagai alasan tidak percaya lembaga politik, 48% menyebut kurang transparansi dan skandal politik, dan 48% lagi menyoroti ketimpangan penegakan hukum. Data IMGR juga menunjukkan di kota-kota sekunder, 54% menyebut janji politik yang diingkari sebagai faktor utama, lebih tinggi dari 43% di kota besar.
 
 ```chart:bar
-{"title":"Alasan Anak Muda Tidak Percaya Pemerintah","subtitle":"Survei Kawula17 Q2 2026, n=320 responden tidak yakin","source":"GoodStats/Kawula17 Q2 2026","data":[{"label":"Korupsi pejabat","value":52,"color":"#ef4444"},{"label":"Ekonomi memburuk","value":41,"color":"#f4a825"},{"label":"Pejabat tidak kompeten","value":36,"color":"#3b82f6"},{"label":"Ketidakpastian hukum","value":28,"color":"#a855f7"},{"label":"Kebebasan berpendapat dibatasi","value":25,"color":"#22c55e"}],"yLabel":"(%)"}
+{"title":"Alasan Anak Muda Tidak Percaya Pemerintah","subtitle":"Survei Kawula17 Q2 2026, n=409 total responden","source":"GoodStats/Kawula17 Q2 2026","data":[{"label":"Korupsi pejabat","value":52,"color":"#ef4444"},{"label":"Ekonomi memburuk","value":41,"color":"#f4a825"},{"label":"Pejabat tidak kompeten","value":36,"color":"#3b82f6"},{"label":"Ketidakpastian hukum","value":28,"color":"#a855f7"},{"label":"Kebebasan berpendapat dibatasi","value":25,"color":"#22c55e"}],"yLabel":"(%)"}
 ```
 
-Anak muda Indonesia juga paling pesimis di ASEAN. Survei ISEAS menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, dibandingkan 47.3% di Thailand dan 41.9% di Filipina. Sebaliknya, 72.4% anak muda Singapura dan 68.2% anak muda Vietnam menilai politik negara mereka baik. Polanya jelas: negara dengan sistem politik stabil dan pertumbuhan ekonomi mapan mendorong optimisme. Negara dengan gejolak politik dan ekonomi yang tidak merata menciptakan skeptisisme.
+Anak muda Indonesia juga paling pesimis di ASEAN. Survei ISEAS menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, dibandingkan data ISEAS 47.3% di Thailand dan 41.9% di Filipina. Sebaliknya, data ISEAS mencatat 72.4% anak muda Singapura dan 68.2% anak muda Vietnam menilai politik negara mereka baik. Polanya jelas: negara dengan sistem politik stabil dan pertumbuhan ekonomi mapan mendorong optimisme. Negara dengan gejolak politik dan ekonomi yang tidak merata menciptakan skeptisisme.
 
 BRIN melalui peneliti Aisah Putri Budiarti mengingatkan: pesimisme anak muda adalah sinyal bahaya untuk visi Indonesia Emas 2045. "Anak muda biasanya penuh optimisme karena mereka baru memasuki usia produktif. Ketika mereka pesimis, itu punya risiko berbahaya," katanya kepada BBC Indonesia. Tapi Aisah juga melihat sisi positif: pesimisme menunjukkan anak muda lebih mawas dan kritis, terutama di tengah situasi politik yang minim checks and balances.
 
 ## Media: Trust yang Tergerus Perlahan
 
-Kepercayaan publik terhadap media arus utama di Indonesia terus menurun. Survei Litbang Kompas April 2026 mencatat hanya 44% responden percaya pada media arus utama, turun dari 51.6% di September 2025. Dalam empat titik pengukuran selama setahun, trennya konsisten menurun: 46.7% (Jul 2025), 51.6% (Sep 2025), 49.1% (Jan 2026), 44% (Apr 2026).
+Survei Litbang Kompas April 2026 mencatat hanya 44% responden percaya pada media arus utama, turun dari 51.6% di September 2025. Dalam empat titik pengukuran selama setahun, tren Litbang Kompas konsisten menurun: 46.7% (Jul 2025), 51.6% (Sep 2025), 49.1% (Jan 2026), 44% (Apr 2026).
 
-Data internasional memperkuat gambaran ini. Reuters Institute Digital News Report menempatkan indeks kepercayaan terhadap media di Indonesia pada rentang 36-39% dalam lima tahun terakhir. Angka ini lebih rendah dari survei Litbang Kompas karena perbedaan metodologi dan definisi "kepercayaan", tapi keduanya menunjukkan arah yang sama: media kehilangan kepercayaan perlahan tapi konsisten.
+Data internasional memperkuat gambaran ini. Reuters Institute Digital News Report menempatkan indeks kepercayaan terhadap media di Indonesia pada rentang 36-39% dalam lima tahun terakhir. Angka Reuters Institute ini lebih rendah dari survei Litbang Kompas karena perbedaan metodologi dan definisi "kepercayaan", tapi keduanya menunjukkan arah yang sama: media kehilangan kepercayaan perlahan tapi konsisten.
 
-Riset Communication students UIN Tulungagung yang dipublikasi di jurnal Alamtara 2026 memberikan konteks kenapa. Dari 51 responden usia 18-30 tahun, 78.4% menjadikan media sosial sebagai channel informasi utama. Trust pada media alternatif (47.1%) lebih tinggi dari media mainstream (25.5%). Alasan tidak percaya mainstream: intervensi pemilik modal 72.5% dan ketergantungan politik 56.9%.
+Riset Communication students UIN Tulungagung yang dipublikasi di jurnal Alamtara 2026 memberikan konteks kenapa. Dari 51 responden usia 18-30 tahun, riset UIN ini mencatat 78.4% menjadikan media sosial sebagai channel informasi utama. Riset UIN menemukan trust pada media alternatif (47.1%) lebih tinggi dari media mainstream (25.5%). Alasan tidak percaya mainstream menurut riset UIN: intervensi pemilik modal 72.5% dan ketergantungan politik 56.9%.
 
-Gen Z tidak menolak informasi. Mereka menolak cara informasi dibungkus. Ketika media arus utama terlihat membawa agenda pemilik modal atau partisan politik, Gen Z pindah ke platform lain. Mereka lebih percaya sumber dari lingkar terdekat: keluarga, teman, akun independen yang sudah teruji konsistensinya. Survei Litbang Kompas mencatat 17.6% responden mempercayai lingkup sosial terdekat sebagai sumber informasi, dan hanya 6.4% yang mempercayai influencer media sosial. Jadi bukan Gen Z percaya influencer. Mereka percaya lingkar mereka sendiri.
+Gen Z tidak menolak informasi. Mereka menolak cara informasi dibungkus. Ketika media arus utama terlihat membawa agenda pemilik modal atau partisan politik, Gen Z pindah ke platform lain. Mereka lebih percaya sumber dari lingkar terdekat: keluarga, teman, akun independen yang sudah teruji konsistensinya. Survei Litbang Kompas mencatat 17.6% responden mempercayai lingkup sosial terdekat sebagai sumber informasi, dan hanya 6.4% yang mempercayai influencer media sosial menurut survei yang sama. Jadi bukan Gen Z percaya influencer. Mereka percaya lingkar mereka sendiri.
 
 ## Korporasi: Loyalitas yang Dikhianati
 
-Trust Barometer Edelman 2026 menunjukkan employer dipercaya 92% oleh karyawan, dan bisnis secara umum 80%. Angka tertinggi di antara semua institusi. Tapi kepercayaan ini pun terkonsentrasi di mereka yang punya pekerjaan stabil. Bagi Gen Z yang menghadapi PHK massal, kontrak tanpa kepastian, dan gig economy tanpa jaring pengaman, cerita tentang "perusahaan keluarga" terdengar seperti lelucon.
+Trust Barometer Edelman 2026 menunjukkan employer dipercaya 92% oleh karyawan, dan bisnis secara umum 80% menurut Edelman. Angka tertinggi di antara semua institusi. Tapi kepercayaan ini pun terkonsentrasi di mereka yang punya pekerjaan stabil. Bagi Gen Z yang menghadapi PHK massal, kontrak tanpa kepastian, dan gig economy tanpa jaring pengaman, cerita tentang "perusahaan keluarga" terdengar seperti lelucon.
 
 Kementerian Ketenagakerjaan mencatat 80.000 orang terkena PHK sepanjang 2025. Gelombang PHK merambah media besar seperti Kompas TV, CNN Indonesia, dan Republika di awal 2025. Dewan Pers mencatat sekitar 1.200 jurnalis dan pekerja media di-PHK pada 2023-2024. Gen Z melihat ini dan belajar satu hal: perusahaan tidak punya loyalitas, jadi kenapa harus balas loyal?
 
-Artikel TAM sebelumnya sudah membahas fenomena ini. [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) menunjukkan 60% Gen Z quiet quitting, 68% karena lack of work-life balance. [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) menunjukkan 96% karyawan terbuka pindah kerja, 54% Gen Z ingin resign. Bukan Gen Z yang tidak loyal. Sistem kerja yang tidak memberi alasan untuk setia.
+Artikel TAM sebelumnya sudah membahas fenomena ini. [Quiet Quitting Bukan Malas, Sistem Kerja yang Tidak Mau Bayar Hati](/artikel/quiet-quitting-bukan-malas-sistem-kerja-yang-tidak-mau-bayar-hati) menunjukkan data 60% Gen Z quiet quitting, 68% karena lack of work-life balance. [96% Terbuka Pindah: Bukan Loyalitas yang Mati](/artikel/96-persen-terbuka-pindah-bukan-loyalitas-yang-mati) menunjukkan data 96% karyawan terbuka pindah kerja, 54% Gen Z ingin resign. Bukan Gen Z yang tidak loyal. Sistem kerja yang tidak memberi alasan untuk setia.
 
-## Insular Trust: Gen Z Percaya, Tapi Hanya pada Lingkar Terdekat
+## Sistem Kepercayaan Alternatif
 
-Edelman Trust Barometer 2026 memperkenalkan konsep insular trust: keengganan mempercayai orang dengan nilai, latar belakang, atau sumber informasi yang berbeda. Di Indonesia, 66% masyarakat menunjukkan pola ini. Kepercayaan tidak hilang, tapi menyempit ke lingkar yang lebih kecil: keluarga, teman, komunitas yang sepaham.
+Edelman Trust Barometer 2026 memperkenalkan konsep insular trust: keengganan mempercayai orang dengan nilai, latar belakang, atau sumber informasi yang berbeda. Di Indonesia, data Edelman mencatat 66% masyarakat menunjukkan pola ini. Kepercayaan tidak hilang, tapi menyempit ke lingkar yang lebih kecil: keluarga, teman, komunitas yang sepaham.
 
 Riset Franco dan Salman (2026) dari Universitas Tarumanegara, dipublikasi di jurnal Koneksi, menganalisis fenomena "Kabur Aja Dulu" sebagai manifestasi krisis kepercayaan Gen Z. Menggunakan framework Situational Crisis Communication Theory dari Coombs dan Encoding/Decoding dari Stuart Hall, penelitian ini menemukan Gen Z memberi atribusi tanggung jawab besar kepada pemerintah, diperburuk oleh reputasi negatif, kasus korupsi, dan komunikasi krisis yang dinilai defensif. Banyak partisipan juga melihat migrasi sebagai pilihan rasional akibat keterbatasan peluang dan kualitas kebijakan dalam negeri.
 
@@ -120,32 +120,32 @@ Ini bukan apatis. Ini adaptasi. Ketika institusi formal tidak bisa dipercaya, Ge
 
 ## Bukan Skeptis, Rasional
 
-Pola yang muncul dari semua data ini konsisten. Kawula17: 49% tidak percaya pemerintah, 52% sebut korupsi. ISEAS: 53.9% nilai politik buruk, tertinggi di ASEAN. IMGR: 63% sebut korupsi alasan tidak percaya lembaga politik. Edelman: 66% insular trust, trust gap 26 poin. Litbang Kompas: trust media 44% dan turun. Reuters Institute: 36-39% dalam lima tahun.
+Pola yang muncul dari semua data ini konsisten. Data Kawula17: 49% tidak percaya pemerintah, 52% sebut korupsi. Data ISEAS: 53.9% nilai politik buruk, tertinggi di ASEAN. Data IMGR: 63% sebut korupsi alasan tidak percaya lembaga politik. Data Edelman: 66% insular trust, trust gap 26 poin. Data Litbang Kompas: trust media 44% dan turun. Data Reuters Institute: 36-39% dalam lima tahun.
 
 Setiap institusi punya track record yang gagal. Pemerintah: korupsi yang tidak pernah berhenti, janji yang diingkari, ekonomi yang tidak merata. Media: bias pemilik modal, partisan politik, trust yang tergerus. Korporasi: PHK massal, loyalitas satu arah, gig economy tanpa perlindungan. Gen Z melihat semua ini dan membuat kesimpulan logis: institusi yang sudah membuktikan tidak bisa dipercaya, tidak bisa dipercaya.
 
 [Generasi Stroberi: Label untuk Sistem yang Gagal](/artikel/generasi-stroberi-label-untuk-sistem-yang-gagal) membahas bagaimana label negatif untuk Gen Z sebenarnya adalah proyeksi kegagalan sistem. Gen Z disebut apatis, padahal mereka rasional. Disebut sinis, padahal mereka baca data. Disebut tidak loyal, padahal sistem yang tidak memberi alasan untuk setia. Seperti [Gen Z Doomerism: Pesimis Bukan Depresi, Mereka Baca Datanya](/artikel/gen-z-doomerism-pesimis-bukan-depresi-mereka-baca-datanya), pesimisme Gen Z bukan pathology. Itu epistemology. Mereka tahu sesuatu yang generasi sebelumnya tidak mau akui.
 
-## Institusi yang Harus Membuktikan, Bukan Gen Z yang Harus Percaya
+## Diagnosa, Bukan Penyakit
 
-Jadi bukan Gen Z yang harus belajar percaya lagi. Institusi yang harus belajar jadi terpercaya. Kepercayaan tidak diberikan secara otomatis hanya karena status institusional. Kepercayaan dibangun melalui konsistensi, transparansi, dan hasil nyata. Selama korupsi terus marak, media terus bias, dan korporasi terus PHK tanpa tanggung jawab, jangan salahkan Gen Z yang memilih tidak percaya.
+Kepercayaan tidak diberikan secara otomatis hanya karena status institusional. Kepercayaan dibangun melalui konsistensi, transparansi, dan hasil nyata. Selama korupsi terus marak, media terus bias, dan korporasi terus PHK tanpa tanggung jawab, jangan salahkan Gen Z yang memilih tidak percaya.
 
-49% anak muda Indonesia tidak percaya pemerintah. 53.9% menilai politik buruk. 66% enggan percaya orang berbeda pandahan. Angka-angka ini bukan gejala generasi yang rusak. Angka-angka ini adalah diagnosis. Dan yang butuh perawatan bukan Gen Z, tapi institusi yang didiagnosis tidak terpercaya oleh mereka yang seharusnya jadi generasi paling optimis.
+Data Kawula17 mencatat 49% anak muda Indonesia tidak percaya pemerintah, data ISEAS menunjukkan 53.9% menilai politik buruk, dan Edelman melaporkan 66% enggan percaya orang berbeda pandangan. Angka-angka ini bukan gejala generasi yang rusak. Angka-angka ini adalah diagnosis. Dan yang butuh perawatan bukan Gen Z, tapi institusi yang didiagnosis tidak terpercaya oleh mereka yang seharusnya jadi generasi paling optimis.
 
 ## FAQ
 
 ### Kenapa Gen Z Indonesia tidak percaya pemerintah?
 
-Survei Kawula17 Q2 2026 menunjukkan 49% anak muda usia 17-35 tahun tidak yakin terhadap pemerintah, naik dari 32% di kuartal sebelumnya. Alasan utama: korupsi pejabat (52%), ekonomi memburuk (41%), pejabat tidak kompeten (36%), dan ketidakpastian hukum (28%). Data IMGR 2026 memperkuat: 63% Gen Z dan Milenial menyebut korupsi sebagai alasan tidak percaya lembaga politik.
+Survei Kawula17 Q2 2026 menunjukkan 49% anak muda usia 17-35 tahun tidak yakin terhadap pemerintah, naik dari data Kawula17 Q1 32% di kuartal sebelumnya. Alasan utama menurut survei Kawula17: korupsi pejabat (52%), ekonomi memburuk (41%), pejabat tidak kompeten (36%), dan ketidakpastian hukum (28%). Data IMGR 2026 memperkuat: 63% Gen Z dan Milenial menyebut korupsi sebagai alasan tidak percaya lembaga politik.
 
 ### Apa itu trust issue Gen Z?
 
-Trust issue Gen Z adalah krisis kepercayaan terhadap institusi formal (pemerintah, media, korporasi, lembaga politik) yang didorong oleh pengalaman dan data, bukan sikap sinis yang irasional. Edelman Trust Barometer 2026 mencatat 66% masyarakat Indonesia punya insular trust mindset, enggan percaya orang berbeda pandangan. Survei ISEAS menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi di enam negara ASEAN.
+Trust issue Gen Z adalah krisis kepercayaan terhadap institusi formal (pemerintah, media, korporasi, lembaga politik) yang didorong oleh pengalaman dan data, bukan sikap sinis yang irasional. Data Edelman Trust Barometer 2026 mencatat 66% masyarakat Indonesia punya insular trust mindset, enggan percaya orang berbeda pandangan. Survei ISEAS menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi di enam negara ASEAN.
 
 ### Bagaimana krisis kepercayaan Gen Z mempengaruhi media?
 
-Survei Litbang Kompas April 2026 mencatat kepercayaan media arus utama turun ke 44% dari 51.6% di September 2025. Reuters Institute melaporkan trust media Indonesia di rentang 36-39% selama lima tahun terakhir. Riset UIN Tulungagung 2026 menemukan trust pada media alternatif (47.1%) lebih tinggi dari media mainstream (25.5%), dengan alasan utama: intervensi pemilik modal (72.5%) dan ketergantungan politik (56.9%).
+Survei Litbang Kompas April 2026 mencatat kepercayaan media arus utama turun ke 44% dari data Litbang Kompas 51.6% di September 2025. Reuters Institute melaporkan trust media Indonesia di rentang 36-39% selama lima tahun terakhir. Riset UIN Tulungagung 2026 menemukan trust pada media alternatif (47.1%) lebih tinggi dari media mainstream (25.5%), dengan alasan utama menurut riset UIN: intervensi pemilik modal (72.5%) dan ketergantungan politik (56.9%).
 
 ### Apakah Gen Z Indonesia paling pesimis di ASEAN?
 
-Ya. Survei ISEAS-Yusof Ishak Institute terhadap 3.081 mahasiswa di enam negara ASEAN menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi dibandingkan Thailand (47.3%), Filipina (41.9%), Malaysia, Singapura (15.1% nilai buruk), dan Vietnam. Hanya 15.3% anak muda Indonesia yang menilai situasi politik baik, dibandingkan 72.4% di Singapura dan 68.2% di Vietnam.
+Ya. Survei ISEAS-Yusof Ishak Institute terhadap 3.081 mahasiswa di enam negara ASEAN menunjukkan 53.9% anak muda Indonesia menilai situasi politik buruk, tertinggi dibandingkan data ISEAS Thailand (47.3%), Filipina (41.9%), Malaysia, Singapura (15.1% nilai buruk), dan Vietnam. Hanya 15.3% anak muda Indonesia yang menilai situasi politik baik menurut survei ISEAS, dibandingkan 72.4% di Singapura dan 68.2% di Vietnam.

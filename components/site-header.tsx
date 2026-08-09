@@ -80,8 +80,8 @@ export function SiteHeader() {
 
           <nav
             className={cn(
-              'hidden items-center whitespace-nowrap transition-all duration-300 ease-out md:flex',
-              isCompact ? 'pointer-events-none opacity-0' : 'opacity-100'
+              'hidden items-center whitespace-nowrap overflow-hidden transition-all duration-300 ease-out md:flex',
+              isCompact ? 'max-w-0 opacity-0' : 'max-w-none gap-8 opacity-100'
             )}
             aria-label="Navigasi utama"
           >
