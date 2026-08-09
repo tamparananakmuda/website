@@ -100,19 +100,20 @@ export async function analyzeCognitiveState(
     ? history.map(h => `${h.role === 'user' ? 'User' : 'TAMI'}: ${h.content.slice(0, 1000)}`).join('\n').slice(0, 8000)
     : 'Tidak ada riwayat percakapan sebelumnya.';
 
-  const prompt = `Anda adalah TAMI (Tamparan Anak Muda Intelligence) Cognitive Diagnosis Engine.
-Tugas Anda adalah menganalisis curhatan, keluhan, atau pertanyaan anak muda Indonesia secara mendalam, realistis, dan tajam (tanpa sensor manis, berikan tamparan realita yang jujur).
+  const prompt = `Lo TAMI Cognitive Diagnosis Engine. Tugas lo: analisis curhatan, keluhan, atau pertanyaan anak muda Indonesia secara mendalam, realistis, dan tajam. Tanpa sensor manis, kasih tamparan realita yang jujur.
 
-Riwayat Percakapan Sebelumnya:
+---DATA RIWAYAT---
 ${historyText}
 
-Pesan Terakhir Pengguna: "${query}"
+---DATA PESAN TERAKHIR---
+"${query}"
 
-Analisislah input di atas secara kontekstual dengan mempertimbangkan perkembangan percakapan dari riwayat sebelumnya. Hasilkan output dalam format JSON dengan struktur berikut:
+---INSTRUKSI---
+Analisis input di atas secara kontekstual, pertimbangin perkembangan percakapan dari riwayat. Output WAJIB JSON valid dengan struktur:
 {
   "mindState": {
     "primaryEmotion": "Emosi dominan saat ini (misal: Cemas, Frustrasi, FOMO, dll)",
-    "resilienceScore": Skor ketahanan mental saat ini menghadapi masalah dari 1-10 (angka),
+    "resilienceScore": Skor ketahanan mental saat ini dari 1-10 (angka),
     "crisisDetected": boolean (true jika ada indikasi menyakiti diri/bunuh diri secara tersirat),
     "coreDilemma": "Dilema inti atau akar masalah utama pengguna saat ini"
   },
@@ -133,7 +134,7 @@ Analisislah input di atas secara kontekstual dengan mempertimbangkan perkembanga
 
   try {
     const buildMessages = (errorFeedback?: string) => [
-      { role: 'system' as const, content: 'Anda wajib merespons dalam format JSON yang valid.' },
+      { role: 'system' as const, content: 'Lo TAMI Cognitive Engine. Analisis psikologis anak muda Indonesia. Output WAJIB JSON valid.' },
       { role: 'user' as const, content: errorFeedback ? `${prompt}\n\n${errorFeedback}` : prompt },
     ];
 

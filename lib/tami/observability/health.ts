@@ -82,17 +82,16 @@ export function generateFallbackResponse(query: string): {
   
   if (q.includes('karir') || q.includes('kerja') || q.includes('resign') || q.includes('gaji')) {
     return {
-      conversationalReply: `Saya mendengar kamu sedang memikirkan tentang karir. Ini topik yang penting.
+      conversationalReply: `Lo lagi mikirin soal karir ya. Gue lagi gangguan koneksi nih, tapi ini yang bisa lo pertimbangin:
 
-Beberapa hal yang bisa kamu pertimbangkan:
-- **Dana darurat**: Pastikan punya 3-6 bulan pengeluaran sebelum mengambil keputusan besar seperti resign
-- **Skill audit**: Identifikasi skill yang sudah kamu punya dan yang perlu dikembangkan
-- **Market research**: Cek peluang di industri yang kamu tuju
+- **Dana darurat**: Pastikan punya 3-6 bulan pengeluaran sebelum ambil keputusan besar kayak resign
+- **Skill audit**: Identifikasi skill yang lo udah punya dan yang perlu dikembangin
+- **Market research**: Cek peluang di industri yang lo tuju
 
-Untuk analisis yang lebih mendalam, kamu bisa membaca artikel kami tentang karir. Atau konsultasi langsung dengan tim TAM via WhatsApp jika butuh diskusi lebih intensif.`,
+Buat analisis lebih dalem, lo bisa baca artikel TAM soal karir. Atau ngobrol langsung sama tim TAM via WhatsApp kalau butuh diskusi lebih intensif.`,
       suggestions: [
-        'Bagaimana cara negosiasi gaji?',
-        'Apakah aku harus resign tanpa dana darurat?',
+        'Gimana cara negosiasi gaji?',
+        'Apakah gue harus resign tanpa dana darurat?',
         'Gimana cara ngadepin burnout karir?',
       ],
       isDegraded: true,
@@ -101,18 +100,17 @@ Untuk analisis yang lebih mendalam, kamu bisa membaca artikel kami tentang karir
   
   if (q.includes('uang') || q.includes('finansial') || q.includes('hutang') || q.includes('pinjol') || q.includes('tabungan')) {
     return {
-      conversationalReply: `Masalah finansial memang bisa sangat menekan. Mari kita uraikan.
+      conversationalReply: `Masalah finansial emang berat. Gue lagi gangguan koneksi nih, tapi ini yang bisa lo lakuin sekarang:
 
-Langkah pertama yang bisa kamu lakukan:
-- **Audit pengeluaran**: Catat semua pengeluaran bulanan, identifikasi yang bisa dipangkas
+- **Audit pengeluaran**: Catat semua pengeluaran bulanan, bedah mana yang bisa dipangkas
 - **Prioritas hutang**: Lunasi hutang bunga tertinggi dulu (biasanya pinjol)
-- **Dana darurat**: Targetkan minimal 3 bulan pengeluaran sebagai buffer
+- **Dana darurat**: Target minimal 3 bulan pengeluaran sebagai buffer
 
-Kami punya banyak artikel tentang finansial yang bisa membantu. Kalau butuh diskusi lebih personal, tim TAM siap membantu via WhatsApp.`,
+Gue punya banyak artikel soal finansial yang bisa bantu lo. Kalau butuh diskusi lebih personal, tim TAM siap via WhatsApp.`,
       suggestions: [
-        'Berapa besar dana darurat yang wajib kupunya?',
+        'Berapa besar dana darurat yang wajib gue punya?',
         'Gimana cara stop jebakan konsumerisme?',
-        'Bagaimana membagi gaji untuk sandwich generation?',
+        'Gimana membagi gaji buat sandwich generation?',
       ],
       isDegraded: true,
     };
@@ -120,31 +118,31 @@ Kami punya banyak artikel tentang finansial yang bisa membantu. Kalau butuh disk
   
   if (q.includes('mental') || q.includes('stress') || q.includes('cemas') || q.includes('sedih') || q.includes('burnout')) {
     return {
-      conversationalReply: `Terima kasih sudah berbagi. Yang kamu rasakan valid dan penting.
+      conversationalReply: `Lo nggak sendirian. Yang lo rasakan itu valid, dan penting buat diakui.
 
-Beberapa hal yang bisa membantu saat ini:
+Gue lagi gangguan koneksi nih, tapi ini yang bisa lo lakuin sekarang:
 - **Breathe**: Tarik napas dalam 4 detik, tahan 4 detik, hembus 6 detik. Ulangi 5 kali
-- **Grounding**: Sebutkan 5 hal yang kamu lihat, 4 yang kamu dengar, 3 yang kamu sentuh
-- **Small steps**: Fokus pada satu hal kecil yang bisa kamu lakukan hari ini
+- **Grounding**: Sebutin 5 hal yang lo lihat, 4 yang lo dengar, 3 yang lo sentuh
+- **Small steps**: Fokus satu hal kecil yang bisa lo lakuin hari ini
 
-Jika yang kamu rasakan sangat berat, jangan ragu menghubungi **Healing119.id** atau **119 ext 8** untuk bicara dengan profesional. Anda tidak sendirian.`,
+Kalau yang lo rasain berat banget, jangan ragu hubungi **Healing119.id** atau **119 ext 8** buat ngobrol sama profesional. Lo worth it buat dapet bantuan.`,
       suggestions: [
         'Gimana cara kelola kecemasan soal masa depan?',
-        'Apa tanda-tanda burnout yang perlu saya waspadai?',
-        'Bagaimana membangun ketahanan mental?',
+        'Apa tanda-tanda burnout yang perlu gue waspadai?',
+        'Gimana bangun ketahanan mental?',
       ],
       isDegraded: true,
     };
   }
   
   return {
-    conversationalReply: `Terima kasih sudah bertanya. Saat ini saya sedang mengalami gangguan koneksi ke sistem analisis saya, tapi saya tetap di sini untuk mendengarkan.
+    conversationalReply: `Lo, gue lagi gangguan koneksi nih. Tapi gue tetap di sini, nggak kemana.
 
-Bisa kamu ceritakan lebih spesifik tentang situasi yang kamu hadapi? Sementara itu, kamu juga bisa menjelajahi artikel-artikel kami yang relevan atau menghubungi tim kami via WhatsApp untuk diskusi langsung.`,
+Cerita aja lebih spesifik, situasi lo lagi gimana? Sementara itu, lo juga bisa baca-baca artikel kami yang relevan atau ngobrol langsung sama tim TAM via WhatsApp.`,
     suggestions: [
-      'Apa langkah pertama untuk benahi finansialku?',
-      'Bagaimana menemukan arah karir yang rasional?',
-      'Gimana cara bangun ketahanan mental di tengah tekanan?',
+      'Langkah pertama benahin finansial gue gimana?',
+      'Gimana nemuin arah karir yang rasional?',
+      'Cara bangun ketahanan mental di tengah tekanan?',
     ],
     isDegraded: true,
   };

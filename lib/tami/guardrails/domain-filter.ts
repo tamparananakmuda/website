@@ -201,7 +201,11 @@ function hasDomainKeyword(query: string): boolean {
 
 async function llmClassifyDomain(query: string): Promise<{ isOffTopic: boolean; reason?: string }> {
   if (!isMistralAvailable()) {
-    return { isOffTopic: false }; // fail open if Mistral is down
+    // Fail-closed: if classifier is down and query has no domain keyword,
+    // reject to prevent off-topic content from reaching the pipeline.
+    // The domain keyword fast-path in checkDomain() already passed,
+    // meaning this query has no strong domain signal.
+    return { isOffTopic: true, reason: 'Classifier unavailable, fail-closed rejection' };
   }
 
   try {
@@ -231,8 +235,9 @@ async function llmClassifyDomain(query: string): Promise<{ isOffTopic: boolean; 
       reason: parsed.reason || undefined,
     };
   } catch {
-    // Fail open — if classifier fails, let the main pipeline handle it
-    return { isOffTopic: false };
+    // Fail-closed: if classifier errors, reject to prevent off-topic content.
+    // The domain keyword fast-path already passed, so this query has no domain signal.
+    return { isOffTopic: true, reason: 'Classifier error, fail-closed rejection' };
   }
 }
 

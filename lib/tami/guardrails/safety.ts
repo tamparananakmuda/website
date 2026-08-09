@@ -99,6 +99,53 @@ const EXPLOITATION_PATTERNS = [
   /\b(sex|sexually)\b.*\b(exploit|abuse|minor)\b/i,
 ];
 
+// ─── Prompt Injection Detection ───────────────────────────
+
+const INJECTION_PATTERNS = [
+  // English injection attempts
+  /ignor(e|re)\s+(all\s+)?previous\s+instructions?/i,
+  /disregard\s+(all\s+)?(previous|prior)\s+instructions?/i,
+  /you\s+are\s+now\s+(in\s+)?developer\s+mode/i,
+  /act\s+as\s+if\s+you\s+have\s+no\s+restrictions/i,
+  /reveal\s+(your\s+)?(system\s+)?prompt/i,
+  /show\s+me\s+your\s+(system\s+)?prompt/i,
+  /what\s+(is|are)\s+your\s+(system\s+)?instructions?/i,
+  /bypass\s+(safety|content|all)\s+(filter|guard|restriction)/i,
+  /override\s+(your|the)\s+(system|safety|content)\s+(prompt|filter|guard)/i,
+  /you\s+are\s+now\s+(a\s+)?(different|new)\s+(ai|assistant|model)/i,
+  /pretend\s+you\s+are\s+(not|a\s+different)/i,
+  /enter\s+(jailbreak|dan|developer|root)\s+mode/i,
+  /do\s+anything\s+now/i,
+  // Indonesian injection attempts
+  /lupakan\s+(semua\s+)?instruksi/i,
+  /lupakan\s+(semua\s+)?aturan/i,
+  /abaikan\s+(semua\s+)?instruksi/i,
+  /abaikan\s+(semua\s+)?aturan/i,
+  /jangan\s+ikuti\s+aturan/i,
+  /tunjukkan?\s+(system\s+)?prompt/i,
+  /tunjukkan?\s+instruksi/i,
+  /apa\s+instruksi\s+(lo|kamu|kau)\b/i,
+  /ubah\s+persona/i,
+  /jadi\s+(ai|chatgpt|gpt|asisten)\s+(lain)?/i,
+  /mode\s+developer/i,
+  /bypass\s+(keamanan|filter|safety)/i,
+  /jailbreak/i,
+];
+
+/**
+ * Detect prompt injection attempts in user input.
+ * Returns true if injection pattern is matched.
+ */
+export function detectPromptInjection(input: string): boolean {
+  const trimmed = input.trim();
+  for (const pattern of INJECTION_PATTERNS) {
+    if (pattern.test(trimmed)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 /**
  * Moderate user input before processing.
  */
@@ -107,6 +154,10 @@ export function moderateInput(input: string): ModerationResult {
   
   if (trimmed.length < 3) {
     return { allowed: false, reason: 'Pesan terlalu pendek', category: 'too_short' };
+  }
+
+  if (detectPromptInjection(trimmed)) {
+    return { allowed: false, reason: 'Percobaan prompt injection terdeteksi', category: 'exploitation' };
   }
   
   for (const pattern of SPAM_PATTERNS) {
