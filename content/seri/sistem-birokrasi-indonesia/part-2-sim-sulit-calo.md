@@ -91,7 +91,7 @@ Dan ada masalah lain: helpdesk Digital Korlantas hanya buka Senin-Jumat, 09:00-1
 
 ## Calo SIM: Ekonomi yang Diciptakan oleh Sistem
 
-Calo SIM bukan penyakit terpisah dari sistem. Calo SIM adalah produk sampingan dari sistem yang mempersulit. 29,9% responden IMGR 2027 memilih jalur alternatif karena melihat orang sekitar melakukan hal sama. Norma sosial sudah terbentuk: pakai calo itu bukan pelanggaran, itu efisiensi.
+Calo bukan penyakit terpisah dari sistem, tapi produk sampingan dari sistem yang mempersulit. 29,9% responden IMGR 2027 memilih jalur alternatif karena melihat orang sekitar melakukan hal sama. Norma sosial sudah terbentuk: pakai calo itu bukan pelanggaran, itu efisiensi.
 
 Hapus calo tanpa perbaiki sistem ujian = buang sampah tanpa tutup tempatnya. Calo berikutnya akan muncul karena permintaan tidak hilang. Selama ujian resmi dianggap sulit, tidak konsisten, dan memakan waktu, orang akan cari jalan lain. Dan jalan lain itu punya harga yang lebih murah dari biaya waktu yang dihabiskan untuk jalur resmi.
 

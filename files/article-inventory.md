@@ -169,6 +169,7 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 157 | Pungli Indonesia: Tarif Resmi Rp50rb Jadi Rp10 Juta, Sistem yang Tidak Dibiayai (Seri Birokrasi P6) | sistem-birokrasi-indonesia-part-6-pungli-biaya-tidak-resmi | Kehidupan | Sistem Birokrasi | data | 2026-10-06 (scheduled 08:00 WIB) |
 | 158 | E-Government Indonesia: Solusi Digital yang Crash, Birokrasi yang Tidak Berubah (Seri Birokrasi P7) | sistem-birokrasi-indonesia-part-7-e-government-crash | Kehidupan | Sistem Birokrasi | data | 2026-10-07 (scheduled 08:00 WIB) |
 | 159 | Shift Shock Gen Z: Bukan Ekspektasi Tinggi, Realitas Kerja yang Tidak Sesuai | shift-shock-gen-z-ekspektasi-vs-realitas-kerja | Karier | Karier & Dunia Kerja | data | 2026-09-04 (scheduled 08:00 WIB) |
+| 160 | Technostress Gen Z: Bukan Lemah, Beban Digital yang Dibuat Sistem | technostress-gen-z-beban-digital-kerja-hybrid | Karier | Karier & Dunia Kerja | data | 2026-09-05 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

@@ -89,7 +89,7 @@ KemenPANRB juga melaporkan bahwa 84% pengguna akan terus menggunakan SP4N-LAPOR.
 
 ## Normalisasi Pelanggaran: 41% Merasa Netral
 
-IDN Times melaporkan temuan IMGR 2027 yang lebih mengkhawatirkan: 41% responden merasa netral saat menggunakan jalur alternatif. Hanya 2% yang menyatakan penyesalan. Artinya, konflik moral yang dulu mungkin menimbulkan rasa bersalah kini mulai berkurang. Praktik pakai calo atau "uang lancar" dianggap bagian dari realitas sehari-hari.
+IMGR 2027 menemukan temuan yang lebih mengkhawatirkan dari IDN Times: 41% responden merasa netral saat menggunakan jalur alternatif. Hanya 2% yang menyatakan penyesalan. Artinya, konflik moral yang dulu mungkin menimbulkan rasa bersalah kini mulai berkurang. Praktik pakai calo atau "uang lancar" dianggap bagian dari realitas sehari-hari.
 
 ```chart:bar
 {"title":"Alasan Gen Z & Milenial Pilih Jalur Alternatif","subtitle":"Persentase responden yang menyebut alasan ini (IMGR 2026-2027)","source":"IDN Research Institute - Indonesia Millennial and Gen Z Report 2026-2027","data":[{"name":"Jalur resmi terlalu lama","value":57.5,"fill":"#ef4444"},{"name":"Risiko terlalu besar ikut prosedur","value":31,"fill":"#f4a825"},{"name":"Orang sekitar juga begitu","value":29.9,"fill":"#3b82f6"},{"name":"Tidak yakin hasil pasti","value":28,"fill":"#a855f7"},{"name":"Keterbatasan info awal","value":26,"fill":"#22c55e"}]}
@@ -109,9 +109,9 @@ Gue pernah urus cetak ulang KTP yang chip-nya rusak. Datang ke Dukcapil pagi-pag
 
 ## Insight
 
-Birokrasi KTP tidak gagal. Birokrasi berfungsi seperti yang dirancang. Sistem yang membuat urus KTP butuh hari libur adalah sistem yang menempatkan beban waktu pada individu, bukan pada pemerintah. Negara tidak rugi waktu saat kamu antri 3 jam. Kamu yang rugi.
+Birokrasi KTP tidak gagal, birokrasi berfungsi seperti yang dirancang. Sistem yang membuat urus KTP butuh hari libur adalah sistem yang menempatkan beban waktu pada individu, bukan pada pemerintah. Negara tidak rugi waktu saat kamu antri 3 jam. Kamu yang rugi.
 
-Dan ketika 57% generasi muda memilih jalur alternatif, bukan karena mereka tidak tahu aturan. Mereka tahu. Mereka hitung. Dan hitungannya tidak masuk akal. Cuti kerja untuk urus KTP = kehilangan pendapatan. Bayar calo Rp200rb = lebih murah dari cuti. Sistem yang dirancang untuk melayani justru menciptakan pasar yang lebih efisien untuk menghindarinya.
+Dan ketika 57% generasi muda memilih jalur alternatif, bukan karena mereka tidak tahu aturan. Mereka tahu dan mereka hitung, dan hitungannya tidak masuk akal. Cuti kerja untuk urus KTP = kehilangan pendapatan. Bayar calo Rp200rb = lebih murah dari cuti. Sistem yang dirancang untuk melayani justru menciptakan pasar yang lebih efisien untuk menghindarinya.
 
 Ini pola yang sama dengan [generasi stroberi](/artikel/generasi-stroberi-label-untuk-sistem-yang-gagal): sistem yang gagal melayani lalu menyalahkan yang dilayani. Dan pola yang sama dengan [adulting yang dipaksa](/artikel/adulting-bukan-soal-gede-sistem-yang-paksa-kamu-mandiri-sebelum-siap): kamu harus mandiri mengurus dokumen yang negara seharusnya mudahkan, tapi tidak.
 
