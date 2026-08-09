@@ -11,7 +11,6 @@ import { ChatContentRenderer } from './chat-content-renderer';
 import { StreamingMessage } from './streaming-message';
 import { useTamiStream } from './use-tami-stream';
 import { FeedbackButtons } from './feedback-buttons';
-import { FollowUpSuggestions } from './follow-up-suggestions';
 import { saveMoodEntry } from './mood-tracker';
 import { useVoiceInput } from './use-voice-input';
 import { OnboardingMessage, hasSeenOnboarding, markOnboardingSeen } from './onboarding-message';
@@ -499,14 +498,6 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
                     {/* Feedback buttons (only after streaming complete and non-empty) */}
                     {msg.content && !sseStreaming && !hasActiveResponse && (
                       <FeedbackButtons messageId={msg.id} query={messages[messages.indexOf(msg) - 1]?.content || ''} reply={msg.content} />
-                    )}
-
-                    {msg.content && !sseStreaming && !hasActiveResponse && msg.cognitiveData && (
-                      <FollowUpSuggestions
-                        cognitiveData={msg.cognitiveData}
-                        userQuery={messages[messages.indexOf(msg) - 1]?.content || ''}
-                        onSuggestionClick={(text) => setInput(text)}
-                      />
                     )}
 
                     {/* WhatsApp Escalation Button - only after streaming complete */}
