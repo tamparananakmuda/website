@@ -86,6 +86,7 @@ export function Hero({ className }: HeroProps) {
               <div className="w-full sm:w-auto hero-btn-hover">
                 <Link
                   href="/tentang"
+                  prefetch={false}
                   className="flex w-full items-center justify-center gap-1 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white shadow-xl backdrop-blur-sm transition-colors hover:bg-white/20 sm:px-[26px] sm:py-[14px]"
                 >
                   Tentang Kami

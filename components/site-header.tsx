@@ -95,6 +95,7 @@ export function SiteHeader() {
               <Link
                 key={link.name}
                 href={link.href}
+                prefetch={false}
                 className={cn(
                   'text-sm font-semibold transition-colors hover:text-foreground',
                   pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
@@ -134,6 +135,7 @@ export function SiteHeader() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  prefetch={false}
                   className={cn(
                     'rounded-lg px-4 py-3 text-base font-medium transition-colors hover:bg-secondary',
                     pathname === link.href ? 'text-foreground bg-secondary' : 'text-foreground'

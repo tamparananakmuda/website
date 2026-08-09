@@ -30,6 +30,10 @@
         {
           "key": "X-DNS-Prefetch-Control",
           "value": "on"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=60, stale-while-revalidate=300"
         }
       ]
     },
@@ -39,6 +43,10 @@
         {
           "key": "X-Robots-Tag",
           "value": "noindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
         }
       ]
     }

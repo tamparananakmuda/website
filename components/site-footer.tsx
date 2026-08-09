@@ -22,19 +22,19 @@ export function SiteFooter() {
               Konten
             </p>
             <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi konten">
-              <Link href="/artikel" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/artikel" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Artikel
               </Link>
-              <Link href="/story" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/story" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Story
               </Link>
-              <Link href="/whitepaper" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/whitepaper" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Whitepaper
               </Link>
-              <Link href="/seri" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/seri" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Seri
               </Link>
-              <Link href="/sosial" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/sosial" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 TAM+
               </Link>
             </nav>
@@ -45,16 +45,16 @@ export function SiteFooter() {
               Informasi
             </p>
             <nav className="flex flex-col gap-3 text-sm" aria-label="Navigasi informasi">
-              <Link href="/tentang" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/tentang" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Tentang
               </Link>
-              <Link href="/donasi" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/donasi" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Donasi
               </Link>
-              <Link href="/newsletter" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/newsletter" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Newsletter
               </Link>
-              <Link href="/newsletter-arsip" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href="/newsletter-arsip" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Arsip Newsletter
               </Link>
               <Link href="/rss.xml" className="text-muted-foreground transition-colors hover:text-foreground">
@@ -65,13 +65,13 @@ export function SiteFooter() {
                   Legal
                 </p>
                 <div className="flex flex-col gap-3">
-                  <Link href="/kebijakan-privasi" className="text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/kebijakan-privasi" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                     Kebijakan Privasi
                   </Link>
-                  <Link href="/syarat-ketentuan" className="text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/syarat-ketentuan" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                     Syarat Ketentuan
                   </Link>
-                  <Link href="/disclaimer" className="text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/disclaimer" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                     Disclaimer
                   </Link>
                 </div>
