@@ -10,6 +10,7 @@ import { decodeSocialId, encodeSocialId } from '@/lib/social/encode';
 
 interface Props {
   params: { id: string };
+  searchParams: { img_index?: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -74,9 +75,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const revalidate = 300;
 
-export default async function SocialPostPage({ params }: Props) {
+export default async function SocialPostPage({ params, searchParams }: Props) {
   if (params.id === 'slide') notFound();
   const decoded = decodeSocialId(params.id);
+  const initialSlideIndex = searchParams.img_index ? Math.max(0, parseInt(searchParams.img_index, 10) - 1) : 0;
   // Check slidesData first for instant direct link sharing (Instagram/TikTok style)
   const slideItem = slidesData.find((s) => 
     s.id === params.id || 
@@ -143,7 +145,7 @@ export default async function SocialPostPage({ params }: Props) {
               </div>
             </div>
 
-            <SlideGrid slideSets={slidesData} initialSelectedId={slideItem.id} />
+            <SlideGrid slideSets={slidesData} initialSelectedId={slideItem.id} initialSlideIndex={initialSlideIndex} />
           </section>
         )}
       </main>

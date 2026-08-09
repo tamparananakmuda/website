@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Layers, Play, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -137,6 +137,20 @@ function SlideGridCardWrapper({
     }
     setIsOpen(true);
   };
+
+  // Read img_index from URL on mount (for direct links to specific slide)
+  useEffect(() => {
+    if (!isOpen) return;
+    const params = new URLSearchParams(window.location.search);
+    const imgIndex = params.get('img_index');
+    if (imgIndex) {
+      const idx = parseInt(imgIndex, 10) - 1;
+      if (idx > 0) {
+        // SlideGrid will read from URL
+        window.history.replaceState(null, '', `/sosial/${encodeSocialId(set.id)}?img_index=${imgIndex}`);
+      }
+    }
+  }, [isOpen, set.id]);
 
   return (
     <>

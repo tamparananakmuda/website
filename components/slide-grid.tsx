@@ -19,6 +19,7 @@ export interface SlideSet {
 interface Props {
   slideSets: SlideSet[];
   initialSelectedId?: string;
+  initialSlideIndex?: number;
   showMoreUrl?: string;
   mode?: 'carousel' | 'modal-only';
 }
@@ -34,7 +35,7 @@ function getViewCount(set: SlideSet, index: number): string {
   return mockCounts[index % mockCounts.length];
 }
 
-export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, mode = 'carousel' }: Props) {
+export default function SlideGrid({ slideSets, initialSelectedId, initialSlideIndex = 0, showMoreUrl, mode = 'carousel' }: Props) {
   const [selectedSetIndex, setSelectedSetIndex] = useState<number | null>(() => {
     if (initialSelectedId && slideSets) {
       const foundIdx = slideSets.findIndex(
@@ -44,7 +45,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
     }
     return null;
   });
-  const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(initialSlideIndex);
   const [copied, setCopied] = useState<boolean>(false);
   const [isCaptionExpanded, setIsCaptionExpanded] = useState<boolean>(false);
   
@@ -64,6 +65,18 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
       window.history.replaceState(null, '', `/sosial/${encodeSocialId(slideSets[index].id)}`);
     }
   };
+
+  // Update URL with img_index when slide changes (Instagram-style)
+  useEffect(() => {
+    if (selectedSetIndex === null || !selectedSet) return;
+    if (typeof window === 'undefined') return;
+    const encoded = encodeSocialId(selectedSet.id);
+    if (currentSlideIndex > 0) {
+      window.history.replaceState(null, '', `/sosial/${encoded}?img_index=${currentSlideIndex + 1}`);
+    } else {
+      window.history.replaceState(null, '', `/sosial/${encoded}`);
+    }
+  }, [currentSlideIndex, selectedSetIndex, selectedSet]);
 
   const handleCloseModal = () => {
     setSelectedSetIndex(null);
@@ -90,6 +103,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
     setSelectedSetIndex(nextIdx);
     setCurrentSlideIndex(0);
     setIsCaptionExpanded(false);
+    // URL update handled by useEffect on currentSlideIndex/selectedSetIndex change
   }, [selectedSetIndex, slideSets.length]);
 
   const handlePrevSet = useCallback(() => {
@@ -98,6 +112,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
     setSelectedSetIndex(prevIdx);
     setCurrentSlideIndex(0);
     setIsCaptionExpanded(false);
+    // URL update handled by useEffect on currentSlideIndex/selectedSetIndex change
   }, [selectedSetIndex, slideSets.length]);
 
   // Touch handlers for mobile swipe
@@ -155,7 +170,10 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
 
   const copyShareLink = () => {
     if (!selectedSet) return;
-    const url = `${window.location.origin}/sosial/${encodeSocialId(selectedSet.id)}`;
+    const encoded = encodeSocialId(selectedSet.id);
+    const url = currentSlideIndex > 0
+      ? `${window.location.origin}/sosial/${encoded}?img_index=${currentSlideIndex + 1}`
+      : `${window.location.origin}/sosial/${encoded}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
