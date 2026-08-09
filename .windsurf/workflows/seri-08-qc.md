@@ -119,6 +119,11 @@ else console.log('\nCLEAN: All checks passed.');
 - [ ] Fakta terverifikasi per part
 - [ ] Konsistensi antar part dicek
 - [ ] SEO metadata valid per part
+- [ ] `readingTime` di-set di frontmatter (bukan 1, sesuai word_count / 200)
+- [ ] `seoMetaTitle` beda dari `title` per part
+- [ ] `seoMetaDescription` beda dari `excerpt` per part
+- [ ] `ogHeadline` beda dari `title`, max 50 chars per part
+- [ ] `humanSignature: true` di-set per part
 - [ ] Hook & Foreshadow formula audit per part: og_headline berbeda dari title + max 50 char, excerpt sebagai thumbnail caption max 160 char, meta description mengandung Hook + Foreshadow element max 160 char
 - [ ] Punchy Title Audit per part (20 prinsip): no formal words, no fear words, no superlatives, no "kita/kami", no clickbait pattern, no number words, no explicit FOMO, max 10 kata, ada active verb
 - [ ] Episode Hook formula terimplementasi per part (bukan generic hook)
@@ -136,8 +141,8 @@ else console.log('\nCLEAN: All checks passed.');
 
 | Severity | Definisi | Action | Contoh |
 |----------|----------|--------|--------|
-| **S1: Critical** | Tidak boleh publish | WAJIB fix | Em dash, h1, word count < 1.000, dead link, series/seriesOrder missing |
-| **S2: Major** | Kualitas terganggu | WAJIB fix | AI vocab > 3, internal links < 2, ogHeadline missing, recap/teaser missing |
+| **S1: Critical** | Tidak boleh publish | WAJIB fix | Em dash, h1, word count < 1.000, dead link, series/seriesOrder missing, readingTime missing/= 1, seoMetaTitle = title, seoMetaDescription = excerpt |
+| **S2: Major** | Kualitas terganggu | WAJIB fix | AI vocab > 3, internal links < 2, ogHeadline missing/sama dengan title, recap/teaser missing, humanSignature missing |
 | **S3: Minor** | Polish | Fix jika ada waktu | Excessive hedging, hyphenated overuse |
 | **S4: Info** | Catatan untuk humanizer | Lanjut ke 09 | Tone shift, paragraph rhythm |
 

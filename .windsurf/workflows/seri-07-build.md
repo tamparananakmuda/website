@@ -47,6 +47,17 @@ console.log('SLUG CHECK:', existsSync(filePath) ? 'FATAL: FILE EXISTS' : 'SLUG A
 - `povTag`, `tags` (array), `ogHeadline`
 - `seoMetaTitle`, `seoMetaDescription`, `seoKeywords` (array)
 - `sourceReferences` (array `{type, url, label}`)
+- `readingTime` (WAJIB, estimasi: word_count / 200, bulat ke atas)
+- `humanSignature`, `factCheckStatus`, `reviewStatus`
+
+## CRITICAL rules
+
+- `readingTime`: WAJIB set manual (estimasi: word_count / 200, bulat ke atas). Loader TIDAK auto-calculate, fallback ke 1 jika kosong
+- `seoMetaTitle`: WAJIB beda dari `title`. Jangan copy-paste title ke seoMetaTitle.
+- `seoMetaDescription`: WAJIB beda dari `excerpt`. Jangan copy-paste excerpt ke seoMetaDescription.
+- `ogHeadline`: WAJIB beda dari `title`, max 50 chars, function as hook
+- `excerpt`: MAX 160 karakter
+- `sourceReferences`: HARUS array, bukan string
 
 ## Scheduling Strategy
 
@@ -78,7 +89,8 @@ const frontmatter = {
   seoMetaTitle: article.seo_meta_title || '', seoMetaDescription: article.seo_meta_description || '',
   seoKeywords: article.seo_keywords || [],
   sourceReferences: article.source_references.map((r) => ({ type: r.type || 'link', url: r.url, label: r.label || '' })),
-  featured: article.featured || false, humanSignature: article.human_signature !== false,
+  featured: article.featured || false, readingTime: article.reading_time || Math.ceil(article.body.split(/\s+/).filter(Boolean).length / 200),
+  humanSignature: article.human_signature !== false,
   factCheckStatus: 'verified', reviewStatus: 'publish',
   isSponsored: false, sponsorName: null, sponsorUrl: null, sponsorDisclosure: null,
   isPremium: false, premiumExcerpt: null, coverImageUrl: null, coverImageAlt: null,
@@ -124,6 +136,10 @@ const issues = [];
 if (!f.series) issues.push('series is null (REQUIRED)');
 if (!f.seriesOrder) issues.push('seriesOrder is null (REQUIRED)');
 if (!f.publishedAt) issues.push('publishedAt is null');
+if (!f.readingTime || f.readingTime === 1) issues.push('readingTime missing or = 1 (REQUIRED)');
+if (f.seoMetaTitle && f.seoMetaTitle === f.title) issues.push('seoMetaTitle SAME as title');
+if (f.seoMetaDescription && f.seoMetaDescription === f.excerpt) issues.push('seoMetaDescription SAME as excerpt');
+if (f.ogHeadline && f.ogHeadline === f.title) issues.push('ogHeadline SAME as title');
 if (issues.length) { console.error('ISSUES:', issues.join(', ')); process.exit(1); }
 else console.log('All checks passed.');
 "
@@ -141,6 +157,10 @@ Update `files/article-inventory.md` per part.
 - [ ] `series` dan `seriesOrder` valid di frontmatter per part
 - [ ] Article inventory updated per part
 - [ ] SEO Metadata Validation: 6 fields pass per part
+- [ ] `readingTime` di-set di frontmatter (bukan 1, bukan default)
+- [ ] `seoMetaTitle` beda dari `title`
+- [ ] `seoMetaDescription` beda dari `excerpt`
+- [ ] `ogHeadline` beda dari `title`, max 50 chars
 - [ ] Schema Markup: Article + FAQ (jika ada) per part
 - [ ] OG Image: ogHeadline unique, max 50 chars per part
 - [ ] Internal Link: min 2 + antar part, semua target exists

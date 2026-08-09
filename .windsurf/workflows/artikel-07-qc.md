@@ -348,7 +348,11 @@ Jika score < 9: fix sebelum lanjut ke 08-humanizer.
 - [ ] Tidak ada broken link
 - [ ] Formatting markdown benar (h2/h3, no h1, min 3 h2)
 - [ ] Readability OK (word count 1.000-2.500, avg paragraph 60-100, max 120)
-- [ ] `readingTime` di-set di frontmatter (bukan 1)
+- [ ] `readingTime` di-set di frontmatter (bukan 1, sesuai word_count / 200)
+- [ ] `seoMetaTitle` beda dari `title` (jangan copy-paste)
+- [ ] `seoMetaDescription` beda dari `excerpt` (jangan copy-paste)
+- [ ] `ogHeadline` beda dari `title`, max 50 chars
+- [ ] `humanSignature: true` di-set
 - [ ] SEO title tidak ada suffix "| TAM"
 - [ ] Tidak ada kalimat duplikat (duplicate sentence check)
 - [ ] Math consistency: rasio/fraksi cocok dengan angka raw (e.g. "2 dari 3" = ~67%, bukan 58%)
