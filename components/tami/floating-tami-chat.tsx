@@ -380,7 +380,16 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
             {/* Maximize to full page */}
             <Link
               href="/tami"
-              onClick={onClose}
+              onClick={() => {
+                // Save current state before navigating so full page can restore
+                if (sseStreaming || isLoading) {
+                  sessionStorage.setItem('tami_streaming_active', 'true');
+                }
+                // Ensure latest messages are saved
+                localStorage.setItem('tami_conversation_history', JSON.stringify(messages));
+                window.dispatchEvent(new Event('tami_history_updated'));
+                onClose();
+              }}
               title="Buka Halaman Penuh"
               className="flex h-7 w-7 items-center justify-center rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
             >

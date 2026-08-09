@@ -44,42 +44,104 @@ export const IntelligenceChatInterface: React.FC = () => {
 
   // Load all sessions from localStorage on mount
   useEffect(() => {
+    // Always check tami_conversation_history first (floating chat writes here)
+    const floatingHistory = localStorage.getItem('tami_conversation_history');
+    let floatingMsgs: Message[] | null = null;
+    if (floatingHistory) {
+      try {
+        floatingMsgs = JSON.parse(floatingHistory);
+      } catch (e) {
+        console.error('Failed to parse floating history:', e);
+      }
+    }
+
     const savedSessions = localStorage.getItem('tami_chat_sessions');
     if (savedSessions) {
       try {
         const parsed: ChatSession[] = JSON.parse(savedSessions);
         setSessions(parsed);
         if (parsed.length > 0) {
-          setActiveSessionId(parsed[0].id);
-          setMessages(parsed[0].messages);
+          // Check if floating chat has newer messages than the latest session
+          const latestSession = parsed[0];
+          if (floatingMsgs && floatingMsgs.length > 0) {
+            const floatingLastId = floatingMsgs[floatingMsgs.length - 1]?.id;
+            const sessionLastId = latestSession.messages[latestSession.messages.length - 1]?.id;
+            if (floatingLastId !== sessionLastId || floatingMsgs.length !== latestSession.messages.length) {
+              // Floating chat has newer/different messages - use those
+              setMessages(floatingMsgs);
+              setActiveSessionId(latestSession.id);
+              // Update the session with floating messages
+              const updatedSessions = parsed.map((s, idx) =>
+                idx === 0 ? { ...s, messages: floatingMsgs!, timestamp: Date.now() } : s
+              );
+              setSessions(updatedSessions);
+              localStorage.setItem('tami_chat_sessions', JSON.stringify(updatedSessions));
+            } else {
+              setActiveSessionId(latestSession.id);
+              setMessages(latestSession.messages);
+            }
+          } else {
+            setActiveSessionId(latestSession.id);
+            setMessages(latestSession.messages);
+          }
+        } else if (floatingMsgs && floatingMsgs.length > 0) {
+          // No sessions but floating history exists
+          const initialSession: ChatSession = {
+            id: `session-${Date.now()}`,
+            title: floatingMsgs.find((m) => m.role === 'user')?.content || 'Sesi Diagnosa Realita',
+            timestamp: Date.now(),
+            messages: floatingMsgs,
+          };
+          setSessions([initialSession]);
+          setActiveSessionId(initialSession.id);
+          setMessages(floatingMsgs);
+          localStorage.setItem('tami_chat_sessions', JSON.stringify([initialSession]));
         }
       } catch (e) {
         console.error('Failed to parse chat sessions:', e);
       }
-    } else {
-      // Fallback for single history key
-      const legacyHistory = localStorage.getItem('tami_conversation_history');
-      if (legacyHistory) {
-        try {
-          const parsedMsgs: Message[] = JSON.parse(legacyHistory);
-          if (parsedMsgs.length > 0) {
-            const initialSession: ChatSession = {
-              id: `session-${Date.now()}`,
-              title: parsedMsgs.find((m) => m.role === 'user')?.content || 'Sesi Diagnosa Realita',
-              timestamp: Date.now(),
-              messages: parsedMsgs,
-            };
-            setSessions([initialSession]);
-            setActiveSessionId(initialSession.id);
-            setMessages(parsedMsgs);
-            localStorage.setItem('tami_chat_sessions', JSON.stringify([initialSession]));
-          }
-        } catch (err) {
-          console.error('Failed to parse legacy history:', err);
-        }
+    } else if (floatingMsgs && floatingMsgs.length > 0) {
+      // No sessions at all, but floating history exists - create initial session
+      try {
+        const initialSession: ChatSession = {
+          id: `session-${Date.now()}`,
+          title: floatingMsgs.find((m) => m.role === 'user')?.content || 'Sesi Diagnosa Realita',
+          timestamp: Date.now(),
+          messages: floatingMsgs,
+        };
+        setSessions([initialSession]);
+        setActiveSessionId(initialSession.id);
+        setMessages(floatingMsgs);
+        localStorage.setItem('tami_chat_sessions', JSON.stringify([initialSession]));
+      } catch (err) {
+        console.error('Failed to create session from floating history:', err);
       }
     }
     setIsLoaded(true);
+
+    // Check if floating chat had active streaming when user navigated here
+    const wasStreaming = sessionStorage.getItem('tami_streaming_active');
+    if (wasStreaming === 'true') {
+      sessionStorage.removeItem('tami_streaming_active');
+      // Mark the last assistant message as interrupted if it has empty/partial content
+      setTimeout(() => {
+        setMessages((prev) => {
+          if (prev.length === 0) return prev;
+          const lastIdx = prev.length - 1;
+          if (prev[lastIdx].role === 'assistant' && (!prev[lastIdx].content || prev[lastIdx].content.length < 20)) {
+            const updated = [...prev];
+            updated[lastIdx] = {
+              ...updated[lastIdx],
+              content: updated[lastIdx].content || '*(Respons terputus saat berpindah dari floating chat. Kirim ulang pertanyaan kamu ya.)*',
+            };
+            // Save updated messages
+            localStorage.setItem('tami_conversation_history', JSON.stringify(updated));
+            return updated;
+          }
+          return prev;
+        });
+      }, 100);
+    }
 
     // Listen for updates from floating TAMI chat
     const handleHistoryUpdate = () => {
