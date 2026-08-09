@@ -1,8 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
 import type { Category, PostWithRelations } from '@/lib/db/schema';
 
 interface ArticleCardProps {
@@ -11,44 +8,20 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ post, priority = false }: ArticleCardProps) {
-  const [imgLoaded, setImgLoaded] = useState(false);
-  const [imgSrc, setImgSrc] = useState(post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`);
-  const [usedFallback, setUsedFallback] = useState(false);
-
-  const handleError = () => {
-    if (!usedFallback) {
-      setImgSrc(`/api/og/card?slug=${post.slug}`);
-      setUsedFallback(true);
-      setImgLoaded(false);
-    }
-  };
+  const imgSrc = post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`;
 
   return (
     <article className="group overflow-hidden rounded-xl transition-all duration-200 hover:bg-secondary/50">
-      <Link href={`/artikel/${post.slug}`} className="block">
+      <Link href={`/artikel/${post.slug}`} prefetch={false} className="block">
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted/30">
-          {!imgLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-muted/20">
-              <div className="flex gap-1.5 animate-pulse">
-                <div className="h-8 w-1.5 rounded-full bg-primary" />
-                <div className="h-8 w-1.5 rounded-full bg-primary" />
-              </div>
-            </div>
-          )}
           <Image
             src={imgSrc}
             alt={post.title}
             fill
             priority={priority}
             loading={priority ? 'eager' : 'lazy'}
-            className={`
-              object-cover transition-all duration-500
-              ${imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
-              group-hover:scale-105
-            `}
+            className="object-cover transition-all duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            onLoad={() => setImgLoaded(true)}
-            onError={handleError}
           />
         </div>
         <div className="p-4">

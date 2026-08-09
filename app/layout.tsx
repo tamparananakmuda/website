@@ -14,6 +14,7 @@ const ServiceWorkerRegister = dynamic(() => import('@/components/sw-register').t
 
 const manrope = Manrope({
   subsets: ['latin'],
+  weight: ['500'],
   variable: '--font-sans',
   display: 'swap',
   preload: false,
@@ -21,6 +22,7 @@ const manrope = Manrope({
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
+  weight: ['600', '700', '800'],
   variable: '--font-display',
   display: 'swap',
   preload: true,
