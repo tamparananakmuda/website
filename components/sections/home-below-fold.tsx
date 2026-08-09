@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import { getAllCategories } from '@/lib/db/queries/categories';
 import { getNonSeriesPublishedPostsWithRelations, getLatestSeriesWithPosts } from '@/lib/db/queries/posts';
 import { getAllArticles } from '@/lib/articles/loader';
@@ -7,7 +8,10 @@ import { LatestArticles } from '@/components/sections/latest-articles';
 import { LatestSeries } from '@/components/sections/latest-series';
 import { WhyTam } from '@/components/sections/why-tam';
 import { Faq, faqItems } from '@/components/sections/faq';
-import { NewsletterCta } from '@/components/sections/newsletter-cta';
+
+const NewsletterCta = dynamic(() => import('@/components/sections/newsletter-cta').then((m) => m.NewsletterCta), {
+  loading: () => <div className="py-24 md:py-40" aria-hidden="true" />,
+});
 
 async function TopicsSection() {
   const categories = await getAllCategories();

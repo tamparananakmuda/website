@@ -76,6 +76,7 @@ export function Hero({ className }: HeroProps) {
               <div className="w-full sm:w-auto hero-btn-hover">
                 <Link
                   href="/artikel"
+                  prefetch={false}
                   className="group flex w-full items-center justify-center gap-1 rounded-full bg-primary px-6 py-3.5 font-semibold text-primary-foreground shadow-xl transition-colors hover:bg-primary/90 sm:px-[26px] sm:py-[14px]"
                 >
                   Mulai Membaca

@@ -109,6 +109,7 @@ export function SiteHeader() {
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/cari"
+              prefetch={false}
               className="flex items-center justify-center w-9 h-9 rounded-full text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
               aria-label="Cari artikel"
             >
@@ -149,6 +150,7 @@ export function SiteHeader() {
                 <TamiButton />
                 <Link
                   href="/cari"
+                  prefetch={false}
                   className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
                   onClick={() => setIsOpen(false)}
                 >
@@ -196,6 +198,7 @@ export function SiteHeader() {
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/cari"
+              prefetch={false}
               className={cn(
                 'flex items-center justify-center w-9 h-9 rounded-full transition-colors hover:bg-secondary',
                 pathname === '/cari' ? 'text-foreground' : 'text-muted-foreground'
@@ -239,6 +242,7 @@ export function SiteHeader() {
               <TamiButton />
               <Link
                 href="/cari"
+                prefetch={false}
                 className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
                 onClick={() => setIsOpen(false)}
               >
