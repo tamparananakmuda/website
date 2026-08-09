@@ -65,7 +65,7 @@ readingTime: 6
 
 Tidak ada yang membicarakan PTM. Tapi 85,19% kematian Indonesia pada 2025 disebabkan olehnya. Penyakit tidak menular: jantung, stroke, diabetes, kanker, gagal ginjal. Dan sistem kesehatan tidak siap.
 
-PTM tidak menular. Tidak ada virus, tidak ada bakteri, tidak ada wabah yang membuat pemerintah mobilisasi. PTM berkembang perlahan, diam, dan butuh pengobatan seumur hidup. Karena itu, PTM adalah bisnis sempurna: tidak bisa sembuh, butuh obat terus, biaya berulang tanpa akhir.
+PTM tidak menular. Tidak ada virus, tidak ada bakteri, tidak ada wabah yang membuat pemerintah mobilisasi. PTM berkembang perlahan dan diam, butuh pengobatan seumur hidup. Karena itu, PTM adalah bisnis sempurna: tidak bisa sembuh, butuh obat terus, biaya berulang tanpa akhir.
 
 ## Konteks
 
@@ -81,13 +81,13 @@ Dari 4,45 juta kematian di Indonesia pada 2025, 85,19% diakibatkan penyakit tida
 {"title":"Penyakit Katastropik BPJS 2025","subtitle":"26,28% total pembiayaan BPJS untuk penyakit katastropik","source":"BPJS Public Expose 2026, via Kompas.id","data":[{"label":"Jantung","value":17.3,"color":"#ef4444"},{"label":"Gagal Ginjal","value":13.3,"color":"#f4a825"},{"label":"Kanker","value":10.3,"color":"#a855f7"},{"label":"Lainnya","value":59.1,"color":"#3b82f6"}]}
 ```
 
-BPS, melalui Deputi Bidang Statistik Sosial Nasrul Wajdi, menyebut PTM mulai meningkat sejak usia 35. Bukan 60. Bukan 50. 35. Usia produktif. Usia kerja. Usia di mana kamu seharusnya paling sehat. Dan kamu mulai sakit kronis.
+BPS, melalui Deputi Bidang Statistik Sosial Nasrul Wajdi, menyebut PTM mulai meningkat sejak usia 35, bukan 60 atau 50 seperti dulu. Usia produktif, usia kerja, usia di mana kamu seharusnya paling sehat. Dan kamu mulai sakit kronis.
 
 ## Biaya yang Makan BPJS
 
 Penyakit katastropik menyerap 26,28% total pembiayaan BPJS, menurut BPJS Public Expose 2026. Tiga terbesar: jantung Rp17,3 triliun, gagal ginjal Rp13,3 triliun, kanker Rp10,3 triliun. Tiga penyakit ini, yang semuanya PTM, makan Rp41 triliun dari dana BPJS. Dan jumlahnya tumbuh setiap tahun.
 
-Pemanfaatan layanan BPJS 2025 mencapai 735,3 juta per tahun, atau 1,9 juta per hari. Setiap hari, hampir 2 juta orang menggunakan layanan BPJS. Dan yang sakit PTM datang berulang: cuci darah tiap minggu, kontrol diabetes tiap bulan, kemoterapi tiap siklus. Biaya berulang yang tidak pernah berhenti.
+Setiap hari, hampir 2 juta orang menggunakan layanan BPJS. Tapi yang beda: pasien PTM datang berulang, bukan sekali. Cuci darah tiap minggu, kontrol diabetes tiap bulan, kemoterapi tiap siklus. Mereka tidak sembuh, mereka kembali. Dan setiap kali kembali, BPJS bayar lagi. Inilah kenapa PTM adalah beban klaim yang tumbuh eksponensial, bukan linear.
 
 ## Usia Harapan Hidup yang Pendek
 
@@ -103,15 +103,15 @@ SKI 2023, dilansir BKPK Kemenkes, menunjukkan diabetes diagnosis dokter naik dar
 
 Yang lebih mengkhawatirkan: jumlah penyandang hipertensi dan diabetes yang menjalani pengobatan rutin masih rendah. Banyak yang tidak tahu mereka punya diabetes atau hipertensi. Dan yang tahu, banyak yang tidak kontrol rutin. Hasilnya: komplikasi. Jantung, stroke, gagal ginjal. Penyakit yang biayanya jauh lebih besar dari pencegahan.
 
-Sistem kesehatan Indonesia berfokus pada pengobatan, bukan pencegahan. Anggaran pencegahan PTM masih kecil dibandingkan anggaran pengobatan. Padahal deteksi dini dan edukasi gaya hidup bisa menurunkan kasus PTM secara signifikan. Tapi pencegahan tidak menghasilkan klaim, tidak menghasilkan resep, tidak menghasilkan rawat inap. Pencegahan tidak profitable. Pengobatan profitable. Dan sistem memilih yang profitable.
+Sistem kesehatan Indonesia berfokus pada pengobatan, bukan pencegahan. Anggaran pencegahan PTM masih kecil dibandingkan anggaran pengobatan. Padahal deteksi dini dan edukasi gaya hidup bisa menurunkan kasus PTM dengan besar. Tapi pencegahan tidak menghasilkan klaim, tidak menghasilkan resep, tidak menghasilkan rawat inap. Pencegahan tidak profitable, pengobatan profitable, dan sistem memilih yang profitable.
 
-Yang dipertaruhkan bukan biaya pengobatan. Yang dipertaruhkan adalah hidupmu.
+Yang dipertaruhkan bukan biaya pengobatan, melainkan hidupmu.
 
 ## Insight
 
 PTM adalah engine yang menghubungkan semua part seri ini. BPJS defisit (P1) karena klaim PTM naik 12% per tahun. Farmasi untung (P3) karena PTM butuh obat seumur hidup. RS untung (P5) karena PTM butuh rawat inap berulang. Dokter kurang (P4) karena PTM butuh spesialis yang tidak ada. Dan yang mampu keluar negeri (P7) karena sistem dalam negeri tidak siap.
 
-Gue punya keluarga yang diabetes. Setiap bulan, beli obat. Setiap 3 bulan, kontrol ke dokter. Setiap tahun, cek laboratorium. Biaya total: sekitar Rp500 ribu per bulan, Rp6 juta per tahun, selama bertahun-tahun. Dan itu kalau tidak ada komplikasi. Kalau ada komplikasi, biayanya melonjak. Cuci darah: Rp500 ribu per sesi, 2x seminggu, Rp4 juta per bulan. Itu kalau pakai BPJS. Kalau tidak, lebih.
+Gue punya keluarga yang diabetes. Setiap bulan beli obat, setiap 3 bulan kontrol ke dokter, setiap tahun cek laboratorium. Biaya total: sekitar Rp500 ribu per bulan, Rp6 juta per tahun, selama bertahun-tahun. Dan itu kalau tidak ada komplikasi. Kalau ada komplikasi, biayanya melonjak. Cuci darah: Rp500 ribu per sesi, 2x seminggu, Rp4 juta per bulan. Itu kalau pakai BPJS. Kalau tidak, lebih.
 
 Yang membuat gue khawatir: pola ini turun-temurun. Orang tua diabetes, anak berisiko diabetes. Bukan hanya genetik, tapi gaya hidup yang diwariskan. Makanan tinggi gula, rendah serat, kurang aktivitas fisik. Gen Z sekarang mulai diagnosis diabetes di usia 20-an, bukan 50-an seperti orang tua mereka. PTM datang lebih muda, dan sistem kesehatan tidak siap untuk gelombang ini.
 
@@ -134,4 +134,4 @@ Penyakit katastropik menyerap 26,28% total pembiayaan BPJS. Jantung Rp17,3 trili
 
 ---
 
-**Selanjutnya di Sakit Itu Mahal:** Dan ini baru yang di dalam negeri. Yang keluar negeri lebih mahal. Lanjut ke part berikutnya. [Lanjut ke Part 7](/artikel/sistem-kesehatan-indonesia-part-7-medikal-tourism)
+**Selanjutnya di Sakit Itu Mahal:** Dan ini baru yang di dalam negeri, yang keluar negeri lebih mahal lagi. [Lanjut ke Part 7](/artikel/sistem-kesehatan-indonesia-part-7-medikal-tourism)

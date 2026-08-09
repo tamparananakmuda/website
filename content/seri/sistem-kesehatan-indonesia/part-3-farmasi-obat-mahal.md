@@ -111,9 +111,9 @@ Setiap kali rupiah melemah 1%, biaya impor bahan baku naik. Setiap kali ada gang
 
 ## Insight
 
-Obat mahal bukan karena riset. Obat mahal karena Indonesia tidak punya industri hulu farmasi. Ketergantungan 80-90% impor berarti harga obat dikontrol oleh China dan India, bukan oleh Indonesia. Kalau rupiah melemah, obat naik. Kalau ada gangguan pasokan, obat langka. Dan kamu tidak punya pilihan.
+Obat mahal bukan karena riset. Obat mahal karena Indonesia tidak punya industri hulu farmasi. Ketergantungan 80-90% impor berarti harga obat dikontrol oleh China dan India, bukan oleh Indonesia. Kalau rupiah melemah obat naik, kalau ada gangguan pasokan obat langka, dan kamu tidak punya pilihan lain.
 
-Gue pernah beli obat maag di apotek. Harganya Rp35 ribu. Isinya: ranitidine 150 mg, 10 tablet. Di India, obat yang sama, bahan yang sama, harganya setara Rp3.500. Selisih 10 kali. Bukan karena riset. Bukan karena kualitas. Karena bahan bakunya diimpor, dan impor pakai dolar.
+Gue pernah beli obat maag di apotek. Harganya Rp35 ribu. Isinya: ranitidine 150 mg, 10 tablet. Di India, obat yang sama, bahan yang sama, harganya setara Rp3.500. Selisih 10 kali, bukan karena riset atau kualitas, tapi karena bahan bakunya diimpor dan impor pakai dolar.
 
 Dan ada masalah lain: tarif e-katalog BPJS yang rendah membuat industri farmasi lokal tidak tertarik memproduksi obat tertentu. Margin terlalu tipis, bahkan rugi. Hasilnya, obat generics yang seharusnya murah justru langka di pasaran. Pasien BPJS dapat resep tapi obatnya tidak ada di apotek. Mereka harus beli sendiri dengan harga pasar yang lebih mahal. Sistem yang dirancang untuk menekan biaya justru membuat obat tidak tersedia.
 

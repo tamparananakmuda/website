@@ -65,15 +65,15 @@ readingTime: 7
 
 ## Hook
 
-Rumah sakit dirancang untuk menyembuhkan. Tapi untuk bisnis, sistemnya berfungsi sempurna. Siloam Hospitals catat pendapatan Rp12,84 triliun dan laba Rp1,11 triliun pada 2025. Margin EBITDA 29,1%. Pasien adalah customer. Dan sembuh bukan KPI mereka.
+Rumah sakit dirancang untuk menyembuhkan, tapi untuk bisnis sistemnya berfungsi sempurna. Siloam Hospitals catat pendapatan Rp12,84 triliun dan laba Rp1,11 triliun pada 2025 dengan margin EBITDA 29,1%. Pasien adalah customer, dan sembuh bukan KPI mereka.
 
-Kamu masuk RS. Daftar, antri, periksa, bayar. Dari sudut pandang kamu, kamu mencari pengobatan. Dari sudut pandang RS, kamu adalah revenue stream. Setiap tindakan, setiap obat, setiap malam di kamar rawat, adalah unit pendapatan. Bukan karena RS jahat. Karena RS adalah bisnis.
+Kamu masuk RS: daftar, antri, periksa, bayar. Dari sudut pandang kamu, kamu mencari pengobatan. Dari sudut pandang RS, kamu adalah revenue stream. Setiap tindakan, setiap obat, setiap malam di kamar rawat, adalah unit pendapatan. Bukan karena RS jahat, tapi karena RS adalah bisnis.
 
 ## Konteks
 
 RS swasta di Indonesia adalah bisnis yang listed di bursa saham. Siloam (SILO), Mitra Keluarga (MIKA), Hermina (HEAL) adalah emiten. Investor melihat RS sebagai aset: revenue growth, margin, ROE. Dalam laporan analisis BRIDS Healthcare Research Juli 2026, sektor RS diproyeksi tumbuh laba 19% YoY pada 2Q26E.
 
-Model bisnis RS: Bed Occupancy Rate (BOR) sebagai metrik utama. Berapa persen tempat tidur terisi. Bukan berapa persen pasien sembuh. Bukan berapa lama pasien pulang. Bukan berapa pasien kembali sehat. BOR naik, revenue naik, saham naik. Pasien adalah customer, dan customer yang kembali adalah customer yang baik.
+Model bisnis RS: Bed Occupancy Rate (BOR) sebagai metrik utama, berapa persen tempat tidur terisi. Bukan berapa persen pasien sembuh, bukan berapa lama pasien pulang, bukan berapa pasien kembali sehat. BOR naik, revenue naik, saham naik. Pasien adalah customer, dan customer yang kembali adalah customer yang baik.
 
 ## Siloam: Case Study RS sebagai Bisnis
 
@@ -83,7 +83,7 @@ Siloam Hospitals, dilansir Kompas.com Mei 2026, catat pendapatan Rp12,84 triliun
 {"title":"Pendapatan vs Laba RS Siloam 2025","subtitle":"Pendapatan Rp12,84T, laba Rp1,11T, margin EBITDA 29,1%","source":"Siloam Laporan Keuangan 2025, via Kompas.com","data":[{"label":"Pendapatan","value":12.84,"color":"#3b82f6"},{"label":"Laba Bersih","value":1.11,"color":"#22c55e"},{"label":"EBITDA","value":2.89,"color":"#f4a825"}]}
 ```
 
-IDNFinancials melaporkan Siloam 1H 2026: pendapatan Rp6,76 triliun, naik 10,8%. Laba bersih Rp580,68 miliar, naik 27,1%. Pertumbuhan laba lebih cepat dari pendapatan. Artinya, margin makin tebal. RS makin efisien mengubah pasien menjadi profit.
+IDNFinancials melaporkan Siloam 1H 2026: pendapatan Rp6,76 triliun, naik 10,8%. Laba bersih Rp580,68 miliar, naik 27,1%. Pertumbuhan laba lebih cepat dari pendapatan, artinya margin makin tebal. RS makin efisien mengubah pasien menjadi profit.
 
 ## Sektor RS: Resilient Earnings
 
@@ -103,9 +103,9 @@ Dari sudut pandang bisnis, strategi ini masuk akal. Segmen premium memberikan ma
 
 Menkes Budi Gunadi Sadikin, dilansir Kompas.com Juni 2025, menyebut warga Indonesia menghabiskan $10 miliar berobat ke luar negeri. Pemerintah membangun RS internasional: BIH (Bali International Hospital) di KEK Sanur Bali, dibuka April 2025, dengan dokter diaspora. Visa Emas diberikan untuk dokter diaspora dan asing yang mau bekerja di Indonesia.
 
-Tapi Kompas.id Agustus 2025 melaporkan bahwa pasien BIH mayoritas mancanegara, bukan WNI. RS internasional dibangun untuk menahan uang yang kabur, tapi yang menggunakannya bukan WNI. WNI yang mampu tetap ke Singapura dan Malaysia. Yang tidak mampu tetap di sistem BPJS yang defisit.
+Tapi Kompas.id Agustus 2025 melaporkan realitas yang berbeda: pasien BIH mayoritas mancanegara, bukan WNI. RS internasional dibangun untuk menahan uang yang kabur, tapi WNI yang mampu tetap pilih Singapura dan Malaysia. Mereka tidak percaya sistem dalam negeri, bahkan yang dibangun standar internasional. Dan yang tidak mampu tetap di sistem BPJS yang defisit. Dua kelas layanan, dua nasib, satu sistem.
 
-Masalahnya bukan RS mahal. Masalahnya lebih besar dari itu.
+Masalahnya bukan RS mahal, masalahnya lebih besar dari itu.
 
 ## Insight
 
@@ -113,13 +113,13 @@ RS swasta tidak salah. Mereka bisnis, dan bisnis mencari laba. Tapi sistem yang 
 
 Gue pernah rawat inap di RS swasta. Kamarnya nyaman, AC dingin, TV layar datar, suster ramah. Tapi setiap kali dokter datang, ada biaya konsultasi. Setiap kali ganti infus, ada biaya tindakan. Setiap malam di kamar, ada biaya harian. Gue keluar RS dengan tagihan Rp15 juta untuk 2 malam. Dan gue berpikir: kalau gue tidak punya uang Rp15 juta, gue akan ke RS negeri. Antri dari pagi, mungkin dapat tempat tidur, mungkin tidak. Sistem ini mengurutkan kamu berdasarkan dompet.
 
-RS negeri punya masalahnya sendiri. Anggaran terbatas, fasilitas tua, dokter overworked. Banyak RS negeri bergantung pada BPJS yang tarifnya rendah. Hasilnya, RS negeri sulit bersaing dengan RS swasta dalam hal fasilitas dan pelayanan. Pasien yang mampu pilih RS swasta, pasien BPJS pilih RS negeri. Pembagian ini bukan kebetulan, tapi hasil dari sistem yang membedakan layanan berdasarkan kemampuan bayar.
+RS negeri punya masalahnya sendiri: anggaran terbatas, fasilitas tua, dokter overworked. Banyak RS negeri bergantung pada BPJS yang tarifnya rendah. Hasilnya, RS negeri sulit bersaing dengan RS swasta dalam hal fasilitas dan pelayanan. Pasien yang mampu pilih RS swasta, pasien BPJS pilih RS negeri. Pembagian ini bukan kebetulan, tapi hasil dari sistem yang membedakan layanan berdasarkan kemampuan bayar.
 
-Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), sistem kesehatan Indonesia punya banyak lapis biaya. RS adalah lapis yang paling visible. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa biaya RS swasta membuat banyak Gen Z menunda pengobatan sampai kondisi memburuk.
+Seperti yang dibahas di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), asuransi swasta dan RS swasta adalah dua sisi mata uang yang sama: keduanya dirancang untuk menang dari kamu. Dan di [Gen Z Belanja Rp12 Juta, BPJS Ditunda](/artikel/gen-z-belanja-rp12-juta-bpjs-ditunda-krisis-persepsi), kita lihat bahwa biaya RS swasta membuat banyak Gen Z menunda pengobatan sampai kondisi memburuk.
 
 ## Conclusion
 
-Rumah sakit bukan tempat sembuh. Rumah sakit adalah bisnis. Pasien adalah customer. Dan sembuh bukan KPI mereka.
+Rumah sakit bukan tempat sembuh, rumah sakit adalah bisnis. Pasien adalah customer, dan sembuh bukan KPI mereka.
 
 ## FAQ
 

@@ -530,6 +530,7 @@ export async function publishArticleFile(slug: string): Promise<boolean> {
   if (parsed.frontmatter.status !== 'scheduled') return false;
 
   parsed.frontmatter.status = 'published';
+  parsed.frontmatter.updatedAt = new Date().toISOString();
 
   const newContent = stringifyFrontmatter(parsed.frontmatter as unknown as Record<string, unknown>, parsed.body);
   writeFileSync(filePath, newContent, 'utf8');

@@ -110,7 +110,7 @@ Rasio spesialis target Indonesia 2032 adalah 0,46 per 1.000 penduduk. Bandingkan
 
 Dan target 0,46 itu pun tidak dijamin tercapai. Produksi 2.700 per tahun tidak akan menutup gap 27.000, apalagi gap proyeksi 65.000 pada 2032. Target tanpa kapasitas produksi yang memadai bukan target, tapi harapan. Dan harapan tidak menyembuhkan pasien yang butuh spesialis sekarang, bukan 2032.
 
-Rasio dokter umum target 2032 adalah 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang.
+Rasio dokter umum target 2032 adalah 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam, di bawah negara berkembang, bukan hanya di bawah negara maju.
 
 Akses timpang dan BPJS defisit terlihat tidak related. Tapi keduanya punya akar yang sama: sistem kesehatan Indonesia underfunded dan maldistributed.
 
@@ -135,7 +135,7 @@ Rasio dokter Indonesia 0,76 per 1.000 penduduk pada 2025, di bawah target 0,8. T
 Distribusi dokter tidak merata karena sistem tidak memberi insentif yang cukup untuk dokter bertugas di daerah terpencil. Gaji rendah, fasilitas tidak memadai, karier tidak jelas. Separuh dokter Indonesia berkumpul di Jawa.
 
 **Berapa kekurangan dokter spesialis Indonesia?**
-Indonesia kekurangan 27.000 dokter spesialis pada 2025, diproyeksi 65.000-70.000 pada 2032. Produksi hanya 2.700/tahun, sementara kebutuhan 15.000-16.000/tahun. 375 kab/kota kekurangan spesialis jantung.
+Kekurangan 27.000 spesialis pada 2025, diproyeksi 65.000-70.000 pada 2032. Produksi hanya 2.700/tahun vs kebutuhan 15.000-16.000/tahun. Dampaknya: 375 kab/kota tanpa spesialis jantung, 383 tanpa spesialis stroke, 407 tanpa spesialis kanker. Kamu tinggal di kode pos yang salah, kamu tidak dapat spesialis.
 
 ---
 

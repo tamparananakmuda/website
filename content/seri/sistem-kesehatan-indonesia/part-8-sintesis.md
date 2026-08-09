@@ -28,7 +28,7 @@ seoKeywords:
   - krisis kesehatan Indonesia
   - reformasi kesehatan
   - UHC Indonesia
-  - transformasi kesehatan
+  - reformasi sistem kesehatan
   - desain sistem kesehatan
 sourceReferences:
   - type: link
@@ -69,9 +69,9 @@ readingTime: 7
 
 ## Hook
 
-Ada pola yang muncul: BPJS defisit Rp17,13 triliun, farmasi impor 90%, dokter keluar negeri, RS laba Rp1,11 triliun, PTM 85% kematian, 970 ribu warga berobat ke luar. Semua pointing ke satu jawaban. Dan jawabannya tidak nyaman.
+Ada pola yang muncul: BPJS defisit Rp17,13 triliun, farmasi impor 90%, dokter keluar negeri, RS laba Rp1,11 triliun, PTM 85% kematian, 970 ribu warga berobat ke luar. Semua mengarah ke satu jawaban yang tidak nyaman.
 
-Tujuh part, tujuh gejala. Tapi gejala ini bukan kegagalan sistem. Setiap gejala punya pihak yang untung. BPJS dapat iuran. Farmasi dapat margin. RS dapat laba. Negara lain dapat devisa. Yang tidak untung: kamu, terutama kalau kamu tidak mampu.
+Tujuh part, tujuh gejala. Tapi gejala ini bukan kegagalan sistem, melainkan desain yang berfungsi. Setiap gejala punya pihak yang untung: BPJS dapat iuran, farmasi dapat margin, RS dapat laba, negara lain dapat devisa. Yang tidak untung adalah kamu, terutama kalau kamu tidak mampu.
 
 ## Konteks
 
@@ -81,39 +81,39 @@ Setiap komponen berfungsi. Tapi berfungsi untuk siapa? Itu pertanyaan yang 7 par
 
 ## Pola: 7 Gejala, 1 Akar
 
-Part 1: BPJS defisit Rp17,13 triliun. Iuran flat sejak 2020, klaim naik 12% per tahun. Rasio klaim 108,27%. Risiko gagal bayar Juli 2027. 54 juta peserta tidak aktif.
+Part 1: BPJS defisit Rp17,13 triliun. Iuran flat sejak 2020, klaim naik 12% per tahun, rasio klaim 108,27%, risiko gagal bayar Juli 2027, 54 juta peserta tidak aktif.
 
-Part 2: Rasio dokter 0,76 per 1.000 penduduk. Jakarta 2,53, Papua Barat 0,02. Dua provinsi tanpa dokter. 27.000 spesialis kurang. 375 kab/kota tanpa spesialis jantung.
+Part 2: Rasio dokter 0,76 per 1.000 penduduk. Jakarta 2,53, Papua Barat 0,02, dua provinsi tanpa dokter. Kekurangan 27.000 spesialis, 375 kab/kota tanpa spesialis jantung.
 
-Part 3: 80-90% bahan baku obat diimpor dari China dan India. Hanya 35 API lokal. Hanya 5-6 perusahaan bahan baku. Pelemahan rupiah langsung naikkan harga obat.
+Part 3: 80-90% bahan baku obat diimpor dari China dan India, hanya 35 API lokal, hanya 5-6 perusahaan bahan baku. Pelemahan rupiah langsung naikkan harga obat.
 
-Part 4: 27.000 spesialis kurang, produksi 2.700/tahun vs butuh 15.000. 423 perawat ke Jerman. 375 kab/kota tanpa spesialis jantung. Rasio Indonesia di bawah Vietnam.
+Part 4: 27.000 spesialis kurang, produksi 2.700/tahun vs butuh 15.000. 423 perawat ke Jerman, 375 kab/kota tanpa spesialis jantung, rasio Indonesia di bawah Vietnam.
 
-Part 5: Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun, margin 29,1%. Pasien adalah customer, BOR adalah metrik. Sembuh bukan KPI. Sektor RS tumbuh 19% YoY.
+Part 5: Siloam pendapatan Rp12,84 triliun, laba Rp1,11 triliun, margin 29,1%. Pasien adalah customer, BOR adalah metrik, sembuh bukan KPI. Sektor RS tumbuh 19% YoY.
 
-Part 6: 85,19% kematian dari PTM. Jantung Rp17,3T, gagal ginjal Rp13,3T, kanker Rp10,3T. PTM mulai usia 35. Usia harapan hidup sehat hanya 60,7 tahun.
+Part 6: 85,19% kematian dari PTM. Jantung Rp17,3T, gagal ginjal Rp13,3T, kanker Rp10,3T. PTM mulai usia 35, usia harapan hidup sehat hanya 60,7 tahun.
 
-Part 7: 970 ribu ke Malaysia, 750 ribu ke Singapura. $11,5 miliar hilang. Bukan teknologi, tapi kepercayaan. Yang mampu keluar, yang tidak menetap.
+Part 7: 970 ribu ke Malaysia, 750 ribu ke Singapura, $11,5 miliar hilang. Bukan teknologi, tapi kepercayaan. Yang mampu keluar, yang tidak menetap.
 
-Pola ini bukan kebetulan. BPJS defisit karena PTM naik. Farmasi untung karena PTM butuh obat seumur hidup. RS untung karena PTM butuh rawat inap berulang. Dokter keluar karena sistem underfunded. Yang mampu keluar negeri karena sistem tidak terpercaya. Semua terhubung. Semua pointing ke satu akar: sistem dirancang underfunded, dan itu bukan kebetulan.
+Pola ini bukan kebetulan: BPJS defisit karena PTM naik, farmasi untung karena PTM butuh obat seumur hidup, RS untung karena PTM butuh rawat inap berulang, dokter keluar karena sistem underfunded, yang mampu keluar negeri karena sistem tidak terpercaya. Semua terhubung dan mengarah ke satu akar: sistem dirancang underfunded, dan itu bukan kebetulan.
 
 ## Siapa yang Untung?
 
 Farmasi: impor bahan baku, meracik, menjual dengan margin. Ketergantungan 90% impor berarti harga obat dikontrol oleh China dan India. Indonesia hanya menambah nilai di tahap akhir: kemas dan jual.
 
-RS swasta: laba triliunan, IPO, dividen. Siloam margin 29,1%. MIKA ROE 19%. Sektor RS tumbuh 19% YoY. Pasien adalah customer, dan customer yang sakit kronis adalah customer terbaik: datang berulang, bayar berulang, tidak pernah sembuh total.
+RS swasta: laba triliunan, IPO, dividen. Siloam margin 29,1%, MIKA ROE 19%, sektor RS tumbuh 19% YoY. Pasien adalah customer, dan customer yang sakit kronis adalah customer terbaik: datang berulang, bayar berulang, tidak pernah sembuh total.
 
 Negara tujuan medikal tourism: Malaysia dapat RM2,2 miliar dari Indonesia. Singapura dapat ratusan ribu pasien. Mereka untung dari sistem Indonesia yang tidak terpercaya. Semakin tidak terpercaya sistem dalam negeri, semakin banyak yang keluar, semakin besar devisa yang masuk ke negara lain.
 
-BPJS Watch menyebut kenaikan iuran "keniscayaan". Artinya, solusi yang dilakukan adalah menambah beban ke kamu yang sudah bayar. Bukan menambah yang belum bayar. Bukan menurunkan beban klaim. Bukan memperbaiki distribusi. Naikkan iuran.
+BPJS Watch menyebut kenaikan iuran "keniscayaan". Artinya, solusi yang dilakukan adalah menambah beban ke kamu yang sudah bayar, bukan menambah yang belum bayar, bukan menurunkan beban klaim, bukan memperbaiki distribusi. Naikkan iuran.
 
 Yang tidak untung: pasien, terutama yang tidak mampu. Yang BPJS, yang antri, yang dapat kamar kelas 3, yang dirujuk ke RS yang tidak punya spesialis. Mereka bayar iuran, bayar pajak untuk menambal defisit, dan tetap tidak dapat layanan yang layak.
 
 ## Bukan Kegagalan, Desain
 
-UHC target SDG 3.8: universal health coverage by 2030. Tapi rasio klaim 108,27% berarti sistem tidak sustainable tanpa intervensi eksternal. Transformasi Kesehatan Kemenkes 2025-2029 punya target, tapi gap terlalu besar.
+UHC target SDG 3.8: universal health coverage by 2030. Tapi rasio klaim 108,27% berarti sistem tidak sustainable tanpa intervensi eksternal. Program perubahan Kemenkes 2025-2029 punya target, tapi gap terlalu besar.
 
-Iuran tidak naik 6 tahun. Aturannya tiap 2 tahun. Tapi 6 tahun berlalu tanpa kenaikan. Bukan keliru. Bukan lupa. Karena kenaikan iuran tidak populer secara politik. Dan yang tidak populer secara politik tidak dilakukan, terlepas dari aturan.
+Iuran tidak naik 6 tahun. Aturannya tiap 2 tahun, tapi 6 tahun berlalu tanpa kenaikan. Bukan keliru atau lupa, karena kenaikan iuran tidak populer secara politik. Dan yang tidak populer secara politik tidak dilakukan, terlepas dari aturan.
 
 Produksi dokter 2.700/tahun, butuh 15.000. Tidak mungkin tertutup. Tapi kapasitas pendidikan dokter spesialis tidak diperbesar. Bukan tidak bisa. Tidak diprioritaskan. Karena mendidik dokter spesialis butuh investasi jangka panjang yang tidak menghasilkan suara di pemilu.
 
@@ -121,9 +121,9 @@ Sistem dirancang underfunded. Iuran flat, klaim naik, kapasitas produksi dokter 
 
 ## Insight
 
-Sistem kesehatan Indonesia tidak dirancang untuk membuatmu sehat. Dirancang untuk mengubah tubuhmu menjadi bisnis. BPJS adalah pool dana yang defisit. Farmasi adalah impor yang mahal. RS adalah bisnis yang profitable. Dokter adalah SDM yang diekspor. PTM adalah engine yang menghubungkan semuanya: penyakit yang tidak bisa sembuh, butuh obat terus, butuh rawat inap berulang, dan biayanya dibayar dari pool dana yang terus menyusut.
+Sistem kesehatan Indonesia tidak dirancang untuk membuatmu sehat, melainkan untuk mengubah tubuhmu menjadi bisnis. BPJS adalah pool dana yang defisit, farmasi adalah impor yang mahal, RS adalah bisnis yang profitable, dokter adalah SDM yang diekspor. PTM adalah engine yang menghubungkan semuanya: penyakit yang tidak bisa sembuh, butuh obat terus, butuh rawat inap berulang, dan biayanya dibayar dari pool dana yang terus menyusut.
 
-Gue nulis seri ini bukan karena gue benci sistem kesehatan. Gue nulis karena gue lihat pola. Setiap kali ada berita BPJS defisit, solusinya: naikkan iuran. Setiap kali ada berita dokter kurang, solusinya: impor dokter atau ekspor perawat. Setiap kali ada berita obat mahal, solusinya: subsidi. Tidak pernah yang bertanya: kenapa sistemnya begini? Kenapa iuran flat 6 tahun? Kenapa produksi dokter 2.700? Kenapa 90% bahan baku impor? Pertanyaan ini tidak ditanyakan karena jawabannya menunjuk ke desain, bukan kegagalan. Dan desain punya pihak yang untung. Dan pihak yang untung tidak mau desainnya diubah.
+Gue nulis seri ini bukan karena gue benci sistem kesehatan. Gue nulis karena gue lihat pola. Setiap kali ada berita BPJS defisit, solusinya: naikkan iuran. Setiap kali ada berita dokter kurang, solusinya: impor dokter atau ekspor perawat. Setiap kali ada berita obat mahal, solusinya: subsidi. Tidak pernah yang bertanya: kenapa sistemnya begini, kenapa iuran flat 6 tahun, kenapa produksi dokter 2.700, kenapa 90% bahan baku impor? Pertanyaan ini tidak ditanyakan karena jawabannya menunjuk ke desain, bukan kegagalan. Dan desain punya pihak yang untung. Dan pihak yang untung tidak mau desainnya diubah.
 
 Seperti yang dibahas di [BPJS Kelas 3 Dihapus: Gen Z Pilih Sakit Sendiri](/artikel/bpjs-kelas-3-dihapus-gen-z-pilih-sakit-sendiri), Gen Z sudah mulai mempertanyakan sistem. Dan di [Asuransi Swasta Gen Z: Sistem yang Didesain Menang dari Kamu](/artikel/asuransi-swasta-gen-z-sistem-didesain-menang-dari-kamu), kita lihat bahwa sistem asuransi swasta juga dirancang untuk menang dari kamu.
 

@@ -97,7 +97,7 @@ Indonesia tidak hanya kekurangan dokter, tapi juga kehilangan yang sudah ada. Si
 
 WHO, dalam laporan Maret 2026, menyebut Indonesia perlu memperkuat perencanaan tenaga kesehatan melalui analisis pasar kerja. Data ada, rencana ada. Tapi implementasi tertinggal. Produksi 2.700/tahun vs kebutuhan 15.000/tahun bukan masalah perencanaan. Itu masalah kapasitas produksi yang tidak diperbesar. Dan sementara kapasitas tidak diperbesar, yang ada dikirim ke luar negeri.
 
-Rasio dokter umum target 2032: 0,8 per 1.000. Bandingkan: China 3,1, Singapura 2,8, Malaysia 2,3, Vietnam 1,1. Indonesia di bawah Vietnam. Bukan di bawah negara maju. Di bawah negara berkembang dengan GDP per kapita lebih rendah. Dan sementara di bawah Vietnam, perawat Indonesia dikirim ke Jerman.
+Target rasio 2032 adalah 0,8 per 1.000 penduduk. Tapi seperti yang dibahas di [Part 2: Akses adalah Kode Pos](/artikel/sistem-kesehatan-indonesia-part-2-akses-kode-pos), Indonesia masih di 0,76, di bawah Vietnam (1,1), Malaysia (2,3), apalagi Singapura (2,8). Dan sementara rasio ini stagnan, perawat Indonesia malah dikirim ke Jerman. Ekspor SDM kesehatan jadi solusi untuk kekurangan yang tidak diatasi di dalam negeri.
 
 Yang membuat situasi lebih parah: waktu yang dibutuhkan untuk memperbesar kapasitas produksi dokter spesialis panjang. Seorang dokter umum butuh 4-5 tahun spesialisasi setelah lulus S1. Artinya, kalau kapasitas diperbesar hari ini, hasilnya baru terasa 5 tahun lagi. Selama 5 tahun, kekurangan tetap. Dan selama kekurangan tetap, pasien di daerah tetap tidak dapat spesialis. Solusi jangka pendek tidak ada. Solusi jangka panjang butuh waktu. Dan di tengah waktu itu, sistem terus mengirim perawat ke luar negeri.
 
@@ -123,7 +123,7 @@ Dan kalau kamu tidak mampu keluar negeri, kamu menunggu. Menunggu di antri Puske
 Dokter Indonesia keluar negeri karena gaji lebih tinggi, karier jelas, dan profesi dihargai. Sistem kesehatan Indonesia tidak memberi insentif yang cukup: gaji rendah, fasilitas tidak memadai, beban kerja tinggi. 423 perawat dikirim ke Jerman sejak 2023 via Program Triple Win.
 
 **Berapa kekurangan dokter spesialis Indonesia?**
-Indonesia kekurangan 27.000 dokter spesialis pada 2025, diproyeksi 65.000-70.000 pada 2032. Produksi hanya 2.700/tahun, sementara kebutuhan 15.000-16.000/tahun. Menkes Budi GS: "Sampai merdeka ke-100 pun gap belum terpenuhi."
+Kekurangan 27.000 pada 2025, diproyeksi 65.000-70.000 pada 2032. Produksi hanya 2.700/tahun vs kebutuhan 15.000-16.000/tahun. Menkes Budi GS: "Sampai merdeka ke-100 pun gap belum terpenuhi." Dan sementara gap ini melebar, yang ada malah dikirim ke luar negeri.
 
 **Berapa perawat Indonesia di luar negeri?**
 423 perawat Indonesia ditempatkan ke Jerman sejak 2023 via Program Triple Win. 36 perawat ke Austria via Binawan Goes to Europe pada Juni 2026. Negara tujuan: Jerman, Jepang, AS, Kanada, Austria.

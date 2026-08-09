@@ -62,7 +62,7 @@ readingTime: 6
 
 Rp17,13 triliun. Itu defisit BPJS Kesehatan pada 2025, membengkak 123,8% dari tahun sebelumnya. Setiap bulan, BPJS tekor Rp2 triliun. Dan kalau tidak ada intervensi, Juli 2027 BPJS gagal bayar.
 
-Kamu bayar iuran tiap bulan. Potong dari gaji, otomatis, tidak bisa ditolak. Tapi uang itu masuk ke sistem yang belanjanya lebih besar dari pemasukannya. Bukan keliru hitung. Bukan salah kelola. Ini struktur.
+Kamu bayar iuran tiap bulan. Potong dari gaji, otomatis, tidak bisa ditolak. Tapi uang itu masuk ke sistem yang belanjanya lebih besar dari pemasukannya. Bukan keliru hitung, bukan salah kelola, ini struktur yang dirancang dari awal.
 
 ## Konteks
 
@@ -94,7 +94,7 @@ Pemanfaatan layanan BPJS 2025 mencapai 735,3 juta per tahun, atau 1,9 juta per h
 
 Dilansir Bloomberg Technoz, 54 juta dari 285 juta peserta BPJS tidak aktif. Tidak bayar iuran. Mereka terdaftar, tapi tidak berkontribusi. Hasilnya, iuran masuk hanya Rp14 triliun per bulan, sementara klaim Rp16 triliun per bulan. Selisih Rp2 triliun per bulan, atau Rp24 triliun per tahun.
 
-Iuran terakhir disesuaikan pada 2020. Aturannya, penyesuaian setiap 2 tahun. Tapi 6 tahun berlalu tanpa kenaikan. BPJS Watch, dilaporkan Kompas.id Juli 2026, menyebut kenaikan iuran "keniscayaan". Tapi kenaikan iuran berarti beban tambahan untuk kamu yang sudah bayar. Dan 54 juta yang tidak aktif tetap tidak bayar.
+Iuran terakhir disesuaikan pada 2020. Aturannya, penyesuaian setiap 2 tahun, tapi 6 tahun berlalu tanpa kenaikan. BPJS Watch, dilaporkan Kompas.id Juli 2026, menyebut kenaikan iuran "keniscayaan". Tapi kenaikan iuran berarti beban tambahan untuk kamu yang sudah bayar. Dan 54 juta yang tidak aktif tetap tidak bayar.
 
 ## Risiko Gagal Bayar 2027
 

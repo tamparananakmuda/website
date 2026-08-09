@@ -248,6 +248,7 @@ export function publishWhitepaperFile(slug: string): boolean {
   if (fm.status !== 'scheduled') return false;
 
   fm.status = 'published';
+  fm.updatedAt = new Date().toISOString();
 
   const newContent = matter.stringify(body, fm);
   writeFileSync(filePath, newContent, 'utf8');

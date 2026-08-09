@@ -11,6 +11,7 @@ import { knowledgeGraph } from '@/lib/tami/rag/knowledge-graph';
 import { tamiResponseCache } from '@/lib/tami/cache/response-cache';
 
 import { checkCronAuth } from '@/lib/auth/cron-check';
+import { pingIndexNow, pingSitemapToGoogle } from '@/lib/indexnow';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -139,12 +140,42 @@ export async function GET(request: NextRequest) {
       }
     }
 
+    // Ping search engines about newly published content
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+    const publishedUrls: string[] = [];
+    for (const slug of slugs) {
+      publishedUrls.push(`${siteUrl}/artikel/${slug}`);
+    }
+    for (const slug of wpSlugs) {
+      publishedUrls.push(`${siteUrl}/whitepaper/${slug}`);
+    }
+
+    let indexNowResult = null;
+    let sitemapPingResult = null;
+    if (publishedUrls.length > 0) {
+      try {
+        indexNowResult = await pingIndexNow(publishedUrls);
+        console.log('[cron] IndexNow ping:', indexNowResult);
+      } catch (e) {
+        console.error('[cron] IndexNow ping failed:', e);
+      }
+
+      try {
+        sitemapPingResult = await pingSitemapToGoogle();
+        console.log('[cron] Google sitemap ping:', sitemapPingResult);
+      } catch (e) {
+        console.error('[cron] Google sitemap ping failed:', e);
+      }
+    }
+
     return NextResponse.json({
       published: scheduled.length + scheduledWhitepapers.length,
       slugs: [...slugs, ...wpSlugs],
       ogGenerated,
       ogErrors,
       whitepapersPublished: scheduledWhitepapers.length,
+      indexNow: indexNowResult,
+      sitemapPing: sitemapPingResult,
     });
   } catch (error) {
     console.error('[cron] publish-scheduled error:', error);

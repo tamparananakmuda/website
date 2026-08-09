@@ -59,13 +59,11 @@ Semua bilang Gen Z pindah dari Jakarta karena cari kualitas hidup, mau slow livi
 
 Dan angka migrasi neto minus 5,40% dari BPS ini bukan yang paling mengejutkan.
 
-## Jakarta: Dulu Tujuan, Kini Daerah Asal Perpindahan
+## Kota Impian yang Kehilangan Daya Tarik
 
 Merantau ke ibu kota dulu adalah jalan utama anak muda mencari kerja serta masa depan. Tapi data Dukcapil Kemendagri Semester I 2026 mencatat perubahan arah: DKI tidak masuk lima besar provinsi tujuan perpindahan penduduk. Justru, DKI jadi daerah asal perpindahan dengan 97.161 orang pergi.
 
-Jawa Barat jadi tujuan terbanyak: 262.581 orang. Kabupaten Bekasi (33.907), Kabupaten Bogor (33.795), Kabupaten Tangerang (24.732) jadi tiga kabupaten tujuan teratas. Pola ini mengonfirmasi banyak orang masih ingin beraktivitas di kawasan Jakarta, tapi memilih tinggal di daerah sekitar karena biaya hunian lebih terjangkau.
-
-Kalau dulu merantau ke Jakarta adalah impian, sekarang keluar dari Jakarta jadi pilihan yang makin masuk akal.
+Jawa Barat jadi tujuan terbanyak: 262.581 orang. Kabupaten Bekasi (33.907), Kabupaten Bogor (33.795), Kabupaten Tangerang (24.732) jadi tiga kabupaten tujuan teratas. Pola ini mengonfirmasi banyak orang masih ingin beraktivitas di kawasan Jakarta, tapi memilih tinggal di daerah sekitar karena biaya hunian lebih terjangkau. Kalau dulu merantau ke Jakarta adalah impian, sekarang keluar dari Jakarta jadi pilihan yang makin masuk akal.
 
 ## Gaji Jakarta Tidak Cukup untuk Hidup di Jakarta
 
@@ -109,15 +107,13 @@ Profil ini bercerita: yang pindah adalah orang yang gajinya tidak cukup untuk me
 
 Kamu pikir pindah ke desa adalah pilihan. Sebenarnya pindah ke desa adalah gejala.
 
-## BPS Konfirmasi: Migrasi Neto Minus 5,40%
+## BPS Konfirmasi: Exodus Terbesar di Indonesia
 
 ### DKI, Provinsi dengan Migrasi Neto Negatif Terbesar
 
 Survei Penduduk Antar Sensus (SUPAS) 2025 mengonfirmasi apa yang data Dukcapil tunjukkan: migrasi neto DKI tercatat minus 5,40%, provinsi dengan migrasi neto negatif terbesar di Indonesia. Migran risen keluar lebih besar daripada migran risen masuk.
 
-Data BPS juga mencatat laju pertumbuhan penduduk Jakarta hanya 0,32% per tahun, Total Fertility Rate (TFR) 1,79 di bawah replacement level, dan 12,01% penduduk lanjut usia, provinsi dengan persentase lansia tertinggi keenam di Indonesia.
-
-Jakarta tidak hanya kehilangan penduduk muda yang pergi. Jakarta juga tidak menghasilkan cukup anak muda baru untuk menggantikan yang pergi.
+Data BPS juga mencatat laju pertumbuhan penduduk Jakarta hanya 0,32% per tahun, Total Fertility Rate (TFR) 1,79 di bawah replacement level, dan 12,01% penduduk lanjut usia, provinsi dengan persentase lansia tertinggi keenam di Indonesia. Jakarta tidak hanya kehilangan penduduk muda yang pergi. Jakarta juga tidak menghasilkan cukup anak muda baru untuk menggantikan yang pergi. Ini bukan siklus normal populasi kota. Ini tanda sebuah kota yang kehilangan generasi penerusnya.
 
 ### Tujuan Pindah: Bodetabek dan Kota Kecil
 
@@ -133,15 +129,11 @@ Tapi ada tren kedua yang muncul: pindah ke kota kecil yang lebih jauh. Yogyakart
 
 ### Kerja dari Kampung, Gaji Kota
 
-Tren "kerja dari kampung, gaji kota" muncul sebagai pola baru. Pekerja lepas, desainer grafis, plus content creator dan penerjemah yang tinggal di kota kecil atau desa, melayani klien dari Jakarta atau luar negeri. Survei IDN Times mencatat Gen Z menempati mayoritas pekerja independen digital di rentang usia 18-35 tahun, dan mulai tersebar di luar wilayah metropolitan utama.
-
-Penetrasi internet nasional yang sudah menembus mayoritas populasi memungkinkan seseorang di Wonosobo atau Magelang melayani klien dari Amerika Serikat atau Eropa. Biaya hidup yang terjangkau di desa membuat sisa penghasilan melimpah, uang langsung beredar di tingkat lokal.
+Tren "kerja dari kampung, gaji kota" muncul sebagai pola baru. Pekerja lepas, desainer grafis, plus content creator dan penerjemah yang tinggal di kota kecil atau desa, melayani klien dari Jakarta atau luar negeri. Survei IDN Times mencatat Gen Z menempati mayoritas pekerja independen digital di rentang usia 18-35 tahun, dan mulai tersebar di luar wilayah metropolitan utama. Penetrasi internet nasional yang sudah menembus mayoritas populasi memungkinkan seseorang di Wonosobo atau Magelang melayani klien dari Amerika Serikat atau Eropa. Biaya hidup yang terjangkau di desa membuat sisa penghasilan melimpah, uang langsung beredar di tingkat lokal.
 
 ### Tapi Tidak Semua Bisa WFA
 
-WFA hanya untuk pekerja digital. Dokter, guru, perawat, pekerja manufaktur, pekerja ritel: mereka harus ada di tempat. Mereka tidak bisa mengobati pasien lewat Zoom, tidak bisa mengajar dari pantai, tidak bisa merakit ponsel dari rumah.
-
-WFA adalah privilege yang dimiliki segelintir pekerja dengan skill digital dan akses ke klien yang membayar dalam mata uang yang kuat. Untuk mayoritas Gen Z yang bekerja dengan gaji UMP, WFA bukan opsi. Mereka harus pindah ke mana pekerjaan ada, dan jika pekerjaan ada di Jakarta tapi biaya hidup Jakarta tidak terjangkau, maka pilihan mereka terbatas: [kerja remote untuk bule](/artikel/kerja-remote-bule-gen-z-indonesia-talent-ekspor-termurah) dengan semua risikonya, atau pindah ke daerah dan cari kerja lokal dengan gaji yang lebih rendah.
+WFA hanya untuk pekerja digital. Dokter, guru, perawat, pekerja manufaktur, pekerja ritel: mereka harus ada di tempat. Mereka tidak bisa mengobati pasien lewat Zoom, tidak bisa mengajar dari pantai, tidak bisa merakit ponsel dari rumah. WFA adalah privilege yang dimiliki segelintir pekerja dengan skill digital dan akses ke klien yang membayar dalam mata uang yang kuat. Untuk mayoritas Gen Z yang bekerja dengan gaji UMP, WFA bukan opsi. Mereka harus pindah ke mana pekerjaan ada, dan jika pekerjaan ada di Jakarta tapi biaya hidup Jakarta tidak terjangkau, maka pilihan mereka terbatas: [kerja remote untuk bule](/artikel/kerja-remote-bule-gen-z-indonesia-talent-ekspor-termurah) dengan semua risikonya, atau pindah ke daerah dan cari kerja lokal dengan gaji yang lebih rendah.
 
 ## Insight: Bukan Pilihan, Keharusan
 
