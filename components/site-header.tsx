@@ -2,12 +2,17 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import { Search, Menu, X, Sparkles } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 import { TamiIcon } from '@/components/tami/tami-icon';
-import { FloatingTamiChat } from '@/components/tami/floating-tami-chat';
+
+const FloatingTamiChat = dynamic(
+  () => import('@/components/tami/floating-tami-chat').then((m) => m.FloatingTamiChat),
+  { ssr: false, loading: () => null }
+);
 
 const navLinks = [
   { name: 'TAM+', href: '/sosial' },

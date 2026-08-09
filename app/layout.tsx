@@ -1,25 +1,29 @@
 import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans, Manrope } from 'next/font/google';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
 import { ConditionalFooter } from '@/components/conditional-footer';
 import { SearchSchema } from '@/components/schema/search-schema';
 import { ThemeProvider } from '@/components/theme-provider';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
-import { WebVitals } from '@/components/web-vitals';
+
+const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then((m) => m.SpeedInsights), { ssr: false });
+const Analytics = dynamic(() => import('@vercel/analytics/next').then((m) => m.Analytics), { ssr: false });
+const WebVitals = dynamic(() => import('@/components/web-vitals').then((m) => m.WebVitals), { ssr: false });
 
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+  preload: true,
 });
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
+  preload: true,
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
