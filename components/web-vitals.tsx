@@ -32,10 +32,7 @@ export function WebVitals() {
   useEffect(() => {
     let mounted = true;
 
-    // Dynamically import to avoid SSR issues and keep bundle impact minimal.
-    // Using Function constructor to bypass static analysis — web-vitals is optional.
-    const dynamicImport = new Function('m', 'return import(m)');
-    dynamicImport('web-vitals').then((mod: Record<string, unknown>) => {
+    import('web-vitals').then((mod) => {
       if (!mounted) return;
 
       const device = getDeviceType();
