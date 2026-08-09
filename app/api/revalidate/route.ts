@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath, revalidateTag } from 'next/cache';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
@@ -17,6 +18,9 @@ export const dynamic = 'force-dynamic';
  */
 
 export async function POST(request: NextRequest) {
+  const limit = await rateLimit(request, { limit: 10, window: 60, identifier: 'revalidate' });
+  if (!limit.success) return rateLimitResponse(limit);
+
   const secret = process.env.REVALIDATE_SECRET;
 
   if (!secret) {

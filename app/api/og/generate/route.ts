@@ -5,11 +5,15 @@ import { generateAndUploadOGImages } from '@/lib/cdn/generate';
 import { deleteOldOGImages } from '@/lib/cdn/r2';
 import { ogGenerateSchema } from '@/lib/validations/og';
 import { parseRequestBody } from '@/lib/validations/helpers';
+import { rateLimit, rateLimitResponse } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
+  const limit = await rateLimit(request, { limit: 5, window: 60, identifier: 'og-generate' });
+  if (!limit.success) return rateLimitResponse(limit);
+
   const auth = await checkAdminAuth();
   if (!auth.isAdmin) return auth.response;
 
