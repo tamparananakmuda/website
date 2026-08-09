@@ -43,9 +43,20 @@ function csrfCheck(request: NextRequest): NextResponse | null {
   return null;
 }
 
+const AUTH_ROUTES = ['/admin', '/akun', '/donasi', '/api/auth', '/api/akun', '/api/donasi', '/api/bookmark', '/api/comment', '/api/like'];
+
+function isAuthRoute(pathname: string): boolean {
+  return AUTH_ROUTES.some((route) => pathname.startsWith(route));
+}
+
 export async function middleware(request: NextRequest) {
   const csrfResult = csrfCheck(request);
   if (csrfResult) return csrfResult;
+
+  // Skip Supabase auth for public pages - eliminates 300-800ms TTFB on every pageview
+  if (!isAuthRoute(request.nextUrl.pathname)) {
+    return NextResponse.next();
+  }
 
   let response = NextResponse.next({
     request: {

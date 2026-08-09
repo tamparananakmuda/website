@@ -6,17 +6,17 @@ import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
 import { ConditionalFooter } from '@/components/conditional-footer';
 import { SearchSchema } from '@/components/schema/search-schema';
-import { ThemeProvider } from '@/components/theme-provider';
 
 const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then((m) => m.SpeedInsights), { ssr: false });
 const Analytics = dynamic(() => import('@vercel/analytics/next').then((m) => m.Analytics), { ssr: false });
 const WebVitals = dynamic(() => import('@/components/web-vitals').then((m) => m.WebVitals), { ssr: false });
+const ServiceWorkerRegister = dynamic(() => import('@/components/sw-register').then((m) => m.ServiceWorkerRegister), { ssr: false });
 
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -131,11 +131,9 @@ export default function RootLayout({
           Lewati ke konten utama
         </a>
         <SearchSchema siteUrl={siteUrl} />
-        <ThemeProvider>
-          <ConditionalHeader />
-          <div className="flex-1" id="main-content">{children}</div>
-          <ConditionalFooter />
-        </ThemeProvider>
+        <ConditionalHeader />
+        <div className="flex-1" id="main-content">{children}</div>
+        <ConditionalFooter />
         {umamiUrl && umamiWebsiteId && (
           <Script
             src={`${umamiUrl}/tam.js`}
@@ -146,6 +144,7 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <WebVitals />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
