@@ -195,6 +195,28 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 183 | Sistem yang Bikin Sakit Itu Desain, Bukan Gagal (Seri Sistem Pangan P7) | sistem-pangan-indonesia-part-7-desain-bukan-gagal | Kehidupan | Kehidupan & Keluarga | kontra-narasi | 2027-01-11 (scheduled 08:00 WIB) |
 | 184 | Judol Bukan Serakah, Rp 287 Triliun dari Keputusasaan Gen Z | judol-bukan-serakah-rp-287-triliun-dari-keputusasaan-gen-z | Uang | Keuangan & Uang | kontra-narasi | 2026-09-11 (scheduled 08:00 WIB) |
 | 185 | Jakarta Mengusir Gen Z: Bukan Pindah ke Desa, Diusir Ekonomi | jakarta-mengusir-gen-z-bukan-pindah-desa-diusir-ekonomi | Kehidupan | Hubungan Sosial / Psikologi | kontra-narasi | 2026-09-12 (scheduled 08:00 WIB) |
+| 186 | Ikatan Dinas Bukan Beasiswa, Kamu Dijual ke Perusahaan | ikatan-dinas-bukan-beasiswa-kamu-dijual-ke-perusahaan | Kehidupan | Hubungan Sosial / Psikologi | kontra-narasi | 2026-09-13 (scheduled 08:00 WIB) |
+| 187 | PPh 21: Potongan Sebelum Kamu Lihat Gaji (Seri Pajak Indonesia P1) | sistem-pajak-indonesia-part-1-pph-21-potongan-sebelum-kamu-lihat-gaji | Uang | Keuangan & Uang | kontra-narasi | 2027-03-01 (scheduled 08:00 WIB) |
+| 188 | PPN 11%: Pajak yang Pukul Miskin (Seri Pajak Indonesia P2) | sistem-pajak-indonesia-part-2-ppn-11-persen-pajak-yang-pukul-miskin | Uang | Keuangan & Uang | kontra-narasi | 2027-03-02 (scheduled 08:00 WIB) |
+| 189 | Tax Evasion Konglomerat: Yang Besar Kabur (Seri Pajak Indonesia P3) | sistem-pajak-indonesia-part-3-tax-evasion-konglomerat-yang-besar-kabur | Uang | Keuangan & Uang | kontra-narasi | 2027-03-03 (scheduled 08:00 WIB) |
+| 190 | Tax Amnesty Berulang: Maaf untuk yang Curang (Seri Pajak Indonesia P4) | sistem-pajak-indonesia-part-4-tax-amnesty-berulang-maaf-untuk-yang-curang | Uang | Keuangan & Uang | kontra-narasi | 2027-03-04 (scheduled 08:00 WIB) |
+| 191 | Pajak Digital: Platform yang Tidak Bayar (Seri Pajak Indonesia P5) | sistem-pajak-indonesia-part-5-pajak-digital-platform-yang-tidak-bayar | Uang | Keuangan & Uang | kontra-narasi | 2027-03-05 (scheduled 08:00 WIB) |
+| 192 | Pajak Properti yang Tidak Ditegakkan (Seri Pajak Indonesia P6) | sistem-pajak-indonesia-part-6-pajak-properti-yang-tidak-ditegakkan | Uang | Keuangan & Uang | kontra-narasi | 2027-03-06 (scheduled 08:00 WIB) |
+| 193 | Sintesis: Pajak sebagai Transfer Kekayaan ke Atas (Seri Pajak Indonesia P7) | sistem-pajak-indonesia-part-7-sintesis-pajak-sebagai-transfer-kekayaan-ke-atas | Uang | Keuangan & Uang | kontra-narasi | 2027-03-07 (scheduled 08:00 WIB) |
+| 194 | Sertifikasi Bukan Investasi, Bayar Jutaan untuk Kerja Belum Pasti | sertifikasi-bukan-investasi-kerja-belum-pasti | Karier | Karier & Pekerjaan | kontra-narasi | 2026-09-14 (scheduled 08:00 WIB) |
+| 195 | Konsentrasi Kepemilikan: 6 Grup, 90% Berita (Seri Media Indonesia P1) | sistem-media-indonesia-part-1-konsentrasi-kepemilikan-6-grup-90-persen-berita | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-01 (scheduled 08:00 WIB) |
+| 196 | Ekonomi Klik: Marah = Engagement = Iklan (Seri Media Indonesia P2) | sistem-media-indonesia-part-2-ekonomi-klik-marah-engagement-iklan | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-02 (scheduled 08:00 WIB) |
+| 197 | Algoritma sebagai Editor: Platform Bukan Netral (Seri Media Indonesia P3) | sistem-media-indonesia-part-3-algoritma-sebagai-editor-platform-bukan-netral | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-03 (scheduled 08:00 WIB) |
+| 198 | Ekosistem Hoax: Industri yang Untung (Seri Media Indonesia P4) | sistem-media-indonesia-part-4-ekosistem-hoax-industri-yang-untung | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-04 (scheduled 08:00 WIB) |
+| 199 | Influencer sebagai Jurnalis: Opini Dikemas Fakta (Seri Media Indonesia P5) | sistem-media-indonesia-part-5-influencer-sebagai-jurnalis-opini-dikemas-fakta | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-05 (scheduled 08:00 WIB) |
+| 200 | Kematian Jurnalisme Lokal: Daerah Tanpa Suara (Seri Media Indonesia P6) | sistem-media-indonesia-part-6-kematian-jurnalisme-lokal-daerah-tanpa-suara | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-06 (scheduled 08:00 WIB) |
+| 201 | Sintesis: Media Tidak Gagal, Didesain Bikin Kamu Nggak Percaya (Seri Media Indonesia P7) | sistem-media-indonesia-part-7-sintesis-media-tidak-gagal-didesain-bikin-kamu-nggak-percaya | Teknologi | Teknologi & AI | kontra-narasi | 2027-04-07 (scheduled 08:00 WIB) |
+| 202 | Kerja Remote Bukan Bebas, Laptop-mu Jadi Pengawas | kerja-remote-bukan-bebas-laptop-jadi-pengawas | Karier | Karier & Pekerjaan | kontra-narasi | 2026-09-15 (scheduled 08:00 WIB) |
+| 203 | Bullshit Jobs: Kerjamu Mungkin Nggak Ada Gunanya | bullshit-jobs-kerja-mungkin-nggak-ada-gunanya | Karier | Karier & Pekerjaan | kontra-narasi | 2026-09-16 (scheduled 08:00 WIB) |
+| 204 | Begadang Bukan Malas, Balas Dendam Karena Siang Bukan Milikmu | begadang-bukan-malas-balas-dendam-karena-siang-bukan-milikmu | Mindset | Mindset & Realita | kontra-narasi | 2026-09-17 (scheduled 08:00 WIB) |
+| 205 | Tempat Ketiga Mati, Gen Z Bayar atau Pulang | tempat-ketiga-mati-gen-z-bayar-atau-pulang | Kehidupan | Kehidupan & Sosial | kontra-narasi | 2026-09-18 (scheduled 08:00 WIB) |
+| 206 | Gen Z Kabur dari Indonesia, Bukan Cari Enak | gen-z-kabur-dari-indonesia-bukan-cari-enak | Kehidupan | Kehidupan & Sosial | kontra-narasi | 2026-09-20 (scheduled 08:00 WIB) |
+| 207 | Kos Naik 2x, Gaji Nggak Gerak: Bukan Kamu yang Boros | kos-naik-2x-gaji-nggak-gerak-bukan-kamu-yang-boros | Uang | Keuangan & Uang | kontra-narasi | 2026-09-21 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 
