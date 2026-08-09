@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Eye, Clock, X, ExternalLink, Share2, Check } from 'lucide-react';
 import type { SocialPost } from '@/lib/db/schema';
+import { encodeSocialId } from '@/lib/social/encode';
 
 function formatDuration(seconds: number | null | undefined): string {
   if (!seconds) return '';
@@ -93,7 +94,7 @@ export default function VideoLandscapeGrid({ posts }: Props) {
             {/* Info Body */}
             <div className="flex flex-1 flex-col justify-between p-4 space-y-3">
               <div>
-                <Link href={`/sosial/${post.id}`}>
+                <Link href={`/sosial/${encodeSocialId(post.id.toString())}`}>
                   <h3 className="font-bold text-sm sm:text-base leading-snug line-clamp-2 text-foreground group-hover:text-primary transition-colors">
                     {post.title || post.contentText || 'Konten Video TAM+'}
                   </h3>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { encodeSocialId } from '@/lib/social/encode';
 
 import type { SocialPost } from '@/lib/db/schema';
 
@@ -79,7 +80,7 @@ export default function SocialGrid({ posts, heroPost, spotlightPosts }: Props) {
         <section className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="grid lg:grid-cols-2">
             {/* Video / Thumbnail */}
-            <Link href={`/sosial/${heroPost.id}`} className="relative aspect-video bg-black overflow-hidden group">
+            <Link href={`/sosial/${encodeSocialId(heroPost.id.toString())}`} className="relative aspect-video bg-black overflow-hidden group">
               {heroPost.thumbnailUrl ? (
                 <Image
                   src={heroPost.thumbnailUrl}
@@ -120,7 +121,7 @@ export default function SocialGrid({ posts, heroPost, spotlightPosts }: Props) {
                   </span>
                 )}
               </div>
-              <Link href={`/sosial/${heroPost.id}`}>
+              <Link href={`/sosial/${encodeSocialId(heroPost.id.toString())}`}>
                 <h2 className="mb-3 text-xl font-bold text-foreground leading-tight hover:text-primary transition-colors md:text-2xl">
                   {heroPost.title || heroPost.contentText?.slice(0, 80) || 'Konten Sosial TAM'}
                 </h2>
@@ -142,7 +143,7 @@ export default function SocialGrid({ posts, heroPost, spotlightPosts }: Props) {
                 </div>
               )}
               <Link
-                href={`/sosial/${heroPost.id}`}
+                href={`/sosial/${encodeSocialId(heroPost.id.toString())}`}
                 className="mt-5 inline-flex items-center gap-2 self-start rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
               >
                 <Play className="h-4 w-4 fill-current" />
@@ -187,7 +188,7 @@ export default function SocialGrid({ posts, heroPost, spotlightPosts }: Props) {
             {spotlightPosts.map((post) => (
               <Link
                 key={post.id}
-                href={`/sosial/${post.id}`}
+                href={`/sosial/${encodeSocialId(post.id.toString())}`}
                 className="group relative w-[280px] shrink-0 overflow-hidden rounded-xl border border-border bg-card hover:border-primary/50 transition-colors"
               >
                 <div className="relative aspect-video bg-black overflow-hidden">
@@ -276,7 +277,7 @@ export default function SocialGrid({ posts, heroPost, spotlightPosts }: Props) {
               animate={{ opacity: 1 }}
               className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/50 transition-colors"
             >
-              <Link href={`/sosial/${post.id}`}>
+              <Link href={`/sosial/${encodeSocialId(post.id.toString())}`}>
                 <div className="relative aspect-video bg-black overflow-hidden">
                   {post.thumbnailUrl ? (
                     <Image

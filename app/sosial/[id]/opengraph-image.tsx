@@ -2,6 +2,7 @@ import { ImageResponse } from '@vercel/og';
 import { getPublishedSocialPostById } from '@/lib/db/queries/social-posts';
 import { OgTemplate } from '@/lib/og/template';
 import { getFonts } from '@/lib/og/fonts';
+import { decodeSocialId } from '@/lib/social/encode';
 
 export const runtime = 'nodejs';
 export const revalidate = 3600;
@@ -13,7 +14,9 @@ interface Props {
 }
 
 export default async function Image({ params }: Props) {
-  const post = await getPublishedSocialPostById(params.id);
+  const decoded = decodeSocialId(params.id);
+  const dbId = decoded.dbId || params.id;
+  const post = await getPublishedSocialPostById(dbId);
 
   const fonts = await getFonts();
 

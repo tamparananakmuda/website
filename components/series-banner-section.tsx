@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Play, Sparkles } from 'lucide-react';
 import type { SocialPost } from '@/lib/db/schema';
+import { encodeSocialId } from '@/lib/social/encode';
 
 interface SeriesData {
   id: string;
@@ -90,7 +91,7 @@ export default function SeriesBannerSection({ seriesInfo, posts }: Props) {
             {posts.map((post) => (
               <Link
                 key={post.id.toString()}
-                href={`/sosial/${post.id}`}
+                href={`/sosial/${encodeSocialId(post.id.toString())}`}
                 className="group relative w-[240px] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] bg-black overflow-hidden">

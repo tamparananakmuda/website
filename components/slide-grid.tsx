@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Copy, Layers, ChevronLeft, ChevronRight, X, Share2, Play, Check, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { encodeSocialId } from '@/lib/social/encode';
 
 export interface SlideSet {
   id: string;
@@ -60,7 +61,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
     setCurrentSlideIndex(0);
     setIsCaptionExpanded(false);
     if (typeof window !== 'undefined' && slideSets[index]?.id) {
-      window.history.replaceState(null, '', `/sosial/${slideSets[index].id}`);
+      window.history.replaceState(null, '', `/sosial/${encodeSocialId(slideSets[index].id)}`);
     }
   };
 
@@ -154,7 +155,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
 
   const copyShareLink = () => {
     if (!selectedSet) return;
-    const url = `${window.location.origin}/sosial/${selectedSet.id}`;
+    const url = `${window.location.origin}/sosial/${encodeSocialId(selectedSet.id)}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -344,7 +345,7 @@ export default function SlideGrid({ slideSets, initialSelectedId, showMoreUrl, m
                       )}
                     </button>
                     <Link
-                      href={`/sosial/${selectedSet.id}`}
+                      href={`/sosial/${encodeSocialId(selectedSet.id)}`}
                       className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold transition-colors shadow-lg shadow-red-950/40"
                     >
                       <span>Halaman Khusus</span>

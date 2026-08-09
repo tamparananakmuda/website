@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ExternalLink, Share2, Play, Clock } from 'lucide-react';
 import { useState } from 'react';
 import { SocialNewsletterCTA } from '@/components/social/social-newsletter-cta';
+import { encodeSocialId } from '@/lib/social/encode';
 
 import type { SocialPost } from '@/lib/db/schema';
 
@@ -223,7 +224,7 @@ export default function SocialDetail({
             {related.map((r) => (
               <Link
                 key={r.id}
-                href={`/sosial/${r.id}`}
+                href={`/sosial/${encodeSocialId(r.id.toString())}`}
                 className="group rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-colors"
               >
                 <div className="relative aspect-video bg-black overflow-hidden">

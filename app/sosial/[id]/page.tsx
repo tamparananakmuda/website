@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import SlideGrid from '@/components/slide-grid';
 import slidesData from '@/files/slides-data.json';
+import { decodeSocialId, encodeSocialId } from '@/lib/social/encode';
 
 interface Props {
   params: { id: string };
@@ -13,18 +14,23 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (params.id === 'slide') return {};
-  const slideItem = slidesData.find((s) => s.id === params.id || s.id === `konten-tam-${params.id}`);
+  const decoded = decodeSocialId(params.id);
+  const slideItem = slidesData.find((s) => 
+    s.id === params.id || 
+    s.id === `konten-tam-${params.id}` ||
+    (decoded.slideId && s.id === decoded.slideId)
+  );
   if (slideItem) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
     const title = `${slideItem.caption.slice(0, 60)}... - TAM+`;
     return {
       title,
       description: slideItem.caption,
-      alternates: { canonical: `${siteUrl}/sosial/${slideItem.id}` },
+      alternates: { canonical: `${siteUrl}/sosial/${encodeSocialId(slideItem.id)}` },
       openGraph: {
         type: 'article',
         locale: 'id_ID',
-        url: `${siteUrl}/sosial/${slideItem.id}`,
+        url: `${siteUrl}/sosial/${encodeSocialId(slideItem.id)}`,
         title,
         description: slideItem.caption,
         images: slideItem.slides[0] ? [{ url: slideItem.slides[0] }] : [],
@@ -38,7 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const post = await getPublishedSocialPostById(params.id).catch(() => null);
+  const dbId = decoded.dbId || params.id;
+  const post = await getPublishedSocialPostById(dbId).catch(() => null);
 
   if (!post) return { title: 'Konten tidak ditemukan' };
 
@@ -69,8 +76,13 @@ export const revalidate = 300;
 
 export default async function SocialPostPage({ params }: Props) {
   if (params.id === 'slide') notFound();
+  const decoded = decodeSocialId(params.id);
   // Check slidesData first for instant direct link sharing (Instagram/TikTok style)
-  const slideItem = slidesData.find((s) => s.id === params.id || s.id === `konten-tam-${params.id}`);
+  const slideItem = slidesData.find((s) => 
+    s.id === params.id || 
+    s.id === `konten-tam-${params.id}` ||
+    (decoded.slideId && s.id === decoded.slideId)
+  );
   if (slideItem) {
     let posts: any[] = [];
     try {
@@ -99,7 +111,7 @@ export default async function SocialPostPage({ params }: Props) {
         <BreadcrumbSchema items={[
           { name: 'Home', href: '/' },
           { name: 'TAM+', href: '/sosial' },
-          { name: slideItem.caption.slice(0, 30), href: `/sosial/${slideItem.id}` },
+          { name: slideItem.caption.slice(0, 30), href: `/sosial/${encodeSocialId(slideItem.id)}` },
         ]} />
 
         <div>
@@ -138,7 +150,8 @@ export default async function SocialPostPage({ params }: Props) {
     );
   }
 
-  const post = await getPublishedSocialPostById(params.id).catch(() => null);
+  const dbId = decoded.dbId || params.id;
+  const post = await getPublishedSocialPostById(dbId).catch(() => null);
 
   if (!post) notFound();
 

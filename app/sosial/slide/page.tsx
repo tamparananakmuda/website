@@ -7,6 +7,7 @@ import { Layers, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import SlideGrid, { SlideSet } from '@/components/slide-grid';
 import slidesData from '@/files/slides-data.json';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
+import { encodeSocialId } from '@/lib/social/encode';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -132,7 +133,7 @@ function SlideGridCardWrapper({
 
   const handleCardClick = () => {
     if (typeof window !== 'undefined' && set.id) {
-      window.history.pushState(null, '', `/sosial/${set.id}`);
+      window.history.pushState(null, '', `/sosial/${encodeSocialId(set.id)}`);
     }
     setIsOpen(true);
   };

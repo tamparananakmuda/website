@@ -3,6 +3,7 @@ import { getPublishedPostsForSitemap } from '@/lib/db/queries/posts';
 import { getCategoriesForSitemap } from '@/lib/db/queries/categories';
 import { getPublishedWhitepapersForSitemap } from '@/lib/db/queries/whitepapers';
 import { getPublishedSocialPostsForSitemap } from '@/lib/db/queries/social-posts';
+import { encodeSocialId } from '@/lib/social/encode';
 import { series as seriesConfig } from '@/content/config';
 import { getPostsBySeries } from '@/lib/articles/loader';
 
@@ -155,7 +156,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const socialPages: MetadataRoute.Sitemap = socialPostsData.map((sp) => ({
-    url: `${siteUrl}/sosial/${sp.id}`,
+    url: `${siteUrl}/sosial/${encodeSocialId(sp.id.toString())}`,
     lastModified: sp.updatedAt ? new Date(sp.updatedAt) : new Date(),
     changeFrequency: 'monthly',
     priority: 0.4,
