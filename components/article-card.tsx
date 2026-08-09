@@ -7,9 +7,10 @@ import type { Category, PostWithRelations } from '@/lib/db/schema';
 
 interface ArticleCardProps {
   post: PostWithRelations;
+  priority?: boolean;
 }
 
-export function ArticleCard({ post }: ArticleCardProps) {
+export function ArticleCard({ post, priority = false }: ArticleCardProps) {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgSrc, setImgSrc] = useState(post.ogCardUrl || post.ogImageUrl || `/api/og/card?slug=${post.slug}`);
   const [usedFallback, setUsedFallback] = useState(false);
@@ -38,8 +39,8 @@ export function ArticleCard({ post }: ArticleCardProps) {
             src={imgSrc}
             alt={post.title}
             fill
-            unoptimized
-            loading="lazy"
+            priority={priority}
+            loading={priority ? 'eager' : 'lazy'}
             className={`
               object-cover transition-all duration-500
               ${imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}

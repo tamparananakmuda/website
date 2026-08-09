@@ -1,5 +1,6 @@
 'use client';
 
+import '@/app/prose.css';
 import React, { useRef, useEffect } from 'react';
 import { Marked } from 'marked';
 import DOMPurify from 'dompurify';

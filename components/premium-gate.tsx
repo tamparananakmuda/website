@@ -1,5 +1,6 @@
 'use client';
 
+import '@/app/prose.css';
 import { useState, useEffect } from 'react';
 async function getSupabase() {
   const { createClient } = await import('@/lib/supabase/client');

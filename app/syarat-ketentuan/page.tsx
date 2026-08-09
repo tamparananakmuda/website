@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import '@/app/prose.css';
 import Link from 'next/link';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';

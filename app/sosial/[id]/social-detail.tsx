@@ -1,5 +1,6 @@
 'use client';
 
+import '@/app/prose.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, Share2, Play, Clock } from 'lucide-react';

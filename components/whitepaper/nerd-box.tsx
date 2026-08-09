@@ -1,5 +1,6 @@
 'use client';
 
+import '@/app/prose.css';
 import { useState } from 'react';
 import { ChevronRight, FlaskConical } from 'lucide-react';
 import { marked } from 'marked';

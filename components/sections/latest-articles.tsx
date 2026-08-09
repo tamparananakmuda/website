@@ -63,8 +63,8 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <ArticleCard key={post.id} post={post} />
+          {posts.map((post, index) => (
+            <ArticleCard key={post.id} post={post} priority={index === 0} />
           ))}
         </div>
         <div className="mt-10 text-center sm:hidden">

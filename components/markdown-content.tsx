@@ -1,4 +1,5 @@
 import { marked } from 'marked';
+import '@/app/prose.css';
 import { slugify } from '@/lib/utils/slugify';
 import { WhitepaperChartRenderer } from '@/components/charts/chart-renderer';
 import { InteractiveCalculator } from '@/components/whitepaper/interactive-calculator';
