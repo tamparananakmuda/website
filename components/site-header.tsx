@@ -27,8 +27,14 @@ export function SiteHeader() {
 
   useEffect(() => {
     if (!isHome) return;
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 100);
+        ticking = false;
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -60,7 +66,7 @@ export function SiteHeader() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
-            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-6 pr-3.5 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out',
+            'pointer-events-auto mx-auto flex w-full items-center justify-between rounded-full border border-border bg-card/95 pl-6 pr-3.5 shadow-xl backdrop-blur-md will-change-[max-width,padding] transition-[max-width,padding] duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]',
             isCompact ? 'max-w-2xl py-3' : 'max-w-7xl py-4.5 md:py-5'
           )}
         >
@@ -74,8 +80,8 @@ export function SiteHeader() {
 
           <nav
             className={cn(
-              'hidden items-center gap-8 overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out md:flex',
-              isCompact ? 'opacity-0 max-w-0' : 'opacity-100 max-w-[600px]'
+              'hidden items-center whitespace-nowrap transition-[gap] duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] md:flex',
+              isCompact ? 'gap-5' : 'gap-8'
             )}
             aria-label="Navigasi utama"
           >
@@ -83,7 +89,10 @@ export function SiteHeader() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+                className={cn(
+                  'text-sm font-semibold transition-colors hover:text-foreground',
+                  pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                )}
               >
                 {link.name}
               </Link>
@@ -119,7 +128,10 @@ export function SiteHeader() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="rounded-lg px-4 py-3 text-base font-medium text-foreground hover:bg-secondary"
+                  className={cn(
+                    'rounded-lg px-4 py-3 text-base font-medium transition-colors hover:bg-secondary',
+                    pathname === link.href ? 'text-foreground bg-secondary' : 'text-foreground'
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -163,7 +175,10 @@ export function SiteHeader() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-foreground',
+                  pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                )}
               >
                 {link.name}
               </Link>
@@ -173,7 +188,10 @@ export function SiteHeader() {
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/cari"
-              className="flex items-center justify-center w-9 h-9 rounded-full text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+              className={cn(
+                'flex items-center justify-center w-9 h-9 rounded-full transition-colors hover:bg-secondary',
+                pathname === '/cari' ? 'text-foreground' : 'text-muted-foreground'
+              )}
               aria-label="Cari artikel"
             >
               <Search className="w-4 h-4" />
@@ -200,7 +218,10 @@ export function SiteHeader() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
+                className={cn(
+                  'rounded-lg px-4 py-3 text-base font-medium transition-colors hover:bg-secondary',
+                  pathname === link.href ? 'text-foreground bg-secondary' : 'text-foreground'
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

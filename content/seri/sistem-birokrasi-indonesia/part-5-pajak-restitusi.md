@@ -87,7 +87,7 @@ PMK 168/2023 mengatur bahwa kelebihan PPh 21 harus dikembalikan oleh pemotong pa
 
 ## Restitusi: Dari 12 Bulan Menjadi 15 Hari (Tapi Realitanya)
 
-DJP mengumumkan kebijakan baru pada Mei 2023: percepatan restitusi pajak dari 12 bulan menjadi 15 hari kerja. Diatur dalam PER-5/PJ/2023. Kebijakan ini berlaku untuk wajib pajak orang pribadi yang mengajukan restitusi PPh dengan jumlah lebih bayar paling banyak Rp100 juta.
+DJP mengumumkan kebijakan baru Mei 2023: percepatan pengembalian kelebihan pajak. Diatur dalam PER-5/PJ/2023. Kebijakan ini berlaku untuk wajib pajak orang pribadi yang mengajukan klaim PPh dengan jumlah lebih bayar paling banyak Rp100 juta.
 
 Sebelumnya, proses restitusi bisa mencapai 12 bulan melalui pemeriksaan. 12 bulan. Setahun untuk mengembalikan uang yang seharusnya milik kamu. Dan selama setahun itu, sistem pakai uangmu tanpa bunga.
 
@@ -109,9 +109,9 @@ Hasilnya: Gen Z yang patuh membayar pajak (karena dipotong otomatis) tapi tidak 
 
 ## Insight
 
-Sistem pajak Indonesia mengambil duluan, menjelaskan belakangan. Gen Z dipotong pajak tanpa dipahami untuk apa. Restitusi 15 hari adalah janji bagus, tapi Gen Z tidak tahu mereka berhak klaim. Dan kalau mereka tahu, prosesnya tidak seotomatis pemotongan.
+Sistem pajak Indonesia mengambil duluan, menjelaskan belakangan. Gen Z dipotong pajak tanpa dipahami untuk apa. Data bilang restitusi 15 hari adalah janji bagus, tapi Gen Z tidak tahu mereka berhak klaim. Dan kalau mereka tahu, prosesnya tidak seotomatis pemotongan.
 
-Ini bukan kebetulan. Sistem yang otomatis saat mengambil dan manual saat mengembalikan adalah sistem yang dirancang untuk memaksimalkan penerimaan dan meminimalkan pengembalian. Bukan korupsi. Bukan konspirasi. Tapi desain sistem yang asimetris: efisien untuk negara, tidak efisien untuk warga.
+Ini bukan kebetulan. Sistem yang otomatis saat mengambil dan manual saat mengembalikan adalah sistem yang dirancang untuk memaksimalkan penerimaan dan meminimalkan pengembalian. Bukan korupsi. Bukan konspirasi. Tapi desain sistem yang asimetris: efisien untuk negara, tidak efisien untuk warga. Dan ini realitas yang Gen Z hadapi pertama kali saat masuk dunia kerja. Bukan salah Gen Z kalau mereka tidak tahu. Sistem yang tidak menjelaskan adalah sistem yang tidak ingin diketahui.
 
 Dan Gen Z yang baru pertama kali bayar pajak tidak punya konteks untuk memprotes. Mereka tidak tahu bahwa restitusi 15 hari adalah perbaikan dari 12 bulan. Mereka tidak tahu bahwa mereka berhak klaim. Mereka tidak tahu bahwa sistem yang otomatis memotong bisa juga otomatis mengembalikan, kalau sistem mau dirancang seperti itu. Tapi sistem tidak dirancang seperti itu. Dan ketidak tahuan itu menguntungkan sistem.
 

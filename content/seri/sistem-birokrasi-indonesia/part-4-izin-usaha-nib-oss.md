@@ -72,7 +72,7 @@ Wakil Menteri Investasi dan Hilirisasi Todotua Pasaribu mengaku dibanjiri protes
 
 ## Konteks
 
-Gen Z didorong jadi entrepreneur. Pemerintah bilang wirausaha adalah masa depan. Marketplace mendorong orang jualan online. Tapi saat Gen Z mau mulai bisnis, mereka berhadapan dengan sistem perizinan yang didesain untuk perusahaan besar yang punya tim legal, bukan untuk anak 22 tahun yang mau buka toko online.
+Gen Z didorong jadi entrepreneur. Pemerintah bilang wirausaha adalah masa depan. Marketplace mendorong kamu jualan online. Tapi saat kamu mau mulai bisnis, kamu berhadapan dengan sistem perizinan yang didesain untuk perusahaan besar yang punya tim legal, bukan untuk anak 22 tahun yang mau buka toko online.
 
 Ada ironi di sini. Di satu sisi, pemerintah kampanye "wirausaha muda bangsa". Di sisi lain, sistem yang sama yang kampanye tersebut tidak mampu menerbitkan NIB untuk 40 juta pelaku usaha. Janji "mudah berbisnis" bertabrakan dengan realitas "setengah mati urus izin". Dan yang paling menderita adalah Gen Z yang baru mulai, yang modalnya terbatas, yang tidak punya tim legal untuk navigasi sistem yang error.
 
