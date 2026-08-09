@@ -209,9 +209,19 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
     },
     onError: (error) => {
       timersRef.current.forEach(clearTimeout);
+      let friendlyMsg: string;
+      if (error.includes('429') || error.includes('rate limit') || error.includes('Terlalu banyak')) {
+        friendlyMsg = 'Tunggu sebentar ya, kamu chat terlalu cepat. Coba lagi dalam beberapa detik.';
+      } else if (error.includes('fetch') || error.includes('network') || error.includes('Failed to fetch')) {
+        friendlyMsg = 'Koneksi terputus. Cek internet kamu lalu coba kirim lagi ya.';
+      } else if (error.includes('timeout') || error.includes('Timeout')) {
+        friendlyMsg = 'TAMI butuh waktu lebih lama dari biasanya. Coba pertanyaan yang lebih singkat.';
+      } else {
+        friendlyMsg = 'Maaf, TAMI lagi ada kendala teknis. Coba lagi ya.';
+      }
       setMessages((prev) => [
         ...prev,
-        { id: `error-${Date.now()}`, role: 'assistant', content: error },
+        { id: `error-${Date.now()}`, role: 'assistant', content: friendlyMsg },
       ]);
     },
   });
