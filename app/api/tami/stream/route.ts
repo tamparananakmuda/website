@@ -66,25 +66,43 @@ export async function POST(req: NextRequest) {
     const conversationId = `conv-${Date.now()}-${ip.slice(-6)}`;
     trackConversation(conversationId);
 
-    // Step 1: Run full pipeline to get cognitive data (diagnosis, action plan, citations, etc.)
-    const cognitiveResponse = await processTamiIntelligence(query, history);
-
-    // Extract cognitive data without conversationalReply for streaming
-    const { conversationalReply, ...cognitiveData } = cognitiveResponse;
-
-    // Fast path: for greetings/simple queries, skip expensive streamTamiReply() LLM call
-    // Exclude degraded responses (circuit breaker fallback) — those need streaming for context
-    const isQuickChat = 'isQuickChat' in cognitiveData && cognitiveData.isQuickChat;
-    const isGreetingResponse = cognitiveData.severityLevel === 'ringan' 
-      && !('isDegraded' in cognitiveData && cognitiveData.isDegraded)
-      && (!cognitiveData.actionPlan || cognitiveData.actionPlan.length === 0)
-      && (!cognitiveData.citations || cognitiveData.citations.length === 0);
-
-    // Step 2: Create SSE stream
+    // Step 2: Create SSE stream — send initial event immediately to prevent gateway timeout
     const encoder = new TextEncoder();
 
     const stream = new ReadableStream({
       async start(controller) {
+        // Send heartbeat immediately so Cloudflare/Vercel doesn't 504 while pipeline runs
+        controller.enqueue(
+          encoder.encode(`data: ${JSON.stringify({ type: 'processing' })}\n\n`)
+        );
+
+        // Step 1: Run full pipeline to get cognitive data (diagnosis, action plan, citations, etc.)
+        let cognitiveResponse;
+        try {
+          cognitiveResponse = await processTamiIntelligence(query, history);
+        } catch (err) {
+          console.error('[TAMI SSE] Pipeline failed:', err);
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: 'token', content: 'Maaf, TAMI lagi ada kendala teknis. Coba lagi ya.' })}\n\n`)
+          );
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`)
+          );
+          controller.close();
+          return;
+        }
+
+        // Extract cognitive data without conversationalReply for streaming
+        const { conversationalReply, ...cognitiveData } = cognitiveResponse;
+
+        // Fast path: for greetings/simple queries, skip expensive streamTamiReply() LLM call
+        // Exclude degraded responses (circuit breaker fallback) — those need streaming for context
+        const isQuickChat = 'isQuickChat' in cognitiveData && cognitiveData.isQuickChat;
+        const isGreetingResponse = cognitiveData.severityLevel === 'ringan' 
+          && !('isDegraded' in cognitiveData && cognitiveData.isDegraded)
+          && (!cognitiveData.actionPlan || cognitiveData.actionPlan.length === 0)
+          && (!cognitiveData.citations || cognitiveData.citations.length === 0);
+
         // Event 1: Send cognitive data (skip for quick-chat to avoid rendering cards)
         if (!isQuickChat) {
           controller.enqueue(

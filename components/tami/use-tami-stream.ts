@@ -55,8 +55,9 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
         signal: controller.signal,
       });
 
-      // Auto-abort after 45s if no completion (server maxDuration is 60s)
-      const timeoutId = setTimeout(() => controller.abort(), 45000);
+      // Auto-abort after 55s if no completion (server maxDuration is 60s)
+      // Cleared once we receive the first event (processing heartbeat)
+      const timeoutId = setTimeout(() => controller.abort(), 55000);
 
       if (!response.ok) {
         const errData = await response.json().catch(() => ({ error: 'Stream request failed' }));
@@ -85,7 +86,10 @@ export function useTamiStream(options?: UseTamiStreamOptions): UseTamiStreamRetu
           try {
             const event = JSON.parse(jsonStr);
 
-            if (event.type === 'cognitive') {
+            if (event.type === 'processing') {
+              // Heartbeat received — connection is alive, clear the abort timeout
+              clearTimeout(timeoutId);
+            } else if (event.type === 'cognitive') {
               setCognitiveData(event.data);
               optionsRef.current?.onCognitiveData?.(event.data);
             } else if (event.type === 'token') {
