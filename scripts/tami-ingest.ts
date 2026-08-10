@@ -58,7 +58,7 @@ function createChunks(body: string, meta: { slug: string; title: string; type: '
   let currentChunk = '';
 
   for (const para of paragraphs) {
-    if ((currentChunk + para).length > 1000) {
+    if ((currentChunk + para).length > 2000) {
       if (currentChunk.trim().length > 100) {
         chunks.push(currentChunk.trim());
       }
