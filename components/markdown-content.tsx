@@ -1,10 +1,14 @@
 import { marked } from 'marked';
+import dynamic from 'next/dynamic';
 import '@/app/prose.css';
 import { slugify } from '@/lib/utils/slugify';
-import { WhitepaperChartRenderer } from '@/components/charts/chart-renderer';
 import { InteractiveCalculator } from '@/components/whitepaper/interactive-calculator';
 import { ComparisonTable } from '@/components/whitepaper/comparison-table';
 import { NerdBox } from '@/components/whitepaper/nerd-box';
+
+const WhitepaperChartRenderer = dynamic(() => import('@/components/charts/chart-renderer').then(m => m.WhitepaperChartRenderer), {
+  loading: () => <div className="h-64 animate-pulse rounded-lg bg-muted/30" />,
+});
 
 interface ChartConfig {
   type: 'bar' | 'line' | 'pie' | 'stacked-bar' | 'radar' | 'area' | 'grouped-bar' | 'scatter' | 'funnel' | 'treemap';

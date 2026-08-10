@@ -11,7 +11,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
-  optimizePackageImports: ['lucide-react'],
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
   },
