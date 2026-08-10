@@ -170,7 +170,7 @@ async function run() {
   }
 
   // 5. Save to disk
-  writeFileSync(CACHE_PATH, JSON.stringify(allProcessedChunks, null, 2), 'utf8');
+  writeFileSync(CACHE_PATH, JSON.stringify(allProcessedChunks), 'utf8');
   console.log(`[TAMI Ingestion] Successfully ingested ${allProcessedChunks.length} chunks into ${CACHE_PATH} (skipped ${skipped} files with parse errors)`);
 }
 
