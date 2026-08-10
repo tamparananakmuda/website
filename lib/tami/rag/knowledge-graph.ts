@@ -13,10 +13,11 @@ export interface ArticleChunk {
   seriesName?: string;
   seriesOrder?: number;
   text: string;
-  embedding: number[];
+  embedding?: number[];
 }
 
 const CACHE_PATH = join(process.cwd(), 'lib', 'tami', 'rag', 'embeddings-cache.json');
+const SEARCH_INDEX_PATH = join(process.cwd(), 'lib', 'tami', 'rag', 'search-index.json');
 
 // Calculate cosine similarity between two vectors
 function cosineSimilarity(a: number[], b: number[]): number {
@@ -144,44 +145,57 @@ export class KnowledgeGraphEngine {
   private chunks: ArticleChunk[] = [];
   private bm25Index: BM25Index = new BM25Index();
   private indexed = false;
+  private hasEmbeddings = false;
 
   constructor() {
     this.loadCache();
   }
 
   private loadCache() {
+    // Try full embeddings cache first (local dev), then lightweight search index
     try {
       if (existsSync(CACHE_PATH)) {
         const raw = readFileSync(CACHE_PATH, 'utf8');
         this.chunks = JSON.parse(raw);
-        console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from local embeddings cache.`);
-        // Build BM25 index after loading chunks
+        this.hasEmbeddings = this.chunks.length > 0 && !!this.chunks[0].embedding;
+        console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from local embeddings cache (embeddings: ${this.hasEmbeddings}).`);
         this.bm25Index.index(this.chunks);
         this.indexed = true;
-      } else {
-        console.warn(`[TAMI RAG] Embeddings cache not found locally at ${CACHE_PATH}.`);
+        return;
       }
+      if (existsSync(SEARCH_INDEX_PATH)) {
+        const raw = readFileSync(SEARCH_INDEX_PATH, 'utf8');
+        this.chunks = JSON.parse(raw);
+        this.hasEmbeddings = false;
+        console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from local search index (no embeddings).`);
+        this.bm25Index.index(this.chunks);
+        this.indexed = true;
+        return;
+      }
+      console.warn(`[TAMI RAG] No cache file found locally.`);
     } catch (error) {
-      console.error('[TAMI RAG] Failed to load local embeddings cache:', error);
+      console.error('[TAMI RAG] Failed to load local cache:', error);
     }
   }
 
   private async loadCacheFromCDN(): Promise<boolean> {
-    const cdnUrl = `${process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com'}/tami/embeddings-cache.json`;
+    // Fetch lightweight search index (0.7MB) instead of full embeddings (21.4MB)
+    const cdnUrl = `${process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com'}/tami/search-index.json`;
     try {
-      console.log(`[TAMI RAG] Fetching embeddings from CDN: ${cdnUrl}`);
+      console.log(`[TAMI RAG] Fetching search index from CDN: ${cdnUrl}`);
       const response = await fetch(cdnUrl, { cache: 'force-cache' });
       if (!response.ok) {
         console.error(`[TAMI RAG] CDN fetch failed: ${response.status}`);
         return false;
       }
       this.chunks = await response.json();
-      console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from CDN.`);
+      this.hasEmbeddings = false;
+      console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from CDN search index.`);
       this.bm25Index.index(this.chunks);
       this.indexed = true;
       return true;
     } catch (error) {
-      console.error('[TAMI RAG] Failed to fetch embeddings from CDN:', error);
+      console.error('[TAMI RAG] Failed to fetch search index from CDN:', error);
       return false;
     }
   }
@@ -222,6 +236,21 @@ export class KnowledgeGraphEngine {
       this.bm25Index.index(searchPool);
     }
 
+    // BM25-only search (fast, no API calls needed)
+    // Used when embeddings aren't available (Vercel serverless with lightweight index)
+    if (!this.hasEmbeddings) {
+      console.log('[TAMI RAG] Using BM25-only search (no embeddings available).');
+      const bm25Results = this.bm25Index.search(query, searchPool, limit * 3);
+      const seen = new Map<string, number>();
+      const diverse = bm25Results.filter(r => {
+        const count = (seen.get(r.chunk.slug) || 0) + 1;
+        seen.set(r.chunk.slug, count);
+        return count <= 2;
+      });
+      return diverse.slice(0, limit).map(r => ({ chunk: r.chunk, score: r.score }));
+    }
+
+    // Full hybrid search (local dev with embeddings)
     const candidateLimit = Math.max(limit * 3, 15);
 
     try {
@@ -234,7 +263,7 @@ export class KnowledgeGraphEngine {
       // 3. Vector similarity search
       const vectorResults = searchPool.map((chunk, idx) => ({
         chunk,
-        score: cosineSimilarity(queryVector, chunk.embedding),
+        score: cosineSimilarity(queryVector, chunk.embedding!),
         index: idx,
       })).sort((a, b) => b.score - a.score);
 

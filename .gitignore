@@ -24,3 +24,4 @@ supabase/.temp
 # TAMI
 lib/tami/rag/content-hashes.json
 lib/tami/rag/embeddings-cache.json
+lib/tami/rag/search-index.json
