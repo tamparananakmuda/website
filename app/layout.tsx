@@ -16,16 +16,16 @@ const manrope = Manrope({
   subsets: ['latin'],
   weight: ['500'],
   variable: '--font-sans',
-  display: 'swap',
-  preload: true,
+  display: 'optional',
+  preload: false,
 });
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['600', '700', '800'],
   variable: '--font-display',
-  display: 'swap',
-  preload: true,
+  display: 'optional',
+  preload: false,
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
