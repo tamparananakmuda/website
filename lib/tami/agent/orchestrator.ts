@@ -309,6 +309,60 @@ async function generateLLMSuggestions(
   }
 }
 
+/**
+ * Quick-chat mode: Generate a short conversational reply without the full 4-agent pipeline.
+ * Used for simple/conversational queries where the user just wants to chat, not get a full analysis.
+ */
+async function generateQuickChatReply(
+  query: string,
+  history: { role: 'user' | 'assistant'; content: string }[]
+): Promise<{ text: string; suggestions: string[] }> {
+  const safeQuery = sanitizeForPrompt(query);
+  const rawHistory = await compressHistory(history);
+
+  const quickPrompt = `Lo TAMI. Teman yang ngasih tamparan realita ke anak muda Indonesia. Lo lagi ngobrol santai, bukan sesi diagnosa.
+
+Pertanyaan user: "${safeQuery}"
+
+Aturan quick-chat:
+1. Jawab SINGKAT. Maksimal 3-4 kalimat (60-80 kata). Nggak usah panjang.
+2. Ngobrol dulu, jangan langsung kasih solusi atau analisis panjang.
+3. Kalau user cerita masalah, validasi dulu, tanya detail. Jangan langsung tampar.
+4. Tunggu user minta detail/analisis baru lo jabarin.
+5. Tetap jujur dan tajam, tapi kasual. Kayak ngobrol sama teman.
+6. Tutup dengan pertanyaan singkat biar ngobrol lanjut.`;
+
+  try {
+    const result = await chatWithFallback(
+      mistral,
+      {
+        model: 'mistral-small-latest',
+        messages: [
+          { role: 'system', content: 'Lo TAMI. Bukan AI, bukan asisten. Lo teman yang jujur dan tajam ke anak muda Indonesia. Bahasa gue/kamu, kasual tapi berbobot. Jawab selalu singkat dan ngobrol dulu.' },
+          ...rawHistory.map(h => ({ role: h.role as 'user' | 'assistant', content: h.content })),
+          { role: 'user', content: quickPrompt },
+        ],
+        maxTokens: 250,
+        temperature: 0.7,
+        promptCacheKey: 'tami-quick-chat',
+      },
+      'mistral-small-latest'
+    );
+    const reply = typeof result === 'string' ? result : (result as any)?.choices?.[0]?.message?.content || String(result);
+
+    return {
+      text: reply,
+      suggestions: generateQuickSuggestions(query, 'neutral', 'Tidak Ada'),
+    };
+  } catch (error) {
+    console.error('[TAMI QuickChat] Failed, falling back:', error);
+    return {
+      text: 'Gue denger lo. Coba cerita lebih detail, biar gue bisa bantu bedah masalahnya.',
+      suggestions: generateQuickSuggestions(query, 'neutral', 'Tidak Ada'),
+    };
+  }
+}
+
 export async function processTamiIntelligence(query: string, history: { role: 'user' | 'assistant'; content: string }[] = []): Promise<TamiCognitiveResponse> {
   // T7-6: Circuit breaker check - if Mistral is down, return graceful degradation
   if (!isMistralAvailable()) {
@@ -427,8 +481,40 @@ export async function processTamiIntelligence(query: string, history: { role: 'u
     };
   }
 
+  // 0d. Quick-chat fast path — skip full 4-agent pipeline for short conversational queries
+  // Only run the heavy cognitive pipeline when the user actually needs deep analysis
+  const wordCount = normalizedQuery.split(/\s+/).filter(Boolean).length;
+  const isShortQuery = wordCount <= 12;
+  const asksForDetail = /\b(detail|jelaskan|bedah|analisis|analisa|gimana cara|bagaimana cara|solusi|langkah|rencana|tips|strategi|kenapa|mengapa|seberapa|berapa besar|berapa lama|hitung|perbandingan)\b/i.test(normalizedQuery);
+  const isCrisisQuery = /\b(suicide|bunuh diri|nyawa|mau mati|capek hidup|nggak mau hidup|depresi berat|putus asa|self harm|menyakiti diri)\b/i.test(normalizedQuery);
+
+  if (isShortQuery && !asksForDetail && !isCrisisQuery) {
+    // Quick chat: generate a short conversational reply without the full pipeline
+    const quickReply = await generateQuickChatReply(normalizedQuery, history);
+    return {
+      mindState: {
+        primaryEmotion: 'neutral',
+        resilienceScore: 7,
+        crisisDetected: false,
+        coreDilemma: normalizedQuery,
+      },
+      diagnosis: {
+        metrics: { financialStress: 'low', careerBurnout: 'low', socialPressure: 'low', futureAnxiety: 'low' },
+        rootCauseAnalysis: '',
+        cognitiveDistortion: 'Tidak Ada',
+        realityCheckVerdict: '',
+      },
+      actionPlan: [],
+      citations: [],
+      conversationalReply: quickReply.text,
+      suggestions: quickReply.suggestions,
+      severityLevel: undefined,
+      isQuickChat: true,
+    } as TamiCognitiveResponse;
+  }
+
   // Determine query complexity (number of words)
-  const isSimpleQuery = query.split(/\s+/).length <= 6;
+  const isSimpleQuery = wordCount <= 6;
   const modelToUse = isSimpleQuery ? 'mistral-small-latest' : 'mistral-large-latest';
 
   // Semantic dedup: check if user is repeating a similar question
@@ -982,7 +1068,8 @@ Aturan:
 4. Link artikel: \`[Judul](/artikel/slug)\` atau \`[Judul Seri](/seri/slug)\`. Jangan pakai link eksternal.
 5. Visualisasi (opsional): kalau relevan, boleh chart/comparison/nerd box. Format sama kayak biasa. Gunain cuma kalau bantu user paham.
 6. **KALAU NGGAK TAHU**: Bilang "Gue nggak punya data buat jawab itu." Jangan ngarang. Jangan halusinasi fakta atau statistik.
-7. **TUTUP DENGAN PERTANYAAN**: Setelah jawab, tanya balik singkat. Bikin user lanjut ngobrol.`;
+7. **TUTUP DENGAN PERTANYAAN**: Setelah jawab, tanya balik singkat. Bikin user lanjut ngobrol.
+8. **JANGAN BERLEBIHAN**: Jawab cukup untuk menjawab pertanyaan. Jangan ngarang solusi panjang kalau user cuma nanya singkat. Ngobrol dulu, tunggu user minta detail.`;
 
   return mistral.chatStream({
     messages: [
@@ -1001,6 +1088,6 @@ PERLINDUNGAN IDENTITAS:
       { role: 'user', content: synthesisPrompt }
     ],
     promptCacheKey: 'tami-synthesis-stream',
-    maxTokens: 800
+    maxTokens: 400
   });
 }

@@ -74,6 +74,7 @@ export async function POST(req: NextRequest) {
 
     // Fast path: for greetings/simple queries, skip expensive streamTamiReply() LLM call
     // Exclude degraded responses (circuit breaker fallback) — those need streaming for context
+    const isQuickChat = 'isQuickChat' in cognitiveData && cognitiveData.isQuickChat;
     const isGreetingResponse = cognitiveData.severityLevel === 'ringan' 
       && !('isDegraded' in cognitiveData && cognitiveData.isDegraded)
       && (!cognitiveData.actionPlan || cognitiveData.actionPlan.length === 0)
@@ -84,13 +85,15 @@ export async function POST(req: NextRequest) {
 
     const stream = new ReadableStream({
       async start(controller) {
-        // Event 1: Send cognitive data (diagnosis, action plan, citations, etc.)
-        controller.enqueue(
-          encoder.encode(`data: ${JSON.stringify({ type: 'cognitive', data: cognitiveData })}\n\n`)
-        );
+        // Event 1: Send cognitive data (skip for quick-chat to avoid rendering cards)
+        if (!isQuickChat) {
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: 'cognitive', data: cognitiveData })}\n\n`)
+          );
+        }
 
-        // Fast path: send pre-computed reply directly for greetings
-        if (isGreetingResponse && conversationalReply) {
+        // Fast path: send pre-computed reply directly for greetings and quick-chat
+        if ((isGreetingResponse || isQuickChat) && conversationalReply) {
           controller.enqueue(
             encoder.encode(`data: ${JSON.stringify({ type: 'token', content: conversationalReply })}\n\n`)
           );

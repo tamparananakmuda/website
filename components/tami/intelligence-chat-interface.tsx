@@ -348,6 +348,14 @@ export const IntelligenceChatInterface: React.FC = () => {
       setMessages((prev) => [...prev, assistantMessage]);
     },
     onToken: (token) => {
+      // Quick-chat mode: no cognitive data event, so create placeholder if needed
+      if (!assistantIdRef.current) {
+        const id = `assistant-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+        assistantIdRef.current = id;
+        streamedTextRef.current = '';
+        const assistantMessage: Message = { id, role: 'assistant', content: '' };
+        setMessages((prev) => [...prev, assistantMessage]);
+      }
       streamedTextRef.current += token;
       const currentText = streamedTextRef.current;
       const id = assistantIdRef.current;

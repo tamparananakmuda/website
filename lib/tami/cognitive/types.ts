@@ -59,5 +59,6 @@ export interface TamiCognitiveResponse {
   escalationUrl?: string; // WhatsApp or consultation escalation link
   severityLevel?: SeverityLevel; // Level severity untuk tone calibration
   isDegraded?: boolean; // T7-6: True when running in fallback mode (Mistral down)
+  isQuickChat?: boolean; // True when running in quick-chat mode (skip full pipeline)
 }
 

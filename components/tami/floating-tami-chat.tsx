@@ -190,6 +190,13 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
       }]);
     },
     onToken: (token) => {
+      // Quick-chat mode: no cognitive data event, so create placeholder if needed
+      if (!assistantIdRef.current) {
+        const id = `assistant-${Date.now()}`;
+        assistantIdRef.current = id;
+        streamedTextRef.current = '';
+        setMessages((prev) => [...prev, { id, role: 'assistant', content: '' }]);
+      }
       streamedTextRef.current += token;
       const currentText = streamedTextRef.current;
       const id = assistantIdRef.current;
