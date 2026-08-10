@@ -32,7 +32,6 @@ export async function generateMetadata({
   const cdnBase = process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com';
   const url = `${siteUrl}/whitepaper/${wp.slug}`;
   const ogImageUrl = `${cdnBase}/og/${wp.slug}-feature.webp`;
-  const ogFallback = `${siteUrl}/whitepaper/${wp.slug}/opengraph-image`;
 
   return {
     title: wp.title,
@@ -51,9 +50,6 @@ export async function generateMetadata({
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
       images: [ogImageUrl],
-    },
-    other: {
-      'og:image:fallback': ogFallback,
     },
   };
 }
