@@ -17,7 +17,7 @@ const manrope = Manrope({
   weight: ['500'],
   variable: '--font-sans',
   display: 'swap',
-  preload: false,
+  preload: true,
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -123,6 +123,7 @@ export default function RootLayout({
     <html lang="id" className={`scroll-smooth dark ${manrope.variable} ${jakarta.variable}`} suppressHydrationWarning>
       <head>
         <meta name="robots" content="max-image-preview:large" />
+        <link rel="preconnect" href="https://cdn.tamparananakmuda.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://analytics.tamparananakmuda.com" />
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('tam-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='light'||(!t&&!d)){document.documentElement.classList.remove('dark')}}catch(e){}})()` }} />
       </head>
