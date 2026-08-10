@@ -56,7 +56,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans font-normal;
+    @apply bg-background text-foreground antialiased font-sans font-medium;
     font-feature-settings: 'cv11', 'ss01';
   }
   
