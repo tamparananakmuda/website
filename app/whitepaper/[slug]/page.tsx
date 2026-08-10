@@ -29,7 +29,10 @@ export async function generateMetadata({
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
+  const cdnBase = process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com';
   const url = `${siteUrl}/whitepaper/${wp.slug}`;
+  const ogImageUrl = `${cdnBase}/og/${wp.slug}-feature.webp`;
+  const ogFallback = `${siteUrl}/whitepaper/${wp.slug}/opengraph-image`;
 
   return {
     title: wp.title,
@@ -41,13 +44,16 @@ export async function generateMetadata({
       url,
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
-      images: [{ url: `${siteUrl}/whitepaper/${wp.slug}/opengraph-image`, width: 1600, height: 900, alt: wp.title }],
+      images: [{ url: ogImageUrl, width: 1600, height: 900, alt: wp.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: wp.title,
       description: wp.summary || wp.subtitle || undefined,
-      images: [`${siteUrl}/whitepaper/${wp.slug}/opengraph-image`],
+      images: [ogImageUrl],
+    },
+    other: {
+      'og:image:fallback': ogFallback,
     },
   };
 }
