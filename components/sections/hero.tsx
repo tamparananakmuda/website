@@ -21,18 +21,6 @@ export function Hero({ className }: HeroProps) {
               background: 'linear-gradient(135deg, #A51E2D 0%, #5C2118 20%, #231514 45%, #140B0B 75%, #0A0606 100%)'
             }}
           />
-          
-          {/* Focused, tight organic light mesh (stops BEFORE reaching right side, strong right/top darkness) */}
-          <div
-            className="absolute inset-0 opacity-55 mix-blend-screen pointer-events-none"
-            style={{
-              backgroundImage: `
-                radial-gradient(ellipse at 8% 12%, rgba(165, 30, 45, 0.4) 0%, transparent 35%),
-                radial-gradient(circle at 20% 30%, rgba(92, 33, 24, 0.4) 0%, transparent 42%),
-                radial-gradient(circle at 35% 55%, rgba(35, 21, 20, 0.45) 0%, transparent 45%)
-              `,
-            }}
-          />
 
           {/* Heavy Vignette & Dark Edge Masking: Kiri-atas fokus, kanan dan pinggir gelap pekat */}
           <div 
@@ -44,15 +32,6 @@ export function Hero({ className }: HeroProps) {
 
           {/* Smooth bottom transition preserving subtle #140B0B burgundy tone */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#140B0B]/30 to-[#0A0606]/90 pointer-events-none" />
-
-          {/* Ultra-subtle Micro Noise / Grain overlay (3% opacity) */}
-          <div 
-            className="absolute inset-0 opacity-[0.035] pointer-events-none mix-blend-overlay"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-              backgroundRepeat: 'repeat'
-            }}
-          />
         </div>
 
         {/* Hero Content */}
