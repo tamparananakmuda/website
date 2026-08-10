@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Layers, Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import SlideGrid, { SlideSet, getViewCount } from '@/components/slide-grid';
+import SlideGrid, { SlideSet, getViewCount, formatCount } from '@/components/slide-grid';
 import slidesData from '@/files/slides-data.json';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { encodeSocialId } from '@/lib/social/encode';
@@ -20,6 +20,36 @@ export default function AllSlidesPage() {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentSlides = (slidesData as SlideSet[]).slice(startIndex, endIndex);
+
+  const [viewCounts, setViewCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const ids = (slidesData as SlideSet[]).slice(start, end).map((s) => s.id).join(',');
+    if (!ids) return;
+    fetch(`/api/slides/views?ids=${ids}`)
+      .then((res) => res.json())
+      .then((data: { counts: Record<string, number> }) => {
+        setViewCounts((prev) => ({ ...prev, ...data.counts }));
+      })
+      .catch((err) => console.error('Failed to load slide views:', err));
+  }, [currentPage]);
+
+  const handleIncrement = useCallback(async (id: string) => {
+    try {
+      const res = await fetch('/api/slides/view', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+      if (!res.ok) return;
+      const data = (await res.json()) as { count: number };
+      setViewCounts((prev) => ({ ...prev, [id]: data.count }));
+    } catch (err) {
+      console.error('Failed to increment slide view:', err);
+    }
+  }, []);
 
   const handlePageChange = (page: number) => {
     if (page < 1 || page > totalPages) return;
@@ -71,6 +101,8 @@ export default function AllSlidesPage() {
               set={set}
               globalIdx={globalIdx}
               allSlideSets={slidesData as SlideSet[]}
+              viewCount={viewCounts[set.id]}
+              onIncrement={handleIncrement}
             />
           );
         })}
@@ -123,10 +155,14 @@ function SlideGridCardWrapper({
   set,
   globalIdx,
   allSlideSets,
+  viewCount,
+  onIncrement,
 }: {
   set: SlideSet;
   globalIdx: number;
   allSlideSets: SlideSet[];
+  viewCount: number | undefined;
+  onIncrement: (id: string) => void;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const coverImage = set.slides[0];
@@ -136,6 +172,7 @@ function SlideGridCardWrapper({
       window.history.pushState(null, '', `/sosial/${encodeSocialId(set.id)}`);
     }
     setIsOpen(true);
+    onIncrement(set.id);
   };
 
   // Read img_index from URL on mount (for direct links to specific slide)
@@ -151,6 +188,8 @@ function SlideGridCardWrapper({
       }
     }
   }, [isOpen, set.id]);
+
+  const displayViewCount = viewCount != null ? formatCount(viewCount) : getViewCount(set, globalIdx);
 
   return (
     <>
@@ -183,7 +222,7 @@ function SlideGridCardWrapper({
         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] text-white/90 font-mono font-medium drop-shadow">
           <span className="flex items-center gap-1">
             <Play className="w-3 h-3 fill-white/80" />
-            {getViewCount(set, globalIdx)}
+            {displayViewCount}
           </span>
           <span className="text-[10px] text-white/70 bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
             {set.slides.length} Slide

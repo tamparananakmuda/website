@@ -217,6 +217,9 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 205 | Tempat Ketiga Mati, Gen Z Bayar atau Pulang | tempat-ketiga-mati-gen-z-bayar-atau-pulang | Kehidupan | Kehidupan & Sosial | kontra-narasi | 2026-09-18 (scheduled 08:00 WIB) |
 | 206 | Gen Z Kabur dari Indonesia, Bukan Cari Enak | gen-z-kabur-dari-indonesia-bukan-cari-enak | Kehidupan | Kehidupan & Sosial | kontra-narasi | 2026-09-20 (scheduled 08:00 WIB) |
 | 207 | Kos Naik 2x, Gaji Nggak Gerak: Bukan Kamu yang Boros | kos-naik-2x-gaji-nggak-gerak-bukan-kamu-yang-boros | Uang | Keuangan & Uang | kontra-narasi | 2026-09-21 (scheduled 08:00 WIB) |
+| 208 | 30% Gaji untuk Ongkos: Jakarta Nggak Didesain untuk Kamu | 30-persen-gaji-ongkos-jakarta-nggak-didesain-untuk-kamu | Uang | Keuangan & Uang | kontra-narasi | 2026-09-21 (scheduled 08:00 WIB) |
+| 209 | Bunga Tabungan 0.5%, Bunga Pinjaman 24%: Bank Makan Kamu | bunga-tabungan-0-5-persen-bank-makan-kamu | Uang | Keuangan & Uang | kontra-narasi | 2026-09-22 (scheduled 08:00 WIB) |
+| 210 | Passion Itu Trap: Kerja Butuh Gaji, Bukan Cinta | passion-itu-trap-kerja-butuh-gaji-bukan-cinta | Mindset | Mindset Realita | kontra-narasi | 2026-09-23 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 
