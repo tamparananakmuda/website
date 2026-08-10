@@ -1,5 +1,23 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
+
+// Load .env.local manually BEFORE requiring modules that use process.env
+const envPath = join(process.cwd(), '.env.local');
+if (existsSync(envPath)) {
+  const envContent = readFileSync(envPath, 'utf8');
+  envContent.split('\n').forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) return;
+    const eqIdx = trimmed.indexOf('=');
+    if (eqIdx === -1) return;
+    const key = trimmed.substring(0, eqIdx).trim();
+    const value = trimmed.substring(eqIdx + 1).trim();
+    if (!process.env[key]) {
+      process.env[key] = value;
+    }
+  });
+}
+
 import matter from 'gray-matter';
 import { MistralClient } from '../lib/tami/mistral/client';
 import { ArticleChunk } from '../lib/tami/rag/knowledge-graph';
@@ -9,6 +27,7 @@ const mistral = new MistralClient();
 
 const ARTICLES_DIR = join(process.cwd(), 'content', 'articles');
 const SERIES_DIR = join(process.cwd(), 'content', 'seri');
+const WHITEPAPER_DIR = join(process.cwd(), 'content', 'whitepaper');
 
 function readDirRecursive(dir: string): string[] {
   const results: string[] = [];
@@ -61,22 +80,36 @@ async function run() {
   
   const articleFiles = readDirRecursive(ARTICLES_DIR);
   const seriesFiles = readDirRecursive(SERIES_DIR);
-  const allFiles = [...articleFiles, ...seriesFiles];
+  const whitepaperFiles = readDirRecursive(WHITEPAPER_DIR);
+  const allFiles = [...articleFiles, ...seriesFiles, ...whitepaperFiles];
   
-  console.log(`[TAMI Ingestion] Found ${allFiles.length} total markdown files.`);
+  console.log(`[TAMI Ingestion] Found ${allFiles.length} total markdown files (articles: ${articleFiles.length}, series: ${seriesFiles.length}, whitepapers: ${whitepaperFiles.length}).`);
 
   const textToEmbed: string[] = [];
   const chunkMetadata: Omit<ArticleChunk, 'embedding'>[] = [];
 
   // 2. Parse and create metadata
+  let skipped = 0;
   for (const filePath of allFiles) {
-    const fileContent = readFileSync(filePath, 'utf8');
-    const { data: fm, content: body } = matter(fileContent);
+    let fm: any, body: string;
+    try {
+      const fileContent = readFileSync(filePath, 'utf8');
+      const parsed = matter(fileContent);
+      fm = parsed.data;
+      body = parsed.content;
+    } catch (e) {
+      skipped++;
+      continue;
+    }
 
     if (!fm.slug || !fm.title) continue;
 
+    // Skip drafts — only ingest published and scheduled content
+    if (fm.status && !['published', 'scheduled'].includes(fm.status)) continue;
+
+    const isWhitepaper = filePath.includes('whitepaper');
     const isSeries = !!fm.series;
-    const type = isSeries ? 'series' : 'article';
+    const type = isWhitepaper ? 'whitepaper' : isSeries ? 'series' : 'article';
 
     const meta = {
       slug: fm.slug,
@@ -138,7 +171,7 @@ async function run() {
 
   // 5. Save to disk
   writeFileSync(CACHE_PATH, JSON.stringify(allProcessedChunks, null, 2), 'utf8');
-  console.log(`[TAMI Ingestion] Successfully ingested ${allProcessedChunks.length} chunks into ${CACHE_PATH}`);
+  console.log(`[TAMI Ingestion] Successfully ingested ${allProcessedChunks.length} chunks into ${CACHE_PATH} (skipped ${skipped} files with parse errors)`);
 }
 
 run().catch(err => {
