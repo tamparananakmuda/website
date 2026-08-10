@@ -159,10 +159,30 @@ export class KnowledgeGraphEngine {
         this.bm25Index.index(this.chunks);
         this.indexed = true;
       } else {
-        console.warn(`[TAMI RAG] Embeddings cache not found at ${CACHE_PATH}. Please run the ingestion script.`);
+        console.warn(`[TAMI RAG] Embeddings cache not found locally at ${CACHE_PATH}.`);
       }
     } catch (error) {
-      console.error('[TAMI RAG] Failed to load embeddings cache:', error);
+      console.error('[TAMI RAG] Failed to load local embeddings cache:', error);
+    }
+  }
+
+  private async loadCacheFromCDN(): Promise<boolean> {
+    const cdnUrl = `${process.env.CDN_BASE_URL || 'https://cdn.tamparananakmuda.com'}/tami/embeddings-cache.json`;
+    try {
+      console.log(`[TAMI RAG] Fetching embeddings from CDN: ${cdnUrl}`);
+      const response = await fetch(cdnUrl, { cache: 'force-cache' });
+      if (!response.ok) {
+        console.error(`[TAMI RAG] CDN fetch failed: ${response.status}`);
+        return false;
+      }
+      this.chunks = await response.json();
+      console.log(`[TAMI RAG] Loaded ${this.chunks.length} chunks from CDN.`);
+      this.bm25Index.index(this.chunks);
+      this.indexed = true;
+      return true;
+    } catch (error) {
+      console.error('[TAMI RAG] Failed to fetch embeddings from CDN:', error);
+      return false;
     }
   }
 
@@ -186,7 +206,11 @@ export class KnowledgeGraphEngine {
   async search(query: string, limit = 5, filter?: { type?: 'article' | 'series' | 'whitepaper' }): Promise<{ chunk: ArticleChunk; score: number }[]> {
     if (this.chunks.length === 0) {
       this.loadCache();
-      if (this.chunks.length === 0) return [];
+      if (this.chunks.length === 0) {
+        // Local file not available (Vercel serverless) — fetch from CDN
+        const loaded = await this.loadCacheFromCDN();
+        if (!loaded || this.chunks.length === 0) return [];
+      }
     }
 
     // Apply metadata filter if provided
