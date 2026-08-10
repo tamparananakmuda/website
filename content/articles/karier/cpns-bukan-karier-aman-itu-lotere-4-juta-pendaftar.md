@@ -5,7 +5,7 @@ excerpt: >-
   Kamu pikir CPNS karier aman. Tapi peluang lolos 6%, gaji pokok di bawah UMR,
   dan pemerintah malah geser PNS ke PPPK kontrak.
 publishedAt: '2026-09-25 01:00:00+00'
-status: published
+status: scheduled
 category: karier
 subcategory: karier-sistem
 author: yovie-setiawan
