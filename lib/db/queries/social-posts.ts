@@ -107,25 +107,26 @@ function slideToSocialPostValues(slide: SlideViewInput) {
 export async function getSlideViewCounts(sourceIds: string[]): Promise<Record<string, number>> {
   if (sourceIds.length === 0) return {};
   const rows = await db
-    .select({
-      sourceId: socialPosts.sourceId,
-      viewCount: sql<number>`MAX(${socialPosts.viewCount})::integer`.as('view_count'),
-    })
+    .select({ sourceId: socialPosts.sourceId, viewCount: socialPosts.viewCount })
     .from(socialPosts)
-    .where(inArray(socialPosts.sourceId, sourceIds))
-    .groupBy(socialPosts.sourceId);
-  return Object.fromEntries(rows.map(r => [r.sourceId!, r.viewCount ?? 0]));
+    .where(inArray(socialPosts.sourceId, sourceIds));
+  const result: Record<string, number> = {};
+  for (const row of rows) {
+    if (row.sourceId != null) {
+      result[row.sourceId] = row.viewCount ?? 0;
+    }
+  }
+  return result;
 }
 
 export async function ensureSlideSocialPosts(slides: SlideViewInput[]): Promise<Record<string, number>> {
-  const sourceIds = slides.map(s => s.id);
+  const sourceIds = slides.map((s) => s.id);
   const existing = await db
     .select({ sourceId: socialPosts.sourceId })
     .from(socialPosts)
-    .where(inArray(socialPosts.sourceId, sourceIds))
-    .groupBy(socialPosts.sourceId);
-  const existingSet = new Set(existing.map(r => r.sourceId!));
-  const missing = slides.filter(s => !existingSet.has(s.id));
+    .where(inArray(socialPosts.sourceId, sourceIds));
+  const existingSet = new Set(existing.map((r) => r.sourceId).filter(Boolean) as string[]);
+  const missing = slides.filter((s) => !existingSet.has(s.id));
   if (missing.length > 0) {
     await db.insert(socialPosts).values(missing.map(slideToSocialPostValues));
   }
