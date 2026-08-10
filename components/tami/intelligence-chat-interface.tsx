@@ -125,24 +125,61 @@ export const IntelligenceChatInterface: React.FC = () => {
     const wasStreaming = sessionStorage.getItem('tami_streaming_active');
     if (wasStreaming === 'true') {
       sessionStorage.removeItem('tami_streaming_active');
-      // Mark the last assistant message as interrupted if it has empty/partial content
+      // Auto-resend the last user query since the SSE stream was interrupted
       setTimeout(() => {
-        setMessages((prev) => {
-          if (prev.length === 0) return prev;
-          const lastIdx = prev.length - 1;
-          if (prev[lastIdx].role === 'assistant' && (!prev[lastIdx].content || prev[lastIdx].content.length < 20)) {
-            const updated = [...prev];
-            updated[lastIdx] = {
-              ...updated[lastIdx],
-              content: updated[lastIdx].content || '*(Respons terputus saat berpindah dari floating chat. Kirim ulang pertanyaan kamu ya.)*',
-            };
-            // Save updated messages
-            localStorage.setItem('tami_conversation_history', JSON.stringify(updated));
-            return updated;
-          }
-          return prev;
+        const saved = localStorage.getItem('tami_conversation_history');
+        if (!saved) return;
+        let currentMsgs: Message[];
+        try { currentMsgs = JSON.parse(saved); } catch { return; }
+        if (currentMsgs.length === 0) return;
+
+        // Find the last user message
+        let lastUserIdx = -1;
+        for (let i = currentMsgs.length - 1; i >= 0; i--) {
+          if (currentMsgs[i].role === 'user') { lastUserIdx = i; break; }
+        }
+        if (lastUserIdx === -1) return;
+
+        // Remove any partial/interrupted assistant message after the last user message
+        const truncated = currentMsgs.slice(0, lastUserIdx + 1);
+        const userQuery = currentMsgs[lastUserIdx].content;
+
+        if (truncated.length !== currentMsgs.length) {
+          setMessages(truncated);
+          localStorage.setItem('tami_conversation_history', JSON.stringify(truncated));
+        }
+
+        // Prepare history (exclude the last user message itself)
+        const historyPayload = truncated.slice(-11, -1).map((m) => ({
+          role: m.role, content: m.content,
+        }));
+
+        // Show progress logs based on complexity
+        const cleanQuery = userQuery.toLowerCase().trim().replace(/[?.!,]/g, '');
+        const wordCount = cleanQuery.split(/\s+/).length;
+        const complexity = wordCount <= 2 ? 'low' : wordCount <= 6 ? 'medium' : 'high';
+        const timers: NodeJS.Timeout[] = [];
+        timersRef.current = timers;
+        const addLog = (log: string) => setProgressLog((prev) => [...prev, log]);
+        if (complexity === 'medium') {
+          timers.push(setTimeout(() => addLog('Memulai diagnosa TAMI...'), 100));
+          timers.push(setTimeout(() => addLog('Membaca kondisi mental...'), 350));
+          timers.push(setTimeout(() => addLog('Menganalisis pertanyaan...'), 600));
+        } else if (complexity === 'high') {
+          timers.push(setTimeout(() => addLog('Memulai pipeline diagnosa kognitif TAMI...'), 150));
+          timers.push(setTimeout(() => addLog('Analisis Emosi: Membaca frekuensi emosi & mendeteksi sinyal krisis...'), 500));
+          timers.push(setTimeout(() => addLog('Knowledge Graph RAG: Memindai konten TAM untuk topik relevan...'), 950));
+          timers.push(setTimeout(() => addLog('Perdebatan Bias: Membedah asumsi & distorsi berpikirmu...'), 1400));
+          timers.push(setTimeout(() => addLog('Sintesis Eksekusi: Merumuskan rencana tindakan taktis...'), 1950));
+        }
+
+        // Resend the query
+        setIsLoading(true);
+        streamTami(userQuery, historyPayload).finally(() => {
+          timers.forEach(clearTimeout);
+          setIsLoading(false);
         });
-      }, 100);
+      }, 200);
     }
 
     // Listen for updates from floating TAMI chat
@@ -181,6 +218,7 @@ export const IntelligenceChatInterface: React.FC = () => {
     return () => {
       window.removeEventListener('tami_history_updated', handleHistoryUpdate);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Open sidebar by default on desktop

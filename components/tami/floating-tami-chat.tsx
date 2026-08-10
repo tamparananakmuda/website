@@ -226,13 +226,10 @@ export const FloatingTamiChat: React.FC<FloatingTamiChatProps> = ({ isOpen, onCl
   });
 
   // Abort SSE stream on unmount to prevent server waste
-  const sseStreamingRef = useRef(false);
-  useEffect(() => { sseStreamingRef.current = sseStreaming; }, [sseStreaming]);
+  // Always abort — abortRef.current?.abort() is a no-op if no active controller
   useEffect(() => {
     return () => {
-      if (sseStreamingRef.current) {
-        abortStream();
-      }
+      abortStream();
     };
   }, [abortStream]);
 
