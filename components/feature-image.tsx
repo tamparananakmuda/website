@@ -37,9 +37,7 @@ export function FeatureImage({ src, alt, fallbackSrc }: FeatureImageProps) {
           src={imgSrc}
           alt={alt}
           fill
-          unoptimized
           priority
-          loading="eager"
           className={`
             object-cover transition-all duration-700
             ${loaded ? 'opacity-100 blur-0 scale-100' : 'opacity-0 blur-sm scale-105'}
