@@ -40,6 +40,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ counts });
   } catch (error) {
     console.error('GET /api/slides/views error:', error);
-    return NextResponse.json({ counts: {} }, { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    return NextResponse.json({ counts: {}, error: message }, { status: 500 });
   }
 }
