@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Layers, Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import SlideGrid, { SlideSet } from '@/components/slide-grid';
+import SlideGrid, { SlideSet, getViewCount } from '@/components/slide-grid';
 import slidesData from '@/files/slides-data.json';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import { encodeSocialId } from '@/lib/social/encode';
@@ -183,7 +183,7 @@ function SlideGridCardWrapper({
         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] text-white/90 font-mono font-medium drop-shadow">
           <span className="flex items-center gap-1">
             <Play className="w-3 h-3 fill-white/80" />
-            {set.views || '10.1K'}
+            {getViewCount(set, globalIdx)}
           </span>
           <span className="text-[10px] text-white/70 bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-xs">
             {set.slides.length} Slide

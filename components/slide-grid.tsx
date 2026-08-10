@@ -24,15 +24,16 @@ interface Props {
   mode?: 'carousel' | 'modal-only';
 }
 
-// Generate realistic synthetic view count based on set ID if not provided
-function getViewCount(set: SlideSet, index: number): string {
+function formatCount(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return n.toLocaleString('id-ID');
+}
+
+export function getViewCount(set: SlideSet, index: number): string {
   if (set.views) return set.views;
-  const mockCounts = [
-    '10.1K', '109.9K', '516.1K', '3610', '1553', '318',
-    '3856', '6127', '2692', '544', '4569', '4632',
-    '2784', '722', '1332', '485', '6482', '720'
-  ];
-  return mockCounts[index % mockCounts.length];
+  const count = 100_000 + index * 5_243;
+  return formatCount(count);
 }
 
 export default function SlideGrid({ slideSets, initialSelectedId, initialSlideIndex = 0, showMoreUrl, mode = 'carousel' }: Props) {
