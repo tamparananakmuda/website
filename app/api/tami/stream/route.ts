@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
         // Step 1: Run full pipeline to get cognitive data (diagnosis, action plan, citations, etc.)
         let cognitiveResponse;
         try {
-          cognitiveResponse = await processTamiIntelligence(query, history);
+          cognitiveResponse = await processTamiIntelligence(query, history, { streaming: true });
         } catch (err) {
           console.error('[TAMI SSE] Pipeline failed:', err);
           controller.enqueue(
