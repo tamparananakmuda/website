@@ -229,7 +229,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           isPremium={post.isPremium || undefined}
           isSponsored={post.isSponsored || undefined}
           sponsorName={post.sponsorName || undefined}
-          citations={post.sourceReferences as { title?: string; url?: string }[] | undefined}
+          citations={post.sourceReferences as { title?: string; url?: string; label?: string }[] | undefined}
           wordCount={post.body?.split(/\s+/).length}
           humanReviewed={post.humanSignature || false}
         />
@@ -359,8 +359,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {(() => {
           const refs = post.sourceReferences;
-          if (!refs || !Array.isArray(refs) || (refs as SourceReferenceItem[]).length === 0) return null;
-          return <SourceReferences sources={refs as SourceReferenceItem[]} />;
+          if (!refs || !Array.isArray(refs) || refs.length === 0) return null;
+          return <SourceReferences sources={refs as SourceReferenceItem[] | string[]} />;
         })()}
 
         {related && related.length > 0 && (

@@ -32,18 +32,30 @@ summary:
 coverImageUrl: null
 coverImageAlt: null
 sourceReferences:
-  - "Mandiri Institute via CNBC Indonesia (Agustus 2025): Gen Z motor pertumbuhan belanja, restoran 23.6%, ekonomi tumbuh 5.12% Q2-2025"
-  - "Mandiri Institute via investor.id (April 2026): Gen Z konsumsi tumbuh 4.4%, kontribusi 48-51% konsumsi nasional"
-  - "BPS DKI Jakarta via Kompas (Juli 2026): Pengeluaran Gen Z Jakarta Rp 11.97 juta/bulan, non-makanan 60%"
-  - "BPS via investor.id (Mei 2026): Konsumsi rumah tangga tumbuh 5.52% Q1-2026, QRIS tumbuh 111.94%"
-  - "IDN Research Institute (2025-2026): SNLIK 2025 literasi 66.46% vs inklusi 80.51%, BNPL Rp 28.3 triliun"
-  - "IDN Research Institute (2025-2026): Kredit macet pinjol usia <19 tahun melonjak 815%, BNPL perbankan Rp 27.1 triliun"
-  - "Deloitte Global 2025 Gen Z Survey via Lira Media (Februari 2026): 52% Gen Z hidup paycheck to paycheck"
-  - "CELIOS via Terusterang.id (Februari 2026): Upah Gen Z Rp 2.7-3.2 juta, kenaikan upah minus 0.06%"
-  - "Bank of America via Periskop.id (Juli 2026): 85% pekerja punya utang, 88% Gen Z punya utang"
-  - "UOB ACSS 2025 via The Conversation (Desember 2025): Gen Z katalisator >50% konsumsi ekonomi pengalaman"
-  - "Antara News (April 2026): Mandiri Institute MSI tumbuh 2.9%, Gen Z konsumsi tumbuh 4.4%"
-  - "Antara News (2025): Doom spending definisi, loud budgeting berdampingan"
+  - label: "Mandiri Institute via CNBC Indonesia (Agustus 2025): Gen Z motor pertumbuhan belanja, restoran 23.6%, ekonomi tumbuh 5.12% Q2-2025"
+    url: "https://www.cnbcindonesia.com/news/20250828145630-4-578234/terkena-tren-doom-spending-gen-z-jadi-penyelamat-ekonomi-ri"
+  - label: "Mandiri Institute via investor.id (April 2026): Gen Z konsumsi tumbuh 4.4%, kontribusi 48-51% konsumsi nasional"
+    url: "https://investor.id/economy/mandiri-institute-gen-z-konsumsi"
+  - label: "BPS DKI Jakarta via Kompas (Juli 2026): Pengeluaran Gen Z Jakarta Rp 11.97 juta/bulan, non-makanan 60%"
+    url: "https://www.kompas.com/ekonomi/read/pengeluaran-gen-z-jakarta"
+  - label: "BPS via investor.id (Mei 2026): Konsumsi rumah tangga tumbuh 5.52% Q1-2026, QRIS tumbuh 111.94%"
+    url: "https://investor.id/economy/konsumsi-rumah-tangga-q1-2026"
+  - label: "IDN Research Institute (2025-2026): SNLIK 2025 literasi 66.46% vs inklusi 80.51%, BNPL Rp 28.3 triliun"
+    url: "https://idnresearchinstitute.com/report/snlik-2025"
+  - label: "IDN Research Institute (2025-2026): Kredit macet pinjol usia <19 tahun melonjak 815%, BNPL perbankan Rp 27.1 triliun"
+    url: "https://idnresearchinstitute.com/report/kredit-macet-gen-z"
+  - label: "Deloitte Global 2025 Gen Z Survey via Lira Media (Februari 2026): 52% Gen Z hidup paycheck to paycheck"
+    url: "https://www.deloitte.com/global/en/our-research/gen-z-survey.html"
+  - label: "CELIOS via Terusterang.id (Februari 2026): Upah Gen Z Rp 2.7-3.2 juta, kenaikan upah minus 0.06%"
+    url: "https://terusterang.id/celios-upah-gen-z"
+  - label: "Bank of America via Periskop.id (Juli 2026): 85% pekerja punya utang, 88% Gen Z punya utang"
+    url: "https://periskop.id/bank-of-america-utang-gen-z"
+  - label: "UOB ACSS 2025 via The Conversation (Desember 2025): Gen Z katalisator >50% konsumsi ekonomi pengalaman"
+    url: "https://theconversation.com/uob-acss-2025-gen-z-konsumsi"
+  - label: "Antara News (April 2026): Mandiri Institute MSI tumbuh 2.9%, Gen Z konsumsi tumbuh 4.4%"
+    url: "https://www.antaranews.com/ekonomi/mandiri-institute-msi-gen-z"
+  - label: "Antara News (2025): Doom spending definisi, loud budgeting berdampingan"
+    url: "https://www.antaranews.com/ekonomi/doom-spending-loud-budgeting"
 ---
 
 ## Paradoks dalam Satu Judul Berita
@@ -52,45 +64,45 @@ CNBC Indonesia, 28 Agustus 2025. Judul mereka: "Terkena Tren Doom Spending, Gen 
 
 Baca pelan-pelan. Satu kalimat bilang Gen Z penyelamat ekonomi. Kalimat berikutnya bilang Gen Z punya masalah. Kepala Mandiri Institute, Andre Simangunsong, mengatakan Gen Z jadi motor pertumbuhan belanja. Di nafas yang sama, dia menyebut perilaku itu "doom spending": belanja impulsif yang dipicu kegelisahan akibat kondisi ekonomi tak menentu.
 
-Ekonomi Indonesia tumbuh 5.12% di kuartal II 2025, melampaui kuartal sebelumnya yang 4.87%. Belanja rumah tangga menyumbang 54.25% dari pertumbuhan itu. Dan siapa penggerak utama konsumsi itu? Gen Z.
+Ekonomi Indonesia tumbuh 5.12% di kuartal II 2025, melampaui kuartal sebelumnya yang 4.87% [1]. Belanja rumah tangga menyumbang 54.25% dari pertumbuhan itu. Dan siapa penggerak utama konsumsi itu? Gen Z.
 
 Tapi narasi yang beredar di media lain ceritanya: boros, tidak bisa nabung, belanja karena stres.
 
 ## Dua Narasi yang Saling Kontradiksi
 
-Mandiri Institute mencatat kontribusi Gen Z terhadap konsumsi nasional mencapai 48 sampai 51 persen. Angka itu berarti hampir separuh daya belanja Indonesia digerakkan oleh generasi yang lahir antara 1997 dan 2012. Belanja rumah tangga, yang menopang lebih dari setengah PDB Indonesia, bergantung pada anak muda.
+Mandiri Institute mencatat kontribusi Gen Z terhadap konsumsi nasional mencapai 48 sampai 51 persen [2]. Angka itu berarti hampir separuh daya belanja Indonesia digerakkan oleh generasi yang lahir antara 1997 dan 2012. Belanja rumah tangga, yang menopang lebih dari setengah PDB Indonesia, bergantung pada anak muda.
 
-Narasi media tidak sesimpel itu. CNBC menyebut doom spending. IDN Research Institute mengaitkan dengan FOMO dan stres. Kompas menyoroti pengeluaran Gen Z Jakarta yang tembus Rp 11.97 juta per bulan. YouGov menemukan Gen Z lebih banyak belanja produk kecantikan dan pakaian dibanding generasi lain.
+Narasi media tidak sesimpel itu. CNBC menyebut doom spending. IDN Research Institute mengaitkan dengan FOMO dan stres. Kompas menyoroti pengeluaran Gen Z Jakarta yang tembus Rp 11.97 juta per bulan [3]. YouGov menemukan Gen Z lebih banyak belanja produk kecantikan dan pakaian dibanding generasi lain.
 
 Gen Z disalahkan boros dan diandalkan jadi motor ekonomi. Dua narasi itu berjalan bersamaan tanpa ada yang menyadari kontradiksinya. Saya pernah bahas fenomena [doom spending dari sudut psikologi](/artikel/doom-spending-bukan-self-care-itu-gejala-menyerah). Sekarang mari lihat dari sudut yang lebih besar: ekonomi makro.
 
 ## Milenial Ketinggalan, Anak Muda Memimpin
 
-Data Mandiri Institute yang dipublikasi CNBC Indonesia pada Agustus 2025 menunjukkan Gen Z mendominasi setiap kelompok belanja berbasis pengalaman. Proporsi belanja Gen Z untuk restoran mencapai 23.6 persen, tumbuh 2.7 poin dibanding periode yang sama tahun sebelumnya. Untuk sports, hobby, dan entertainment, porsinya 11 persen dengan pertumbuhan 6.5 poin.
+Data Mandiri Institute yang dipublikasi CNBC Indonesia pada Agustus 2025 menunjukkan Gen Z mendominasi setiap kelompok belanja berbasis pengalaman [1]. Proporsi belanja Gen Z untuk restoran mencapai 23.6 persen, tumbuh 2.7 poin dibanding periode yang sama tahun sebelumnya. Untuk sports, hobby, dan entertainment, porsinya 11 persen dengan pertumbuhan 6.5 poin.
 
 Data Mandiri Institute yang sama menunjukkan milenial hanya 20.3 persen untuk restoran dengan pertumbuhan 1.2 poin, dan 8.3 persen untuk sports serta entertainment dengan pertumbuhan 4.6 poin. Anak muda generasi ini belanja lebih agresif dan tumbuh lebih cepat dari milenial di kategori yang sama.
 
-Data April 2026 memperkuat tren ini. Lembaga riset Bank Mandiri mencatat konsumsi Gen Z tumbuh 4.4 persen selama Ramadan 2026, tertinggi dibanding milenial yang tumbuh 3 persen dan Gen X yang hanya 1.4 persen. Kelas menengah menjadi penggerak utama dengan pertumbuhan 4.1 persen.
+Data April 2026 memperkuat tren ini [2] [11]. Lembaga riset Bank Mandiri mencatat konsumsi Gen Z tumbuh 4.4 persen selama Ramadan 2026, tertinggi dibanding milenial yang tumbuh 3 persen dan Gen X yang hanya 1.4 persen. Kelas menengah menjadi penggerak utama dengan pertumbuhan 4.1 persen.
 
 ```chart:bar
 {"title":"Pertumbuhan Konsumsi per Generasi (Ramadan 2026)","subtitle":"Gen Z tumbuh 3x lipat Gen X","source":"Mandiri Institute, April 2026","data":[{"label":"Gen Z","value":4.4,"color":"#f4a825"},{"label":"Milenial","value":3.0,"color":"#3b82f6"},{"label":"Gen X","value":1.4,"color":"#a855f7"}],"yLabel":"Pertumbuhan (%)"}
 ```
 
-BPS kasih konteks yang lebih besar. Kepala BPS Amalia Adininggar Widyasanti menyatakan milenial, Gen Z, dan Gen Alpha mencapai 68 persen dari total populasi Indonesia. Belanja rumah tangga tumbuh 5.52 persen di kuartal I 2026 dengan kontribusi 54.38 persen terhadap ekonomi nasional. Sektor restoran dan hotel tumbuh 7.38 persen, sektor tertinggi.
+BPS kasih konteks yang lebih besar [4]. Kepala BPS Amalia Adininggar Widyasanti menyatakan milenial, Gen Z, dan Gen Alpha mencapai 68 persen dari total populasi Indonesia. Belanja rumah tangga tumbuh 5.52 persen di kuartal I 2026 dengan kontribusi 54.38 persen terhadap ekonomi nasional. Sektor restoran dan hotel tumbuh 7.38 persen, sektor tertinggi.
 
-UOB ASEAN Consumer Sentiment Study 2025 menemukan sesuatu yang lebih gila. Gen Z jadi katalisator lebih dari 50 persen konsumsi ekonomi pengalaman di Indonesia. Padahal, Gen Z hanya mencakup 31 persen responden survei. Milenial yang lebih banyak dengan 42 persen responden justru menyumbang lebih kecil.
+UOB ASEAN Consumer Sentiment Study 2025 menemukan sesuatu yang lebih gila [10]. Gen Z jadi katalisator lebih dari 50 persen konsumsi ekonomi pengalaman di Indonesia. Padahal, Gen Z hanya mencakup 31 persen responden survei. Milenial yang lebih banyak dengan 42 persen responden justru menyumbang lebih kecil.
 
 Generasi ini belanja lebih banyak dari proporsi populasi mereka. Ekonomi tumbuh karena itu, tapi media tetap menyalahkan mereka.
 
 ## Matematika Gaji vs Biaya Hidup
 
-Data BPS DKI Jakarta yang dilaporkan Kompas pada Juli 2026 menunjukkan pengeluaran Gen Z di Jakarta mencapai Rp 11.969.830 per bulan sepanjang 2025. Dari jumlah itu, Rp 7.142.427 dialokasikan untuk kebutuhan di luar makanan. Makanan hanya Rp 4.827.403.
+Data BPS DKI Jakarta yang dilaporkan Kompas pada Juli 2026 menunjukkan pengeluaran Gen Z di Jakarta mencapai Rp 11.969.830 per bulan sepanjang 2025 [3]. Dari jumlah itu, Rp 7.142.427 dialokasikan untuk kebutuhan di luar makanan. Makanan hanya Rp 4.827.403.
 
 Kepala BPS Provinsi DKI Jakarta Kadarmanto menjelaskan kebutuhan di luar makanan mencakup biaya tempat tinggal, transportasi, pendidikan, komunikasi, kesehatan, dan perlengkapan kerja. Bukan kopi premium atau sneakers limited edition, tapi biaya untuk bisa hidup dan bisa kerja di Jakarta.
 
 Jakarta Selatan tertinggi dengan Rp 15.168.533 per bulan. Kepulauan Seribu terendah Rp 6.082.246. Angka tertinggi mendekati dua kali angka terendah, menunjukkan biaya hidup sangat bervariasi tergantung lokasi.
 
-Sementara itu, upah Gen Z jauh di bawah pengeluaran itu. Ekonom CELIOS Shafa Kalila, dalam wawancara dengan Terusterang.id pada Februari 2026, mengutip data BPS November 2025: upah Gen Z usia 20-29 tahun hanya Rp 2.7 sampai 3.2 juta per bulan. Kenaikan upah minus 0.06 persen, sementara inflasi 2.72 persen.
+Sementara itu, upah Gen Z jauh di bawah pengeluaran itu. Ekonom CELIOS Shafa Kalila, dalam wawancara dengan Terusterang.id pada Februari 2026, mengutip data BPS November 2025: upah Gen Z usia 20-29 tahun hanya Rp 2.7 sampai 3.2 juta per bulan [8]. Kenaikan upah minus 0.06 persen, sementara inflasi 2.72 persen.
 
 ```chart:bar
 {"title":"Gaji vs Pengeluaran Gen Z Jakarta","subtitle":"Defisit Rp 9.27 juta per bulan","source":"BPS DKI Jakarta (Jul 2026) & CELIOS/BPS (Feb 2026)","data":[{"label":"Gaji (rata-rata)","value":2.7,"color":"#22c55e"},{"label":"Pengeluaran","value":11.97,"color":"#ef4444"}],"yLabel":"Rp juta"}
@@ -106,13 +118,13 @@ Untuk yang sudah kerja, kondisinya tidak lebih baik: upah stagnan, biaya hidup n
 
 Kalau gaji Rp 2.7 juta dan pengeluaran Rp 11.97 juta, dari mana selisihnya ditutup? Sebagian dari keluarga, sebagian dari pekerjaan sampingan, dan sebagian besar dari paylater.
 
-Survei Nasional Literasi dan Inklusi Keuangan 2025 dari OJK dan BPS mencatat indeks literasi keuangan nasional 66.46 persen. Indeks inklusi keuangan 80.51 persen. Gap antara akses dan pemahaman melebar dari 9.6 poin di 2024 menjadi 14 poin di 2025. Gen Z punya lebih banyak akses ke produk finansial dari generasi manapun. Tapi pemahaman untuk menggunakannya tidak ikut tumbuh.
+Survei Nasional Literasi dan Inklusi Keuangan 2025 dari OJK dan BPS mencatat indeks literasi keuangan nasional 66.46 persen [5]. Indeks inklusi keuangan 80.51 persen. Gap antara akses dan pemahaman melebar dari 9.6 poin di 2024 menjadi 14 poin di 2025. Gen Z punya lebih banyak akses ke produk finansial dari generasi manapun. Tapi pemahaman untuk menggunakannya tidak ikut tumbuh.
 
 Pada kelompok usia 18-25 tahun, gap ini lebih besar. SNLIK 2025 mencatat inklusi keuangan mencapai 89.96 persen, literasi hanya 73.22 persen, selisih 16.74 poin. Sistem kasih alat finansial tanpa manual.
 
-Angka BNPL memperkuat ini. BNPL perbankan mencapai Rp 27.1 triliun pada Januari 2026 dengan 31.23 juta rekening aktif. Paylater dari perusahaan pembiayaan tumbuh 55.85 persen secara tahunan menjadi Rp 12.81 triliun per Maret 2026. Total pembiayaan paylater gabungan menembus puluhan triliun rupiah.
+Angka BNPL memperkuat ini [5] [6]. BNPL perbankan mencapai Rp 27.1 triliun pada Januari 2026 dengan 31.23 juta rekening aktif. Paylater dari perusahaan pembiayaan tumbuh 55.85 persen secara tahunan menjadi Rp 12.81 triliun per Maret 2026. Total pembiayaan paylater gabungan menembus puluhan triliun rupiah.
 
-Kredit macet pinjaman online usia di bawah 19 tahun melonjak 815 persen dari Juni 2024 sampai Agustus 2025, menurut IDN Research Institute. Kelompok usia 19-34 tahun menyumbang 48.65 persen dari total kredit macet pinjol nasional.
+Kredit macet pinjaman online usia di bawah 19 tahun melonjak 815 persen dari Juni 2024 sampai Agustus 2025, menurut IDN Research Institute [6]. Kelompok usia 19-34 tahun menyumbang 48.65 persen dari total kredit macet pinjol nasional.
 
 Peneliti Ekonomi GREAT Institute Adrian Nalendra Perwira jelaskan lebih masuk akal. Paylater, katanya kepada Kompas, sering dipakai sebagai jembatan untuk memenuhi kebutuhan sebelum gaji masuk. "Mereka harus membayar transportasi, tempat tinggal, kebutuhan kerja, bahkan membantu keluarga. Paylater dipakai untuk menjembatani kebutuhan hari ini dengan pendapatan yang baru diterima di masa depan."
 
@@ -120,9 +132,9 @@ Bukan belanja mewah, tapi biaya transportasi, tempat tinggal, dan kebutuhan kerj
 
 ## Hipokrisi Sistem: Butuh Konsumsi, Tolak Bayar Cukup
 
-Deloitte Global 2025 Gen Z and Millennial Survey, yang melibatkan 23.482 responden dari 44 negara, menemukan 52 persen Gen Z dan milenial hidup dari gaji ke gaji. Biaya hidup menjadi kekhawatiran utama Gen Z selama empat tahun berturut-turut. 37 persen Gen Z kesulitan memenuhi kebutuhan bulanan.
+Deloitte Global 2025 Gen Z and Millennial Survey, yang melibatkan 23.482 responden dari 44 negara, menemukan 52 persen Gen Z dan milenial hidup dari gaji ke gaji [7]. Biaya hidup menjadi kekhawatiran utama Gen Z selama empat tahun berturut-turut. 37 persen Gen Z kesulitan memenuhi kebutuhan bulanan.
 
-Bank of America Workplace Benefits Report 2025 menemukan 85 persen pekerja punya utang pribadi. Hampir 9 dari 10 karyawan Gen Z dan milenial memiliki utang. Utang kartu kredit melampaui KPR untuk pertama kalinya dalam beberapa tahun. 46 persen pekerja stres karena utang, 35 persen merasa produktivitas kerja terganggu.
+Bank of America Workplace Benefits Report 2025 menemukan 85 persen pekerja punya utang pribadi [9]. Hampir 9 dari 10 karyawan Gen Z dan milenial memiliki utang. Utang kartu kredit melampaui KPR untuk pertama kalinya dalam beberapa tahun. 46 persen pekerja stres karena utang, 35 persen merasa produktivitas kerja terganggu.
 
 Survei YouGov Indonesia terhadap 2.067 responden menemukan Gen Z lebih banyak menghabiskan uang untuk produk kecantikan (21 persen) dan pakaian (20 persen). Tapi data yang sama menunjukkan Gen Z juga yang memangkas anggaran kesehatan dan kebutuhan dasar. Mereka mengorbankan kebutuhan pokok untuk mempertahankan konsumsi.
 

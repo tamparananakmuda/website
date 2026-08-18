@@ -72,3 +72,23 @@
   .prose table { font-size: 0.875em; }
   .prose th, .prose td { padding: 0.4em 0.5em; }
 }
+
+.prose .citation-ref a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1em;
+  height: 1.1em;
+  margin-left: 1px;
+  padding: 0 0.2em;
+  border-radius: 3px;
+  background: hsl(var(--muted) / 0.3);
+  font-size: 0.65em;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.15s;
+  vertical-align: super;
+}
+.prose .citation-ref a:hover {
+  background: hsl(var(--primary) / 0.15);
+}

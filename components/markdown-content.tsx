@@ -86,6 +86,16 @@ function sanitizeHtml(html: string): string {
     .replace(/javascript:/gi, '');
 }
 
+function renderInlineCitations(html: string): string {
+  return html.replace(/CITEPLACEHOLDER(\d{1,2})ENDCITE/g, (match, num) => {
+    return `<sup class="citation-ref"><a href="#ref-${num}" class="text-primary hover:underline text-xs font-semibold" aria-label="Lihat sumber ${num}">${num}</a></sup>`;
+  });
+}
+
+function protectCitations(text: string): string {
+  return text.replace(/\[(\d{1,2})\]/g, 'CITEPLACEHOLDER$1ENDCITE');
+}
+
 function parseChartBlock(block: string): ChartConfig | null {
   try {
     const json = JSON.parse(block);
@@ -169,8 +179,9 @@ export function MarkdownContent({ body }: MarkdownContentProps) {
         if (seg.type === 'nerd') {
           return <NerdBox key={i} config={seg.content as NerdBoxConfig} />;
         }
-        const rawHtml = marked.parse(seg.content as string, { async: false }) as string;
-        const cleanHtml = sanitizeHtml(rawHtml);
+        const protectedMd = protectCitations(seg.content as string);
+        const rawHtml = marked.parse(protectedMd, { async: false }) as string;
+        const cleanHtml = renderInlineCitations(sanitizeHtml(rawHtml));
         return <div key={i} dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
       })}
     </div>

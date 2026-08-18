@@ -51,7 +51,7 @@ interface RawArticle {
   seoMetaTitle: string | null;
   seoMetaDescription: string | null;
   seoKeywords: string[];
-  sourceReferences: Array<{ type: string; url: string; label: string }> | null;
+  sourceReferences: Array<{ type: string; url: string; label: string } | string> | null;
   featured: boolean;
   readingTime: number;
   humanSignature: boolean;
