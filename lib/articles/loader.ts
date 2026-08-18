@@ -433,6 +433,13 @@ export async function countPublishedPostsInSeries(seriesSlug: string): Promise<n
   return articles.filter((a) => a.seriesSlug === seriesSlug).length;
 }
 
+export async function getPostsByAuthorSlug(authorSlug: string, limit = 20): Promise<PostWithRelations[]> {
+  const articles = await getPublishedArticles();
+  const filtered = articles.filter((a) => a.authorSlug === authorSlug).slice(0, limit);
+  const ogMap = await getOgMetadataMap(filtered.map((a) => a.slug));
+  return filtered.map((a) => rawToPostWithRelations(a, ogMap.get(a.slug)));
+}
+
 export async function getAnalyticsOverview() {
   const all = await getAllArticles();
   const published = all.filter((a) => a.status === 'published' && a.publishedAt <= now());

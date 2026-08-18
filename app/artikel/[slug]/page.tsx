@@ -12,7 +12,6 @@ import { FAQSchema } from '@/components/schema/faq-schema';
 import { SponsoredBadge } from '@/components/sponsored-badge';
 import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
-import { RelatedArticles } from '@/components/related-articles';
 import { SeriesNavigation } from '@/components/series-navigation';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { SourceReferences, type SourceReferenceItem } from '@/components/source-references';
@@ -371,19 +370,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
             }))} />
           </div>
-        )}
-
-        {related && related.length > 0 && (
-          <RelatedArticles articles={related.map((r) => ({
-            id: r.id,
-            title: r.title,
-            slug: r.slug,
-            excerpt: r.excerpt,
-            coverImageUrl: r.coverImageUrl,
-            ogCardUrl: r.ogCardUrl,
-            readingTime: r.readingTime ?? 1,
-            category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
-          }))} />
         )}
 
         <ArticleEndCTA

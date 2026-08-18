@@ -4,7 +4,7 @@ import { getCategoriesForSitemap } from '@/lib/db/queries/categories';
 import { getPublishedWhitepapersForSitemap } from '@/lib/db/queries/whitepapers';
 import { getPublishedSocialPostsForSitemap } from '@/lib/db/queries/social-posts';
 import { encodeSocialId } from '@/lib/social/encode';
-import { series as seriesConfig } from '@/content/config';
+import { series as seriesConfig, authors as authorsConfig } from '@/content/config';
 import { getPostsBySeries } from '@/lib/articles/loader';
 
 export const revalidate = 3600;
@@ -180,5 +180,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages, ...seriPages, ...whitepaperPages, ...socialPages];
+  const authorPages: MetadataRoute.Sitemap = authorsConfig.map((author) => ({
+    url: `${siteUrl}/penulis/${author.slug}`,
+    lastModified: STATIC_PAGES_LAST_MODIFIED,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...postPages, ...categoryPages, ...seriPages, ...whitepaperPages, ...socialPages, ...authorPages];
 }

@@ -158,3 +158,8 @@ export async function getNonSeriesPublishedPostsWithRelations(limit = 10): Promi
 export async function getLatestSeriesWithPosts(maxSeries = 3, postsPerSeries = 3) {
   return fileGetLatestSeriesWithPosts(maxSeries, postsPerSeries);
 }
+
+export async function getPostsByAuthorSlug(authorSlug: string, limit = 20): Promise<PostWithRelations[]> {
+  const { getPostsByAuthorSlug: fileGetPostsByAuthorSlug } = await import('@/lib/articles/loader');
+  return fileGetPostsByAuthorSlug(authorSlug, limit);
+}
