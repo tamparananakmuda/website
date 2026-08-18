@@ -55,3 +55,20 @@
   --tw-prose-quote-borders: hsl(var(--primary));
 }
 .not-prose { all: initial; }
+
+/* Mobile reading optimization */
+@media (max-width: 640px) {
+  .prose {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .prose p { margin-top: 1.1em; margin-bottom: 1.1em; }
+  .prose h2 { font-size: 1.35em; margin-top: 1.6em; }
+  .prose h3 { font-size: 1.15em; margin-top: 1.4em; }
+  .prose ul, .prose ol { padding-left: 1.25em; }
+  .prose blockquote { padding-left: 0.75em; }
+  .prose a { text-underline-offset: 2px; }
+  .prose pre { font-size: 0.8125em; padding: 0.875em; }
+  .prose table { font-size: 0.875em; }
+  .prose th, .prose td { padding: 0.4em 0.5em; }
+}

@@ -19,6 +19,7 @@ export function ArticleCard({ post, priority = false }: ArticleCardProps) {
             alt={post.title}
             fill
             priority={priority}
+            quality={90}
             loading={priority ? 'eager' : 'lazy'}
             className="object-cover transition-all duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

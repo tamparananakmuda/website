@@ -224,6 +224,8 @@ Setelah artikel baru di-publish (Step 4 selesai), tambahkan baris baru ke tabel 
 | 212 | CPNS Bukan Karier Aman, Itu Lotere 4 Juta Pendaftar | cpns-bukan-karier-aman-itu-lotere-4-juta-pendaftar | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-09-25 (scheduled 08:00 WIB) |
 | 213 | Outsourcing Bukan Karier, Kamu Bisa Diganti Besok | outsourcing-bukan-karier-kamu-bisa-diganti-besok | Karier | Karier & Dunia Kerja | data | 2026-09-26 (scheduled 08:00 WIB) |
 | 214 | 12 Hari Cuti, 66% Tetap Kerja: Sistem Nggak Ngasih Istirahat | 12-hari-cuti-indonesia-nggak-ngasih-kamu-istirahat | Karier | Karier & Dunia Kerja | data | 2026-09-27 (scheduled 08:00 WIB) |
+| 215 | Nilai Bagus, Gaji Nggak Naik: Performance Review Itu Sandiwara | nilai-bagus-gaji-nggak-naik-performance-review-itu-sandiwara | Karier | Karier & Dunia Kerja | kontra-narasi | 2026-09-28 (scheduled 08:00 WIB) |
+| 216 | Gacha Bukan Game, Itu Judi dengan Animasi | gacha-bukan-game-itu-judi-dengan-animasi | Teknologi | Teknologi & AI | kontra-narasi | 2026-09-29 (scheduled 08:00 WIB) |
 
 ## Category Pages (untuk internal linking fallback)
 

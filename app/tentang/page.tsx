@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { OrganizationSchema } from '@/components/schema/organization-schema';
 import { AboutPageSchema } from '@/components/schema/about-page-schema';
 import { ArrowUpRight, Sparkles, Shield, Compass, Layers, CheckCircle } from 'lucide-react';
 
@@ -104,7 +103,6 @@ const roadmap = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
-      <OrganizationSchema />
       <AboutPageSchema />
 
       {/* ULTRA MODERN HERO WITH GLASS CARDS & GRADIENTS */}

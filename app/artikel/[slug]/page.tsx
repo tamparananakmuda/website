@@ -14,9 +14,16 @@ import { DonationCTA } from '@/components/donation-cta';
 import { TableOfContents } from '@/components/table-of-contents';
 import { RelatedArticles } from '@/components/related-articles';
 import { SeriesNavigation } from '@/components/series-navigation';
+import { Breadcrumb } from '@/components/breadcrumb';
+import { SourceReferences, type SourceReferenceItem } from '@/components/source-references';
+import { ArticleSummary } from '@/components/article-summary';
+import { ArticleEndCTA } from '@/components/article-end-cta';
+import { NewsletterInline } from '@/components/newsletter-inline';
+import { ReadAlso } from '@/components/read-also';
+import { CommentsSection, ReadingTracker, PremiumGate, ShareButtons } from '@/components/article-dynamic';
+import { BookmarkButton } from '@/components/bookmark-button';
 import { CalendarClock, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import nextDynamic from 'next/dynamic';
 
 function extractFAQFromBody(body: string): { question: string; answer: string }[] {
   const faqSection = body.match(/^##\s+FAQ\s*$/m);
@@ -35,29 +42,6 @@ function extractFAQFromBody(body: string): { question: string; answer: string }[
   }
   return faqItems;
 }
-
-const CommentsSection = nextDynamic(() => import('@/components/comments-section').then(m => m.CommentsSection), {
-  loading: () => <div className="mx-auto max-w-3xl mt-8 h-48 animate-pulse rounded-xl bg-muted/20" />,
-  ssr: false,
-});
-
-const ReadingTracker = nextDynamic(() => import('@/components/reading-tracker').then(m => m.ReadingTracker), {
-  ssr: false,
-});
-
-const PremiumGate = nextDynamic(() => import('@/components/premium-gate').then(m => m.PremiumGate), {
-  loading: () => <div className="mx-auto max-w-3xl mt-8 h-32 animate-pulse rounded-xl bg-muted/20" />,
-  ssr: false,
-});
-
-const BookmarkButton = nextDynamic(() => import('@/components/bookmark-button').then(m => m.BookmarkButton), {
-  ssr: false,
-});
-
-const ShareButtons = nextDynamic(() => import('@/components/share-buttons').then(m => m.ShareButtons), {
-  loading: () => <div className="mx-auto max-w-3xl mt-8 h-10 animate-pulse rounded-lg bg-muted/20" />,
-  ssr: false,
-});
 
 interface ArticlePageProps {
   params: { slug: string };
@@ -110,6 +94,7 @@ export async function generateMetadata({
         description: post.seoMetaDescription || post.excerpt || undefined,
         publishedTime: post.publishedAt || undefined,
         modifiedTime: post.updatedAt || undefined,
+        authors: post.author?.name ? [post.author.name] : undefined,
         images: post.ogImageUrl ? [{ url: post.ogImageUrl, width: 1600, height: 900 }] : undefined,
       },
       twitter: {
@@ -219,7 +204,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     return (
       <article className="container mx-auto px-4 py-12">
         <ReadingProgress />
-        <link rel="preload" as="image" href={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`} fetchPriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`}
+          imageSrcSet={`${post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`} 1x`}
+          imageSizes="(max-width: 1200px) 100vw, 1024px"
+          fetchPriority="high"
+        />
         <ArticleSchema
           title={post.title}
           description={post.excerpt || ''}
@@ -266,6 +258,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         })()}
         <BreadcrumbSchema items={[{ name: 'Home', href: '/' }, { name: 'Artikel', href: '/artikel' }, { name: post.title, href: `/artikel/${post.slug}` }]} />
 
+        {/* Visual breadcrumb */}
+        <Breadcrumb
+          items={[
+            { name: 'Beranda', href: '/' },
+            ...(post.category ? [{ name: post.category.title, href: `/kategori/${post.category.slug}` }] : []),
+            { name: post.title, href: `/artikel/${post.slug}` },
+          ]}
+        />
+
         {/* Feature image */}
         <FeatureImage
           src={post.ogFeatureUrl || post.ogImageUrl || `/api/og/feature?slug=${post.slug}`}
@@ -276,9 +277,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>
           <div className="mb-4 flex items-center gap-2 text-sm">
             {post.category && (
-              <span style={{ color: post.category.color }}>
+              <Link
+                href={`/kategori/${post.category.slug}`}
+                className="font-medium transition-opacity hover:opacity-70"
+                style={{ color: post.category.color }}
+              >
                 {post.category.title}
-              </span>
+              </Link>
             )}
             <span className="text-muted-foreground">&bull;</span>
             <span className="text-muted-foreground">{post.readingTime ?? 1} menit baca</span>
@@ -292,7 +297,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {post.author && (
             <div className="mb-8 flex items-center justify-between text-sm text-muted-foreground">
               <div>
-                Ditulis oleh {post.author.name}
+                Ditulis oleh{' '}
+                {post.author.slug && post.author.name !== 'TAMPARAN ANAK MUDA' ? (
+                  <Link href={`/penulis/${post.author.slug}`} className="font-medium text-foreground transition-colors hover:text-primary">
+                    {post.author.name}
+                  </Link>
+                ) : (
+                  <span className="font-medium text-foreground">{post.author.name}</span>
+                )}
                 {post.publishedAt && (
                   <time dateTime={post.publishedAt} className="ml-2">&middot; {new Date(post.publishedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
                 )}
@@ -315,6 +327,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         )}
 
+        {(() => {
+          const summary = post.summary;
+          if (!summary || !Array.isArray(summary) || (summary as string[]).length === 0) return null;
+          return (
+            <div className="mx-auto max-w-3xl">
+              <ArticleSummary items={summary as string[]} />
+            </div>
+          );
+        })()}
+
         <section className="mx-auto max-w-3xl" aria-label="Konten artikel">
           <TableOfContents body={post.body} />
           {post.isPremium ? (
@@ -331,7 +353,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <ShareButtons title={post.title} slug={post.slug} />
         </div>
 
+        <NewsletterInline />
+
         {!post.isSponsored && <DonationCTA />}
+
+        {(() => {
+          const refs = post.sourceReferences;
+          if (!refs || !Array.isArray(refs) || (refs as SourceReferenceItem[]).length === 0) return null;
+          return <SourceReferences sources={refs as SourceReferenceItem[]} />;
+        })()}
+
+        {related && related.length > 0 && (
+          <div className="mx-auto max-w-3xl">
+            <ReadAlso articles={related.slice(0, 3).map((r) => ({
+              slug: r.slug,
+              title: r.title,
+              category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
+            }))} />
+          </div>
+        )}
 
         {related && related.length > 0 && (
           <RelatedArticles articles={related.map((r) => ({
@@ -345,6 +385,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             category: r.category ? { title: r.category.title, slug: r.category.slug, color: r.category.color } : null,
           }))} />
         )}
+
+        <ArticleEndCTA
+          nextArticle={related && related.length > 0 ? {
+            slug: related[0].slug,
+            title: related[0].title,
+            excerpt: related[0].excerpt,
+            category: related[0].category ? { title: related[0].category.title, slug: related[0].category.slug, color: related[0].category.color } : null,
+          } : null}
+          categoryLink={post.category ? { title: post.category.title, slug: post.category.slug } : null}
+        />
 
         <CommentsSection postSlug={post.slug} />
 

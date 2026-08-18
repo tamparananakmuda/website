@@ -48,6 +48,9 @@ export function SiteFooter() {
               <Link href="/tentang" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Tentang
               </Link>
+              <Link href="/kebijakan-editorial" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
+                Kebijakan Editorial
+              </Link>
               <Link href="/donasi" prefetch={false} className="text-muted-foreground transition-colors hover:text-foreground">
                 Donasi
               </Link>

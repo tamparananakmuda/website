@@ -6,6 +6,8 @@ import './globals.css';
 import { ConditionalHeader } from '@/components/conditional-header';
 import { ConditionalFooter } from '@/components/conditional-footer';
 import { SearchSchema } from '@/components/schema/search-schema';
+import { OrganizationSchema } from '@/components/schema/organization-schema';
+import { WebsiteSchema } from '@/components/schema/website-schema';
 
 const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then((m) => m.SpeedInsights), { ssr: false });
 const Analytics = dynamic(() => import('@vercel/analytics/next').then((m) => m.Analytics), { ssr: false });
@@ -132,6 +134,8 @@ export default function RootLayout({
           Lewati ke konten utama
         </a>
         <SearchSchema siteUrl={siteUrl} />
+        <OrganizationSchema />
+        <WebsiteSchema />
         <ConditionalHeader />
         <div className="flex-1" id="main-content">{children}</div>
         <ConditionalFooter />

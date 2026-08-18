@@ -68,6 +68,7 @@ interface RawArticle {
   fileName: string;
   updatedAt: string;
   fileMtime: string;
+  summary: string[] | null;
 }
 
 function readAllFiles(): RawArticle[] {
@@ -119,6 +120,7 @@ function readAllFiles(): RawArticle[] {
       fileName: file,
       updatedAt: fm.updatedAt || fm.publishedAt,
       fileMtime: statSync(filePath).mtime.toISOString(),
+      summary: fm.summary,
     });
   }
 
@@ -169,6 +171,7 @@ function rawToPost(raw: RawArticle): Post {
     ogFeatureUrl: null,
     ogImageUrl: null,
     seoKeywords: raw.seoKeywords,
+    summary: raw.summary,
   };
 }
 

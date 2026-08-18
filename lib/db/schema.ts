@@ -98,6 +98,7 @@ export const posts = pgTable('posts', {
   ogFeatureUrl: text('og_feature_url'),
   ogImageUrl: text('og_image_url'),
   seoKeywords: text('seo_keywords').array(),
+  summary: jsonb('summary'),
 }, (table) => [
   index('idx_posts_author').using('btree', table.authorId),
   index('idx_posts_category').using('btree', table.categoryId),

@@ -63,6 +63,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   const posts = await getPostsByCategorySlug(category.slug, 12);
   const catColor = category.color || '#D13A3A';
+  const featuredPost = posts[0];
+  const restPosts = posts.slice(1);
 
   return (
     <main>
@@ -140,11 +142,20 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       {/* Articles */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24">
         {posts && posts.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <ArticleCard key={post.id} post={post} />
-            ))}
-          </div>
+          <>
+            {featuredPost && (
+              <div className="mb-12">
+                <ArticleCard post={featuredPost} priority />
+              </div>
+            )}
+            {restPosts.length > 0 && (
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {restPosts.map((post) => (
+                  <ArticleCard key={post.id} post={post} />
+                ))}
+              </div>
+            )}
+          </>
         ) : (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <FileText size={40} className="mb-4 text-muted-foreground/40" />

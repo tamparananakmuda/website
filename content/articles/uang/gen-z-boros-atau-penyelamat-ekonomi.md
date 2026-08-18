@@ -23,6 +23,12 @@ humanSignature: true
 factCheckStatus: "verified"
 reviewStatus: "publish"
 readingTime: 9
+summary:
+  - "Gen Z menyumbang 48-51% konsumsi nasional, jadi motor pertumbuhan ekonomi 5.12% Q2-2025"
+  - "Gaji Gen Z Rp 2.7 juta vs pengeluaran Rp 11.97 juta di Jakarta, defisit Rp 9.27 juta per bulan"
+  - "Paylater menambal defisit struktural, bukan untuk gaya hidup mewah"
+  - "52% Gen Z hidup paycheck to paycheck, 88% Gen Z punya utang"
+  - "Narasi 'Gen Z boros' menggeser tanggung jawab dari sistem yang tidak membayar cukup"
 coverImageUrl: null
 coverImageAlt: null
 sourceReferences:
@@ -87,10 +93,10 @@ Jakarta Selatan tertinggi dengan Rp 15.168.533 per bulan. Kepulauan Seribu teren
 Sementara itu, upah Gen Z jauh di bawah pengeluaran itu. Ekonom CELIOS Shafa Kalila, dalam wawancara dengan Terusterang.id pada Februari 2026, mengutip data BPS November 2025: upah Gen Z usia 20-29 tahun hanya Rp 2.7 sampai 3.2 juta per bulan. Kenaikan upah minus 0.06 persen, sementara inflasi 2.72 persen.
 
 ```chart:bar
-{"title":"Gaji vs Pengeluaran Gen Z Jakarta","subtitle":"Defisit Rp 8.77 juta per bulan","source":"BPS DKI Jakarta (Jul 2026) & CELIOS/BPS (Feb 2026)","data":[{"label":"Gaji (rata-rata)","value":2.95,"color":"#22c55e"},{"label":"Pengeluaran","value":11.97,"color":"#ef4444"}],"yLabel":"Rp juta"}
+{"title":"Gaji vs Pengeluaran Gen Z Jakarta","subtitle":"Defisit Rp 9.27 juta per bulan","source":"BPS DKI Jakarta (Jul 2026) & CELIOS/BPS (Feb 2026)","data":[{"label":"Gaji (rata-rata)","value":2.7,"color":"#22c55e"},{"label":"Pengeluaran","value":11.97,"color":"#ef4444"}],"yLabel":"Rp juta"}
 ```
 
-Selisih pengeluaran dan gaji mencapai Rp 8.77 juta per bulan, bukan margin belanja impulsif tapi defisit struktural. Anak muda yang kerja di Jakarta menghadapi biaya hidup 4 kali lipat dari gaji mereka.
+Selisih pengeluaran dan gaji mencapai Rp 9.27 juta per bulan, bukan margin belanja impulsif tapi defisit struktural. Anak muda yang kerja di Jakarta menghadapi biaya hidup 4 kali lipat dari gaji mereka.
 
 Tingkat Pengangguran Terbuka kelompok usia 15-24 tahun mencapai 16.36 persen menurut BPS Februari 2026. Di Jakarta, TPT usia 15-29 tahun mencapai 13.65 persen. Sebanyak 21.47 persen pekerja muda berada di sektor informal tanpa jaminan sosial.
 

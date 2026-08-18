@@ -93,6 +93,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.3,
     },
+    {
+      url: `${siteUrl}/tami`,
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${siteUrl}/story`,
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+    {
+      url: `${siteUrl}/kebijakan-editorial`,
+      lastModified: STATIC_PAGES_LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
   ];
 
   const [postsData, categoriesData, whitepapersData] = await Promise.all([

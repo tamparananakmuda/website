@@ -34,6 +34,7 @@ export interface ArticleFrontmatter {
   coverImageUrl: string | null;
   coverImageAlt: string | null;
   updatedAt: string | null;
+  summary: string[] | null;
 }
 
 export interface ParsedArticle {
@@ -86,6 +87,7 @@ export function parseFrontmatter(fileContent: string, fileName: string): ParsedA
       coverImageUrl: get('coverImageUrl', 'cover_image_url', null),
       coverImageAlt: get('coverImageAlt', 'cover_image_alt', null),
       updatedAt: get('updatedAt', 'updated_at', null),
+      summary: get('summary', 'summary', null),
     };
 
     return {

@@ -82,6 +82,7 @@ function RelatedArticleCard({ article, cat }: { article: RelatedArticle; cat: Re
             alt={article.title}
             fill
             loading="lazy"
+            quality={90}
             className={`
               object-cover transition-all duration-500
               ${imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
