@@ -4,7 +4,6 @@ import { AboutPageSchema } from '@/components/schema/about-page-schema';
 import {
   ArrowUpRight,
   ArrowRight,
-  Sparkles,
   Shield,
   Compass,
   CheckCircle2,
@@ -14,13 +13,12 @@ import {
   HeartHandshake,
   Brain,
   FileCheck,
-  Search,
   Scale,
-  BookOpen,
   Flame,
   Layers,
   XCircle,
   HelpCircle,
+  Sparkles,
 } from 'lucide-react';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
@@ -28,14 +26,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.co
 export const metadata: Metadata = {
   title: 'Tentang Kami — TAMPARAN ANAK MUDA',
   description:
-    'Manifesto editorial, visi, dan komitmen riset independen TAMPARAN ANAK MUDA. Media digital modern yang menyajikan analisis tajam, jujur, dan bertahan lama untuk generasi muda Indonesia.',
+    'Alasan kenapa TAMPARAN ANAK MUDA ada. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset dengan jujur, berbasis data, dan tanpa motivasi instan.',
   keywords: [
     'tentang tamparan anak muda',
-    'editorial media indonesia',
-    'prinsip editorial',
-    'jurnalisme independen',
-    'manifesto tamparan anak muda',
-    'analisis sosial ekonomi anak muda',
+    'media independen anak muda',
+    'alasan tamparan anak muda',
+    'analisis realitas gen z',
+    'literasi finansial karier indonesia',
   ],
   robots: { index: true, follow: true },
   alternates: {
@@ -48,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'TAMPARAN ANAK MUDA',
     title: 'Tentang Kami — TAMPARAN ANAK MUDA',
     description:
-      'Manifesto editorial, visi, dan komitmen riset independen TAMPARAN ANAK MUDA. Media digital modern yang menyajikan analisis tajam, jujur, dan bertahan lama.',
+      'Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan tanpa motivasi manis. Berakar pada fakta dan realitas sosial-ekonomi yang sesungguhnya.',
     images: [
       {
         url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp',
@@ -62,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tentang Kami — TAMPARAN ANAK MUDA',
     description:
-      'Manifesto editorial, visi, dan komitmen riset independen TAMPARAN ANAK MUDA. Media digital modern yang menyajikan analisis tajam, jujur, dan bertahan lama.',
+      'Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan tanpa motivasi manis. Berakar pada fakta dan realitas sosial-ekonomi yang sesungguhnya.',
     images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
   },
 };
@@ -73,88 +70,88 @@ const pillars = [
     title: 'Uang & Finansial',
     color: '#E63946',
     icon: TrendingUp,
-    angle: 'Membedah jebakan inflasi gaya hidup, ilusi investasi spekulatif, dan realitas ekonomi riil yang dihadapi generasi muda.',
+    angle: 'Bukan tips hemat receh, tapi bedah inflasi, jebakan pinjol/judol, biaya hidup ugal-ugalan, dan cara mengamankan masa depan secara realistis.',
   },
   {
     slug: 'karier',
     title: 'Karier & Kerja',
     color: '#3A86FF',
     icon: Briefcase,
-    angle: 'Mengupas struktur pasar tenaga kerja, negosiasi kompensasi, burnout struktural, dan politik korporasi tanpa romantisasi.',
+    angle: 'Realitas bursa kerja, cuti minim, politik kantor, negosiasi gaji, dan kenapa kerja keras membabi-buta sering kali cuma diganjar burnout.',
   },
   {
     slug: 'bisnis',
     title: 'Bisnis & Industri',
     color: '#2A9D8F',
     icon: Scale,
-    angle: 'Membongkar mitos startup bakar uang, dinamika rantai pasok, dan strategi membangun usaha berdaya tahan tinggi.',
+    angle: 'Membongkar mitos startup bakar uang, kenapa banyak bisnis anak muda gulung tikar, dan fondasi usaha riil yang menghasilkan arus kas sehat.',
   },
   {
     slug: 'teknologi',
     title: 'Teknologi & Masa Depan',
     color: '#9B5DE5',
     icon: Cpu,
-    angle: 'Meneliti pergeseran AI, otomasi tenaga kerja, algoritma adiktif, serta kedaulatan data di era digital.',
+    angle: 'Bagaimana algoritma medsos memanipulasi fokus kita, pergeseran AI terhadap lapangan kerja, serta cara bertahan di era otomasi digital.',
   },
   {
     slug: 'kehidupan',
     title: 'Kehidupan & Sosial',
     color: '#F4A261',
     icon: HeartHandshake,
-    angle: 'Menyingkap fenomena sandwich generation, isolasi sosial perkotaan, dan beban ekspektasi modern yang jarang dibicarakan.',
+    angle: 'Beban generasi sandwich, sepi dan isolasi di kota besar, tekanan ekspektasi sosial, dan navigasi hubungan manusia di zaman serba transaksional.',
   },
   {
     slug: 'mindset',
     title: 'Mindset & Logika',
     color: '#00B4D8',
     icon: Brain,
-    angle: 'Melatih model mental, imunitas terhadap bias kognitif, dan kerangka berpikir jernih untuk mengambil keputusan hidup.',
+    angle: 'Melatih logika berpikir jernih, imunitas terhadap penipuan halus dan tren FOMO, serta cara mengambil keputusan hidup dengan kepala dingin.',
   },
 ];
 
 const dialectics = [
   {
-    myth: 'Konten motivasi 60 detik yang membuatmu merasa pintar sesaat lalu bingung besok pagi.',
-    reality: 'Esai investigatif mendalam berakar riset dan data empiris yang tetap relevan bertahun-tahun kemudian.',
+    myth: 'Konten 60 detik yang bikin kamu merasa pintar sesaat, tapi langsung bingung dan cemas besok pagi.',
+    reality: 'Esai mendalam berbasis data empiris yang tetap relevan dan bernilai saat kamu baca ulang bertahun-tahun kemudian.',
   },
   {
-    myth: 'Menyalahkan individu atas masalah struktural ("Kamu kurang kerja keras").',
-    reality: 'Menganalisis sistem sosial-ekonomi di baliknya sembari memberikan panduan langkah konkret yang realistis.',
+    myth: 'Menyalahkan individu secara sepihak: "Kamu susah karena kurang bangun pagi atau kurang bersyukur."',
+    reality: 'Membongkar masalah struktural dan sistem ekonominya, lalu memberikan opsi langkah nyata yang masuk akal dijalankan.',
   },
   {
-    myth: 'Judul clickbait sensasional demi memaksimalkan impresi algoritma platform.',
-    reality: 'Keterbukaan penuh atas sumber data, catatan rujukan, dan akuntabilitas koreksi terbuka tanpa revisi diam-diam.',
+    myth: 'Judul clickbait berlebihan demi mengejar algoritma platform dan tayangan iklan semata.',
+    reality: 'Transparansi penuh atas sumber data, catatan rujukan yang bisa diverifikasi, dan ralat terbuka jika ada kekeliruan.',
   },
   {
-    myth: 'Optimisme palsu dan ilusi kenyamanan instan.',
-    reality: 'Kejujuran radikal yang menyadarkan realita agar kamu bisa bertindak dengan navigasi yang akurat.',
+    myth: 'Jualan mimpi cepat kaya lewat jalan pintas dan motivasi manis yang meninabobokan.',
+    reality: 'Kejujuran apa adanya yang membuka mata, agar kamu tahu medan tempur yang sesungguhnya dan tidak mudah tertipu.',
   },
 ];
 
 const editorialPrinciples = [
   {
     num: '01',
-    title: 'Transparansi Data & Rujukan Primer',
-    desc: 'Setiap angka, klaim statistik, dan kutipan tertaut langsung ke sumber primer terverifikasi (BPS, Bank Indonesia, laporan lembaga riset resmi).',
-    badge: '100% Verifiable',
+    title: 'Semua Angka Punya Sumber',
+    desc: 'Kami tidak membuat klaim dari udara hampa. Setiap data statistik dan kutipan berasal dari lembaga resmi (BPS, BI, OJK, riset terverifikasi) dan tertaut langsung.',
+    badge: 'Terverifikasi',
   },
   {
     num: '02',
-    title: 'Akuntabilitas & Koreksi Terbuka',
-    desc: 'Bila kami keliru, revisi dilakukan transparan dengan catatan pembaruan tanggal dan ringkasan koreksi. Tanpa suntingan diam-diam.',
-    badge: 'Zero Silent Edits',
+    title: 'Koreksi Terbuka Tanpa Diam-Diam',
+    desc: 'Jika data atau kesimpulan kami keliru, kami perbaiki secara terbuka dengan catatan revisi di artikel. Kami tidak melakukan silent edits.',
+    badge: 'Akuntabel',
   },
   {
     num: '03',
-    title: 'Independensi Komersial yang Tegas',
-    desc: 'Kemitraan atau sponsorship selalu ditandai dengan label jelas. Pemasang iklan tidak memiliki kendali atau hak intervensi ruang redaksi.',
-    badge: 'Editorial Shield',
+    title: 'Redaksi Tidak Bisa Dibeli',
+    desc: 'Tulisan bersponsor selalu diberi label transparan. Pemasang iklan sama sekali tidak punya hak untuk mengatur opini atau kesimpulan analisis kami.',
+    badge: 'Independen',
   },
   {
     num: '04',
-    title: 'Analisis Akar Masalah & Evergreen',
-    desc: 'Menolak tips instan 5 menit. Kami membedah akar struktural di balik setiap fenomena agar tulisan tetap bernilai saat dibaca ulang di masa depan.',
-    badge: 'Long-term Value',
+    title: 'Menulis untuk Jangka Panjang',
+    desc: 'Kami menolak menulis gosip atau tren musiman 2 hari. Kami fokus pada isu-isu fundamental yang tetap penting bagi hidupmu dalam 5 sampai 10 tahun ke depan.',
+    badge: 'Evergreen',
   },
 ];
 
@@ -162,73 +159,77 @@ const verificationProcess = [
   {
     step: '01',
     title: 'Riset Data & Sumber Primer',
-    desc: 'Mengumpulkan dokumen resmi, data statistik publik, dan jurnal terakreditasi sebelum menentukan hipotesis analisis.',
+    desc: 'Mengumpulkan laporan resmi, statistik publik, dan jurnal terakreditasi sebelum menyusun kerangka analisis.',
   },
   {
     step: '02',
-    title: 'Uji Fakta & Pemisahan Opini',
-    desc: 'Membedakan fakta objektif, premis logika, dan sudut pandang editorial dengan kriteria validasi yang ketat.',
+    title: 'Uji Fakta & Logika',
+    desc: 'Memisahkan data objektif dari asumsi personal agar argumen yang dibangun kokoh dan tidak manipulatif.',
   },
   {
     step: '03',
-    title: 'Peer Review & Kurasi Humanis',
-    desc: 'Naskah melewati tinjauan ketat editor untuk memastikan ketajaman narasi, etika berbahasa, dan kejelasan substansi.',
+    title: 'Penyuntingan Ketat',
+    desc: 'Naskah dibaca ulang untuk memastikan alur bahasa tajam, bebas basa-basi, dan mudah dipahami siapa saja.',
   },
   {
     step: '04',
-    title: 'Publikasi Terbuka & Catatan Sumber',
-    desc: 'Diterbitkan dengan modul rujukan lengkap dan kanal umpan balik publik untuk menjaga akuntabilitas jangka panjang.',
+    title: 'Publikasi dengan Catatan Sumber',
+    desc: 'Diterbitkan lengkap dengan daftar rujukan terbuka agar pembaca bisa memeriksa langsung kebenaran datanya.',
   },
 ];
 
 const roadmap = [
   {
     stage: 'FASE 01',
-    status: 'Aktif Berjalan',
+    status: 'Sedang Berjalan',
     title: 'Publikasi & Riset Dasar',
     items: [
       'Penerbitan esai mendalam 6 pilar secara konsisten',
-      'Kurasi Weekly Newsletter bernas setiap minggu',
-      'Dokumentasi infografis berbasis data di media sosial',
-      'Pustaka artikel evergreen bebas paywall',
+      'Kurasi Weekly Newsletter bernas setiap minggu ke inbox pembaca',
+      'Rangkuman infografis berbasis data di media sosial',
+      'Arsip tulisan terbuka yang bebas diakses siapa saja',
     ],
   },
   {
     stage: 'FASE 02',
     status: 'Dalam Pengembangan',
-    title: 'Toolkit & Riset Publik',
+    title: 'Toolkit & Panduan Praktis',
     items: [
-      'Panduan kerja interaktif & kalkulator keputusan riil',
-      'Repositori dataset publik & visualisasi ekonomi interaktif',
-      'Fitur bookmark, tracking baca, dan personalisasi pembaca',
-      'Sirkel diskusi pemikiran kritis terkurasi',
+      'Kalkulator dan lembar kerja keputusan karier & keuangan riil',
+      'Visualisasi data ekonomi interaktif yang mudah dipahami',
+      'Fitur simpan bacaan, tracking progres, dan arsip personal',
+      'Ruang interaksi dan diskusi kritis terarah antarpembaca',
     ],
   },
   {
     stage: 'FASE 03',
     status: 'Visi Jangka Panjang',
-    title: 'Forum Pemikiran & Edisi Fisik',
+    title: 'Edisi Cetak & Komunitas Berpikir',
     items: [
-      'Kolaborasi riset dengan akademisi & praktisi independen',
-      'Ruang debat tematik berkala untuk isu krusial anak muda',
-      'Penerbitan jurnal / buku antologi edisi fisik terbatas',
-      'Program hibah riset mini untuk talenta muda',
+      'Kolaborasi riset lapangan bersama praktisi dan peneliti independen',
+      'Buku antologi dan jurnal cetak edisi terbatas',
+      'Sesi temu wicara dan bedah isu strategis secara berkala',
+      'Dukungan bagi karya tulis bermutu dari talenta muda daerah',
     ],
   },
 ];
 
 const faqs = [
   {
-    q: 'Siapa yang berada di balik TAMPARAN ANAK MUDA?',
-    a: 'TAMPARAN ANAK MUDA (TAM) dibangun oleh kolektif penulis, analis data, dan praktisi multidisiplin yang gelisah melihat banjirnya konten dangkal dan motivasi instan yang meninabobokan generasi muda Indonesia.',
+    q: 'Siapa yang menulis di TAMPARAN ANAK MUDA?',
+    a: 'TAMPARAN ANAK MUDA (TAM) digerakkan oleh kolektif penulis, analis data, dan praktisi independen yang gelisah melihat ruang publik anak muda dipenuhi motivasi manis tanpa substansi nyata.',
   },
   {
-    q: 'Apakah seluruh konten di website ini gratis?',
-    a: 'Ya. Seluruh esai dan artikel editorial utama kami dapat diakses bebas tanpa paywall. Kami percaya bahwa literasi kritis dan data objektif adalah hak publik yang harus mudah dijangkau.',
+    q: 'Kenapa gaya bahasanya terasa blak-blakan?',
+    a: 'Karena hidup kita sudah cukup rumit. Basa-basi manis tidak menyelesaikan cicilan, tidak membenahi sistem kerja, dan tidak menuntun masa depan. Kami percaya anak muda Indonesia layak diajak berdiskusi sebagai manusia dewasa yang kritis dan cerdas.',
   },
   {
-    q: 'Bagaimana cara berkontribusi atau mengajukan sanggahan data?',
-    a: 'Kami menyambut baik koreksi faktual, kritik data, maupun pengajuan naskah tamu berkualitas tinggi. Anda dapat menghubungi tim redaksi melalui surel di editorial@tamparananakmuda.com.',
+    q: 'Apakah saya harus membayar untuk membaca artikel di sini?',
+    a: 'Tidak. Seluruh artikel dan arsip utama kami dapat diakses gratis tanpa paywall. Kami meyakini bahwa akses terhadap data akurat dan pemikiran jernih adalah hak setiap anak muda.',
+  },
+  {
+    q: 'Bagaimana jika saya menemukan kesalahan data dalam artikel?',
+    a: 'Kami sangat menghargai koreksi. Anda dapat mengirimkan sanggahan atau masukan data melalui surel ke editorial@tamparananakmuda.com. Jika terbukti keliru, kami akan segera memperbaikinya secara transparan.',
   },
 ];
 
@@ -237,7 +238,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
       <AboutPageSchema />
 
-      {/* HERO SECTION - CINEMATIC EDITORIAL IDENTITY */}
+      {/* HERO SECTION */}
       <section className="relative overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28 border-b border-border">
         {/* Background Ambient Glow & Vignette */}
         <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[1000px] bg-gradient-to-b from-primary/20 via-primary/5 to-transparent blur-[160px] opacity-80" />
@@ -249,41 +250,41 @@ export default function AboutPage() {
             {/* Tag Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-display font-semibold tracking-wide text-primary shadow-sm backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
-              <span>MANIFESTO EDITORIAL &bull; TAMPARAN ANAK MUDA</span>
+              <span>CATATAN REDAKSI &bull; TAMPARAN ANAK MUDA</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-tight leading-[1.08] text-balance">
-              Dunia Tidak Butuh <br className="hidden sm:inline" />
+              Berhenti Diberi Janji Manis. <br className="hidden sm:inline" />
               <span className="relative inline-block mt-1">
                 <span className="bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent">
-                  Satu Lagi Motivasi Instan.
+                  Saatnya Menatap Kenyataan.
                 </span>
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="mx-auto max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground font-sans font-normal leading-relaxed text-balance">
-              Setiap hari generasi muda dibombardir ilusi kesuksesan 60 detik yang lenyap begitu layar dimatikan. Kami hadir menyajikan analisis tajam, jujur, dan berakar pada realitas sosial-ekonomi yang sesungguhnya.
+            <p className="mx-auto max-w-3xl text-base sm:text-lg md:text-xl text-muted-foreground font-sans font-normal leading-relaxed text-balance">
+              Kami muak dengan konten motivasi dangkal yang menyuruhmu kerja 18 jam sehari tanpa pernah membahas kenapa gaji fresh graduate stagnan, harga rumah makin tak terjangkau, dan sistem kerja bikin cepat remuk. TAM hadir untuk membedah fakta yang sebenarnya terjadi.
             </p>
 
             {/* Quick Metrics Bar */}
             <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
               <div className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-md text-center">
-                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">6 Pilar</div>
-                <div className="text-xs text-muted-foreground mt-1">Liputan Multidisiplin</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">6 Topik</div>
+                <div className="text-xs text-muted-foreground mt-1">Fokus Analisis Kritis</div>
               </div>
               <div className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-md text-center">
-                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">100%</div>
-                <div className="text-xs text-muted-foreground mt-1">Rujukan Terbuka</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">100% Data</div>
+                <div className="text-xs text-muted-foreground mt-1">Rujukan Terverifikasi</div>
               </div>
               <div className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-md text-center">
-                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">0%</div>
-                <div className="text-xs text-muted-foreground mt-1">Clickbait Algoritma</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">0% Claptrap</div>
+                <div className="text-xs text-muted-foreground mt-1">Tanpa Clickbait Palsu</div>
               </div>
               <div className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur-md text-center">
-                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">Bebas</div>
-                <div className="text-xs text-muted-foreground mt-1">Akses Paywall</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">Gratis</div>
+                <div className="text-xs text-muted-foreground mt-1">Bebas Akses Tanpa Paywall</div>
               </div>
             </div>
 
@@ -293,14 +294,14 @@ export default function AboutPage() {
                 href="/artikel"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-display font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 transition-all hover:scale-105"
               >
-                <span>Jelajahi Arsip Tulisan</span>
+                <span>Mulai Baca Tulisan</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="#filosofi"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/80 px-6 py-3.5 text-sm font-display font-semibold text-foreground hover:bg-muted/80 transition-all"
               >
-                <span>Baca Filosofi Kami</span>
+                <span>Kenapa Kami Ada</span>
               </Link>
             </div>
 
@@ -308,7 +309,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PHILOSOPHY CARD - TAMPARAN VS PELUKAN */}
+      {/* PHILOSOPHY CARD */}
       <section id="filosofi" className="py-20 md:py-32 border-b border-border bg-card/40 relative">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-16">
@@ -321,14 +322,14 @@ export default function AboutPage() {
                 <div className="lg:col-span-5 space-y-4">
                   <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-display font-semibold text-primary">
                     <Flame className="h-3.5 w-3.5" />
-                    <span>FILOSOFI DASAR</span>
+                    <span>ALASAN NAMA INI ADA</span>
                   </div>
                   <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight leading-tight">
                     Mengapa &ldquo;Tamparan&rdquo;, <br />
                     Bukan &ldquo;Pelukan&rdquo;?
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Nama ini bukan tentang kekerasan fisik, melainkan metafora kejujuran intelektual yang memecah kabut ilusi.
+                    Nama ini bukan tentang kekerasan fisik. Ini adalah metafora kejujuran intelektual yang memecah kabut ilusi.
                   </p>
                 </div>
 
@@ -337,24 +338,24 @@ export default function AboutPage() {
                     &ldquo;Pelukan menenangkan emosi sesaat. Tamparan membangunkan kesadaran selamanya.&rdquo;
                   </blockquote>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    Ketika kamu sedang tersesat di tengah hutan, kamu tidak butuh seseorang yang memelukmu dan berbisik bahwa segalanya baik-baik saja. Kamu membutuhkan kompas yang akurat, peta medan yang jujur, dan peringatan tegas tentang jurang di depanmu.
+                    Banyak media memilih jalan pintas: menyajikan konten manis yang membelai ego atau tips 30 detik yang gampang viral. Tapi masalah hidup anak muda Indonesia—mulai dari jebakan sandwich generation, inflasi gaya hidup, sampai karut-marut dunia kerja—tidak pernah selesai hanya dengan kalimat mutiara. Kami memilih bicara jujur, bahkan ketika kejujuran itu pahit untuk didengar.
                   </p>
                   <div className="flex items-center gap-3 pt-2 text-xs font-display font-semibold text-primary">
                     <CheckCircle2 className="h-4 w-4" />
-                    <span>Rasionalitas di atas kepalsuan emosional</span>
+                    <span>Rasionalitas dan fakta di atas kepalsuan emosional</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* DIALECTIC COMPARISON (MITOS VS REALITA) */}
+            {/* DIALECTIC COMPARISON */}
             <div className="space-y-8">
               <div className="text-center max-w-2xl mx-auto space-y-2">
                 <span className="text-xs font-display font-semibold tracking-widest text-primary uppercase">
-                  Kontras Editorial
+                  Perbedaan Sudut Pandang
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight">
-                  Yang Diberikan Media Umum vs Sikap Kami
+                  Kenapa Tulisan Kami Terasa Berbeda?
                 </h3>
               </div>
 
@@ -370,7 +371,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <div className="text-xs font-display font-bold uppercase tracking-wider text-muted-foreground">
-                          Ilusi Populer
+                          Pola Konten Biasa
                         </div>
                         <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
                           {item.myth}
@@ -384,7 +385,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <div className="text-xs font-display font-bold uppercase tracking-wider text-primary">
-                          Komitmen TAM
+                          Cara TAM Menulis
                         </div>
                         <p className="text-sm font-medium text-foreground mt-1 leading-relaxed">
                           {item.reality}
@@ -400,7 +401,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6 PILAR LIPUTAN & BIDANG RISET */}
+      {/* 6 PILAR LIPUTAN */}
       <section className="py-20 md:py-32 border-b border-border">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-16">
@@ -409,13 +410,13 @@ export default function AboutPage() {
             <div className="text-center max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-display font-semibold text-primary">
                 <Layers className="h-3.5 w-3.5" />
-                <span>CAKUPAN RISET</span>
+                <span>FOKUS BAHASAN</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
-                Enam Pilar Analisis Mendalam
+                Enam Hal yang Menentukan Masa Depan Kita
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                Kami tidak menulis tentang segalanya. Kami fokus pada enam dimensi krusial yang menentukan masa depan dan kemandirian anak muda Indonesia.
+                Kami tidak menulis tentang sembarang hal yang lagi viral. Kami fokus pada enam pilar krusial yang menentukan kemandirian hidup anak muda Indonesia.
               </p>
             </div>
 
@@ -441,7 +442,7 @@ export default function AboutPage() {
                           <IconComponent className="h-6 w-6" />
                         </div>
                         <span className="text-xs font-mono font-medium text-muted-foreground group-hover:text-primary transition-colors">
-                          Lihat Kategori &rarr;
+                          Kategori &rarr;
                         </span>
                       </div>
                       <h3 className="text-xl font-display font-bold text-foreground group-hover:text-primary transition-colors">
@@ -453,7 +454,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between text-xs font-display font-semibold text-primary">
-                      <span>Eksplorasi Artikel</span>
+                      <span>Lihat Semua Artikel</span>
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
                   </Link>
@@ -465,7 +466,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PRINSIP AKUNTABILITAS EDITORIAL */}
+      {/* PRINSIP & KOMITMEN EDITORIAL */}
       <section id="prinsip-editorial" className="py-20 md:py-32 border-b border-border bg-muted/15">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-16">
@@ -474,13 +475,13 @@ export default function AboutPage() {
             <div className="text-center max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-display font-semibold text-primary">
                 <Shield className="h-3.5 w-3.5" />
-                <span>STANDAR AKUNTABILITAS</span>
+                <span>STANDAR & KOMITMEN</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
-                Janji Editorial Tertulis
+                Prinsip yang Kami Pegang Teguh
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                Empat fondasi etika dan metodologi yang mengikat setiap naskah yang terbit di TAMPARAN ANAK MUDA.
+                Empat fondasi yang menjadi pagar akuntabilitas di setiap artikel yang kami publikasikan.
               </p>
             </div>
 
@@ -530,7 +531,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* VERIFICATION & PRODUCTION PIPELINE */}
+      {/* DAPUR REDAKSI / ALUR VERIFIKASI */}
       <section className="py-20 md:py-32 border-b border-border">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-16">
@@ -538,13 +539,13 @@ export default function AboutPage() {
             <div className="text-center max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-display font-semibold text-primary">
                 <FileCheck className="h-3.5 w-3.5" />
-                <span>ALUR PRODUKSI</span>
+                <span>DAPUR REDAKSI</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
-                Bagaimana Satu Esai Lahir?
+                Bagaimana Satu Tulisan Dikerjakan?
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                Kami menerapkan siklus verifikasi 4 lapis sebelum sebuah artikel dinyatakan layak tayang ke hadapan pembaca.
+                Kami tidak asal salin-tempel opini. Setiap tulisan melewati proses verifikasi bertahap sebelum sampai ke layar kamu.
               </p>
             </div>
 
@@ -574,7 +575,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ROADMAP & VISI PENGEMBANGAN */}
+      {/* ROADMAP / LANGKAH KE DEPAN */}
       <section className="py-20 md:py-32 border-b border-border bg-card/30">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-16">
@@ -582,13 +583,13 @@ export default function AboutPage() {
             <div className="text-center max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-display font-semibold text-primary">
                 <Compass className="h-3.5 w-3.5" />
-                <span>PETA JALAN</span>
+                <span>LANGKAH KE DEPAN</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
-                Membangun Institusi Jangka Panjang
+                Apa yang Sedang Kami Bangun?
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                TAMPARAN ANAK MUDA bukan proyek temporer. Ini adalah pembangunan ekosistem pemikiran yang bertumbuh secara terukur.
+                TAM bukan sekadar website artikel. Kami ingin membangun ruang berpikir sehat dan navigasi nyata bagi generasi muda Indonesia.
               </p>
             </div>
 
@@ -670,11 +671,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <div className="mx-auto max-w-3xl space-y-8">
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight leading-tight">
-              Siap Menyadari Realitas <br className="hidden sm:inline" />
-              dan Mengambil Kendali?
+              Sudah Cukup Diberi Janji Manis. <br className="hidden sm:inline" />
+              Saatnya Ambil Kendali.
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Jelajahi ratusan artikel, esai investigasi, dan analisis kritis yang dirancang untuk memperluas cakrawala berpikirmu.
+              Buka matamu, pelajari sistemnya, dan temukan tulisan-tulisan yang membantu kamu mengambil keputusan hidup dengan lebih tepat.
             </p>
             
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -682,14 +683,14 @@ export default function AboutPage() {
                 href="/artikel"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-display font-bold text-primary-foreground shadow-xl hover:bg-primary/90 transition-all hover:scale-105"
               >
-                <span>Mulai Membaca Sekarang</span>
+                <span>Mulai Baca Sekarang</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/newsletter"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-4 text-sm font-display font-bold text-foreground hover:bg-muted transition-all"
               >
-                <span>Berlangganan Newsletter Mingguan</span>
+                <span>Langganan Newsletter Mingguan</span>
               </Link>
             </div>
           </div>
