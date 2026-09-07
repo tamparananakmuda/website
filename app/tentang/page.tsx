@@ -16,6 +16,7 @@ import {
   Scale,
   Flame,
   Layers,
+  Sparkles,
 } from 'lucide-react';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
@@ -237,68 +238,68 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden border-b border-border pt-20 pb-16 md:pt-32 md:pb-24">
-        {/* Subtle Ambient Vignette & Gradient */}
-        <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[500px] w-[800px] bg-gradient-to-b from-primary/15 via-primary/5 to-transparent blur-[140px] opacity-70" />
+        {/* Subtle Ambient Vignette & Crimson Glow */}
+        <div className="pointer-events-none absolute -top-28 left-1/2 -translate-x-1/2 h-[550px] w-[900px] bg-[radial-gradient(ellipse_at_center,rgba(165,30,45,0.22)_0%,rgba(92,33,24,0.12)_40%,transparent_70%)] blur-[100px]" />
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="mx-auto max-w-4xl text-center space-y-6 md:space-y-8">
             
-            {/* Tag Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-3.5 py-1 text-xs font-mono font-medium tracking-wider text-muted-foreground">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              <span>CATATAN REDAKSI &bull; TENTANG KAMI</span>
+            {/* Manifesto Badge */}
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-display font-medium tracking-wide text-primary shadow-sm backdrop-blur-md">
+                <Sparkles className="h-3.5 w-3.5 text-primary" />
+                <span>MANIFESTO EDITORIAL • TAMPARAN ANAK MUDA</span>
+              </div>
             </div>
 
-            {/* Headline with Clean, Stable Hierarchy */}
-            <h1 className="mx-auto max-w-3xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.14]">
-              <span className="block text-foreground">Berhenti Diberi Janji Manis.</span>
-              <span className="block text-primary mt-2">Saatnya Menatap Kenyataan.</span>
+            {/* Headline */}
+            <h1 className="mx-auto max-w-4xl font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.08]">
+              <span className="block text-foreground">Dunia Tidak Butuh</span>
+              <span className="block bg-gradient-to-r from-primary via-primary/95 to-red-400 bg-clip-text text-transparent mt-1 sm:mt-2">
+                Satu Lagi Motivasi Instan.
+              </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground font-sans leading-relaxed">
-              Kami muak dengan motivasi dangkal yang menyuruhmu kerja 18 jam sehari tanpa pernah membahas kenapa gaji fresh graduate stagnan, harga rumah makin tak terjangkau, dan sistem kerja bikin cepat remuk. TAM hadir untuk membedah fakta yang sebenarnya terjadi.
+            <p className="mx-auto max-w-2xl text-sm sm:text-base md:text-lg text-muted-foreground font-sans leading-relaxed">
+              Setiap hari generasi muda dibombardir ilusi kesuksesan 60 detik yang lenyap begitu layar dimatikan. Kami hadir menyajikan analisis tajam, jujur, dan berakar pada realitas sosial-ekonomi yang sesungguhnya.
             </p>
 
+            {/* 4 Feature Metric Cards */}
+            <div className="pt-2 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-2xl sm:max-w-3xl mx-auto">
+              <div className="rounded-2xl border border-border/70 bg-card/60 p-4 sm:p-5 backdrop-blur-md text-center shadow-sm">
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">6 Pilar</div>
+                <div className="text-xs text-muted-foreground mt-1">Liputan Multidisiplin</div>
+              </div>
+              <div className="rounded-2xl border border-border/70 bg-card/60 p-4 sm:p-5 backdrop-blur-md text-center shadow-sm">
+                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">100%</div>
+                <div className="text-xs text-muted-foreground mt-1">Rujukan Terbuka</div>
+              </div>
+              <div className="rounded-2xl border border-border/70 bg-card/60 p-4 sm:p-5 backdrop-blur-md text-center shadow-sm">
+                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">0%</div>
+                <div className="text-xs text-muted-foreground mt-1">Clickbait Algoritma</div>
+              </div>
+              <div className="rounded-2xl border border-border/70 bg-card/60 p-4 sm:p-5 backdrop-blur-md text-center shadow-sm">
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">Bebas</div>
+                <div className="text-xs text-muted-foreground mt-1">Akses Paywall</div>
+              </div>
+            </div>
+
             {/* Direct Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-1">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/artikel"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-display font-semibold text-primary-foreground shadow-md hover:bg-primary/90 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-display font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 transition-all hover:scale-[1.02]"
               >
-                <span>Mulai Baca Tulisan</span>
+                <span>Jelajahi Arsip Tulisan</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="#filosofi"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3.5 text-sm font-display font-semibold text-foreground hover:bg-secondary transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border/80 bg-card/80 px-6 py-3.5 text-sm font-display font-semibold text-foreground hover:bg-muted/80 transition-all"
               >
-                <span>Kenapa Kami Ada</span>
+                <span>Baca Filosofi Kami</span>
               </Link>
-            </div>
-
-            {/* Unified Metrics Ribbon (Editorial Divider Bar) */}
-            <div className="pt-8">
-              <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card/50 backdrop-blur-md overflow-hidden shadow-sm">
-                <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 divide-x-0 sm:divide-x divide-border">
-                  <div className="p-4 sm:p-5 text-center">
-                    <div className="font-display text-2xl sm:text-3xl font-extrabold text-foreground">6 Pilar</div>
-                    <div className="text-xs text-muted-foreground mt-1">Fokus Analisis Kritis</div>
-                  </div>
-                  <div className="p-4 sm:p-5 text-center">
-                    <div className="font-display text-2xl sm:text-3xl font-extrabold text-primary">100% Data</div>
-                    <div className="text-xs text-muted-foreground mt-1">Rujukan Terverifikasi</div>
-                  </div>
-                  <div className="p-4 sm:p-5 text-center">
-                    <div className="font-display text-2xl sm:text-3xl font-extrabold text-foreground">Terbuka</div>
-                    <div className="text-xs text-muted-foreground mt-1">Bebas Akses Tanpa Paywall</div>
-                  </div>
-                  <div className="p-4 sm:p-5 text-center">
-                    <div className="font-display text-2xl sm:text-3xl font-extrabold text-primary">Independen</div>
-                    <div className="text-xs text-muted-foreground mt-1">Bebas Basa-Basi Manis</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
           </div>
