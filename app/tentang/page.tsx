@@ -17,7 +17,9 @@ import {
   Flame,
   Layers,
   Sparkles,
+  Quote,
 } from 'lucide-react';
+import { GlassHighlightsSection } from '@/components/sections/glass-highlights';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
@@ -367,7 +369,7 @@ export default function AboutPage() {
                 {dialectics.map((item, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/40 transition-colors shadow-sm"
+                    className="rounded-2xl border border-border/80 bg-card/70 backdrop-blur-md p-6 flex flex-col justify-between hover:border-primary/40 hover:bg-card/90 transition-all shadow-sm"
                   >
                     <div className="space-y-3 pb-4">
                       <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground/80">
@@ -505,7 +507,7 @@ export default function AboutPage() {
               {editorialPrinciples.map((item) => (
                 <div
                   key={item.num}
-                  className="group rounded-2xl border border-border bg-card p-7 space-y-4 hover:border-primary/50 transition-all shadow-sm flex flex-col justify-between"
+                  className="group rounded-2xl border border-border/80 bg-card/70 backdrop-blur-md p-7 space-y-4 hover:border-primary/50 hover:bg-card/90 transition-all shadow-sm flex flex-col justify-between"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
@@ -546,14 +548,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 04. DAPUR REDAKSI / ALUR VERIFIKASI */}
+      {/* 04. SUARA PEMBACA / GLASS HIGHLIGHTS */}
+      <section className="py-20 md:py-28 border-b border-border relative overflow-hidden bg-card/20">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="mx-auto max-w-5xl space-y-12">
+            
+            {/* TAM Index Marker */}
+            <div className="flex items-center gap-4">
+              <span className="font-display text-sm font-medium text-primary">04</span>
+              <div className="h-px flex-1 bg-border" />
+              <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
+                Suara Pembaca & Resonansi
+              </span>
+            </div>
+
+            {/* Header */}
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-primary uppercase tracking-wider">
+                <Quote className="h-3.5 w-3.5" />
+                <span>MEREKA YANG BERANI DITATAR REALITAS</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-display font-bold tracking-tight text-foreground">
+                Kritik, Refleksi, & Dampak Nyata
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Tulisan TAM bukan untuk memanjakan telinga, melainkan memicu percakapan jujur di antara anak muda yang sedang berjuang membangun masa depan.
+              </p>
+            </div>
+
+            {/* Glassmorphism Review Showcase */}
+            <GlassHighlightsSection />
+
+          </div>
+        </div>
+      </section>
+
+      {/* 05. DAPUR REDAKSI / ALUR VERIFIKASI */}
       <section className="py-20 md:py-28 border-b border-border">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-14">
             
             {/* TAM Index Marker */}
             <div className="flex items-center gap-4">
-              <span className="font-display text-sm font-medium text-primary">04</span>
+              <span className="font-display text-sm font-medium text-primary">05</span>
               <div className="h-px flex-1 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Alur Kerja Redaksi
@@ -600,14 +637,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 05. ROADMAP / LANGKAH KE DEPAN */}
+      {/* 06. ROADMAP / LANGKAH KE DEPAN */}
       <section className="py-20 md:py-28 border-b border-border bg-card/30">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-5xl space-y-14">
             
             {/* TAM Index Marker */}
             <div className="flex items-center gap-4">
-              <span className="font-display text-sm font-medium text-primary">05</span>
+              <span className="font-display text-sm font-medium text-primary">06</span>
               <div className="h-px flex-1 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Rencana & Roadmap
@@ -664,14 +701,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 06. FREQUENTLY ASKED QUESTIONS */}
+      {/* 07. FREQUENTLY ASKED QUESTIONS */}
       <section className="py-20 md:py-28 border-b border-border">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-4xl space-y-12">
             
             {/* TAM Index Marker */}
             <div className="flex items-center gap-4">
-              <span className="font-display text-sm font-medium text-primary">06</span>
+              <span className="font-display text-sm font-medium text-primary">07</span>
               <div className="h-px flex-1 bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
                 Tanya Jawab
