@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'Story - Kegiatan Lapangan TAM',
+  title: {
+    absolute: 'Story — Kegiatan Lapangan',
+  },
   description:
     'Kegiatan lapangan TAMPARAN ANAK MUDA. Kunjungan ke panti jompo, panti asuhan, dan komunitas. Bukan teori, tapi aksi nyata.',
   alternates: {
@@ -15,12 +17,12 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/story`,
-    title: 'Story - Tamparan Anak Muda',
+    title: 'Story — Kegiatan Lapangan',
     description: 'Kegiatan lapangan TAM. Bukan teori, tapi aksi nyata.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Story - Tamparan Anak Muda',
+    title: 'Story — Kegiatan Lapangan',
     description: 'Kegiatan lapangan TAM. Bukan teori, tapi aksi nyata.',
   },
 };

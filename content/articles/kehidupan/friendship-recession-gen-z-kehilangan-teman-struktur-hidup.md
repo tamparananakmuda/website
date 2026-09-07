@@ -29,19 +29,19 @@ seoKeywords:
   - "kenapa gen z kesepian"
   - "dampak media sosial pertemanan"
 sourceReferences:
-  - {"type":"link","url":"https://www.americansurveycenter.org/","label":"Survey Center on American Life, 2024"}
-  - {"type":"link","url":"https://www.pewresearch.org/","label":"Pew Research Center, 2025"}
+  - {"type":"link","url":"https://www.americansurveycenter.org/research/disconnected-places-and-spaces/","label":"Survey Center on American Life, 2024"}
+  - {"type":"link","url":"https://www.pewresearch.org/social-trends/2025/01/16/men-women-and-social-connections/","label":"Pew Research Center, 2025"}
   - {"type":"link","url":"https://www.bls.gov/tus/","label":"American Time Use Survey (BLS)"}
-  - {"type":"link","url":"https://www.happiness.hks.harvard.edu/february-2025-issue","label":"Harvard Happiness Lab, 2025"}
-  - {"type":"link","url":"https://theharrispoll.com/","label":"The Harris Poll, July 2026"}
+  - {"type":"link","url":"https://happiness.hks.harvard.edu/february-2025-issue","label":"Harvard Happiness Lab, 2025"}
+  - {"type":"link","url":"https://theharrispoll.com/wp-content/uploads/2026/07/The-Gen-Z-Weekend-Report-July-2026.pdf","label":"The Harris Poll, July 2026"}
   - {"type":"link","url":"https://www.who.int/teams/noncommunicable-diseases/mental-health/data-and-research/school-based-student-health-survey","label":"WHO GSHS 2023"}
-  - {"type":"link","url":"https://www.kompas.id/","label":"Litbang Kompas, 2025"}
-  - {"type":"link","url":"https://www.bps.go.id/","label":"BPS Sakernas 2025"}
-  - {"type":"link","url":"https://www.gwi.com/","label":"GWI, 2024"}
-  - {"type":"link","url":"https://brin.go.id/","label":"BRIN, 2025"}
-  - {"type":"link","url":"https://psikologi.ugm.ac.id/","label":"UGM Jurnal Peuradeun, 2026"}
-  - {"type":"link","url":"https://siagaindonesia.id/","label":"Ubaya, 2026"}
-  - {"type":"link","url":"https://databoks.katadata.co.id/","label":"Jakpat, 2026"}
+  - {"type":"link","url":"https://www.kompas.id/artikel/warga-yogyakarta-dan-jakarta-paling-rentan-kesepian","label":"Litbang Kompas, 2025"}
+  - {"type":"link","url":"https://www.bps.go.id/id/publication/2025/06/11/8452fd3b9a9d4110ae7a535d/keadaan-pekerja-di-indonesia-februari-2025.html","label":"BPS Sakernas 2025"}
+  - {"type":"link","url":"https://www.gwi.com/blog/gen-z-loneliness","label":"GWI, 2024"}
+  - {"type":"link","url":"https://brin.go.id/ork/posts/kabar/brin-bahas-kondisi-kesehatan-jiwa-remaja-indonesia-dari-aspek-psikososial","label":"BRIN, 2025"}
+  - {"type":"link","url":"https://psikologi.ugm.ac.id/kolaborasi-penelitian-ungkap-faktor-kesepian-generasi-z-indonesia-di-era-digital/","label":"UGM Jurnal Peuradeun, 2026"}
+  - {"type":"link","url":"https://siagaindonesia.id/nongkrong-di-kafe-berujung-utang-pakar-ubaya-ingatkan-bahaya-gaya-hidup-wfc","label":"Ubaya, 2026"}
+  - {"type":"link","url":"https://databoks.katadata.co.id/en/demographics/statistics/699d0fa905160/the-majority-of-indonesian-gen-z-spend-their-free-time-on-social-media","label":"Jakpat, 2026"}
 featured: false
 readingTime: 12
 humanSignature: true

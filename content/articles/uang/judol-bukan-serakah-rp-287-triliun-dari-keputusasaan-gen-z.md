@@ -88,10 +88,10 @@ sourceReferences:
       Rizwan Maulana (2025): Risiko Finansial All In Judi Online Gen Z Sukabumi,
       Nusa Putra
   - type: link
-    url: 'https://ukinstitute.org/journals/jopp/article/view/1467'
+    url: 'https://garuda.kemdiktisaintek.go.id/journal/view/19232?issue=Vol.+8+No.+3+%282026%29'
     label: >-
       Scoping Review: Psychosocial Determinants of Online Gambling Addiction
-      Indonesia, JOPP 2025
+      Indonesia, JOPP 2026
   - type: link
     url: 'https://cibangsa.com/index.php/musytari/article/view/9527'
     label: 'Musytari: Pengalaman Psikologis Gen Z Terjebak Judi Online, 2025'

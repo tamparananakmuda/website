@@ -80,10 +80,10 @@ sourceReferences:
     url: 'https://apjii.or.id/'
     label: 'APJII 2023: 215,63 Juta Pengguna Internet Indonesia'
   - type: link
-    url: 'https://doi.org/10.3389/fpsyg.2021.720479'
+    url: 'https://journals.sagepub.com/doi/10.1177/0265407520970287'
     label: >-
-      Navarro et al. 2021: Ghosting Behavior and Dating Apps, Frontiers in
-      Psychology
+      Timmermans et al. 2021: Gone with the wind: Exploring mobile daters'
+      ghosting experiences, Journal of Social and Personal Relationships
 ---
 
 ## Hook

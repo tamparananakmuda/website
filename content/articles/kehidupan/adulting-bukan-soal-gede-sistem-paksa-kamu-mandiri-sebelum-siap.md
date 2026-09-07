@@ -72,17 +72,17 @@ sourceReferences:
     label: 'Databoks: Survei KIC, Mayoritas Kelas Menengah Tinggal di Rumah Orang Tua'
   - type: link
     url: >-
-      https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html
+      https://www.deloitte.com/global/en/about/press-room/deloitte-2025-gen-z-and-millennial-survey.html
     label: 'Deloitte Gen Z and Millennial Survey: Country Report Indonesia (2025)'
   - type: link
     url: >-
-      https://finansial.bisnis.com/read/20250827/215/1900045/lembaga-riset-19-3-juta-pekerja-ri-punya-pekerjaan-tambahan-ump-di-bawah-khl
+      https://www.kompas.id/artikel/riset-lpem-ui-pekerja-berupah-di-bawah-umk-tak-hanya-buruh-kasar-sarjana-hingga-kerah-putih-juga
     label: >-
-      Bisnis.com: LPEM FEB UI, 19,3 Juta Pekerja RI Punya Pekeran Tambahan (Agu
-      2024)
+      Kompas.id: Riset LPEM FEB UI, Pekerja Berupah di Bawah UMK Tak Hanya
+      Buruh Kasar, Sarjana Hingga Kerah Putih Juga (Des 2025)
   - type: link
     url: >-
-      https://goodstats.id/article/60-gen-z-masih-bergantung-pada-orang-tua-apakah-gen-z-bisa-mandiri-secara-finansial
+      https://goodstats.id/article/60-gen-z-masih-bergantung-pada-orang-tua-apakah-gen-z-bisa-mandiri-secara-finansial-c7DR0
     label: 'GoodStats: 60% Gen Z Masih Bergantung pada Orang Tua (2024)'
 ---
 

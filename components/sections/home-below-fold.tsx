@@ -3,9 +3,11 @@ import dynamic from 'next/dynamic';
 import { getAllCategories } from '@/lib/db/queries/categories';
 import { getNonSeriesPublishedPostsWithRelations, getLatestSeriesWithPosts } from '@/lib/db/queries/posts';
 import { getAllArticles } from '@/lib/articles/loader';
+import { series as seriesConfig, getSeriesBySlug } from '@/content/config';
+import type { PostWithRelations } from '@/lib/db/schema';
 import { Topics } from '@/components/sections/topics';
 import { LatestArticles } from '@/components/sections/latest-articles';
-import { LatestSeries } from '@/components/sections/latest-series';
+import { LatestSeries, type SeriesDisplayItem } from '@/components/sections/latest-series';
 import { WhyTam } from '@/components/sections/why-tam';
 import { Faq, faqItems } from '@/components/sections/faq';
 
@@ -14,8 +16,18 @@ const NewsletterCta = dynamic(() => import('@/components/sections/newsletter-cta
 });
 
 async function TopicsSection() {
-  const categories = await getAllCategories();
-  return <Topics categories={categories || []} />;
+  const [categories, allArticles] = await Promise.all([
+    getAllCategories(),
+    getAllArticles(),
+  ]);
+  const currentTime = new Date().toISOString();
+  const articleCounts: Record<string, number> = {};
+  for (const a of allArticles) {
+    if (a.status === 'published' && a.publishedAt <= currentTime && a.categorySlug) {
+      articleCounts[a.categorySlug] = (articleCounts[a.categorySlug] || 0) + 1;
+    }
+  }
+  return <Topics categories={categories || []} articleCounts={articleCounts} />;
 }
 
 async function LatestArticlesSection() {
@@ -24,49 +36,146 @@ async function LatestArticlesSection() {
 }
 
 async function LatestSeriesSection() {
-  const latestSeries = await getLatestSeriesWithPosts(1, 999);
   const allArticles = await getAllArticles();
-
+  const publishedSeriesList = await getLatestSeriesWithPosts(10, 999);
   const currentTime = new Date().toISOString();
-  const upcomingBySeries = new Map<string, { count: number; nextDate: string }>();
-  const upcomingPartsBySeries = new Map<string, Array<{ slug: string; title: string; excerpt: string; seriesOrder: number | null; publishedAt: string }>>();
+
+  // 1. Group scheduled upcoming articles by seriesSlug
+  const upcomingPartsBySeries = new Map<
+    string,
+    Array<{
+      slug: string;
+      title: string;
+      excerpt: string;
+      seriesOrder: number;
+      publishedAt: string;
+    }>
+  >();
 
   for (const a of allArticles) {
     if (a.seriesSlug && a.status === 'scheduled' && a.publishedAt > currentTime) {
-      const existing = upcomingBySeries.get(a.seriesSlug);
-      if (!existing || a.publishedAt < existing.nextDate) {
-        upcomingBySeries.set(a.seriesSlug, {
-          count: (existing?.count ?? 0) + 1,
-          nextDate: a.publishedAt,
-        });
-      } else {
-        upcomingBySeries.set(a.seriesSlug, {
-          count: existing.count + 1,
-          nextDate: existing.nextDate,
-        });
-      }
       const parts = upcomingPartsBySeries.get(a.seriesSlug) ?? [];
       parts.push({
         slug: a.slug,
         title: a.title,
         excerpt: a.excerpt,
-        seriesOrder: a.seriesOrder,
+        seriesOrder: a.seriesOrder ?? (parts.length + 1),
         publishedAt: a.publishedAt,
       });
       upcomingPartsBySeries.set(a.seriesSlug, parts);
     }
   }
 
-  const seriesWithUpcoming = (latestSeries || []).map((s) => ({
-    ...s,
-    upcomingCount: upcomingBySeries.get(s.seriesSlug)?.count ?? 0,
-    nextDate: upcomingBySeries.get(s.seriesSlug)?.nextDate ?? null,
-    upcomingParts: (upcomingPartsBySeries.get(s.seriesSlug) ?? []).sort(
-      (a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()
-    ),
-  }));
+  // Sort upcoming parts by seriesOrder ascending, then publishedAt
+  Array.from(upcomingPartsBySeries.values()).forEach((parts) => {
+    parts.sort((a, b) => {
+      if (a.seriesOrder !== b.seriesOrder) return a.seriesOrder - b.seriesOrder;
+      return new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+    });
+  });
 
-  return <LatestSeries series={seriesWithUpcoming} />;
+  // 2. Build items for published series
+  const publishedItems: SeriesDisplayItem[] = (publishedSeriesList || []).map((s) => {
+    const upcoming = upcomingPartsBySeries.get(s.seriesSlug) ?? [];
+    const cfg = getSeriesBySlug(s.seriesSlug);
+    const hasPublished = s.posts.length > 0;
+    const hasUpcoming = upcoming.length > 0;
+    const state: 'in-progress' | 'upcoming' | 'completed' =
+      hasPublished && hasUpcoming ? 'in-progress' : 'completed';
+
+    const totalParts = Math.max(
+      s.totalParts + upcoming.length,
+      cfg?.expectedParts ?? 0,
+      s.posts.length + upcoming.length
+    );
+
+    return {
+      seriesSlug: s.seriesSlug,
+      seriesTitle: cfg?.title || s.seriesTitle,
+      description: cfg?.description ?? null,
+      teaser: cfg?.teaser ?? null,
+      state,
+      totalParts,
+      publishedCount: s.posts.length,
+      upcomingCount: upcoming.length,
+      startDate: s.posts[0]?.publishedAt ?? null,
+      nextReleaseDate: upcoming[0]?.publishedAt ?? null,
+      posts: s.posts,
+      upcomingParts: upcoming,
+    };
+  });
+
+  // Sort published items: in-progress first, then newest published
+  publishedItems.sort((a, b) => {
+    if (a.state === 'in-progress' && b.state !== 'in-progress') return -1;
+    if (b.state === 'in-progress' && a.state !== 'in-progress') return 1;
+    const dateA = a.startDate ? new Date(a.startDate).getTime() : 0;
+    const dateB = b.startDate ? new Date(b.startDate).getTime() : 0;
+    return dateB - dateA;
+  });
+
+  // 3. Find candidate upcoming series from config
+  const publishedSlugs = new Set(publishedItems.map((item) => item.seriesSlug));
+  const upcomingCandidates: SeriesDisplayItem[] = seriesConfig
+    .filter((cfg) => !publishedSlugs.has(cfg.slug))
+    .map((cfg) => {
+      const parts = upcomingPartsBySeries.get(cfg.slug) ?? [];
+      const startDate =
+        parts[0]?.publishedAt ||
+        (cfg.expectedDate ? new Date(cfg.expectedDate).toISOString() : null);
+      const totalParts = Math.max(parts.length, cfg.expectedParts ?? 0);
+
+      return {
+        seriesSlug: cfg.slug,
+        seriesTitle: cfg.title,
+        description: cfg.description ?? null,
+        teaser: cfg.teaser ?? null,
+        state: 'upcoming' as const,
+        totalParts,
+        publishedCount: 0,
+        upcomingCount: totalParts,
+        startDate,
+        nextReleaseDate: startDate,
+        posts: [] as PostWithRelations[],
+        upcomingParts: parts,
+      };
+    })
+    .filter((item) => {
+      // Must have future start date
+      if (!item.startDate) return false;
+      return item.startDate >= currentTime;
+    })
+    .sort((a, b) => {
+      const timeA = a.startDate ? new Date(a.startDate).getTime() : Infinity;
+      const timeB = b.startDate ? new Date(b.startDate).getTime() : Infinity;
+      return timeA - timeB;
+    });
+
+  // 4. Assemble final series list
+  // Priority:
+  // - If any series is 'in-progress', it goes first as the primary spotlight.
+  // - Otherwise, the next 'upcoming' series goes first as the primary spotlight!
+  // - Followed by the latest completed series so readers can still discover it.
+  const inProgressSeries = publishedItems.find((s) => s.state === 'in-progress');
+  const nextUpcomingSeries = upcomingCandidates[0];
+  const completedSeries = publishedItems.filter((s) => s.state === 'completed');
+
+  const combinedSeries: SeriesDisplayItem[] = [];
+
+  if (inProgressSeries) {
+    combinedSeries.push(inProgressSeries);
+    if (nextUpcomingSeries) combinedSeries.push(nextUpcomingSeries);
+    if (completedSeries[0]) combinedSeries.push(completedSeries[0]);
+  } else {
+    if (nextUpcomingSeries) combinedSeries.push(nextUpcomingSeries);
+    if (completedSeries[0]) combinedSeries.push(completedSeries[0]);
+    if (completedSeries[1]) combinedSeries.push(completedSeries[1]);
+  }
+
+  // Default active slug is the first item in combinedSeries
+  const defaultSlug = combinedSeries[0]?.seriesSlug;
+
+  return <LatestSeries series={combinedSeries} defaultActiveSlug={defaultSlug} />;
 }
 
 function SectionSkeleton() {

@@ -70,9 +70,9 @@ sourceReferences:
       https://www.idntimes.com/life/inspiration/kelas-menengah-indonesia-semakin-menyusut-00-98756-mq25yx
     source: IDN Times
     tier: 2
-  - title: Peta Profil Pekerja Digital Transportasi di Indonesia
-    url: 'https://nextpolicy.org/id/riset/peta-profil-pekerja-digital-transportasi'
-    source: Next Policy
+  - title: Economic Lives of Digital Platform Gig Workers in Indonesia
+    url: 'https://www.idinsight.org/publication/economic-lives-of-digital-platform-gig-workers-indonesia/'
+    source: IDinsight
     tier: 1
 featured: false
 readingTime: 7
@@ -113,7 +113,7 @@ Ronny P Sasmita, Analis Senior Indonesia Strategic and Economic Action Instituti
 
 Survei yang dikutip berbagai lembaga riset ketenagakerjaan menunjukkan mayoritas Gen Z yang masuk gig economy bukan karena menolak kerja formal. Sebaliknya, kerja formal yang menolak mereka lebih dulu. Lowongan yang mensyaratkan pengalaman untuk posisi pemula, proses rekrutmen yang panjang dan tidak transparan, serta gelombang PHK di sektor industri. Semuanya menutup pintu sebelum sempat diketuk.
 
-Data Next Policy mencatat pekerja digital transportasi mencapai sekitar 2,41 juta orang pada 2024. Data Next Policy menunjukkan dari angka tersebut, lebih dari 75% berpenghasilan di bawah Rp3 juta per bulan. Tingkat pendapatan itu sangat sulit untuk menopang tabungan, KPR, pensiun, maupun investasi pendidikan. Syafruddin Karimi, Pengamat Ekonomi Universitas Andalas, menyoroti risiko makro: "Jika angkatan kerja muda terlalu banyak terserap dalam pekerjaan informal berpendapatan rendah, ekonomi kehilangan jalur pembentukan kelas menengah."
+Data IDinsight mencatat pekerja digital transportasi mencapai sekitar 2,41 juta orang pada 2024. Data IDinsight menunjukkan dari angka tersebut, lebih dari 75% berpenghasilan di bawah Rp3 juta per bulan. Tingkat pendapatan itu sangat sulit untuk menopang tabungan, KPR, pensiun, maupun investasi pendidikan. Syafruddin Karimi, Pengamat Ekonomi Universitas Andalas, menyoroti risiko makro: "Jika angkatan kerja muda terlalu banyak terserap dalam pekerjaan informal berpendapatan rendah, ekonomi kehilangan jalur pembentukan kelas menengah."
 
 ```chart:bar
 {"title":"Pekerja Formal vs Informal Indonesia","subtitle":"59,42% pekerja di sektor informal per Feb 2026","source":"BPS Sakernas, Februari 2026","data":[{"label":"Formal","value":40.58,"color":"#3b82f6"},{"label":"Informal","value":59.42,"color":"#ef4444"}],"yLabel":"Persentase (%)"}
@@ -167,7 +167,7 @@ Bukan pilihan bebas. Sektor formal tidak menyerap angkatan kerja baru secara mem
 
 ### Apakah ekonomi komunitas aman?
 
-Rentan eksploitasi platform. Data Next Policy 2024 mencatat 75% pekerja digital transportasi berpenghasilan di bawah Rp3 juta per bulan. Tidak ada jaminan sosial formal. Ronny Sasmita memperingatkan risiko "low productivity trap" dan "generasi pekerja yang besar secara jumlah, tetapi rapuh secara ekonomi".
+Rentan eksploitasi platform. Data IDinsight 2025 mencatat 75% pekerja digital transportasi berpenghasilan di bawah Rp3 juta per bulan. Tidak ada jaminan sosial formal. Ronny Sasmita memperingatkan risiko "low productivity trap" dan "generasi pekerja yang besar secara jumlah, tetapi rapuh secara ekonomi".
 
 ### Bagaimana Gen Z bertahan secara finansial?
 

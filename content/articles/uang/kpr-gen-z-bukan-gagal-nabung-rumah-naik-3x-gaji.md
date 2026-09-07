@@ -26,7 +26,7 @@ sourceReferences:
   - {"type":"link","url":"https://www.kompas.id/artikel/mengapa-akses-kredit-perumahan-belum-menarik-bagi-gen-z","label":"Kompas.id: Mengapa Akses Kredit Perumahan Belum Menarik bagi Gen Z (2025)"}
   - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/mimpi-rumah-gen-z-2026-dihantui-bunga-floating","label":"TrenAsia: Mimpi Rumah Gen Z 2026 Dihantui Bunga Floating"}
   - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/problem-mendasar-yang-bikin-harga-properti-ri-kelewat-mahal","label":"TrenAsia: Problem Mendasar yang Bikin Harga Properti RI Kelewat Mahal (BestBrokers/Numbeo 2024)"}
-  - {"type":"link","url":"https://desanaob.id/perencanaan-keuangan-beli-rumah-2026/","label":"DesanaOb: Panduan Keuangan Beli Rumah Pertama 2026"}
+  - {"type":"link","url":"https://www.bi.go.id/id/publikasi/laporan/Pages/Laporan-Survei-Harga-Properti-Residensial.aspx","label":"Bank Indonesia: Survei Harga Properti Residensial"}
   - {"type":"link","url":"https://personalfinance.kontan.co.id/news/simulasi-kpr-2026-gaji-rp6-juta-berapa-batas-maksimal-cicilan-rumah-1","label":"Kontan: Simulasi KPR 2026 Gaji Rp6 Juta"}
   - {"type":"link","url":"https://goodstats.id/article/indeks-harga-properti-perumahan-naik-pada-2024-MeYVf","label":"GoodStats: Indeks Harga Properti Perumahan Naik pada 2024"}
   - {"type":"link","url":"https://incaresidence.co.id/harga-properti-naik/","label":"INCA Residence: Harga Properti Naik, Penyebab dan Data 2024-2025"}
@@ -64,7 +64,7 @@ Laporan BestBrokers.com September 2024 membandingkan harga rumah di 62 negara me
 Data Bank Indonesia dan OJK per 2026 menunjukkan harga rumah tapak tipe 36 di pinggiran Jabodetabek sudah menyentuh Rp400 sampai 600 juta. UMR Jakarta 2026 berada di kisaran Rp5.3 juta per bulan. Dengan aturan cicilan KPR maksimal 30 persen gaji, yaitu Rp1.59 juta per bulan, estimasi harga rumah yang bisa dijangkau adalah Rp150 sampai 180 juta. Rumah seharga itu di Jabodetabek? Tidak ada, kecuali rumah subsidi di lokasi sangat terpencil.
 
 ```chart:bar
-{"title":"Harga Rumah vs Gaji Bulanan Gen Z Jabodetabek 2026","subtitle":"Gap 167x gaji bulanan","source":"BPS, BI, DesanaOb 2026","data":[{"label":"Gaji/bln (UMR Jakarta)","value":5.3,"color":"#22c55e"},{"label":"Rumah tipe 36 (min)","value":400,"color":"#f4a825"},{"label":"Rumah tipe 36 (max)","value":600,"color":"#ef4444"}],"yLabel":"Rp juta"}
+{"title":"Harga Rumah vs Gaji Bulanan Gen Z Jabodetabek 2026","subtitle":"Gap 167x gaji bulanan","source":"BPS, BI 2026","data":[{"label":"Gaji/bln (UMR Jakarta)","value":5.3,"color":"#22c55e"},{"label":"Rumah tipe 36 (min)","value":400,"color":"#f4a825"},{"label":"Rumah tipe 36 (max)","value":600,"color":"#ef4444"}],"yLabel":"Rp juta"}
 ```
 
 ## Bunga KPR Bisa Lipat Dua Harga Asli

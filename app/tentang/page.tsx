@@ -24,7 +24,9 @@ import { GlassHighlightsSection } from '@/components/sections/glass-highlights';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
 
 export const metadata: Metadata = {
-  title: 'Tentang Kami — TAMPARAN ANAK MUDA',
+  title: {
+    absolute: 'Tentang Kami',
+  },
   description:
     'Alasan kenapa TAMPARAN ANAK MUDA ada. Kami menulis tentang uang, karier, bisnis, teknologi, kehidupan, dan mindset dengan jujur, berbasis data, dan tanpa motivasi instan.',
   keywords: [
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: `${siteUrl}/tentang`,
     siteName: 'TAMPARAN ANAK MUDA',
-    title: 'Tentang Kami — TAMPARAN ANAK MUDA',
+    title: 'Tentang Kami',
     description:
       'Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan tanpa motivasi manis. Berakar pada fakta dan realitas sosial-ekonomi yang sesungguhnya.',
     images: [
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tentang Kami — TAMPARAN ANAK MUDA',
+    title: 'Tentang Kami',
     description:
       'Kami menulis tentang uang, karier, bisnis, teknologi, dan kehidupan tanpa motivasi manis. Berakar pada fakta dan realitas sosial-ekonomi yang sesungguhnya.',
     images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],

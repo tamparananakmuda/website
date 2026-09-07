@@ -132,7 +132,9 @@ export async function generateMetadata({
   const url = `${siteUrl}/story/${activity.slug}`;
 
   return {
-    title: `${activity.title} - TAM Story`,
+    title: {
+      absolute: activity.title,
+    },
     description: activity.excerpt,
     robots: { index: true, follow: true },
     alternates: { canonical: url },
@@ -140,12 +142,12 @@ export async function generateMetadata({
       type: 'article',
       locale: 'id_ID',
       url,
-      title: `${activity.title} - TAM Story`,
+      title: activity.title,
       description: activity.excerpt,
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${activity.title} - TAM Story`,
+      title: activity.title,
       description: activity.excerpt,
     },
   };

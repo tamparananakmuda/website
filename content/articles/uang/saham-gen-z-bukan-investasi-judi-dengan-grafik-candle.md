@@ -55,10 +55,10 @@ sourceReferences:
       Pikiran Rakyat/BEI: ritel 52% transaksi harian, 620 ribu investor aktif
       harian (3x lipat dari 2024), 40% pemula pakai copy trading
   - url: >-
-      https://www.heygotrade.com/id/blog/investasi-untuk-gen-z-indonesia-mindset-platform-dan-jebakan-yang-harus-dihindari/
+      https://www.antaranews.com/berita/5408074/menghindari-jebakan-pump-and-dump-di-tengah-ledakan-investor-muda
     label: >-
-      Heygotrade: 70% akun investor baru di bawah 30 tahun, SID 13 juta akhir
-      2025, jebakan saham gorengan dan pump & dump
+      Antara News: Menghindari Jebakan Pump and Dump di Tengah Ledakan Investor
+      Muda (Feb 2026)
   - url: >-
       https://money.kompas.com/read/2026/04/16/134118726/jumlah-investor-ritel-ri-melejit-ini-kesalahan-investasi-tiap-generasi
     label: >-

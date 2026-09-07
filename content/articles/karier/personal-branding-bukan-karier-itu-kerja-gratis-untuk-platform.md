@@ -52,8 +52,8 @@ sourceReferences:
       Socialinsider LinkedIn Organic Benchmarks 2026: Analisis 1,3 juta
       postingan
   - type: link
-    url: 'https://magicpost.in/id/blog/cara-meningkatkan-tayangan-di-linkedin'
-    label: 'Richard van der Blom Report: LinkedIn Algorithm Insights 2025'
+    url: 'https://www.linkedin.com/posts/richardvanderblom_rvdbcarousel-algorithm-insights-report-2026-activity-7455148601749729280-AwsY'
+    label: 'Richard van der Blom: LinkedIn Algorithm Insights Report 2026 (1,3 juta postingan)'
   - type: link
     url: 'https://www.linkedin.com/'
     label: 'LinkedIn Official: 1 Miliar Pengguna Global (2024)'
@@ -67,9 +67,8 @@ sourceReferences:
     url: 'https://blog.buzzerpanel.id/strategi-posting-linkedin-personal-brand-2026/'
     label: 'Buzzerpanel: Strategi Posting LinkedIn Personal Brand 2026'
   - type: link
-    url: >-
-      https://genvoice.id/01-05-2026/cara-bangun-personal-branding-di-linkedin-tanpa-terlihat-seperti-sedang-pamer
-    label: 'GenVoice: Cara Bangun Personal Branding di LinkedIn (Mei 2026)'
+    url: 'https://www.socialinsider.io/blog/linkedin-statistics/'
+    label: 'Socialinsider: LinkedIn Statistics and Trends 2026'
 ---
 
 ## Hook

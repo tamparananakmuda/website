@@ -24,7 +24,7 @@ seoKeywords:
 sourceReferences:
   - {"type":"link","url":"https://www.bps.go.id/id/pressrelease/indikator-tenaga-kerja-indonesia-februari-2025","label":"BPS: Indikator Tenaga Kerja Indonesia Februari 2025"}
   - {"type":"link","url":"https://web-api.bps.go.id/download.php","label":"BPS: Rata-rata Gaji Neto Lulusan S1 (Sakernas 2024-2025)"}
-  - {"type":"link","url":"https://www.kompas.id/artikel/gaji-lulusan-sarjana-melonjak-tapi-tetap-di-bawah-upah-minimum","label":"Kompas.id: Gaji Lulusan Sarjana Melonjak tapi Tetap di Bawah Upah Minimum (2025)"}
+  - {"type":"link","url":"https://www.kompas.id/artikel/riset-lpem-ui-pekerja-berupah-di-bawah-umk-tak-hanya-buruh-kasar-sarjana-hingga-kerah-putih-juga","label":"Kompas.id: Gaji Lulusan Sarjana Melonjak tapi Tetap di Bawah Upah Minimum (2025)"}
   - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/gaji-awal-lulusan-s1-indonesia-turun-rp610-ribu-dalam-setahun","label":"TrenAsia: Gaji Awal Lulusan S1 Indonesia Turun Rp610 Ribu dalam Setahun (2025)"}
   - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/gaji-lulusan-diploma-dan-sarjana-indonesia-naik-tapi-tetap-di-bawah-upah-minimum","label":"TrenAsia: Gaji Lulusan Diploma dan Sarjana Naik tapi Tetap di Bawah Upah Minimum"}
   - {"type":"link","url":"https://www.trenasia.id/tren-ekbis/67-gen-z-tidak-negosiasi-gaji-studi-payscale-2024","label":"TrenAsia: 67% Gen Z Tidak Negosiasi Gaji, Studi Payscale 2024"}

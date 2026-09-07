@@ -51,12 +51,11 @@ sourceReferences:
     url: 'https://aaui.or.id/wp-content/uploads/2026/02/Book-ver-2025_WEB.pdf'
     label: 'AAUI: Indonesia General Insurance Industry Book 2025 (Feb 2026)'
   - type: link
-    url: 'https://desanaob.id/biaya-premi-asuransi-kesehatan-swasta-2026/'
-    label: 'DesanaOb: Biaya Premi Asuransi 2026 Tarif Kesehatan Swasta Terbaru'
+    url: 'https://kayonews.co.id/premi-asuransi-kesehatan-2026-berapa-biaya-per-bulan-ini-simulasinya/'
+    label: 'KayoNews: Premi Asuransi Kesehatan 2026 Berapa Biaya per Bulan?'
   - type: link
-    url: >-
-      https://wartaekonomi.co.id/read564827/sasar-gen-z-prudential-indonesia-dan-prudential-syariah-luncurkan-prusehat
-    label: 'Warta Ekonomi: Sasar Gen Z, Prudential Luncurkan PRUSehat (Apr 2025)'
+    url: 'https://mediaindonesia.com/ekonomi/764435/prudential-serius-sasar-pasar-milenial-dan-gen-z'
+    label: 'Media Indonesia: Prudential Serius Sasar Pasar Milenial dan Gen Z (Apr 2025)'
   - type: link
     url: >-
       https://www.greateasternlife.com/id/in/asuransi-individu/mengenal-asuransi/bagaimana-memulai-rencana/asuransi-kesehatan/asuransi-kesehatan-swasta.html
@@ -95,7 +94,7 @@ OJK mencatat inflasi medis Indonesia 10.1% sepanjang 2024, jauh di atas inflasi 
 Hitung total: premi Rp400.000 per bulan selama 20 tahun, dengan kenaikan 10% per tahun, total pembayaran kamu sekitar Rp300 juta. Itu lebih besar dari dana darurat 6x gaji untuk gaji Rp5 juta. Dan peluang kamu klaim di usia 25-45? Sangat tipis.
 
 ```chart:bar
-{"title":"Total Premi 20 Tahun vs Dana Darurat 6x Gaji","subtitle":"Premi naik 10% per tahun, gaji Rp5 juta","source":"DesanaOb & OJK, 2026","data":[{"label":"Total Premi 20 thn","value":300,"color":"#ef4444"},{"label":"Dana Darurat 6x gaji","value":30,"color":"#22c55e"}],"yLabel":"Rp juta"}
+{"title":"Total Premi 20 Tahun vs Dana Darurat 6x Gaji","subtitle":"Premi naik 10% per tahun, gaji Rp5 juta","source":"OJK & KayoNews, 2026","data":[{"label":"Total Premi 20 thn","value":300,"color":"#ef4444"},{"label":"Dana Darurat 6x gaji","value":30,"color":"#22c55e"}],"yLabel":"Rp juta"}
 ```
 
 ## Rasio Klaim 83.59%: Perusahaan Menang dari Yang Kamu Bayar

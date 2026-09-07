@@ -61,8 +61,8 @@ sourceReferences:
     label: 'IDN Research Institute: Gen Z Menunda Pernikahan 2026'
   - type: link
     url: >-
-      https://www.spokesman.com/stories/2026/jun/14/boomerang-kids-are-the-new-normal-here-are-the-fin/
-    label: 'Spokesman: Boomerang Kids Are the New Normal (Thrivent 2026)'
+      https://www.thrivent.com/insights/financial-planning/thrivent-boomerang-kids-survey
+    label: 'Thrivent: Boomerang Kids in 2026 Survey (44% of parents say child moved back home)'
 featured: false
 readingTime: 7
 humanSignature: true

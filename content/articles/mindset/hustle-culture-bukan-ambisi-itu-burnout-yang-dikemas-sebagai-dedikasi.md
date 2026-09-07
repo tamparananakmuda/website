@@ -51,13 +51,13 @@ sourceReferences:
       Journal (2015)
   - type: link
     url: >-
-      https://www.who.int/news/item/17-05-2021-who-ilo-long-working-hours-increasing-deaths-from-heart-disease-and-stroke
+      https://www.who.int/news/item/17-05-2021-long-working-hours-increasing-deaths-from-heart-disease-and-stroke-who-ilo
     label: >-
       WHO/ILO: Long Working Hours Increasing Deaths from Heart Disease and
       Stroke (2021)
   - type: link
     url: >-
-      https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html
+      https://www.deloitte.com/global/en/about/press-room/deloitte-2025-gen-z-and-millennial-survey.html
     label: Deloitte Global Gen Z Survey 2025
   - type: link
     url: 'https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx'

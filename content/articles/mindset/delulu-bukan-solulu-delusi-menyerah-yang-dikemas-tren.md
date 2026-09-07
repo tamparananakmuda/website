@@ -18,8 +18,8 @@ sourceReferences:
     url: "https://en.m.wikipedia.org/wiki/Delulu"
     label: "Wikipedia: Delulu"
   - type: "link"
-    url: "https://www.verywellmind.com/should-you-embrace-delulu-thinking-8628811"
-    label: "Verywell Mind: Should You Embrace Delulu Thinking?"
+    url: "https://www.psychologytoday.com/us/blog/up-and-running/202409/delulu-is-not-a-mental-illness"
+    label: "Psychology Today: 'Delulu' Is Not a Mental Illness"
   - type: "link"
     url: "https://www.theguardian.com/lifeandstyle/2023/nov/08/delulu-tiktok-trend-manifesting-self-belief"
     label: "The Guardian: Going delulu, being delusional is the new manifesting"
@@ -65,7 +65,7 @@ Pada Maret 2025, Perdana Menteri Australia Anthony Albanese memakai frasa "delul
 
 ### Pergeseran Makna: Dari Penyakit ke Strategi
 
-Dalam dunia medis, delusion adalah kondisi serius. Dr. Rachel Hoffman, chief clinical officer di Zeera, menjelaskan kepada Verywell Mind bahwa Diagnostic and Statistical Manual of Mental Disorders mendefinisikan delusi sebagai keyakinan palsu berdasarkan inferensi salah tentang realita eksternal, yang dipertahankan meskipun ada bukti yang menyangkal. Untuk diagnosis delusional disorder, seseorang harus memiliki pikiran delusional lebih dari sebulan.
+Dalam dunia medis, delusion adalah kondisi serius. Dr. Rachel Hoffman, chief clinical officer di Zeera, menjelaskan kepada Psychology Today bahwa Diagnostic and Statistical Manual of Mental Disorders mendefinisikan delusi sebagai keyakinan palsu berdasarkan inferensi salah tentang realita eksternal, yang dipertahankan meskipun ada bukti yang menyangkal. Untuk diagnosis delusional disorder, seseorang harus memiliki pikiran delusional lebih dari sebulan.
 
 Tapi di TikTok, delulu kehilangan makna klinisnya. Istilah ini dipakai untuk menggambarkan seseorang yang terlalu berharap, terlalu percaya diri, atau membayangkan sesuatu yang peluang terjadinya kecil. Penggunaan ini tidak dimaksudkan sebagai diagnosis, melainkan candaan atau gurauan. Yang mencolok, candaan ini perlahan menjadi sumber mental health advice. [TikTok bukan terapis](/artikel/tiktok-bukan-terapis-self-diagnosis-meremehkan-luka-nyata), tapi jutaan Gen Z memperlakukannya seperti terapis.
 
@@ -85,7 +85,7 @@ Dr. Lisa Feldman Barrett, ahli ilmu saraf yang dikutip BBC, memperingatkan bahwa
 
 Psychology Today menambahkan bahwa berpikir terlalu jauh dari kenyataan membuat seseorang rentan terhadap kekecewaan besar ketika harapan tidak terpenuhi. Seseorang yang terbiasa berpikir delusional tanpa memperhitungkan realita akan kesulitan menghadapi realita dunia nyata.
 
-Dr. Hoffman memberikan analogi yang tajam kepada Verywell Mind. Dia menyebut delulu seperti "emotional masturbation." Saat kencan pertama dengan seseorang, kamu sudah membayangkan pernikahan. Tidak salah untuk sedikit berfantasi. Tapi jika self-esteem kamu rusak parah saat hubungan berakhir, itu tanda bahwa fantasi tersebut punya dampak negatif.
+Dr. Hoffman memberikan analogi yang tajam. Dia menyebut delulu seperti "emotional masturbation." Saat kencan pertama dengan seseorang, kamu sudah membayangkan pernikahan. Tidak salah untuk sedikit berfantasi. Tapi jika self-esteem kamu rusak parah saat hubungan berakhir, itu tanda bahwa fantasi tersebut punya dampak negatif.
 
 ## Delulu sebagai Pelarian: Ketika Sistem Gagal
 

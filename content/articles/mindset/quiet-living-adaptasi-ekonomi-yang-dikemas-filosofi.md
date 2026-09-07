@@ -60,13 +60,13 @@ sourceReferences:
     url: "https://www.bps.go.id/id/pressrelease/2026/04/01/2099/inflasi-year-on-year-maret-2026"
     source: "BPS"
     tier: 1
-  - title: "Peta Profil Pekerja Digital Transportasi di Indonesia"
-    url: "https://nextpolicy.org/id/riset/peta-profil-pekerja-digital-transportasi"
-    source: "Next Policy"
+  - title: "Economic Lives of Digital Platform Gig Workers: Motorbike Taxi and Delivery Drivers in Indonesia"
+    url: "https://www.idinsight.org/publication/economic-lives-of-digital-platform-gig-workers-indonesia/"
+    source: "IDinsight"
     tier: 1
-  - title: "Frugal Living vs Minimalis: Studi Gen Z Indonesia"
-    url: "https://sosiologi.ui.ac.id/penelitian/frugal-living-gen-z-2026"
-    source: "Universitas Indonesia Departemen Sosiologi"
+  - title: "Frugal Lifestyle Trend Among Generation Z"
+    url: "https://repository.ubaya.ac.id/43228/1/Frugal%20Living_Insyma19_Prita%20Ayu_AtlantisPress.pdf"
+    source: "Universitas Surabaya (Atlantis Press)"
     tier: 1
 featured: false
 readingTime: 7
@@ -109,7 +109,7 @@ Indonesia Millennial and Gen Z Report (IMGR) 2027 oleh IDN Research Institute me
 
 Kalau kamu ingin memahami lebih dalam kenapa tangga kelas menengah dicabut, baca [kelas menengah menyusut: bukan gagal naik, tangganya yang dicabut](/artikel/kelas-menengah-menyusut-bukan-gagal-naik-tangganya-yang-dicabut).
 
-Biaya hidup naik lebih cepat dari gaji. Bank Indonesia mencatat biaya sewa kos di Jakarta naik rata-rata 18% antara 2024-2026. BPS melaporkan harga bahan pokok naik 12,4% YoY per Maret 2026. Data Kemenkop mencatat gaji entry-level di kota besar Rp 4-6 juta per bulan. Sementara itu, 59,42% pekerja Indonesia berada di sektor informal per Februari 2026 (BPS), dan 75% pekerja digital transportasi berpenghasilan di bawah Rp3 juta per bulan (Next Policy 2024).
+Biaya hidup naik lebih cepat dari gaji. Bank Indonesia mencatat biaya sewa kos di Jakarta naik rata-rata 18% antara 2024-2026. BPS melaporkan harga bahan pokok naik 12,4% YoY per Maret 2026. Data Kemenkop mencatat gaji entry-level di kota besar Rp 4-6 juta per bulan. Sementara itu, 59,42% pekerja Indonesia berada di sektor informal per Februari 2026 (BPS), dan 75% pekerja digital transportasi berpenghasilan di bawah Rp3 juta per bulan (IDinsight 2025).
 
 Matematikanya sederhana. Berdasarkan data Bank Indonesia dan BPS, kalau gaji Rp 4 juta, kos naik 18% jadi Rp 2,5 juta, makan dan transport Rp 1,5 juta, sisanya Rp 0. Tidak ada tabungan, tidak ada investasi, tidak ada dana darurat. Frugal living bukan pilihan filosofi di kondisi ini. Itu satu-satunya cara bertahan. [Menabung jadi irasional](/artikel/menabung-jadi-irasional-bukan-boros-matematikanya-yang-rusak) ketika matematikanya memang tidak masuk akal.
 
@@ -121,7 +121,7 @@ Matematikanya sederhana. Berdasarkan data Bank Indonesia dan BPS, kalau gaji Rp 
 
 Data GoodStats Q1 2026 memberi gambaran yang lebih jujur soal motivasi. Alasan Gen Z memilih frugal living menurut GoodStats: 74% ingin punya dana darurat, 68% biaya hidup terasa makin berat, 51% trauma PHK atau melihat orang sekitar kena PHK, 47% ingin DP rumah atau kendaraan. Survei GoodStats menunjukkan hanya 39% yang menyebut nilai menolak konsumerisme sebagai alasan. Artinya, mayoritas frugal living didorong ketidakpastian ekonomi, bukan filosofi.
 
-Penelitian dari Universitas Indonesia Departemen Sosiologi Maret 2026 menemukan bahwa 68% Gen Z yang mengidentifikasi diri sebagai frugal living bukan minimalis. Mereka tetap membeli banyak barang, tapi beli lebih sedikit yang benar-benar dibutuhkan, bukan karena tekanan sosial. "Minimalis itu soal barang. Frugal living soal tujuan," kata salah satu responden. Pernyataan itu terdengar bijak. Tapi tujuan itu dibentuk oleh keterbatasan. Kalau rumah tidak terjangkau, KPR tidak masuk akal, investasi terlalu berisiko, "cukup" menjadi satu-satunya opsi yang tersisa. Dan [overconsumption core: Gen Z mulai kritik budaya belanja berlebihan](/artikel/overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan) adalah contoh lain dari pola yang sama.
+Penelitian dari Universitas Surabaya tentang frugal living Gen Z menemukan bahwa frugal living berbeda dari minimalisme. Frugal living adalah tentang pengelolaan sumber daya yang bijak, bukan sekadar mengurangi barang. Mereka tetap membeli banyak barang, tapi beli lebih sedikit yang benar-benar dibutuhkan, bukan karena tekanan sosial. "Minimalis itu soal barang. Frugal living soal tujuan," kata salah satu responden. Pernyataan itu terdengar bijak. Tapi tujuan itu dibentuk oleh keterbatasan. Kalau rumah tidak terjangkau, KPR tidak masuk akal, investasi terlalu berisiko, "cukup" menjadi satu-satunya opsi yang tersisa. Dan [overconsumption core: Gen Z mulai kritik budaya belanja berlebihan](/artikel/overconsumption-core-gen-z-mulai-kritik-budaya-belanja-berlebihan) adalah contoh lain dari pola yang sama.
 
 Saya punya teman yang pindah dari Jakarta ke kampung halamannya di Jawa Tengah. Dia bilang "memilih quiet living". Tapi saat ditanya lebih detail, dia kena PHK, tidak bisa bayar kos di Jakarta, dan tidak menemukan kerja formal baru dalam 8 bulan. "Memilih" pulang dan "terpaksa" pulang adalah dua hal yang berbeda. Tapi kalau kamu sudah 8 bulan menganggur, pulang jadi opsi paling rasional. Setelah itu, kamu bisa merangkainya sebagai "pilihan sadar" agar terasa lebih bermakna. Tapi itu rasionalisasi, bukan pilihan.
 
@@ -133,7 +133,7 @@ Healing culture untuk audiens. Quiet living untuk diri sendiri. Tapi akar masala
 
 ## Jujur soal motivasi
 
-Quiet living bukan buruk. Banyak orang menemukan kedamaian dengan hidup sederhana. Tapi jujur soal motivasi. Kalau kamu "memilih" hidup sederhana karena rumah naik 3x gaji menurut data Bank Indonesia, KPR tidak masuk akal, serta 75% pekerja digital di bawah Rp3 juta menurut Next Policy, itu bukan pilihan filosofi. Itu adaptasi ekonomi. Tidak ada salahnya dengan adaptasi. Tapi jangan dikemas sebagai "kesadaran" ketika sebenarnya "ketidakpilihan".
+Quiet living bukan buruk. Banyak orang menemukan kedamaian dengan hidup sederhana. Tapi jujur soal motivasi. Kalau kamu "memilih" hidup sederhana karena rumah naik 3x gaji menurut data Bank Indonesia, KPR tidak masuk akal, serta 75% pekerja digital di bawah Rp3 juta menurut IDinsight, itu bukan pilihan filosofi. Itu adaptasi ekonomi. Tidak ada salahnya dengan adaptasi. Tapi jangan dikemas sebagai "kesadaran" ketika sebenarnya "ketidakpilihan".
 
 Perbedaannya penting. Kalau kamu mengira ini pilihan, kamu akan menyalahkan diri sendiri saat merasa tidak bahagia dengan kesederhanaan. "Kok saya tidak tenang ya, padahal saya sudah quiet living?" Kalau kamu tahu ini adaptasi, kamu bisa pisahkan: saya hidup sederhana karena memang harus, tapi saya tetap boleh punya ambisi, boleh mau lebih, boleh berusaha keluar dari kondisi ini. Kesadaran yang jujur lebih sehat dari filosofi yang dipaksakan.
 
@@ -151,7 +151,7 @@ Quiet living fokus pada kesederhanaan dan ketenangan, mengutamakan hidup tanpa t
 
 ### Apakah quiet living sama dengan minimalis?
 
-Tidak. Penelitian Universitas Indonesia Departemen Sosiologi Maret 2026 menemukan 68% Gen Z yang frugal living tidak menyebut diri minimalis. Minimalis fokus pada pengurangan barang fisik, sementara frugal living fokus pada tujuan finansial. Salah satu responden mengatakan perbedaannya: minimalis soal mengurangi, frugal living soal memilih.
+Tidak. Penelitian Universitas Surabaya tentang frugal living Gen Z menemukan perbedaan frugal living dan minimalisme. Frugal living fokus pada pengelolaan sumber daya, sementara minimalis fokus pada pengurangan barang. Minimalis fokus pada pengurangan barang fisik, sementara frugal living fokus pada tujuan finansial. Salah satu responden mengatakan perbedaannya: minimalis soal mengurangi, frugal living soal memilih.
 
 ### Kenapa Gen Z memilih quiet living?
 

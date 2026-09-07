@@ -47,8 +47,8 @@ premiumExcerpt: null
 sourceReferences:
   - type: link
     url: >-
-      https://worldpopulationreview.com/country-rankings/most-sleep-deprived-countries
-    label: 'World Population Review: Most Sleep Deprived Countries 2026'
+      https://worldpopulationreview.com/country-rankings/average-sleep-time-by-country
+    label: 'World Population Review: Average Sleep Time by Country 2026'
   - type: link
     url: >-
       https://kurious.kompas.com/data/462-dewasa-indonesia-tidur-4-6-jam-per-hari
@@ -75,7 +75,7 @@ sourceReferences:
     label: 'Binus Psychology: RBP dan Penurunan Performa 60% (Jun 2026)'
   - type: link
     url: >-
-      https://www.deloitte.com/global/en/our-thinking/insights/topics/talent/gen-z-survey.html
+      https://www.deloitte.com/global/en/about/press-room/deloitte-2025-gen-z-and-millennial-survey.html
     label: 'Deloitte Gen Z Survey: 91% Gen Z Indonesia Stres Kerja (2023)'
   - type: link
     url: 'https://doi.org/10.51577/jhqd.v5i2.877'

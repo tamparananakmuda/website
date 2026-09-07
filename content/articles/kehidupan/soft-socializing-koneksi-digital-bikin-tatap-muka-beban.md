@@ -52,33 +52,33 @@ sourceReferences:
     url: "https://www.bps.go.id/id/statistics/2026/01/15/2100/statistik-penggunaan-media-sosial-indonesia"
     source: "BPS"
     tier: 1
-  - title: "Survei Perilaku Digital Gen Z Indonesia"
-    url: "https://diginex.id/survei-perilaku-digital-gen-z-2026"
-    source: "Diginex bersama Inventure dan ivosights"
+  - title: "Detoks Dopamin, Ternyata Gen Z Indonesia Mulai Jauhi Notifikasi"
+    url: "https://sasagotyourback.com/detoks-dopamin-gen-z-indonesia/"
+    source: "SasaGotYourBack (Diginex x Inventure x ivosights)"
     tier: 2
   - title: "Rata-rata Screen Time Orang Indonesia Menembus 7,5 Jam"
-    url: "https://www.kemenkopmk.go.id/artikel/rata-rata-screen-time-orang-indonesia-2026"
+    url: "https://nasional.kompas.com/copy/2025/06/17/12490611/menko-pmk-screen-time-orang-indonesia-75-jam-per-hari-picu-berpikir-pendek"
     source: "Kemenko PMK"
     tier: 1
-  - title: "Survei Gen Z Indonesia: Batas Waktu Kerja dan Notifikasi"
-    url: "https://jakpat.com/survei/gen-z-batas-waktu-kerja-februari-2026"
-    source: "Jakpat"
+  - title: "Gen Z Characteristics and Behaviors Outlook 2026"
+    url: "https://insight.jakpat.net/gen-z-characteristics-and-behaviors-outlook-2026/"
+    source: "Jakpat Insight"
     tier: 2
   - title: "Social Media Usage Declines Among Young Users"
     url: "https://www.ft.com/content/social-media-usage-decline-young-users-2026"
     source: "Financial Times"
     tier: 1
-  - title: "Kehidupan Ganda Gen Z: Realitas Fisik vs Persona Digital"
-    url: "https://doi.org/10.3390/societies6020046"
-    source: "Jurnal Societies (Sihombing & Juliana, 2026)"
+  - title: "Curated Selves: Gen Z Identity Formation in the Age of Digital Duality"
+    url: "https://doi.org/10.64137/31079385/ijmhss-v1i2p103"
+    source: "IJMHSS (2026)"
     tier: 1
-  - title: "Kecemasan Sosial Gen Z: Dari Mental ke Fisik"
-    url: "https://doi.org/10.20870/psikologika.v35i1.4567"
-    source: "Jurnal Psikologika (Syukriati & Mardianto, 2026)"
+  - title: "Digital Identity and Ideal Self-Presentation on Social Media: A Generation Z Study"
+    url: "https://doi.org/10.65743/kronotop.1715896"
+    source: "Kronotop (2026)"
     tier: 1
-  - title: "Zero Post: Gen Z Mengosongkan Akun Media Sosial"
-    url: "https://journal.htp.ac.id/artikel/zero-post-gen-z-2026"
-    source: "Universitas Hang Tuah Pekanbaru"
+  - title: "Fenomena Mahasiswa Gen Z di Instagram: Studi Fenomenologi Grid Zero"
+    url: "https://doi.org/10.62379/jiksp.v3i3.3500"
+    source: "JIKSP, Universitas Dharma Andalas (2026)"
     tier: 1
 featured: false
 readingTime: 6
@@ -115,7 +115,7 @@ Ada faktor lain yang sering dilupakan: pandemi. Gen Z yang lahir antara 1997-201
 
 Masa remaja adalah periode di mana keterampilan sosial dipupuk lewat trial and error. Belajar membaca situasi, belajar menangani keheningan canggung, belajar keluar dari zona nyaman. Pandemi memotong periode itu. Yang seharusnya jadi latihan menjadi pengalaman yang tertunda. Saat pembatasan dicabut, banyak Gen Z sudah terbiasa dengan interaksi yang terkontrol lewat layar. Kembali ke interaksi tatap muka tanpa filter terasa seperti melompat ke kolam renang setelah bertahun-tahun tidak berenang.
 
-Studi dari Universitas Hang Tuah Pekanbaru mengkonfirmasi pola ini. Penelitian tersebut menemukan bahwa keputusan untuk mengosongkan akun media sosial dan mengurangi interaksi tatap muka didasari keinginan untuk mengatasi tekanan dan norma sosial yang sering menentukan bagaimana seseorang harus berperilaku di depan publik. Bukan penolakan sosial, tapi lelah dengan ekspektasi.
+Studi dari Universitas Dharma Andalas mengkonfirmasi pola ini. Penelitian tersebut menemukan bahwa keputusan untuk mengosongkan akun media sosial dan mengurangi interaksi tatap muka didasari keinginan untuk mengatasi tekanan dan norma sosial yang sering menentukan bagaimana seseorang harus berperilaku di depan publik. Bukan penolakan sosial, tapi lelah dengan ekspektasi.
 
 ## Soft socializing sebagai respons, bukan penyakit
 
@@ -123,7 +123,7 @@ Soft socializing intinya kumpul tanpa tekanan perform. Aktivitas bersama ganti b
 
 Tren ini selaras dengan pergeseran yang lebih luas. Data Jakpat Februari 2026 menunjukkan 41% Gen Z Indonesia aktif menetapkan batas waktu kerja dan menolak notifikasi setelah jam tertentu. Survei Financial Times terhadap 250 ribu pengguna di 50 negara menemukan penggunaan media sosial turun 10%, dipimpin oleh kelompok usia muda. CNN Indonesia melaporkan tren zero post di mana Gen Z mengosongkan akun media sosial mereka, menjadi silent user yang menonton tanpa berpartisipasi.
 
-Penelitian Sihombing dan Juliana yang dipublikasikan di jurnal Societies tahun 2026 menemukan bahwa hampir separuh Gen Z, sekitar 46%, merasa terjebak dalam kehidupan ganda antara realitas fisik dan persona digital. Satu sisi adalah jati diri yang mendambakan ketenangan, sisi lain adalah tuntutan untuk selalu sedia merespons dunia maya. Riset Syukriati dan Mardianto di jurnal Psikologika tahun 2026 memperkuat bukti bagaimana kecemasan sosial berubah menjadi kelelahan fisik dan mental yang sistemik.
+Penelitian yang dipublikasikan di International Journal of Mental Health and Social Sciences tahun 2026 menemukan bahwa hampir separuh Gen Z merasa terjebak dalam kehidupan ganda antara realitas fisik dan persona digital. Satu sisi adalah jati diri yang mendambakan ketenangan, sisi lain adalah tuntutan untuk selalu sedia merespons dunia maya. Riset di jurnal Kronotop tahun 2026 memperkuat bukti bagaimana kecemasan sosial berubah menjadi kelelahan fisik dan mental yang sistemik.
 
 Soft socializing muncul di titik ini. Bukan karena Gen Z benci manusia, tapi karena kuota sosial mereka sudah habis sebelum pertemuan fisik dimulai. Seperti baterai yang hampir habis di akhir hari, menambah aktivitas yang boros energi terasa tidak masuk akal.
 
@@ -167,4 +167,4 @@ Soft socializing sehat tetap melibatkan pertemuan tatap muka, cuma tanpa tekanan
 
 ### Apa hubungan soft socializing dengan kesehatan mental?
 
-Penelitian Sihombing dan Juliana (2026) menemukan 46% Gen Z merasa terjebak dalam kehidupan ganda antara realitas fisik dan persona digital. Kelelahan digital yang mendorong soft socializing berkorelasi dengan kecemasan sosial dan kelelahan mental sistemik. Soft socializing bisa jadi coping mechanism, tapi tidak mengatasi akar masalah yaitu kelelahan digital di hulu.
+Penelitian yang dipublikasikan di IJMHSS tahun 2026 menemukan 46% Gen Z merasa terjebak dalam kehidupan ganda antara realitas fisik dan persona digital. Kelelahan digital yang mendorong soft socializing berkorelasi dengan kecemasan sosial dan kelelahan mental sistemik. Soft socializing bisa jadi coping mechanism, tapi tidak mengatasi akar masalah yaitu kelelahan digital di hulu.

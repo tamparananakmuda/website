@@ -23,22 +23,22 @@ seoKeywords:
   - "literasi algoritma"
 sourceReferences:
   - type: link
-    url: https://www.ijriss.com
-    label: "IJRRISS, 2026"
+    url: https://doi.org/10.1145/3511047.3538028
+    label: "ACM, Filter Bubble Review, 2022"
   - type: link
-    url: https://www.oaijss.com
-    label: "OAIJSS, 2024"
+    url: https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles
+    label: "TED, Eli Pariser, 2011"
   - type: link
-    url: https://jurnal.univbengkulu.ac.id
-    label: "J-SIKOM, 2025"
+    url: https://www.psychologytoday.com/us/blog/psych-unseen/201611/fake-news-echo-chambers-filter-bubbles-survival-guide
+    label: "Psychology Today, Fake News Echo Chambers & Filter Bubbles"
   - type: link
-    url: https://journal.psychologytoday.com
-    label: "Journal of Psychology Today, 2025"
+    url: https://www.psychologytoday.com/us/blog/science-of-choice/201504/what-is-confirmation-bias
+    label: "Psychology Today, What Is Confirmation Bias?"
   - type: link
-    url: https://jurnal.untar.ac.id
-    label: "Tuturan Journal, 2026"
+    url: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1563563/full
+    label: "Frontiers in Public Health, 2025"
   - type: link
-    url: https://filterbubble.org
+    url: https://www.penguinrandomhouse.com/books/309214/the-filter-bubble-by-eli-pariser/
     label: "Eli Pariser, The Filter Bubble, 2011"
   - type: link
     url: https://www.antaranews.com

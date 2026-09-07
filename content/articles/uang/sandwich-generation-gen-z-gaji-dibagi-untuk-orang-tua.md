@@ -41,7 +41,7 @@ sourceReferences:
   - {"type":"link","url":"https://www.antaranews.com/berita/4912045/yougov-generasi-sandwich-khawatirkan-inflasi-dan-resesi-usaha","label":"YouGov: Generasi Sandwich Khawatirkan Inflasi, Antara, Apr 2025"}
   - {"type":"link","url":"https://ojk.go.id/id/kanal/iknb/data-dan-statistik/dana-pensiun","label":"OJK Statistik Dana Pensiun 2024"}
   - {"type":"link","url":"https://money.kompas.com/read/2026/06/04/105548926/atur-keuangan-generasi-sandwich-prioritaskan-orangtua-anak-atau-pensiun","label":"Allianz Life/Kiplinger: Sandwich Generation Financial Stress, via Kompas"}
-  - {"type":"link","url":"https://www.rukita.co/blog/harga-kos-jakarta","label":"Rukita: Harga Kos Jakarta 2025"}
+  - {"type":"link","url":"https://www.rukita.co/stories/rukita-jakarta-selatan","label":"Rukita: Harga Kos Jakarta 2025"}
 featured: false
 readingTime: 10
 humanSignature: true

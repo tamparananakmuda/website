@@ -45,7 +45,7 @@ sourceReferences:
   - label: "CNBC Indonesia (Februari 2025): BNPL outstanding Rp 30.36 triliun, kredit macet 3.21%, Gen Z dominan"
     url: "https://www.cnbcindonesia.com/market/20250216060439-17-610958/bukti-dompet-warga-ri-lagi-cekak-muncul-di-data-paylater"
   - label: "Deloitte Global 2025 Gen Z Survey via Lira Media (Februari 2026): 52% Gen Z hidup paycheck to paycheck"
-    url: "https://www.deloitte.com/global/en/our-research/gen-z-millennial-survey.html"
+    url: "https://www.deloitte.com/global/en/about/press-room/deloitte-2025-gen-z-and-millennial-survey.html"
   - label: "CELIOS via Terusterang.id (Februari 2026): Upah Gen Z Rp 2.7-3.2 juta, kenaikan upah minus 0.06%"
     url: "https://terusterang.id/2026/02/20/kerja-tapi-miskin-benarkah-fenomena-working-poor-menimpa-banyak-gen-z-hari-ini/"
   - label: "Bank of America via Periskop.id (Juli 2026): 85% pekerja punya utang, 88% Gen Z punya utang"

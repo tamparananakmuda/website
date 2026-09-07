@@ -3,7 +3,9 @@ import { BreadcrumbSchema } from '@/components/schema/breadcrumb-schema';
 import DonasiForm from './donasi-form';
 
 export const metadata: Metadata = {
-  title: 'Donasi',
+  title: {
+    absolute: 'Donasi',
+  },
   description:
     'Dukung jurnalisme independen TAM. Tidak ada paywall, tidak ada iklan yang mengganggu. Donasi kamu membantu kami tetap independen dan terus menulis tanpa kompromi.',
   keywords: ['donasi tamparan anak muda', 'dukung jurnalisme independen', 'donasi media digital', 'dukung TAM', 'donasi qris'],
@@ -15,13 +17,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com'}/donasi`,
-    title: 'Donasi - Tamparan Anak Muda',
+    title: 'Donasi',
     description:
       'Dukung jurnalisme independen TAM. Donasi kamu membantu kami tetap independen dan terus menulis tanpa kompromi.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Donasi - Tamparan Anak Muda',
+    title: 'Donasi',
     description:
       'Dukung jurnalisme independen TAM. Donasi kamu membantu kami tetap independen dan terus menulis tanpa kompromi.',
   },

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!series) return {};
 
   const posts = await getPostsBySeries(series.slug, 100);
-  const title = `${series.title} - Seri - Tamparan Anak Muda`;
+  const title = `Seri ${series.title}`;
   const description = series.description || `Seri ${posts.length} bagian dari TAMPARAN ANAK MUDA.`;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tamparananakmuda.com';
   const url = `${siteUrl}/seri/${series.slug}`;
@@ -41,14 +41,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         type: 'website',
         locale: 'id_ID',
         url,
-        title,
+        title: `${title} - Tamparan Anak Muda`,
         description,
         siteName: 'TAMPARAN ANAK MUDA',
         images: [{ url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp', width: 1600, height: 900, alt: title }],
       },
       twitter: {
         card: 'summary_large_image',
-        title,
+        title: `${title} - Tamparan Anak Muda`,
         description,
         images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
       },
@@ -67,14 +67,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         type: 'website',
         locale: 'id_ID',
         url,
-        title,
+        title: `${title} - Tamparan Anak Muda`,
         description,
         siteName: 'TAMPARAN ANAK MUDA',
         images: [{ url: 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp', width: 1600, height: 900, alt: title }],
       },
       twitter: {
         card: 'summary_large_image',
-        title,
+        title: `${title} - Tamparan Anak Muda`,
         description,
         images: ['https://cdn.tamparananakmuda.com/og/homepage-feature.webp'],
       },
@@ -86,7 +86,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImageUrl =
     (firstPost as { ogFeatureUrl?: string; ogImageUrl?: string })?.ogFeatureUrl ||
     (firstPost as { ogFeatureUrl?: string; ogImageUrl?: string })?.ogImageUrl ||
-    'https://cdn.tamparananakmuda.com/og/homepage-feature.webp';
+    (firstPost ? `/api/og/card?slug=${firstPost.slug}` : 'https://cdn.tamparananakmuda.com/og/homepage-feature.webp');
 
   return {
     title,
@@ -98,14 +98,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       locale: 'id_ID',
       url,
-      title,
+      title: `${title} - Tamparan Anak Muda`,
       description,
       siteName: 'TAMPARAN ANAK MUDA',
       images: [{ url: ogImageUrl, width: 1600, height: 900, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: `${title} - Tamparan Anak Muda`,
       description,
       images: [ogImageUrl],
     },
@@ -132,64 +132,62 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   // Coming-soon series: show teaser page instead of 404
   if (posts.length === 0 && series.status === 'coming-soon') {
     return (
-      <main>
+      <main className="min-h-screen bg-background text-foreground">
         <BreadcrumbSchema items={[
           { name: 'Home', href: '/' },
           { name: 'Seri', href: '/seri' },
           { name: series.title, href: `/seri/${series.slug}` },
         ]} />
 
-        <section className="relative w-full overflow-hidden border-b border-border">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
+        <section className="relative w-full overflow-hidden border-b border-border bg-gradient-to-b from-muted/60 via-background to-background">
+          <div className="absolute inset-0 z-0 pointer-events-none">
             <div
-              className="absolute inset-0 opacity-[0.12]"
+              className="absolute inset-0 opacity-[0.08] dark:opacity-[0.15]"
               style={{
                 backgroundImage: 'radial-gradient(circle at 25% 15%, hsl(0 63% 52%) 0%, transparent 50%), radial-gradient(circle at 85% 85%, hsl(0 63% 52% / 0.3) 0%, transparent 40%)',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+          <div className="relative z-10 mx-auto max-w-4xl px-4 py-16 md:py-24">
             <Link
               href="/seri"
-              className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+              className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft size={15} />
               Semua Seri
             </Link>
 
             <div className="mb-6 flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
                 <CalendarClock size={13} />
                 Coming Soon
               </span>
               {series.expectedParts && (
-                <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-white/40">
+                <span className="inline-flex items-center gap-1 text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
                   <Layers size={13} />
                   ~{series.expectedParts} bagian
                 </span>
               )}
             </div>
 
-            <h1 className="mb-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+            <h1 className="mb-6 max-w-3xl font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl">
               {series.title}
             </h1>
 
             {series.description && (
-              <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 {series.description}
               </p>
             )}
 
             {series.teaser && (
-              <p className="mb-8 max-w-2xl rounded-xl border border-primary/20 bg-primary/5 px-6 py-4 text-lg font-medium italic text-primary/90">
+              <p className="mb-8 max-w-2xl rounded-xl border border-primary/20 bg-primary/5 px-6 py-4 text-base font-medium italic text-primary">
                 &ldquo;{series.teaser}&rdquo;
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/50">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               {series.expectedDate && (
                 <span className="inline-flex items-center gap-1.5">
                   <CalendarClock size={15} />
@@ -198,7 +196,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
               )}
               <span className="inline-flex items-center gap-1.5">
                 <CalendarClock size={15} />
-                Seri sedang dalam penulisan
+                Seri sedang dalam riset &amp; penulisan
               </span>
             </div>
           </div>
@@ -206,8 +204,8 @@ export default async function SeriesDetailPage({ params }: PageProps) {
 
         {/* Newsletter CTA */}
         <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
-          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
-            <p className="text-lg font-medium text-foreground">
+          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12 shadow-sm">
+            <p className="text-lg font-bold text-foreground">
               Mau jadi yang pertama tahu saat seri ini rilis?
             </p>
             <p className="max-w-md text-sm text-muted-foreground">
@@ -229,39 +227,34 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   // Series with no published posts but not marked coming-soon (all scheduled)
   if (posts.length === 0) {
     return (
-      <main>
+      <main className="min-h-screen bg-background text-foreground">
         <BreadcrumbSchema items={[
           { name: 'Home', href: '/' },
           { name: 'Seri', href: '/seri' },
           { name: series.title, href: `/seri/${series.slug}` },
         ]} />
 
-        <section className="relative w-full overflow-hidden border-b border-border">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+        <section className="relative w-full overflow-hidden border-b border-border bg-gradient-to-b from-muted/60 via-background to-background">
+          <div className="relative z-10 mx-auto max-w-4xl px-4 py-16 md:py-24">
             <Link
               href="/seri"
-              className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+              className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowLeft size={15} />
               Semua Seri
             </Link>
 
-            <h1 className="mb-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+            <h1 className="mb-6 max-w-3xl font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl">
               {series.title}
             </h1>
 
             {series.description && (
-              <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 {series.description}
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-white/40">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <CalendarClock size={15} />
                 Seri sedang dalam penulisan
@@ -271,8 +264,8 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         </section>
 
         <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
-          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
-            <p className="text-lg font-medium text-foreground">
+          <div className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12 shadow-sm">
+            <p className="text-lg font-bold text-foreground">
               Mau jadi yang pertama tahu saat seri ini rilis?
             </p>
             <p className="max-w-md text-sm text-muted-foreground">
@@ -311,7 +304,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
     }));
 
   return (
-    <main>
+    <main className="min-h-screen bg-background text-foreground">
       <BreadcrumbSchema items={[
         { name: 'Home', href: '/' },
         { name: 'Seri', href: '/seri' },
@@ -328,23 +321,21 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         }))}
       />
 
-      {/* Hero Section */}
-      <section className="relative w-full overflow-hidden border-b border-border">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#141414]" />
+      {/* Hero Section - Fully theme adaptive */}
+      <section className="relative w-full overflow-hidden border-b border-border bg-gradient-to-b from-muted/60 via-background to-background">
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <div
-            className="absolute inset-0 opacity-[0.12]"
+            className="absolute inset-0 opacity-[0.07] dark:opacity-[0.14]"
             style={{
               backgroundImage: `radial-gradient(circle at 25% 15%, ${categoryColor} 0%, transparent 50%), radial-gradient(circle at 85% 85%, ${categoryColor}66 0%, transparent 40%)`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 md:py-28 lg:py-32">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 py-16 md:py-24">
           <Link
             href="/seri"
-            className="mb-8 inline-flex items-center gap-1.5 text-sm text-white/50 transition-colors hover:text-white/80"
+            className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft size={15} />
             Semua Seri
@@ -353,36 +344,36 @@ export default async function SeriesDetailPage({ params }: PageProps) {
           {category && (
             <div className="mb-6 flex items-center gap-2">
               <span
-                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white"
+                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm"
                 style={{ backgroundColor: categoryColor }}
               >
                 {category.title}
               </span>
-              <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-white/40">
+              <span className="inline-flex items-center gap-1 text-xs font-mono font-medium uppercase tracking-wider text-muted-foreground">
                 <Layers size={13} />
                 Seri Investigasi
               </span>
             </div>
           )}
 
-          <h1 className="mb-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl lg:leading-[1.08]">
+          <h1 className="mb-6 max-w-3xl font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl">
             {series.title}
           </h1>
 
           {series.description && (
-            <p className="mb-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+            <p className="mb-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               {series.description}
             </p>
           )}
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/50">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-1.5">
               <Layers size={15} />
               {posts.length} bagian
             </span>
             {author && (
               <span className="inline-flex items-center gap-1.5">
-                oleh <span className="font-medium text-white/70">{author.name}</span>
+                oleh <span className="font-medium text-foreground">{author.name}</span>
               </span>
             )}
             <span className="inline-flex items-center gap-1.5">
@@ -395,12 +386,12 @@ export default async function SeriesDetailPage({ params }: PageProps) {
 
       {/* Parts List */}
       <section className="mx-auto max-w-4xl px-4 py-16 md:py-24">
-        <div className="mb-8 flex items-center justify-between">
-          <h2 className="font-display text-lg font-bold text-foreground">
-            Daftar Bagian
+        <div className="mb-8 flex items-center justify-between border-b border-border pb-4">
+          <h2 className="font-display text-xl font-bold text-foreground">
+            Daftar Bab &amp; Pembahasan
           </h2>
-          <span className="text-sm text-muted-foreground">
-            {posts.length} artikel
+          <span className="font-mono text-xs text-muted-foreground">
+            {posts.length} artikel terbit
           </span>
         </div>
 
@@ -421,7 +412,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                 <Link
                   key={post.slug}
                   href={`/artikel/${post.slug}`}
-                  className="group relative flex items-start gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-foreground/20 hover:shadow-md md:gap-5 md:p-5"
+                  className="group relative flex items-start gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md md:gap-5 md:p-5"
                 >
                   <div
                     className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background font-display text-lg font-bold transition-colors md:h-16 md:w-16 md:text-xl"
@@ -485,7 +476,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                         <CalendarClock size={11} />
                         Coming Soon
                       </span>
-                      <span className="text-[11px] text-muted-foreground">
+                      <span className="text-[11px] text-muted-foreground font-mono">
                         Bagian {order} dari {posts.length + upcomingParts.length}
                       </span>
                     </div>
@@ -511,9 +502,9 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12">
-          <p className="text-sm text-muted-foreground">
-            Baca dari awal untuk memahami alur argumentasi secara utuh.
+        <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center md:p-12 shadow-sm">
+          <p className="text-sm font-medium text-foreground">
+            Disarankan membaca dari bab pertama untuk memahami alur argumentasi dan investigasi secara menyeluruh.
           </p>
           <Link
             href={`/artikel/${posts[0].slug}`}

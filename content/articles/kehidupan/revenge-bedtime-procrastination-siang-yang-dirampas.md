@@ -23,17 +23,17 @@ seoKeywords:
   - "begadang"
 sourceReferences:
   - type: link
-    url: https://journal.untar.ac.id/index.php/Provitae/article/view/34051
+    url: https://journal.untar.ac.id/index.php/provitae/article/view/29995
     label: "Provitae Journal UNTAR, 2024"
   - type: link
-    url: https://journal.untar.ac.id/index.php/Provitae/article/view/34051
+    url: https://journal.untar.ac.id/index.php/provitae/article/view/29995
     label: "Provitae Journal UNTAR (Study 2), 2024"
   - type: link
-    url: https://jurnal.unismuh.ac.id/index.php/jurrikes
-    label: "JURRIKES, 2025"
+    url: https://prin.or.id/index.php/JURRIKES/article/download/6593/4832
+    label: "JURRIKES Vol 4 No 3, 2025: Problematic Smartphone Use & Revenge Bedtime Procrastination"
   - type: link
-    url: https://www.bbc.com/worklife/article/20201123-revenge-bedtime-procrastination-is-robbing-sleep
-    label: "BBC Worklife, 2020"
+    url: https://www.bbc.com/worklife/article/20201123-the-psychology-behind-revenge-bedtime-procrastination
+    label: "BBC Worklife: The Psychology Behind Revenge Bedtime Procrastination, 2020"
   - type: link
     url: https://kic.katadata.co.id
     label: "KIC-Katadata Insight Center via kumparan, 2025"

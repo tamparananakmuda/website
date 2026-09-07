@@ -69,10 +69,10 @@ sourceReferences:
     label: >-
       Kompas: Gelombang panas Eropa, 10.000 kematian, suhu 40 derajat Celsius,
       Jul 2025
-  - url: 'https://bengkelnarasi.id/2026/06/stigma-kesehatan-mental-gen-z-indonesia/'
+  - url: 'https://repository.unair.ac.id/133593/1/ARTIKEL.pdf'
     label: >-
-      Bengkel Narasi: Stigma kesehatan mental Gen Z, hanya 2,6% populasi akses
-      konseling profesional, Jun 2026
+      UNAIR: Pengaruh Stigma dalam Intensi Mencari Bantuan Kesehatan Mental pada
+      Gen Z, hanya 2,6% akses konseling profesional
 readingTime: 10
 featured: true
 isPremium: false

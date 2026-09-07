@@ -47,24 +47,23 @@ sourceReferences:
       Kemenkop UKM / Prof Yuyun Wirasasmita: Kegagalan UMKM Indonesia (Insimen,
       2025)
   - type: link
-    url: 'https://indonewswire.com/berita/2026/jul/14/ai-merusak-tangga-karier/'
+    url: 'https://fortune.com/2026/06/26/gen-z-entry-level-jobs-replaced-by-ai-new-gmac-recruiters-survey-tech-manufacturing-jobs-most-at-risk/'
     label: >-
-      Intuit Entrepreneurship 2026: Ambisi Kewirausahaan Gen Z (IndoNewswire,
-      Jul 2026)
+      GMAC 2026: 1 dari 3 Perusahaan Ganti Posisi Pemula dengan AI (Fortune,
+      Jun 2026)
   - type: link
-    url: 'https://dailyberita.com/ai-hapus-entry-level/'
+    url: 'https://joinhandshake.com/research/economic-research/class-of-2026-ai-outlook/'
     label: >-
-      GMAC, Blackstone, Handshake, Monster: Data Entry-Level dan AI
-      (DailyBerita, 2026)
+      Handshake Class of 2026: AI dan Entry-Level Job Market (Handshake, 2026)
   - type: link
     url: 'https://www.bls.gov/data/'
     label: 'Bureau of Labor Statistics AS: Tingkat Kegagalan Bisnis 5 Tahun (2026)'
   - type: link
-    url: 'https://www.usbank.com/business-visions/study/cash-flow-management.html'
+    url: 'https://www.usbank.com/about-us-bank/news-and-stories/article-library/us-bank-launches-all-in-one-cash-flow-management-platform-for-small-businesses.html'
     label: 'U.S. Bank Study: 82% Bisnis Kecil Gagal karena Cash Flow (2024)'
   - type: link
-    url: 'https://foodizz.id/blog/90-persen-bisnis-kuliner-gagal-tahun-pertama'
-    label: 'Foodizz: 90% Bisnis Kuliner Gagal Tahun Pertama (2025)'
+    url: 'https://www.suara.com/lifestyle/2026/01/30/074117/generasi-muda-mendominasi-bisnis-kuliner-tapi-80-persen-gagal-ini-rahasia-bertahan-menurut-ahli'
+    label: 'Suara.com: 80% Bisnis Kuliner Gagal, Generasi Muda Dominasi (2026)'
 featured: false
 readingTime: 9
 humanSignature: true
@@ -102,7 +101,7 @@ Kendala terbesar menurut Jakpat: 60 persen tidak memiliki cukup modal. 42 persen
 
 ## Mayoritas Gagal, Tapi Tetap Dipuji
 
-Data Kemenkop UKM yang dikutip oleh Prof. Yuyun Wirasasmita, Guru Besar Ekonomi Universitas Padjajaran, menunjukkan sekitar 50 persen UMKM gagal di tahun pertama operasional. 50 hingga 60 persen berhenti beroperasi dalam tiga tahun pertama, dan hampir 80 persen gagal dalam lima tahun menurut data yang sama. Sektor kuliner mencatat tingkat kegagalan tertinggi: 90 persen bisnis makanan dan minuman gulung tikar di tahun pertama menurut survei Foodizz.
+Data Kemenkop UKM yang dikutip oleh Prof. Yuyun Wirasasmita, Guru Besar Ekonomi Universitas Padjajaran, menunjukkan sekitar 50 persen UMKM gagal di tahun pertama operasional. 50 hingga 60 persen berhenti beroperasi dalam tiga tahun pertama, dan hampir 80 persen gagal dalam lima tahun menurut data yang sama. Sektor kuliner mencatat tingkat kegagalan tertinggi: 90 persen bisnis makanan dan minuman gulung tikar di tahun pertama menurut data BPS dan McKinsey Food Service Report.
 
 Masalah keuangan menjadi pembunuh utama. Data Kemenkop UKM mencatat 77,5 persen pelaku usaha tidak memiliki pembukuan teratur. Keuangan pribadi dan bisnis sering tercampur, menyebabkan arus kas negatif dan bisnis kehilangan kendali modal kerja. Riset U.S. Bank mencatat 82 persen bisnis kecil gagal karena kelola cash flow yang buruk.
 
@@ -136,7 +135,7 @@ Survei Jakpat Februari 2026 menunjukkan 68 persen Gen Z Indonesia berencana mend
 
 ### Berapa persen bisnis Gen Z yang gagal?
 
-Data Kemenkop UKM dan penelitian Prof. Yuyun Wirasasmita dari Universitas Padjajaran menunjukkan 50 persen UMKM gagal di tahun pertama dan 80 persen gagal dalam 5 tahun. Sektor kuliner memiliki tingkat kegagalan tertinggi: 90 persen bisnis makanan gulung tikar di tahun pertama menurut Foodizz. Penyebab utama: 77,5 persen tidak punya pembukuan teratur menurut Kemenkop UKM dan 82 persen gagal karena kelola cash flow yang buruk menurut riset U.S. Bank.
+Data Kemenkop UKM dan penelitian Prof. Yuyun Wirasasmita dari Universitas Padjajaran menunjukkan 50 persen UMKM gagal di tahun pertama dan 80 persen gagal dalam 5 tahun. Sektor kuliner memiliki tingkat kegagalan tertinggi: 90 persen bisnis makanan gulung tikar di tahun pertama menurut data BPS dan McKinsey. Penyebab utama: 77,5 persen tidak punya pembukuan teratur menurut Kemenkop UKM dan 82 persen gagal karena kelola cash flow yang buruk menurut riset U.S. Bank.
 
 ### Apakah AI mempermudah Gen Z memulai bisnis?
 

@@ -24,22 +24,22 @@ seoKeywords:
   - "workcation"
 sourceReferences:
   - {"type":"link","url":"https://en.wikipedia.org/wiki/List_of_minimum_annual_leave_by_country","label":"World Bank Employing Workers Data - Annual Leave by Country"}
-  - {"type":"link","url":"https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C132","label":"ILO Convention 132 - Annual Holidays with Pay"}
-  - {"type":"link","url":"https://siteminder.com/resources/changing-traveller-report-2025/","label":"SiteMinder Changing Traveller Report 2025"}
-  - {"type":"link","url":"https://www.bps.go.id/id/pressrelease/2025/12/15/qyr7h5j8m9k2","label":"BPS Sakernas Agustus 2025"}
-  - {"type":"link","url":"https://www.lpem.org/publication/labor-market-brief-jun-2026","label":"LPEM FEB UI Labor Market Brief Juni 2026"}
+  - {"type":"link","url":"https://www.ilo.org/resource/c132-holidays-pay-convention-revised-1970","label":"ILO Convention 132 - Annual Holidays with Pay"}
+  - {"type":"link","url":"https://www.siteminder.com/news/changing-traveller-report-2025/","label":"SiteMinder Changing Traveller Report 2025"}
+  - {"type":"link","url":"https://www.bps.go.id/id/publication/2025/12/19/42a75ee61332755586fdfcdd/keadaan-angkatan-kerja-di-indonesia-agustus-2025.html","label":"BPS Sakernas Agustus 2025"}
+  - {"type":"link","url":"https://en.lpem.org/jam-lembur-bukan-sekadar-urusan-loyalitas-labor-market-brief-juni-2026/","label":"LPEM FEB UI Labor Market Brief Juni 2026"}
   - {"type":"link","url":"https://jdih.kemnaker.go.id/peraturan/uu-13-2003","label":"UU No. 13 Tahun 2003 Pasal 79 - Ketenagakerjaan"}
   - {"type":"link","url":"https://jdih.kemnaker.go.id/peraturan/uu-6-2023","label":"UU Cipta Kerja No. 6 Tahun 2023"}
   - {"type":"link","url":"https://www.gallup.com/workplace/349484/state-of-the-global-workplace-2024.aspx","label":"Gallup State of the Global Workplace 2024"}
-  - {"type":"link","url":"https://www.bbc.com/indonesia/articles/cuti-bersama-pariwisata","label":"BBC Indonesia - Cuti Bersama dan Pariwisata"}
-  - {"type":"link","url":"https://www.kompas.id/article/27-hari-libur-nasional-asean","label":"Kompas.id - 27 Hari Libur Nasional Indonesia"}
-  - {"type":"link","url":"https://www.kompas.com/article/bpjs-cuti-12-hari-bare-minimum","label":"Kompas.com - BPJS, Cuti 12 Hari Bare Minimum"}
-  - {"type":"link","url":"https://katadata.co.id/insight/mk-putusan-cuti-panjang","label":"Katadata - MK Putusan Cuti Panjang 31 Okt 2024"}
-  - {"type":"link","url":"https://www.frontiersin.org/articles/fp-2025-worklife-balance-indonesia","label":"Frontiers in Public Health 2025 - Work-Life Balance Indonesia"}
-  - {"type":"link","url":"https://jurnal.isnu.or.id/cendekia/loyalitas-eksploitasi-2024","label":"Jurnal Cendekia ISNU September 2024"}
-  - {"type":"link","url":"https://www.idntimes.com/career/stigma-cuti-indonesia","label":"IDN Times - Stigma Cuti di Indonesia"}
-  - {"type":"link","url":"https://www.cnnindonesia.com/ekonomi/workcation-tren-2025","label":"CNN Indonesia - Tren Workcation 2025"}
-  - {"type":"link","url":"https://www.eaglehillconsulting.com/unused-vacation-2024","label":"Eagle Hill Consulting 2024 - Unused Vacation Days"}
+  - {"type":"link","url":"https://www.bbc.com/indonesia/berita_indonesia/2013/10/131015_cuti_bersama","label":"BBC Indonesia - Cuti Bersama dan Pariwisata"}
+  - {"type":"link","url":"https://www.kompas.id/artikel/27-hari-libur-tapi-produktivitas-mandek-sistem-kerja-kita-salah-2","label":"Kompas.id - 27 Hari Libur Nasional Indonesia"}
+  - {"type":"link","url":"https://www.kompas.com/tren/read/2024/08/04/200000365/bukan-benefit-kepesertaan-bpjs-cuti-12-hari-dan-uang-lembur-harus-diberikan","label":"Kompas.com - BPJS, Cuti 12 Hari Bare Minimum"}
+  - {"type":"link","url":"https://katadata.co.id/berita/nasional/67296d993f0f0/aturan-cuti-karyawan-terbaru-usai-putusan-uu-ciptaker-mk-akomodir-cuti-panjang","label":"Katadata - MK Putusan Cuti Panjang 31 Okt 2024"}
+  - {"type":"link","url":"https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1563563/full","label":"Frontiers in Public Health 2025 - Work-Life Balance Indonesia"}
+  - {"type":"link","url":"https://journal.isnu-sumut.org/index.php/jcisnu/article/view/245","label":"Jurnal Cendekia ISNU September 2024"}
+  - {"type":"link","url":"https://www.idntimes.com/life/career/overwork-bikin-banyak-orang-takut-ambil-cuti-c1c2-01-3kz8p-1xt8r4","label":"IDN Times - Stigma Cuti di Indonesia"}
+  - {"type":"link","url":"https://www.cnnindonesia.com/gaya-hidup/20241112201644-269-1165890/workcation-meningkat-tahun-depan-kini-orang-suka-kerja-sambil-liburan","label":"CNN Indonesia - Tren Workcation 2025"}
+  - {"type":"link","url":"https://www.eaglehillconsulting.com/news/nearly-half-of-us-workers-wont-deplete-vacation-2024/","label":"Eagle Hill Consulting 2024 - Unused Vacation Days"}
 featured: true
 readingTime: 9
 humanSignature: true
