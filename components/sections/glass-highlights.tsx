@@ -29,8 +29,7 @@ const readerHighlights: HighlightItem[] = [
     author: 'Faris Danuarta',
     role: 'Lead Frontend Engineer',
     location: 'Jakarta',
-    avatar:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatar: '/images/avatars/faris.jpg',
     initials: 'FD',
     rating: '5.0',
     rotationDesktop: 'md:-rotate-[10deg]',
@@ -47,8 +46,7 @@ const readerHighlights: HighlightItem[] = [
     author: 'Nadia Salsabila',
     role: 'Product Strategist & Peneliti',
     location: 'Surabaya',
-    avatar:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    avatar: '/images/avatars/kurator-esai.jpg',
     initials: 'NS',
     rating: '5.0',
     rotationDesktop: 'md:-rotate-[6deg]',
@@ -65,8 +63,7 @@ const readerHighlights: HighlightItem[] = [
     author: 'Bagas Wicaksono',
     role: 'Founder Studio & Patron',
     location: 'Bandung',
-    avatar:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatar: '/images/avatars/pembaca-aktif.jpg',
     initials: 'BW',
     rating: '5.0',
     rotationDesktop: 'md:rotate-[0deg]',

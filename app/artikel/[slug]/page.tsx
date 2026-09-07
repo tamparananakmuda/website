@@ -274,44 +274,75 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         />
 
         <header className="mx-auto max-w-3xl" data-article-slug={post.slug} data-category={post.category?.slug}>
-          <div className="mb-4 flex items-center gap-2 text-sm">
+          <div className="mb-6 flex flex-wrap items-center gap-3 text-xs font-mono">
             {post.category && (
               <Link
                 href={`/kategori/${post.category.slug}`}
-                className="font-medium transition-opacity hover:opacity-70"
-                style={{ color: post.category.color }}
+                className="px-2.5 py-1 rounded-sm border uppercase tracking-wider font-semibold transition-opacity hover:opacity-80"
+                style={{ 
+                  color: post.category.color,
+                  borderColor: `${post.category.color}40`,
+                  backgroundColor: `${post.category.color}10`,
+                }}
               >
                 {post.category.title}
               </Link>
             )}
-            <span className="text-muted-foreground">&bull;</span>
-            <span className="text-muted-foreground">{post.readingTime ?? 1} menit baca</span>
+            <span className="text-muted-foreground/60">&bull;</span>
+            <span className="text-muted-foreground tracking-wide uppercase">{post.readingTime ?? 1} MENIT BACA</span>
+            <span className="text-muted-foreground/60 hidden sm:inline">&bull;</span>
+            <span className="text-primary/90 font-semibold tracking-wider hidden sm:inline uppercase">[LAPORAN TERVERIFIKASI]</span>
           </div>
-          <h1 className="mb-10 text-3xl font-bold leading-tight md:text-5xl">
+
+          <h1 className="mb-8 text-3xl font-bold leading-[1.18] md:text-5xl tracking-tight text-foreground">
             {post.title}
           </h1>
+
           {post.excerpt && (
-            <p className="mb-8 text-lg text-muted-foreground" data-testid="article-excerpt">{post.excerpt}</p>
+            <div className="mb-10 rounded-sm border-l-2 border-primary/60 bg-secondary/15 py-3 pl-4 md:pl-6 pr-4">
+              <p className="text-lg md:text-xl font-serif italic text-foreground/85 leading-relaxed" data-testid="article-excerpt">
+                &ldquo;{post.excerpt}&rdquo;
+              </p>
+            </div>
           )}
+
           {post.author && (
-            <div className="mb-8 flex items-center justify-between text-sm text-muted-foreground">
-              <div>
-                Ditulis oleh{' '}
-                {post.author.slug && post.author.name !== 'TAMPARAN ANAK MUDA' ? (
-                  <Link href={`/penulis/${post.author.slug}`} className="font-medium text-foreground transition-colors hover:text-primary">
-                    {post.author.name}
-                  </Link>
-                ) : (
-                  <span className="font-medium text-foreground">{post.author.name}</span>
-                )}
+            <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-y border-border/60 py-4 text-xs">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                <div>
+                  <span className="text-muted-foreground/70 uppercase font-mono text-[10px] block">Penulis</span>
+                  {post.author.slug && post.author.name !== 'TAMPARAN ANAK MUDA' ? (
+                    <Link href={`/penulis/${post.author.slug}`} className="font-medium text-foreground transition-colors hover:text-primary">
+                      {post.author.name}
+                    </Link>
+                  ) : (
+                    <span className="font-medium text-foreground">{post.author.name}</span>
+                  )}
+                </div>
                 {post.publishedAt && (
-                  <time dateTime={post.publishedAt} className="ml-2">&middot; {new Date(post.publishedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                  <div className="border-l border-border/60 pl-5">
+                    <span className="text-muted-foreground/70 uppercase font-mono text-[10px] block">Diterbitkan</span>
+                    <time dateTime={post.publishedAt} className="font-mono text-muted-foreground">
+                      {new Date(post.publishedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </time>
+                  </div>
                 )}
                 {post.updatedAt && post.updatedAt !== post.publishedAt && (
-                  <time dateTime={post.updatedAt} className="ml-2">&middot; Diperbarui: {new Date(post.updatedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                  <div className="border-l border-border/60 pl-5">
+                    <span className="text-muted-foreground/70 uppercase font-mono text-[10px] block">Pembaruan Riset</span>
+                    <time dateTime={post.updatedAt} className="font-mono text-primary/90">
+                      {new Date(post.updatedAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </time>
+                  </div>
                 )}
+                <div className="border-l border-border/60 pl-5 hidden md:block">
+                  <span className="text-muted-foreground/70 uppercase font-mono text-[10px] block">Integritas Redaksi</span>
+                  <span className="font-mono text-primary text-[11px] font-medium">100% Bebas Advertorial</span>
+                </div>
               </div>
-              <BookmarkButton postSlug={post.slug} />
+              <div className="flex items-center gap-3">
+                <BookmarkButton postSlug={post.slug} />
+              </div>
             </div>
           )}
         </header>

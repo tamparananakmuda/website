@@ -283,8 +283,8 @@ export function WhyTam() {
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             className="size-full rounded-full object-cover"
-                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
-                            alt="Tim Riset"
+                            src="/images/avatars/tim-riset.jpg"
+                            alt="Tim Riset TAM"
                           />
                         </div>
                       </div>
@@ -295,8 +295,8 @@ export function WhyTam() {
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             className="size-full rounded-full object-cover"
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
-                            alt="Kurator Esai"
+                            src="/images/avatars/kurator-esai.jpg"
+                            alt="Kurator Esai TAM"
                           />
                         </div>
                         <span className="block h-fit rounded border border-border bg-background px-2.5 py-1 text-xs font-medium text-foreground shadow-sm transition-all duration-200 group-hover/node:border-primary/60 group-hover/node:text-primary">
@@ -313,8 +313,8 @@ export function WhyTam() {
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             className="size-full rounded-full object-cover"
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
-                            alt="Pembaca Aktif"
+                            src="/images/avatars/pembaca-aktif.jpg"
+                            alt="Pembaca Aktif TAM"
                           />
                         </div>
                       </div>
