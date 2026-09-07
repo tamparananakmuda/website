@@ -22,12 +22,46 @@ async function TopicsSection() {
   ]);
   const currentTime = new Date().toISOString();
   const articleCounts: Record<string, number> = {};
-  for (const a of allArticles) {
-    if (a.status === 'published' && a.publishedAt <= currentTime && a.categorySlug) {
-      articleCounts[a.categorySlug] = (articleCounts[a.categorySlug] || 0) + 1;
+  const articlesByCategory: Record<
+    string,
+    Array<{
+      slug: string;
+      title: string;
+      excerpt: string;
+      readingTime: number;
+      publishedAt: string;
+      ogHeadline?: string | null;
+    }>
+  > = {};
+
+  const published = (allArticles || [])
+    .filter((a) => a.status === 'published' && a.publishedAt <= currentTime && a.categorySlug)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+  for (const a of published) {
+    articleCounts[a.categorySlug] = (articleCounts[a.categorySlug] || 0) + 1;
+    if (!articlesByCategory[a.categorySlug]) {
+      articlesByCategory[a.categorySlug] = [];
+    }
+    if (articlesByCategory[a.categorySlug].length < 3) {
+      articlesByCategory[a.categorySlug].push({
+        slug: a.slug,
+        title: a.title,
+        excerpt: a.excerpt,
+        readingTime: a.readingTime,
+        publishedAt: a.publishedAt,
+        ogHeadline: a.ogHeadline,
+      });
     }
   }
-  return <Topics categories={categories || []} articleCounts={articleCounts} />;
+
+  return (
+    <Topics
+      categories={categories || []}
+      articleCounts={articleCounts}
+      articlesByCategory={articlesByCategory}
+    />
+  );
 }
 
 async function LatestArticlesSection() {
